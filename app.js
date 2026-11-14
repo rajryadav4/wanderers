@@ -266,9 +266,30 @@
     const icon = { ok: "✓", no: "–", warn: "!" };
     $("checks").innerHTML = ev.checks.map((c) => `<li><span class="${c.state}">${icon[c.state]}</span><span>${c.text}</span></li>`).join("");
     $("numbers").innerHTML = (ev.numbers || []).map((n) => `<div><b>${n.value}</b><span>${n.label}</span></div>`).join("");
+    insights();
     $("explain").textContent = S.ex ? S.ex.summary : "Explanation not generated yet (run pipeline/explain.py).";
     $("qButtons").innerHTML = S.ex && S.ex.qa ? S.ex.qa.map((q, k) => `<button data-k="${k}">${q.q}</button>`).join("") : "";
     $("qButtons").querySelectorAll("button").forEach((b) => (b.onclick = () => ($("answer").textContent = S.ex.qa[+b.dataset.k].a)));
+  }
+
+  // ---------- insights: what the numbers mean, the limits of this view, and where to check (pipeline/evidence.py) ----------
+  function insights() {
+    const ins = S.t.insights, box = $("insights");
+    box.hidden = !ins;
+    if (!ins) return;
+    $("facts").innerHTML = ins.facts.map((f) =>
+      `<li><b>${esc(f.headline)}</b><span>${esc(f.detail)}</span><span class="basis">How: ${esc(f.basis)}</span></li>`).join("");
+    $("limits").innerHTML = ins.limits.map((l) => `<li>${esc(l)}</li>`).join("");
+    // Latest measured position if there is one (fast movers leave the catalogue position behind), else the field centre.
+    const last = [...S.t.track].sort((a, b) => b.year - a.year)[0];
+    const ra = last && last.ra != null ? last.ra : S.t.grid.centre_ra, dec = last && last.dec != null ? last.dec : S.t.grid.centre_dec;
+    const c = encodeURIComponent(`${ra.toFixed(5)} ${dec >= 0 ? "+" : ""}${dec.toFixed(5)}`);
+    const links = [
+      ["SIMBAD (is it a known object?)", `https://simbad.cds.unistra.fr/simbad/sim-coo?Coord=${c}&Radius=30&Radius.unit=arcsec`],
+      ["Gaia DR3 (VizieR)", `https://vizier.cds.unistra.fr/viz-bin/VizieR-4?-source=I/355/gaiadr3&-c=${c}&-c.rs=30`],
+      ["Backyard Worlds (report an unknown mover)", "https://www.zooniverse.org/projects/marckuchner/backyard-worlds-planet-9"],
+    ];
+    $("nextLinks").innerHTML = links.map(([t, h]) => `<a href="${h}" target="_blank" rel="noopener noreferrer">${esc(t)} ↗</a>`).join(" · ");
   }
 
   $("askForm").onsubmit = async (e) => {

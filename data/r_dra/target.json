@@ -1452,7 +1452,7 @@
   ],
   "numbers": [
    {
-    "label": "measured motion",
+    "label": "apparent drift (below the detection limit, not a real motion)",
     "value": "0.43\u2033/yr"
    },
    {
@@ -1480,5 +1480,29 @@
   "vari_class": "LPV",
   "vari_class_text": "long-period variable (Mira-type pulsating giant)",
   "vari_score": 0.9573475122451782
+ },
+ "insights": {
+  "facts": [
+   {
+    "id": "distance",
+    "headline": "About 2,600 light-years away",
+    "detail": "The light in these images left it about 2,600 years ago. A distance this large is uncertain.",
+    "basis": "3.26 \u00f7 parallax (\u2033), Gaia DR3"
+   },
+   {
+    "id": "change",
+    "headline": "Faded by about 27% between Jun 2025 and Nov 2025",
+    "detail": "Measured in infrared light, where pulsating and dust-hidden stars change less than they do in visible light.",
+    "basis": "10^(\u22120.4 \u00d7 +0.34 mag)"
+   }
+  ],
+  "limits": [
+   "Motion: an object must shift 2 SPHEREx pixels (12\u2033) to count as moving. Over these 15.8 years that means faster than 0.78\u2033 per year. Slower objects read as \u201cno measurable motion\u201d.",
+   "SPHEREx alone covers only 11 months here: by the same 2-pixel rule, enough only for motion faster than 14\u2033 per year. The 2010 WISE image is what makes slower motion visible.",
+   "Brightness: compared at 3 SPHEREx visits only. A change between or outside those dates is not seen.",
+   "Bright stars: this one overflows SPHEREx pixels, so its spectrum and exact brightness are not reliable here.",
+   "Solar System: the page checks against Gaia stars only. It does not check asteroids or comets, so a moving dot without a Gaia circle may be a known asteroid.",
+   "Crowding: one SPHEREx pixel is 6.15\u2033 wide, so two close objects can blend into one dot and one spectrum."
+  ]
  }
 }

@@ -1857,5 +1857,46 @@
   "parallax_mas": 449.0,
   "distance_ly": 7.264053452115813,
   "note": "Not in Gaia DR3; parallax from Luhman & Esplin 2016, AJ 152, 78"
+ },
+ "insights": {
+  "facts": [
+   {
+    "id": "speed",
+    "headline": "About 87 km/s across the sky",
+    "detail": "That is 2.9 times the speed of Earth around the Sun. It is sideways speed only: motion toward or away from us does not show in images.",
+    "basis": "4.74 \u00d7 8.27\u2033/yr \u00f7 parallax 0.449\u2033"
+   },
+   {
+    "id": "moon",
+    "headline": "Crosses the width of the full Moon in about 220 years",
+    "detail": "A typical star in these images needs more than 100,000 years, which is why this one stands out in a flipbook.",
+    "basis": "1,800\u2033 \u00f7 8.27\u2033/yr"
+   },
+   {
+    "id": "distance",
+    "headline": "7.3 light-years away: one of the Sun's nearest neighbours",
+    "detail": "The light in these images left it about 7.3 years ago.",
+    "basis": "3.26 \u00f7 parallax (\u2033), Luhman & Esplin 2016, AJ 152, 78"
+   },
+   {
+    "id": "methane",
+    "headline": "Cold enough to hold methane gas",
+    "detail": "Methane survives only in atmospheres below roughly 1,300 K, cooler than any true star. It absorbs light near 3.3 \u00b5m, which is why this object is 5.1\u00d7 brighter at 4\u20134.75 \u00b5m.",
+    "basis": "SPHEREx flux at 4\u20134.75 \u00b5m \u00f7 flux at 3.3 \u00b5m"
+   },
+   {
+    "id": "infrared_only",
+    "headline": "Invisible to Gaia's visible-light camera",
+    "detail": "It shows up only in infrared light. Objects like this are what an infrared survey can find and a visible-light survey cannot.",
+    "basis": "no Gaia DR3 source at the predicted position"
+   }
+  ],
+  "limits": [
+   "Motion: an object must shift 2 SPHEREx pixels (12\u2033) to count as moving. Over these 15.8 years that means faster than 0.78\u2033 per year. Slower objects read as \u201cno measurable motion\u201d.",
+   "SPHEREx alone covers only 12 months here: by the same 2-pixel rule, enough only for motion faster than 12\u2033 per year. The 2010 WISE image is what makes slower motion visible.",
+   "Brightness: compared at 3 SPHEREx visits only. A change between or outside those dates is not seen.",
+   "Solar System: the page checks against Gaia stars only. It does not check asteroids or comets, so a moving dot without a Gaia circle may be a known asteroid.",
+   "Crowding: one SPHEREx pixel is 6.15\u2033 wide, so two close objects can blend into one dot and one spectrum."
+  ]
  }
 }
