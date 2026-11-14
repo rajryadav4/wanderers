@@ -45,12 +45,19 @@
     const url = new URL(location); url.searchParams.set("target", id); ["ra", "dec", "fov"].forEach((k) => url.searchParams.delete(k));
     history.replaceState(null, "", url);
     await preload();
-    setupSlider(); initMix(true); renderMeta(); draw(); evidence(); spectrum();
+    setupSlider(); initMix(true); renderMeta(); setAladin(); draw(); evidence(); spectrum();
     if (MAP.ready) mapGoTo();
     $("answer").textContent = "";
   }
 
   function frames() { return S.t.frames[S.ch] || []; }
+
+  // "Open this field in Aladin Lite": same centre and size as the field on screen (see aladinlink.js).
+  function setAladin() {
+    const a = $("aladinLink"), g = S.t.grid;
+    try { a.href = AladinLink.url({ ra: g.centre_ra, dec: g.centre_dec, fovArcsec: g.npix * g.arcsec_per_pix }); a.hidden = false; }
+    catch { a.hidden = true; }     // never break the page over a link
+  }
 
   function preload() {
     const jobs = [];
