@@ -39,7 +39,7 @@
     const url = new URL(location); url.searchParams.set("target", id); url.searchParams.delete("ra"); url.searchParams.delete("dec");
     history.replaceState(null, "", url);
     await preload();
-    setupSlider(); draw(); evidence(); spectrum();
+    setupSlider(); renderMeta(); draw(); evidence(); spectrum();
     $("answer").textContent = "";
   }
 
@@ -94,6 +94,26 @@
     const lbl = diff ? "Difference: SPHEREx 2026 − 2025 (green = now, pink = before)" : f ? `${f.label} · ${labelOf(S.ch)}${seen}` : "";
     $("stamp").textContent = lbl;
     $("frameLbl").textContent = f ? `${S.i + 1}/${fr.length} · ${f.year.toFixed(1)}` : "";
+    document.querySelectorAll("#metaBody tr[data-i]").forEach((tr) => tr.classList.toggle("now", !diff && +tr.dataset.i === S.i));
+  }
+
+  // ---------- frame details and data flags (uses frameinfo.js) ----------
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  function renderMeta() {
+    const d = FrameInfo.describe(S.t, S.ch), q = d.quality;
+    const rows = d.rows.map((r, i) =>
+      `<tr data-i="${i}"><th scope="row">${esc(r.label)}</th><td>${esc(r.epoch)}</td>` +
+      `<td>${esc(r.source)}${r.images ? ` · ${r.images} image${r.images === 1 ? "" : "s"} stacked` : ""}</td>` +
+      `<td class="m-${r.tone}">${esc(r.seen)}${r.signal ? ` · ${esc(r.signal)}` : ""}</td></tr>`).join("");
+    const bar = q.pct === null ? "" : `<div class="qbar" role="img" aria-label="${q.pct}% of SPHEREx measurements flagged"><i class="q-${q.level}" style="width:${q.pct}%"></i></div>`;
+    const visits = d.visits.map((v) => `<li>Visit ${v.n}: around ${esc(v.epoch)}, ${v.images} images used</li>`).join("");
+    $("metaBody").innerHTML =
+      `<table class="frames"><thead><tr><th>Frame</th><th>Year</th><th>Image</th><th>Object</th></tr></thead><tbody>${rows}</tbody></table>` +
+      `<h4>Data flags</h4>${bar}<p class="hint">${esc(q.text)}</p>` +
+      `<p class="hint">A measurement is left out if pixels near the target are flagged for: ${esc(d.flagKinds.join(", "))}. ` +
+      `This is the conservative set from the SPHEREx Explanatory Supplement. The flipbook pictures hide only broken detector pixels, so bright stars stay visible.</p>` +
+      (visits ? `<h4>SPHEREx visits at this position</h4><ul class="visits">${visits}</ul>` +
+        `<p class="hint">${d.visitImages} images used in all; the pipeline downloads a capped, evenly spread share of the images that overlap the target.</p>` : "");
   }
   const labelOf = (ch) => (ch === "w2" ? "4.6 µm" : "3.4 µm");
 
@@ -111,7 +131,7 @@
   document.querySelectorAll(".channel button").forEach((b) => (b.onclick = () => {
     S.ch = b.dataset.ch; S.i = Math.min(S.i, frames().length - 1);
     document.querySelectorAll(".channel button").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-checked", x === b); });
-    setupSlider(); draw();
+    setupSlider(); renderMeta(); draw();
     const url = new URL(location); url.searchParams.set("ch", S.ch); history.replaceState(null, "", url);
   }));
   document.addEventListener("keydown", (e) => {
