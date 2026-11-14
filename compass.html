@@ -68,7 +68,19 @@
           <button id="calConfirm" class="big">I'm pointing at it</button>
         </div>
         <p id="calResult" class="small ok"></p></li>
-      <li><b>Indoors with nothing to aim at?</b> Fine-tune by hand:
+      <li><b>Cloudy or indoors? Two cloud-proof checks.</b>
+        <div class="sub-step"><b>Tilt:</b> press the <em>back</em> of the phone flat against a wall or door frame
+          (camera facing the wall), hold still, then tap.
+          <button id="calWall">Phone is flat against a wall</button></div>
+        <div class="sub-step"><b>Direction:</b> point the camera at a landmark you can see. We work out its exact
+          compass direction from your GPS position.
+          <div id="landmarks" class="cal-list"></div>
+          <div class="row-input"><input id="lmCoords" placeholder="Or paste a spot from Google Maps: 47.6205, -122.3493" inputmode="decimal" autocomplete="off">
+            <button id="lmUse">Use</button></div>
+          <div id="lmStep" hidden><p id="lmText" class="small"></p><button id="lmConfirm" class="big">I'm pointing at it</button></div>
+        </div>
+        <p id="calResult2" class="small ok"></p></li>
+      <li><b>Still a little off?</b> Fine-tune the direction by hand:
         <input type="range" id="extra" min="-30" max="30" step="0.5" value="0" aria-label="Extra direction correction"></li>
     </ol>
     <div id="calStatus" class="status small"></div>

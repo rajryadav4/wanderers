@@ -77,3 +77,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .bar .pointing { flex: 1 1 auto; min-width: 0; }
 #ptDir { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 @media (max-width: 480px) { .pill .lbl { display: none; } .bar { gap: 6px; padding: 8px 10px; } #ptDir { font-size: .9rem; } }
+.sub-step { margin: 8px 0; padding: 8px; border: 1px solid var(--line); border-radius: 10px; background: #0a1120; }
+.sub-step > button { margin-top: 6px; }
+.row-input { display: flex; gap: 6px; margin-top: 6px; }
+.row-input input { flex: 1; min-width: 0; font: inherit; color: var(--text); background: #070b14; border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; }

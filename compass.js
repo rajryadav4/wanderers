@@ -18,6 +18,22 @@
     ["Procyon", 114.83, 5.22], ["Pollux", 116.33, 28.03], ["Regulus", 152.09, 11.97], ["Fomalhaut", 344.41, -29.62],
   ].map(([name, ra, dec]) => ({ name, ra, dec }));
   const BODIES = [{ name: "Moon", body: "moon" }, { name: "Sun", body: "sun" }];
+  // Landmarks for cloud-proof direction calibration (shown when within 150 km of you).
+  const LANDMARKS = [
+    { name: "Space Needle", lat: 47.6205, lon: -122.3493 }, { name: "Mount Rainier", lat: 46.8529, lon: -121.7604 },
+    { name: "Columbia Center", lat: 47.6045, lon: -122.3306 }, { name: "Mount Baker", lat: 48.7767, lon: -121.8144 },
+    { name: "Olympic Mtns (Mt Constance)", lat: 47.7726, lon: -123.1293 },
+  ];
+  function bearing(lat1, lon1, lat2, lon2) {          // great-circle initial bearing, degrees from true north
+    const p1 = lat1 * D2R, p2 = lat2 * D2R, dl = (lon2 - lon1) * D2R;
+    const y = Math.sin(dl) * Math.cos(p2), x = Math.cos(p1) * Math.sin(p2) - Math.sin(p1) * Math.cos(p2) * Math.cos(dl);
+    return ((Math.atan2(y, x) * R2D) + 360) % 360;
+  }
+  function distKm(lat1, lon1, lat2, lon2) {
+    const p1 = lat1 * D2R, p2 = lat2 * D2R, dp = p2 - p1, dl = (lon2 - lon1) * D2R;
+    const a = Math.sin(dp / 2) ** 2 + Math.cos(p1) * Math.cos(p2) * Math.sin(dl / 2) ** 2;
+    return 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  }
 
   const store = (k, v) => { try { v === undefined ? localStorage.removeItem(k) : localStorage.setItem(k, JSON.stringify(v)); } catch {} };
   const load = (k, d) => { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch { return d; } };
@@ -164,6 +180,7 @@
 
   function openCal() {
     $("cal").hidden = false;
+    renderLandmarks();
     const now = new Date(), loc = S.loc || SEATTLE;
     const up = [...BODIES, ...STARS].map((o) => ({ o, p: Sky.observe(o, now, loc.lat, loc.lon) }))
       .filter((x) => x.p.alt > 3).sort((a, b) => (a.o.body ? -1 : 0) - (b.o.body ? -1 : 0) || b.p.alt - a.p.alt).slice(0, 8);
@@ -194,6 +211,47 @@
     store("wanderers.cal", S.cal);
     $("calResult").textContent = `Calibrated on ${S.calTarget.name}: direction ${fmtSigned(dAz)}, tilt ${fmtSigned(dAlt)}. ` +
       "Re-calibrate if you move to a different room or the phone case has magnets.";
+  };
+
+  // ---------- cloud-proof calibration ----------
+  $("calWall").onclick = () => {
+    // Back of the phone on a vertical wall: the camera points exactly horizontally (altitude 0).
+    if (!S.haveSensor) { $("calResult2").textContent = "This needs the phone's motion sensors."; return; }
+    const dAlt = 0 - S.rawAlt;
+    if (Math.abs(dAlt) > 15) { $("calResult2").textContent = `The phone reads ${Math.round(S.rawAlt)}°, too far from level. Press it flat against the wall and try again.`; return; }
+    S.cal = { dAz: S.cal ? S.cal.dAz : 0, dAlt, with: (S.cal && S.cal.with ? S.cal.with + " + " : "") + "wall" };
+    store("wanderers.cal", S.cal);
+    $("calResult2").textContent = `Tilt calibrated: ${fmtSigned(dAlt)}.`;
+  };
+  let lmPick = null;
+  function renderLandmarks() {
+    const loc = S.loc || SEATTLE;
+    const near = LANDMARKS.map((l) => ({ ...l, km: distKm(loc.lat, loc.lon, l.lat, l.lon) })).filter((l) => l.km < 150 && l.km > 0.2)
+      .sort((a, b) => a.km - b.km);
+    $("landmarks").innerHTML = near.map((l, i) => `<button data-i="${i}">${l.name}<span>${compass(bearing(loc.lat, loc.lon, l.lat, l.lon))} · ${l.km < 10 ? l.km.toFixed(1) : Math.round(l.km)} km</span></button>`).join("");
+    $("landmarks").querySelectorAll("button").forEach((b) => (b.onclick = () => pickLandmark(near[+b.dataset.i], b)));
+  }
+  function pickLandmark(l, btn) {
+    lmPick = l;
+    $("landmarks").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === btn));
+    $("lmStep").hidden = false;
+    $("lmText").textContent = `Centre ${l.name} in the camera view (hold the phone level), then tap.` +
+      (S.loc && S.loc.acc != null ? "" : " Turn on location for this to be accurate.");
+    if (!$("cam").srcObject) startCamera();
+  }
+  $("lmUse").onclick = () => {
+    const m = $("lmCoords").value.match(/(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)/);
+    if (!m || Math.abs(+m[1]) > 90 || Math.abs(+m[2]) > 180) { $("calResult2").textContent = "Paste coordinates like 47.6205, -122.3493"; return; }
+    pickLandmark({ name: "your landmark", lat: +m[1], lon: +m[2] }, null);
+  };
+  $("lmConfirm").onclick = () => {
+    if (!lmPick) return;
+    const loc = S.loc || SEATTLE, truth = bearing(loc.lat, loc.lon, lmPick.lat, lmPick.lon);
+    const azBefore = (S.rawAz + declination() + S.extra + 360) % 360, dAz = wrap180(truth - azBefore);
+    if (Math.abs(dAz) > 45) { $("calResult2").textContent = `That is ${Math.round(Math.abs(dAz))}° from where ${lmPick.name} really is. Wave the phone in a figure 8 and try again.`; return; }
+    S.cal = { dAz, dAlt: S.cal ? S.cal.dAlt : 0, with: lmPick.name + (S.cal && /wall/.test(S.cal.with || "") ? " + wall" : "") };
+    store("wanderers.cal", S.cal);
+    $("calResult2").textContent = `Direction calibrated on ${lmPick.name}: ${fmtSigned(dAz)}.`;
   };
 
   // ---------- info: where the numbers come from ----------
