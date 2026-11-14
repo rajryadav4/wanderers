@@ -41,6 +41,9 @@ input { font: inherit; color: var(--text); background: #0a1120; border: 1px soli
 .logo { font-size: 2rem; color: var(--accent); }
 .brand h1 { font-size: 1.5rem; letter-spacing: .25em; }
 .tag { margin: 0; color: var(--muted); }
+.top-right { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.compass-link { color: #04121f; background: var(--accent); border-radius: 999px; padding: 5px 14px; font-weight: 650;
+  text-decoration: none; font-size: .9rem; }
 .data-badge { font-size: .8rem; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; }
 
 .console { display: grid; gap: 14px; padding: 14px 18px;
