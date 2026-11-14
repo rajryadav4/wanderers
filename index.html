@@ -78,8 +78,10 @@
     <div class="toggles">
       <label><input type="checkbox" id="tGhost" checked> Gaia ghosts <span class="hint">(where known stars should be)</span></label>
       <label><input type="checkbox" id="tTrail" checked> Measured path</label>
+      <label><input type="checkbox" id="tPath" checked> Predicted path <span class="hint">(proper motion + parallax)</span></label>
       <label><input type="checkbox" id="tDiff"> Difference (2026 − 2025)</label>
     </div>
+    <p id="pathNote" class="hint" hidden></p>
     <div class="mix" id="mix">
       <label>Show
         <select id="mixMode" aria-label="How to show the frames">
@@ -171,6 +173,7 @@
 <script src="chartlayout.js"></script>
 <script src="frameinfo.js"></script>
 <script src="aladinlink.js"></script>
+<script src="starpath.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

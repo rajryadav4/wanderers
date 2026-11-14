@@ -27,11 +27,14 @@
 
   async function load(id, ch) {
     stop();
-    const [t, ex] = await Promise.all([
+    const [t, ex, tr] = await Promise.all([
       fetch(`data/${id}/target.json`).then((r) => r.json()),
       fetch(`data/${id}/explain.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+      fetch(`data/${id}/trajectory.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null),   // optional
     ]);
-    S.t = t; S.ex = ex; S.ch = ch && t.frames[ch] ? ch : (t.frames.w2 && t.frames.w2.length ? "w2" : "w1");
+    S.t = t; S.ex = ex; S.tr = tr;
+    $("pathNote").textContent = StarPath.summary(tr); $("pathNote").hidden = !tr;
+    $("tPath").parentElement.hidden = !tr; S.ch = ch && t.frames[ch] ? ch : (t.frames.w2 && t.frames.w2.length ? "w2" : "w1");
     S.i = 0; S.imgs = {}; S.lum = {}; S.mixOut = null;
     $("targetList").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.id === id));
     $("tName").textContent = t.name;
@@ -96,6 +99,27 @@
     if (!diff && !mixed && f && $("tGhost").checked) {
       g.strokeStyle = "rgba(124,196,255,.85)"; g.lineWidth = 1.2;
       for (const [x, y] of S.t.ghosts[f.png] || []) { g.beginPath(); g.arc(X(x), Y(y), 7, 0, 2 * Math.PI); g.stroke(); }
+    }
+    // Predicted path over the years the frames cover, and where the star should be in this frame.
+    if ($("tPath").checked && S.tr) {
+      const P = S.tr.path.with_parallax, yrs = frames().map((q) => q.year);
+      const line = yrs.length ? StarPath.between(P, Math.min(...yrs), Math.max(...yrs)) : [];
+      g.strokeStyle = "rgba(126,231,135,.75)"; g.lineWidth = 1.5;
+      g.beginPath(); line.forEach((p, j) => (j ? g.lineTo(X(p.x), Y(p.y)) : g.moveTo(X(p.x), Y(p.y)))); g.stroke();
+      // Forecast beyond the newest frame, dotted, to the end of the computed path.
+      const last = P[P.length - 1], ahead = yrs.length ? StarPath.between(P, Math.max(...yrs), last[0]) : [];
+      if (ahead.length > 1) {
+        g.setLineDash([2, 5]); g.beginPath(); ahead.forEach((p, j) => (j ? g.lineTo(X(p.x), Y(p.y)) : g.moveTo(X(p.x), Y(p.y)))); g.stroke(); g.setLineDash([]);
+        const e = ahead[ahead.length - 1];
+        if (e.x >= 0 && e.x < N && e.y >= 0 && e.y < N) { g.fillStyle = "#b9f5c0"; g.font = "12px ui-monospace, monospace"; g.fillText(`${Math.round(last[0])}?`, X(e.x) + 8, Y(e.y) + 4); }
+      }
+      const here = !diff && !mixed && f && StarPath.at(P, f.year);
+      if (here) {                                   // open crosshair, so the star itself stays visible
+        const cx = X(here.x), cy = Y(here.y);
+        g.beginPath();
+        for (const [a, b] of [[-14, -6], [6, 14]]) { g.moveTo(cx + a, cy); g.lineTo(cx + b, cy); g.moveTo(cx, cy + a); g.lineTo(cx, cy + b); }
+        g.stroke();
+      }
     }
     if ($("tTrail").checked && S.t.track.length) {
       const ch = S.t.track.filter((p) => (p.ch || "w2") === S.ch).sort((a, b) => a.year - b.year);
@@ -241,7 +265,7 @@
 
   $("play").onclick = play;
   $("frame").oninput = (e) => { stop(); S.i = +e.target.value; draw(); };
-  ["tGhost", "tTrail", "tDiff"].forEach((id) => ($(id).onchange = draw));
+  ["tGhost", "tTrail", "tPath", "tDiff"].forEach((id) => ($(id).onchange = draw));
   document.querySelectorAll(".channel button").forEach((b) => (b.onclick = () => {
     S.ch = b.dataset.ch; S.i = Math.min(S.i, frames().length - 1);
     document.querySelectorAll(".channel button").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-checked", x === b); });
