@@ -149,17 +149,26 @@
   };
 
   // ---------- spectrum ----------
+  let lastChartW = 0, chartTimer = null;
+  const chartWidthNow = () => ChartLayout.chartWidth($("spec").getBoundingClientRect().width);
+  window.addEventListener("resize", () => {   // rotate a phone or resize a window: redraw at the new width
+    clearTimeout(chartTimer);
+    chartTimer = setTimeout(() => { if (S.t && Math.abs(chartWidthNow() - lastChartW) > 8) spectrum(); }, 150);
+  });
   function spectrum() {
     const svg = $("spec"), sp = S.t.spectrum.filter((p) => p.flux_mjy > 0);
-    const W = 900, H = 260, L = 60, R = 20, T = 14, B = 34;
+    // Draw at the width the chart really has, so its labels stay a readable size on a phone.
+    const W = chartWidthNow(), H = ChartLayout.chartHeight(W), L = 60, R = 20, T = 14, B = 34;
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`); lastChartW = W;
     const x = (l) => L + ((l - 0.75) / (5.0 - 0.75)) * (W - L - R);
     let out = "";
     const colors = { H2O: "var(--h2o)", CH4: "var(--ch4)", CO: "var(--co)", CO2: "var(--co)" };
     for (const b of S.t.bands) out += `<rect x="${x(b.lo)}" y="${T}" width="${x(b.hi) - x(b.lo)}" height="${H - T - B}" fill="${colors[b.name]}"><title>${b.name} absorption band</title></rect>`;
-    for (const b of S.t.bands) out += `<text x="${(x(b.lo) + x(b.hi)) / 2}" y="${T + 10}" text-anchor="middle">${b.name.replace("2", "₂").replace("4", "₄")}</text>`;
+    // Band names across the top; names that would overlap move to a second row (see chartlayout.js).
+    for (const l of ChartLayout.placeLabels(S.t.bands, x)) out += `<text x="${l.cx}" y="${T + 10 + l.row * 12}" text-anchor="middle">${l.name}</text>`;
     if (sp.length) {
       const v = sp.map((p) => Math.log10(p.flux_mjy)), lo = Math.min(...v) - 0.15, hi = Math.max(...v) + 0.15;
-      const y = (f) => H - B - ((Math.log10(f) - lo) / (hi - lo)) * (H - T - B);
+      const y = (f) => H - B - ((Math.log10(f) - lo) / (hi - lo)) * (H - T - B - 24);   // 24px headroom keeps the band names clear of the data
       out += `<polyline class="line" points="${sp.map((p) => `${x(p.lam)},${y(p.flux_mjy)}`).join(" ")}"/>`;
       out += sp.map((p) => `<circle class="pt" cx="${x(p.lam)}" cy="${y(p.flux_mjy)}" r="3"><title>${p.lam} µm: ${p.flux_mjy.toPrecision(3)} mJy (${p.n} images)</title></circle>`).join("");
       for (let e = Math.ceil(lo); e <= Math.floor(hi); e++) out += `<text x="${L - 8}" y="${y(10 ** e) + 4}" text-anchor="end">${fmtFlux(10 ** e)}</text><line class="axis" x1="${L}" x2="${W - R}" y1="${y(10 ** e)}" y2="${y(10 ** e)}" opacity=".35"/>`;
