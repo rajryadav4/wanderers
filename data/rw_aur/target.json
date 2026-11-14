@@ -2022,7 +2022,20 @@
    {
     "label": "brightness change Sep 2025\u2192Mar 2026",
     "value": "+0.03 mag"
+   },
+   {
+    "label": "distance (Gaia parallax)",
+    "value": "509 ly"
    }
   ]
+ },
+ "gaia_facts": {
+  "source_id": 156430822114424576,
+  "parallax_mas": 6.406249329219477,
+  "distance_ly": 509.1216142843102,
+  "g_mag": 12.18407154083252,
+  "bp_rp": 1.7740306854248047,
+  "variable_flag": "NOT_AVAILABLE",
+  "teff_k": null
  }
 }

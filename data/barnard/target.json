@@ -3525,7 +3525,24 @@
    {
     "label": "brightness change Aug 2025\u2192Mar 2026",
     "value": "+0.03 mag"
+   },
+   {
+    "label": "distance (Gaia parallax)",
+    "value": "6.0 ly"
+   },
+   {
+    "label": "temperature (Gaia estimate)",
+    "value": "3,100 K"
    }
   ]
+ },
+ "gaia_facts": {
+  "source_id": 4472832130942575872,
+  "parallax_mas": 546.975939730948,
+  "distance_ly": 5.9628948242299815,
+  "g_mag": 8.193974494934082,
+  "bp_rp": 2.8336968421936035,
+  "variable_flag": "NOT_AVAILABLE",
+  "teff_k": 3099.633544921875
  }
 }

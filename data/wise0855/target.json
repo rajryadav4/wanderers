@@ -1845,7 +1845,17 @@
    {
     "label": "methane test (4\u20134.75 / 3.3 \u00b5m)",
     "value": "5.1\u00d7"
+   },
+   {
+    "label": "distance (literature)",
+    "value": "7.3 ly"
    }
   ]
+ },
+ "gaia_facts": {
+  "source_id": null,
+  "parallax_mas": 449.0,
+  "distance_ly": 7.264053452115813,
+  "note": "Not in Gaia DR3; parallax from Luhman & Esplin 2016, AJ 152, 78"
  }
 }

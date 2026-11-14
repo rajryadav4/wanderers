@@ -1553,7 +1553,20 @@
    {
     "label": "brightness change May 2025\u2192Oct 2025",
     "value": "-0.06 mag"
+   },
+   {
+    "label": "distance (Gaia parallax)",
+    "value": "12.1 ly"
    }
   ]
+ },
+ "gaia_facts": {
+  "source_id": 6412596012146801152,
+  "parallax_mas": 270.6580324694526,
+  "distance_ly": 12.050482929480804,
+  "g_mag": 18.030664443969727,
+  "bp_rp": 5.081964492797852,
+  "variable_flag": "NOT_AVAILABLE",
+  "teff_k": null
  }
 }

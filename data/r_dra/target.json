@@ -1424,8 +1424,8 @@
  "evidence": {
   "status": "known",
   "classification": "Variable star",
-  "confidence": "medium",
-  "confidence_note": "lowered because most SPHEREx measurements are saturated",
+  "confidence": "high",
+  "confidence_note": null,
   "checks_passed": 3,
   "checks_needed": 3,
   "checks": [
@@ -1444,6 +1444,10 @@
    {
     "state": "warn",
     "text": "154 of 154 SPHEREx measurements flagged (overflow or bloom: the object is too bright for SPHEREx). No reliable SPHEREx spectrum, so we do not show one."
+   },
+   {
+    "state": "ok",
+    "text": "Gaia independently classifies it as a long-period variable (Mira-type pulsating giant) from about 3 years of its own photometry; this agrees with our SPHEREx measurement"
    }
   ],
   "numbers": [
@@ -1458,7 +1462,23 @@
    {
     "label": "brightness change Jun 2025\u2192Nov 2025",
     "value": "+0.34 mag"
+   },
+   {
+    "label": "distance (Gaia parallax)",
+    "value": "2,607 ly"
    }
   ]
+ },
+ "gaia_facts": {
+  "source_id": 1648328016354496384,
+  "parallax_mas": 1.2509180143740992,
+  "distance_ly": 2607.3331445561857,
+  "g_mag": 6.3743791580200195,
+  "bp_rp": 3.282482147216797,
+  "variable_flag": "VARIABLE",
+  "teff_k": null,
+  "vari_class": "LPV",
+  "vari_class_text": "long-period variable (Mira-type pulsating giant)",
+  "vari_score": 0.9573475122451782
  }
 }

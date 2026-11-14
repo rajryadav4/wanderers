@@ -46,10 +46,15 @@
         <h2 id="tName">Loading…</h2>
         <p id="tKind" class="hint"></p>
       </div>
-      <div class="channel" role="radiogroup" aria-label="Wavelength">
-        <button data-ch="w2" class="on" role="radio" aria-checked="true">4.6 µm</button>
-        <button data-ch="w1" role="radio" aria-checked="false">3.4 µm</button>
+      <div class="view-tabs" role="tablist" aria-label="View">
+        <button id="tabFlip" class="on" role="tab" aria-selected="true">Time-lapse</button>
+        <button id="tabMap" role="tab" aria-selected="false">Sky map · any coordinates</button>
       </div>
+    </div>
+    <div id="flipView">
+    <div class="channel" role="radiogroup" aria-label="Wavelength">
+      <button data-ch="w2" class="on" role="radio" aria-checked="true">4.6 µm</button>
+      <button data-ch="w1" role="radio" aria-checked="false">3.4 µm</button>
     </div>
     <div class="viewer">
       <canvas id="sky" width="600" height="600" aria-label="Sky image of the selected target"></canvas>
@@ -68,6 +73,22 @@
     </div>
     <p class="hint why">Each frame is matched by wavelength: WISE 2010 is compared with SPHEREx images taken at the same
       infrared colour, because SPHEREx records a different wavelength across every detector.</p>
+    </div>
+    <div id="mapView" hidden>
+      <div class="map-controls">
+        <label>Survey
+          <select id="mapSurvey">
+            <option value="spherex">SPHEREx DR1 · one of 102 colours</option>
+            <option value="wise">AllWISE colour (3.4 / 4.6 / 22 µm)</option>
+          </select></label>
+        <label id="lamWrap">Wavelength <span id="lamVal" class="mono"></span>
+          <input type="range" id="lam" min="1" max="102" value="96" aria-label="SPHEREx wavelength"></label>
+      </div>
+      <div id="aladin" class="aladin" aria-label="Interactive sky map"></div>
+      <p class="hint">Live from IRSA's all-sky maps (HiPS) via Aladin Lite. Drag to pan, scroll to zoom. Slide the
+        wavelength: cold brown dwarfs appear only at the long end, normal stars fade there. The orange marker is the
+        target; the dashed line is its measured path. This map works for any coordinates you type.</p>
+    </div>
   </section>
 
   <!-- RIGHT: evidence -->
