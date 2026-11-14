@@ -1,43 +1,34 @@
 /* WANDERERS Sky Compass.
- * Where the phone points: back-camera direction from DeviceOrientation (alpha/beta/gamma, W3C
- * Z-X'-Y'' Euler angles) plus a compass heading (absolute alpha on Android, webkitCompassHeading on iOS).
- * Where a target is: RA/Dec -> altitude/azimuth from GPS position and the current sidereal time.
+ * Where the phone points: back-camera direction from DeviceOrientation (alpha/beta/gamma, W3C Z-X'-Y''
+ * Euler angles) plus a compass heading (absolute alpha on Android, webkitCompassHeading on iOS), which
+ * is MAGNETIC. True azimuth = magnetic + declination (WMM2025 at your GPS position) + your calibration.
+ * Where things are: sky.js (UTC time, sidereal time, precession, Sun/Moon, refraction).
  * Everything runs on the phone. Without motion sensors (desktop) you drag the radar instead. */
 (() => {
   const $ = (id) => document.getElementById(id);
   const D2R = Math.PI / 180, R2D = 180 / Math.PI;
-  const FOV = 60;            // radar radius in degrees
-  const LOCK = 12;           // "locked on" when the target is this close to where you point
-  const SEATTLE = { lat: 47.61, lon: -122.33 };
+  const FOV = 60, LOCK = 12;
+  const SEATTLE = { lat: 47.61, lon: -122.33, acc: null };
 
-  // Bright stars to orient by (J2000 RA/Dec in degrees).
+  // Bright reference objects (J2000 RA/Dec, degrees). Also used for calibration.
   const STARS = [
     ["Polaris", 37.95, 89.26], ["Vega", 279.23, 38.78], ["Arcturus", 213.92, 19.18], ["Capella", 79.17, 46.00],
     ["Sirius", 101.29, -16.72], ["Betelgeuse", 88.79, 7.41], ["Rigel", 78.63, -8.20], ["Aldebaran", 68.98, 16.51],
     ["Altair", 297.70, 8.87], ["Deneb", 310.36, 45.28], ["Spica", 201.30, -11.16], ["Antares", 247.35, -26.43],
     ["Procyon", 114.83, 5.22], ["Pollux", 116.33, 28.03], ["Regulus", 152.09, 11.97], ["Fomalhaut", 344.41, -29.62],
-  ];
+  ].map(([name, ra, dec]) => ({ name, ra, dec }));
+  const BODIES = [{ name: "Moon", body: "moon" }, { name: "Sun", body: "sun" }];
+
+  const store = (k, v) => { try { v === undefined ? localStorage.removeItem(k) : localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+  const load = (k, d) => { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch { return d; } };
 
   const S = {
-    targets: [], sel: null, loc: null, locNote: "", az: 0, alt: 20, haveSensor: false, source: "none",
-    decl: 0, smooth: null, lastEvt: 0,
+    targets: [], sel: null, loc: null, locNote: "", az: 0, alt: 20, rawAz: 0, rawAlt: 20,
+    haveSensor: false, source: "none", accuracy: null, smooth: null,
+    autoDecl: load("wanderers.autoDecl", true), extra: load("wanderers.extra", 0), cal: load("wanderers.cal", null),
+    calTarget: null,
   };
-  try { S.decl = parseFloat(localStorage.getItem("wanderers.decl")) || 0; } catch {}
 
-  // ---------- astronomy ----------
-  function lstDeg(date, lon) {
-    const jd = date.getTime() / 86400000 + 2440587.5;
-    const gmst = 280.46061837 + 360.98564736629 * (jd - 2451545.0);
-    return (((gmst + lon) % 360) + 360) % 360;
-  }
-  function altAz(ra, dec, lat, lst) {
-    const H = (lst - ra) * D2R, d = dec * D2R, p = lat * D2R;
-    const sinAlt = Math.sin(p) * Math.sin(d) + Math.cos(p) * Math.cos(d) * Math.cos(H);
-    const alt = Math.asin(Math.max(-1, Math.min(1, sinAlt)));
-    const az = Math.atan2(-Math.sin(H) * Math.cos(d), Math.cos(p) * Math.sin(d) - Math.sin(p) * Math.cos(d) * Math.cos(H));
-    return { alt: alt * R2D, az: ((az * R2D) + 360) % 360 };
-  }
-  // east, north, up unit vector for an az/alt
   const vec = (az, alt) => [Math.sin(az * D2R) * Math.cos(alt * D2R), Math.cos(az * D2R) * Math.cos(alt * D2R), Math.sin(alt * D2R)];
   const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
   const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
@@ -45,9 +36,21 @@
   const sep = (a, b) => Math.acos(Math.max(-1, Math.min(1, dot(a, b)))) * R2D;
   const wrap180 = (x) => ((x + 540) % 360) - 180;
   const compass = (az) => ["N", "NE", "E", "SE", "S", "SW", "W", "NW"][Math.round(az / 45) % 8];
+  const fmtSigned = (x) => `${x >= 0 ? "+" : "−"}${Math.abs(x).toFixed(1)}°`;
+
+  // ---------- corrections ----------
+  function declination() {
+    if (!S.autoDecl) return 0;
+    const loc = S.loc || SEATTLE, d = Sky.declination(loc.lat, loc.lon);
+    return d == null ? 0 : d;
+  }
+  function applyCorrections() {
+    const azOff = declination() + S.extra + (S.cal ? S.cal.dAz : 0);
+    S.az = (S.rawAz + azOff + 360) % 360;
+    S.alt = Math.max(-90, Math.min(90, S.rawAlt + (S.cal ? S.cal.dAlt : 0)));
+  }
 
   // ---------- phone orientation ----------
-  // Back-camera direction for W3C Euler angles (alpha about Z, beta about X', gamma about Y'').
   function cameraAzAlt(alpha, beta, gamma) {
     const a = alpha * D2R, b = beta * D2R, g = gamma * D2R;
     const E = -Math.cos(a) * Math.sin(g) - Math.sin(a) * Math.sin(b) * Math.cos(g);
@@ -55,32 +58,31 @@
     const U = -Math.cos(b) * Math.cos(g);
     return { az: ((Math.atan2(E, N) * R2D) + 360) % 360, alt: Math.asin(Math.max(-1, Math.min(1, U))) * R2D };
   }
-
   function onOrient(e, absolute) {
     if (e.beta == null) return;
     let alpha = null;
     if (typeof e.webkitCompassHeading === "number" && !isNaN(e.webkitCompassHeading)) {
-      alpha = 360 - e.webkitCompassHeading; S.source = "iOS compass";       // iOS: heading clockwise from north
+      alpha = 360 - e.webkitCompassHeading; S.source = "iOS compass (magnetic)";
+      if (typeof e.webkitCompassAccuracy === "number" && e.webkitCompassAccuracy >= 0) S.accuracy = e.webkitCompassAccuracy;
     } else if (absolute || e.absolute) {
-      alpha = e.alpha; S.source = "absolute orientation";
-    } else if (S.source === "none" || S.source === "relative (no compass)") {
-      alpha = e.alpha; S.source = "relative (no compass)";
+      alpha = e.alpha; S.source = "Android absolute orientation (magnetic)";
+    } else if (S.source === "none" || S.source.startsWith("relative")) {
+      alpha = e.alpha; S.source = "relative only (no compass): calibrate before use";
     } else return;
     if (alpha == null) return;
     const c = cameraAzAlt(alpha, e.beta, e.gamma || 0);
-    c.az = (c.az + S.decl + 360) % 360;
-    // circular low-pass filter so the radar does not jitter
     if (!S.smooth) S.smooth = { x: Math.sin(c.az * D2R), y: Math.cos(c.az * D2R), alt: c.alt };
     const k = 0.25;
     S.smooth.x += k * (Math.sin(c.az * D2R) - S.smooth.x);
     S.smooth.y += k * (Math.cos(c.az * D2R) - S.smooth.y);
     S.smooth.alt += k * (c.alt - S.smooth.alt);
-    S.az = ((Math.atan2(S.smooth.x, S.smooth.y) * R2D) + 360) % 360;
-    S.alt = S.smooth.alt;
-    S.haveSensor = true; S.lastEvt = performance.now();
+    S.rawAz = ((Math.atan2(S.smooth.x, S.smooth.y) * R2D) + 360) % 360;
+    S.rawAlt = S.smooth.alt;
+    S.haveSensor = true;
   }
 
   // ---------- start ----------
+  Sky.loadDeclination("data/declination.json");
   fetch("data/index.json").then((r) => r.json()).then((list) => {
     S.targets = list;
     const want = new URLSearchParams(location.search).get("target");
@@ -90,7 +92,6 @@
 
   $("start").onclick = async () => {
     $("introMsg").textContent = "";
-    // iOS 13+ needs an explicit permission request from a tap.
     try {
       if (typeof DeviceOrientationEvent !== "undefined" && typeof DeviceOrientationEvent.requestPermission === "function") {
         const r = await DeviceOrientationEvent.requestPermission();
@@ -99,48 +100,50 @@
     } catch (err) { $("introMsg").textContent = "Motion access is not available here: " + err.message; }
     window.addEventListener("deviceorientationabsolute", (e) => onOrient(e, true), true);
     window.addEventListener("deviceorientation", (e) => onOrient(e, false), true);
-
-    if ($("useCam").checked && navigator.mediaDevices) {
-      try {
-        const st = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio: false });
-        $("cam").srcObject = st; $("cam").hidden = false;
-      } catch { /* camera is optional */ }
-    }
+    if ($("useCam").checked) startCamera();
     locate();
     $("intro").hidden = true; $("hud").hidden = false; fit();
-    setTimeout(() => { if (!S.haveSensor) { S.source = "drag to aim (no motion sensors)"; } }, 2500);
+    setTimeout(() => { if (!S.haveSensor) S.source = "drag to aim (no motion sensors)"; }, 2500);
     requestAnimationFrame(loop);
   };
+
+  async function startCamera() {
+    if (!navigator.mediaDevices || $("cam").srcObject) return;
+    try {
+      const st = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio: false });
+      $("cam").srcObject = st; $("cam").hidden = false;
+    } catch { /* optional */ }
+  }
 
   function locate() {
     S.loc = SEATTLE; S.locNote = "using Seattle until GPS answers";
     if (!navigator.geolocation) { S.locNote = "no GPS, using Seattle"; return; }
-    navigator.geolocation.getCurrentPosition(
-      (p) => { S.loc = { lat: p.coords.latitude, lon: p.coords.longitude }; S.locNote = `GPS ±${Math.round(p.coords.accuracy)} m`; },
+    navigator.geolocation.watchPosition(
+      (p) => { S.loc = { lat: p.coords.latitude, lon: p.coords.longitude, acc: p.coords.accuracy }; S.locNote = `GPS ±${Math.round(p.coords.accuracy)} m`; },
       () => { S.locNote = "location declined, using Seattle"; },
-      { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 });
+      { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 });
   }
 
   // ---------- drag to aim (desktop / no sensors) ----------
   let drag = null;
-  $("radar").addEventListener("pointerdown", (e) => { if (!S.haveSensor) { drag = { x: e.clientX, y: e.clientY, az: S.az, alt: S.alt }; $("radar").setPointerCapture(e.pointerId); } });
+  $("radar").addEventListener("pointerdown", (e) => { if (!S.haveSensor) { drag = { x: e.clientX, y: e.clientY, az: S.rawAz, alt: S.rawAlt }; $("radar").setPointerCapture(e.pointerId); } });
   $("radar").addEventListener("pointermove", (e) => {
     if (!drag) return;
     const k = 120 / $("radar").clientWidth;
-    S.az = (drag.az - (e.clientX - drag.x) * k + 360) % 360;
-    S.alt = Math.max(-89, Math.min(89, drag.alt + (e.clientY - drag.y) * k));
+    S.rawAz = (drag.az - (e.clientX - drag.x) * k + 360) % 360;
+    S.rawAlt = Math.max(-89, Math.min(89, drag.alt + (e.clientY - drag.y) * k));
   });
   $("radar").addEventListener("pointerup", () => (drag = null));
   window.addEventListener("keydown", (e) => {
-    if (S.haveSensor) return;
+    if (S.haveSensor || e.target.tagName === "INPUT") return;
     const step = e.shiftKey ? 10 : 2;
-    if (e.key === "ArrowLeft") S.az = (S.az - step + 360) % 360;
-    if (e.key === "ArrowRight") S.az = (S.az + step) % 360;
-    if (e.key === "ArrowUp") S.alt = Math.min(89, S.alt + step);
-    if (e.key === "ArrowDown") S.alt = Math.max(-89, S.alt - step);
+    if (e.key === "ArrowLeft") S.rawAz = (S.rawAz - step + 360) % 360;
+    if (e.key === "ArrowRight") S.rawAz = (S.rawAz + step) % 360;
+    if (e.key === "ArrowUp") S.rawAlt = Math.min(89, S.rawAlt + step);
+    if (e.key === "ArrowDown") S.rawAlt = Math.max(-89, S.rawAlt - step);
   });
 
-  // ---------- UI ----------
+  // ---------- targets ----------
   function renderTargets() {
     $("targets").innerHTML = S.targets.map((t) =>
       `<button data-id="${t.id}" class="${S.sel && S.sel.id === t.id ? "on" : ""}" role="option"><b>${t.name}</b><span id="tp_${t.id}">${t.teaser}</span></button>`).join("");
@@ -150,15 +153,72 @@
     }));
   }
 
-  $("settingsBtn").onclick = () => { $("settings").hidden = false; };
-  $("closeSettings").onclick = () => { $("settings").hidden = true; };
-  $("decl").value = S.decl; $("declVal").textContent = `${S.decl > 0 ? "+" : ""}${S.decl}°`;
-  $("decl").oninput = (e) => {
-    S.decl = +e.target.value; $("declVal").textContent = `${S.decl > 0 ? "+" : ""}${S.decl}°`;
-    try { localStorage.setItem("wanderers.decl", S.decl); } catch {}
+  // ---------- calibration ----------
+  $("calBtn").onclick = () => { openCal(); };
+  $("closeCal").onclick = () => { $("cal").hidden = true; S.calTarget = null; };
+  $("autoDecl").checked = S.autoDecl;
+  $("autoDecl").onchange = (e) => { S.autoDecl = e.target.checked; store("wanderers.autoDecl", S.autoDecl); };
+  $("extra").value = S.extra;
+  $("extra").oninput = (e) => { S.extra = +e.target.value; store("wanderers.extra", S.extra); };
+  $("resetCal").onclick = () => { S.cal = null; store("wanderers.cal"); S.extra = 0; $("extra").value = 0; store("wanderers.extra", 0); $("calResult").textContent = "Calibration cleared."; };
+
+  function openCal() {
+    $("cal").hidden = false;
+    const now = new Date(), loc = S.loc || SEATTLE;
+    const up = [...BODIES, ...STARS].map((o) => ({ o, p: Sky.observe(o, now, loc.lat, loc.lon) }))
+      .filter((x) => x.p.alt > 3).sort((a, b) => (a.o.body ? -1 : 0) - (b.o.body ? -1 : 0) || b.p.alt - a.p.alt).slice(0, 8);
+    $("calList").innerHTML = up.length ? up.map((x, i) => `<button data-i="${i}">${x.o.name}<span>${compass(x.p.az)} · ${Math.round(x.p.alt)}° up</span></button>`).join("")
+      : "<p class='small'>Nothing bright is above your horizon right now. Use the slider below instead.</p>";
+    $("calList").querySelectorAll("button").forEach((b) => (b.onclick = () => {
+      S.calTarget = up[+b.dataset.i].o;
+      $("calList").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+      $("calStep").hidden = false;
+      $("calStepText").textContent = S.calTarget.body === "sun"
+        ? "Do not look at the Sun. Hold the phone so its camera faces the Sun (watch the screen, not the sky), centre the Sun in the circle, then tap."
+        : `Put ${S.calTarget.name} in the centre circle of the camera view, hold still, then tap.`;
+      if (!$("cam").srcObject) startCamera();
+    }));
+  }
+  $("calConfirm").onclick = () => {
+    if (!S.calTarget) return;
+    const loc = S.loc || SEATTLE, truth = Sky.observe(S.calTarget, new Date(), loc.lat, loc.lon);
+    // what the phone reports after declination + manual slider, before any old calibration
+    const azBefore = (S.rawAz + declination() + S.extra + 360) % 360;
+    const dAz = wrap180(truth.az - azBefore), dAlt = truth.alt - S.rawAlt;
+    if (Math.abs(dAz) > 45 || Math.abs(dAlt) > 25) {
+      $("calResult").textContent = `That is ${Math.round(Math.abs(dAz))}° / ${Math.round(Math.abs(dAlt))}° away from where ${S.calTarget.name} really is. ` +
+        "Check you picked the right object, wave the phone in a figure 8 to reset its compass, and try again.";
+      return;
+    }
+    S.cal = { dAz, dAlt, with: S.calTarget.name, at: new Date().toISOString() };
+    store("wanderers.cal", S.cal);
+    $("calResult").textContent = `Calibrated on ${S.calTarget.name}: direction ${fmtSigned(dAz)}, tilt ${fmtSigned(dAlt)}. ` +
+      "Re-calibrate if you move to a different room or the phone case has magnets.";
   };
 
-  // Fit the square radar inside whatever space the stage has (phones differ a lot).
+  // ---------- info: where the numbers come from ----------
+  $("infoBtn").onclick = () => { $("info").hidden = false; };
+  $("closeInfo").onclick = () => { $("info").hidden = true; };
+  function renderInfo(now, loc, lst) {
+    if ($("info").hidden && $("cal").hidden) return;
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone, off = -now.getTimezoneOffset() / 60;
+    const h = Math.floor(lst / 15), m = Math.floor(((lst / 15) % 1) * 60);
+    const d = declination(), mdl = Sky.model();
+    const rows = [
+      ["Your position", `${loc.lat.toFixed(3)}°, ${loc.lon.toFixed(3)}° · ${S.locNote}`],
+      ["Your time", `${now.toLocaleTimeString()} ${tz} (UTC${off >= 0 ? "+" : ""}${off}) · ${now.toISOString().slice(11, 19)} UTC`],
+      ["Earth's rotation", `Local sidereal time ${String(h).padStart(2, "0")}h${String(m).padStart(2, "0")}m (IAU 1982 GMST)`],
+      ["True vs magnetic north", S.autoDecl ? `${fmtSigned(d)} from ${mdl ? `${mdl.model}, epoch ${mdl.epoch}` : "loading…"}` : "off"],
+      ["Your calibration", S.cal ? `${fmtSigned(S.cal.dAz)} direction, ${fmtSigned(S.cal.dAlt)} tilt (on ${S.cal.with})` : "none yet"],
+      ["Extra correction", fmtSigned(S.extra)],
+      ["Compass sensor", `${S.source}${S.accuracy != null ? ` · accuracy ±${Math.round(S.accuracy)}°` : ""}`],
+    ];
+    $("infoRows").innerHTML = rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("");
+    $("calStatus").innerHTML = rows.slice(3, 7).map(([k, v]) => `<div><b>${k}:</b> ${v}</div>`).join("") +
+      (S.accuracy != null && S.accuracy > 15 ? `<div class="warn">Compass accuracy is poor (±${Math.round(S.accuracy)}°). Wave the phone in a figure 8 for a few seconds.</div>` : "");
+  }
+
+  // ---------- drawing ----------
   function fit() {
     const st = document.querySelector(".stage"), s = Math.max(120, Math.min(st.clientWidth - 32, st.clientHeight - 16));
     $("radar").style.width = $("radar").style.height = s + "px";
@@ -166,34 +226,27 @@
   window.addEventListener("resize", fit);
   window.addEventListener("orientationchange", () => setTimeout(fit, 300));
 
-  function loop() {
-    draw();
-    requestAnimationFrame(loop);
-  }
+  function loop() { applyCorrections(); draw(); requestAnimationFrame(loop); }
 
   function draw() {
     const c = $("radar"), g = c.getContext("2d"), W = c.width, cx = W / 2, cy = W / 2, R = W / 2 - 14;
     g.clearRect(0, 0, W, W);
-    const now = new Date(), loc = S.loc || SEATTLE, lst = lstDeg(now, loc.lon);
-    const p = vec(S.az, S.alt);
-    const zen = [0, 0, 1];
+    const now = new Date(), loc = S.loc || SEATTLE;
+    const p = vec(S.az, S.alt), zen = [0, 0, 1];
     let up = [zen[0] - dot(zen, p) * p[0], zen[1] - dot(zen, p) * p[1], zen[2] - dot(zen, p) * p[2]];
-    if (Math.hypot(...up) < 1e-3) up = [Math.sin(S.az * D2R), Math.cos(S.az * D2R), 0];   // pointing straight up/down
+    if (Math.hypot(...up) < 1e-3) up = [Math.sin(S.az * D2R), Math.cos(S.az * D2R), 0];
     up = norm(up);
     const right = cross(p, up);
     const project = (v) => {
-      const d = sep(p, v), x = dot(v, right), y = dot(v, up), h = Math.hypot(x, y) || 1;
-      const r = (d / FOV) * R;
+      const d = sep(p, v), x = dot(v, right), y = dot(v, up), h = Math.hypot(x, y) || 1, r = (d / FOV) * R;
       return { d, X: cx + (r * x) / h, Y: cy - (r * y) / h, ux: x / h, uy: y / h };
     };
 
-    // background disc + rings
     g.fillStyle = "rgba(7, 11, 20, 0.55)"; g.beginPath(); g.arc(cx, cy, R, 0, 2 * Math.PI); g.fill();
     g.strokeStyle = "rgba(124,196,255,.18)"; g.lineWidth = 1.5;
     for (const r of [15, 30, 45, 60]) { g.beginPath(); g.arc(cx, cy, (r / FOV) * R, 0, 2 * Math.PI); g.stroke(); }
     g.save(); g.beginPath(); g.arc(cx, cy, R, 0, 2 * Math.PI); g.clip();
 
-    // horizon (alt = 0) and ground shading
     g.strokeStyle = "rgba(255,255,255,.55)"; g.lineWidth = 2; g.beginPath();
     let first = true;
     for (let az = 0; az <= 360; az += 2) {
@@ -202,26 +255,31 @@
       first ? g.moveTo(q.X, q.Y) : g.lineTo(q.X, q.Y); first = false;
     }
     g.stroke();
-    // cardinal points on the horizon
     g.font = "bold 26px system-ui"; g.textAlign = "center"; g.textBaseline = "middle";
     for (const [lab, az] of [["N", 0], ["E", 90], ["S", 180], ["W", 270]]) {
       const q = project(vec(az, 0));
       if (q.d < FOV) { g.fillStyle = lab === "N" ? "#ff8080" : "rgba(255,255,255,.8)"; g.fillText(lab, q.X, q.Y - 18); }
     }
-    // bright stars
-    g.font = "20px system-ui"; g.textAlign = "left";
-    let near = null;
-    for (const [name, ra, dec] of STARS) {
-      const s = altAz(ra, dec, loc.lat, lst), v = vec(s.az, s.alt), q = project(v);
-      if (!near || q.d < near.d) near = { name, d: q.d };
+    g.textAlign = "left";
+    let near = null, lst = 0;
+    for (const o of [...BODIES, ...STARS]) {
+      const s = Sky.observe(o, now, loc.lat, loc.lon); lst = s.lst;
+      const q = project(vec(s.az, s.alt));
+      if (!o.body && (!near || q.d < near.d)) near = { name: o.name, d: q.d };
       if (q.d > FOV) continue;
-      g.fillStyle = s.alt < 0 ? "rgba(141,155,184,.45)" : "rgba(255,255,255,.9)";
-      g.beginPath(); g.arc(q.X, q.Y, 4, 0, 2 * Math.PI); g.fill();
-      g.fillText(name, q.X + 8, q.Y);
+      const below = s.alt < 0;
+      if (o.body) {
+        g.fillStyle = below ? "rgba(141,155,184,.5)" : o.body === "sun" ? "#ffd84a" : "#e8ecf5";
+        g.beginPath(); g.arc(q.X, q.Y, 12, 0, 2 * Math.PI); g.fill();
+        g.font = "bold 22px system-ui"; g.fillText(o.name, q.X + 16, q.Y);
+      } else {
+        g.fillStyle = below ? "rgba(141,155,184,.45)" : "rgba(255,255,255,.9)";
+        g.beginPath(); g.arc(q.X, q.Y, 4, 0, 2 * Math.PI); g.fill();
+        g.font = "20px system-ui"; g.fillText(o.name, q.X + 8, q.Y);
+      }
     }
-    // targets
     for (const t of S.targets) {
-      const s = altAz(t.ra, t.dec, loc.lat, lst); t._alt = s.alt; t._az = s.az;
+      const s = Sky.observe({ ra: t.ra, dec: t.dec }, now, loc.lat, loc.lon); t._alt = s.alt; t._az = s.az;
       const q = project(vec(s.az, s.alt)); t._d = q.d;
       const el = document.getElementById("tp_" + t.id);
       if (el) el.textContent = `${s.alt >= 0 ? "above" : "below"} horizon · ${compass(s.az)} ${Math.round(s.alt)}°`;
@@ -234,7 +292,6 @@
     }
     g.restore();
 
-    // edge arrow towards the selected target when it is outside the radar
     const sel = S.sel;
     if (sel && sel._d != null && sel._d > FOV - 4) {
       const q = project(vec(sel._az, sel._alt));
@@ -243,10 +300,10 @@
       g.beginPath(); g.moveTo(0, -22); g.lineTo(16, 10); g.lineTo(-16, 10); g.closePath(); g.fill(); g.restore();
     }
 
-    // header + guidance
     $("ptDir").textContent = `Pointing ${compass(S.az)} ${Math.round(S.az)}° · ${S.alt >= 0 ? "up" : "down"} ${Math.abs(Math.round(S.alt))}°`;
-    $("ptNear").textContent = near && near.d < 25 ? `Near ${near.name} · ${S.locNote}` : S.locNote;
-    $("diag").textContent = `sensor: ${S.source} · location ${loc.lat.toFixed(1)}°, ${loc.lon.toFixed(1)}° · correction ${S.decl}°`;
+    $("ptNear").textContent = `${near && near.d < 25 ? `Near ${near.name} · ` : ""}${S.cal ? "calibrated" : "not calibrated"} · ${S.locNote}`;
+    $("calBtn").classList.toggle("needs", !S.cal);
+    renderInfo(now, loc, lst);
     guide(sel);
   }
 
@@ -254,7 +311,8 @@
     const main = $("guideMain"), sub = $("guideSub"), inv = $("investigate");
     if (!t || t._d == null) {
       main.textContent = "Pick a target below"; main.classList.remove("locked"); inv.hidden = true;
-      sub.textContent = S.haveSensor ? "Hold the phone up like you are taking a photo of the sky." : "No motion sensors here: drag the radar or use the arrow keys.";
+      sub.textContent = S.haveSensor ? (S.cal ? "Hold the phone up like you are taking a photo of the sky." : "Tip: tap 🎯 Calibrate first for accurate directions.")
+        : "No motion sensors here: drag the radar or use the arrow keys.";
       return;
     }
     const dAz = wrap180(t._az - S.az), dAlt = t._alt - S.alt;
@@ -264,8 +322,7 @@
       inv.hidden = false; inv.href = `index.html?target=${t.id}`;
       if (!t._buzzed && navigator.vibrate) { navigator.vibrate(60); t._buzzed = true; }
     } else {
-      t._buzzed = false;
-      main.classList.remove("locked"); inv.hidden = true;
+      t._buzzed = false; main.classList.remove("locked"); inv.hidden = true;
       const h = Math.abs(dAz) < 3 ? "" : `Turn ${dAz > 0 ? "right" : "left"} ${Math.abs(Math.round(dAz))}°`;
       const v = Math.abs(dAlt) < 3 ? "" : `tilt ${dAlt > 0 ? "up" : "down"} ${Math.abs(Math.round(dAlt))}°`;
       main.textContent = [h, v].filter(Boolean).join(" · ") || "Almost there";

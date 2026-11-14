@@ -183,6 +183,28 @@
     const sign = /^-/.test(s) ? -1 : 1, v = Math.abs(m[0]) + (m[1] || 0) / 60 + (m[2] || 0) / 3600;
     return sign * v * (hours ? 15 : 1);
   }
+  async function liveLookup(a, d) {
+    const msg = $("coordMsg"), btn = document.querySelector("#coordForm button");
+    btn.disabled = true;
+    msg.textContent = `Looking up RA ${a.toFixed(4)}°, Dec ${d.toFixed(4)}° in the NASA archive…`;
+    try {
+      const r = await fetch("api/lookup", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ra: a, dec: d }) });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.error || "lookup failed");
+      for (;;) {
+        await new Promise((ok) => setTimeout(ok, 2000));
+        const s = await (await fetch(`api/job/${j.job}`)).json();
+        msg.textContent = `${s.seconds}s · ${s.log[s.log.length - 1] || "starting…"}`;
+        if (s.status === "done") {
+          S.list = await (await fetch("data/index.json", { cache: "no-store" })).json();
+          renderTargets(); msg.textContent = "Done. Showing the new patch."; load(s.id); break;
+        }
+        if (s.status === "error") throw new Error(s.log.slice(-2).join(" "));
+      }
+    } catch (e) { msg.textContent = "Lookup failed: " + e.message; }
+    finally { btn.disabled = false; }
+  }
+
   function coordSearch(ra, dec) {
     const a = parseAngle(ra, /h/i.test(ra) || /:/.test(ra)), d = parseAngle(dec, false);
     if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return; }
@@ -191,8 +213,12 @@
       const dd = Math.hypot((t.ra - a) * Math.cos((d * Math.PI) / 180), t.dec - d) * 3600;
       if (dd < bd) { bd = dd; best = t; }
     }
-    if (best && bd < 600) { $("coordMsg").textContent = `Matched ${best.name} (${Math.round(bd)}″ away).`; load(best.id); }
-    else $("coordMsg").textContent = `Not in the cached set yet. A teammate can add it in a few minutes: ` +
-      `python pipeline/fetch.py --ra ${a.toFixed(5)} --dec ${d.toFixed(5)}, then analyze.py and evidence.py.`;
+    if (best && bd < 600) { $("coordMsg").textContent = `Matched ${best.name} (${Math.round(bd)}″ away).`; load(best.id); return; }
+    if (!S.live) {
+      $("coordMsg").textContent = "This patch isn't prepared on the public site. Live lookups run on the WANDERERS demo server " +
+        "(node server.js), which fetches SPHEREx and WISE images for any coordinates in a few minutes.";
+      return;
+    }
+    liveLookup(a, d);
   }
 })();

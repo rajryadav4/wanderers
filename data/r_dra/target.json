@@ -27,28 +27,99 @@
     "year": 2010.5,
     "label": "WISE 2010",
     "mission": "WISE",
-    "png": "w2_wise2010.png"
+    "png": "w2_wise2010.png",
+    "detected": true,
+    "snr": 16.7
    },
    {
-    "year": 2025.404697987289,
-    "label": "SPHEREx May 2025",
+    "year": 2025.3729191887926,
+    "label": "SPHEREx 16 May 2025",
     "mission": "SPHEREx",
-    "png": "w2_spherex_v1.png",
-    "n_images": 12
+    "png": "w2_spherex_v1_1.png",
+    "n_images": 4,
+    "survey": 1,
+    "detected": true
    },
    {
-    "year": 2025.9994315287977,
-    "label": "SPHEREx Dec 2025",
+    "year": 2025.3831460444626,
+    "label": "SPHEREx 20 May 2025",
     "mission": "SPHEREx",
-    "png": "w2_spherex_v2.png",
-    "n_images": 9
+    "png": "w2_spherex_v1_2.png",
+    "n_images": 2,
+    "survey": 1,
+    "detected": true
+   },
+   {
+    "year": 2025.4171919360394,
+    "label": "SPHEREx 02 Jun 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v1_3.png",
+    "n_images": 3,
+    "survey": 1,
+    "detected": true
+   },
+   {
+    "year": 2025.4281680226559,
+    "label": "SPHEREx 06 Jun 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v1_4.png",
+    "n_images": 2,
+    "survey": 1,
+    "detected": true
+   },
+   {
+    "year": 2025.4454721751815,
+    "label": "SPHEREx 12 Jun 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v1_5.png",
+    "n_images": 4,
+    "survey": 1,
+    "detected": true
+   },
+   {
+    "year": 2025.984791263534,
+    "label": "SPHEREx 26 Dec 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2_1.png",
+    "n_images": 3,
+    "survey": 2,
+    "detected": true
+   },
+   {
+    "year": 2025.9974844031467,
+    "label": "SPHEREx 31 Dec 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2_2.png",
+    "n_images": 3,
+    "survey": 2,
+    "detected": true
+   },
+   {
+    "year": 2026.0070348140944,
+    "label": "SPHEREx 03 Jan 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2_3.png",
+    "n_images": 2,
+    "survey": 2,
+    "detected": true
+   },
+   {
+    "year": 2026.0339871309513,
+    "label": "SPHEREx 13 Jan 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2_4.png",
+    "n_images": 1,
+    "survey": 2,
+    "detected": true
    },
    {
     "year": 2026.3048137171636,
     "label": "SPHEREx Apr 2026",
     "mission": "SPHEREx",
     "png": "w2_spherex_v3.png",
-    "n_images": 1
+    "n_images": 1,
+    "detected": true,
+    "snr": 325.4
    }
   ],
   "w1": [
@@ -56,21 +127,157 @@
     "year": 2010.5,
     "label": "WISE 2010",
     "mission": "WISE",
-    "png": "w1_wise2010.png"
+    "png": "w1_wise2010.png",
+    "detected": true,
+    "snr": 9.5
    },
    {
-    "year": 2025.498526116347,
-    "label": "SPHEREx Jul 2025",
+    "year": 2025.4290952518065,
+    "label": "SPHEREx 06 Jun 2025",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v1_1.png",
+    "n_images": 3,
+    "survey": 1,
+    "detected": false
+   },
+   {
+    "year": 2025.5059297999123,
+    "label": "SPHEREx 04 Jul 2025",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v1_2.png",
+    "n_images": 1,
+    "survey": 1,
+    "detected": false
+   },
+   {
+    "year": 2025.5139157771116,
+    "label": "SPHEREx 07 Jul 2025",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v1_3.png",
+    "n_images": 1,
+    "survey": 1,
+    "detected": false
+   },
+   {
+    "year": 2025.5451622746887,
+    "label": "SPHEREx 18 Jul 2025",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v1_4.png",
+    "n_images": 1,
+    "survey": 1,
+    "detected": false
+   },
+   {
+    "year": 2025.7978860633912,
+    "label": "SPHEREx 19 Oct 2025",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v2_1.png",
+    "n_images": 3,
+    "survey": 2,
+    "detected": false
+   },
+   {
+    "year": 2025.846229901284,
+    "label": "SPHEREx 05 Nov 2025",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v2_2.png",
+    "n_images": 1,
+    "survey": 2,
+    "detected": false
+   },
+   {
+    "year": 2025.853607762443,
+    "label": "SPHEREx 08 Nov 2025",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v2_3.png",
+    "n_images": 3,
+    "survey": 2,
+    "detected": false
+   },
+   {
+    "year": 2025.8750420805995,
+    "label": "SPHEREx 16 Nov 2025",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v2_4.png",
+    "n_images": 1,
+    "survey": 2,
+    "detected": false
+   },
+   {
+    "year": 2025.9137095297715,
+    "label": "SPHEREx 30 Nov 2025",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v2_5.png",
+    "n_images": 1,
+    "survey": 2,
+    "detected": false
+   }
+  ]
+ },
+ "stacks": {
+  "w2": [
+   {
+    "year": 2010.5,
+    "label": "WISE 2010",
+    "mission": "WISE",
+    "png": "w2_wise2010.png",
+    "detected": true,
+    "snr": 16.7
+   },
+   {
+    "year": 2025.409851293217,
+    "label": "SPHEREx May 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v1.png",
+    "n_images": 15,
+    "detected": true,
+    "snr": 300.5
+   },
+   {
+    "year": 2025.9994315287977,
+    "label": "SPHEREx Dec 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2.png",
+    "n_images": 9,
+    "detected": true,
+    "snr": 537.2
+   },
+   {
+    "year": 2026.3048137171636,
+    "label": "SPHEREx Apr 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3.png",
+    "n_images": 1,
+    "detected": true,
+    "snr": 325.4
+   }
+  ],
+  "w1": [
+   {
+    "year": 2010.5,
+    "label": "WISE 2010",
+    "mission": "WISE",
+    "png": "w1_wise2010.png",
+    "detected": true,
+    "snr": 9.5
+   },
+   {
+    "year": 2025.4753822678551,
+    "label": "SPHEREx Jun 2025",
     "mission": "SPHEREx",
     "png": "w1_spherex_v1.png",
-    "n_images": 4
+    "n_images": 6,
+    "detected": false,
+    "snr": 0.0
    },
    {
     "year": 2025.8432736654618,
     "label": "SPHEREx Nov 2025",
     "mission": "SPHEREx",
     "png": "w1_spherex_v2.png",
-    "n_images": 9
+    "n_images": 9,
+    "detected": false,
+    "snr": 0.0
    }
   ]
  },
@@ -126,7 +333,7 @@
     15.7
    ]
   ],
-  "w2_spherex_v1.png": [
+  "w2_spherex_v1_1.png": [
    [
     54.7,
     116.2,
@@ -173,7 +380,336 @@
     15.7
    ]
   ],
-  "w2_spherex_v2.png": [
+  "w2_spherex_v1_2.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v1_3.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v1_4.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v1_5.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v2_1.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v2_2.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v2_3.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v2_4.png": [
    [
     54.7,
     116.2,
@@ -314,7 +850,7 @@
     15.7
    ]
   ],
-  "w1_spherex_v1.png": [
+  "w1_spherex_v1_1.png": [
    [
     54.7,
     116.2,
@@ -361,7 +897,336 @@
     15.7
    ]
   ],
-  "w1_spherex_v2.png": [
+  "w1_spherex_v1_2.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w1_spherex_v1_3.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w1_spherex_v1_4.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w1_spherex_v2_1.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w1_spherex_v2_2.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w1_spherex_v2_3.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w1_spherex_v2_4.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w1_spherex_v2_5.png": [
    [
     54.7,
     116.2,
@@ -423,16 +1288,16 @@
    "dec": 66.75486286257676
   },
   {
-   "year": 2025.404697987289,
+   "year": 2025.409851293217,
    "mission": "SPHEREx",
    "ch": "w2",
-   "x": 74.43930577381197,
-   "y": 74.30548531639432,
-   "pred_x": 74.5721411838103,
-   "pred_y": 74.52148845633143,
-   "offset_arcsec": 0.50715915684666,
-   "ra": 248.1674287131692,
-   "dec": 66.75490280695166
+   "x": 73.83262426454714,
+   "y": 74.4635838106174,
+   "pred_x": 74.5721943731614,
+   "pred_y": 74.52150429969424,
+   "offset_arcsec": 1.4836694087073101,
+   "ra": 248.16828271949456,
+   "dec": 66.75499063667867
   },
   {
    "year": 2025.9994315287977,
@@ -481,13 +1346,14 @@
   "expected_arcsec_per_yr": 0.02153911903853499,
   "shift_spherex_pixels": 1.100119072459164
  },
+ "movers_experimental": [],
  "spectrum": [],
- "spectrum_points": 149,
- "flagged_points": 149,
+ "spectrum_points": 154,
+ "flagged_points": 154,
  "variability": {
-  "delta_mag": 0.35513221675638396,
-  "uncertainty_mag": 0.06541859515429545,
-  "n_wavelength_bins": 30,
+  "delta_mag": 0.3383657445206045,
+  "uncertainty_mag": 0.06313897675809586,
+  "n_wavelength_bins": 31,
   "method": "PSF-wing photometry (star's core is saturated)",
   "from": "Jun 2025",
   "to": "Nov 2025"
@@ -495,7 +1361,9 @@
  "ir_color": {
   "f4p0_mjy": null,
   "f3p3_mjy": null,
-  "ratio": null
+  "f3p3_err": null,
+  "ratio": null,
+  "lower_limit": false
  },
  "bands": [
   {
@@ -541,8 +1409,8 @@
  ],
  "spherex_visits": [
   {
-   "year": 2025.4548562259351,
-   "n_images": 64
+   "year": 2025.4530490022084,
+   "n_images": 69
   },
   {
    "year": 2025.905094694433,
@@ -571,11 +1439,11 @@
    },
    {
     "state": "ok",
-    "text": "Faded by 0.36 \u00b1 0.07 mag between Jun 2025 and Nov 2025 (measured in the wings of its image, because its core saturates SPHEREx)"
+    "text": "Faded by 0.34 \u00b1 0.06 mag between Jun 2025 and Nov 2025 (measured in the wings of its image, because its core saturates SPHEREx)"
    },
    {
     "state": "warn",
-    "text": "149 of 149 SPHEREx measurements flagged (overflow or bloom: the object is too bright for SPHEREx). No reliable SPHEREx spectrum, so we do not show one."
+    "text": "154 of 154 SPHEREx measurements flagged (overflow or bloom: the object is too bright for SPHEREx). No reliable SPHEREx spectrum, so we do not show one."
    }
   ],
   "numbers": [
@@ -589,7 +1457,7 @@
    },
    {
     "label": "brightness change Jun 2025\u2192Nov 2025",
-    "value": "+0.36 mag"
+    "value": "+0.34 mag"
    }
   ]
  }
