@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WANDERERS</title>
 <meta name="description" content="Watch real SPHEREx, WISE and Gaia data reveal what moves and changes in the infrared sky, and see the evidence for what each object is.">
-<link rel="stylesheet" href="style.css?v=20261114g">
+<link rel="stylesheet" href="style.css?v=20261114h">
 </head>
 <body>
 <header class="top">
@@ -26,9 +26,17 @@
   <h2>Enter the coordinates of a patch of sky</h2>
   <p class="hint">WANDERERS plays SPHEREx images of it like a little video, with older WISE images for a 16-year
     baseline, so you can spot anything that moves or changes.</p>
+  <div class="name-search">
+    <label for="nameIn">Search by name</label>
+    <input id="nameIn" placeholder="Type a star name: Sirius, Barnard's Star, Proxima, HD 48915…" autocomplete="off" spellcheck="false">
+    <ul id="nameList" class="suggest" role="listbox" hidden></ul>
+  </div>
+  <div id="starCard" class="star-card" hidden></div>
+  <p class="hint or">or enter coordinates</p>
   <form id="coordForm" class="hero-form">
     <label>Right ascension (RA)<input id="raIn" placeholder="08h55m10.831s or 133.795" autocomplete="off" spellcheck="false"></label>
     <label>Declination (Dec)<input id="decIn" placeholder="-07d14m42.53s or -7.245" autocomplete="off" spellcheck="false"></label>
+    <label>Field of view<select id="fovIn"><option value="300">5′ (fast)</option><option value="600">10′</option><option value="900">15′ (slow)</option></select></label>
     <button type="submit" class="go">Show this sky ▶</button>
   </form>
   <div class="examples" id="examples" aria-label="Example coordinates"></div>
@@ -56,10 +64,7 @@
       </div>
     </div>
     <div id="flipView">
-    <div class="channel" role="radiogroup" aria-label="Wavelength">
-      <button data-ch="w2" class="on" role="radio" aria-checked="true">4.6 µm</button>
-      <button data-ch="w1" role="radio" aria-checked="false">3.4 µm</button>
-    </div>
+    <div class="channel" id="channels" role="radiogroup" aria-label="Wavelength channel"></div>
     <div class="viewer">
       <canvas id="sky" width="600" height="600" aria-label="Sky image of the selected target"></canvas>
       <div class="stamp" id="stamp"></div>
@@ -75,6 +80,15 @@
       <label><input type="checkbox" id="tTrail" checked> Measured path</label>
       <label><input type="checkbox" id="tDiff"> Difference (2026 − 2025)</label>
     </div>
+    <div class="tools">
+      <label>Zoom <input type="range" id="zoom" min="1" max="4" step="0.25" value="1" aria-label="Zoom"> <span id="zoomVal" class="mono">1×</span></label>
+      <label>Compare <select id="mA" aria-label="Frame A"></select>
+        <select id="mOp" aria-label="Operation"><option value="off">off</option><option value="sub">minus</option><option value="add">plus</option></select>
+        <select id="mB" aria-label="Frame B"></select></label>
+      <button id="stackAll" type="button" aria-pressed="false">Stack all SPHEREx</button>
+      <button id="copyLink" type="button">🔗 Copy link</button>
+    </div>
+    <details class="meta"><summary>Image metadata and contamination flags</summary><div id="metaBox"></div></details>
     <p class="hint why">Each frame is matched by wavelength: WISE 2010 is compared with SPHEREx images taken at the same
       infrared colour, because SPHEREx records a different wavelength across every detector.</p>
     </div>
@@ -130,8 +144,9 @@
 <footer class="foot">
   <p><strong>Candidate, never "discovery".</strong> WANDERERS points people at interesting objects and shows the evidence.
     Confirming a new object needs follow-up by astronomers.</p>
-  <p>Data: SPHEREx DR1 (NASA/IPAC IRSA) · AllWISE (NASA/IPAC IRSA) · Gaia DR3 (ESA). NASA Space Apps 2026 · Planet X and SPHEREx.</p>
+  <p>Data: SPHEREx DR1 (NASA/IPAC IRSA) · AllWISE (NASA/IPAC IRSA) · Gaia DR3 (ESA) · star names: HYG v4.0 (CC BY-SA 4.0). NASA Space Apps 2026 · Planet X and SPHEREx.</p>
 </footer>
-<script src="app.js?v=20261114g"></script>
+<script src="search.js?v=20261114h"></script>
+<script src="app.js?v=20261114h"></script>
 </body>
 </html>

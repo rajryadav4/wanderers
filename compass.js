@@ -1,7 +1,7 @@
 /* WANDERERS Sky Compass: landing -> "where are you in the universe" intro -> one-step flat calibration ->
  * augmented-reality sky with a compass tape, tilt scale, mini radar and live telemetry.
  * Motion: orient.js (gyro drives movement, compass sets north). Sky: sky.js. Intro: intro.js (three.js). */
-import { playIntro, earthFacts } from "./intro.js?v=20261114g";
+import { playIntro, earthFacts } from "./intro.js?v=20261114h";
 
 const $ = (id) => document.getElementById(id);
 const D2R = Math.PI / 180;
@@ -55,6 +55,8 @@ fetch("data/index.json").then((r) => r.json()).then((list) => {
   const want = new URLSearchParams(location.search).get("target");
   S.sel = list.find((t) => t.id === want) || null;
   renderTargets();
+  const wantStar = new URLSearchParams(location.search).get("star");     // e.g. compass.html?star=Sirius from the console
+  if (wantStar) StarSearch.load().then(() => { const st = StarSearch.search(wantStar, 1)[0]; if (st) { selectStar(st); $("findIn").value = st.name; } });
 });
 function updateDecl() { const d = Sky.declination(loc().lat, loc().lon); F.decl = d == null ? 0 : d; }
 
@@ -414,7 +416,9 @@ function guide(T) {
   if (T._sep <= 6) {
     main.textContent = `Locked on: ${T.name}`; main.classList.add("locked");
     sub.textContent = T._alt < 0 ? "Below your horizon right now, on the other side of the Earth." : `${Math.round(T._alt)}° above your horizon.`;
-    inv.hidden = false; inv.href = `index.html?target=${T.id}`;
+    inv.hidden = false;
+    if (T.found) { inv.textContent = "About this star →"; inv.removeAttribute("href"); inv.onclick = () => showDetails(T); }
+    else { inv.textContent = "Investigate →"; inv.href = `index.html?target=${T.id}`; inv.onclick = null; }
     if (!S.buzzed[T.id] && navigator.vibrate) { navigator.vibrate(60); S.buzzed[T.id] = true; }
   } else {
     S.buzzed[T.id] = false; main.classList.remove("locked"); inv.hidden = true;
@@ -439,11 +443,38 @@ function telemetry(now, L, P) {
 }
 
 // ---------- targets ----------
+// ---------- find any star ----------
+StarSearch.attach($("findIn"), $("findList"), (star) => { $("findIn").blur(); selectStar(star); });
+function selectStar(star) {
+  let t = star.wanderers && S.targets.find((x) => x.id === star.wanderers);
+  if (!t) {
+    S.targets = S.targets.filter((x) => !x.found);           // keep one searched star at a time
+    t = { id: "found", found: true, name: star.name, ra: star.ra, dec: star.dec, teaser: "your search", star };
+    S.targets.unshift(t);
+  } else t.star = star;
+  S.sel = t; renderTargets(); $("aboutBtn").hidden = false;
+  const u = new URL(location); u.searchParams.set("target", star.wanderers || "found"); u.searchParams.set("star", star.name); history.replaceState(null, "", u);
+}
+function showDetails(T) {
+  const st = T.star || { name: T.name, alt: [], ra: T.ra, dec: T.dec, wanderers: T.id };
+  $("dTag").textContent = st.wanderers ? "WANDERERS TARGET" : "STAR";
+  $("dName").textContent = st.name;
+  $("dAlt").textContent = (st.alt || []).slice(0, 4).join(" · ");
+  const facts = st.spect || st.mag != null ? StarSearch.describe(st) : ["One of the WANDERERS test targets: open the full analysis for its motion, spectrum and brightness change."];
+  $("dFacts").innerHTML = facts.map((f) => `<li>${f}</li>`).join("");
+  $("dWhere").textContent = `RA ${StarSearch.hms(st.ra)}  Dec ${StarSearch.dms(st.dec)}` + (T._alt != null ? ` · right now ${compassPt(T._az)} ${Math.round(T._az)}°, ${T._alt >= 0 ? `${Math.round(T._alt)}° above` : `${Math.abs(Math.round(T._alt))}° below`} your horizon` : "");
+  $("dMap").href = `index.html?ra=${st.ra.toFixed(5)}&dec=${st.dec.toFixed(5)}`;
+  $("dFull").hidden = !st.wanderers; if (st.wanderers) $("dFull").href = `index.html?target=${st.wanderers}`;
+  $("details").hidden = false;
+}
+$("aboutBtn").onclick = () => S.sel && showDetails(S.sel);
+$("dClose").onclick = () => { $("details").hidden = true; };
+
 function renderTargets() {
   $("targets").innerHTML = S.targets.map((t) =>
     `<button data-id="${t.id}" class="${S.sel && S.sel.id === t.id ? "on" : ""}" role="option"><b>${t.name}</b><span id="tp_${t.id}">${t.teaser}</span></button>`).join("");
   $("targets").querySelectorAll("button").forEach((b) => (b.onclick = () => {
-    S.sel = S.targets.find((t) => t.id === b.dataset.id); renderTargets();
+    S.sel = S.targets.find((t) => t.id === b.dataset.id); renderTargets(); $("aboutBtn").hidden = false;
     const u = new URL(location); u.searchParams.set("target", S.sel.id); history.replaceState(null, "", u);
   }));
 }

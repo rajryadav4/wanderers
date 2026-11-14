@@ -33,5 +33,12 @@
   "teaser": "Coldest brown dwarf (boss level)",
   "ra": 133.77712513571174,
   "dec": -7.243669827763018
+ },
+ {
+  "id": "pos_217p4398_s62p6795",
+  "name": "Proxima Centauri",
+  "teaser": "Nearest star to the Sun",
+  "ra": 217.38702585545897,
+  "dec": -62.675580418192496
  }
 ]

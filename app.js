@@ -29,6 +29,18 @@
     }));
   }
 
+  // search any star by name: fill the coordinates, show its facts, then go there
+  StarSearch.attach($("nameIn"), $("nameList"), (st) => {
+    $("raIn").value = StarSearch.hms(st.ra); $("decIn").value = StarSearch.dms(st.dec);
+    const facts = st.spect || st.mag != null ? StarSearch.describe(st) : [];
+    $("starCard").hidden = false;
+    $("starCard").innerHTML = `<h3>${st.name}${st.wanderers ? ' <span class="hint">· WANDERERS target</span>' : ""}</h3>` +
+      `<div class="alt">${st.alt.slice(0, 4).join(" · ")}</div>${facts.length ? `<ul>${facts.map((f) => `<li>${f}</li>`).join("")}</ul>` : ""}` +
+      `<p class="hint">Star data: HYG database v4.0 (Hipparcos, Yale Bright Star, Gliese), CC BY-SA 4.0. ` +
+      `<a href="compass.html?star=${encodeURIComponent(st.name)}">Find it with your phone →</a></p>`;
+    coordSearch(String(st.ra), String(st.dec), { fromSearch: true });
+  });
+
   function renderTargets() {
     $("targetList").innerHTML = S.list.map((t, k) =>
       `<li><button data-id="${t.id}"><span class="lvl">${k + 1}</span><span>${t.name}</span><span class="sub">${t.teaser}</span></button></li>`).join("");
@@ -46,14 +58,11 @@
     $("targetList").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.id === id));
     $("tName").textContent = t.name;
     $("tKind").textContent = t.kind;
-    document.querySelectorAll(".channel button").forEach((b) => {
-      const has = t.frames[b.dataset.ch] && t.frames[b.dataset.ch].length;
-      b.disabled = !has; b.classList.toggle("on", b.dataset.ch === S.ch); b.setAttribute("aria-checked", b.dataset.ch === S.ch);
-    });
+    renderChannels(); renderMeta(); S.math = null; $("mOp").value = "off"; $("stackAll").setAttribute("aria-pressed", "false");
     const url = new URL(location); url.searchParams.set("target", id); url.searchParams.delete("ra"); url.searchParams.delete("dec");
     history.replaceState(null, "", url);
     await preload();
-    setupSlider(); draw(); evidence(); spectrum();
+    setupSlider(); fillCompare(); draw(); evidence(); spectrum();
     if (MAP.ready) mapGoTo();
     $("answer").textContent = "";
   }
@@ -84,11 +93,14 @@
 
   function draw() {
     const c = $("sky"), g = c.getContext("2d"), fr = frames(), f = fr[S.i];
-    const N = S.t.grid.npix, k = c.width / N;
+    const N = S.t.grid.npix, k = c.width / N, z = +$("zoom").value || 1;
+    g.setTransform(1, 0, 0, 1, 0, 0);
     g.imageSmoothingEnabled = false;
     g.fillStyle = "#000"; g.fillRect(0, 0, c.width, c.height);
+    // zoom about the centre (digital zoom of the cached field; larger fields come from a new lookup)
+    g.setTransform(z, 0, 0, z, c.width / 2 * (1 - z), c.height / 2 * (1 - z));
     const diff = $("tDiff").checked && S.t.diff[S.ch];
-    const im = S.imgs[diff ? S.t.diff[S.ch] : f && f.png];
+    const im = S.math ? S.math.canvas : S.imgs[diff ? S.t.diff[S.ch] : f && f.png];
     if (im) g.drawImage(im, 0, 0, c.width, c.height);
     const Y = (y) => (N - 1 - y + 0.5) * k, X = (x) => (x + 0.5) * k;   // PNGs are stored north-up (origin lower)
 
@@ -105,12 +117,98 @@
         g.fillStyle = "#ffe2b0"; g.font = "12px ui-monospace, monospace"; g.fillText(p.mission === "WISE" ? "2010" : Math.floor(p.year), X(p.x) + 8, Y(p.y) - 6);
       }
     }
+    g.setTransform(1, 0, 0, 1, 0, 0);
     const seen = f && f.detected === false ? " · not detected at this wavelength" : "";
-    const lbl = diff ? "Difference: SPHEREx 2026 − 2025 (green = now, pink = before)" : f ? `${f.label} · ${labelOf(S.ch)}${seen}` : "";
+    const lbl = S.math ? S.math.label : diff ? "Difference: SPHEREx 2026 − 2025 (green = now, pink = before)" : f ? `${f.label} · ${labelOf(S.ch)}${seen}` : "";
     $("stamp").textContent = lbl;
     $("frameLbl").textContent = f ? `${S.i + 1}/${fr.length} · ${f.year.toFixed(1)}` : "";
   }
-  const labelOf = (ch) => (ch === "w2" ? "4.6 µm" : "3.4 µm");
+  const labelOf = (ch) => (S.t.channels && S.t.channels[ch]) || (ch === "w2" ? "4.6 µm" : "3.4 µm");
+
+  // wavelength-matched channels + one co-added image per SPHEREx detector
+  function renderChannels() {
+    const chs = Object.keys(S.t.frames).filter((c) => S.t.frames[c].length);
+    const main = chs.filter((c) => !c.startsWith("d")), dets = chs.filter((c) => c.startsWith("d"));
+    const btn = (c) => `<button data-ch="${c}" class="${c === S.ch ? "on" : ""}" role="radio" aria-checked="${c === S.ch}" title="${labelOf(c)}">` +
+      `${c.startsWith("d") ? "D" + c.slice(1) : labelOf(c)}</button>`;
+    $("channels").innerHTML = main.map(btn).join("") + (dets.length ? `<span class="sep">Detector co-adds:</span>${dets.map(btn).join("")}` : "");
+  }
+  $("channels").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-ch]"); if (!b) return;
+    S.ch = b.dataset.ch; S.i = Math.min(S.i, frames().length - 1); S.math = null; $("mOp").value = "off"; $("stackAll").setAttribute("aria-pressed", "false");
+    renderChannels(); setupSlider(); fillCompare(); draw();
+    const url = new URL(location); url.searchParams.set("ch", S.ch); history.replaceState(null, "", url);
+  });
+
+  // ---------- add / subtract any two epochs, or stack every SPHEREx frame ----------
+  function fillCompare() {
+    const opts = frames().map((f, i) => `<option value="${i}">${f.label}</option>`).join("");
+    $("mA").innerHTML = opts; $("mB").innerHTML = opts;
+    const firstSpx = frames().findIndex((f) => f.mission === "SPHEREx");
+    $("mA").value = Math.max(0, frames().length - 1); $("mB").value = Math.max(0, firstSpx);
+  }
+  function pixels(png) {
+    const im = S.imgs[png], N = S.t.grid.npix, cv = document.createElement("canvas"); cv.width = cv.height = N;
+    const x = cv.getContext("2d"); x.drawImage(im, 0, 0, N, N); return x.getImageData(0, 0, N, N).data;
+  }
+  function compute(kind) {
+    const fr = frames(), N = S.t.grid.npix, cv = document.createElement("canvas"); cv.width = cv.height = N;
+    const x = cv.getContext("2d"), out = x.createImageData(N, N);
+    if (kind === "stack") {
+      const sp = fr.filter((f) => f.mission === "SPHEREx"); if (!sp.length) return null;
+      const acc = new Float32Array(N * N);
+      for (const f of sp) { const p = pixels(f.png); for (let i = 0; i < N * N; i++) acc[i] += p[i * 4]; }
+      const max = Math.max(...acc) || 1;
+      for (let i = 0; i < N * N; i++) { const v = 255 * Math.sqrt(acc[i] / max); out.data.set([v, v, v, 255], i * 4); }
+      x.putImageData(out, 0, 0);
+      return { canvas: cv, label: `Stack of all ${sp.length} SPHEREx frames · ${labelOf(S.ch)} (deeper image, movers smear)` };
+    }
+    const A = fr[+$("mA").value], B = fr[+$("mB").value]; if (!A || !B) return null;
+    // put both frames on the same scale: subtract each one's background, divide by its noise (median / MAD)
+    const zs = (p) => {
+      const v = new Float32Array(N * N); for (let i = 0; i < N * N; i++) v[i] = p[i * 4];
+      const srt = Float32Array.from(v).sort(), med = srt[srt.length >> 1];
+      const dev = Float32Array.from(v, (q) => Math.abs(q - med)).sort(), mad = 1.4826 * dev[dev.length >> 1] || 1;
+      return v.map((q) => (q - med) / mad);
+    };
+    const za = zs(pixels(A.png)), zb = zs(pixels(B.png));
+    for (let i = 0; i < N * N; i++) {
+      if (kind === "add") { const v = Math.max(0, Math.min(255, 30 + (za[i] + zb[i]) * 12)); out.data.set([v, v, v, 255], i * 4); continue; }
+      const d = za[i] - zb[i], k = Math.min(1, Math.max(0, (Math.abs(d) - 2.5) / 6));   // only changes above 2.5 sigma
+      out.data.set(d > 0 ? [20, 40 + 215 * k, 30, 255] : [40 + 215 * k, 20, 40 + 160 * k, 255], i * 4);
+    }
+    x.putImageData(out, 0, 0);
+    return { canvas: cv, label: kind === "add" ? `${A.label} + ${B.label}` : `${A.label} − ${B.label}: significant changes only (green = brighter in A, pink = brighter in B)` };
+  }
+  const recompute = () => { const op = $("mOp").value; S.math = op === "off" ? null : compute(op); $("stackAll").setAttribute("aria-pressed", "false"); draw(); };
+  ["mA", "mB", "mOp"].forEach((id) => ($(id).onchange = recompute));
+  $("stackAll").onclick = () => {
+    const on = $("stackAll").getAttribute("aria-pressed") !== "true";
+    $("stackAll").setAttribute("aria-pressed", String(on)); $("mOp").value = "off";
+    S.math = on ? compute("stack") : null; draw();
+  };
+  $("zoom").oninput = (e) => { $("zoomVal").textContent = `${e.target.value}×`; draw(); };
+  $("copyLink").onclick = async () => {
+    const u = new URL(location); u.searchParams.set("ch", S.ch);
+    try { await navigator.clipboard.writeText(u.toString()); $("copyLink").textContent = "✓ Link copied"; }
+    catch { prompt("Copy this link:", u.toString()); }
+    setTimeout(() => ($("copyLink").textContent = "🔗 Copy link"), 1800);
+  };
+  if (new URLSearchParams(location.search).get("embed") === "1") document.body.classList.add("embed");
+
+  // ---------- metadata: every SPHEREx image used, its wavelength at the target and contamination flags ----------
+  function renderMeta() {
+    const m = S.t.metadata || [];
+    if (!m.length) { $("metaBox").innerHTML = "<p class='hint'>No per-image metadata for this target.</p>"; return; }
+    const flagged = m.filter((r) => r.flags_at_target.length).length, counts = {};
+    m.forEach((r) => r.flags_at_target.forEach((f) => (counts[f] = (counts[f] || 0) + 1)));
+    $("metaBox").innerHTML = `<p class="hint">${m.length} SPHEREx images (${(S.t.fov_arcsec / 60).toFixed(1)}′ field).
+      ${flagged} have flags inside the 3-pixel aperture at the target${Object.keys(counts).length ? ": " + Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([f, n]) => `${f} ×${n}`).join(", ") : ""}.
+      Flags follow the SPHEREx Explanatory Supplement; flagged images are left out of the spectrum.</p>
+      <div class="scroll"><table><thead><tr><th>Date (UTC)</th><th>Det.</th><th>λ at target</th><th>Flags at target</th><th>In spectrum</th></tr></thead><tbody>` +
+      m.map((r) => `<tr><td>${r.date}</td><td>D${r.detector}</td><td>${r.lam_um ?? "–"} µm</td><td class="${r.flags_at_target.length ? "flag" : ""}">${r.flags_at_target.join(", ") || "none"}</td><td>${r.used_in_spectrum ? "yes" : "no"}</td></tr>`).join("") +
+      "</tbody></table></div>";
+  }
 
   function step() { const n = frames().length; if (!n) return; S.i = (S.i + 1) % n; $("frame").value = S.i; draw(); }
   function play() {
@@ -123,12 +221,7 @@
   $("play").onclick = play;
   $("frame").oninput = (e) => { stop(); S.i = +e.target.value; draw(); };
   ["tGhost", "tTrail", "tDiff"].forEach((id) => ($(id).onchange = draw));
-  document.querySelectorAll(".channel button").forEach((b) => (b.onclick = () => {
-    S.ch = b.dataset.ch; S.i = Math.min(S.i, frames().length - 1);
-    document.querySelectorAll(".channel button").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-checked", x === b); });
-    setupSlider(); draw();
-    const url = new URL(location); url.searchParams.set("ch", S.ch); history.replaceState(null, "", url);
-  }));
+
   document.addEventListener("keydown", (e) => {
     if (e.target.tagName === "INPUT") return;
     if (e.key === " ") { e.preventDefault(); play(); }
@@ -203,7 +296,7 @@
     btn.disabled = true;
     msg.textContent = `Looking up RA ${a.toFixed(4)}°, Dec ${d.toFixed(4)}° in the NASA archive…`;
     try {
-      const r = await fetch("api/lookup", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ra: a, dec: d }) });
+      const r = await fetch("api/lookup", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ra: a, dec: d, fov: +$("fovIn").value }) });
       const j = await r.json();
       if (!r.ok) throw new Error(j.error || "lookup failed");
       for (;;) {
@@ -220,7 +313,7 @@
     finally { btn.disabled = false; }
   }
 
-  function coordSearch(ra, dec) {
+  function coordSearch(ra, dec, opts = {}) {
     const a = parseAngle(ra, /h/i.test(ra) || /:/.test(ra)), d = parseAngle(dec, false);
     if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return; }
     let best = null, bd = 1e9;
@@ -231,6 +324,13 @@
     if (best && bd < 600) {
       $("coordMsg").textContent = `Found ${best.name}, ${Math.round(bd)}″ from your coordinates (it moves, so its position changes over the years).`;
       load(best.id).then(() => { selectTab("flip"); document.querySelector(".sky").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" }); });
+      return;
+    }
+    if (opts.fromSearch) {   // a star picked by name: show it instantly; the full time-lapse is an explicit choice
+      showMap(a, d, "searched star");
+      $("coordMsg").innerHTML = "Showing it on the live SPHEREx sky map (slide through all 102 wavelengths)." +
+        (S.live ? ' <button type="button" id="mkLapse">Make a SPHEREx time-lapse (a few minutes)</button>' : "");
+      if (S.live) $("mkLapse").onclick = () => liveLookup(a, d);
       return;
     }
     if (!S.live) {

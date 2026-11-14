@@ -8,7 +8,7 @@
 <meta name="description" content="Point your phone at the sky: WANDERERS shows where you are in the universe and guides you to objects studied with NASA SPHEREx, WISE and ESA Gaia data.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="compass.css?v=20261114g">
+<link rel="stylesheet" href="compass.css?v=20261114h">
 </head>
 <body>
 <video id="cam" playsinline muted autoplay hidden></video>
@@ -73,6 +73,9 @@
     <div id="guideMain" class="guide-main">Pick a target</div>
     <div id="guideSub" class="small"></div>
     <a id="investigate" class="btn lock" hidden>Investigate →</a>
+    <div class="find"><input id="findIn" placeholder="🔎 Find any star: Sirius, Vega, Barnard's Star…" autocomplete="off" spellcheck="false" aria-label="Find a star">
+      <ul id="findList" class="suggest" role="listbox" hidden></ul></div>
+    <div class="row-btns about-row"><button id="aboutBtn" class="btn hud" hidden>ⓘ About this star</button></div>
     <div id="targets" class="targets" role="listbox" aria-label="Targets"></div>
   </div>
 </section>
@@ -94,6 +97,17 @@
   <div class="row-btns"><button id="northReset" class="btn ghost">Clear sight check</button><button id="northClose" class="btn primary">Done</button></div>
 </div>
 
+<div id="details" class="sheet" hidden>
+  <div class="mission-tag" id="dTag">STAR</div>
+  <h2 id="dName"></h2>
+  <p id="dAlt" class="small dim"></p>
+  <ul id="dFacts" class="facts"></ul>
+  <p id="dWhere" class="small"></p>
+  <div class="row-btns"><a id="dMap" class="btn">SPHEREx sky map ↗</a><a id="dFull" class="btn" hidden>Full WANDERERS analysis ↗</a>
+    <button id="dClose" class="btn primary">Done</button></div>
+  <p class="small dim">Star data: HYG database v4.0 (Hipparcos, Yale Bright Star, Gliese), CC BY-SA 4.0.</p>
+</div>
+
 <div id="info" class="sheet" hidden>
   <h2>Where the numbers come from</h2>
   <dl id="infoRows" class="info-rows"></dl>
@@ -105,8 +119,9 @@
   <div class="row-btns"><button id="infoClose" class="btn primary">Done</button></div>
 </div>
 
-<script src="sky.js?v=20261114g"></script>
-<script src="orient.js?v=20261114g"></script>
-<script type="module" src="compass.js?v=20261114g"></script>
+<script src="sky.js?v=20261114h"></script>
+<script src="search.js?v=20261114h"></script>
+<script src="orient.js?v=20261114h"></script>
+<script type="module" src="compass.js?v=20261114h"></script>
 </body>
 </html>
