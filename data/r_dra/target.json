@@ -29,7 +29,8 @@
     "mission": "WISE",
     "png": "w2_wise2010.png",
     "detected": true,
-    "snr": 16.7
+    "snr": 16.7,
+    "saturated_core": true
    },
    {
     "year": 2025.3729191887926,
@@ -129,7 +130,8 @@
     "mission": "WISE",
     "png": "w1_wise2010.png",
     "detected": true,
-    "snr": 9.5
+    "snr": 9.5,
+    "saturated_core": true
    },
    {
     "year": 2025.4290952518065,
@@ -342,7 +344,8 @@
     "mission": "WISE",
     "png": "w2_wise2010.png",
     "detected": true,
-    "snr": 16.7
+    "snr": 16.7,
+    "saturated_core": true
    },
    {
     "year": 2025.409851293217,
@@ -379,7 +382,8 @@
     "mission": "WISE",
     "png": "w1_wise2010.png",
     "detected": true,
-    "snr": 9.5
+    "snr": 9.5,
+    "saturated_core": true
    },
    {
     "year": 2025.4753822678551,
@@ -4073,13 +4077,13 @@
    "year": 2010.5,
    "mission": "WISE",
    "ch": "w2",
-   "x": 75.11499635547321,
-   "y": 74.23358966896325,
+   "x": 74.0,
+   "y": 75.0,
    "pred_x": 74.41830372083018,
    "pred_y": 74.47566539890379,
-   "offset_arcsec": 1.475101740338588,
-   "ra": 248.16647757009977,
-   "dec": 66.75486286257676
+   "offset_arcsec": 1.341498828540386,
+   "ra": 248.16804711858558,
+   "dec": 66.75528864689795
   },
   {
    "year": 2025.409851293217,
@@ -4121,24 +4125,24 @@
    "year": 2010.5,
    "mission": "WISE",
    "ch": "w1",
-   "x": 74.41606139873798,
-   "y": 74.57860261615039,
+   "x": 75.0,
+   "y": 74.5,
    "pred_x": 74.41830372083018,
    "pred_y": 74.47566539890379,
-   "offset_arcsec": 0.20592327403328242,
-   "ra": 248.16746143413903,
-   "dec": 66.75505453876376
+   "offset_arcsec": 1.164410123503961,
+   "ra": 248.16663944169227,
+   "dec": 66.75501086912021
   }
  ],
  "motion": {
   "from_year": 2010.5,
   "to_year": 2026.3048137171636,
-  "shift_arcsec": 6.7657322956238595,
-  "measured_arcsec_per_yr": 0.4280804833704847,
-  "measured_pmra": -365.09676807405356,
-  "measured_pmdec": 223.5111858153604,
+  "shift_arcsec": 8.246298843280616,
+  "measured_arcsec_per_yr": 0.5217586863630895,
+  "measured_pmra": -506.1848972414476,
+  "measured_pmdec": 126.5265845583525,
   "expected_arcsec_per_yr": 0.02153911903853499,
-  "shift_spherex_pixels": 1.100119072459164
+  "shift_spherex_pixels": 1.3408616005334335
  },
  "movers_experimental": [],
  "spectrum": [],
@@ -4259,7 +4263,7 @@
   "numbers": [
    {
     "label": "measured motion",
-    "value": "0.43\u2033/yr"
+    "value": "0.52\u2033/yr"
    },
    {
     "label": "catalogue motion (Gaia DR3)",

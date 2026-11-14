@@ -1,0 +1,18 @@
+{
+ "summary": "Proxima Centauri is a known star and the Sun's nearest neighbor: a small red dwarf 4.2 light-years away, about 2,829 K by Gaia's estimate. WANDERERS saw it move 60 arcseconds from 2010 to 2026, or 3.82 per year, within 1.1% of Gaia's 3.86. Its brightness stayed steady (\u22120.06 \u00b1 0.06 mag). That was measured from the star's outer glow because its core saturates SPHEREx. All 60 SPHEREx points are flagged, so no spectrum is shown. The Gaia match also sits 3.6 arcseconds off the typed position. Still, all 3 checks passed, so confidence is high.",
+ "qa": [
+  {
+   "q": "Why do we think this is what the card says?",
+   "a": "The main clue is motion. It shifted 60 arcseconds between 2010 and 2026, about 3.82 arcseconds per year, which is within 1.1% of Gaia DR3's 3.86. Only a very nearby star moves across the sky that fast, and Gaia's parallax puts it 4.2 light-years away. One caution: the Gaia match is 3.6 arcseconds from the typed position. The star is too bright for SPHEREx, so we show no spectrum."
+  },
+  {
+   "q": "What would make you less sure?",
+   "a": "Two things already add doubt. All 60 SPHEREx measurements are flagged because Proxima Centauri is too bright, so the brightness check uses only the faint edges of a saturated image, and the -0.06 \u00b1 0.06 mag change is no bigger than its uncertainty. The Gaia match sits 3.6\u2033 from the typed position. If the measured 3.82\u2033/yr speed disagreed with Gaia's 3.86\u2033/yr, I'd doubt it's the same star."
+  },
+  {
+   "q": "Why use both WISE and SPHEREx?",
+   "a": "WISE photographed this sky in 2010 and SPHEREx in 2025 and 2026, so together they span about 16 years. Over that time Proxima Centauri shifted about 60 arcseconds, roughly 9.7 SPHEREx pixels, giving a measured speed of 3.82\u2033/yr against Gaia's 3.86\u2033/yr. One telescope alone covers too short a time. SPHEREx also measures many infrared colors, though here all 60 measurements are flagged because the star is too bright."
+  }
+ ],
+ "model_note": "Written by Claude (Claude Code, headless) from target.json only."
+}

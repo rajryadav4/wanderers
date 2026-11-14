@@ -35,10 +35,24 @@
   "dec": -7.243669827763018
  },
  {
+  "id": "pos_164p1223_n7p0153",
+  "name": "Wolf 359",
+  "teaser": "Faint nearby red dwarf",
+  "ra": 164.10054950708522,
+  "dec": 7.000897051591305
+ },
+ {
   "id": "pos_217p4398_s62p6795",
   "name": "Proxima Centauri",
   "teaser": "Nearest star to the Sun",
   "ra": 217.38702585545897,
   "dec": -62.675580418192496
+ },
+ {
+  "id": "pos_316p7219_n38p7494",
+  "name": "61 Cygni",
+  "teaser": "First star distance ever measured",
+  "ra": 316.75212570411855,
+  "dec": 38.76608108283803
  }
 ]

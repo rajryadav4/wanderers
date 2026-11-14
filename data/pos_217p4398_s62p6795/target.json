@@ -24363,6 +24363,15 @@
    "n_images": 32
   }
  ],
+ "gaia_facts": {
+  "source_id": 5853498713190525696,
+  "parallax_mas": 768.0665391873573,
+  "distance_ly": 4.246455005644238,
+  "g_mag": 8.984748840332031,
+  "bp_rp": 3.8045802116394043,
+  "variable_flag": "NOT_AVAILABLE",
+  "teff_k": 2829.354248046875
+ },
  "evidence": {
   "status": "known",
   "classification": "Nearby star with fast proper motion",
@@ -24404,6 +24413,14 @@
    {
     "label": "brightness change Jul 2025\u2192Feb 2026",
     "value": "-0.06 mag"
+   },
+   {
+    "label": "distance (Gaia parallax)",
+    "value": "4.2 ly"
+   },
+   {
+    "label": "temperature (Gaia estimate)",
+    "value": "2,829 K"
    }
   ]
  },
