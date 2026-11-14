@@ -15,6 +15,9 @@
     else { load(p.get("target") || list[0].id, p.get("ch")); }
   }).catch(() => { $("tName").textContent = "No data yet. Run the pipeline (see README)."; });
   fetch("api/health").then((r) => { if (r.ok) { S.live = true; $("askForm").hidden = false; } }).catch(() => {});
+  // "Explore any patch" live mode (web/ + backend/ on port 8001): links show only when server.js can reach it
+  const liveExplore = fetch("api/live-health").then((r) => r.ok).catch(() => false);
+  liveExplore.then((ok) => { $("exploreLink").hidden = !ok; });
 
   function renderTargets() {
     $("targetList").innerHTML = S.list.map((t, k) =>
@@ -339,6 +342,12 @@
   }
 
   const fovLabel = (f) => `${f / 60}′`;
+  function exploreHere(a, d) {
+    document.getElementById("exploreHere")?.remove();
+    liveExplore.then((ok) => { if (ok) $("coordMsg").insertAdjacentHTML("afterend",
+      `<p id="exploreHere" class="hint"><a href="/explore/?q=${encodeURIComponent(`${a.toFixed(5)} ${d.toFixed(5)}`)}">Explore this patch live</a></p>`); });
+  }
+
   function coordSearch(ra, dec, fovIn) {
     const a = parseAngle(ra, /h/i.test(ra) || /:/.test(ra)), d = parseAngle(dec, false);
     if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return false; }
@@ -355,7 +364,8 @@
     };
     const same = near(S.list.filter((t) => (t.fov || 300) === fov)), any = near(S.list);
     if (same.best && same.bd < 600) { $("coordMsg").textContent = `Matched ${same.best.name} (${Math.round(same.bd)}″ away).`; load(same.best.id); return true; }
-    else if (S.live) { requestField(a, d, fov); return true; }
+    exploreHere(a, d);   // live /explore/ mode (backend on :8001), shown beside the message
+    if (S.live) { requestField(a, d, fov); return true; }
     else if (any.best && any.bd < 600) {   // no server to make the other size: show what is cached and say so
       $("coordMsg").textContent = `${any.best.name} is cached at ${fovLabel(any.best.fov || 300)} only. A ${fovLabel(fov)} field needs the local server (node server.js).`;
       load(any.best.id); return true;
