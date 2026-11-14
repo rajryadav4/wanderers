@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WANDERERS</title>
 <meta name="description" content="Watch real SPHEREx, WISE and Gaia data reveal what moves and changes in the infrared sky, and see the evidence for what each object is.">
-<link rel="stylesheet" href="style.css?v=20261114h">
+<link rel="stylesheet" href="style.css?v=20261114i">
 </head>
 <body>
 <header class="top">
@@ -61,6 +61,7 @@
       <div class="view-tabs" role="tablist" aria-label="View">
         <button id="tabFlip" class="on" role="tab" aria-selected="true">Time-lapse</button>
         <button id="tabMap" role="tab" aria-selected="false">Sky map · any coordinates</button>
+        <button id="tabWebb" role="tab" aria-selected="false">🔭 Through Webb</button>
       </div>
     </div>
     <div id="flipView">
@@ -107,6 +108,21 @@
         wavelength: cold brown dwarfs appear only at the long end, normal stars fade there. The orange marker is the
         target; the dashed line is its measured path. This map works for any coordinates you type.</p>
     </div>
+
+    <div id="webbView" hidden>
+      <p id="webbHead" class="hint"></p>
+      <div id="webbAladin" class="aladin" aria-label="Webb image of this spot"></div>
+      <div class="map-controls">
+        <label>Webb image opacity <input type="range" id="webbOp" min="0" max="1" step="0.05" value="1"></label>
+        <label>Underneath <select id="webbBase"><option value="twomass">2MASS (near-infrared)</option><option value="dss">DSS (visible light)</option></select></label>
+      </div>
+      <p id="webbNote" class="hint"></p>
+      <div id="webbFrames" class="webb-frames"></div>
+      <p class="hint">WANDERERS matches these coordinates against the outlines of every public Webb (JWST) imaging frame in
+        NASA's MAST archive (<span id="webbCount"></span>), then shows the real Webb pixels from ESA ESASky's JWST maps,
+        with the gold outline marking the frame. What Webb is observing right now:
+        <a href="https://spacetelescopelive.org/webb" target="_blank" rel="noopener">Space Telescope Live ↗</a></p>
+    </div>
   </section>
 
   <!-- RIGHT: evidence -->
@@ -146,7 +162,8 @@
     Confirming a new object needs follow-up by astronomers.</p>
   <p>Data: SPHEREx DR1 (NASA/IPAC IRSA) · AllWISE (NASA/IPAC IRSA) · Gaia DR3 (ESA) · star names: HYG v4.0 (CC BY-SA 4.0). NASA Space Apps 2026 · Planet X and SPHEREx.</p>
 </footer>
-<script src="search.js?v=20261114h"></script>
-<script src="app.js?v=20261114h"></script>
+<script src="search.js?v=20261114i"></script>
+<script src="telescope.js?v=20261114i"></script>
+<script src="app.js?v=20261114i"></script>
 </body>
 </html>

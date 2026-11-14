@@ -13932,8 +13932,25 @@
    {
     "label": "brightness change May 2025\u2192Jun 2026",
     "value": "+0.05 mag"
+   },
+   {
+    "label": "distance (Gaia parallax)",
+    "value": "11.4 ly"
+   },
+   {
+    "label": "temperature (Gaia estimate)",
+    "value": "4,354 K"
    }
   ]
  },
- "teaser": "First star distance ever measured"
+ "teaser": "First star distance ever measured",
+ "gaia_facts": {
+  "source_id": 1872046609345556480,
+  "parallax_mas": 285.99494829578117,
+  "distance_ly": 11.40425738089204,
+  "g_mag": 4.7667131423950195,
+  "bp_rp": 1.4625897407531738,
+  "variable_flag": "NOT_AVAILABLE",
+  "teff_k": 4353.74365234375
+ }
 }

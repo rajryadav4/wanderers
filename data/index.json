@@ -35,11 +35,25 @@
   "dec": -7.243669827763018
  },
  {
+  "id": "pos_162p3288_s53p3194",
+  "name": "Luhman 16",
+  "teaser": "Closest brown dwarf pair",
+  "ra": 162.30522448331104,
+  "dec": -53.31779939566327
+ },
+ {
   "id": "pos_164p1223_n7p0153",
   "name": "Wolf 359",
   "teaser": "Faint nearby red dwarf",
   "ra": 164.10054950708522,
   "dec": 7.000897051591305
+ },
+ {
+  "id": "pos_165p8345_n35p9699",
+  "name": "Lalande 21185",
+  "teaser": "Red dwarf with planets",
+  "ra": 165.8304770919084,
+  "dec": 35.945435834004705
  },
  {
   "id": "pos_217p4398_s62p6795",
@@ -54,5 +68,12 @@
   "teaser": "First star distance ever measured",
   "ra": 316.75212570411855,
   "dec": 38.76608108283803
+ },
+ {
+  "id": "pos_77p9125_s45p0184",
+  "name": "Kapteyn's Star",
+  "teaser": "Ancient fast halo star",
+  "ra": 77.9664897918784,
+  "dec": -45.047883773984026
  }
 ]

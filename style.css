@@ -133,7 +133,14 @@ input { font: inherit; color: var(--text); background: #0a1120; border: 1px soli
 .map-controls select { font: inherit; color: var(--text); background: #0a1120; border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; }
 .map-controls input[type=range] { width: min(320px, 70vw); accent-color: var(--accent); }
 .aladin { width: 100%; max-width: 600px; aspect-ratio: 1; margin: 10px auto 6px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
-#mapView[hidden], #flipView[hidden] { display: none; }
+#mapView[hidden], #flipView[hidden], #webbView[hidden] { display: none; }
+.webb-frames { display: grid; gap: 6px; margin: 8px 0; }
+.webb-frames button { display: grid; grid-template-columns: 56px 1fr; gap: 10px; align-items: center; text-align: left; font: inherit; font-size: .84rem;
+  color: var(--text); background: #0a1120; border: 1px solid var(--line); border-radius: 10px; padding: 6px; cursor: pointer; }
+.webb-frames button.on { border-color: var(--accent); }
+.webb-frames img { width: 56px; height: 56px; object-fit: cover; border-radius: 6px; background: #000; }
+.webb-frames span { display: block; font-size: .72rem; color: var(--muted); }
+.webb-links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 4px; }
 
 .search-hero { margin: 14px 18px 0; padding: 18px; border: 1px solid var(--accent); border-radius: var(--radius);
   background: linear-gradient(135deg, rgba(124,196,255,.12), rgba(180,140,255,.08)), var(--panel); }

@@ -1,0 +1,18 @@
+{
+ "summary": "Lalande 21185 is a known red dwarf, about 3,511 K, 8.3 light-years away, with known planets. WANDERERS measured it moving 76 arcseconds between 2010 and 2026, or 4.80 arcseconds per year, within 0.2% of Gaia's 4.81, so we are highly confident this is the right star. It is too bright for SPHEREx: all 150 measurements are flagged, so there is no reliable spectrum. Measured from its outer glow because the center is saturated, it brightened about 0.08 \u00b1 0.03 magnitudes, failing the steady-brightness check; treat that as tentative.",
+ "qa": [
+  {
+   "q": "Why do we think this is what the card says?",
+   "a": "It moved 76 arcseconds between 2010 and 2026, about 4.80 arcseconds per year, which matches Gaia DR3's 4.81 to within 0.2%. Gaia also lists a star at this spot, and its parallax puts it 8.3 light-years away. Two caveats: the star is too bright for SPHEREx, so all 150 measurements are flagged, and the -0.08 \u00b1 0.03 magnitude change comes from the star's outer glow, so treat it with caution."
+  },
+  {
+   "q": "What would make you less sure?",
+   "a": "I'm confident this is Lalande 21185: its 76\u2033 shift matches Gaia's 4.81\u2033/yr within 0.2%. Brightness is the weak point. The star's core is saturated and all 150 SPHEREx measurements are flagged, so the \u22120.08 \u00b1 0.03 mag change comes only from the faint outer edges of its image. If that uncertainty is too small, or a nearby star adds light there, the slight brightening could be false."
+  },
+  {
+   "q": "Why use both WISE and SPHEREx?",
+   "a": "WISE photographed Lalande 21185 around 2010, and SPHEREx photographed it in 2025 and 2026. Over that 16-year gap the star moved 76 arcseconds, about 12 SPHEREx pixels, which is a big enough shift to measure well. That gives 4.80 arcseconds per year, against Gaia's 4.81. SPHEREx can also split light into many colors, but this star is too bright for it. All 150 measurements are flagged, so there is no reliable spectrum."
+  }
+ ],
+ "model_note": "Written by Claude (Claude Code, headless) from target.json only."
+}

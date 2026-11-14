@@ -1,7 +1,7 @@
 /* WANDERERS Sky Compass: landing -> "where are you in the universe" intro -> one-step flat calibration ->
  * augmented-reality sky with a compass tape, tilt scale, mini radar and live telemetry.
  * Motion: orient.js (gyro drives movement, compass sets north). Sky: sky.js. Intro: intro.js (three.js). */
-import { playIntro, earthFacts } from "./intro.js?v=20261114h";
+import { playIntro, earthFacts } from "./intro.js?v=20261114i";
 
 const $ = (id) => document.getElementById(id);
 const D2R = Math.PI / 180;
@@ -303,6 +303,18 @@ function draw() {
     g.fillText(`${l.name} · ${a.km < 10 ? a.km.toFixed(1) : Math.round(a.km)} km`, q[0] + 11, q[1] - 2);
   }
 
+  // Webb (JWST) pointings around where you look: small gold squares
+  if (S.webbAround && S.webbAround.length) {
+    g.font = "600 10px 'JetBrains Mono', monospace"; g.textAlign = "left"; g.textBaseline = "middle";
+    for (const w of S.webbAround) {
+      const s = Sky.observe({ ra: w.ra, dec: w.dec }, now, L.lat, L.lon), q = proj(vec(s.az, s.alt)); if (!q) continue;
+      const hot = S.webbHere && S.webbHere.obs === w.obs;
+      g.strokeStyle = s.alt < 0 ? "rgba(255,210,122,.35)" : hot ? "#ffd27a" : "rgba(255,210,122,.75)"; g.lineWidth = hot ? 2 : 1.2;
+      g.strokeRect(q[0] - (hot ? 6 : 4), q[1] - (hot ? 6 : 4), hot ? 12 : 8, hot ? 12 : 8);
+      if (hot) { g.fillStyle = "#ffd27a"; g.fillText("JWST · " + w.target, q[0] + 10, q[1]); }
+    }
+  }
+
   // WANDERERS targets
   for (const t of S.targets) {
     const s = Sky.observe({ ra: t.ra, dec: t.dec }, now, L.lat, L.lon), v = vec(s.az, s.alt);
@@ -440,7 +452,100 @@ function telemetry(now, L, P) {
     ["UTC", now.toISOString().slice(11, 19)], ["LST", hm(lst)], ["DECL", `${F.decl >= 0 ? "+" : ""}${F.decl.toFixed(1)}°`], ["CAL", cal],
   ].map(([k, v]) => `<span><b>${k}</b> ${v}</span>`).join("");
   if (!$("info").hidden) renderInfo(now, L, lst, tz);
+  webbTick(P, now, L, lst);
 }
+
+// ---------- Webb (JWST): which telescope frames are where the phone points ----------
+// crosshair direction -> J2000 RA/Dec (inverse of Sky.observe, refraction ignored: under 0.5 deg above 10 deg)
+function crosshairRaDec(P, now, L, lst) {
+  const la = L.lat * D2R, al = P.alt * D2R, az = P.az * D2R;
+  const dec = Math.asin(Math.sin(la) * Math.sin(al) + Math.cos(la) * Math.cos(al) * Math.cos(az)) / D2R;
+  const H = Math.atan2(-Math.sin(az) * Math.cos(al), Math.cos(la) * Math.sin(al) - Math.sin(la) * Math.cos(al) * Math.cos(az)) / D2R;
+  let ra = ((lst - H) % 360 + 360) % 360, r0 = ra, d0 = dec;
+  const J = Sky.jd(now);
+  for (let i = 0; i < 2; i++) {          // undo precession (catalogue frames are J2000)
+    const p = Sky.precess(r0, d0, J);
+    r0 = ((r0 - ((p.ra - ra + 540) % 360 - 180)) % 360 + 360) % 360; d0 = d0 - (p.dec - dec);
+  }
+  return { ra: r0, dec: d0 };
+}
+let webbReady = null;
+function webbTick(P, now, L, lst) {
+  if (!webbReady) webbReady = Webb.load().catch(() => null);
+  if (!window.Webb || !Webb.near || !P) return;
+  const c = crosshairRaDec(P, now, L, lst);
+  S.crosshair = c;
+  S.webbAround = Webb.near(c.ra, c.dec, 40, 80);
+  const here = Webb.near(c.ra, c.dec, 3, 1)[0];       // inside the crosshair circle, roughly
+  S.webbHere = here || null;
+  const chip = $("webbChip");
+  if (here) {
+    const d = Webb.describe(here);
+    chip.innerHTML = `🔭 Webb looked here: ${Webb.esc(here.target)}<span>${Webb.esc(here.inst)} · ${Webb.dateOf(here.mjd).slice(0, 4)} · ${here.dist.toFixed(1)}° from your crosshair · tap to see it</span>`;
+    chip.title = d.title; chip.hidden = false;
+    chip.onclick = () => openWebb(here.ra, here.dec, here.target, null, here);
+  } else chip.hidden = true;
+}
+
+// details sheet: did Webb image this star?
+async function webbDetails(st) {
+  const box = $("dWebb"); box.hidden = true;
+  try { await Webb.load(); } catch { return; }
+  const f = Webb.framesAt(st.ra, st.dec);
+  if (f.length) {
+    const inst = [...new Set(f.map((p) => p.inst))].join(", "), yrs = [...new Set(f.map((p) => Webb.dateOf(p.mjd).slice(0, 4)))].sort().join(", ");
+    box.innerHTML = `<b>🔭 Webb has imaged this spot</b> in ${f.length} frame${f.length > 1 ? "s" : ""} (${Webb.esc(inst)}; ${yrs}).
+      <br><button class="btn" id="dWebbGo">See it through Webb</button>`;
+  } else {
+    const n = Webb.near(st.ra, st.dec, 3, 1)[0];
+    box.innerHTML = n ? `<b>🔭 Webb has not imaged this star.</b> Its nearest Webb frame, “${Webb.esc(n.target)}”, is ${n.dist.toFixed(2)}° away.
+      <br><button class="btn" id="dWebbGo">Show the nearest Webb frame</button>`
+      : `<b>🔭 Webb has not imaged this part of the sky</b> (no public Webb image within 3°).`;
+    if (n) f.push(n);
+  }
+  box.hidden = false;
+  const go = $("dWebbGo"); if (go) go.onclick = () => openWebb(st.ra, st.dec, st.name, f.length && Webb.framesAt(st.ra, st.dec).length ? f : null, f[0]);
+}
+
+// the Webb viewer sheet
+async function openWebb(ra, dec, label, frames, focus) {
+  await Webb.load();
+  // every frame overlapping the spot we show (the star, or the centre of the chosen frame)
+  const contains = frames && frames.length;
+  const cRa = contains ? ra : focus.ra, cDec = contains ? dec : focus.dec;
+  let list = Webb.best(contains ? frames : Webb.framesAt(focus.ra, focus.dec));
+  if (!list.length) list = [focus];
+  const sel = contains ? list[0] : list.find((p) => p.obs === focus.obs) || list[0];
+  list = [sel, ...list.filter((p) => p !== sel)];
+  $("details").hidden = true; $("webb").hidden = false;
+  $("wTitle").textContent = contains ? `${label} through Webb` : `Webb frame: ${focus.target}`;
+  $("wSub").textContent = contains ? `RA ${StarSearch.hms(ra)}  Dec ${StarSearch.dms(dec)} · the red cross is ${label}; the gold outline is the Webb frame shown`
+    : `${label && label !== focus.target ? `${label} is ${Webb.sep(ra, dec, focus.ra, focus.dec).toFixed(2)}° away. ` : ""}Frame centre RA ${StarSearch.hms(focus.ra)}  Dec ${StarSearch.dms(focus.dec)}`;
+  $("wCount").textContent = `${(await Webb.load()).count.toLocaleString()} frames`;
+  const show = async (p) => {
+    $("wFrames").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.obs === p.obs));
+    const d = Webb.describe(p);
+    $("wNote").innerHTML = `<b>${Webb.esc(d.title)}</b><br>${Webb.esc(d.line)}` + ({ preview: "<br>Showing Webb's own image of this frame (MAST preview, placed on the sky with its WCS).",
+       live: "<br>Showing ESA ESASky's live Webb map: zoom in for full resolution.",
+       outline: `<br><span class="warn">No Webb pixels can be streamed for this frame yet, so the gold outline shows exactly where Webb looked.
+       Open the full Webb image below.</span>` })[Webb.source(p)] +
+      `<div class="webb-links"><a href="${Webb.full(p)}" target="_blank" rel="noopener">Full Webb image (large) ↗</a>
+       <a href="${Webb.progUrl(p)}" target="_blank" rel="noopener">Programme ${Webb.esc(p.pid)} at STScI ↗</a></div>`;
+    try {
+      await Webb.render($("wView"), contains ? ra : p.ra, contains ? dec : p.dec, [p, ...list.filter((x) => x !== p)],
+        { label, mark: { ra, dec }, base: $("wBase").value, webbOpacity: +$("wOpacity").value });
+    } catch (e) { $("wView").innerHTML = `<p class="small warn" style="padding:12px">Sky viewer could not load: ${Webb.esc(e.message)}</p>`; }
+  };
+  $("wFrames").innerHTML = list.slice(0, 12).map((p) => {
+    const d = Webb.describe(p);
+    return `<button data-obs="${Webb.esc(p.obs)}"><img loading="lazy" alt="" src="${Webb.thumb(p)}"><div>${Webb.esc(d.title)}<span>${Webb.esc(d.line)}</span></div></button>`;
+  }).join("");
+  $("wFrames").querySelectorAll("button").forEach((b) => (b.onclick = () => show(list.find((p) => p.obs === b.dataset.obs))));
+  show(sel);
+}
+$("wClose").onclick = () => { $("webb").hidden = true; };
+$("wOpacity").oninput = (e) => Webb.setOpacity(+e.target.value);
+$("wBase").onchange = (e) => Webb.setBase(e.target.value);
 
 // ---------- targets ----------
 // ---------- find any star ----------
@@ -466,6 +571,7 @@ function showDetails(T) {
   $("dMap").href = `index.html?ra=${st.ra.toFixed(5)}&dec=${st.dec.toFixed(5)}`;
   $("dFull").hidden = !st.wanderers; if (st.wanderers) $("dFull").href = `index.html?target=${st.wanderers}`;
   $("details").hidden = false;
+  webbDetails(st);
 }
 $("aboutBtn").onclick = () => S.sel && showDetails(S.sel);
 $("dClose").onclick = () => { $("details").hidden = true; };

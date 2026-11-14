@@ -136,3 +136,23 @@ a { color: var(--cyan); }
 .suggest li.none { color: var(--dim); cursor: default; }
 .about-row { margin-top: 6px; }
 .facts { padding-left: 18px; margin: 8px 0; display: grid; gap: 5px; font-size: .9rem; }
+
+/* Webb (JWST) */
+.webb-chip { display: block; width: 100%; margin-bottom: 8px; padding: 8px 12px; text-align: left; font: 600 .86rem var(--font);
+  color: #1a1200; background: linear-gradient(180deg, #ffd27a, #f0a832); border: none; border-radius: 10px; cursor: pointer; }
+.webb-chip span { display: block; font: .7rem var(--mono); opacity: .8; }
+.webb-box { margin: 10px 0; padding: 10px 12px; border: 1px solid rgba(255, 181, 71, .45); border-radius: 10px; background: rgba(255, 181, 71, .07); }
+.webb-box b { color: var(--amber); }
+.webb-box .btn { margin-top: 8px; }
+.webb-sheet { max-height: 94vh; }
+.webb-view { width: 100%; height: min(52vh, 460px); border-radius: 10px; overflow: hidden; background: #000; margin: 8px 0; position: relative; }
+.webb-tools { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.webb-tools input[type=range] { width: 110px; vertical-align: middle; }
+.webb-tools select { font: inherit; color: var(--text); background: rgba(5, 10, 22, .9); border: 1px solid var(--line); border-radius: 6px; padding: 3px; }
+.webb-frames { display: grid; gap: 6px; margin: 8px 0; }
+.webb-frames button { display: grid; grid-template-columns: 56px 1fr; gap: 10px; align-items: center; text-align: left; font: inherit; font-size: .84rem;
+  color: var(--text); background: rgba(16, 28, 52, .7); border: 1px solid var(--line); border-radius: 10px; padding: 6px; cursor: pointer; }
+.webb-frames button.on { border-color: var(--amber); }
+.webb-frames img { width: 56px; height: 56px; object-fit: cover; border-radius: 6px; background: #000; }
+.webb-frames span { display: block; font: .7rem var(--mono); color: var(--dim); }
+.webb-links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .8rem; margin-top: 4px; }

@@ -38,7 +38,7 @@
       `<div class="alt">${st.alt.slice(0, 4).join(" · ")}</div>${facts.length ? `<ul>${facts.map((f) => `<li>${f}</li>`).join("")}</ul>` : ""}` +
       `<p class="hint">Star data: HYG database v4.0 (Hipparcos, Yale Bright Star, Gliese), CC BY-SA 4.0. ` +
       `<a href="compass.html?star=${encodeURIComponent(st.name)}">Find it with your phone →</a></p>`;
-    coordSearch(String(st.ra), String(st.dec), { fromSearch: true });
+    coordSearch(String(st.ra), String(st.dec), { fromSearch: true, label: st.name });
   });
 
   function renderTargets() {
@@ -53,6 +53,7 @@
       fetch(`data/${id}/target.json`).then((r) => r.json()),
       fetch(`data/${id}/explain.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     ]);
+    S.here = { ra: t.grid.centre_ra, dec: t.grid.centre_dec, label: t.name };
     S.t = t; S.ex = ex; S.ch = ch && t.frames[ch] ? ch : (t.frames.w2 && t.frames.w2.length ? "w2" : "w1");
     S.i = 0; S.imgs = {};
     $("targetList").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.id === id));
@@ -316,6 +317,7 @@
   function coordSearch(ra, dec, opts = {}) {
     const a = parseAngle(ra, /h/i.test(ra) || /:/.test(ra)), d = parseAngle(dec, false);
     if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return; }
+    S.here = { ra: a, dec: d, label: opts.label || `RA ${a.toFixed(4)}°, Dec ${d.toFixed(4)}°` };
     let best = null, bd = 1e9;
     for (const t of S.list) {
       const dd = Math.hypot((t.ra - a) * Math.cos((d * Math.PI) / 180), t.dec - d) * 3600;
@@ -396,12 +398,51 @@
     try { await initMap(); mapGoTo(ra, dec, label); } catch (e) { $("coordMsg").textContent = "Sky map unavailable: " + e.message; }
   }
   function selectTab(which) {
-    const map = which === "map";
-    $("flipView").hidden = map; $("mapView").hidden = !map;
-    $("tabFlip").classList.toggle("on", !map); $("tabMap").classList.toggle("on", map);
-    $("tabFlip").setAttribute("aria-selected", !map); $("tabMap").setAttribute("aria-selected", map);
-    if (map) stop();
+    for (const [k, view, tab] of [["flip", "flipView", "tabFlip"], ["map", "mapView", "tabMap"], ["webb", "webbView", "tabWebb"]]) {
+      $(view).hidden = k !== which; $(tab).classList.toggle("on", k === which); $(tab).setAttribute("aria-selected", k === which);
+    }
+    if (which !== "flip") stop();
+    if (which === "webb") showWebb();
   }
+
+  // ---------- through Webb: match the coordinates against every public JWST frame, show its pixels ----------
+  async function showWebb() {
+    const h = S.here; if (!h) return;
+    const head = $("webbHead"), list = $("webbFrames");
+    head.textContent = "Checking every public Webb frame…"; list.innerHTML = ""; $("webbNote").textContent = "";
+    let db; try { db = await Webb.load(); } catch (e) { head.textContent = "Webb frame list unavailable: " + e.message; return; }
+    $("webbCount").textContent = `${db.count.toLocaleString()} frames`;
+    let frames = Webb.best(Webb.framesAt(h.ra, h.dec)), centre = h;
+    if (frames.length) head.innerHTML = `<b>Webb has imaged ${esc(h.label)}</b> in ${frames.length} frame${frames.length > 1 ? "s" : ""}. ` +
+      `The red cross is your position, the gold outline the frame shown.`;
+    else {
+      const n = Webb.near(h.ra, h.dec, 5, 1)[0];
+      if (!n) { head.innerHTML = `<b>Webb has not imaged this part of the sky</b> (no public Webb image within 5° of ${esc(h.label)}).`; $("webbAladin").innerHTML = ""; return; }
+      frames = [n, ...Webb.best(Webb.framesAt(n.ra, n.dec)).filter((p) => p.obs !== n.obs)]; centre = n;
+      head.innerHTML = `<b>Webb has not imaged ${esc(h.label)}.</b> Showing its nearest Webb frame, “${esc(n.target)}”, ${n.dist.toFixed(2)}° away.`;
+    }
+    const show = async (p) => {
+      list.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.obs === p.obs));
+      const d = Webb.describe(p);
+      $("webbNote").innerHTML = `<b>${esc(d.title)}</b><br>${esc(d.line)}` + ({ preview: "<br>Showing Webb's own image of this frame (MAST preview, placed on the sky with its WCS).",
+        live: "<br>Showing ESA ESASky's live Webb map: scroll to zoom in for full resolution.",
+        outline: "<br>No Webb pixels can be streamed for this frame yet, so the gold outline shows exactly where Webb looked. Open the full Webb image below." })[Webb.source(p)] +
+        `<span class="webb-links"><a href="${Webb.full(p)}" target="_blank" rel="noopener">Full Webb image (large) ↗</a>` +
+        `<a href="${Webb.progUrl(p)}" target="_blank" rel="noopener">Programme ${esc(p.pid)} at STScI ↗</a></span>`;
+      try {
+        await Webb.render($("webbAladin"), centre === h ? h.ra : p.ra, centre === h ? h.dec : p.dec, [p, ...frames.filter((x) => x !== p)],
+          { label: h.label, mark: { ra: h.ra, dec: h.dec }, base: $("webbBase").value, webbOpacity: +$("webbOp").value });
+      } catch (e) { $("webbNote").textContent = "Sky viewer could not load: " + e.message; }
+    };
+    list.innerHTML = frames.slice(0, 12).map((p) => { const d = Webb.describe(p);
+      return `<button data-obs="${esc(p.obs)}"><img loading="lazy" alt="" src="${Webb.thumb(p)}"><div>${esc(d.title)}<span>${esc(d.line)}</span></div></button>`; }).join("");
+    list.querySelectorAll("button").forEach((b) => (b.onclick = () => show(frames.find((p) => p.obs === b.dataset.obs))));
+    show(frames[0]);
+  }
+  const esc = (t) => Webb.esc(t);
+  $("tabWebb").onclick = () => selectTab("webb");
+  $("webbOp").oninput = (e) => Webb.setOpacity(+e.target.value);
+  $("webbBase").onchange = (e) => Webb.setBase(e.target.value);
   $("tabFlip").onclick = () => selectTab("flip");
   $("tabMap").onclick = async () => { selectTab("map"); try { await initMap(); mapGoTo(); } catch (e) { $("coordMsg").textContent = "Sky map unavailable: " + e.message; } };
   $("lam").oninput = (e) => setSlice(+e.target.value);
