@@ -192,7 +192,36 @@
       if (dd < bd) { bd = dd; best = t; }
     }
     if (best && bd < 600) { $("coordMsg").textContent = `Matched ${best.name} (${Math.round(bd)}″ away).`; load(best.id); }
+    else if (S.live) requestField(a, d);
     else $("coordMsg").textContent = `Not in the cached set yet. A teammate can add it in a few minutes: ` +
       `python pipeline/fetch.py --ra ${a.toFixed(5)} --dec ${d.toFixed(5)}, then analyze.py and evidence.py.`;
+  }
+
+  // Ask the local server to prepare a patch of sky that is not cached yet, then show it when ready.
+  // Only used when server.js is running (S.live); the static site keeps the message above.
+  async function requestField(a, d) {
+    const me = (S.fieldToken = (S.fieldToken || 0) + 1);   // a newer search cancels this one
+    const msg = (t) => { if (me === S.fieldToken) $("coordMsg").textContent = t; };
+    const api = async (url, opt) => {
+      const r = await fetch(url, opt), j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.error || "The server could not prepare this field.");
+      return j;
+    };
+    try {
+      msg("Preparing this patch of sky. This can take several minutes the first time.");
+      let j = await api("api/field", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ra: a, dec: d }) });
+      while (j.status !== "ready" && j.status !== "done") {
+        if (j.status === "error") throw new Error(j.error || "No usable data for these coordinates.");
+        msg(j.stage + (j.detail ? ` · ${j.detail}` : ""));
+        await new Promise((r) => setTimeout(r, 3000));
+        if (me !== S.fieldToken) return;
+        j = await api(`api/job?id=${encodeURIComponent(j.job)}`);
+      }
+      if (me !== S.fieldToken) return;
+      S.list = await fetch(`data/index.json?t=${Date.now()}`).then((r) => r.json());
+      renderTargets();
+      msg("Ready.");
+      load(j.tid);
+    } catch (e) { msg(e.message); }
   }
 })();
