@@ -14,6 +14,9 @@
     else { load(p.get("target") || list[0].id, p.get("ch")); }
   }).catch(() => { $("tName").textContent = "No data yet. Run the pipeline (see README)."; });
   fetch("api/health").then((r) => { if (r.ok) { S.live = true; $("askForm").hidden = false; } }).catch(() => {});
+  // "Explore any patch" live mode (web/ + backend/ on port 8001): links show only when server.js can reach it
+  const liveExplore = fetch("api/live-health").then((r) => r.ok).catch(() => false);
+  liveExplore.then((ok) => { $("exploreLink").hidden = !ok; });
 
   function renderTargets() {
     $("targetList").innerHTML = S.list.map((t, k) =>
@@ -192,7 +195,11 @@
       if (dd < bd) { bd = dd; best = t; }
     }
     if (best && bd < 600) { $("coordMsg").textContent = `Matched ${best.name} (${Math.round(bd)}″ away).`; load(best.id); }
-    else $("coordMsg").textContent = `Not in the cached set yet. A teammate can add it in a few minutes: ` +
-      `python pipeline/fetch.py --ra ${a.toFixed(5)} --dec ${d.toFixed(5)}, then analyze.py and evidence.py.`;
+    else {
+      $("coordMsg").textContent = `Not in the cached set yet. A teammate can add it in a few minutes: ` +
+        `python pipeline/fetch.py --ra ${a.toFixed(5)} --dec ${d.toFixed(5)}, then analyze.py and evidence.py.`;
+      liveExplore.then((ok) => { if (ok) $("coordMsg").insertAdjacentHTML("beforeend",
+        ` <a href="/explore/?q=${encodeURIComponent(`${a.toFixed(5)} ${d.toFixed(5)}`)}">Explore this patch live</a>`); });
+    }
   }
 })();
