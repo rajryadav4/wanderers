@@ -39,11 +39,18 @@
     const url = new URL(location); url.searchParams.set("target", id); url.searchParams.delete("ra"); url.searchParams.delete("dec");
     history.replaceState(null, "", url);
     await preload();
-    setupSlider(); draw(); evidence(); spectrum();
+    setupSlider(); setAladin(); draw(); evidence(); spectrum();
     $("answer").textContent = "";
   }
 
   function frames() { return S.t.frames[S.ch] || []; }
+
+  // "Open this field in Aladin Lite": same centre and size as the field on screen (see aladinlink.js).
+  function setAladin() {
+    const a = $("aladinLink"), g = S.t.grid;
+    try { a.href = AladinLink.url({ ra: g.centre_ra, dec: g.centre_dec, fovArcsec: g.npix * g.arcsec_per_pix }); a.hidden = false; }
+    catch { a.hidden = true; }     // never break the page over a link
+  }
 
   function preload() {
     const jobs = [];
