@@ -1,17 +1,17 @@
 {
- "summary": "RW Aurigae is a young star, listed in Gaia, that dims unpredictably when dust clouds pass in front of it. WANDERERS compared positions from 2010 and 2026 and found a shift of about 0.57 arcseconds, under a tenth of a SPHEREx pixel, so no motion was measurable. Brightness changed by +0.03 \u00b1 0.06 magnitudes between September 2025 and March 2026, within the uncertainty, so it looked steady in these snapshots. Confidence is medium: the star is too bright for SPHEREx, so 140 of 150 measurements were flagged.",
+ "summary": "RW Aurigae is a known young star, about 509 light-years away, that sometimes dims when dust clouds pass in front of it. WANDERERS compared images from 2010 and 2026 and found a shift of about 0.6 arcseconds. That is under a tenth of a SPHEREx pixel, so the motion is too small to measure. From September 2025 to March 2026 its brightness changed by +0.03 \u00b1 0.06 magnitudes, so it looked steady in these snapshots. Confidence is medium because the star is too bright for SPHEREx, which flagged 140 of 150 measurements.",
  "qa": [
   {
    "q": "Why do we think this is what the card says?",
-   "a": "Gaia DR3 already lists this star, so it's known. Between Sep 2025 and Mar 2026 its brightness changed by +0.03 magnitudes, which is smaller than the \u00b10.06 uncertainty, so no real change shows. Its 0.57 arcsecond shift since 2010 is under a tenth of a SPHEREx pixel. But it's too bright for SPHEREx: 140 of 150 measurements were flagged, so confidence is medium. It may still dim at other times."
+   "a": "The card calls it steady because nothing changed beyond the noise in these snapshots. Its brightness rose only 0.03 magnitudes between Sep 2025 and Mar 2026, which is smaller than the \u00b10.06 uncertainty. Its position moved 0.57 arcseconds since 2010, less than a tenth of a SPHEREx pixel. Confidence is medium because 140 of 150 measurements are saturated, so brightness came from the star's faint outer glow. It can still dim at other times."
   },
   {
    "q": "What would make you less sure?",
-   "a": "Several things already make me less sure. 140 of 150 SPHEREx measurements are flagged because the star is too bright, so its brightness comes from the faint outer glow. The change, +0.03 mag, is smaller than its \u00b10.06 uncertainty. There are only two snapshots, six months apart, and stars like this can dim between visits. The 0.57 arcsecond shift is under a tenth of a SPHEREx pixel, too small to trust."
+   "a": "Most of this star's light overflows SPHEREx: 140 of 150 measurements are saturated, so brightness comes from the star's faint outer glow. The 0.06 mag uncertainty is bigger than the 0.03 mag change. There are only two snapshots, and RW Aurigae is known to dim unpredictably. The shift is under a tenth of a pixel. A third visit catching a dip would overturn \"steady.\""
   },
   {
    "q": "Why use both WISE and SPHEREx?",
-   "a": "WISE photographed this sky around 2010, and SPHEREx photographed it in 2025 and 2026. Together they cover about 16 years, which is long enough for nearby stars to shift measurably. SPHEREx also splits light into many colors, which gives a spectrum. For RW Aurigae, the 0.57 arcsecond shift is under a tenth of a SPHEREx pixel, so no motion is measurable. Also, 140 of 150 SPHEREx measurements are flagged as too bright."
+   "a": "WISE photographed this sky around 2010, and SPHEREx photographed it in 2025 and 2026. Together they give a 16-year gap for spotting motion. Here the shift was only 0.57 arcseconds, about a tenth of a SPHEREx pixel, which is too small to count as measured motion. SPHEREx also records many infrared colors. But RW Aurigae is too bright for it: 140 of 150 measurements are flagged, leaving 10 clean ones."
   }
  ],
  "model_note": "Written by Claude (Claude Code, headless) from target.json only."

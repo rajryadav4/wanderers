@@ -246,7 +246,6 @@
     MAP.layers.spherex = A.imageHiPS(HIPS.spherex, { name: "SPHEREx DR1", imgFormat: "png" });
     MAP.layers.wise = A.imageHiPS(HIPS.wise, { name: "AllWISE colour", imgFormat: "jpeg" });
     MAP.aladin.setBaseImageLayer(MAP.layers.spherex);
-    try { MAP.layers.spherex.setColormap("grayscale", { stretch: "asinh" }); } catch {}   // faint sources show better
     MAP.overlay = A.graphicOverlay({ color: "#ffb547", lineWidth: 2, lineDash: [6, 4] }); MAP.aladin.addOverlay(MAP.overlay);
     MAP.cat = A.catalog({ name: "target", sourceSize: 22, color: "#ffb547", shape: "circle" }); MAP.aladin.addCatalog(MAP.cat);
     try {   // wavelength of each of the 102 cube frames, straight from the HiPS description
