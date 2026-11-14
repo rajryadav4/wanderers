@@ -1,7 +1,7 @@
 /* WANDERERS Sky Compass: landing -> "where are you in the universe" intro -> one-step flat calibration ->
  * augmented-reality sky with a compass tape, tilt scale, mini radar and live telemetry.
  * Motion: orient.js (gyro drives movement, compass sets north). Sky: sky.js. Intro: intro.js (three.js). */
-import { playIntro, earthFacts } from "./intro.js?v=20261114d";
+import { playIntro, earthFacts } from "./intro.js?v=20261114f";
 
 const $ = (id) => document.getElementById(id);
 const D2R = Math.PI / 180;
@@ -12,6 +12,7 @@ const S = {
   targets: [], sel: null, loc: null, locNote: "location not shared yet", place: null, cities: null,
   camOn: false, sensors: false, manual: { az: 180, alt: 25 }, vfovNoCam: 60, regionImg: null, lastTele: 0, buzzed: {},
 };
+window.__wanderers = { F, S };   // debug handle for automated tests (feed sensor events with exact timestamps)
 
 const STARS = [
   ["Polaris", 37.95, 89.26], ["Vega", 279.23, 38.78], ["Arcturus", 213.92, 19.18], ["Capella", 79.17, 46.0],
@@ -20,11 +21,18 @@ const STARS = [
   ["Procyon", 114.83, 5.22], ["Pollux", 116.33, 28.03], ["Regulus", 152.09, 11.97], ["Fomalhaut", 344.41, -29.62],
 ].map(([name, ra, dec]) => ({ name, ra, dec }));
 const BODIES = [{ name: "Sun", body: "sun" }, { name: "Moon", body: "moon" }];
+// Landmarks for the sight check; h = height of the top above sea level (m)
 const LANDMARKS = [
-  { name: "Space Needle", lat: 47.6205, lon: -122.3493 }, { name: "Columbia Center", lat: 47.6045, lon: -122.3306 },
-  { name: "Mount Rainier", lat: 46.8529, lon: -121.7604 }, { name: "Mount Baker", lat: 48.7767, lon: -121.8144 },
-  { name: "Olympic Mtns (Mt Constance)", lat: 47.7726, lon: -123.1293 },
+  { name: "Space Needle", lat: 47.6205, lon: -122.3493, h: 215 }, { name: "Columbia Center", lat: 47.6045, lon: -122.3306, h: 320 },
+  { name: "Mount Rainier", lat: 46.8529, lon: -121.7604, h: 4392 }, { name: "Mount Baker", lat: 48.7767, lon: -121.8144, h: 3286 },
+  { name: "Mt Constance (Olympics)", lat: 47.7726, lon: -123.1293, h: 2369 },
 ];
+// direction and height above the horizon of a landmark's top, from your position (Earth curvature included)
+function landmarkAzAlt(l) {
+  const L = loc(), dKm = distKm(L.lat, L.lon, l.lat, l.lon), d = dKm * 1000, hUser = S.alt != null ? S.alt : 40;
+  const alt = (Math.atan2(l.h - hUser, d) - d / (2 * 6371000)) / D2R;
+  return { az: bearing(L.lat, L.lon, l.lat, l.lon), alt, km: dKm };
+}
 
 const vec = (az, alt) => [Math.sin(az * D2R) * Math.cos(alt * D2R), Math.cos(az * D2R) * Math.cos(alt * D2R), Math.sin(alt * D2R)];
 const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
@@ -78,7 +86,7 @@ $("go").onclick = async () => {
   try {
     const qs = new URLSearchParams(location.search);
     await playIntro({ container: $("cosmosStage"), caption: $("cosmosTitle"), sub: $("cosmosSub"), reduced,
-      slow: qs.get("intro") === "slow" ? 2.5 : 1, from: qs.get("introFrom") || "universe",
+      slow: qs.get("intro") === "slow" ? 2.5 : 1,
       getPlace: () => placePromise, getRegionImage: () => S.regionPromise || Promise.resolve(null), onDone: afterIntro });
   } catch (e) { console.warn("intro failed", e); afterIntro(S.place || SEATTLE); }
 };
@@ -95,6 +103,7 @@ function locate() {
   let first = true;
   navigator.geolocation.watchPosition(async (p) => {
     S.loc = { lat: p.coords.latitude, lon: p.coords.longitude, acc: p.coords.accuracy };
+    if (p.coords.altitude != null) S.alt = p.coords.altitude;
     S.locNote = `GPS ±${Math.round(p.coords.accuracy)} m`;
     updateDecl();
     if (first) {
@@ -130,34 +139,48 @@ function desktopMode() {
 }
 
 function showCalibration() {
-  $("calib").hidden = false; $("calDone").hidden = true; $("calSkip").hidden = false;
+  $("calib").hidden = false; $("calDone").hidden = true; $("calSkip").hidden = false; $("calEnough").hidden = true;
+  document.querySelectorAll(".stops span").forEach((el) => { el.innerHTML = "<i></i>"; });
   $("calTitle").textContent = "Lay your phone flat on a table";
-  $("calText").textContent = "Screen up, hands off. Hold still for 3 seconds while we line up its gyroscope with its compass.";
   F.startFlatCalibration();
   F.onCalibrated = (r) => {
-    $("ringFill").style.strokeDashoffset = 0;
+    document.querySelectorAll(".stops i").forEach((el) => (el.style.width = r.stops > [...document.querySelectorAll(".stops i")].indexOf(el) ? "100%" : "0"));
+    const sp = r.spread != null ? r.spread.toFixed(1) : "?";
     const msg = {
-      good: `Calibrated. Your compass is steady (±${r.compassScatter.toFixed(1)}°).`,
-      fair: `Calibrated. Some magnetic interference nearby (±${r.compassScatter.toFixed(1)}°): for best accuracy use North check once.`,
-      poor: `Calibrated, but there is strong magnetic interference here (metal nearby). Use North check on the Moon, a star or a landmark.`,
-      nocompass: "Level set. This phone did not report a compass: use North check on the Moon, a star or a landmark.",
+      good: `Your compass agrees with itself in all 4 directions (within ${sp}°). North is set. If you are inside a steel building, one Sight check on a landmark makes it exact.`,
+      fair: `Something nearby bends your compass by up to ${sp}° depending on direction (a magnetic case or wallet, a laptop, a metal desk). We averaged it out, but do a Sight check for best accuracy.`,
+      poor: `Strong magnetic interference: your compass is off by up to ${sp}°. Remove magnetic cases or wallets, move away from metal, and recalibrate, or use a Sight check.`,
+      partial: `North set from ${r.stops} direction${r.stops > 1 ? "s" : ""} only, so a magnetic case or nearby metal could not be checked. Do a Sight check for best accuracy.`,
+      nocompass: "Level set. This phone did not report a compass, so set north with a Sight check on the Moon, a star or a landmark.",
     }[r.quality];
-    $("calTitle").textContent = "✓ Calibrated";
-    $("calText").textContent = msg + " Now pick up your phone and point the camera at the sky.";
-    $("calDone").hidden = false; $("calSkip").hidden = true;
+    $("calTitle").textContent = r.quality === "good" ? "✓ Calibrated" : r.quality === "poor" ? "⚠ Calibrated, with interference" : "✓ Calibrated";
+    $("calText").textContent = msg;
+    $("calDone").hidden = false; $("calSkip").hidden = true; $("calEnough").hidden = true;
+    $("phoneIcon").classList.remove("turn");
     if (navigator.vibrate) navigator.vibrate([40, 60, 40]);
   };
 }
 $("calDone").onclick = () => { $("calib").hidden = true; };
 $("calSkip").onclick = () => { F.cancelCalibration(); $("calib").hidden = true; };
+$("calEnough").onclick = () => F.finishCalibrationNow();
 $("recalBtn").onclick = () => showCalibration();
+let lastStops = -1;
 function calibrationTick() {
   const c = F.calibrationState();
   if (!c || $("calib").hidden) return;
-  $("ringFill").style.strokeDashoffset = 327 * (1 - c.progress);
-  if (c.state === "tilted") { $("calTitle").textContent = "Lay your phone flat on a table"; }
-  else if (c.state === "moving") { $("calTitle").textContent = "Hold still…"; }
-  else if (c.state === "ok") { $("calTitle").textContent = `Calibrating… ${Math.round(c.progress * 100)}%`; }
+  const bars = document.querySelectorAll(".stops i");
+  bars.forEach((el, i) => (el.style.width = `${Math.max(0, Math.min(1, c.progress * 4 - i)) * 100}%`));
+  if (c.stops !== lastStops && c.stops > 0 && navigator.vibrate) navigator.vibrate(30);
+  lastStops = c.stops;
+  $("calEnough").hidden = c.stops < 1;
+  $("phoneIcon").classList.toggle("turn", c.state === "turn");
+  const t = {
+    tilted: ["Lay your phone flat on a table", "Screen up, hands off, away from laptops and magnets."],
+    moving: ["Hold still…", "Take your hand off the phone for a moment."],
+    ok: [`Hold still… direction ${c.stops + 1} of 4`, "Reading the compass."],
+    turn: [`✓ ${c.stops} of 4. Now give it a quarter turn`, "Rotate the phone about 90° on the table, then let go and hold still."],
+  }[c.state] || ["Lay your phone flat on a table", ""];
+  $("calTitle").textContent = t[0]; $("calText").textContent = t[1];
 }
 
 // ---------- pointing: sensors, or drag on desktop ----------
@@ -265,6 +288,17 @@ function draw() {
       g.beginPath(); g.arc(q[0], q[1], 2.6, 0, 7); g.fill();
       g.font = "12px 'Space Grotesk', sans-serif"; g.fillStyle = below ? "rgba(200,210,230,.5)" : "rgba(220,230,250,.9)"; g.fillText(o.name, q[0] + 7, q[1]);
     }
+  }
+
+  // landmarks (teal): where WANDERERS thinks they are; compare with the real ones for a sight check
+  for (const l of LANDMARKS) {
+    const a = landmarkAzAlt(l); if (a.km < 0.2 || a.km > 150) continue;
+    const q = proj(vec(a.az, a.alt)); if (!q) continue;
+    g.strokeStyle = "#3fe0d0"; g.lineWidth = 2;
+    g.beginPath(); g.moveTo(q[0], q[1] - 9); g.lineTo(q[0] + 7, q[1]); g.lineTo(q[0], q[1] + 9); g.lineTo(q[0] - 7, q[1]); g.closePath(); g.stroke();
+    g.beginPath(); g.moveTo(q[0], q[1] + 9); g.lineTo(q[0], q[1] + 26); g.stroke();
+    g.font = "600 12px 'Space Grotesk', sans-serif"; g.fillStyle = "#3fe0d0"; g.textAlign = "left";
+    g.fillText(`${l.name} · ${a.km < 10 ? a.km.toFixed(1) : Math.round(a.km)} km`, q[0] + 11, q[1] - 2);
   }
 
   // WANDERERS targets
@@ -395,7 +429,7 @@ function telemetry(now, L, P) {
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const lst = ((Sky.gmst(Sky.jd(now)) + L.lon) % 360 + 360) % 360;
   const hm = (d) => `${String(Math.floor(d / 15)).padStart(2, "0")}:${String(Math.floor((d / 15 % 1) * 60)).padStart(2, "0")}`;
-  const cal = F.calibrated ? (F.result ? F.result.quality.toUpperCase() : "OK") : S.sensors ? "NOT CALIBRATED" : "DRAG MODE";
+  const cal = F.compassFrozen ? "SIGHT ✓" : F.calibrated ? (F.result ? F.result.quality.toUpperCase() : "OK") : S.sensors ? "NOT CALIBRATED" : "DRAG MODE";
   $("telemetry").innerHTML = [
     ["LAT", `${Math.abs(L.lat).toFixed(3)}°${L.lat >= 0 ? "N" : "S"}`], ["LON", `${Math.abs(L.lon).toFixed(3)}°${L.lon >= 0 ? "E" : "W"}`],
     ["LOCAL", `${now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })} ${tz.split("/").pop().replace("_", " ")}`],
@@ -419,10 +453,10 @@ $("northBtn").onclick = () => {
   const now = new Date(), L = loc();
   const sky = [...BODIES, ...STARS].map((o) => ({ o, p: Sky.observe(o, now, L.lat, L.lon) })).filter((x) => x.p.alt > 3)
     .sort((a, b) => (b.o.body ? 1 : 0) - (a.o.body ? 1 : 0) || b.p.alt - a.p.alt).slice(0, 8);
-  const lms = LANDMARKS.map((l) => ({ ...l, km: distKm(L.lat, L.lon, l.lat, l.lon) })).filter((l) => l.km > 0.2 && l.km < 150).sort((a, b) => a.km - b.km);
+  const lms = LANDMARKS.map((l) => ({ ...l, ...landmarkAzAlt(l) })).filter((l) => l.km > 0.2 && l.km < 150).sort((a, b) => a.km - b.km);
   const items = [
     ...sky.map((x) => ({ label: x.o.name, sub: `${compassPt(x.p.az)} · ${Math.round(x.p.alt)}° up`, az: x.p.az, alt: x.p.alt, sun: x.o.body === "sun" })),
-    ...lms.map((l) => ({ label: l.name, sub: `${compassPt(bearing(L.lat, L.lon, l.lat, l.lon))} · ${l.km < 10 ? l.km.toFixed(1) : Math.round(l.km)} km`, az: bearing(L.lat, L.lon, l.lat, l.lon), alt: null })),
+    ...lms.map((l) => ({ label: l.name, sub: `${compassPt(l.az)} · ${l.km < 10 ? l.km.toFixed(1) : Math.round(l.km)} km`, az: l.az, alt: null })),
   ];
   $("northList").innerHTML = items.map((x, i) => `<button data-i="${i}">${x.label}<span>${x.sub}</span></button>`).join("") ||
     "<p class='small dim'>Nothing bright is up right now. Use a landmark or paste map coordinates below.</p>";
@@ -447,7 +481,7 @@ $("lmUse").onclick = () => {
   if (!m || Math.abs(+m[1]) > 90 || Math.abs(+m[2]) > 180) { $("northMsg").textContent = "Paste coordinates like 47.6205, -122.3493"; return; }
   const L = loc(); applyFine({ label: "your landmark", az: bearing(L.lat, L.lon, +m[1], +m[2]), alt: null });
 };
-$("northReset").onclick = () => { F.fineAz = 0; F.fineAlt = 0; $("northMsg").textContent = "Fine-tune cleared."; };
+$("northReset").onclick = () => { F.clearFineTune(); $("northMsg").textContent = "Sight check cleared: back to the compass."; };
 $("northClose").onclick = () => { $("north").hidden = true; };
 
 // ---------- info ----------
@@ -463,8 +497,8 @@ function renderInfo(now, L, lst, tz) {
     ["Earth's rotation", `local sidereal time ${(lst / 15).toFixed(3)} h`],
     ["Earth's orbit", `${ef.distanceAU.toFixed(4)} AU from the Sun, ${ef.speedKms.toFixed(2)} km/s`],
     ["Magnetic north", `${F.decl >= 0 ? "+" : ""}${F.decl.toFixed(2)}° (WMM2025 at your position)`],
-    ["Calibration", F.calibrated ? `${r ? r.quality : "ok"}${r && r.compassScatter != null ? `, compass scatter ±${r.compassScatter.toFixed(1)}°` : ""}${r ? `, table tilt ${r.tiltDeg.toFixed(1)}°` : ""}` : "not done (coarse compass alignment)"],
-    ["Fine-tune", `${F.fineAz.toFixed(1)}° direction, ${F.fineAlt.toFixed(1)}° tilt`],
+    ["Calibration", F.calibrated ? `${r ? r.quality : "ok"}${r ? `, ${r.stops} direction(s)` : ""}${r && r.spread != null ? `, compass disagreement ${r.spread.toFixed(1)}°` : ""}${r ? `, table tilt ${r.tiltDeg.toFixed(1)}°` : ""}` : "not done (coarse compass alignment)"],
+    ["Sight check", F.compassFrozen ? `applied: ${F.fineAz.toFixed(1)}° direction, ${F.fineAlt.toFixed(1)}° tilt (compass no longer used)` : "not done"],
     ["Sensors", `${F.platform}${F.compassAccuracy != null ? `, compass accuracy ±${Math.round(F.compassAccuracy)}°` : ""} · camera ${S.camOn ? `on (${LONG_SIDE_FOV}° lens assumed)` : "off"}`],
   ];
   $("infoRows").innerHTML = rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("");

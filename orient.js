@@ -122,54 +122,77 @@
 
     _yawSample(absAlpha, t, w) { this._deltaSample(wrap360(absAlpha - this.rel.alpha), t, w); }
     _deltaSample(d, t, w) {
-      if (this.flat) { this.flat.yaw.push({ v: d, w }); return; }
+      this.hasCompass = true;
+      if (this.flat) { const c = this.flat.cur; if (c && t - c.start > 600) c.deltas.push({ v: d, w }); return; }
+      if (this.compassFrozen) return;                         // a sight check beats the magnetometer
       if (this.delta == null) { this.delta = d; this.deltaStd = 10; return; }
       // Slow complementary correction: fast before calibration, very slow after (gyro is trusted).
       const diff = wrap180(d - this.delta);
       const dt = this._lastYawT ? Math.min(0.2, (t - this._lastYawT) / 1000) : 0.016;
       this._lastYawT = t;
-      const tau = this.calibrated ? 25 : 3;                   // seconds
+      const tau = this.calibrated ? 60 : 3;                   // seconds: gyro is trusted once calibrated
       const robust = Math.exp(-Math.pow(diff / 20, 2));       // ignore magnetic spikes
       this.delta = wrap360(this.delta + diff * (dt / tau) * robust * w);
     }
 
-    // ---- flat-surface calibration ----
-    startFlatCalibration() { this.flat = { yaw: [], tilt: [], good: 0, start: null, window: [] }; }
+    // ---- four-way flat calibration ----
+    // Lay the phone flat and hold still, then give it a quarter turn and hold, four times. At each stop we average
+    // the compass (ignoring the first 0.6 s, because iOS smooths its heading and lags after a turn). The gyroscope
+    // knows exactly how far the phone turned, so if the four stops disagree, something nearby is bending the
+    // compass (magnetic phone case, laptop, steel desk). Averaging four directions cancels the phone's own
+    // magnetic bias; a uniform bias from a whole building cannot be detected this way and needs a sight check.
+    startFlatCalibration() { this.flat = { stops: [], cur: null, window: [], state: "waiting" }; }
     cancelCalibration() { this.flat = null; }
+    finishCalibrationNow() { if (this.flat && this.flat.stops.length) this._finishFlat(); }
     _flatTick(t) {
       const F = this.flat, r = this.rel;
-      F.window.push([r.beta, r.gamma]); if (F.window.length > 20) F.window.shift();
-      const mean = (k) => F.window.reduce((s, x) => s + x[k], 0) / F.window.length;
-      const sd = (k) => { const m = mean(k); return Math.sqrt(F.window.reduce((s, x) => s + (x[k] - m) ** 2, 0) / F.window.length); };
+      F.window.push([r.beta, r.gamma, r.alpha]); if (F.window.length > 20) F.window.shift();
+      const n = F.window.length, mean = (k) => F.window.reduce((s, x) => s + x[k], 0) / n;
+      const sd = (k) => { const m = mean(k); return Math.sqrt(F.window.reduce((s, x) => s + (x[k] - m) ** 2, 0) / n); };
+      const yawSpread = Math.max(...F.window.map((x) => Math.abs(wrap180(x[2] - r.alpha))));
       const flat = Math.abs(r.beta) < 12 && Math.abs(r.gamma) < 12;
-      const still = F.window.length >= 10 && sd(0) < 0.5 && sd(1) < 0.5;
-      F.state = !flat ? "tilted" : !still ? "moving" : "ok";
-      if (F.state !== "ok") { F.good = 0; F.start = null; F.tilt = []; F.yaw = []; return; }
-      if (F.start == null) F.start = t;
-      F.tilt.push([r.beta, r.gamma]);
-      F.good = Math.min(1, (t - F.start) / 2500);
-      if (F.good >= 1) this._finishFlat();
+      const still = n >= 10 && sd(0) < 0.5 && sd(1) < 0.5 && yawSpread < 1;
+      if (!flat) { F.state = "tilted"; F.cur = null; return; }
+      if (!still) { F.state = "moving"; F.cur = null; return; }
+      if (F.stops.some((st) => Math.abs(wrap180(st.yaw - r.alpha)) < 60)) { F.state = "turn"; F.cur = null; return; }
+      if (!F.cur) F.cur = { start: t, tilt: [], deltas: [] };
+      F.state = "ok";
+      F.cur.tilt.push([r.beta, r.gamma]);
+      const enough = this.hasCompass ? F.cur.deltas.length >= 8 : true;
+      if (t - F.cur.start >= 1300 && enough) {
+        const c = F.cur.deltas.length ? circMean(F.cur.deltas) : null;
+        F.stops.push({ yaw: r.alpha, delta: c ? c.mean : null, scatter: c ? c.std : null, tilt: F.cur.tilt });
+        F.cur = null; F.state = "turn";
+        if (F.stops.length >= 4) this._finishFlat();
+      }
     }
     _finishFlat() {
-      const F = this.flat;
-      const b0 = F.tilt.reduce((s, x) => s + x[0], 0) / F.tilt.length;
-      const g0 = F.tilt.reduce((s, x) => s + x[1], 0) / F.tilt.length;
+      const F = this.flat, tilts = F.stops.flatMap((st) => st.tilt);
+      const b0 = tilts.reduce((s, x) => s + x[0], 0) / tilts.length;
+      const g0 = tilts.reduce((s, x) => s + x[1], 0) / tilts.length;
       const lim = (x) => Math.max(-6, Math.min(6, x));
-      // measured = true * B  =>  true = measured * B^T
-      this.bias = T(matFromEuler(0, lim(b0), lim(g0)));
-      if (F.yaw.length >= 10) {
-        const c = circMean(F.yaw);
+      this.bias = T(matFromEuler(0, lim(b0), lim(g0)));        // measured = true * B  =>  true = measured * B^T
+      const withCompass = F.stops.filter((st) => st.delta != null);
+      let spread = null;
+      if (withCompass.length) {
+        const c = circMean(withCompass.map((st) => ({ v: st.delta })));
         this.delta = c.mean; this.deltaStd = c.std;
+        spread = Math.max(...withCompass.map((st) => Math.abs(wrap180(st.delta - c.mean))));
       }
-      this.calibrated = true;
+      this.calibrated = true; this.compassFrozen = false;
       this.result = {
-        tiltDeg: Math.hypot(b0, g0), compassSamples: F.yaw.length, compassScatter: F.yaw.length >= 10 ? this.deltaStd : null,
-        quality: F.yaw.length < 10 ? "nocompass" : this.deltaStd < 6 ? "good" : this.deltaStd < 12 ? "fair" : "poor",
+        stops: F.stops.length, tiltDeg: Math.hypot(b0, g0), spread,
+        quality: !withCompass.length ? "nocompass" : F.stops.length < 4 ? "partial" : spread < 5 ? "good" : spread < 12 ? "fair" : "poor",
       };
       this.flat = null;
       if (this.onCalibrated) this.onCalibrated(this.result);
     }
-    calibrationState() { return this.flat ? { progress: this.flat.good, state: this.flat.state || "waiting" } : null; }
+    calibrationState() {
+      if (!this.flat) return null;
+      const F = this.flat, part = F.cur ? Math.min(1, (this.rel.t - F.cur.start) / 1600) : 0;
+      return { progress: (F.stops.length + part) / 4, stops: F.stops.length, state: F.state };
+    }
+    clearFineTune() { this.fineAz = 0; this.fineAlt = 0; this.compassFrozen = false; }
 
     // ---- fine-tune on a known object (Sun, Moon, star, landmark): makes the current pointing equal the truth ----
     fineTune(trueAz, trueAlt) {
@@ -177,6 +200,7 @@
       const now = this.pointing();
       const dAz = wrap180(trueAz - now.az);
       this.fineAz = wrap180(this.fineAz + dAz);   // positive = rotate pointing clockwise
+      this.compassFrozen = true;                  // the sky/landmark is the truth now; stop magnetic nudging
       if (trueAlt != null) this.fineAlt += trueAlt - now.alt;
       return { dAz, dAlt: trueAlt != null ? trueAlt - now.alt : 0 };
     }

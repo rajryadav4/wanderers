@@ -69,16 +69,17 @@ a { color: var(--cyan); }
 .card::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; border-radius: 0 0 18px 0; }
 .card h2 { margin: 12px 0 6px; font-size: 1.25rem; }
 .card p { margin: 0 0 14px; color: #c9d5ec; font-size: .92rem; }
-.phone-anim { position: relative; height: 92px; margin: 16px auto 0; width: 180px; perspective: 400px; }
+.phone-anim { position: relative; height: 104px; margin: 14px auto 0; width: 180px; perspective: 400px; }
 .phone-anim .table { position: absolute; left: 0; right: 0; bottom: 8px; height: 26px; border-radius: 6px;
   background: linear-gradient(#3a2a1c, #22180f); transform: rotateX(55deg); }
-.phone-anim .phone { position: absolute; left: 60px; width: 60px; height: 96px; border-radius: 12px; border: 3px solid #cfd9ee;
+.phone-anim .phone { position: absolute; left: 66px; width: 48px; height: 78px; border-radius: 10px; border: 3px solid #cfd9ee;
   background: #0b1530; bottom: 10px; transform-origin: bottom center; animation: lay 3s ease-in-out infinite; }
 @keyframes lay { 0%, 15% { transform: rotateX(0deg) translateY(-20px); } 55%, 100% { transform: rotateX(70deg) translateY(0); } }
-.ring { display: block; margin: 10px auto 0; width: 64px; height: 64px; transform: rotate(-90deg); }
-.ring circle { fill: none; stroke-width: 8; }
-.ring .track { stroke: rgba(108, 196, 255, .15); }
-.ring .fill { stroke: var(--lock); stroke-linecap: round; stroke-dasharray: 327; stroke-dashoffset: 327; transition: stroke-dashoffset .15s; }
+.stops { display: flex; justify-content: center; gap: 10px; margin: 12px 0 2px; }
+.stops span { width: 34px; height: 8px; border-radius: 4px; background: rgba(108, 196, 255, .15); position: relative; overflow: hidden; }
+.stops span i { position: absolute; inset: 0; width: 0; background: var(--lock); transition: width .15s; }
+.phone-anim .phone.turn { animation: turnq 1.6s ease-in-out infinite; transform: rotateX(70deg); }
+@keyframes turnq { 0%, 30% { transform: rotateX(70deg) rotateZ(0deg); } 70%, 100% { transform: rotateX(70deg) rotateZ(90deg); } }
 .row-btns { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
 
 /* AR HUD controls */

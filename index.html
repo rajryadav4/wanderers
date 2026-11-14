@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WANDERERS</title>
 <meta name="description" content="Watch real SPHEREx, WISE and Gaia data reveal what moves and changes in the infrared sky, and see the evidence for what each object is.">
-<link rel="stylesheet" href="style.css?v=20261114d">
+<link rel="stylesheet" href="style.css?v=20261114f">
 </head>
 <body>
 <header class="top">
@@ -17,26 +17,30 @@
     </div>
   </div>
   <div class="top-right">
-    <a class="compass-link" href="compass.html">📱 Sky Compass</a>
+    <a class="compass-link" href="compass.html" title="Extra: point your phone at the sky">📱 Sky Compass (phone)</a>
     <div class="data-badge">Real data: NASA SPHEREx DR1 · NASA WISE · ESA Gaia DR3</div>
   </div>
 </header>
 
+<section class="search-hero" aria-label="Look up a patch of sky">
+  <h2>Enter the coordinates of a patch of sky</h2>
+  <p class="hint">WANDERERS plays SPHEREx images of it like a little video, with older WISE images for a 16-year
+    baseline, so you can spot anything that moves or changes.</p>
+  <form id="coordForm" class="hero-form">
+    <label>Right ascension (RA)<input id="raIn" placeholder="08h55m10.831s or 133.795" autocomplete="off" spellcheck="false"></label>
+    <label>Declination (Dec)<input id="decIn" placeholder="-07d14m42.53s or -7.245" autocomplete="off" spellcheck="false"></label>
+    <button type="submit" class="go">Show this sky ▶</button>
+  </form>
+  <div class="examples" id="examples" aria-label="Example coordinates"></div>
+  <p id="coordMsg" class="hint"></p>
+</section>
+
 <main class="console">
   <!-- LEFT: missions / targets -->
   <section class="panel targets" aria-label="Targets">
-    <h2>Missions</h2>
-    <p class="hint">Each test target from the challenge is a level. Start with Barnard's Star.</p>
+    <h2>Test targets</h2>
+    <p class="hint">The five objects named in the challenge, already prepared. Start with Barnard's Star.</p>
     <ol id="targetList" class="target-list"></ol>
-    <div class="coord-box">
-      <h3>Go to coordinates</h3>
-      <form id="coordForm">
-        <label>RA <input id="raIn" placeholder="08h55m10.83s or 133.795" autocomplete="off"></label>
-        <label>Dec <input id="decIn" placeholder="-07d14m42.5s or -7.245" autocomplete="off"></label>
-        <button type="submit">Search</button>
-      </form>
-      <p id="coordMsg" class="hint"></p>
-    </div>
   </section>
 
   <!-- CENTRE: sky flipbook -->
@@ -128,6 +132,6 @@
     Confirming a new object needs follow-up by astronomers.</p>
   <p>Data: SPHEREx DR1 (NASA/IPAC IRSA) · AllWISE (NASA/IPAC IRSA) · Gaia DR3 (ESA). NASA Space Apps 2026 · Planet X and SPHEREx.</p>
 </footer>
-<script src="app.js?v=20261114d"></script>
+<script src="app.js?v=20261114f"></script>
 </body>
 </html>

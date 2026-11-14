@@ -8,7 +8,7 @@
 <meta name="description" content="Point your phone at the sky: WANDERERS shows where you are in the universe and guides you to objects studied with NASA SPHEREx, WISE and ESA Gaia data.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="compass.css?v=20261114d">
+<link rel="stylesheet" href="compass.css?v=20261114f">
 </head>
 <body>
 <video id="cam" playsinline muted autoplay hidden></video>
@@ -17,9 +17,10 @@
 <!-- 0. landing -->
 <section id="landing" class="screen landing">
   <div class="mission-tag">WANDERERS · SKY COMPASS</div>
-  <h1>Where are you<br>in the universe?</h1>
-  <p class="lead">Find out, then point your phone at the sky to find real objects studied with NASA's SPHEREx and WISE
-    telescopes and ESA's Gaia.</p>
+  <h1>Point your phone<br>at the sky</h1>
+  <p class="lead">WANDERERS finds you on the real Earth, then guides you to objects studied with NASA's SPHEREx and WISE
+    telescopes and ESA's Gaia. An extra to the <a href="index.html">WANDERERS console</a>, where you can enter any
+    coordinates.</p>
   <ol class="preflight">
     <li><span>01</span> Motion sensors: where your phone points</li>
     <li><span>02</span> Location: where on Earth you are</li>
@@ -46,13 +47,16 @@
 <!-- 2. calibration -->
 <section id="calib" class="screen calib" hidden>
   <div class="card">
-    <div class="mission-tag">STEP 1 OF 1 · CALIBRATE</div>
-    <div class="phone-anim" aria-hidden="true"><div class="table"></div><div class="phone"></div></div>
-    <svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" class="track"/>
-      <circle id="ringFill" cx="60" cy="60" r="52" class="fill"/></svg>
+    <div class="mission-tag">CALIBRATE · ABOUT 10 SECONDS</div>
+    <div class="phone-anim" aria-hidden="true"><div class="table"></div><div class="phone" id="phoneIcon"></div></div>
+    <div class="stops" aria-label="Calibration progress"><span></span><span></span><span></span><span></span></div>
     <h2 id="calTitle">Lay your phone flat on a table</h2>
-    <p id="calText">Screen up, hands off. Hold still for 3 seconds while we line up its gyroscope with its compass.</p>
-    <div class="row-btns"><button id="calSkip" class="btn ghost">Skip</button><button id="calDone" class="btn primary" hidden>Point at the sky →</button></div>
+    <p id="calText">Screen up, hands off, away from laptops and magnets. Hold still until the first dot fills, then give it
+      a quarter turn on the table and hold again: four times.</p>
+    <p class="small dim">Why four? The gyroscope knows exactly how far you turned. If the compass disagrees, something nearby
+      is bending it, and averaging four directions cancels the phone's own magnetic bias.</p>
+    <div class="row-btns"><button id="calSkip" class="btn ghost">Skip</button><button id="calEnough" class="btn ghost" hidden>Use what we have</button>
+      <button id="calDone" class="btn primary" hidden>Point at the sky →</button></div>
   </div>
 </section>
 
@@ -60,7 +64,7 @@
 <section id="ar" class="ar" hidden>
   <div class="telemetry mono" id="telemetry"></div>
   <div class="hud-buttons">
-    <button id="northBtn" class="btn hud">🎯 North check</button>
+    <button id="northBtn" class="btn hud">🎯 Sight check</button>
     <button id="recalBtn" class="btn hud">⟲ Recalibrate</button>
     <button id="infoBtn" class="btn hud" aria-label="Data and method">ⓘ</button>
   </div>
@@ -75,13 +79,14 @@
 
 <!-- sheets -->
 <div id="north" class="sheet" hidden>
-  <h2>North check <span class="small dim">(optional, best accuracy)</span></h2>
-  <p class="small">Steel buildings and laptops bend a phone's compass. Put the centre crosshair on something you can
-    actually see, then tap it. One tap fixes direction and tilt.</p>
+  <h2>Sight check <span class="small dim">(best accuracy)</span></h2>
+  <p class="small">The teal markers in the camera view show where WANDERERS thinks these landmarks are. If a marker is not on
+    the real thing, put the centre crosshair on the real one and tap its name below. One tap fixes direction (and tilt for
+    the Sun, Moon and stars), and from then on the gyroscope alone keeps north: no more compass drift.</p>
   <div id="northList" class="chips"></div>
   <div class="row-input"><input id="lmCoords" placeholder="Or a spot from Google Maps: 47.6205, -122.3493" inputmode="decimal" autocomplete="off"><button id="lmUse" class="btn">Use</button></div>
   <p id="northMsg" class="small ok"></p>
-  <div class="row-btns"><button id="northReset" class="btn ghost">Reset fine-tune</button><button id="northClose" class="btn primary">Done</button></div>
+  <div class="row-btns"><button id="northReset" class="btn ghost">Clear sight check</button><button id="northClose" class="btn primary">Done</button></div>
 </div>
 
 <div id="info" class="sheet" hidden>
@@ -95,8 +100,8 @@
   <div class="row-btns"><button id="infoClose" class="btn primary">Done</button></div>
 </div>
 
-<script src="sky.js?v=20261114d"></script>
-<script src="orient.js?v=20261114d"></script>
-<script type="module" src="compass.js?v=20261114d"></script>
+<script src="sky.js?v=20261114f"></script>
+<script src="orient.js?v=20261114f"></script>
+<script type="module" src="compass.js?v=20261114f"></script>
 </body>
 </html>
