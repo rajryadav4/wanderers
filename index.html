@@ -33,8 +33,16 @@
       <form id="coordForm">
         <label>RA <input id="raIn" placeholder="08h55m10.83s or 133.795" autocomplete="off"></label>
         <label>Dec <input id="decIn" placeholder="-07d14m42.5s or -7.245" autocomplete="off"></label>
+        <label>Field of view
+          <select id="fovIn" aria-describedby="fovHint">
+            <option value="120">2′ close-up</option>
+            <option value="300" selected>5′ standard</option>
+            <option value="600">10′ wide (slower)</option>
+          </select>
+        </label>
         <button type="submit">Search</button>
       </form>
+      <p id="fovHint" class="hint">Wider fields catch faster-moving objects but take longer to prepare.</p>
       <p id="coordMsg" class="hint"></p>
     </div>
   </section>
