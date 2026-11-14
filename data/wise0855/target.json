@@ -1898,5 +1898,82 @@
    "Solar System: the page checks against Gaia stars only. It does not check asteroids or comets, so a moving dot without a Gaia circle may be a known asteroid.",
    "Crowding: one SPHEREx pixel is 6.15\u2033 wide, so two close objects can blend into one dot and one spectrum."
   ]
+ },
+ "changes": {
+  "found": 4,
+  "candidates": 0,
+  "target_recovered": false,
+  "items": [
+   {
+    "n": 2,
+    "status": "rejected",
+    "reason": "Wrong pairing: one end is the mission target, the other end is a different dot.",
+    "arcsec_per_yr": 11.0,
+    "snr": 25.7,
+    "x0": 43.0,
+    "y0": 71.9,
+    "x1": 115.9,
+    "y1": 29.0,
+    "ra": 133.75396,
+    "dec": -7.26893,
+    "ra0": 133.79477,
+    "dec0": -7.24509,
+    "year": 2025.88,
+    "simbad_checked": true
+   },
+   {
+    "n": 4,
+    "status": "rejected",
+    "reason": "The 2010 end sits on a Gaia star that does not move. The dot is that star, seen in one image and missed in the other.",
+    "arcsec_per_yr": 9.67,
+    "snr": 18.7,
+    "x0": 31.9,
+    "y0": 123.1,
+    "x1": 39.0,
+    "y1": 49.0,
+    "ra": 133.79702,
+    "dec": -7.25783,
+    "ra0": 133.80098,
+    "dec0": -7.21669,
+    "year": 2025.88,
+    "simbad_checked": true
+   },
+   {
+    "n": 1,
+    "status": "rejected",
+    "reason": "The SPHEREx end sits on a Gaia star that does not move. The dot is that star, seen in one image and missed in the other.",
+    "arcsec_per_yr": 5.85,
+    "snr": 11.5,
+    "x0": 82.9,
+    "y0": 24.8,
+    "x1": 127.9,
+    "y1": 23.1,
+    "ra": 133.74723,
+    "dec": -7.27223,
+    "ra0": 133.7724,
+    "dec0": -7.27126,
+    "year": 2025.88,
+    "simbad_checked": true
+   },
+   {
+    "n": 3,
+    "status": "rejected",
+    "reason": "An end is at the edge of the picture, where a dot can appear or vanish without moving.",
+    "arcsec_per_yr": 8.85,
+    "snr": 6.8,
+    "x0": 46.0,
+    "y0": 113.1,
+    "x1": 106.0,
+    "y1": 145.1,
+    "ra": 133.7595,
+    "dec": -7.20443,
+    "ra0": 133.7931,
+    "dec0": -7.22225,
+    "year": 2025.88,
+    "simbad_checked": true
+   }
+  ],
+  "method": "Dots seen only in WISE 2010 are paired with dots seen only in SPHEREx at 4.6 \u00b5m, 8\u2033 to 190\u2033 apart and of similar brightness. Each pair is then checked against the target's path, Gaia DR3 and SIMBAD.",
+  "not_checked": "Asteroids and comets are not checked. An unconfirmed pair is not a discovery."
  }
 }

@@ -1504,5 +1504,13 @@
    "Solar System: the page checks against Gaia stars only. It does not check asteroids or comets, so a moving dot without a Gaia circle may be a known asteroid.",
    "Crowding: one SPHEREx pixel is 6.15\u2033 wide, so two close objects can blend into one dot and one spectrum."
   ]
+ },
+ "changes": {
+  "found": 0,
+  "candidates": 0,
+  "target_recovered": null,
+  "items": [],
+  "method": "Dots seen only in WISE 2010 are paired with dots seen only in SPHEREx at 4.6 \u00b5m, 8\u2033 to 190\u2033 apart and of similar brightness. Each pair is then checked against the target's path, Gaia DR3 and SIMBAD.",
+  "not_checked": "Asteroids and comets are not checked. An unconfirmed pair is not a discovery."
  }
 }
