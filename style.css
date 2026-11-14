@@ -203,3 +203,19 @@ button:disabled { opacity: .5; cursor: default; }
 #starModel table tr.on td { color: #7ee787; }
 .m-warn { color: #ffb547; }
 body.stars-mode #tName, body.stars-mode #tKind { visibility: hidden; }
+
+/* ---- long-range (thousands of years) ---- */
+.lr { margin-top: 12px; }
+.lr-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 6px 0; }
+.lr-controls input[type=range] { flex: 1 1 220px; }
+.lr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.lr-grid figure { margin: 0; }
+.lr-grid figcaption { color: var(--muted); font-size: .76rem; margin-top: 4px; }
+.lr canvas { width: 100%; display: block; border: 1px solid var(--line); border-radius: 8px; background: #03060d; }
+#lr3d { cursor: grab; touch-action: none; }
+#lr3d:active { cursor: grabbing; }
+#lrDist { margin-top: 10px; }
+#lrCard { margin-top: 8px; }
+.lr-warn { color: #ffb547; padding-left: 18px; margin: 4px 0; }
+.lr-warn:empty { display: none; }
+@media (max-width: 900px) { .lr-grid { grid-template-columns: 1fr; } }

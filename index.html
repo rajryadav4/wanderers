@@ -133,6 +133,36 @@
       <p id="starMsg" class="hint" aria-live="polite">Search about 12,000 named and naked-eye stars from the HYG database.</p>
       <p id="starSuggest" class="hint chips"></p>
       <div id="starDetail" class="star-detail" hidden></div>
+      <section id="starLong" class="lr" hidden aria-label="Path over thousands of years">
+        <h3>Over thousands of years <span class="hint">where it goes on the sky and through space</span></h3>
+        <div class="lr-controls">
+          <label>Show <select id="lrSpan">
+            <option value="1000">±1,000 years</option><option value="5000">±5,000 years</option>
+            <option value="10000" selected>±10,000 years</option><option value="20000">±20,000 years</option>
+            <option value="50000">±50,000 years</option></select></label>
+          <label>Sky view <select id="lrProj">
+            <option value="globe">Globe (true shape of the sky)</option>
+            <option value="radec">RA / Dec chart (like a star atlas)</option></select></label>
+          <button id="lrPlay" type="button">▶ Play</button>
+          <input type="range" id="lrYear" aria-label="Year shown">
+          <span id="lrYearLbl" class="mono"></span>
+        </div>
+        <ul id="lrWarn" class="hint lr-warn"></ul>
+        <div id="lrBody">
+          <div class="lr-grid">
+            <figure><canvas id="lrSky" data-aspect="0.85" role="img" aria-label="The star's track on the sky"></canvas>
+              <figcaption>On the sky: the track is a great circle, so it curves on the sphere; ticks are evenly spaced in time, so they spread out as the star comes closer and moves faster.</figcaption></figure>
+            <figure><canvas id="lr3d" data-aspect="0.85" tabindex="0" role="img" aria-label="The star's path through space around the Sun and Earth. Arrow keys rotate."></canvas>
+              <figcaption>In space, around the Sun and Earth (1 AU apart, one point at this scale). Pink dashed line: our line of sight in the chosen year.</figcaption></figure>
+          </div>
+          <canvas id="lrDist" data-aspect="0.22" role="img" aria-label="Distance from the Sun over time"></canvas>
+          <div id="lrCard"></div>
+          <p id="lrSrc" class="hint"></p>
+          <p class="hint">How: the learnt present-day state is carried through 3D space at constant velocity (the model behind
+            astropy's <code>apply_space_motion</code>). The pink cloud is 300 runs with the starting values varied by their
+            uncertainties. The Galaxy's gravity, which bends real paths over millions of years, and orbits around companions are not included.</p>
+        </div>
+      </section>
       <p id="starPredMsg" aria-live="polite"></p>
       <div id="starPred" hidden>
         <h3>Past and future path <span class="hint">1900 → 2100, learnt by a classical machine-learning model</span></h3>
@@ -200,7 +230,9 @@
 <script src="aladinlink.js"></script>
 <script src="starpath.js"></script>
 <script src="stardb.js"></script>
+<script src="starcore.js"></script>
 <script src="app.js"></script>
+<script src="longrange.js"></script>
 <script src="stars.js"></script>
 </body>
 </html>

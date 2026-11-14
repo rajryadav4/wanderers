@@ -67,6 +67,7 @@
     renderDetail(s);
     $("starPred").hidden = true; $("starPredMsg").innerHTML = "";
     if (DB.ready.has(key)) return showPred(await fetch(`data/stars/pred/${key}.json`).then((r) => r.json()));
+    if (window.LongRange) LongRange.show(null, s, DB.stars);      // catalogue values until a path is learnt
     if (DB.live) {
       $("starPredMsg").innerHTML = `No learnt path for ${esc(s.name)} yet. <button type="button" id="starLearn">Learn its path now</button> ` +
         `<span class="hint">Queries 13 catalogues at the ESA Gaia archive and fits the model: about a minute.</span>`;
@@ -117,6 +118,7 @@
   function showPred(p) {
     $("starPredMsg").innerHTML = "";
     $("starPred").hidden = false;
+    if (window.LongRange) LongRange.show(p, DB.cur, DB.stars);
     drawChart(p);
     const t = p.table;
     $("starTable").innerHTML = `<thead><tr><th>Year</th><th>RA</th><th>Dec</th><th>± (68%)</th><th>From 2000</th></tr></thead><tbody>` +
