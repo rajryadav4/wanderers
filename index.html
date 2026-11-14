@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WANDERERS</title>
+<meta name="description" content="Watch real SPHEREx, WISE and Gaia data reveal what moves and changes in the infrared sky, and see the evidence for what each object is.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo" aria-hidden="true">◌</span>
+    <div>
+      <h1>WANDERERS</h1>
+      <p class="tag">Catch what moves in the infrared sky, then read what it is made of.</p>
+    </div>
+  </div>
+  <div class="data-badge">Real data: NASA SPHEREx DR1 · NASA WISE · ESA Gaia DR3</div>
+</header>
+
+<main class="console">
+  <!-- LEFT: missions / targets -->
+  <section class="panel targets" aria-label="Targets">
+    <h2>Missions</h2>
+    <p class="hint">Each test target from the challenge is a level. Start with Barnard's Star.</p>
+    <ol id="targetList" class="target-list"></ol>
+    <div class="coord-box">
+      <h3>Go to coordinates</h3>
+      <form id="coordForm">
+        <label>RA <input id="raIn" placeholder="08h55m10.83s or 133.795" autocomplete="off"></label>
+        <label>Dec <input id="decIn" placeholder="-07d14m42.5s or -7.245" autocomplete="off"></label>
+        <button type="submit">Search</button>
+      </form>
+      <p id="coordMsg" class="hint"></p>
+    </div>
+  </section>
+
+  <!-- CENTRE: sky flipbook -->
+  <section class="panel sky" aria-label="Sky viewer">
+    <div class="sky-head">
+      <div>
+        <h2 id="tName">Loading…</h2>
+        <p id="tKind" class="hint"></p>
+      </div>
+      <div class="channel" role="radiogroup" aria-label="Wavelength">
+        <button data-ch="w2" class="on" role="radio" aria-checked="true">4.6 µm</button>
+        <button data-ch="w1" role="radio" aria-checked="false">3.4 µm</button>
+      </div>
+    </div>
+    <div class="viewer">
+      <canvas id="sky" width="600" height="600" aria-label="Sky image of the selected target"></canvas>
+      <div class="stamp" id="stamp"></div>
+      <div class="scale" id="scale"></div>
+    </div>
+    <div class="controls">
+      <button id="play" aria-label="Play">▶ Blink</button>
+      <input id="frame" type="range" min="0" max="0" value="0" aria-label="Epoch">
+      <span id="frameLbl" class="mono"></span>
+    </div>
+    <div class="toggles">
+      <label><input type="checkbox" id="tGhost" checked> Gaia ghosts <span class="hint">(where known stars should be)</span></label>
+      <label><input type="checkbox" id="tTrail" checked> Measured path</label>
+      <label><input type="checkbox" id="tDiff"> Difference (2026 − 2025)</label>
+    </div>
+    <p class="hint why">Each frame is matched by wavelength: WISE 2010 is compared with SPHEREx images taken at the same
+      infrared colour, because SPHEREx records a different wavelength across every detector.</p>
+  </section>
+
+  <!-- RIGHT: evidence -->
+  <section class="panel evidence" aria-label="Evidence">
+    <h2>Evidence card</h2>
+    <div id="verdict" class="verdict"></div>
+    <ul id="checks" class="checks"></ul>
+    <div id="numbers" class="numbers"></div>
+    <div class="ai">
+      <h3>WANDERERS explains <span class="hint">(written by Claude from the measurements above)</span></h3>
+      <p id="explain" class="explain"></p>
+    </div>
+    <div class="ask">
+      <h3>Ask WANDERERS</h3>
+      <div id="qButtons" class="qbuttons"></div>
+      <form id="askForm" hidden>
+        <input id="askIn" placeholder="Ask about this object…" autocomplete="off">
+        <button type="submit">Ask</button>
+      </form>
+      <p id="answer" class="explain"></p>
+    </div>
+  </section>
+
+  <!-- BOTTOM: spectrum -->
+  <section class="panel spectrum" aria-label="Spectrum">
+    <div class="spec-head">
+      <h2>Infrared fingerprint <span class="hint">SPHEREx spectrum, 0.75–5 µm, built from every image of this target</span></h2>
+      <div class="legend"><span class="sw h2o"></span>Water <span class="sw ch4"></span>Methane <span class="sw co"></span>CO / CO₂</div>
+    </div>
+    <svg id="spec" viewBox="0 0 900 260" role="img" aria-label="Spectrum chart"></svg>
+    <p id="specNote" class="hint"></p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p><strong>Candidate, never "discovery".</strong> WANDERERS points people at interesting objects and shows the evidence.
+    Confirming a new object needs follow-up by astronomers.</p>
+  <p>Data: SPHEREx DR1 (NASA/IPAC IRSA) · AllWISE (NASA/IPAC IRSA) · Gaia DR3 (ESA). NASA Space Apps 2026 · Planet X and SPHEREx.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

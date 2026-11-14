@@ -1,0 +1,23 @@
+[
+ {
+  "id": "barnard",
+  "name": "Barnard's Star",
+  "teaser": "Fastest star in the sky",
+  "ra": 269.4479780964898,
+  "dec": 4.746176583498341
+ },
+ {
+  "id": "r_dra",
+  "name": "R Draconis",
+  "teaser": "Pulsating red giant",
+  "ra": 248.16734327616675,
+  "dec": 66.75501087068785
+ },
+ {
+  "id": "eps_indi_b",
+  "name": "Epsilon Indi B",
+  "teaser": "Brown dwarf pair",
+  "ra": 331.08130021002296,
+  "dec": -56.795456555579975
+ }
+]
