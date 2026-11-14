@@ -8,7 +8,7 @@
 <meta name="description" content="Point your phone at the sky: WANDERERS shows where you are in the universe and guides you to objects studied with NASA SPHEREx, WISE and ESA Gaia data.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="compass.css?v=20261114f">
+<link rel="stylesheet" href="compass.css?v=20261114g">
 </head>
 <body>
 <video id="cam" playsinline muted autoplay hidden></video>
@@ -84,6 +84,11 @@
     the real thing, put the centre crosshair on the real one and tap its name below. One tap fixes direction (and tilt for
     the Sun, Moon and stars), and from then on the gyroscope alone keeps north: no more compass drift.</p>
   <div id="northList" class="chips"></div>
+  <p class="small"><b>Know which way you are facing?</b> Point the phone's camera that way (phone upright) and tap:</p>
+  <div class="chips dirs">
+    <button data-az="0">⬆ This is North</button><button data-az="90">This is East</button>
+    <button data-az="180">This is South</button><button data-az="270">This is West</button>
+  </div>
   <div class="row-input"><input id="lmCoords" placeholder="Or a spot from Google Maps: 47.6205, -122.3493" inputmode="decimal" autocomplete="off"><button id="lmUse" class="btn">Use</button></div>
   <p id="northMsg" class="small ok"></p>
   <div class="row-btns"><button id="northReset" class="btn ghost">Clear sight check</button><button id="northClose" class="btn primary">Done</button></div>
@@ -100,8 +105,8 @@
   <div class="row-btns"><button id="infoClose" class="btn primary">Done</button></div>
 </div>
 
-<script src="sky.js?v=20261114f"></script>
-<script src="orient.js?v=20261114f"></script>
-<script type="module" src="compass.js?v=20261114f"></script>
+<script src="sky.js?v=20261114g"></script>
+<script src="orient.js?v=20261114g"></script>
+<script type="module" src="compass.js?v=20261114g"></script>
 </body>
 </html>

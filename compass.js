@@ -1,7 +1,7 @@
 /* WANDERERS Sky Compass: landing -> "where are you in the universe" intro -> one-step flat calibration ->
  * augmented-reality sky with a compass tape, tilt scale, mini radar and live telemetry.
  * Motion: orient.js (gyro drives movement, compass sets north). Sky: sky.js. Intro: intro.js (three.js). */
-import { playIntro, earthFacts } from "./intro.js?v=20261114f";
+import { playIntro, earthFacts } from "./intro.js?v=20261114g";
 
 const $ = (id) => document.getElementById(id);
 const D2R = Math.PI / 180;
@@ -468,14 +468,21 @@ function applyFine(x) {
   if (!S.sensors) return;
   const before = { az: F.fineAz, alt: F.fineAlt }, r = F.fineTune(x.az, x.alt);
   if (!r) return;
-  if (Math.abs(r.dAz) > 45 || Math.abs(r.dAlt) > 20) {
+  if (Math.abs(r.dAlt) > 20) {
     F.fineAz = before.az; F.fineAlt = before.alt;
-    $("northMsg").textContent = `That is ${Math.round(Math.abs(r.dAz))}° away from where ${x.label} really is. Is the crosshair on it? Try again.`;
+    $("northMsg").textContent = `That is ${Math.round(Math.abs(r.dAlt))}° higher or lower than ${x.label} really is. Is the crosshair on it? Try again.`;
     return;
   }
-  $("northMsg").textContent = `Fine-tuned on ${x.label}: direction ${r.dAz >= 0 ? "+" : ""}${r.dAz.toFixed(1)}°${x.alt != null ? `, tilt ${r.dAlt >= 0 ? "+" : ""}${r.dAlt.toFixed(1)}°` : ""}.`;
+  const big = Math.abs(r.dAz) > 30 ? ` Your compass was ${Math.round(Math.abs(r.dAz))}° off; it is now ignored.` : "";
+  $("northMsg").textContent = `North set using ${x.label}: corrected ${r.dAz >= 0 ? "+" : ""}${r.dAz.toFixed(1)}°` +
+    `${x.alt != null ? `, tilt ${r.dAlt >= 0 ? "+" : ""}${r.dAlt.toFixed(1)}°` : ""}.${big} The gyroscope now keeps north.`;
   if (navigator.vibrate) navigator.vibrate(40);
 }
+// "This is North / East / South / West": the camera is facing a known true direction (no compass needed)
+document.querySelectorAll(".dirs button").forEach((b) => (b.onclick = () => {
+  const az = +b.dataset.az;
+  applyFine({ label: `you facing ${["north", "east", "south", "west"][az / 90]}`, az, alt: null });
+}));
 $("lmUse").onclick = () => {
   const m = $("lmCoords").value.match(/(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)/);
   if (!m || Math.abs(+m[1]) > 90 || Math.abs(+m[2]) > 180) { $("northMsg").textContent = "Paste coordinates like 47.6205, -122.3493"; return; }
