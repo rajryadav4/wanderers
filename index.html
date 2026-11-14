@@ -71,6 +71,28 @@
       <label><input type="checkbox" id="tTrail" checked> Measured path</label>
       <label><input type="checkbox" id="tDiff"> Difference (2026 − 2025)</label>
     </div>
+    <div class="mix" id="mix">
+      <label>Show
+        <select id="mixMode" aria-label="How to show the frames">
+          <option value="single">One frame</option>
+          <option value="sub">Subtract two frames</option>
+          <option value="add">Add frames together</option>
+        </select>
+      </label>
+      <span id="mixSub" class="mix-row" hidden>
+        <label>Later <select id="mixB"></select></label>
+        <label>minus earlier <select id="mixA"></select></label>
+      </span>
+      <fieldset id="mixAdd" class="mix-row" hidden>
+        <legend>Frames to add</legend>
+        <span id="mixChecks"></span>
+      </fieldset>
+      <span id="mixOpts" class="mix-row" hidden>
+        <label><input type="checkbox" id="mixSmooth" checked> Smooth lightly</label>
+        <label>Show differences above <input type="range" id="mixTh" min="10" max="90" value="60" aria-label="Difference threshold"></label>
+      </span>
+      <p class="hint" id="mixNote"></p>
+    </div>
     <p class="hint why">Each frame is matched by wavelength: WISE 2010 is compared with SPHEREx images taken at the same
       infrared colour, because SPHEREx records a different wavelength across every detector.</p>
     </div>
@@ -128,6 +150,7 @@
     Confirming a new object needs follow-up by astronomers.</p>
   <p>Data: SPHEREx DR1 (NASA/IPAC IRSA) · AllWISE (NASA/IPAC IRSA) · Gaia DR3 (ESA). NASA Space Apps 2026 · Planet X and SPHEREx.</p>
 </footer>
+<script src="framemath.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
