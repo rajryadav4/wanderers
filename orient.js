@@ -83,15 +83,20 @@
         this.sawRelative = true;
         this.compassAccuracy = typeof e.webkitCompassAccuracy === "number" ? e.webkitCompassAccuracy : null;
         this.rel = { alpha: e.alpha || 0, beta: e.beta, gamma: e.gamma, t };
-        // The heading is only an unambiguous yaw when the phone is roughly flat.
-        if (Math.abs(e.beta) < 35 && Math.abs(e.gamma) < 35) this._yawSample(360 - e.webkitCompassHeading, t, 1);
-        // Not calibrated yet and held upright with little roll: iOS then reports the camera's heading, which for
-        // zero roll equals the same yaw. Coarse, but lets the compass work before (or without) calibration.
-        else if (!this.calibrated && e.beta > 50 && e.beta < 140 && Math.abs(e.gamma) < 30) {
-          // camera azimuth in the gyro frame vs the compass heading of the camera: exact for any roll
-          const R = matFromEuler(this.rel.alpha, this.rel.beta, this.rel.gamma);
-          const azRel = azAlt([-R[0][2], -R[1][2], -R[2][2]]).az;
-          this._deltaSample(wrap360(azRel - e.webkitCompassHeading), t, 0.5);
+        // iPhone compass heading has TWO meanings (seen in a real test: S 175 deg -> N 357 deg the moment the
+        // camera tilted past ~45 deg up): when the top of the phone is within 45 deg of horizontal, it is the
+        // direction the TOP points; otherwise it is the direction the CAMERA points. Pointing at the sky above
+        // 45 deg therefore flips it by 180 deg. We compute the matching direction in the gyro frame for whichever
+        // mode applies, and skip the ambiguous band around the switch.
+        const R = matFromEuler(this.rel.alpha, this.rel.beta, this.rel.gamma);
+        const topElev = Math.asin(Math.max(-1, Math.min(1, R[2][1]))) * R2D;
+        const mode = Math.abs(topElev) < 38 ? "top" : Math.abs(topElev) > 52 ? "camera" : null;
+        if (mode) {
+          const v = mode === "top" ? [R[0][1], R[1][1], R[2][1]] : [-R[0][2], -R[1][2], -R[2][2]];
+          if (Math.hypot(v[0], v[1]) > 0.5) {           // needs a clear horizontal direction
+            const flatish = Math.abs(e.beta) < 35 && Math.abs(e.gamma) < 35;
+            this._deltaSample(wrap360(azAlt(v).az - e.webkitCompassHeading), t, flatish ? 1 : 0.5);
+          }
         }
         this._step(t);
         return;

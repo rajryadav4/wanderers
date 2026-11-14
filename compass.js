@@ -1,7 +1,7 @@
 /* WANDERERS Sky Compass: landing -> "where are you in the universe" intro -> one-step flat calibration ->
  * augmented-reality sky with a compass tape, tilt scale, mini radar and live telemetry.
  * Motion: orient.js (gyro drives movement, compass sets north). Sky: sky.js. Intro: intro.js (three.js). */
-import { playIntro, earthFacts } from "./intro.js?v=20261114c";
+import { playIntro, earthFacts } from "./intro.js?v=20261114d";
 
 const $ = (id) => document.getElementById(id);
 const D2R = Math.PI / 180;
