@@ -1,0 +1,18 @@
+{
+ "summary": "Epsilon Indi B is a known pair of cold brown dwarfs, failed stars too small to fuse hydrogen, orbiting the star Epsilon Indi. WANDERERS saw it move 74 arcseconds between 2010 and 2026. That works out to 4.69 arcseconds per year, within 0.2% of Gaia's 4.68. It shines 5.6 times brighter at 4.0 microns than in the 3.3 micron methane band, which is the sign of methane in a cold atmosphere. Confidence is high. However, 69 of 180 spectrum points are flagged, and a small brightness change (-0.06 \u00b1 0.03 magnitudes) is uncertain.",
+ "qa": [
+  {
+   "q": "Why do we think this is what the card says?",
+   "a": "It moved 74 arcseconds across the sky between 2010 and 2026, about 4.69 arcseconds per year, which matches Gaia's catalogue value of 4.68. It is also 5.6 times brighter at 4.0 microns than in the 3.3 micron band, where methane in a cold brown dwarf absorbs light. One caution: 69 of its 180 spectrum points are flagged. It also brightened by 0.06 \u00b1 0.03 magnitudes, so it failed the steady-brightness check."
+  },
+  {
+   "q": "What would make you less sure?",
+   "a": "Some things make me less sure. 69 of the 180 spectrum points are flagged, so parts of the spectrum are unreliable. The brightness changed by -0.06 magnitudes (slightly brighter) with an uncertainty of 0.03, so it failed the steady-brightness check, and that change could be real or just noise. Two brown dwarfs blend into one spot, so every measurement mixes their light. The latest visit has only 10 images."
+  },
+  {
+   "q": "Why use both WISE and SPHEREx?",
+   "a": "WISE photographed this patch of sky around 2010, and SPHEREx photographed it again in 2025 and 2026. Over that gap of nearly 16 years the pair moved 74 arcseconds, about 12 SPHEREx pixels. That is enough to measure its speed well: 4.69 arcseconds per year, within 0.2% of Gaia's 4.68. SPHEREx also adds a spectrum, which shows the methane dip at 3.3 microns that marks a cold brown dwarf."
+  }
+ ],
+ "model_note": "Written by Claude (Claude Code, headless) from target.json only."
+}

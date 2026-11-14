@@ -27,21 +27,27 @@
     "year": 2010.5,
     "label": "WISE 2010",
     "mission": "WISE",
-    "png": "w2_wise2010.png"
+    "png": "w2_wise2010.png",
+    "detected": true,
+    "snr": 707.8
    },
    {
     "year": 2025.3459895596604,
     "label": "SPHEREx May 2025",
     "mission": "SPHEREx",
     "png": "w2_spherex_v1.png",
-    "n_images": 28
+    "n_images": 28,
+    "detected": true,
+    "snr": 622.3
    },
    {
     "year": 2025.7435164175092,
     "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
     "png": "w2_spherex_v2.png",
-    "n_images": 9
+    "n_images": 9,
+    "detected": true,
+    "snr": 142.7
    }
   ],
   "w1": [
@@ -49,28 +55,36 @@
     "year": 2010.5,
     "label": "WISE 2010",
     "mission": "WISE",
-    "png": "w1_wise2010.png"
+    "png": "w1_wise2010.png",
+    "detected": true,
+    "snr": 804.7
    },
    {
     "year": 2025.3205820547748,
     "label": "SPHEREx Apr 2025",
     "mission": "SPHEREx",
     "png": "w1_spherex_v1.png",
-    "n_images": 2
+    "n_images": 2,
+    "detected": true,
+    "snr": 1495.5
    },
    {
     "year": 2025.7634828201553,
     "label": "SPHEREx Oct 2025",
     "mission": "SPHEREx",
     "png": "w1_spherex_v2.png",
-    "n_images": 5
+    "n_images": 5,
+    "detected": true,
+    "snr": 926.8
    },
    {
     "year": 2026.3013998708002,
     "label": "SPHEREx Apr 2026",
     "mission": "SPHEREx",
     "png": "w1_spherex_v3.png",
-    "n_images": 4
+    "n_images": 4,
+    "detected": true,
+    "snr": 549.6
    }
   ]
  },
@@ -773,9 +787,11 @@
   "to": "Oct 2025"
  },
  "ir_color": {
-  "f4p0_mjy": 58.58146044384883,
+  "f4p0_mjy": 26.310606558646334,
   "f3p3_mjy": 10.426816064535696,
-  "ratio": 5.618346011022441
+  "f3p3_err": 0.5044792225219293,
+  "ratio": 2.523359613884005,
+  "lower_limit": false
  },
  "bands": [
   {
@@ -838,6 +854,7 @@
   "classification": "Cold brown dwarf (methane-rich)",
   "confidence": "high",
   "checks_passed": 3,
+  "checks_needed": 3,
   "checks": [
    {
     "state": "ok",
@@ -853,7 +870,7 @@
    },
    {
     "state": "ok",
-    "text": "5.6\u00d7 brighter at 4.0 \u00b5m than in the 3.3 \u00b5m methane band: the methane dip of a cold brown dwarf (a normal star would be about 0.7\u00d7)"
+    "text": "2.5\u00d7 brighter at 4\u20134.75 \u00b5m than in the 3.3 \u00b5m methane band: the methane dip of a cold brown dwarf (a normal star would be below 1\u00d7)"
    },
    {
     "state": "no",
@@ -870,8 +887,8 @@
     "value": "4.68\u2033/yr"
    },
    {
-    "label": "methane test (4.0 / 3.3 \u00b5m)",
-    "value": "5.6\u00d7"
+    "label": "methane test (4\u20134.75 / 3.3 \u00b5m)",
+    "value": "2.5\u00d7"
    },
    {
     "label": "brightness change May 2025\u2192Oct 2025",

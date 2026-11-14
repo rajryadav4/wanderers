@@ -19,5 +19,12 @@
   "teaser": "Brown dwarf pair",
   "ra": 331.08130021002296,
   "dec": -56.795456555579975
+ },
+ {
+  "id": "wise0855",
+  "name": "WISE 0855-0714",
+  "teaser": "Coldest brown dwarf (boss level)",
+  "ra": 133.77712513571174,
+  "dec": -7.243669827763018
  }
 ]

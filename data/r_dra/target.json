@@ -558,6 +558,7 @@
   "classification": "Variable star",
   "confidence": "high",
   "checks_passed": 3,
+  "checks_needed": 3,
   "checks": [
    {
     "state": "no",

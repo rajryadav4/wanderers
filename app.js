@@ -90,7 +90,8 @@
         g.fillStyle = "#ffe2b0"; g.font = "12px ui-monospace, monospace"; g.fillText(p.mission === "WISE" ? "2010" : Math.floor(p.year), X(p.x) + 8, Y(p.y) - 6);
       }
     }
-    const lbl = diff ? "Difference: SPHEREx 2026 − 2025 (green = now, pink = before)" : f ? `${f.label} · ${S.t.frames[S.ch] ? labelOf(S.ch) : ""}` : "";
+    const seen = f && f.detected === false ? " · not detected at this wavelength" : "";
+    const lbl = diff ? "Difference: SPHEREx 2026 − 2025 (green = now, pink = before)" : f ? `${f.label} · ${labelOf(S.ch)}${seen}` : "";
     $("stamp").textContent = lbl;
     $("frameLbl").textContent = f ? `${S.i + 1}/${fr.length} · ${f.year.toFixed(1)}` : "";
   }
@@ -127,7 +128,7 @@
     $("verdict").className = `verdict ${ev.status}`;
     $("verdict").innerHTML = `<div class="status">${ev.status === "known" ? "KNOWN OBJECT" : "CANDIDATE · NOT A DISCOVERY"}</div>
       <div class="cls">${ev.classification}</div>
-      <div class="conf">Confidence: <b>${ev.confidence}</b> · ${ev.checks_passed} of ${ev.checks.length} checks support it</div>`;
+      <div class="conf">Confidence: <b>${ev.confidence}</b> · ${ev.checks_passed} of ${ev.checks_needed || ev.checks.length} key checks support it</div>`;
     const icon = { ok: "✓", no: "–", warn: "!" };
     $("checks").innerHTML = ev.checks.map((c) => `<li><span class="${c.state}">${icon[c.state]}</span><span>${c.text}</span></li>`).join("");
     $("numbers").innerHTML = (ev.numbers || []).map((n) => `<div><b>${n.value}</b><span>${n.label}</span></div>`).join("");
@@ -191,6 +192,7 @@
       if (dd < bd) { bd = dd; best = t; }
     }
     if (best && bd < 600) { $("coordMsg").textContent = `Matched ${best.name} (${Math.round(bd)}″ away).`; load(best.id); }
-    else $("coordMsg").textContent = `Not cached yet. Fetch it with: python pipeline/fetch.py --ra ${a.toFixed(5)} --dec ${d.toFixed(5)}`;
+    else $("coordMsg").textContent = `Not in the cached set yet. A teammate can add it in a few minutes: ` +
+      `python pipeline/fetch.py --ra ${a.toFixed(5)} --dec ${d.toFixed(5)}, then analyze.py and evidence.py.`;
   }
 })();
