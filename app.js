@@ -10,7 +10,7 @@
     S.list = list;
     renderTargets();
     const p = new URLSearchParams(location.search);
-    if (p.get("ra") && p.get("dec")) { coordSearch(p.get("ra"), p.get("dec")); }
+    if (p.get("ra") && p.get("dec")) { coordSearch(p.get("ra"), p.get("dec"), p.get("fov")); }
     else { load(p.get("target") || list[0].id, p.get("ch")); }
   }).catch(() => { $("tName").textContent = "No data yet. Run the pipeline (see README)."; });
   fetch("api/health").then((r) => { if (r.ok) { S.live = true; $("askForm").hidden = false; } }).catch(() => {});
@@ -32,11 +32,13 @@
     $("targetList").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.id === id));
     $("tName").textContent = t.name;
     $("tKind").textContent = t.kind;
+    const fovNow = String(Math.round(t.grid.npix * t.grid.arcsec_per_pix));
+    if ([...$("fovIn").options].some((o) => o.value === fovNow)) $("fovIn").value = fovNow;
     document.querySelectorAll(".channel button").forEach((b) => {
       const has = t.frames[b.dataset.ch] && t.frames[b.dataset.ch].length;
       b.disabled = !has; b.classList.toggle("on", b.dataset.ch === S.ch); b.setAttribute("aria-checked", b.dataset.ch === S.ch);
     });
-    const url = new URL(location); url.searchParams.set("target", id); url.searchParams.delete("ra"); url.searchParams.delete("dec");
+    const url = new URL(location); url.searchParams.set("target", id); ["ra", "dec", "fov"].forEach((k) => url.searchParams.delete(k));
     history.replaceState(null, "", url);
     await preload();
     setupSlider(); draw(); evidence(); spectrum();
@@ -175,7 +177,7 @@
   const fmtFlux = (f) => (f >= 1000 ? `${f / 1000} Jy` : f >= 1 ? `${f} mJy` : `${f * 1000} µJy`);
 
   // ---------- coordinates ----------
-  $("coordForm").onsubmit = (e) => { e.preventDefault(); coordSearch($("raIn").value, $("decIn").value); };
+  $("coordForm").onsubmit = (e) => { e.preventDefault(); coordSearch($("raIn").value, $("decIn").value, $("fovIn").value); };
   function parseAngle(s, hours) {
     s = String(s).trim(); if (!s) return NaN;
     if (/^[-+]?\d+(\.\d+)?$/.test(s)) return +s;
@@ -183,23 +185,34 @@
     const sign = /^-/.test(s) ? -1 : 1, v = Math.abs(m[0]) + (m[1] || 0) / 60 + (m[2] || 0) / 3600;
     return sign * v * (hours ? 15 : 1);
   }
-  function coordSearch(ra, dec) {
+  const fovLabel = (f) => `${f / 60}′`;
+  function coordSearch(ra, dec, fovIn) {
     const a = parseAngle(ra, /h/i.test(ra) || /:/.test(ra)), d = parseAngle(dec, false);
     if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return; }
-    let best = null, bd = 1e9;
-    for (const t of S.list) {
-      const dd = Math.hypot((t.ra - a) * Math.cos((d * Math.PI) / 180), t.dec - d) * 3600;
-      if (dd < bd) { bd = dd; best = t; }
-    }
-    if (best && bd < 600) { $("coordMsg").textContent = `Matched ${best.name} (${Math.round(bd)}″ away).`; load(best.id); }
-    else if (S.live) requestField(a, d);
-    else $("coordMsg").textContent = `Not in the cached set yet. A teammate can add it in a few minutes: ` +
-      `python pipeline/fetch.py --ra ${a.toFixed(5)} --dec ${d.toFixed(5)}, then analyze.py and evidence.py.`;
+    const fov = Number(fovIn) || 300;
+    if ([...$("fovIn").options].some((o) => Number(o.value) === fov)) $("fovIn").value = String(fov);
+    // nearest cached target overall, and nearest one that has the field size that was asked for
+    const near = (list) => {
+      let best = null, bd = 1e9;
+      for (const t of list) {
+        const dd = Math.hypot((t.ra - a) * Math.cos((d * Math.PI) / 180), t.dec - d) * 3600;
+        if (dd < bd) { bd = dd; best = t; }
+      }
+      return { best, bd };
+    };
+    const same = near(S.list.filter((t) => (t.fov || 300) === fov)), any = near(S.list);
+    if (same.best && same.bd < 600) { $("coordMsg").textContent = `Matched ${same.best.name} (${Math.round(same.bd)}″ away).`; load(same.best.id); }
+    else if (S.live) requestField(a, d, fov);
+    else if (any.best && any.bd < 600) {   // no server to make the other size: show what is cached and say so
+      $("coordMsg").textContent = `${any.best.name} is cached at ${fovLabel(any.best.fov || 300)} only. A ${fovLabel(fov)} field needs the local server (node server.js).`;
+      load(any.best.id);
+    } else $("coordMsg").textContent = `Not in the cached set yet. A teammate can add it in a few minutes: ` +
+      `python pipeline/fetch.py --ra ${a.toFixed(5)} --dec ${d.toFixed(5)}${fov === 300 ? "" : ` --fov ${fov}`}, then analyze.py and evidence.py.`;
   }
 
   // Ask the local server to prepare a patch of sky that is not cached yet, then show it when ready.
   // Only used when server.js is running (S.live); the static site keeps the message above.
-  async function requestField(a, d) {
+  async function requestField(a, d, fov = 300) {
     const me = (S.fieldToken = (S.fieldToken || 0) + 1);   // a newer search cancels this one
     const msg = (t) => { if (me === S.fieldToken) $("coordMsg").textContent = t; };
     const api = async (url, opt) => {
@@ -208,8 +221,8 @@
       return j;
     };
     try {
-      msg("Preparing this patch of sky. This can take several minutes the first time.");
-      let j = await api("api/field", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ra: a, dec: d }) });
+      msg(`Preparing a ${fovLabel(fov)} patch of sky. This can take several minutes the first time${fov > 300 ? ", and a wider field takes longer" : ""}.`);
+      let j = await api("api/field", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ra: a, dec: d, fov }) });
       while (j.status !== "ready" && j.status !== "done") {
         if (j.status === "error") throw new Error(j.error || "No usable data for these coordinates.");
         msg(j.stage + (j.detail ? ` · ${j.detail}` : ""));

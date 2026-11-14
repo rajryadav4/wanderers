@@ -59,6 +59,8 @@ input { font: inherit; color: var(--text); background: #0a1120; border: 1px soli
 .target-list button.on { background: var(--panel-2); border-color: var(--accent); color: var(--text); }
 .coord-box form { display: grid; gap: 6px; }
 .coord-box label { display: grid; font-size: .8rem; color: var(--muted); gap: 2px; }
+.coord-box select { font: inherit; color: var(--text); background: #0a1120; border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; }
+.coord-box select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .sky-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
 .channel { display: flex; gap: 6px; }
