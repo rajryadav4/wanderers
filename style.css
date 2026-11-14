@@ -192,3 +192,54 @@ button:disabled { opacity: .5; cursor: default; }
 .chlist li.ch-candidate { border-left-color: var(--cand); } .chlist li.ch-known, .chlist li.ch-target { border-left-color: var(--known); }
 .chlist b { color: var(--text); } .chlist a { color: var(--accent); }
 .chlist button { font-size: .8rem; padding: 4px 10px; }
+
+/* ---- Star database tab ---- */
+.star-search { position: relative; display: flex; flex-direction: column; gap: 4px; }
+.star-search label { font-weight: 600; }
+.star-search input { width: 100%; box-sizing: border-box; }
+.star-results { position: absolute; top: 100%; left: 0; right: 0; z-index: 5; margin: 2px 0 0; padding: 4px 0; list-style: none;
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; max-height: 320px; overflow: auto; }
+.star-results li { padding: 6px 10px; cursor: pointer; }
+.star-results li.on, .star-results li:hover { background: #12203a; }
+.badge { font-size: .72rem; color: #04121f; background: #7ee787; border-radius: 999px; padding: 1px 7px; }
+.chips .chip { font-size: .78rem; padding: 2px 9px; border-radius: 999px; margin: 2px 2px; }
+.star-detail h3 { margin: 10px 0 6px; }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 3px 14px; margin: 0; font-size: .88rem; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; }
+#starChart { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; margin: 6px 0; }
+#starChart .bg { fill: #050912; }
+#starChart .past { fill: none; stroke: #7cc4ff; stroke-width: 2; }
+#starChart .future { fill: none; stroke: #7ee787; stroke-width: 2; stroke-dasharray: 6 4; }
+#starChart .band { fill: rgba(126, 231, 135, .16); stroke: none; }
+#starChart .ob { stroke: #050912; stroke-width: 1; }
+#starChart .ob.down { fill-opacity: .35; stroke: #ff7b72; stroke-dasharray: 2 2; }
+#starChart .mk circle { fill: #e6edf7; }
+#starChart .mk.now circle { fill: #ffb547; }
+#starChart text { fill: #c9d4e8; font: 12px ui-monospace, monospace; }
+#starChart .bar line, #starChart .compass line { stroke: #c9d4e8; stroke-width: 1.5; }
+.slegend .sw { display: inline-block; width: 22px; height: 0; vertical-align: middle; border-top: 2px solid #7cc4ff; }
+.slegend .sw.future { border-top: 2px dashed #7ee787; }
+.slegend .sw.band { height: 8px; border: 0; background: rgba(126, 231, 135, .25); }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
+#starTable tr.now th, #starTable tr.now td { color: #ffb547; }
+#starTable tr.future td { color: #b9f5c0; }
+#starModel table tr.on td { color: #7ee787; }
+.m-warn { color: #ffb547; }
+body.stars-mode #tName, body.stars-mode #tKind { visibility: hidden; }
+
+/* ---- long-range (thousands of years) ---- */
+.lr { margin-top: 12px; }
+.lr-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 6px 0; }
+.lr-controls input[type=range] { flex: 1 1 220px; }
+.lr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.lr-grid figure { margin: 0; }
+.lr-grid figcaption { color: var(--muted); font-size: .76rem; margin-top: 4px; }
+.lr canvas { width: 100%; display: block; border: 1px solid var(--line); border-radius: 8px; background: #03060d; }
+#lr3d { cursor: grab; touch-action: none; }
+#lr3d:active { cursor: grabbing; }
+#lrDist { margin-top: 10px; }
+#lrCard { margin-top: 8px; }
+.lr-warn { color: #ffb547; padding-left: 18px; margin: 4px 0; }
+.lr-warn:empty { display: none; }
+@media (max-width: 900px) { .lr-grid { grid-template-columns: 1fr; } }
