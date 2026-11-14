@@ -556,7 +556,8 @@
  "evidence": {
   "status": "known",
   "classification": "Variable star",
-  "confidence": "high",
+  "confidence": "medium",
+  "confidence_note": "lowered because most SPHEREx measurements are saturated",
   "checks_passed": 3,
   "checks_needed": 3,
   "checks": [

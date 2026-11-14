@@ -1,0 +1,18 @@
+{
+ "summary": "WISE 0855-0714 is a known brown dwarf, a failed star too small to fuse hydrogen, and the coldest on record, about as cold as the North Pole. WANDERERS compared its 2010 catalogue position with SPHEREx images from 2025 and 2026. It moved 131 arcseconds, or 8.27 per year, within 1.5% of the catalogue's 8.15. Gaia has no match for it. It wasn't detected at 3.3 microns, so the methane dip is only a lower limit of at least 5 times. Also, 39 of the 150 spectrum points are flagged. Overall confidence is high.",
+ "qa": [
+  {
+   "q": "Why do we think this is what the card says?",
+   "a": "Two clues agree. First, it moved 131 arcseconds since 2010, 8.27 arcseconds per year, within 1.5% of the catalogued 8.15; motion that fast means it is close to us. Second, it is bright near 4 to 4.75 microns but undetected at 3.3 microns, where methane absorbs, giving a ratio above 5, typical of very cold brown dwarfs. Gaia cannot see it, and 39 of 150 spectrum points are flagged."
+  },
+  {
+   "q": "What would make you less sure?",
+   "a": "Several things would make me less sure. 39 of the 150 spectrum points are flagged. The 3.3 \u00b5m band wasn't detected, so the methane ratio is only a lower limit. There's no Gaia match to cross-check against. The measured north-south motion differs from the catalogue more than the total speed does. The light below 1.3 \u00b5m also looks too bright for something this cold, so a nearby star may be blending into SPHEREx's large pixels."
+  },
+  {
+   "q": "Why use both WISE and SPHEREx?",
+   "a": "WISE imaged this patch of sky around 2010, and SPHEREx revisited it in 2025 and 2026. Over those 16 years, WISE 0855-0714 moved 131 arcseconds, about 21 SPHEREx pixels. That works out to 8.27\u2033 per year, close to the catalogued 8.15. SPHEREx also measures a spectrum, which went undetected in the 3.3 \u00b5m methane band. 39 of its 150 points are flagged."
+  }
+ ],
+ "model_note": "Written by Claude (Claude Code, headless) from target.json only."
+}

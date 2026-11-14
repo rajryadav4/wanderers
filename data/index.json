@@ -14,6 +14,13 @@
   "dec": 66.75501087068785
  },
  {
+  "id": "rw_aur",
+  "name": "RW Aurigae",
+  "teaser": "Young star that flickers",
+  "ra": 76.95608318009566,
+  "dec": 30.40118682967599
+ },
+ {
   "id": "eps_indi_b",
   "name": "Epsilon Indi B",
   "teaser": "Brown dwarf pair",

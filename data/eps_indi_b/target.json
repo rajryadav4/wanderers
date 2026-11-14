@@ -853,6 +853,7 @@
   "status": "known",
   "classification": "Cold brown dwarf (methane-rich)",
   "confidence": "high",
+  "confidence_note": null,
   "checks_passed": 3,
   "checks_needed": 3,
   "checks": [
