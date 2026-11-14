@@ -470,6 +470,7 @@
     document.body.classList.toggle("stars-mode", which === "stars");
     if (which !== "flip") stop();
     if (which === "stars" && window.StarsTab) window.StarsTab.open(starKey);
+    if (window.LongRange) which === "stars" ? requestAnimationFrame(window.LongRange.refresh) : window.LongRange.stop();
   }
   window.WANDERERS = { selectTab, openTarget: (id) => { selectTab("flip"); load(id); } };
   $("tabFlip").onclick = () => selectTab("flip");

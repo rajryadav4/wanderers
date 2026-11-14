@@ -15,8 +15,10 @@
   const LR = { st: null, row: null, stars: [], span: 10000, year: NOW + 5000, clones: [], view: { yaw: -0.6, pitch: 0.45, zoom: 1 }, timer: null };
 
   // ---------- canvas helpers ----------
+  // Returns null while the canvas is not laid out (tab hidden): drawing is skipped and redone on refresh().
   function ctx(id) {
-    const c = $(id), r = window.devicePixelRatio || 1, w = c.clientWidth || c.width, h = Math.round(w * (+c.dataset.aspect || 0.62));
+    const c = $(id), r = window.devicePixelRatio || 1, w = c.clientWidth, h = Math.round(w * (+c.dataset.aspect || 0.62));
+    if (!w || !h) return null;
     if (c.width !== Math.round(w * r)) { c.width = Math.round(w * r); c.height = Math.round(h * r); c.style.height = h + "px"; }
     const g = c.getContext("2d"); g.setTransform(r, 0, 0, r, 0, 0);
     return { g, w, h };
@@ -50,7 +52,13 @@
   const COL = { past: "#7cc4ff", future: "#7ee787", now: "#ffb547", sel: "#ff7bd5", ca: "#ffd166", grid: "rgba(124,196,255,.16)", text: "#c9d4e8", mut: "#8d9bb8" };
 
   // ---------- public entry ----------
+  function stop() {
+    if (LR.timer) { clearInterval(LR.timer); LR.timer = null; }
+    $("lrPlay").textContent = "▶ Play"; $("lrPlay").setAttribute("aria-pressed", "false");
+  }
+
   function show(pred, row, stars) {
+    stop();                                   // a new star never inherits the previous animation
     LR.row = row; LR.stars = stars || [];
     const s0 = C.startState(pred, row);
     $("lrWarn").innerHTML = (s0.warnings || []).map((w) => `<li>${esc(w)}</li>`).join("");
@@ -81,6 +89,11 @@
   function render() {
     const s = LR.st.star, at = C.propagate(s, LR.year), sp = C.spreadAt(LR.clones, LR.year);
     $("lrYearLbl").textContent = C.fmtYear(LR.year);
+    $("lrYear").setAttribute("aria-valuetext", C.fmtYear(LR.year));
+    const nm = s.name || "the star", range = `${C.fmtYear(NOW - LR.span)} to ${C.fmtYear(NOW + LR.span)}`;
+    $("lrSky").setAttribute("aria-label", `${nm}'s track on the sky from ${range}; shown in ${C.fmtYear(LR.year)} at RA ${at.ra.toFixed(2)}°, Dec ${at.dec.toFixed(2)}°`);
+    $("lr3d").setAttribute("aria-label", `${nm}'s path through space around the Sun from ${range}; ${at.distLy.toFixed(2)} light-years away in ${C.fmtYear(LR.year)}. Arrow keys rotate.`);
+    $("lrDist").setAttribute("aria-label", `${nm}'s distance from the Sun from ${range}` + (LR.ca ? `; closest ${LR.ca.distLy.toFixed(2)} light-years in ${C.fmtYear(LR.ca.year)}` : ""));
     drawSky(at, sp); draw3d(at); drawDist(at);
     const m0 = LR.row && LR.row.mag, ca = LR.ca;
     const mag = C.magAt(m0, LR.today.distLy, at.distLy), caMag = ca && C.magAt(m0, LR.today.distLy, ca.distLy);
@@ -97,7 +110,8 @@
 
   // ---------- 1. sky globe ----------
   function drawSky(at, sp) {
-    const { g, w, h } = ctx("lrSky");
+    const cx = ctx("lrSky"); if (!cx) return;
+    const { g, w, h } = cx;
     const P = LR.path, ctr = C.centre(P), radec = $("lrProj").value === "radec";
     // Globe: orthographic view of the sphere. RA/Dec chart: RA and Dec as straight axes (east left), where the
     // great-circle track shows as the curve familiar from star atlases.
@@ -138,7 +152,12 @@
 
     // the path: past solid, future dashed; ticks with year labels
     const split = P.findIndex((p) => p.year >= NOW);
-    const poly = (a, b, col, dash) => { g.strokeStyle = col; g.lineWidth = 2.2; g.setLineDash(dash); g.beginPath(); pts.slice(a, b).forEach((q, i) => (i ? g.lineTo(X(q), Y(q)) : g.moveTo(X(q), Y(q)))); g.stroke(); g.setLineDash([]); };
+    // the line breaks where the track goes round the back of the globe (never drawn through it)
+    const poly = (a, b, col, dash) => {
+      g.strokeStyle = col; g.lineWidth = 2.2; g.setLineDash(dash); g.beginPath(); let on = false;
+      for (const q of pts.slice(a, b)) { if (!q.front) { on = false; continue; } on ? g.lineTo(X(q), Y(q)) : g.moveTo(X(q), Y(q)); on = true; }
+      g.stroke(); g.setLineDash([]);
+    };
     poly(0, split + 1, COL.past, []); poly(split, pts.length, COL.future, [7, 5]);
     const tick = [500, 1000, 2000, 5000, 10000].find((t) => (2 * LR.span) / t <= 12) || 10000;
     for (const t of ticks(NOW - LR.span, NOW + LR.span, tick)) {
@@ -158,11 +177,12 @@
     lab.flush([{ x: 0, y: h - 22, w: fw + 16, h: 22 }]);
   }
   const fmtDeg = (d) => (Math.abs(d - Math.round(d)) < 1e-6 ? `${d >= 0 ? "+" : ""}${Math.round(d)}°` : `${d >= 0 ? "+" : "−"}${Math.floor(Math.abs(d))}°${Math.round((Math.abs(d) % 1) * 60)}′`);
-  const fmtRa = (a) => { const hr = (((a % 360) + 360) % 360) / 15, H = Math.floor(hr + 1e-9), m = Math.round((hr - H) * 60); return m === 60 ? `${H + 1}h` : m ? `${H}h${m}m` : `${H}h`; };
+  const fmtRa = (a) => { const hr = (((a % 360) + 360) % 360) / 15, H = Math.floor(hr + 1e-9), m = Math.round((hr - H) * 60); return m === 60 ? `${(H + 1) % 24}h` : m ? `${H}h${m}m` : `${H}h`; };
 
   // ---------- 2. 3D map ----------
   function draw3d(at) {
-    const { g, w, h } = ctx("lr3d"), V = LR.view;
+    const cx = ctx("lr3d"); if (!cx) return;
+    const { g, w, h } = cx, V = LR.view;
     const path = LR.path.map((p) => p.xyzLy);
     const R = Math.max(...path.map((p) => Math.hypot(...p)), at.distLy, 1) * 1.15;
     const cy = Math.cos(V.yaw), sy = Math.sin(V.yaw), cp = Math.cos(V.pitch), spch = Math.sin(V.pitch);
@@ -220,7 +240,8 @@
 
   // ---------- 3. distance through time ----------
   function drawDist(at) {
-    const { g, w, h } = ctx("lrDist"), pad = { l: 46, r: 12, t: 10, b: 24 };
+    const cx = ctx("lrDist"); if (!cx) return;
+    const { g, w, h } = cx, pad = { l: 46, r: 12, t: 10, b: 24 };
     const P = LR.path, ys = P.map((p) => p.distLy), lo = Math.min(...ys) * 0.95, hi = Math.max(...ys) * 1.05;
     const X = (y) => pad.l + (y - P[0].year) / (P[P.length - 1].year - P[0].year) * (w - pad.l - pad.r), Y = (d) => h - pad.b - (d - lo) / (hi - lo || 1) * (h - pad.t - pad.b);
     g.fillStyle = "#03060d"; g.fillRect(0, 0, w, h);
@@ -240,12 +261,12 @@
   $("lrProj").onchange = () => render();
   $("lrYear").oninput = (e) => { LR.year = +e.target.value; render(); };
   $("lrPlay").onclick = () => {
-    if (LR.timer) { clearInterval(LR.timer); LR.timer = null; $("lrPlay").textContent = "▶ Play"; return; }
-    $("lrPlay").textContent = "❚❚ Pause";
+    if (LR.timer) return stop();
+    $("lrPlay").textContent = "❚❚ Pause"; $("lrPlay").setAttribute("aria-pressed", "true");
     if (LR.year >= NOW + LR.span - 1) LR.year = NOW - LR.span;
     LR.timer = setInterval(() => {
       LR.year = Math.min(NOW + LR.span, LR.year + LR.span / 150); $("lrYear").value = LR.year; render();
-      if (LR.year >= NOW + LR.span) $("lrPlay").click();
+      if (LR.year >= NOW + LR.span || $("starLong").offsetParent === null) stop();   // end reached or tab left
     }, 50);
   };
   const c3 = $("lr3d"); let drag = null;
@@ -260,5 +281,7 @@
   };
   window.addEventListener("resize", () => LR.st && LR.st.star && render());
 
-  window.LongRange = { show, NOW };
+  // redraw once the tab is visible again (canvases have no size while hidden)
+  const refresh = () => { if (LR.st && LR.st.star && !$("starLong").hidden) render(); };
+  window.LongRange = { show, stop, refresh, NOW };
 })();
