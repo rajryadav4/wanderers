@@ -10,7 +10,7 @@
     S.list = list;
     renderTargets();
     const p = new URLSearchParams(location.search);
-    if (p.get("ra") && p.get("dec")) { coordSearch(p.get("ra"), p.get("dec")); }
+    if (p.get("ra") && p.get("dec")) { if (!coordSearch(p.get("ra"), p.get("dec"))) load(list[0].id); }   // no match: still show something
     else { load(p.get("target") || list[0].id, p.get("ch")); }
   }).catch(() => { $("tName").textContent = "No data yet. Run the pipeline (see README)."; });
   fetch("api/health").then((r) => { if (r.ok) { S.live = true; $("askForm").hidden = false; } }).catch(() => {});
@@ -205,14 +205,15 @@
   }
   function coordSearch(ra, dec) {
     const a = parseAngle(ra, /h/i.test(ra) || /:/.test(ra)), d = parseAngle(dec, false);
-    if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return; }
+    if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return false; }
     let best = null, bd = 1e9;
     for (const t of S.list) {
       const dd = Math.hypot((t.ra - a) * Math.cos((d * Math.PI) / 180), t.dec - d) * 3600;
       if (dd < bd) { bd = dd; best = t; }
     }
-    if (best && bd < 600) { $("coordMsg").textContent = `Matched ${best.name} (${Math.round(bd)}″ away).`; load(best.id); }
-    else $("coordMsg").textContent = `Not in the cached set yet. A teammate can add it in a few minutes: ` +
+    if (best && bd < 600) { $("coordMsg").textContent = `Matched ${best.name} (${Math.round(bd)}″ away).`; load(best.id); return true; }
+    $("coordMsg").textContent = `Not in the cached set yet. A teammate can add it in a few minutes: ` +
       `python pipeline/fetch.py --ra ${a.toFixed(5)} --dec ${d.toFixed(5)}, then analyze.py and evidence.py.`;
+    return false;
   }
 })();
