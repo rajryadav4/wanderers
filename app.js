@@ -11,7 +11,7 @@
     S.list = list;
     renderTargets();
     const p = new URLSearchParams(location.search);
-    if (p.get("ra") && p.get("dec")) { coordSearch(p.get("ra"), p.get("dec"), p.get("fov")); }
+    if (p.get("ra") && p.get("dec")) { if (!coordSearch(p.get("ra"), p.get("dec"), p.get("fov"))) load(list[0].id); }   // unreadable: still show something
     else { load(p.get("target") || list[0].id, p.get("ch")); }
   }).catch(() => { $("tName").textContent = "No data yet. Run the pipeline (see README)."; });
   fetch("api/health").then((r) => { if (r.ok) { S.live = true; $("askForm").hidden = false; } }).catch(() => {});
@@ -42,7 +42,7 @@
     const url = new URL(location); url.searchParams.set("target", id); ["ra", "dec", "fov"].forEach((k) => url.searchParams.delete(k));
     history.replaceState(null, "", url);
     await preload();
-    setupSlider(); initMix(true); draw(); evidence(); spectrum();
+    setupSlider(); initMix(true); renderMeta(); draw(); evidence(); spectrum();
     if (MAP.ready) mapGoTo();
     $("answer").textContent = "";
   }
@@ -100,6 +100,26 @@
     const lbl = diff ? "Difference: SPHEREx 2026 − 2025 (green = now, pink = before)" : mixed ? S.mixOut.label : f ? `${f.label} · ${labelOf(S.ch)}${seen}` : "";
     $("stamp").textContent = lbl;
     $("frameLbl").textContent = mixed ? "" : f ? `${S.i + 1}/${fr.length} · ${f.year.toFixed(1)}` : "";
+    document.querySelectorAll("#metaBody tr[data-i]").forEach((tr) => tr.classList.toggle("now", !diff && +tr.dataset.i === S.i));
+  }
+
+  // ---------- frame details and data flags (uses frameinfo.js) ----------
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  function renderMeta() {
+    const d = FrameInfo.describe(S.t, S.ch), q = d.quality;
+    const rows = d.rows.map((r, i) =>
+      `<tr data-i="${i}"><th scope="row">${esc(r.label)}</th><td>${esc(r.epoch)}</td>` +
+      `<td>${esc(r.source)}${r.images ? ` · ${r.images} image${r.images === 1 ? "" : "s"} stacked` : ""}</td>` +
+      `<td class="m-${r.tone}">${esc(r.seen)}${r.signal ? ` · ${esc(r.signal)}` : ""}</td></tr>`).join("");
+    const bar = q.pct === null ? "" : `<div class="qbar" role="img" aria-label="${q.pct}% of SPHEREx measurements flagged"><i class="q-${q.level}" style="width:${q.pct}%"></i></div>`;
+    const visits = d.visits.map((v) => `<li>Visit ${v.n}: around ${esc(v.epoch)}, ${v.images} images used</li>`).join("");
+    $("metaBody").innerHTML =
+      `<table class="frames"><thead><tr><th>Frame</th><th>Year</th><th>Image</th><th>Object</th></tr></thead><tbody>${rows}</tbody></table>` +
+      `<h4>Data flags</h4>${bar}<p class="hint">${esc(q.text)}</p>` +
+      `<p class="hint">A measurement is left out if pixels near the target are flagged for: ${esc(d.flagKinds.join(", "))}. ` +
+      `This is the conservative set from the SPHEREx Explanatory Supplement. The flipbook pictures hide only broken detector pixels, so bright stars stay visible.</p>` +
+      (visits ? `<h4>SPHEREx visits at this position</h4><ul class="visits">${visits}</ul>` +
+        `<p class="hint">${d.visitImages} images used in all; the pipeline downloads a capped, evenly spread share of the images that overlap the target.</p>` : "");
   }
   const labelOf = (ch) => (ch === "w2" ? "4.6 µm" : "3.4 µm");
 
@@ -215,7 +235,7 @@
   document.querySelectorAll(".channel button").forEach((b) => (b.onclick = () => {
     S.ch = b.dataset.ch; S.i = Math.min(S.i, frames().length - 1);
     document.querySelectorAll(".channel button").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-checked", x === b); });
-    setupSlider(); initMix(false); draw();
+    setupSlider(); initMix(false); renderMeta(); draw();
     const url = new URL(location); url.searchParams.set("ch", S.ch); history.replaceState(null, "", url);
   }));
   document.addEventListener("keydown", (e) => {
@@ -321,7 +341,7 @@
   const fovLabel = (f) => `${f / 60}′`;
   function coordSearch(ra, dec, fovIn) {
     const a = parseAngle(ra, /h/i.test(ra) || /:/.test(ra)), d = parseAngle(dec, false);
-    if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return; }
+    if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return false; }
     const fov = Number(fovIn) || 300;
     if ([...$("fovIn").options].some((o) => Number(o.value) === fov)) $("fovIn").value = String(fov);
     // nearest cached target overall, and nearest one that has the field size that was asked for
@@ -334,16 +354,17 @@
       return { best, bd };
     };
     const same = near(S.list.filter((t) => (t.fov || 300) === fov)), any = near(S.list);
-    if (same.best && same.bd < 600) { $("coordMsg").textContent = `Matched ${same.best.name} (${Math.round(same.bd)}″ away).`; load(same.best.id); }
-    else if (S.live) requestField(a, d, fov);
+    if (same.best && same.bd < 600) { $("coordMsg").textContent = `Matched ${same.best.name} (${Math.round(same.bd)}″ away).`; load(same.best.id); return true; }
+    else if (S.live) { requestField(a, d, fov); return true; }
     else if (any.best && any.bd < 600) {   // no server to make the other size: show what is cached and say so
       $("coordMsg").textContent = `${any.best.name} is cached at ${fovLabel(any.best.fov || 300)} only. A ${fovLabel(fov)} field needs the local server (node server.js).`;
-      load(any.best.id);
+      load(any.best.id); return true;
     } else {   // static site: show the live sky map, plus how a teammate adds the field
       showMap(a, d, `RA ${a.toFixed(4)}°, Dec ${d.toFixed(4)}°`);
       $("coordMsg").textContent = `Not in the cached set yet. A teammate can add it in a few minutes: ` +
       `python pipeline/fetch.py --ra ${a.toFixed(5)} --dec ${d.toFixed(5)}${fov === 300 ? "" : ` --fov ${fov}`}, then analyze.py and evidence.py.`;
     }
+    return true;   // the live sky map is showing
   }
 
   // ---------- live sky map (Aladin Lite + IRSA HiPS; works for any coordinates on the static site) ----------
