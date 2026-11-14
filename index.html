@@ -58,6 +58,7 @@
       <div class="view-tabs" role="tablist" aria-label="View">
         <button id="tabFlip" class="on" role="tab" aria-selected="true">Time-lapse</button>
         <button id="tabMap" role="tab" aria-selected="false">Sky map · any coordinates</button>
+        <button id="tabStars" role="tab" aria-selected="false">Star database</button>
       </div>
     </div>
     <div id="flipView">
@@ -122,6 +123,30 @@
         wavelength: cold brown dwarfs appear only at the long end, normal stars fade there. The orange marker is the
         target; the dashed line is its measured path. This map works for any coordinates you type.</p>
     </div>
+    <div id="starView" hidden>
+      <div class="star-search">
+        <label for="starQ">Find a star</label>
+        <input id="starQ" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="starResults"
+          placeholder="Name, Bayer, HIP, HD or Gliese: Barnard's Star, Alpha Cen, HIP 32349, Gl 699" autocomplete="off">
+        <ul id="starResults" role="listbox" class="star-results" hidden></ul>
+      </div>
+      <p id="starMsg" class="hint" aria-live="polite">Search about 12,000 named and naked-eye stars from the HYG database.</p>
+      <p id="starSuggest" class="hint chips"></p>
+      <div id="starDetail" class="star-detail" hidden></div>
+      <p id="starPredMsg" aria-live="polite"></p>
+      <div id="starPred" hidden>
+        <h3>Past and future path <span class="hint">1900 → 2100, learnt by a classical machine-learning model</span></h3>
+        <svg id="starChart" viewBox="0 0 640 420" role="img"></svg>
+        <p class="hint slegend"><span class="sw past"></span> past · <span class="sw future"></span> predicted future ·
+          <span class="sw band"></span> 68% uncertainty · dots: measured positions
+          (<span class="dot" style="background:#b48cff"></span> Hipparcos/Tycho, <span class="dot" style="background:#7cc4ff"></span> ground and WISE surveys,
+          <span class="dot" style="background:#7ee787"></span> Gaia, <span class="dot" style="background:#ffb547"></span> WANDERERS). North up, east left.</p>
+        <table id="starTable" class="frames"></table>
+        <h4>How the path was learnt</h4>
+        <div id="starModel"></div>
+        <details><summary>Measured positions used for training</summary><div id="starObs"></div></details>
+      </div>
+    </div>
     <details class="meta" id="meta">
       <summary>Frame details and data flags</summary>
       <div id="metaBody"></div>
@@ -174,6 +199,8 @@
 <script src="frameinfo.js"></script>
 <script src="aladinlink.js"></script>
 <script src="starpath.js"></script>
+<script src="stardb.js"></script>
 <script src="app.js"></script>
+<script src="stars.js"></script>
 </body>
 </html>

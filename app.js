@@ -22,7 +22,7 @@
   function renderTargets() {
     $("targetList").innerHTML = S.list.map((t, k) =>
       `<li><button data-id="${t.id}"><span class="lvl">${k + 1}</span><span>${t.name}</span><span class="sub">${t.teaser}</span></button></li>`).join("");
-    $("targetList").querySelectorAll("button").forEach((b) => b.onclick = () => load(b.dataset.id));
+    $("targetList").querySelectorAll("button").forEach((b) => b.onclick = () => { selectTab("flip"); load(b.dataset.id); });
   }
 
   async function load(id, ch) {
@@ -461,14 +461,19 @@
     selectTab("map");
     try { await initMap(); mapGoTo(ra, dec, label); } catch (e) { $("coordMsg").textContent = "Sky map unavailable: " + e.message; }
   }
-  function selectTab(which) {
-    const map = which === "map";
-    $("flipView").hidden = map; $("mapView").hidden = !map;
-    $("tabFlip").classList.toggle("on", !map); $("tabMap").classList.toggle("on", map);
-    $("tabFlip").setAttribute("aria-selected", !map); $("tabMap").setAttribute("aria-selected", map);
-    if (map) stop();
+  function selectTab(which, starKey) {
+    const views = { flip: ["flipView", "tabFlip"], map: ["mapView", "tabMap"], stars: ["starView", "tabStars"] };
+    for (const [k, [view, tab]] of Object.entries(views)) {
+      $(view).hidden = k !== which; $(tab).classList.toggle("on", k === which); $(tab).setAttribute("aria-selected", k === which);
+    }
+    $("meta").hidden = which === "stars";
+    document.body.classList.toggle("stars-mode", which === "stars");
+    if (which !== "flip") stop();
+    if (which === "stars" && window.StarsTab) window.StarsTab.open(starKey);
   }
+  window.WANDERERS = { selectTab, openTarget: (id) => { selectTab("flip"); load(id); } };
   $("tabFlip").onclick = () => selectTab("flip");
+  $("tabStars").onclick = () => selectTab("stars");
   $("tabMap").onclick = async () => { selectTab("map"); try { await initMap(); mapGoTo(); } catch (e) { $("coordMsg").textContent = "Sky map unavailable: " + e.message; } };
   $("lam").oninput = (e) => setSlice(+e.target.value);
   $("mapSurvey").onchange = (e) => {
