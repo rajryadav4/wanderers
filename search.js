@@ -58,12 +58,13 @@
     let kind = "";
     if (/^sd/.test(sp)) kind = "subdwarf (old, metal-poor star)";
     else if (/^D/.test(sp)) kind = "white dwarf (the leftover core of a dead star)";
-    else if (/(Ia|Iab|Ib|I)(?![IV])/.test(sp.replace(/^[OBAFGKMLTY][0-9.]*/, ""))) kind = "supergiant";
+    else if (/(?<![IV])(Ia|Iab|Ib|I)(?![IV])/.test(sp.replace(/^[OBAFGKMLTY][0-9.]*/, ""))) kind = "supergiant";   // a lone I, not part of II/III/IV
     else if (/III/.test(sp)) kind = "giant";
+    else if (/II/.test(sp)) kind = "bright giant";
     else if (/IV/.test(sp)) kind = "subgiant";
     else if (/V/.test(sp)) kind = "main-sequence star (burning hydrogen, like the Sun)";
     if (COLOUR[cls]) out.push(`Colour ${COLOUR[cls][0]}, surface about ${COLOUR[cls][1]}${kind ? `: a ${kind}` : ""} (spectral type ${sp}).`);
-    else if (sp) out.push(`Spectral type ${sp}.`);
+    else if (sp) out.push(`Spectral type ${sp}${kind ? `: a ${kind}` : ""}.`);
     if (s.mag != null) out.push(s.mag <= 1 ? `One of the brightest stars in the sky (magnitude ${s.mag}).`
       : s.mag <= 6 ? `Visible to the naked eye (magnitude ${s.mag}).` : `Too faint for the naked eye (magnitude ${s.mag}); binoculars or a telescope needed.`);
     if (s.dist) {
@@ -76,10 +77,11 @@
     return out;
   }
 
-  const hms = (deg) => { const h = deg / 15, H = Math.floor(h), m = (h - H) * 60, M = Math.floor(m);
-    return `${String(H).padStart(2, "0")}h${String(M).padStart(2, "0")}m${((m - M) * 60).toFixed(1).padStart(4, "0")}s`; };
-  const dms = (deg) => { const a = Math.abs(deg), D = Math.floor(a), m = (a - D) * 60, M = Math.floor(m);
-    return `${deg < 0 ? "-" : "+"}${String(D).padStart(2, "0")}d${String(M).padStart(2, "0")}m${Math.round((m - M) * 60).toString().padStart(2, "0")}s`; };
+  // round first, then split, so 59.97 s carries into the minute instead of showing "60s"
+  const hms = (deg) => { const t = Math.round(deg / 15 * 36000) % 864000, H = Math.floor(t / 36000), M = Math.floor(t / 600) % 60;
+    return `${String(H).padStart(2, "0")}h${String(M).padStart(2, "0")}m${((t % 600) / 10).toFixed(1).padStart(4, "0")}s`; };
+  const dms = (deg) => { const t = Math.round(Math.abs(deg) * 3600), D = Math.floor(t / 3600), M = Math.floor(t / 60) % 60;
+    return `${deg < 0 ? "-" : "+"}${String(D).padStart(2, "0")}d${String(M).padStart(2, "0")}m${String(t % 60).padStart(2, "0")}s`; };
 
   // wire an <input> to a suggestion list; onPick(star) is called with the chosen star
   function attach(input, list, onPick) {
