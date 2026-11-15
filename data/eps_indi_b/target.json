@@ -18,8 +18,8 @@
  "grid": {
   "npix": 150,
   "arcsec_per_pix": 2.0,
-  "centre_ra": 331.08130021002296,
-  "centre_dec": -56.795456555579975
+  "centre_ra": 331.08174380474514,
+  "centre_dec": -56.795607022629646
  },
  "frames": {
   "w2": [
@@ -29,7 +29,7 @@
     "mission": "WISE",
     "png": "w2_wise2010.png",
     "detected": true,
-    "snr": 707.8,
+    "snr": 682.9,
     "obs": {
      "mission": "WISE",
      "instrument": "WISE W2 band \u00b7 AllWISE atlas image",
@@ -65,7 +65,7 @@
     "png": "w2_neowise_00.png",
     "n_images": 10,
     "detected": true,
-    "snr": 691.4,
+    "snr": 777.9,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -101,7 +101,7 @@
     "png": "w2_neowise_01.png",
     "n_images": 10,
     "detected": true,
-    "snr": 872.3,
+    "snr": 920.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -137,7 +137,7 @@
     "png": "w2_neowise_02.png",
     "n_images": 10,
     "detected": true,
-    "snr": 710.6,
+    "snr": 718.9,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -173,7 +173,7 @@
     "png": "w2_neowise_03.png",
     "n_images": 10,
     "detected": true,
-    "snr": 795.1,
+    "snr": 968.3,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -209,7 +209,7 @@
     "png": "w2_neowise_04.png",
     "n_images": 10,
     "detected": true,
-    "snr": 1017.1,
+    "snr": 1005.6,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -245,7 +245,7 @@
     "png": "w2_neowise_05.png",
     "n_images": 10,
     "detected": true,
-    "snr": 1071.1,
+    "snr": 1109.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -281,7 +281,7 @@
     "png": "w2_neowise_06.png",
     "n_images": 10,
     "detected": true,
-    "snr": 914.4,
+    "snr": 1020.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -317,7 +317,7 @@
     "png": "w2_neowise_07.png",
     "n_images": 10,
     "detected": true,
-    "snr": 799.3,
+    "snr": 794.3,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -353,7 +353,7 @@
     "png": "w2_neowise_08.png",
     "n_images": 10,
     "detected": true,
-    "snr": 731.1,
+    "snr": 795.6,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -389,7 +389,7 @@
     "png": "w2_neowise_09.png",
     "n_images": 10,
     "detected": true,
-    "snr": 972.6,
+    "snr": 980.5,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -425,7 +425,7 @@
     "png": "w2_neowise_10.png",
     "n_images": 10,
     "detected": true,
-    "snr": 730.3,
+    "snr": 750.4,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -461,7 +461,7 @@
     "png": "w2_neowise_11.png",
     "n_images": 10,
     "detected": true,
-    "snr": 1010.2,
+    "snr": 1039.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -497,7 +497,7 @@
     "png": "w2_neowise_12.png",
     "n_images": 10,
     "detected": true,
-    "snr": 732.1,
+    "snr": 722.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -533,7 +533,7 @@
     "png": "w2_neowise_13.png",
     "n_images": 10,
     "detected": true,
-    "snr": 860.0,
+    "snr": 929.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -569,7 +569,7 @@
     "png": "w2_neowise_14.png",
     "n_images": 10,
     "detected": true,
-    "snr": 680.0,
+    "snr": 739.3,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -605,7 +605,7 @@
     "png": "w2_neowise_15.png",
     "n_images": 10,
     "detected": true,
-    "snr": 791.7,
+    "snr": 807.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -641,7 +641,7 @@
     "png": "w2_neowise_16.png",
     "n_images": 10,
     "detected": true,
-    "snr": 703.8,
+    "snr": 817.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -677,7 +677,7 @@
     "png": "w2_neowise_17.png",
     "n_images": 10,
     "detected": true,
-    "snr": 764.6,
+    "snr": 753.6,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -713,7 +713,7 @@
     "png": "w2_neowise_18.png",
     "n_images": 10,
     "detected": true,
-    "snr": 614.8,
+    "snr": 581.9,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -749,7 +749,7 @@
     "png": "w2_neowise_19.png",
     "n_images": 10,
     "detected": true,
-    "snr": 938.5,
+    "snr": 918.3,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -785,7 +785,7 @@
     "png": "w2_neowise_20.png",
     "n_images": 10,
     "detected": true,
-    "snr": 733.9,
+    "snr": 729.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1118,12 +1118,12 @@
    },
    {
     "year": 2025.7435164175092,
-    "label": "SPHEREx Sep 2025",
+    "label": "SPHEREx 29 Sep 2025",
     "mission": "SPHEREx",
-    "png": "w2_spherex_v2.png",
+    "png": "w2_spherex_v2_1.png",
     "n_images": 9,
+    "survey": 2,
     "detected": true,
-    "snr": 142.7,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D6 (MWIR array)",
@@ -1160,6 +1160,140 @@
      "verdict": "good",
      "reason": "The target pixel is clean in all 9 images; 2 have a flagged or blank pixel nearby."
     }
+   },
+   {
+    "year": 2025.8342101012977,
+    "label": "SPHEREx 01 Nov 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2_2.png",
+    "n_images": 1,
+    "survey": 2,
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.508,
+      4.508
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-11-01 10:41",
+     "end": "2025-11-01 10:41",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {},
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 27,
+     "bad_px_worst": 0,
+     "images_with_bad_px": 0,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "No flagged or blank pixel within 3 pixels of the target."
+    }
+   },
+   {
+    "year": 2026.324068799373,
+    "label": "SPHEREx Apr 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3.png",
+    "n_images": 3,
+    "detected": true,
+    "snr": 136.9,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.56,
+      4.833
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-04-29 03:54",
+     "end": "2026-04-29 13:38",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 32,
+     "bad_px_worst": 1,
+     "images_with_bad_px": 1,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "The target pixel is clean in all 3 images; 1 has a flagged or blank pixel nearby."
+    }
+   },
+   {
+    "year": 2026.733046788173,
+    "label": "SPHEREx Sep 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v4.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 254.7,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.408,
+      4.969
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-09-22 05:29",
+     "end": "2026-09-28 08:05",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "PERSIST": 1,
+      "TRANSIENT": 2,
+      "NONFUNC": 2,
+      "HALO": 1
+     },
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 29,
+     "bad_px_worst": 7,
+     "images_with_bad_px": 4,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "The target pixel is clean in all 10 images; 4 have a flagged or blank pixel nearby."
+    }
    }
   ],
   "w1": [
@@ -1169,7 +1303,7 @@
     "mission": "WISE",
     "png": "w1_wise2010.png",
     "detected": true,
-    "snr": 804.7,
+    "snr": 769.4,
     "obs": {
      "mission": "WISE",
      "instrument": "WISE W1 band \u00b7 AllWISE atlas image",
@@ -1205,7 +1339,7 @@
     "png": "w1_neowise_00.png",
     "n_images": 10,
     "detected": true,
-    "snr": 798.4,
+    "snr": 866.4,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1241,7 +1375,7 @@
     "png": "w1_neowise_01.png",
     "n_images": 10,
     "detected": true,
-    "snr": 1139.0,
+    "snr": 1263.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1277,7 +1411,7 @@
     "png": "w1_neowise_02.png",
     "n_images": 10,
     "detected": true,
-    "snr": 751.9,
+    "snr": 787.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1313,7 +1447,7 @@
     "png": "w1_neowise_03.png",
     "n_images": 10,
     "detected": true,
-    "snr": 994.4,
+    "snr": 1189.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1349,7 +1483,7 @@
     "png": "w1_neowise_04.png",
     "n_images": 10,
     "detected": true,
-    "snr": 1113.0,
+    "snr": 1093.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1385,7 +1519,7 @@
     "png": "w1_neowise_05.png",
     "n_images": 10,
     "detected": true,
-    "snr": 976.4,
+    "snr": 1053.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1421,7 +1555,7 @@
     "png": "w1_neowise_06.png",
     "n_images": 10,
     "detected": true,
-    "snr": 929.8,
+    "snr": 1022.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1457,7 +1591,7 @@
     "png": "w1_neowise_07.png",
     "n_images": 10,
     "detected": true,
-    "snr": 823.8,
+    "snr": 820.8,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1493,7 +1627,7 @@
     "png": "w1_neowise_08.png",
     "n_images": 10,
     "detected": true,
-    "snr": 928.7,
+    "snr": 1061.4,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1529,7 +1663,7 @@
     "png": "w1_neowise_09.png",
     "n_images": 10,
     "detected": true,
-    "snr": 998.4,
+    "snr": 1017.8,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1565,7 +1699,7 @@
     "png": "w1_neowise_10.png",
     "n_images": 10,
     "detected": true,
-    "snr": 818.1,
+    "snr": 841.4,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1601,7 +1735,7 @@
     "png": "w1_neowise_11.png",
     "n_images": 10,
     "detected": true,
-    "snr": 783.5,
+    "snr": 897.5,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1637,7 +1771,7 @@
     "png": "w1_neowise_12.png",
     "n_images": 10,
     "detected": true,
-    "snr": 963.2,
+    "snr": 902.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1673,7 +1807,7 @@
     "png": "w1_neowise_13.png",
     "n_images": 10,
     "detected": true,
-    "snr": 892.6,
+    "snr": 896.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1709,7 +1843,7 @@
     "png": "w1_neowise_14.png",
     "n_images": 10,
     "detected": true,
-    "snr": 857.1,
+    "snr": 888.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1745,7 +1879,7 @@
     "png": "w1_neowise_15.png",
     "n_images": 10,
     "detected": true,
-    "snr": 947.5,
+    "snr": 913.5,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1781,7 +1915,7 @@
     "png": "w1_neowise_16.png",
     "n_images": 10,
     "detected": true,
-    "snr": 825.1,
+    "snr": 931.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1817,7 +1951,7 @@
     "png": "w1_neowise_17.png",
     "n_images": 10,
     "detected": true,
-    "snr": 831.7,
+    "snr": 804.1,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1853,7 +1987,7 @@
     "png": "w1_neowise_18.png",
     "n_images": 10,
     "detected": true,
-    "snr": 671.0,
+    "snr": 682.1,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1889,7 +2023,7 @@
     "png": "w1_neowise_19.png",
     "n_images": 10,
     "detected": true,
-    "snr": 750.6,
+    "snr": 790.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1925,7 +2059,7 @@
     "png": "w1_neowise_20.png",
     "n_images": 10,
     "detected": true,
-    "snr": 844.9,
+    "snr": 818.8,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -1961,7 +2095,7 @@
     "png": "w1_spherex_v1.png",
     "n_images": 2,
     "detected": true,
-    "snr": 1495.5,
+    "snr": 1470.6,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D4 (MWIR array)",
@@ -2225,11 +2359,11 @@
     }
    },
    {
-    "year": 2026.3034435434286,
+    "year": 2026.3034892872163,
     "label": "SPHEREx 21 Apr 2026",
     "mission": "SPHEREx",
     "png": "w1_spherex_v3_2.png",
-    "n_images": 3,
+    "n_images": 4,
     "survey": 3,
     "detected": true,
     "obs": {
@@ -2244,11 +2378,11 @@
      ],
      "lam_um": [
       3.127,
-      3.39
+      3.574
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2026-04-21 19:56",
-     "end": "2026-04-21 20:02",
+     "end": "2026-04-21 21:35",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
@@ -2256,13 +2390,54 @@
      "flag_counts": {},
      "pixel_flag_counts": {},
      "n_saturated": 0,
-     "aperture_px": 28,
+     "aperture_px": 32,
      "bad_px_worst": 0,
      "images_with_bad_px": 0,
      "n_poor": 0,
      "n_dqa_fail": 0,
      "verdict": "good",
-     "reason": "No flagged or blank pixel within 3 pixels of the target in any of the 3 images."
+     "reason": "No flagged or blank pixel within 3 pixels of the target in any of the 4 images."
+    }
+   },
+   {
+    "year": 2026.3359844308418,
+    "label": "SPHEREx 03 May 2026",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v3_3.png",
+    "n_images": 1,
+    "survey": 3,
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      3.643,
+      3.643
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-03 17:14",
+     "end": "2026-05-03 17:14",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {},
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 30,
+     "bad_px_worst": 0,
+     "images_with_bad_px": 0,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "No flagged or blank pixel within 3 pixels of the target."
     }
    }
   ],
@@ -2355,11 +2530,11 @@
     }
    },
    {
-    "year": 2026.2952668101425,
+    "year": 2026.304301620467,
     "label": "SPHEREx Apr 2026",
     "mission": "SPHEREx",
     "png": "d1_spherex_v3.png",
-    "n_images": 2,
+    "n_images": 10,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D1 (SWIR array)",
@@ -2371,26 +2546,28 @@
       1.09
      ],
      "lam_um": [
-      1.066,
+      0.792,
       1.092
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2026-04-18 20:17",
-     "end": "2026-04-18 20:19",
+     "end": "2026-05-03 17:14",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
      "flags_checked": true,
-     "flag_counts": {},
+     "flag_counts": {
+      "HALO": 2
+     },
      "pixel_flag_counts": {},
      "n_saturated": 0,
-     "aperture_px": 29,
-     "bad_px_worst": 0,
-     "images_with_bad_px": 0,
+     "aperture_px": 27,
+     "bad_px_worst": 5,
+     "images_with_bad_px": 2,
      "n_poor": 0,
      "n_dqa_fail": 0,
      "verdict": "good",
-     "reason": "No flagged or blank pixel within 3 pixels of the target in any of the 2 images."
+     "reason": "The target pixel is clean in all 10 images; 2 have a flagged or blank pixel nearby."
     }
    }
   ],
@@ -2440,6 +2617,134 @@
      "n_dqa_fail": 0,
      "verdict": "good",
      "reason": "1 of 32 images is unusable at the target (1 flagged): fewer than a quarter, the others are clean at the target."
+    }
+   },
+   {
+    "year": 2025.7854256436206,
+    "label": "SPHEREx Oct 2025",
+    "mission": "SPHEREx",
+    "png": "d2_spherex_v2.png",
+    "n_images": 8,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D2 (SWIR array)",
+     "detectors": [
+      2
+     ],
+     "band_um": [
+      1.1,
+      1.62
+     ],
+     "lam_um": [
+      1.161,
+      1.47
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-10-02 00:27",
+     "end": "2025-11-08 08:58",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 5,
+      "SUR_ERROR": 3,
+      "HALO": 4,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "HALO": 3
+     },
+     "n_saturated": 0,
+     "aperture_px": 28,
+     "bad_px_worst": 23,
+     "images_with_bad_px": 5,
+     "n_poor": 3,
+     "n_dqa_fail": 0,
+     "verdict": "caution",
+     "reason": "3 of 8 images are unusable at the target (3 flagged)."
+    }
+   },
+   {
+    "year": 2026.3123750864368,
+    "label": "SPHEREx Apr 2026",
+    "mission": "SPHEREx",
+    "png": "d2_spherex_v3.png",
+    "n_images": 1,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D2 (SWIR array)",
+     "detectors": [
+      2
+     ],
+     "band_um": [
+      1.1,
+      1.62
+     ],
+     "lam_um": [
+      1.368,
+      1.368
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-04-25 02:16",
+     "end": "2026-04-25 02:16",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {},
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 29,
+     "bad_px_worst": 0,
+     "images_with_bad_px": 0,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "No flagged or blank pixel within 3 pixels of the target."
+    }
+   },
+   {
+    "year": 2026.7469149903548,
+    "label": "SPHEREx Sep 2026",
+    "mission": "SPHEREx",
+    "png": "d2_spherex_v4.png",
+    "n_images": 7,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D2 (SWIR array)",
+     "detectors": [
+      2
+     ],
+     "band_um": [
+      1.1,
+      1.62
+     ],
+     "lam_um": [
+      1.094,
+      1.488
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-09-28 03:11",
+     "end": "2026-10-02 11:29",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "HALO": 1
+     },
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 28,
+     "bad_px_worst": 1,
+     "images_with_bad_px": 1,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "The target pixel is clean in all 7 images; 1 has a flagged or blank pixel nearby."
     }
    }
   ],
@@ -2494,11 +2799,11 @@
     }
    },
    {
-    "year": 2025.7434285493591,
-    "label": "SPHEREx Sep 2025",
+    "year": 2025.7543427707178,
+    "label": "SPHEREx Oct 2025",
     "mission": "SPHEREx",
     "png": "d3_spherex_v2.png",
-    "n_images": 8,
+    "n_images": 9,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D3 (SWIR array)",
@@ -2515,7 +2820,7 @@
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2025-09-28 23:09",
-     "end": "2025-09-29 13:47",
+     "end": "2025-11-04 03:57",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
@@ -2529,7 +2834,93 @@
      "n_poor": 0,
      "n_dqa_fail": 0,
      "verdict": "good",
-     "reason": "No flagged or blank pixel within 3 pixels of the target in any of the 8 images."
+     "reason": "No flagged or blank pixel within 3 pixels of the target in any of the 9 images."
+    }
+   },
+   {
+    "year": 2026.3256854531426,
+    "label": "SPHEREx Apr 2026",
+    "mission": "SPHEREx",
+    "png": "d3_spherex_v3.png",
+    "n_images": 3,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D3 (SWIR array)",
+     "detectors": [
+      3
+     ],
+     "band_um": [
+      1.63,
+      2.41
+     ],
+     "lam_um": [
+      1.644,
+      2.22
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-04-29 05:35",
+     "end": "2026-05-01 06:27",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "HALO": 1
+     },
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 28,
+     "bad_px_worst": 3,
+     "images_with_bad_px": 1,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "The target pixel is clean in all 3 images; 1 has a flagged or blank pixel nearby."
+    }
+   },
+   {
+    "year": 2026.7337013518093,
+    "label": "SPHEREx Sep 2026",
+    "mission": "SPHEREx",
+    "png": "d3_spherex_v4.png",
+    "n_images": 9,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D3 (SWIR array)",
+     "detectors": [
+      3
+     ],
+     "band_um": [
+      1.63,
+      2.41
+     ],
+     "lam_um": [
+      1.724,
+      2.313
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-09-22 05:32",
+     "end": "2026-09-28 08:05",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "HALO": 1
+     },
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 29,
+     "bad_px_worst": 13,
+     "images_with_bad_px": 1,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "The target pixel is clean in all 9 images; 1 has a flagged or blank pixel nearby."
     }
    }
   ],
@@ -2630,11 +3021,11 @@
     }
    },
    {
-    "year": 2026.3012858943334,
+    "year": 2026.304989810409,
     "label": "SPHEREx Apr 2026",
     "mission": "SPHEREx",
     "png": "d4_spherex_v3.png",
-    "n_images": 8,
+    "n_images": 10,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D4 (MWIR array)",
@@ -2651,7 +3042,7 @@
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2026-04-18 20:19",
-     "end": "2026-04-21 20:02",
+     "end": "2026-05-03 17:14",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
@@ -2670,7 +3061,7 @@
      "n_poor": 0,
      "n_dqa_fail": 0,
      "verdict": "good",
-     "reason": "The target pixel is clean in all 8 images; 3 have a flagged or blank pixel nearby."
+     "reason": "The target pixel is clean in all 10 images; 3 have a flagged or blank pixel nearby."
     }
    }
   ],
@@ -2724,6 +3115,137 @@
      "verdict": "good",
      "reason": "3 of 30 images are unusable at the target (3 flagged): fewer than a quarter, the others are clean at the target."
     }
+   },
+   {
+    "year": 2025.7791736684765,
+    "label": "SPHEREx Oct 2025",
+    "mission": "SPHEREx",
+    "png": "d5_spherex_v2.png",
+    "n_images": 7,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D5 (MWIR array)",
+     "detectors": [
+      5
+     ],
+     "band_um": [
+      3.83,
+      4.41
+     ],
+     "lam_um": [
+      3.831,
+      4.248
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-10-02 00:31",
+     "end": "2025-11-07 23:11",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 3,
+      "SUR_ERROR": 2,
+      "NONFUNC": 2,
+      "HALO": 3
+     },
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 28,
+     "bad_px_worst": 7,
+     "images_with_bad_px": 4,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "caution",
+     "reason": "4 of 7 images have flagged or blank pixels within 3 pixels of the target."
+    }
+   },
+   {
+    "year": 2026.3198914902025,
+    "label": "SPHEREx Apr 2026",
+    "mission": "SPHEREx",
+    "png": "d5_spherex_v3.png",
+    "n_images": 2,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D5 (MWIR array)",
+     "detectors": [
+      5
+     ],
+     "band_um": [
+      3.83,
+      4.41
+     ],
+     "lam_um": [
+      4.068,
+      4.32
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-04-25 02:12",
+     "end": "2026-04-30 14:07",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {},
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 29,
+     "bad_px_worst": 0,
+     "images_with_bad_px": 0,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "No flagged or blank pixel within 3 pixels of the target in any of the 2 images."
+    }
+   },
+   {
+    "year": 2026.7478460489674,
+    "label": "SPHEREx Oct 2026",
+    "mission": "SPHEREx",
+    "png": "d5_spherex_v4.png",
+    "n_images": 7,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D5 (MWIR array)",
+     "detectors": [
+      5
+     ],
+     "band_um": [
+      3.83,
+      4.41
+     ],
+     "lam_um": [
+      3.948,
+      4.378
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-09-29 19:58",
+     "end": "2026-10-02 11:29",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 2,
+      "SUR_ERROR": 1,
+      "NONFUNC": 1,
+      "COLD": 1,
+      "HALO": 2
+     },
+     "pixel_flag_counts": {
+      "TRANSIENT": 1,
+      "HALO": 1
+     },
+     "n_saturated": 0,
+     "aperture_px": 27,
+     "bad_px_worst": 5,
+     "images_with_bad_px": 3,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "1 of 7 images is unusable at the target (1 flagged): fewer than a quarter, the others are clean at the target."
+    }
    }
   ],
   "d6": [
@@ -2776,11 +3298,11 @@
     }
    },
    {
-    "year": 2025.7435164175092,
-    "label": "SPHEREx Sep 2025",
+    "year": 2025.752585785888,
+    "label": "SPHEREx Oct 2025",
     "mission": "SPHEREx",
     "png": "d6_spherex_v2.png",
-    "n_images": 9,
+    "n_images": 10,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D6 (MWIR array)",
@@ -2797,7 +3319,7 @@
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2025-09-28 23:09",
-     "end": "2025-09-29 13:49",
+     "end": "2025-11-01 10:41",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
@@ -2815,7 +3337,96 @@
      "n_poor": 0,
      "n_dqa_fail": 0,
      "verdict": "good",
-     "reason": "The target pixel is clean in all 9 images; 2 have a flagged or blank pixel nearby."
+     "reason": "The target pixel is clean in all 10 images; 2 have a flagged or blank pixel nearby."
+    }
+   },
+   {
+    "year": 2026.324068799373,
+    "label": "SPHEREx Apr 2026",
+    "mission": "SPHEREx",
+    "png": "d6_spherex_v3.png",
+    "n_images": 3,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.56,
+      4.833
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-04-29 03:54",
+     "end": "2026-04-29 13:38",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 32,
+     "bad_px_worst": 1,
+     "images_with_bad_px": 1,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "The target pixel is clean in all 3 images; 1 has a flagged or blank pixel nearby."
+    }
+   },
+   {
+    "year": 2026.733046788173,
+    "label": "SPHEREx Sep 2026",
+    "mission": "SPHEREx",
+    "png": "d6_spherex_v4.png",
+    "n_images": 10,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.408,
+      4.969
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-09-22 05:29",
+     "end": "2026-09-28 08:05",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "PERSIST": 1,
+      "TRANSIENT": 2,
+      "NONFUNC": 2,
+      "HALO": 1
+     },
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 29,
+     "bad_px_worst": 7,
+     "images_with_bad_px": 4,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "The target pixel is clean in all 10 images; 4 have a flagged or blank pixel nearby."
     }
    }
   ],
@@ -2839,41 +3450,41 @@
       "det": 1,
       "n_images": 4,
       "background": 1.21,
-      "noise": 0.4579
+      "noise": 0.4583
      },
      {
       "det": 2,
       "n_images": 32,
-      "background": 0.2672,
-      "noise": 0.0489
+      "background": 0.2668,
+      "noise": 0.04862
      },
      {
       "det": 3,
       "n_images": 28,
-      "background": 0.2146,
-      "noise": 0.04631
+      "background": 0.2147,
+      "noise": 0.04644
      },
      {
       "det": 4,
       "n_images": 4,
       "background": 0.1397,
-      "noise": 0.01684
+      "noise": 0.01683
      },
      {
       "det": 5,
       "n_images": 30,
-      "background": 0.1931,
-      "noise": 0.01632
+      "background": 0.193,
+      "noise": 0.01631
      },
      {
       "det": 6,
       "n_images": 24,
-      "background": 0.3469,
-      "noise": 0.01866
+      "background": 0.3468,
+      "noise": 0.01855
      }
     ],
     "detected": true,
-    "snr": 1289.7,
+    "snr": 1233.7,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detectors D1, D2, D3, D4, D5, D6",
@@ -2934,52 +3545,68 @@
     }
    },
    {
-    "year": 2025.7710742428405,
+    "year": 2025.7756988692483,
     "label": "SPHEREx Oct 2025",
     "mission": "SPHEREx",
     "png": "all_spherex_v2.png",
-    "n_images": 49,
+    "n_images": 66,
     "detectors": [
      1,
+     2,
      3,
      4,
+     5,
      6
     ],
     "normalisation": [
      {
       "det": 1,
       "n_images": 19,
-      "background": 0.3682,
-      "noise": 0.08774
+      "background": 0.3676,
+      "noise": 0.08736
+     },
+     {
+      "det": 2,
+      "n_images": 8,
+      "background": 0.2849,
+      "noise": 0.03951
      },
      {
       "det": 3,
-      "n_images": 8,
-      "background": 0.197,
-      "noise": 0.02784
+      "n_images": 9,
+      "background": 0.1971,
+      "noise": 0.02598
      },
      {
       "det": 4,
       "n_images": 13,
-      "background": 0.1383,
-      "noise": 0.02144
+      "background": 0.1382,
+      "noise": 0.02142
+     },
+     {
+      "det": 5,
+      "n_images": 7,
+      "background": 0.194,
+      "noise": 0.02436
      },
      {
       "det": 6,
-      "n_images": 9,
-      "background": 0.3409,
-      "noise": 0.02497
+      "n_images": 10,
+      "background": 0.3483,
+      "noise": 0.0238
      }
     ],
     "detected": true,
-    "snr": 264.2,
+    "snr": 439.5,
     "obs": {
      "mission": "SPHEREx",
-     "instrument": "SPHEREx detectors D1, D3, D4, D6",
+     "instrument": "SPHEREx detectors D1, D2, D3, D4, D5, D6",
      "detectors": [
       1,
+      2,
       3,
       4,
+      5,
       6
      ],
      "band_um": [
@@ -2998,98 +3625,231 @@
     "quality": {
      "flags_checked": true,
      "flag_counts": {
-      "TRANSIENT": 15,
-      "SUR_ERROR": 10,
-      "HALO": 17,
+      "TRANSIENT": 23,
+      "SUR_ERROR": 15,
+      "HALO": 24,
       "PERSIST": 1,
-      "COLD": 1,
-      "NONFUNC": 4
+      "NONFUNC": 7,
+      "COLD": 1
      },
      "pixel_flag_counts": {
-      "HALO": 2
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "HALO": 5
      },
      "n_saturated": 0,
-     "aperture_px": 29,
-     "bad_px_worst": 22,
-     "images_with_bad_px": 20,
-     "n_poor": 2,
+     "aperture_px": 28,
+     "bad_px_worst": 23,
+     "images_with_bad_px": 29,
+     "n_poor": 5,
      "n_dqa_fail": 0,
-     "verdict": "good",
-     "reason": "1 of 4 detector co-adds needs caution (D4); the rest are good.",
+     "verdict": "caution",
+     "reason": "3 of 6 detector co-adds need caution (D2, D4, D5).",
      "detector_verdicts": {
       "1": "good",
+      "2": "caution",
       "3": "good",
       "4": "caution",
+      "5": "caution",
       "6": "good"
      }
     }
    },
    {
-    "year": 2026.3000820774953,
+    "year": 2026.31014948735,
     "label": "SPHEREx Apr 2026",
     "mission": "SPHEREx",
     "png": "all_spherex_v3.png",
-    "n_images": 10,
+    "n_images": 29,
     "detectors": [
      1,
-     4
+     2,
+     3,
+     4,
+     5,
+     6
     ],
     "normalisation": [
      {
       "det": 1,
-      "n_images": 2,
-      "background": 1.265,
-      "noise": 0.1006
+      "n_images": 10,
+      "background": 0.3876,
+      "noise": 0.09729
+     },
+     {
+      "det": 2,
+      "n_images": 1,
+      "background": 0.2519,
+      "noise": 0.03271
+     },
+     {
+      "det": 3,
+      "n_images": 3,
+      "background": 0.2161,
+      "noise": 0.0514
      },
      {
       "det": 4,
-      "n_images": 8,
-      "background": 0.1296,
-      "noise": 0.01865
+      "n_images": 10,
+      "background": 0.1284,
+      "noise": 0.01693
+     },
+     {
+      "det": 5,
+      "n_images": 2,
+      "background": 0.2335,
+      "noise": 0.02545
+     },
+     {
+      "det": 6,
+      "n_images": 3,
+      "background": 0.4925,
+      "noise": 0.03674
      }
     ],
     "detected": true,
-    "snr": 505.4,
+    "snr": 691.0,
     "obs": {
      "mission": "SPHEREx",
-     "instrument": "SPHEREx detectors D1, D4",
+     "instrument": "SPHEREx detectors D1, D2, D3, D4, D5, D6",
      "detectors": [
       1,
-      4
+      2,
+      3,
+      4,
+      5,
+      6
      ],
      "band_um": [
       0.75,
-      3.82
+      5.0
      ],
      "lam_um": [
-      1.066,
-      3.741
+      0.792,
+      4.833
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2026-04-18 20:17",
-     "end": "2026-04-21 20:02",
+     "end": "2026-05-03 17:14",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
      "flags_checked": true,
      "flag_counts": {
-      "TRANSIENT": 3,
-      "SUR_ERROR": 1,
-      "NONFUNC": 1,
-      "HALO": 2
+      "HALO": 5,
+      "TRANSIENT": 5,
+      "SUR_ERROR": 3,
+      "NONFUNC": 2
      },
      "pixel_flag_counts": {},
      "n_saturated": 0,
      "aperture_px": 27,
      "bad_px_worst": 14,
-     "images_with_bad_px": 3,
+     "images_with_bad_px": 7,
      "n_poor": 0,
      "n_dqa_fail": 0,
      "verdict": "good",
-     "reason": "All 2 detector co-adds are good at the target.",
+     "reason": "All 6 detector co-adds are good at the target.",
      "detector_verdicts": {
       "1": "good",
-      "4": "good"
+      "2": "good",
+      "3": "good",
+      "4": "good",
+      "5": "good",
+      "6": "good"
+     }
+    }
+   },
+   {
+    "year": 2026.7393062825233,
+    "label": "SPHEREx Sep 2026",
+    "mission": "SPHEREx",
+    "png": "all_spherex_v4.png",
+    "n_images": 33,
+    "detectors": [
+     2,
+     3,
+     5,
+     6
+    ],
+    "normalisation": [
+     {
+      "det": 2,
+      "n_images": 7,
+      "background": 0.2585,
+      "noise": 0.03669
+     },
+     {
+      "det": 3,
+      "n_images": 9,
+      "background": 0.19,
+      "noise": 0.0301
+     },
+     {
+      "det": 5,
+      "n_images": 7,
+      "background": 0.1989,
+      "noise": 0.02272
+     },
+     {
+      "det": 6,
+      "n_images": 10,
+      "background": 0.35,
+      "noise": 0.02712
+     }
+    ],
+    "detected": true,
+    "snr": 1005.9,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detectors D2, D3, D5, D6",
+     "detectors": [
+      2,
+      3,
+      5,
+      6
+     ],
+     "band_um": [
+      1.1,
+      5.0
+     ],
+     "lam_um": [
+      1.094,
+      4.969
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-09-22 05:29",
+     "end": "2026-10-02 11:29",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "HALO": 5,
+      "TRANSIENT": 5,
+      "SUR_ERROR": 3,
+      "NONFUNC": 3,
+      "COLD": 1,
+      "OVERFLOW": 1,
+      "PERSIST": 1
+     },
+     "pixel_flag_counts": {
+      "TRANSIENT": 1,
+      "HALO": 1
+     },
+     "n_saturated": 0,
+     "aperture_px": 29,
+     "bad_px_worst": 13,
+     "images_with_bad_px": 9,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "All 4 detector co-adds are good at the target.",
+     "detector_verdicts": {
+      "2": "good",
+      "3": "good",
+      "5": "good",
+      "6": "good"
      }
     }
    }
@@ -3114,7 +3874,7 @@
     "mission": "WISE",
     "png": "w2_wise2010.png",
     "detected": true,
-    "snr": 707.8,
+    "snr": 682.9,
     "obs": {
      "mission": "WISE",
      "instrument": "WISE W2 band \u00b7 AllWISE atlas image",
@@ -3150,7 +3910,7 @@
     "png": "w2_neowise_00.png",
     "n_images": 10,
     "detected": true,
-    "snr": 691.4,
+    "snr": 777.9,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3186,7 +3946,7 @@
     "png": "w2_neowise_01.png",
     "n_images": 10,
     "detected": true,
-    "snr": 872.3,
+    "snr": 920.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3222,7 +3982,7 @@
     "png": "w2_neowise_02.png",
     "n_images": 10,
     "detected": true,
-    "snr": 710.6,
+    "snr": 718.9,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3258,7 +4018,7 @@
     "png": "w2_neowise_03.png",
     "n_images": 10,
     "detected": true,
-    "snr": 795.1,
+    "snr": 968.3,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3294,7 +4054,7 @@
     "png": "w2_neowise_04.png",
     "n_images": 10,
     "detected": true,
-    "snr": 1017.1,
+    "snr": 1005.6,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3330,7 +4090,7 @@
     "png": "w2_neowise_05.png",
     "n_images": 10,
     "detected": true,
-    "snr": 1071.1,
+    "snr": 1109.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3366,7 +4126,7 @@
     "png": "w2_neowise_06.png",
     "n_images": 10,
     "detected": true,
-    "snr": 914.4,
+    "snr": 1020.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3402,7 +4162,7 @@
     "png": "w2_neowise_07.png",
     "n_images": 10,
     "detected": true,
-    "snr": 799.3,
+    "snr": 794.3,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3438,7 +4198,7 @@
     "png": "w2_neowise_08.png",
     "n_images": 10,
     "detected": true,
-    "snr": 731.1,
+    "snr": 795.6,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3474,7 +4234,7 @@
     "png": "w2_neowise_09.png",
     "n_images": 10,
     "detected": true,
-    "snr": 972.6,
+    "snr": 980.5,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3510,7 +4270,7 @@
     "png": "w2_neowise_10.png",
     "n_images": 10,
     "detected": true,
-    "snr": 730.3,
+    "snr": 750.4,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3546,7 +4306,7 @@
     "png": "w2_neowise_11.png",
     "n_images": 10,
     "detected": true,
-    "snr": 1010.2,
+    "snr": 1039.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3582,7 +4342,7 @@
     "png": "w2_neowise_12.png",
     "n_images": 10,
     "detected": true,
-    "snr": 732.1,
+    "snr": 722.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3618,7 +4378,7 @@
     "png": "w2_neowise_13.png",
     "n_images": 10,
     "detected": true,
-    "snr": 860.0,
+    "snr": 929.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3654,7 +4414,7 @@
     "png": "w2_neowise_14.png",
     "n_images": 10,
     "detected": true,
-    "snr": 680.0,
+    "snr": 739.3,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3690,7 +4450,7 @@
     "png": "w2_neowise_15.png",
     "n_images": 10,
     "detected": true,
-    "snr": 791.7,
+    "snr": 807.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3726,7 +4486,7 @@
     "png": "w2_neowise_16.png",
     "n_images": 10,
     "detected": true,
-    "snr": 703.8,
+    "snr": 817.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3762,7 +4522,7 @@
     "png": "w2_neowise_17.png",
     "n_images": 10,
     "detected": true,
-    "snr": 764.6,
+    "snr": 753.6,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3798,7 +4558,7 @@
     "png": "w2_neowise_18.png",
     "n_images": 10,
     "detected": true,
-    "snr": 614.8,
+    "snr": 581.9,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3834,7 +4594,7 @@
     "png": "w2_neowise_19.png",
     "n_images": 10,
     "detected": true,
-    "snr": 938.5,
+    "snr": 918.3,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3870,7 +4630,7 @@
     "png": "w2_neowise_20.png",
     "n_images": 10,
     "detected": true,
-    "snr": 733.9,
+    "snr": 729.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -3906,7 +4666,7 @@
     "png": "w2_spherex_v1.png",
     "n_images": 28,
     "detected": true,
-    "snr": 622.3,
+    "snr": 663.4,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detectors D5, D6",
@@ -3951,13 +4711,13 @@
     }
    },
    {
-    "year": 2025.7435164175092,
-    "label": "SPHEREx Sep 2025",
+    "year": 2025.752585785888,
+    "label": "SPHEREx Oct 2025",
     "mission": "SPHEREx",
     "png": "w2_spherex_v2.png",
-    "n_images": 9,
+    "n_images": 10,
     "detected": true,
-    "snr": 142.7,
+    "snr": 160.2,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D6 (MWIR array)",
@@ -3974,7 +4734,7 @@
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2025-09-28 23:09",
-     "end": "2025-09-29 13:49",
+     "end": "2025-11-01 10:41",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
@@ -3992,7 +4752,100 @@
      "n_poor": 0,
      "n_dqa_fail": 0,
      "verdict": "good",
-     "reason": "The target pixel is clean in all 9 images; 2 have a flagged or blank pixel nearby."
+     "reason": "The target pixel is clean in all 10 images; 2 have a flagged or blank pixel nearby."
+    }
+   },
+   {
+    "year": 2026.324068799373,
+    "label": "SPHEREx Apr 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3.png",
+    "n_images": 3,
+    "detected": true,
+    "snr": 136.9,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.56,
+      4.833
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-04-29 03:54",
+     "end": "2026-04-29 13:38",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 32,
+     "bad_px_worst": 1,
+     "images_with_bad_px": 1,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "The target pixel is clean in all 3 images; 1 has a flagged or blank pixel nearby."
+    }
+   },
+   {
+    "year": 2026.733046788173,
+    "label": "SPHEREx Sep 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v4.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 254.7,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.408,
+      4.969
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-09-22 05:29",
+     "end": "2026-09-28 08:05",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "PERSIST": 1,
+      "TRANSIENT": 2,
+      "NONFUNC": 2,
+      "HALO": 1
+     },
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 29,
+     "bad_px_worst": 7,
+     "images_with_bad_px": 4,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "good",
+     "reason": "The target pixel is clean in all 10 images; 4 have a flagged or blank pixel nearby."
     }
    }
   ],
@@ -4003,7 +4856,7 @@
     "mission": "WISE",
     "png": "w1_wise2010.png",
     "detected": true,
-    "snr": 804.7,
+    "snr": 769.4,
     "obs": {
      "mission": "WISE",
      "instrument": "WISE W1 band \u00b7 AllWISE atlas image",
@@ -4039,7 +4892,7 @@
     "png": "w1_neowise_00.png",
     "n_images": 10,
     "detected": true,
-    "snr": 798.4,
+    "snr": 866.4,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4075,7 +4928,7 @@
     "png": "w1_neowise_01.png",
     "n_images": 10,
     "detected": true,
-    "snr": 1139.0,
+    "snr": 1263.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4111,7 +4964,7 @@
     "png": "w1_neowise_02.png",
     "n_images": 10,
     "detected": true,
-    "snr": 751.9,
+    "snr": 787.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4147,7 +5000,7 @@
     "png": "w1_neowise_03.png",
     "n_images": 10,
     "detected": true,
-    "snr": 994.4,
+    "snr": 1189.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4183,7 +5036,7 @@
     "png": "w1_neowise_04.png",
     "n_images": 10,
     "detected": true,
-    "snr": 1113.0,
+    "snr": 1093.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4219,7 +5072,7 @@
     "png": "w1_neowise_05.png",
     "n_images": 10,
     "detected": true,
-    "snr": 976.4,
+    "snr": 1053.2,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4255,7 +5108,7 @@
     "png": "w1_neowise_06.png",
     "n_images": 10,
     "detected": true,
-    "snr": 929.8,
+    "snr": 1022.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4291,7 +5144,7 @@
     "png": "w1_neowise_07.png",
     "n_images": 10,
     "detected": true,
-    "snr": 823.8,
+    "snr": 820.8,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4327,7 +5180,7 @@
     "png": "w1_neowise_08.png",
     "n_images": 10,
     "detected": true,
-    "snr": 928.7,
+    "snr": 1061.4,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4363,7 +5216,7 @@
     "png": "w1_neowise_09.png",
     "n_images": 10,
     "detected": true,
-    "snr": 998.4,
+    "snr": 1017.8,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4399,7 +5252,7 @@
     "png": "w1_neowise_10.png",
     "n_images": 10,
     "detected": true,
-    "snr": 818.1,
+    "snr": 841.4,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4435,7 +5288,7 @@
     "png": "w1_neowise_11.png",
     "n_images": 10,
     "detected": true,
-    "snr": 783.5,
+    "snr": 897.5,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4471,7 +5324,7 @@
     "png": "w1_neowise_12.png",
     "n_images": 10,
     "detected": true,
-    "snr": 963.2,
+    "snr": 902.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4507,7 +5360,7 @@
     "png": "w1_neowise_13.png",
     "n_images": 10,
     "detected": true,
-    "snr": 892.6,
+    "snr": 896.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4543,7 +5396,7 @@
     "png": "w1_neowise_14.png",
     "n_images": 10,
     "detected": true,
-    "snr": 857.1,
+    "snr": 888.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4579,7 +5432,7 @@
     "png": "w1_neowise_15.png",
     "n_images": 10,
     "detected": true,
-    "snr": 947.5,
+    "snr": 913.5,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4615,7 +5468,7 @@
     "png": "w1_neowise_16.png",
     "n_images": 10,
     "detected": true,
-    "snr": 825.1,
+    "snr": 931.7,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4651,7 +5504,7 @@
     "png": "w1_neowise_17.png",
     "n_images": 10,
     "detected": true,
-    "snr": 831.7,
+    "snr": 804.1,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4687,7 +5540,7 @@
     "png": "w1_neowise_18.png",
     "n_images": 10,
     "detected": true,
-    "snr": 671.0,
+    "snr": 682.1,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4723,7 +5576,7 @@
     "png": "w1_neowise_19.png",
     "n_images": 10,
     "detected": true,
-    "snr": 750.6,
+    "snr": 790.0,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4759,7 +5612,7 @@
     "png": "w1_neowise_20.png",
     "n_images": 10,
     "detected": true,
-    "snr": 844.9,
+    "snr": 818.8,
     "obs": {
      "mission": "NEOWISE",
      "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
@@ -4795,7 +5648,7 @@
     "png": "w1_spherex_v1.png",
     "n_images": 2,
     "detected": true,
-    "snr": 1495.5,
+    "snr": 1470.6,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D4 (MWIR array)",
@@ -4840,7 +5693,7 @@
     "png": "w1_spherex_v2.png",
     "n_images": 5,
     "detected": true,
-    "snr": 926.8,
+    "snr": 833.2,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D4 (MWIR array)",
@@ -4883,13 +5736,13 @@
     }
    },
    {
-    "year": 2026.3013998708002,
+    "year": 2026.3075350721035,
     "label": "SPHEREx Apr 2026",
     "mission": "SPHEREx",
     "png": "w1_spherex_v3.png",
-    "n_images": 4,
+    "n_images": 6,
     "detected": true,
-    "snr": 549.6,
+    "snr": 719.7,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D4 (MWIR array)",
@@ -4906,7 +5759,7 @@
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2026-04-18 20:19",
-     "end": "2026-04-21 20:02",
+     "end": "2026-05-03 17:14",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
@@ -4924,7 +5777,7 @@
      "n_poor": 0,
      "n_dqa_fail": 0,
      "verdict": "good",
-     "reason": "The target pixel is clean in all 4 images; 1 has a flagged or blank pixel nearby."
+     "reason": "The target pixel is clean in all 6 images; 1 has a flagged or blank pixel nearby."
     }
    }
   ]
@@ -4933,10 +5786,10 @@
   "w2": "w2_diff.png",
   "w1": "w1_diff.png",
   "d1": "d1_diff.png",
-  "d2": null,
+  "d2": "d2_diff.png",
   "d3": "d3_diff.png",
   "d4": "d4_diff.png",
-  "d5": null,
+  "d5": "d5_diff.png",
   "d6": "d6_diff.png",
   "all": "all_diff.png"
  },
@@ -7494,6 +8347,131 @@
    "quality_reason": "1 of 30 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
   },
   {
+   "image": "level2_2025W40_1A_0661_1D2_spx_l2b-v27-2026-239",
+   "date": "2025-10-02 00:27",
+   "detector": 2,
+   "lam_um": 1.189,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 15,
+   "flagged_px_aperture": 15,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged TRANSIENT, SUR_ERROR, HALO."
+  },
+  {
+   "image": "level2_2025W40_1A_0661_3D5_spx_l2b-v27-2026-239",
+   "date": "2025-10-02 00:31",
+   "detector": 5,
+   "lam_um": 4.0,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2025W40_1A_0675_2D2_spx_l2b-v27-2026-239",
+   "date": "2025-10-02 02:07",
+   "detector": 2,
+   "lam_um": 1.369,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "HALO"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 26,
+   "bad_px_aperture": 15,
+   "flagged_px_aperture": 15,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged HALO."
+  },
+  {
+   "image": "level2_2025W40_1A_0675_4D5_spx_l2b-v27-2026-239",
+   "date": "2025-10-02 02:11",
+   "detector": 5,
+   "lam_um": 4.213,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 26,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2025W40_2B_0107_1D2_spx_l2b-v27-2026-241",
+   "date": "2025-10-02 23:16",
+   "detector": 2,
+   "lam_um": 1.306,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 27 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2025W40_2B_0107_1D5_spx_l2b-v27-2026-241",
+   "date": "2025-10-02 23:16",
+   "detector": 5,
+   "lam_um": 4.07,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC",
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 26,
+   "bad_px_aperture": 2,
+   "flagged_px_aperture": 2,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "2 of 26 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
+  },
+  {
    "image": "level2_2025W40_2B_0289_2D1_spx_l2b-v27-2026-241",
    "date": "2025-10-03 17:16",
    "detector": 1,
@@ -7645,6 +8623,42 @@
    "quality_reason": "5 of 29 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
   },
   {
+   "image": "level2_2025W41_1A_0067_2D2_spx_l2b-v27-2026-241",
+   "date": "2025-10-06 07:12",
+   "detector": 2,
+   "lam_um": 1.163,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 26,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2025W41_1A_0108_1D5_spx_l2b-v27-2026-241",
+   "date": "2025-10-06 12:01",
+   "detector": 5,
+   "lam_um": 4.105,
+   "flags_at_target": [
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 27 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
+  },
+  {
    "image": "level2_2025W41_1A_0242_2D1_spx_l2b-v27-2026-241",
    "date": "2025-10-07 04:21",
    "detector": 1,
@@ -7793,6 +8807,47 @@
    "quality_reason": "5 of 28 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
   },
   {
+   "image": "level2_2025W41_2B_0112_1D2_spx_l2b-v27-2026-242",
+   "date": "2025-10-09 23:09",
+   "detector": 2,
+   "lam_um": 1.161,
+   "flags_at_target": [
+    "TRANSIENT",
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 7,
+   "flagged_px_aperture": 7,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "7 of 28 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2025W41_2B_0173_1D5_spx_l2b-v27-2026-242",
+   "date": "2025-10-10 05:42",
+   "detector": 5,
+   "lam_um": 3.831,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 27 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
+  },
+  {
    "image": "level2_2025W41_2B_0200_1D4_spx_l2b-v27-2026-242",
    "date": "2025-10-10 08:58",
    "detector": 4,
@@ -7932,6 +8987,28 @@
    "quality_reason": "2 of 28 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
   },
   {
+   "image": "level2_2025W42_2A_0033_1D2_spx_l2b-v27-2026-243",
+   "date": "2025-10-16 14:53",
+   "detector": 2,
+   "lam_um": 1.47,
+   "flags_at_target": [
+    "TRANSIENT",
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "HALO"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 23,
+   "flagged_px_aperture": 23,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged HALO."
+  },
+  {
    "image": "level2_2025W42_2A_0059_1D1_spx_l2b-v27-2026-243",
    "date": "2025-10-16 18:06",
    "detector": 1,
@@ -8006,6 +9083,111 @@
    "dqa": "Pass",
    "quality": "poor",
    "quality_reason": "The pixel at the target is flagged HALO."
+  },
+  {
+   "image": "level2_2025W43_2A_0023_1D5_spx_l2b-v27-2026-245",
+   "date": "2025-10-23 14:44",
+   "detector": 5,
+   "lam_um": 4.248,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2025W44_2B_0494_1D6_spx_l2b-v27-2026-246",
+   "date": "2025-11-01 10:41",
+   "detector": 6,
+   "lam_um": 4.508,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2025W45_1A_0251_1D3_spx_l2b-v27-2026-247",
+   "date": "2025-11-04 03:57",
+   "detector": 3,
+   "lam_um": 1.864,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2025W45_2A_0041_1D2_spx_l2b-v27-2026-247",
+   "date": "2025-11-06 16:14",
+   "detector": 2,
+   "lam_um": 1.161,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2025W45_2A_0315_1D5_spx_l2b-v27-2026-247",
+   "date": "2025-11-07 23:11",
+   "detector": 5,
+   "lam_um": 3.965,
+   "flags_at_target": [
+    "TRANSIENT",
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 7,
+   "flagged_px_aperture": 7,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "7 of 28 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2025W45_2A_0404_1D2_spx_l2b-v27-2026-247",
+   "date": "2025-11-08 08:58",
+   "detector": 2,
+   "lam_um": 1.246,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
   },
   {
    "image": "level2_2025W46_1A_0287_1D1_spx_l2b-v27-2026-206",
@@ -8174,6 +9356,23 @@
    "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
   },
   {
+   "image": "level2_2026W17_1B_0184_1D1_spx_l2b-v27-2026-242",
+   "date": "2026-04-20 22:48",
+   "detector": 1,
+   "lam_um": 0.792,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
    "image": "level2_2026W17_1B_0184_1D4_spx_l2b-v27-2026-242",
    "date": "2026-04-20 22:48",
    "detector": 4,
@@ -8194,6 +9393,23 @@
    "quality_reason": "5 of 29 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
   },
   {
+   "image": "level2_2026W17_1B_0184_3D1_spx_l2b-v27-2026-242",
+   "date": "2026-04-20 22:53",
+   "detector": 1,
+   "lam_um": 0.83,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
    "image": "level2_2026W17_1B_0184_3D4_spx_l2b-v27-2026-242",
    "date": "2026-04-20 22:53",
    "detector": 4,
@@ -8209,6 +9425,25 @@
    "dqa": "Pass",
    "quality": "good",
    "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W17_1B_0241_1D1_spx_l2b-v27-2026-242",
+   "date": "2026-04-21 06:55",
+   "detector": 1,
+   "lam_um": 0.87,
+   "flags_at_target": [
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 5,
+   "flagged_px_aperture": 5,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "5 of 27 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
   },
   {
    "image": "level2_2026W17_1B_0241_2D4_spx_l2b-v27-2026-242",
@@ -8231,6 +9466,25 @@
    "quality_reason": "14 of 27 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
   },
   {
+   "image": "level2_2026W17_1B_0241_3D1_spx_l2b-v27-2026-242",
+   "date": "2026-04-21 06:59",
+   "detector": 1,
+   "lam_um": 0.911,
+   "flags_at_target": [
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 28 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
+  },
+  {
    "image": "level2_2026W17_1B_0337_1D4_spx_l2b-v27-2026-242",
    "date": "2026-04-21 19:56",
    "detector": 4,
@@ -8248,10 +9502,44 @@
    "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
   },
   {
+   "image": "level2_2026W17_1B_0337_2D1_spx_l2b-v27-2026-242",
+   "date": "2026-04-21 19:58",
+   "detector": 1,
+   "lam_um": 0.955,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
    "image": "level2_2026W17_1B_0337_2D4_spx_l2b-v27-2026-242",
    "date": "2026-04-21 19:58",
    "detector": 4,
    "lam_um": 3.212,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W17_1B_0337_4D1_spx_l2b-v27-2026-242",
+   "date": "2026-04-21 20:02",
+   "detector": 1,
+   "lam_um": 1.001,
    "flags_at_target": [],
    "used_in_spectrum": true,
    "flags_target_pixel": [],
@@ -8280,6 +9568,827 @@
    "dqa": "Pass",
    "quality": "good",
    "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W17_1B_0351_2D1_spx_l2b-v27-2026-242",
+   "date": "2026-04-21 21:35",
+   "detector": 1,
+   "lam_um": 1.049,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W17_1B_0351_2D4_spx_l2b-v27-2026-242",
+   "date": "2026-04-21 21:35",
+   "detector": 4,
+   "lam_um": 3.574,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 32,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W17_2A_0355_1D5_spx_l2b-v27-2026-243",
+   "date": "2026-04-25 02:12",
+   "detector": 5,
+   "lam_um": 4.068,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W17_2A_0355_3D2_spx_l2b-v27-2026-243",
+   "date": "2026-04-25 02:16",
+   "detector": 2,
+   "lam_um": 1.368,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W18_1A_0444_1D6_spx_l2b-v27-2026-244",
+   "date": "2026-04-29 03:54",
+   "detector": 6,
+   "lam_um": 4.56,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 32,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 32 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2026W18_1A_0457_2D3_spx_l2b-v27-2026-244",
+   "date": "2026-04-29 05:35",
+   "detector": 3,
+   "lam_um": 2.025,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W18_1A_0490_1D6_spx_l2b-v27-2026-244",
+   "date": "2026-04-29 08:47",
+   "detector": 6,
+   "lam_um": 4.833,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W18_1A_0490_2D3_spx_l2b-v27-2026-244",
+   "date": "2026-04-29 08:50",
+   "detector": 3,
+   "lam_um": 2.22,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 3,
+   "flagged_px_aperture": 3,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "3 of 28 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2026W18_1A_0529_1D6_spx_l2b-v27-2026-244",
+   "date": "2026-04-29 13:38",
+   "detector": 6,
+   "lam_um": 4.833,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 30,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W18_2A_0023_1D5_spx_l2b-v27-2026-244",
+   "date": "2026-04-30 14:07",
+   "detector": 5,
+   "lam_um": 4.32,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W18_2A_0174_2D3_spx_l2b-v27-2026-244",
+   "date": "2026-05-01 06:27",
+   "detector": 3,
+   "lam_um": 1.644,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W18_2A_0819_1D1_spx_l2b-v27-2026-244",
+   "date": "2026-05-03 17:14",
+   "detector": 1,
+   "lam_um": 1.067,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W18_2A_0819_1D4_spx_l2b-v27-2026-244",
+   "date": "2026-05-03 17:14",
+   "detector": 4,
+   "lam_um": 3.643,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 30,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_1A_0276_2D6_spx_l2b-v27-2026-268",
+   "date": "2026-09-22 05:29",
+   "detector": 6,
+   "lam_um": 4.524,
+   "flags_at_target": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "PERSIST"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 29 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2026W39_1A_0276_3D3_spx_l2b-v27-2026-268",
+   "date": "2026-09-22 05:32",
+   "detector": 3,
+   "lam_um": 1.801,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_1A_0434_3D6_spx_l2b-v27-2026-268",
+   "date": "2026-09-22 21:49",
+   "detector": 6,
+   "lam_um": 4.69,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 32,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_1A_0578_1D3_spx_l2b-v27-2026-268",
+   "date": "2026-09-23 17:17",
+   "detector": 3,
+   "lam_um": 2.064,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_1A_0578_3D6_spx_l2b-v27-2026-268",
+   "date": "2026-09-23 17:21",
+   "detector": 6,
+   "lam_um": 4.827,
+   "flags_at_target": [
+    "TRANSIENT",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 32,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 32 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2026W39_2A_0155_2D3_spx_l2b-v27-2026-271",
+   "date": "2026-09-25 05:11",
+   "detector": 3,
+   "lam_um": 2.313,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_2A_0155_3D6_spx_l2b-v27-2026-271",
+   "date": "2026-09-25 05:14",
+   "detector": 6,
+   "lam_um": 4.969,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_2A_0169_2D3_spx_l2b-v27-2026-271",
+   "date": "2026-09-25 06:48",
+   "detector": 3,
+   "lam_um": 1.929,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_2A_0312_3D6_spx_l2b-v27-2026-271",
+   "date": "2026-09-25 23:07",
+   "detector": 6,
+   "lam_um": 4.408,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_2A_0398_2D3_spx_l2b-v27-2026-271",
+   "date": "2026-09-26 08:51",
+   "detector": 3,
+   "lam_um": 2.024,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_2A_0398_3D6_spx_l2b-v27-2026-271",
+   "date": "2026-09-26 08:54",
+   "detector": 6,
+   "lam_um": 4.763,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_2A_0597_1D3_spx_l2b-v27-2026-271",
+   "date": "2026-09-27 07:37",
+   "detector": 3,
+   "lam_um": 2.168,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_2A_0597_1D6_spx_l2b-v27-2026-271",
+   "date": "2026-09-27 07:37",
+   "detector": 6,
+   "lam_um": 4.832,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_2A_0647_1D3_spx_l2b-v27-2026-271",
+   "date": "2026-09-27 14:08",
+   "detector": 3,
+   "lam_um": 1.724,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 13,
+   "flagged_px_aperture": 13,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "13 of 29 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2026W39_2A_0647_1D6_spx_l2b-v27-2026-271",
+   "date": "2026-09-27 14:08",
+   "detector": 6,
+   "lam_um": 4.495,
+   "flags_at_target": [
+    "TRANSIENT",
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 7,
+   "flagged_px_aperture": 7,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "7 of 29 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2026W39_2A_0682_2D3_spx_l2b-v27-2026-271",
+   "date": "2026-09-27 19:04",
+   "detector": 3,
+   "lam_um": 1.764,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W39_2A_0682_2D6_spx_l2b-v27-2026-271",
+   "date": "2026-09-27 19:04",
+   "detector": 6,
+   "lam_um": 4.528,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W40_1A_0031_1D2_spx_l2b-v27-2026-276",
+   "date": "2026-09-28 03:11",
+   "detector": 2,
+   "lam_um": 1.135,
+   "flags_at_target": [
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 28 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2026W40_1A_0070_2D3_spx_l2b-v27-2026-276",
+   "date": "2026-09-28 08:05",
+   "detector": 3,
+   "lam_um": 1.934,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W40_1A_0070_2D6_spx_l2b-v27-2026-276",
+   "date": "2026-09-28 08:05",
+   "detector": 6,
+   "lam_um": 4.661,
+   "flags_at_target": [
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 28 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2026W40_1A_0407_2D5_spx_l2b-v27-2026-276",
+   "date": "2026-09-29 19:58",
+   "detector": 5,
+   "lam_um": 4.195,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W40_1A_0435_3D2_spx_l2b-v27-2026-276",
+   "date": "2026-09-29 23:15",
+   "detector": 2,
+   "lam_um": 1.094,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W40_1A_0518_1D5_spx_l2b-v27-2026-276",
+   "date": "2026-09-30 07:23",
+   "detector": 5,
+   "lam_um": 4.359,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC",
+    "COLD"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 32,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 32 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2026W40_1A_0569_2D2_spx_l2b-v27-2026-276",
+   "date": "2026-09-30 12:13",
+   "detector": 2,
+   "lam_um": 1.146,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W40_1A_0613_1D5_spx_l2b-v27-2026-276",
+   "date": "2026-09-30 17:10",
+   "detector": 5,
+   "lam_um": 3.965,
+   "flags_at_target": [
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 29 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
+  },
+  {
+   "image": "level2_2026W40_1A_0721_1D2_spx_l2b-v27-2026-276",
+   "date": "2026-10-01 04:30",
+   "detector": 2,
+   "lam_um": 1.488,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W40_1A_0721_3D5_spx_l2b-v27-2026-276",
+   "date": "2026-10-01 04:34",
+   "detector": 5,
+   "lam_um": 4.341,
+   "flags_at_target": [
+    "TRANSIENT",
+    "HALO"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "HALO"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 5,
+   "flagged_px_aperture": 5,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged TRANSIENT, HALO."
+  },
+  {
+   "image": "level2_2026W40_1A_0734_2D2_spx_l2b-v27-2026-276",
+   "date": "2026-10-01 06:09",
+   "detector": 2,
+   "lam_um": 1.175,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W40_1A_0734_3D5_spx_l2b-v27-2026-276",
+   "date": "2026-10-01 06:11",
+   "detector": 5,
+   "lam_um": 3.948,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W40_2A_0143_3D2_spx_l2b-v27-2026-285",
+   "date": "2026-10-02 03:22",
+   "detector": 2,
+   "lam_um": 1.291,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W40_2A_0172_1D5_spx_l2b-v27-2026-285",
+   "date": "2026-10-02 06:32",
+   "detector": 5,
+   "lam_um": 4.378,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 30,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W40_2A_0216_2D2_spx_l2b-v27-2026-285",
+   "date": "2026-10-02 11:29",
+   "detector": 2,
+   "lam_um": 1.353,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
+  },
+  {
+   "image": "level2_2026W40_2A_0216_2D5_spx_l2b-v27-2026-285",
+   "date": "2026-10-02 11:29",
+   "detector": 5,
+   "lam_um": 4.123,
+   "flags_at_target": [],
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
   }
  ],
  "flag_legend": [
@@ -8290,8 +10399,8 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": false,
-   "images_aperture": 47,
-   "images_target_pixel": 2
+   "images_aperture": 62,
+   "images_target_pixel": 4
   },
   {
    "name": "OVERFLOW",
@@ -8300,7 +10409,7 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": false,
-   "images_aperture": 2,
+   "images_aperture": 3,
    "images_target_pixel": 0
   },
   {
@@ -8310,8 +10419,8 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": false,
-   "images_aperture": 36,
-   "images_target_pixel": 0
+   "images_aperture": 46,
+   "images_target_pixel": 1
   },
   {
    "name": "NONFUNC",
@@ -8320,7 +10429,7 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": true,
-   "images_aperture": 25,
+   "images_aperture": 32,
    "images_target_pixel": 0
   },
   {
@@ -8360,7 +10469,7 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": true,
-   "images_aperture": 4,
+   "images_aperture": 5,
    "images_target_pixel": 0
   },
   {
@@ -8400,7 +10509,7 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": false,
-   "images_aperture": 3,
+   "images_aperture": 4,
    "images_target_pixel": 0
   },
   {
@@ -8500,8 +10609,8 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": false,
-   "images_aperture": 44,
-   "images_target_pixel": 10
+   "images_aperture": 59,
+   "images_target_pixel": 14
   },
   {
    "name": "SATELLITE_HALO",
@@ -8555,3479 +10664,3739 @@
  "ghosts": {
   "w2_wise2010.png": [
    [
-    133.9,
-    41.2,
+    134.3,
+    41.5,
     15.7
    ],
    [
-    12.3,
-    149.9,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.6,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.2,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.8,
-    111.8,
+    27.3,
+    112.1,
     13.0
    ]
   ],
   "w2_neowise_00.png": [
    [
-    133.9,
-    41.2,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.8,
+    27.3,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_01.png": [
    [
-    133.9,
-    41.2,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.8,
+    27.3,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_02.png": [
    [
-    133.9,
-    41.2,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.8,
+    27.3,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_03.png": [
    [
-    133.9,
-    41.2,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.8,
+    27.3,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_04.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.3,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_05.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_06.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_07.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_08.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_09.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_10.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_11.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_12.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_13.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_14.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_15.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_16.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_17.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_18.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w2_neowise_19.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    111.9,
     13.0
    ]
   ],
   "w2_neowise_20.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w2_spherex_v1_1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w2_spherex_v1_2.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w2_spherex_v1_3.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w2_spherex_v1_4.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w2_spherex_v1_5.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w2_spherex_v1_6.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w2_spherex_v1_7.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
-  "w2_spherex_v2.png": [
+  "w2_spherex_v2_1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "w2_spherex_v2_2.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "w2_spherex_v3.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "w2_spherex_v4.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w1_wise2010.png": [
    [
-    133.9,
-    41.2,
+    134.3,
+    41.5,
     15.7
    ],
    [
-    12.3,
-    149.9,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.6,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.2,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.8,
-    111.8,
+    27.3,
+    112.1,
     13.0
    ]
   ],
   "w1_neowise_00.png": [
    [
-    133.9,
-    41.2,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.8,
+    27.3,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_01.png": [
    [
-    133.9,
-    41.2,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.8,
+    27.3,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_02.png": [
    [
-    133.9,
-    41.2,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.8,
+    27.3,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_03.png": [
    [
-    133.9,
-    41.2,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.8,
+    27.3,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_04.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.2,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.3,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_05.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.2,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_06.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_07.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.3,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.6,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_08.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_09.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_10.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    26.9,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_11.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.6,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_12.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.3,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_13.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.9,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_14.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.4,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_15.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.4,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_16.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_17.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_18.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    112.0,
     13.0
    ]
   ],
   "w1_neowise_19.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.4,
+    111.9,
     13.0
    ]
   ],
   "w1_neowise_20.png": [
    [
-    133.9,
-    41.1,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w1_spherex_v1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w1_spherex_v2_1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w1_spherex_v2_2.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w1_spherex_v2_3.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w1_spherex_v2_4.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w1_spherex_v3_1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "w1_spherex_v3_2.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "w1_spherex_v3_3.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d1_spherex_v1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d1_spherex_v2.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d1_spherex_v3.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d2_spherex_v1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "d2_spherex_v2.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "d2_spherex_v3.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "d2_spherex_v4.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d3_spherex_v1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d3_spherex_v2.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "d3_spherex_v3.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "d3_spherex_v4.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d4_spherex_v1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d4_spherex_v2.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d4_spherex_v3.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d5_spherex_v1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "d5_spherex_v2.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "d5_spherex_v3.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "d5_spherex_v4.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d6_spherex_v1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "d6_spherex_v2.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "d6_spherex_v3.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "d6_spherex_v4.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "all_spherex_v1.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "all_spherex_v2.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
     13.0
    ]
   ],
   "all_spherex_v3.png": [
    [
-    134.0,
-    41.0,
+    134.4,
+    41.3,
     15.7
    ],
    [
-    12.2,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
+    141.5,
+    61.7,
     16.2
    ],
    [
-    111.9,
-    67.2,
+    112.4,
+    67.5,
     15.8
    ],
    [
-    116.4,
-    138.1,
+    116.9,
+    138.3,
     15.3
    ],
    [
-    149.1,
-    43.9,
+    149.5,
+    44.1,
     16.0
    ],
    [
-    118.7,
-    39.8,
+    119.1,
+    40.1,
     16.0
    ],
    [
-    93.8,
-    66.2,
+    94.3,
+    66.5,
     15.8
    ],
    [
-    27.0,
-    111.7,
+    27.5,
+    111.9,
+    13.0
+   ]
+  ],
+  "all_spherex_v4.png": [
+   [
+    134.4,
+    41.3,
+    15.7
+   ],
+   [
+    141.5,
+    61.7,
+    16.2
+   ],
+   [
+    112.4,
+    67.5,
+    15.8
+   ],
+   [
+    116.9,
+    138.3,
+    15.3
+   ],
+   [
+    149.5,
+    44.1,
+    16.0
+   ],
+   [
+    119.1,
+    40.1,
+    16.0
+   ],
+   [
+    94.3,
+    66.5,
+    15.8
+   ],
+   [
+    27.5,
+    111.9,
     13.0
    ]
   ]
@@ -12037,678 +14406,687 @@
    "year": 2010.5,
    "mission": "WISE",
    "ch": "w2",
-   "x": 90.18725936010506,
-   "y": 84.21686861814463,
-   "pred_x": 90.22957939030323,
-   "pred_y": 84.24292285445836,
-   "offset_arcsec": 0.0993943263242084,
-   "ra": 331.0653881960429,
-   "dec": -56.7900572827388
+   "x": 90.6191343528895,
+   "y": 84.49084401341783,
+   "pred_x": 90.66690858060434,
+   "pred_y": 84.51366023920417,
+   "offset_arcsec": 0.10588591596944993,
+   "ra": 331.06539372899636,
+   "dec": -56.79005548471998
   },
   {
    "year": 2014.3348309377138,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 82.52430363565958,
-   "y": 79.49680138741276,
-   "pred_x": 82.59414082847181,
-   "pred_y": 79.5135218309229,
-   "offset_arcsec": 0.14362181796256007,
-   "ra": 331.0731603712545,
-   "dec": -56.79268028986077
+   "x": 83.03638208394203,
+   "y": 79.69118599178199,
+   "pred_x": 83.03143937112401,
+   "pred_y": 79.78430867208509,
+   "offset_arcsec": 0.18650752151959965,
+   "ra": 331.073084504747,
+   "dec": -56.792722730568215
   },
   {
    "year": 2014.8298346338124,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 81.56920478614659,
-   "y": 78.79437469630719,
-   "pred_x": 81.60855102026242,
-   "pred_y": 78.90304616408956,
-   "offset_arcsec": 0.23115028801969592,
-   "ra": 331.0741291471311,
-   "dec": -56.79307058622584
+   "x": 82.0728684503148,
+   "y": 79.09996364567684,
+   "pred_x": 82.04584560732917,
+   "pred_y": 79.17383938939493,
+   "offset_arcsec": 0.157325897513971,
+   "ra": 331.07406182500773,
+   "dec": -56.79305125129157
   },
   {
    "year": 2015.3257932922656,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 80.5383110046951,
-   "y": 78.20667780367118,
-   "pred_x": 80.62105981058315,
-   "pred_y": 78.29139276657388,
-   "offset_arcsec": 0.23684585436352515,
-   "ra": 331.07517484142295,
-   "dec": -56.79339714009922
+   "x": 81.07435991615459,
+   "y": 78.48758275997668,
+   "pred_x": 81.0583504345728,
+   "pred_y": 78.56219238844827,
+   "offset_arcsec": 0.15261585935642916,
+   "ra": 331.07507465972634,
+   "dec": -56.79339152101907
   },
   {
    "year": 2015.8161968514717,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 79.63922505703327,
-   "y": 77.62836656176754,
-   "pred_x": 79.64462922537169,
-   "pred_y": 77.686590334935,
-   "offset_arcsec": 0.11694807018379279,
-   "ra": 331.0760868453098,
-   "dec": -56.79371846547404
+   "x": 80.08794385042988,
+   "y": 77.84526325875976,
+   "pred_x": 80.08191593076755,
+   "pred_y": 77.95739628178067,
+   "offset_arcsec": 0.22458985378078816,
+   "ra": 331.0760752433903,
+   "dec": -56.79374841455134
   },
   {
    "year": 2016.3271263518138,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 78.5103028678077,
-   "y": 77.02696208558972,
-   "pred_x": 78.62732993940679,
-   "pred_y": 77.05647377443464,
-   "offset_arcsec": 0.24138164971008993,
-   "ra": 331.0772320173439,
-   "dec": -56.794052621574856
+   "x": 79.01212813786834,
+   "y": 77.3319704566497,
+   "pred_x": 79.06461256235363,
+   "pred_y": 77.32728631107551,
+   "offset_arcsec": 0.1053860715796788,
+   "ra": 331.07716654513115,
+   "dec": -56.79403362193063
   },
   {
    "year": 2016.7992813141684,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 77.70873728836898,
-   "y": 76.35413761813835,
-   "pred_x": 77.68723369330415,
-   "pred_y": 76.47417688179955,
-   "offset_arcsec": 0.24390022063705719,
-   "ra": 331.0780451212933,
-   "dec": -56.79442643675664
+   "x": 78.16051746302338,
+   "y": 76.59678503995397,
+   "pred_x": 78.12451254370377,
+   "pred_y": 76.74499550819286,
+   "offset_arcsec": 0.30504227293481984,
+   "ra": 331.07803040815327,
+   "dec": -56.79444208691235
   },
   {
    "year": 2017.3278064339493,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 76.55951919199683,
-   "y": 75.72947811395126,
-   "pred_x": 76.63490020062696,
-   "pred_y": 75.82236008606486,
-   "offset_arcsec": 0.23924345073323153,
-   "ra": 331.07921092095035,
-   "dec": -56.794773494728474
+   "x": 77.02576438025783,
+   "y": 76.02114582377685,
+   "pred_x": 77.07217482815877,
+   "pred_y": 76.09318552931029,
+   "offset_arcsec": 0.17139018450311844,
+   "ra": 331.0791815318076,
+   "dec": -56.794761915364006
   },
   {
    "year": 2017.7865771389459,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 75.64840081005534,
-   "y": 75.13206781671369,
-   "pred_x": 75.72145302559629,
-   "pred_y": 75.25656966429761,
-   "offset_arcsec": 0.2887028662364711,
-   "ra": 331.0801351990297,
-   "dec": -56.79510540136568
+   "x": 76.1338405395775,
+   "y": 75.39002170253889,
+   "pred_x": 76.15872398777428,
+   "pred_y": 75.52740102485069,
+   "offset_arcsec": 0.2792293979861949,
+   "ra": 331.0800863324269,
+   "dec": -56.795112555143
   },
   {
    "year": 2018.3289062286105,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 74.58605021960891,
-   "y": 74.56904266784167,
-   "pred_x": 74.64163478734001,
-   "pred_y": 74.5877287797591,
-   "offset_arcsec": 0.11728281976052782,
-   "ra": 331.0812129144663,
-   "dec": -56.79541819851181
+   "x": 75.02214142937665,
+   "y": 74.82089960855262,
+   "pred_x": 75.07890141662092,
+   "pred_y": 74.85856713537028,
+   "offset_arcsec": 0.13624299953131652,
+   "ra": 331.08121410662494,
+   "dec": -56.79542874394739
   },
   {
    "year": 2018.7763885010268,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 73.6778807362731,
-   "y": 73.98392227404065,
-   "pred_x": 73.75066373767527,
-   "pred_y": 74.03586010057857,
-   "offset_arcsec": 0.17882844424672356,
-   "ra": 331.0821342344013,
-   "dec": -56.79574326264626
+   "x": 74.1957459764232,
+   "y": 74.20449675462747,
+   "pred_x": 74.18792679194824,
+   "pred_y": 74.30670422796551,
+   "offset_arcsec": 0.20501226546054005,
+   "ra": 331.08205246490314,
+   "dec": -56.79577119071833
   },
   {
    "year": 2019.3298863791924,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 72.58406484584677,
-   "y": 73.27332770812289,
-   "pred_x": 72.64860759941887,
-   "pred_y": 73.35324503059219,
-   "offset_arcsec": 0.2054511665600922,
-   "ra": 331.08324391030857,
-   "dec": -56.79613802507984
+   "x": 73.07174224031941,
+   "y": 73.50706295658159,
+   "pred_x": 73.08586623183561,
+   "pred_y": 73.6240962972529,
+   "offset_arcsec": 0.2357650521726772,
+   "ra": 331.0831927611652,
+   "dec": -56.796158645925395
   },
   {
    "year": 2019.778925941136,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 71.70865049482798,
-   "y": 72.62519865834699,
-   "pred_x": 71.75453587072508,
-   "pred_y": 72.79945578659944,
-   "offset_arcsec": 0.360394308650127,
-   "ra": 331.08413203808027,
-   "dec": -56.796498079814995
+   "x": 72.20640612825026,
+   "y": 73.00345118434515,
+   "pred_x": 72.19179091588484,
+   "pred_y": 73.07031284522148,
+   "offset_arcsec": 0.13688076746600122,
+   "ra": 331.08407065529974,
+   "dec": -56.79643841698889
   },
   {
    "year": 2020.327275838467,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 70.54868836605453,
-   "y": 72.09084051523767,
-   "pred_x": 70.66272975437118,
-   "pred_y": 72.12318959407811,
-   "offset_arcsec": 0.23708142997958667,
-   "ra": 331.0853088530475,
-   "dec": -56.796794913261614
+   "x": 71.0703245996667,
+   "y": 72.34561857140416,
+   "pred_x": 71.09998041905924,
+   "pred_y": 72.39405372575281,
+   "offset_arcsec": 0.11358577016243365,
+   "ra": 331.0852232437066,
+   "dec": -56.796803852792095
   },
   {
    "year": 2020.776295140315,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 69.75354008323396,
-   "y": 71.40422435396403,
-   "pred_x": 69.76869836727059,
-   "pred_y": 71.56942533772309,
-   "offset_arcsec": 0.33178992447787925,
-   "ra": 331.08611558748197,
-   "dec": -56.797176338220304
+   "x": 70.20571471691872,
+   "y": 71.64477596105992,
+   "pred_x": 70.2059454450763,
+   "pred_y": 71.84029526124894,
+   "offset_arcsec": 0.3910388720568424,
+   "ra": 331.0861004440526,
+   "dec": -56.79719318231256
   },
   {
    "year": 2021.324984531143,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 68.54624713164145,
-   "y": 70.70537827377422,
-   "pred_x": 68.67621629640342,
-   "pred_y": 70.89274045810616,
-   "offset_arcsec": 0.4560551346893399,
-   "ra": 331.0873404725902,
-   "dec": -56.797564532874595
+   "x": 69.07593245431268,
+   "y": 71.08360499854321,
+   "pred_x": 69.11345899126063,
+   "pred_y": 71.16361745919187,
+   "offset_arcsec": 0.17675106550394887,
+   "ra": 331.08724667676233,
+   "dec": -56.79750489876982
   },
   {
    "year": 2021.7736257357974,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 67.71216780997322,
-   "y": 70.18187003644566,
-   "pred_x": 67.7829377316115,
-   "pred_y": 70.33944250089458,
-   "offset_arcsec": 0.3454704796348697,
-   "ra": 331.0881867247236,
-   "dec": -56.797855327043386
+   "x": 68.17608191067693,
+   "y": 70.42600469970928,
+   "pred_x": 68.22017684280497,
+   "pred_y": 70.61032528908517,
+   "offset_arcsec": 0.37904322943412166,
+   "ra": 331.08815966343644,
+   "dec": -56.79787018875894
   },
   {
    "year": 2022.329265708419,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 66.62404757588484,
-   "y": 69.54281459863779,
-   "pred_x": 66.67661652945661,
-   "pred_y": 69.6541856445462,
-   "offset_arcsec": 0.2463087862542954,
-   "ra": 331.08929073985314,
-   "dec": -56.798210292169244
+   "x": 67.05708227986321,
+   "y": 69.80240811349988,
+   "pred_x": 67.11385120243399,
+   "pred_y": 69.92507560010283,
+   "offset_arcsec": 0.27033329515258847,
+   "ra": 331.0892950014541,
+   "dec": -56.798216567901605
   },
   {
    "year": 2022.7780720054757,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 65.68048709377703,
-   "y": 68.96830044522767,
-   "pred_x": 65.78300925547076,
-   "pred_y": 69.10068408441703,
-   "offset_arcsec": 0.3348804027878679,
-   "ra": 331.0902481031692,
-   "dec": -56.79852940185915
+   "x": 66.20261768278027,
+   "y": 69.18759245108798,
+   "pred_x": 66.22024034364563,
+   "pred_y": 69.37157982932821,
+   "offset_arcsec": 0.36965883249076736,
+   "ra": 331.090161973406,
+   "dec": -56.798558076800035
   },
   {
    "year": 2023.326337029432,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 64.69000761426253,
-   "y": 68.26490090717196,
-   "pred_x": 64.69137213653549,
-   "pred_y": 68.42452256913909,
-   "offset_arcsec": 0.3192549857506339,
-   "ra": 331.0912531041573,
-   "dec": -56.798920103429076
+   "x": 65.18492609311117,
+   "y": 68.5057274646413,
+   "pred_x": 65.12859884570423,
+   "pred_y": 68.69542538648027,
+   "offset_arcsec": 0.39576791115725807,
+   "ra": 331.09119457515743,
+   "dec": -56.79893681690449
   },
   {
    "year": 2023.7752238193018,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 63.75072387200167,
-   "y": 67.6116813765108,
-   "pred_x": 63.79760459744659,
-   "pred_y": 67.87092174061516,
-   "offset_arcsec": 0.5268903767385988,
-   "ra": 331.0922061759354,
-   "dec": -56.799282923680295
+   "x": 64.29207700896748,
+   "y": 68.00577891308563,
+   "pred_x": 64.23482772133798,
+   "pred_y": 68.14183034844187,
+   "offset_arcsec": 0.2952116101398327,
+   "ra": 331.09210050743786,
+   "dec": -56.799214494351446
   },
   {
    "year": 2024.3258130047911,
    "mission": "NEOWISE",
    "ch": "w2",
-   "x": 62.55521470896024,
-   "y": 67.0524480912246,
-   "pred_x": 62.70133989986971,
-   "pred_y": 67.1918938968372,
-   "offset_arcsec": 0.4039688238901914,
-   "ra": 331.0934192121487,
-   "dec": -56.799593497163414
+   "x": 63.08202111313809,
+   "y": 67.31381674614731,
+   "pred_x": 63.13855862639909,
+   "pred_y": 67.46280960720645,
+   "offset_arcsec": 0.3187184485512833,
+   "ra": 331.09332831854374,
+   "dec": -56.79959881006248
   },
   {
    "year": 2025.3459895596604,
    "mission": "SPHEREx",
    "ch": "w2",
-   "x": 60.48714307838788,
-   "y": 65.7191371455,
-   "pred_x": 60.67009124932142,
-   "pred_y": 65.93373572175321,
-   "offset_arcsec": 0.5639949586635534,
-   "ra": 331.09551772776257,
-   "dec": -56.80033400448855
+   "x": 60.94957840083264,
+   "y": 66.06493892017272,
+   "pred_x": 61.107301828383754,
+   "pred_y": 66.20466459249627,
+   "offset_arcsec": 0.42142587032804335,
+   "ra": 331.0954921179453,
+   "dec": -56.8002924119074
   },
   {
-   "year": 2025.7435164175092,
+   "year": 2025.752585785888,
    "mission": "SPHEREx",
    "ch": "w2",
-   "x": 59.719376954563444,
-   "y": 65.0845114199368,
-   "pred_x": 59.87858522214516,
-   "pred_y": 65.44347581269909,
-   "offset_arcsec": 0.7853730333803316,
-   "ra": 331.09629684825813,
-   "dec": -56.80068648332997
+   "x": 60.24267487466299,
+   "y": 65.33355606845495,
+   "pred_x": 60.29773475604311,
+   "pred_y": 65.70322490396023,
+   "offset_arcsec": 0.7474935002298634,
+   "ra": 331.0962095018873,
+   "dec": -56.80069865478803
+  },
+  {
+   "year": 2026.324068799373,
+   "mission": "SPHEREx",
+   "ch": "w2",
+   "x": 59.02570384553361,
+   "y": 64.9190809295462,
+   "pred_x": 59.15986430903735,
+   "pred_y": 64.99843660159955,
+   "offset_arcsec": 0.3117457372663194,
+   "ra": 331.0974443554133,
+   "dec": -56.80092876981372
+  },
+  {
+   "year": 2026.733046788173,
+   "mission": "SPHEREx",
+   "ch": "w2",
+   "x": 58.34080392864971,
+   "y": 64.19538640303003,
+   "pred_x": 58.345554950509914,
+   "pred_y": 64.49405957708942,
+   "offset_arcsec": 0.5974219050445247,
+   "ra": 331.0981394452396,
+   "dec": -56.801330733129625
   },
   {
    "year": 2010.5,
    "mission": "WISE",
    "ch": "w1",
-   "x": 90.16739262654112,
-   "y": 84.20147038902749,
-   "pred_x": 90.22957939030323,
-   "pred_y": 84.24292285445836,
-   "offset_arcsec": 0.14947240699397407,
-   "ra": 331.0654083437854,
-   "dec": -56.79006583987303
+   "x": 90.60263665431371,
+   "y": 84.47728812550588,
+   "pred_x": 90.66690858060434,
+   "pred_y": 84.51366023920417,
+   "offset_arcsec": 0.14769984145397877,
+   "ra": 331.06541045977946,
+   "dec": -56.790063017955596
   },
   {
    "year": 2014.3348309377138,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 82.67632167416063,
-   "y": 79.59724804202787,
-   "pred_x": 82.59414082847181,
-   "pred_y": 79.5135218309229,
-   "offset_arcsec": 0.23463818606590003,
-   "ra": 331.073006176781,
-   "dec": -56.792624476030575
+   "x": 83.16835885705306,
+   "y": 79.81605554921558,
+   "pred_x": 83.03143937112401,
+   "pred_y": 79.78430867208509,
+   "offset_arcsec": 0.28110360718434196,
+   "ra": 331.0729506438686,
+   "dec": -56.79265334924964
   },
   {
    "year": 2014.8298346338124,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 81.5076560723565,
-   "y": 78.79815392261945,
-   "pred_x": 81.60855102026242,
-   "pred_y": 78.90304616408956,
-   "offset_arcsec": 0.2910819305073224,
-   "ra": 331.07419158307965,
-   "dec": -56.79306849022085
+   "x": 81.99897063952059,
+   "y": 79.08675138676908,
+   "pred_x": 82.04584560732917,
+   "pred_y": 79.17383938939493,
+   "offset_arcsec": 0.1978037682954863,
+   "ra": 331.07413678606207,
+   "dec": -56.79305859601839
   },
   {
    "year": 2015.3257932922656,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 80.63287350500855,
-   "y": 78.3209476763716,
-   "pred_x": 80.62105981058315,
-   "pred_y": 78.29139276657388,
-   "offset_arcsec": 0.06365708313185008,
-   "ra": 331.0750789260961,
-   "dec": -56.793333652101055
+   "x": 81.14486366492739,
+   "y": 78.60344244183348,
+   "pred_x": 81.0583504345728,
+   "pred_y": 78.56219238844827,
+   "offset_arcsec": 0.191688349406485,
+   "ra": 331.0750031510676,
+   "dec": -56.79332715069455
   },
   {
    "year": 2015.8161968514717,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 79.57785030136458,
-   "y": 77.61931423986205,
-   "pred_x": 79.64462922537169,
-   "pred_y": 77.686590334935,
-   "offset_arcsec": 0.1895837292434489,
-   "ra": 331.0761491047809,
-   "dec": -56.79372349712212
+   "x": 80.02174488394441,
+   "y": 77.8387644612554,
+   "pred_x": 80.08191593076755,
+   "pred_y": 77.95739628178067,
+   "offset_arcsec": 0.26603806937693236,
+   "ra": 331.07614239687234,
+   "dec": -56.79375202802073
   },
   {
    "year": 2016.3271263518138,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 78.6371515879777,
-   "y": 77.0917392871277,
-   "pred_x": 78.62732993940679,
-   "pred_y": 77.05647377443464,
-   "offset_arcsec": 0.07321533064182907,
-   "ra": 331.07710334155587,
-   "dec": -56.79401662998791
+   "x": 79.12408090349608,
+   "y": 77.3926311886682,
+   "pred_x": 79.06461256235363,
+   "pred_y": 77.32728631107551,
+   "offset_arcsec": 0.17670808233432045,
+   "ra": 331.07705298057033,
+   "dec": -56.79399991731514
   },
   {
    "year": 2016.7992813141684,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 77.63005931760262,
-   "y": 76.35011859347212,
-   "pred_x": 77.68723369330415,
-   "pred_y": 76.47417688179955,
-   "offset_arcsec": 0.27319859524857437,
-   "ra": 331.07812493560834,
-   "dec": -56.79442867160041
+   "x": 78.07849545154349,
+   "y": 76.60914131475485,
+   "pred_x": 78.12451254370377,
+   "pred_y": 76.74499550819286,
+   "offset_arcsec": 0.2868723382107542,
+   "ra": 331.0781136157032,
+   "dec": -56.79443522475865
   },
   {
    "year": 2017.3278064339493,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 76.6819363727402,
-   "y": 75.8274444750406,
-   "pred_x": 76.63490020062696,
-   "pred_y": 75.82236008606486,
-   "offset_arcsec": 0.09462034652982336,
-   "ra": 331.0790867374698,
-   "dec": -56.79471906683568
+   "x": 77.13420214150511,
+   "y": 76.10512315494368,
+   "pred_x": 77.07217482815877,
+   "pred_y": 76.09318552931029,
+   "offset_arcsec": 0.12633122324168664,
+   "ra": 331.07907152996194,
+   "dec": -56.79471525898864
   },
   {
    "year": 2017.7865771389459,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 75.59650897970913,
-   "y": 75.12998224885992,
-   "pred_x": 75.72145302559629,
-   "pred_y": 75.25656966429761,
-   "offset_arcsec": 0.3557267960486656,
-   "ra": 331.0801878413762,
-   "dec": -56.79510656049389
+   "x": 76.07745002649294,
+   "y": 75.39884197888317,
+   "pred_x": 76.15872398777428,
+   "pred_y": 75.52740102485069,
+   "offset_arcsec": 0.3041899739196235,
+   "ra": 331.0801435387783,
+   "dec": -56.795107655734675
   },
   {
    "year": 2018.3289062286105,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 74.68105671055551,
-   "y": 74.64190665553974,
-   "pred_x": 74.64163478734001,
-   "pred_y": 74.5877287797591,
-   "offset_arcsec": 0.13400492903807532,
-   "ra": 331.0811165332194,
-   "dec": -56.7953777184142
+   "x": 75.11320932560625,
+   "y": 74.8943420713678,
+   "pred_x": 75.07890141662092,
+   "pred_y": 74.85856713537028,
+   "offset_arcsec": 0.09913382198401263,
+   "ra": 331.08112172142563,
+   "dec": -56.79538794215365
   },
   {
    "year": 2018.7763885010268,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 73.61368270745805,
-   "y": 73.94843942469278,
-   "pred_x": 73.75066373767527,
-   "pred_y": 74.03586010057857,
-   "offset_arcsec": 0.32499955199976593,
-   "ra": 331.08219936255483,
-   "dec": -56.79576297488899
+   "x": 74.10751739652238,
+   "y": 74.17379749280038,
+   "pred_x": 74.18792679194824,
+   "pred_y": 74.30670422796551,
+   "offset_arcsec": 0.31067585111571916,
+   "ra": 331.0821419713695,
+   "dec": -56.7957882456108
   },
   {
    "year": 2019.3298863791924,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 72.6460567338917,
-   "y": 73.3297825173053,
-   "pred_x": 72.64860759941887,
-   "pred_y": 73.35324503059219,
-   "offset_arcsec": 0.04720154424408913,
-   "ra": 331.0831810184805,
-   "dec": -56.79610666225875
+   "x": 73.1388883683193,
+   "y": 73.57264251205618,
+   "pred_x": 73.08586623183561,
+   "pred_y": 73.6240962972529,
+   "offset_arcsec": 0.14776791215535476,
+   "ra": 331.0831246405976,
+   "dec": -56.796122213609834
   },
   {
    "year": 2019.778925941136,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 71.64300419494992,
-   "y": 72.60611291325937,
-   "pred_x": 71.75453587072508,
-   "pred_y": 72.79945578659944,
-   "offset_arcsec": 0.4464113855234363,
-   "ra": 331.08419863716466,
-   "dec": -56.79650868148071
+   "x": 72.12814803177542,
+   "y": 72.96132601499428,
+   "pred_x": 72.19179091588484,
+   "pred_y": 73.07031284522148,
+   "offset_arcsec": 0.2524166860722264,
+   "ra": 331.0841500496257,
+   "dec": -56.79646181835817
   },
   {
    "year": 2020.327275838467,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 70.62840156341476,
-   "y": 72.10413250900841,
-   "pred_x": 70.66272975437118,
-   "pred_y": 72.12318959407811,
-   "offset_arcsec": 0.07852635688693196,
-   "ra": 331.08522798248157,
-   "dec": -56.796787531387
+   "x": 71.12953821062746,
+   "y": 72.36526396212223,
+   "pred_x": 71.09998041905924,
+   "pred_y": 72.39405372575281,
+   "offset_arcsec": 0.08252305203435352,
+   "ra": 331.0851631699288,
+   "dec": -56.796792940343295
   },
   {
    "year": 2020.776295140315,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 69.66668892583328,
-   "y": 71.36075455153504,
-   "pred_x": 69.76869836727059,
-   "pred_y": 71.56942533772309,
-   "offset_arcsec": 0.46454030125711254,
-   "ra": 331.0862037028564,
-   "dec": -56.79720048468628
+   "x": 70.09384131235515,
+   "y": 71.61107171758673,
+   "pred_x": 70.2059454450763,
+   "pred_y": 71.84029526124894,
+   "offset_arcsec": 0.5103362393595516,
+   "ra": 331.0862139441168,
+   "dec": -56.79721190288638
   },
   {
    "year": 2021.324984531143,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 68.61163789198285,
-   "y": 70.73361439299524,
-   "pred_x": 68.67621629640342,
-   "pred_y": 70.89274045810616,
-   "offset_arcsec": 0.3434616409706982,
-   "ra": 331.0872741291852,
-   "dec": -56.79754884932876
+   "x": 69.12308222905618,
+   "y": 71.07750541908334,
+   "pred_x": 69.11345899126063,
+   "pred_y": 71.16361745919187,
+   "offset_arcsec": 0.17329616414309343,
+   "ra": 331.0871988424575,
+   "dec": -56.79750828952097
   },
   {
    "year": 2021.7736257357974,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 67.61527418389127,
-   "y": 70.07591376256723,
-   "pred_x": 67.7829377316115,
-   "pred_y": 70.33944250089458,
-   "offset_arcsec": 0.6246869940381331,
-   "ra": 331.08828503796764,
-   "dec": -56.797914186187135
+   "x": 68.06567373130484,
+   "y": 70.32566915067348,
+   "pred_x": 68.22017684280497,
+   "pred_y": 70.61032528908517,
+   "offset_arcsec": 0.6477664012484469,
+   "ra": 331.08827168649384,
+   "dec": -56.79792592493284
   },
   {
    "year": 2022.329265708419,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 66.65036878114103,
-   "y": 69.53872347151103,
-   "pred_x": 66.67661652945661,
-   "pred_y": 69.6541856445462,
-   "offset_arcsec": 0.23681602593331091,
-   "ra": 331.08926403621655,
-   "dec": -56.79821256672118
+   "x": 67.09698964446022,
+   "y": 69.79271853783099,
+   "pred_x": 67.11385120243399,
+   "pred_y": 69.92507560010283,
+   "offset_arcsec": 0.266853547107406,
+   "ra": 331.08925451459896,
+   "dec": -56.79822195343753
   },
   {
    "year": 2022.7780720054757,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 65.61417952861217,
-   "y": 68.89839760925452,
-   "pred_x": 65.78300925547076,
-   "pred_y": 69.10068408441703,
-   "offset_arcsec": 0.5269660079183291,
-   "ra": 331.0903153852687,
-   "dec": -56.79856823193557
+   "x": 66.13246291474499,
+   "y": 69.1203413865466,
+   "pred_x": 66.22024034364563,
+   "pred_y": 69.37157982932821,
+   "offset_arcsec": 0.5322617068137447,
+   "ra": 331.0902331578862,
+   "dec": -56.79859543369026
   },
   {
    "year": 2023.326337029432,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 64.68455859595211,
-   "y": 68.30229573584138,
-   "pred_x": 64.69137213653549,
-   "pred_y": 68.42452256913909,
-   "offset_arcsec": 0.2448331911592002,
-   "ra": 331.09125862703365,
-   "dec": -56.798899328084524
+   "x": 65.18159385941507,
+   "y": 68.55187631436334,
+   "pred_x": 65.12859884570423,
+   "pred_y": 68.69542538648027,
+   "offset_arcsec": 0.30603795383662785,
+   "ra": 331.0911979494687,
+   "dec": -56.79891117839949
   },
   {
    "year": 2023.7752238193018,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 63.65704189823549,
-   "y": 67.58940837946157,
-   "pred_x": 63.79760459744659,
-   "pred_y": 67.87092174061516,
-   "offset_arcsec": 0.629309597349542,
-   "ra": 331.09230122711836,
-   "dec": -56.799295289241726
+   "x": 64.17490784221616,
+   "y": 67.95172272375812,
+   "pred_x": 64.23482772133798,
+   "pred_y": 68.14183034844187,
+   "offset_arcsec": 0.3986542362216249,
+   "ra": 331.0922193927238,
+   "dec": -56.79924451566509
   },
   {
    "year": 2024.3258130047911,
    "mission": "NEOWISE",
    "ch": "w1",
-   "x": 62.69419724634761,
-   "y": 67.10662673542478,
-   "pred_x": 62.70133989986971,
-   "pred_y": 67.1918938968372,
-   "offset_arcsec": 0.17113160011530096,
-   "ra": 331.093278192915,
-   "dec": -56.7995634115037
+   "x": 63.196906583437695,
+   "y": 67.36346810529342,
+   "pred_x": 63.13855862639909,
+   "pred_y": 67.46280960720645,
+   "offset_arcsec": 0.23041890431095272,
+   "ra": 331.0932117489983,
+   "dec": -56.79957123671856
   },
   {
    "year": 2025.3205820547748,
    "mission": "SPHEREx",
    "ch": "w1",
-   "x": 60.521976377738355,
-   "y": 65.80559558914443,
-   "pred_x": 60.720679512428,
-   "pred_y": 65.96507016069482,
-   "offset_arcsec": 0.5095687253796369,
-   "ra": 331.09548236754887,
-   "dec": -56.800285976034836
+   "x": 60.97370170554843,
+   "y": 66.13638369180553,
+   "pred_x": 61.1578902944013,
+   "pred_y": 66.23599870366878,
+   "offset_arcsec": 0.418801073458496,
+   "ra": 331.0954676278147,
+   "dec": -56.800252723057476
   },
   {
    "year": 2025.7634828201553,
    "mission": "SPHEREx",
    "ch": "w1",
-   "x": 59.93617075447553,
-   "y": 65.14063346357716,
-   "pred_x": 59.83883060508562,
-   "pred_y": 65.41885174881585,
-   "offset_arcsec": 0.5895100215562484,
-   "ra": 331.0960768737921,
-   "dec": -56.8006553306033
+   "x": 60.43594711064806,
+   "y": 65.39070331313279,
+   "pred_x": 60.27603785004366,
+   "pred_y": 65.68978600534605,
+   "offset_arcsec": 0.6782961753528536,
+   "ra": 331.0960133928865,
+   "dec": -56.80066692885026
   },
   {
-   "year": 2026.3013998708002,
+   "year": 2026.3075350721035,
    "mission": "SPHEREx",
    "ch": "w1",
-   "x": 58.68445466426862,
-   "y": 64.64350388228326,
-   "pred_x": 58.767797091255844,
-   "pred_y": 64.75545213462414,
-   "offset_arcsec": 0.27912986348931773,
-   "ra": 331.09734700048745,
-   "dec": -56.80093135717191
+   "x": 59.06561170368956,
+   "y": 64.99377645011201,
+   "pred_x": 59.19278434195526,
+   "pred_y": 65.01882701968722,
+   "offset_arcsec": 0.2592327911195568,
+   "ra": 331.0974038467198,
+   "dec": -56.80088727738143
   }
  ],
  "motion": {
   "from_year": 2010.5,
-  "to_year": 2026.3013998708002,
-  "shift_arcsec": 74.18439502996674,
-  "measured_arcsec_per_yr": 4.6947989188637615,
-  "measured_pmra": 3987.9240658214644,
-  "measured_pmdec": -2477.417714840665,
+  "to_year": 2026.733046788173,
+  "shift_arcsec": 76.2655758524542,
+  "measured_arcsec_per_yr": 4.698167685195099,
+  "measured_pmra": 3977.4652500678153,
+  "measured_pmdec": -2500.509904542361,
   "expected_arcsec_per_yr": 4.684164530277503,
-  "shift_spherex_pixels": 12.06250325690516
+  "shift_spherex_pixels": 12.40090664267548
  },
  "movers_experimental": [
   {
-   "x0": 89.99437282086322,
-   "y0": 84.0097383033888,
-   "x1": 60.105524226275556,
-   "y1": 65.8893236231911,
-   "snr": 359.4,
-   "arcsec_per_yr": 4.7087087628492,
-   "ra": 331.0959048833969,
-   "dec": -56.80023941182836,
+   "x0": 90.12687939369883,
+   "y0": 84.07916974545753,
+   "x1": 60.93384822242369,
+   "y1": 65.99272454350027,
+   "snr": 370.7,
+   "arcsec_per_yr": 4.626394569334285,
+   "ra": 331.0955080925757,
+   "dec": -56.80033252924842,
    "year": 2025.3459895596604,
-   "pmra": 4025.9612792760286,
-   "pmdec": -2441.151859921385,
+   "pmra": 3932.2194390154013,
+   "pmdec": -2436.6028410079684,
    "gaia_source_id": 6412596012146801152,
    "explained_by_gaia": true
-  },
-  {
-   "x0": 140.90897682401283,
-   "y0": 49.06989079670992,
-   "x1": 141.9545420689182,
-   "y1": 120.96409631287025,
-   "snr": 6.1,
-   "arcsec_per_yr": 9.686358573180149,
-   "ra": 331.01291648663505,
-   "dec": -56.76962446404307,
-   "year": 2025.3459895596604,
-   "pmra": -131.3223427137635,
-   "pmdec": 9685.469281549194,
-   "gaia_source_id": null,
-   "explained_by_gaia": false
   }
  ],
  "spectrum": [
   {
    "lam": 0.775,
-   "flux_mjy": 0.04874380203848128,
-   "n": 5
+   "flux_mjy": 0.04753363096182828,
+   "n": 6
   },
   {
    "lam": 0.825,
-   "flux_mjy": 0.39338175765493577,
-   "n": 2
+   "flux_mjy": 0.6128018494574012,
+   "n": 3
   },
   {
    "lam": 0.975,
-   "flux_mjy": 8.11219837435951,
-   "n": 2
+   "flux_mjy": 6.745405754774039,
+   "n": 3
   },
   {
    "lam": 1.025,
    "flux_mjy": 11.729580107910506,
-   "n": 1
-  },
-  {
-   "lam": 1.075,
-   "flux_mjy": 21.147936650269106,
    "n": 3
   },
   {
+   "lam": 1.075,
+   "flux_mjy": 20.971189933138817,
+   "n": 5
+  },
+  {
    "lam": 1.125,
-   "flux_mjy": 14.565361977274051,
-   "n": 4
+   "flux_mjy": 14.418716895267085,
+   "n": 5
   },
   {
    "lam": 1.175,
-   "flux_mjy": 13.922755566727336,
-   "n": 1
-  },
-  {
-   "lam": 1.225,
-   "flux_mjy": 31.38585028976548,
+   "flux_mjy": 13.876478453224085,
    "n": 4
   },
   {
+   "lam": 1.225,
+   "flux_mjy": 29.033013287553196,
+   "n": 5
+  },
+  {
    "lam": 1.275,
-   "flux_mjy": 41.248407627133986,
-   "n": 2
+   "flux_mjy": 40.80848588480033,
+   "n": 3
   },
   {
    "lam": 1.325,
@@ -12717,13 +15095,13 @@
   },
   {
    "lam": 1.375,
-   "flux_mjy": 6.114762996946566,
-   "n": 1
+   "flux_mjy": 5.76036649738287,
+   "n": 3
   },
   {
    "lam": 1.475,
-   "flux_mjy": 13.010129431420113,
-   "n": 1
+   "flux_mjy": 14.279789195324824,
+   "n": 2
   },
   {
    "lam": 1.525,
@@ -12737,8 +15115,8 @@
   },
   {
    "lam": 1.625,
-   "flux_mjy": 32.45637078922434,
-   "n": 4
+   "flux_mjy": 32.33982650062197,
+   "n": 5
   },
   {
    "lam": 1.675,
@@ -12752,23 +15130,23 @@
   },
   {
    "lam": 1.775,
-   "flux_mjy": 17.805403556656554,
-   "n": 3
-  },
-  {
-   "lam": 1.825,
-   "flux_mjy": 10.54810149447535,
+   "flux_mjy": 17.75651088062999,
    "n": 4
   },
   {
+   "lam": 1.825,
+   "flux_mjy": 11.34515721379894,
+   "n": 5
+  },
+  {
    "lam": 1.875,
-   "flux_mjy": 12.484159245879452,
-   "n": 3
+   "flux_mjy": 11.297880488986536,
+   "n": 4
   },
   {
    "lam": 1.925,
-   "flux_mjy": 12.636722032567492,
-   "n": 3
+   "flux_mjy": 12.61890039498179,
+   "n": 5
   },
   {
    "lam": 1.975,
@@ -12777,13 +15155,13 @@
   },
   {
    "lam": 2.025,
-   "flux_mjy": 21.67957965532094,
-   "n": 1
+   "flux_mjy": 21.70749287117604,
+   "n": 3
   },
   {
    "lam": 2.075,
-   "flux_mjy": 27.82352621273189,
-   "n": 1
+   "flux_mjy": 27.49408632922965,
+   "n": 2
   },
   {
    "lam": 2.125,
@@ -12792,7 +15170,12 @@
   },
   {
    "lam": 2.175,
-   "flux_mjy": 25.009716410830436,
+   "flux_mjy": 25.143329218453914,
+   "n": 2
+  },
+  {
+   "lam": 2.325,
+   "flux_mjy": 12.31975764705294,
    "n": 1
   },
   {
@@ -12836,9 +15219,14 @@
    "n": 1
   },
   {
-   "lam": 3.625,
-   "flux_mjy": 28.7314369720226,
+   "lam": 3.575,
+   "flux_mjy": 21.114613541434508,
    "n": 1
+  },
+  {
+   "lam": 3.625,
+   "flux_mjy": 29.138459698338778,
+   "n": 2
   },
   {
    "lam": 3.825,
@@ -12851,9 +15239,14 @@
    "n": 2
   },
   {
-   "lam": 3.975,
-   "flux_mjy": 58.09046186024934,
+   "lam": 3.925,
+   "flux_mjy": 57.64039765926292,
    "n": 1
+  },
+  {
+   "lam": 3.975,
+   "flux_mjy": 66.1241928823572,
+   "n": 2
   },
   {
    "lam": 4.025,
@@ -12861,29 +15254,39 @@
    "n": 2
   },
   {
+   "lam": 4.075,
+   "flux_mjy": 61.4847222019279,
+   "n": 1
+  },
+  {
    "lam": 4.125,
-   "flux_mjy": 59.67319487301331,
-   "n": 2
+   "flux_mjy": 58.58146044384883,
+   "n": 3
+  },
+  {
+   "lam": 4.175,
+   "flux_mjy": 46.67035622938328,
+   "n": 1
   },
   {
    "lam": 4.225,
-   "flux_mjy": 40.04529742627491,
-   "n": 2
+   "flux_mjy": 39.515175828177775,
+   "n": 4
   },
   {
    "lam": 4.325,
-   "flux_mjy": 34.23016413241599,
-   "n": 2
+   "flux_mjy": 34.51030561716925,
+   "n": 3
   },
   {
    "lam": 4.375,
-   "flux_mjy": 33.66400254286534,
-   "n": 2
+   "flux_mjy": 32.27930315624295,
+   "n": 3
   },
   {
    "lam": 4.425,
-   "flux_mjy": 27.24597759605354,
-   "n": 7
+   "flux_mjy": 27.42528429324132,
+   "n": 8
   },
   {
    "lam": 4.475,
@@ -12893,7 +15296,7 @@
   {
    "lam": 4.525,
    "flux_mjy": 18.016564240326716,
-   "n": 3
+   "n": 5
   },
   {
    "lam": 4.575,
@@ -12907,8 +15310,8 @@
   },
   {
    "lam": 4.675,
-   "flux_mjy": 24.332438611444783,
-   "n": 4
+   "flux_mjy": 24.107107370533885,
+   "n": 5
   },
   {
    "lam": 4.725,
@@ -12916,26 +15319,36 @@
    "n": 2
   },
   {
-   "lam": 4.975,
-   "flux_mjy": 25.837263181102298,
+   "lam": 4.775,
+   "flux_mjy": 19.465354156813635,
    "n": 1
+  },
+  {
+   "lam": 4.825,
+   "flux_mjy": 20.23120769725631,
+   "n": 3
+  },
+  {
+   "lam": 4.975,
+   "flux_mjy": 24.702172581375265,
+   "n": 2
   }
  ],
- "spectrum_points": 180,
- "flagged_points": 69,
+ "spectrum_points": 249,
+ "flagged_points": 91,
  "variability": {
-  "delta_mag": -0.06188904344810787,
-  "uncertainty_mag": 0.03211732003200325,
-  "n_wavelength_bins": 14,
+  "delta_mag": 0.002848493042126785,
+  "uncertainty_mag": 0.02980961287659996,
+  "n_wavelength_bins": 18,
   "method": "aperture photometry",
   "from": "May 2025",
-  "to": "Oct 2025"
+  "to": "Sep 2026"
  },
  "ir_color": {
-  "f4p0_mjy": 26.310606558646334,
+  "f4p0_mjy": 27.657912934543106,
   "f3p3_mjy": 10.426816064535696,
   "f3p3_err": 0.5044792225219293,
-  "ratio": 2.523359613884005,
+  "ratio": 2.6525751258444883,
   "lower_limit": false
  },
  "bands": [
@@ -12986,12 +15399,16 @@
    "n_images": 122
   },
   {
-   "year": 2025.7710742428405,
-   "n_images": 49
+   "year": 2025.7756988692483,
+   "n_images": 66
   },
   {
-   "year": 2026.3000820774953,
-   "n_images": 10
+   "year": 2026.31014948735,
+   "n_images": 29
+  },
+  {
+   "year": 2026.7393062825229,
+   "n_images": 33
   }
  ],
  "gaia_facts": {
@@ -13004,7 +15421,7 @@
   "teff_k": null
  },
  "changes": {
-  "found": 2,
+  "found": 1,
   "candidates": 0,
   "target_recovered": true,
   "items": [
@@ -13012,33 +15429,16 @@
     "n": 1,
     "status": "target",
     "reason": "This is the mission target itself: both ends lie on its measured path.",
-    "arcsec_per_yr": 4.71,
-    "snr": 359.4,
-    "x0": 90.0,
-    "y0": 84.0,
-    "x1": 60.1,
-    "y1": 65.9,
-    "ra": 331.0959,
-    "dec": -56.80024,
-    "ra0": 331.06558,
-    "dec0": -56.79017,
-    "year": 2025.35,
-    "simbad_checked": true
-   },
-   {
-    "n": 2,
-    "status": "rejected",
-    "reason": "An end is at the edge of the picture, where a dot can appear or vanish without moving.",
-    "arcsec_per_yr": 9.69,
-    "snr": 6.1,
-    "x0": 140.9,
-    "y0": 49.1,
-    "x1": 142.0,
-    "y1": 121.0,
-    "ra": 331.01292,
-    "dec": -56.76962,
-    "ra0": 331.0139,
-    "dec0": -56.80957,
+    "arcsec_per_yr": 4.63,
+    "snr": 370.7,
+    "x0": 90.1,
+    "y0": 84.1,
+    "x1": 60.9,
+    "y1": 66.0,
+    "ra": 331.09551,
+    "dec": -56.80033,
+    "ra0": 331.06589,
+    "dec0": -56.79028,
     "year": 2025.35,
     "simbad_checked": true
    }
@@ -13056,11 +15456,11 @@
   "checks": [
    {
     "state": "ok",
-    "text": "Moved 74\u2033 between 2010 and 2026 (12.1 SPHEREx pixels)"
+    "text": "Moved 76\u2033 between 2010 and 2026 (12.4 SPHEREx pixels)"
    },
    {
     "state": "ok",
-    "text": "Measured speed matches the catalogue: 4.69 vs 4.68\u2033/yr (difference 0.2%)"
+    "text": "Measured speed matches the catalogue: 4.70 vs 4.68\u2033/yr (difference 0.3%)"
    },
    {
     "state": "ok",
@@ -13068,17 +15468,17 @@
    },
    {
     "state": "ok",
-    "text": "2.5\u00d7 brighter at 4\u20134.75 \u00b5m than in the 3.3 \u00b5m methane band: the methane dip of a cold brown dwarf (a normal star would be below 1\u00d7)"
+    "text": "2.7\u00d7 brighter at 4\u20134.75 \u00b5m than in the 3.3 \u00b5m methane band: the methane dip of a cold brown dwarf (a normal star would be below 1\u00d7)"
    },
    {
     "state": "no",
-    "text": "Steady brightness between May 2025 and Oct 2025 (-0.06 \u00b1 0.03 mag)"
+    "text": "Steady brightness between May 2025 and Sep 2026 (+0.00 \u00b1 0.03 mag)"
    }
   ],
   "numbers": [
    {
     "label": "measured motion",
-    "value": "4.69\u2033/yr"
+    "value": "4.70\u2033/yr"
    },
    {
     "label": "catalogue motion (Gaia DR3)",
@@ -13086,11 +15486,11 @@
    },
    {
     "label": "methane test (4\u20134.75 / 3.3 \u00b5m)",
-    "value": "2.5\u00d7"
+    "value": "2.7\u00d7"
    },
    {
-    "label": "brightness change May 2025\u2192Oct 2025",
-    "value": "-0.06 mag"
+    "label": "brightness change May 2025\u2192Sep 2026",
+    "value": "+0.00 mag"
    },
    {
     "label": "distance (Gaia parallax)",
@@ -13104,13 +15504,13 @@
     "id": "speed",
     "headline": "About 82 km/s across the sky",
     "detail": "That is 2.8 times the speed of Earth around the Sun. It is sideways speed only: motion toward or away from us does not show in images.",
-    "basis": "4.74 \u00d7 4.69\u2033/yr \u00f7 parallax 0.271\u2033"
+    "basis": "4.74 \u00d7 4.70\u2033/yr \u00f7 parallax 0.271\u2033"
    },
    {
     "id": "moon",
     "headline": "Crosses the width of the full Moon in about 380 years",
     "detail": "A typical star in these images needs more than 100,000 years, which is why this one stands out in a flipbook.",
-    "basis": "1,800\u2033 \u00f7 4.69\u2033/yr"
+    "basis": "1,800\u2033 \u00f7 4.70\u2033/yr"
    },
    {
     "id": "distance",
@@ -13121,14 +15521,14 @@
    {
     "id": "methane",
     "headline": "Cold enough to hold methane gas",
-    "detail": "Methane survives only in atmospheres below roughly 1,300 K, cooler than any true star. It absorbs light near 3.3 \u00b5m, which is why this object is 2.5\u00d7 brighter at 4\u20134.75 \u00b5m.",
+    "detail": "Methane survives only in atmospheres below roughly 1,300 K, cooler than any true star. It absorbs light near 3.3 \u00b5m, which is why this object is 2.7\u00d7 brighter at 4\u20134.75 \u00b5m.",
     "basis": "SPHEREx flux at 4\u20134.75 \u00b5m \u00f7 flux at 3.3 \u00b5m"
    }
   ],
   "limits": [
-   "Motion: an object must shift 2 SPHEREx pixels (12\u2033) to count as moving. Over these 15.8 years that means faster than 0.78\u2033 per year. Slower objects read as \u201cno measurable motion\u201d.",
-   "SPHEREx alone covers only 11 months here: by the same 2-pixel rule, enough only for motion faster than 13\u2033 per year. The 2010 WISE image is what makes slower motion visible.",
-   "Brightness: compared at 3 SPHEREx visits only. A change between or outside those dates is not seen.",
+   "Motion: an object must shift 2 SPHEREx pixels (12\u2033) to count as moving. Over these 16.2 years that means faster than 0.76\u2033 per year. Slower objects read as \u201cno measurable motion\u201d.",
+   "SPHEREx alone covers only 17 months here: by the same 2-pixel rule, enough only for motion faster than 9\u2033 per year. The 2010 WISE image is what makes slower motion visible.",
+   "Brightness: compared at 4 SPHEREx visits only. A change between or outside those dates is not seen.",
    "Solar System: the page checks against Gaia stars only. It does not check asteroids or comets, so a moving dot without a Gaia circle may be a known asteroid.",
    "Crowding: one SPHEREx pixel is 6.15\u2033 wide, so two close objects can blend into one dot and one spectrum."
   ]
