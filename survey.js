@@ -7,6 +7,8 @@
 (function (root) {
   "use strict";
   const D2R = Math.PI / 180, R2D = 180 / Math.PI;
+  // Epochs, investigate links, export, URL filter state (app/surveytools.js, loaded before this script)
+  const Tools = root.SurveyTools || (typeof require === "function" ? require("./surveytools.js") : null);
 
   // ---------- HEALPix, nested scheme (Gorski et al. 2005), as in healpix_base xyf2loc ----------
   const NSIDE = 32, N_TILES = 12 * NSIDE * NSIDE, TILE_AREA_DEG2 = 41252.96124941928 / N_TILES;
@@ -148,11 +150,16 @@
     return "No match";
   }
   const gaiaRankOf = (g) => (!g || g.checked === false ? 2 : g.match ? 1 : 0);   // no match first: the interesting ones
+  // f: {cls, minPm (″/yr), red, tile, q, minVisits, minSnr, hide: ["edge", "crowded", "saturated", "artefact"]}
   function applyFilters(rows, f) {
     const q = String(f.q || "").trim().toLowerCase(), minPm = (num(f.minPm) || 0) * 1000;
+    const minVis = num(f.minVisits) || 0, minSnr = num(f.minSnr) || 0, hide = Array.isArray(f.hide) ? f.hide : [];
     return rows.filter((m) => (f.cls === "all" || !f.cls || m.class === f.cls)
       && (minPm <= 0 || num(m.pm) >= minPm)
       && (!f.red || isRed(m))
+      && (minVis <= 0 || num(m.n_visits) >= minVis)
+      && (minSnr <= 0 || num(m.pm_snr) >= minSnr)
+      && !hide.some((h) => Tools.hasFlag(m, h))
       && (f.tile === null || f.tile === undefined || num(m.k5) === f.tile)
       && (!q || String(m.id).toLowerCase().includes(q) || String((m.gaia && m.gaia.source_id) || "").includes(q)));
   }
@@ -166,7 +173,9 @@
     w1w2: { get: (m) => num(m.w1w2), dir: -1 },
     gaia: { get: (m) => gaiaRankOf(m.gaia), dir: 1 },
     score: { get: (m) => num(m.score), dir: -1 },
+    snr: { get: (m) => num(m.pm_snr), dir: -1 },
   };
+  const sortDefaults = () => Object.fromEntries(Object.entries(SORTS).map(([k, s]) => [k, s.dir]));
   // Sort a copy; missing values always last; ties keep the rank order.
   function sortRows(rows, key, dir) {
     const s = SORTS[key] || SORTS.rank, d = dir || s.dir;
@@ -317,11 +326,30 @@
     const s = sexa(num(m.ra), num(m.dec));
     return `${s.ra} ${s.dec} (RA ${deg(m.ra)}°, Dec ${deg(m.dec)}°)`;
   }
+  // Other archives, each at the right date (surveytools.js archiveLinks); opened in a new tab
+  function archiveListHtml(m, now) {
+    const A = Tools.archiveLinks(m, { now });
+    if (!A || !A.links.length) return "<li>No position in the results file.</li>";
+    return A.links.map((l) => `<li data-key="${esc(l.key)}"><a href="${esc(l.href)}" target="_blank" rel="noopener noreferrer">${esc(l.label)} ↗</a>`
+      + `<small>${esc(l.when)} · ${esc(l.note)}</small></li>`).join("");
+  }
+  const fmtErr = (a) => (a < 1 ? `${Math.max(0.01, a).toFixed(2)}″` : a < 60 ? `${a.toFixed(1)}″` : `${(a / 60).toFixed(1)}′`);
+  // Where it is at each date (measured, J2000, Gaia 2016.0, today, 2030) with the uncertainty of the move
+  function whenHtml(m, now) {
+    return Tools.timeline(m, now).map((r) => {
+      const ep = r.key === "neowise" || r.key === "now" ? ` <small>${Number.isFinite(r.epoch) ? r.epoch.toFixed(2) : ""}</small>` : "";
+      const moved = r.key === "neowise" || !r.moved ? "" : r.err ? ` · ± ${fmtErr(r.err)}` : "";
+      return `<div data-when="${r.key}"><dt>${esc(r.label)}${ep}</dt><dd><span class="mono">RA ${deg(r.ra)}°, Dec ${deg(r.dec)}°</span>`
+        + `<small class="mono">${esc(sexa(r.ra, r.dec).pretty)}${moved}</small></dd></div>`;
+    }).join("");
+  }
+  const promoteCommand = (id) => `python pipeline/survey/promote.py --id ${String(id).replace(/[^\w.+-]/g, "")}`;
 
   const Core = {
     NSIDE, N_TILES, TILE_AREA_DEG2, MAP_W, MAP_H, pix2ang, corners, tilePoint, xyf2ang, hammerXY, project, tilePolygon, galToEq, eclToEq, skyPath,
     fmtInt, fmtBig, fmtPct, fmtHours, fmtPm, fmtFix, sexa, posAngle, compass, esc, isRed, gaiaText, applyFilters, sortRows, SORTS, CLASSES,
     normTiles, normValidation, oneRowPerStar, trackPoints, fitLine, trackOffsets, trackSvg, links, copyText, BYW,
+    Tools, sortDefaults, archiveListHtml, whenHtml, promoteCommand,
   };
   if (typeof module === "object" && module && module.exports) module.exports = Core;
   root.SurveyCore = Core;
@@ -339,9 +367,11 @@
   };
   const S = {
     summary: null, board: null, state: { summary: "loading", board: "loading" }, rows: [], view: [], tiles: [], tileIndex: new Map(),
-    sort: { key: "rank", dir: 1 }, page: 0, size: 50, f: { cls: "all", minPm: 0, red: false, q: "", tile: null },
-    open: null, opener: null, hover: null, loadSeq: 0,
+    sort: { key: "rank", dir: 1 }, page: 0, size: 50, f: { ...Tools.FILTER_DEFAULTS, hide: [] },
+    open: null, opener: null, hover: null, loadSeq: 0, nowYear: null,
   };
+  const HIDE_IDS = { edge: "fHideEdge", crowded: "fHideCrowded", saturated: "fHideSat", artefact: "fHideArt" };
+  const nowYear = () => (Number.isFinite(S.nowYear) ? S.nowYear : Tools.decimalYear());
   const SKY = { aladin: null, layers: {}, track: null, ends: null, src: "spherex", loading: null, seq: 0 };
 
   // ---------- loading ----------
@@ -606,8 +636,12 @@
   }
   function renderTable() {
     renderHead();
+    $("fHigh").setAttribute("aria-pressed", String(Tools.isPreset(S.f, "high")));
+    $("fSort").value = S.sort.key;
     const st = S.state.board;
+    $("xCsv").disabled = $("xJson").disabled = true;
     if (!S.board) {
+      S.view = [];
       $("candBody").innerHTML = "";
       $("tEmpty").hidden = false;
       $("tEmpty").textContent = st === "loading" ? "Loading the ranked list…" : st === "error" ? "The ranked list could not be loaded."
@@ -626,6 +660,7 @@
     const total = num(S.board.n_candidates), filtered = n !== S.rows.length;
     $("tCount").textContent = n ? `Showing ${fmtInt(from + 1)}–${fmtInt(from + rows.length)} of ${fmtInt(n)} candidate${n === 1 ? "" : "s"}${filtered ? ` (filtered from ${fmtInt(S.rows.length)})` : ""}${Number.isFinite(total) && total > S.rows.length ? `; the list holds the top ${fmtInt(S.rows.length)} of ${fmtInt(total)} ranked movers` : ""}.`
       : `0 of ${fmtInt(S.rows.length)} candidates shown.`;
+    $("xCsv").disabled = $("xJson").disabled = n === 0;
     $("pager").hidden = pages <= 1;
     $("pgPrev").disabled = S.page === 0;
     $("pgNext").disabled = S.page >= pages - 1;
@@ -643,25 +678,54 @@
     renderTable(); writeUrl();
   }
 
-  // ---------- URL: filters, tile and open candidate survive a reload or a shared link ----------
+  // ---------- URL: filters, sort, tile and open candidate survive a reload or a shared link ----------
+  // (?preset=high also works in a link: it sets the high-confidence filters, and the address then lists them)
+  const URL_KEYS = ["class", "minpm", "red", "visits", "snr", "hide", "q", "tile", "sort", "dir", "preset", "id"];
+  function syncControls() {
+    $("fClass").value = S.f.cls; $("fMinPm").value = String(S.f.minPm || 0); $("fRed").checked = !!S.f.red;
+    $("fSearch").value = S.f.q || ""; $("fTile").value = S.f.tile === null ? "" : String(S.f.tile);
+    $("fMinVis").value = String(S.f.minVisits || 0); $("fMinSnr").value = String(S.f.minSnr || 0);
+    for (const [k, id] of Object.entries(HIDE_IDS)) $(id).checked = S.f.hide.includes(k);
+    $("fSort").value = S.sort.key;
+    $("fHigh").setAttribute("aria-pressed", String(Tools.isPreset(S.f, "high")));
+  }
   function readUrl() {
-    const params = new URLSearchParams(location.search);
-    const c = params.get("class");
-    if (c && (c === "all" || CLASSES.includes(c))) { S.f.cls = c; $("fClass").value = c; }
-    const mp = num(params.get("minpm"));
-    if (Number.isFinite(mp) && mp > 0) { S.f.minPm = mp; $("fMinPm").value = String(mp); }
-    if (params.get("red") === "1") { S.f.red = true; $("fRed").checked = true; }
-    if (params.get("q")) { S.f.q = params.get("q"); $("fSearch").value = S.f.q; }
-    const t = num(params.get("tile"));
-    if (Number.isInteger(t) && t >= 0 && t < N_TILES) { S.f.tile = t; $("fTile").value = String(t); renderTileInfo(); drawMap(); }
+    const { f, sort } = Tools.fromParams(new URLSearchParams(location.search), { classes: CLASSES, sorts: sortDefaults(), nTiles: N_TILES });
+    S.f = f;
+    if (sort) S.sort = sort;
+    syncControls(); renderTileInfo(); drawMap();
   }
   function writeUrl() {
     try {
-      const u = new URL(location.href), set = (k, v, on) => (on ? u.searchParams.set(k, v) : u.searchParams.delete(k));
-      set("class", S.f.cls, S.f.cls !== "all"); set("minpm", S.f.minPm, num(S.f.minPm) > 0); set("red", "1", S.f.red);
-      set("q", S.f.q, !!S.f.q); set("tile", S.f.tile, S.f.tile !== null); set("id", S.open && S.open.id, !!S.open);
+      const u = new URL(location.href);
+      for (const k of URL_KEYS) u.searchParams.delete(k);
+      for (const [k, v] of Tools.toParams(S.f, S.sort, sortDefaults())) u.searchParams.set(k, v);
+      if (S.open) u.searchParams.set("id", S.open.id);
       history.replaceState(null, "", u);
     } catch { /* file:// pages may refuse */ }
+  }
+
+  // ---------- export: the filtered, sorted list (every page) as a file, made in the browser ----------
+  function download(name, text, mime) {
+    const B = root.Blob, U = root.URL;
+    if (typeof B !== "function" || !U || typeof U.createObjectURL !== "function") return false;
+    const href = U.createObjectURL(new B([text], { type: mime }));
+    const a = document.createElement("a");
+    a.href = href; a.download = name; a.rel = "noopener"; a.hidden = true;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => { try { U.revokeObjectURL(href); } catch { /* already gone */ } }, 1000);
+    return true;
+  }
+  function exportList(fmt) {
+    if (!S.board || !S.view.length) return null;
+    const rows = S.view, gen = S.board.generated, json = fmt === "json";
+    const text = json ? Tools.toJSON(rows, { generated: gen || null, url: location.href, filters: { ...S.f, hide: S.f.hide.slice() }, sort: { ...S.sort } })
+      : Tools.toCSV(rows);
+    const name = Tools.exportName(json ? "json" : "csv", gen, rows.length), mime = json ? "application/json" : "text/csv;charset=utf-8";
+    const ok = download(name, text, mime);
+    $("xMsg").textContent = ok ? `Saved ${name}: ${fmtInt(rows.length)} candidate${rows.length === 1 ? "" : "s"}, as filtered and sorted here.`
+      : "This browser cannot save a file from the page.";
+    return { name, text, mime, ok };
   }
 
   // ---------- candidate drawer ----------
@@ -675,6 +739,9 @@
     else gaia = "No Gaia DR3 source where this object should be (after moving Gaia's stars to the same date).";
     const plx = fin(num(m.plx)) ? row("Parallax", `${num(m.plx).toFixed(1)}${fin(num(m.plx_err)) ? ` ± ${num(m.plx_err).toFixed(1)}` : ""} mas`) : "";
     const flags = Array.isArray(m.flags) && m.flags.length ? row("Flags", m.flags.map(esc).join(", ")) : "";
+    const dups = Array.isArray(m.duplicates) && m.duplicates.length
+      ? row("Also found", `<span class="mono">${m.duplicates.map(esc).join(", ")}</span><small>the same source seen from a neighbouring tile (same position and motion near the tile edge); this track has more visits, so it is the one counted</small>`)
+      : "";
     return row(`Position${fin(num(m.epoch)) ? ` (epoch ${num(m.epoch).toFixed(2)})` : ""}`, `<span class="mono">${esc(s.pretty)}</span><small class="mono">RA ${deg(m.ra)}°, Dec ${deg(m.dec)}°</small>`)
       + row("Motion", `<b class="mono">${fmtPm(m.pm)}″/yr</b>${fin(num(m.pm_err)) ? ` ± ${fmtFix(m.pm_err, 1)} mas/yr` : ""}${fin(num(m.pm_snr)) ? `<small>signal-to-noise ${fmtInt(m.pm_snr)}</small>` : ""}`)
       + row("Components", `<span class="mono">μα cos δ ${fmtFix(m.pmra, 1)}, μδ ${fmtFix(m.pmdec, 1)} mas/yr</span>`)
@@ -686,7 +753,7 @@
       + row("Gaia DR3", gaia)
       + (Number.isInteger(num(m.k5)) ? row("Tile", `HEALPix order 5 tile <button type="button" class="linkish" data-tile="${num(m.k5)}">${num(m.k5)}</button>`) : "")
       + row("Score", `${fmtFix(m.score, 2)} <small>rank ${fmtInt(m.rank)}${S.rows.length ? ` of ${fmtInt(S.rows.length)}` : ""}</small>`)
-      + flags;
+      + flags + dups;
   }
   function openCandidate(id) {
     const m = S.rows.find((r) => r.id === String(id));
@@ -711,6 +778,12 @@
     const L = links(m), cp = copyText(m);
     $("dMap").href = L.map; $("dWebb").href = L.webb; $("dByw").href = L.byw; $("dSimbad").href = L.simbad;
     $("dSimbadNote").textContent = `(${L.radiusArcmin}′ radius: wide enough for where it was in 2000)`;
+    const now = nowYear();
+    $("dArch").innerHTML = archiveListHtml(m, now);
+    $("dWhen").innerHTML = whenHtml(m, now);
+    $("dPromote").innerHTML = `To study it as a full WANDERERS target, with the WISE → NEOWISE → SPHEREx time-lapse in the explorer, run `
+      + `<code>${esc(promoteCommand(m.id))}</code> from the project folder. It prints the download and analysis commands; add `
+      + `<code>--run</code> to run them (needs the internet and a few minutes).`;
     $("dCoords").textContent = cp;
     $("dCopyMsg").textContent = "";
     $("drawer").hidden = false; $("scrim").hidden = false;
@@ -809,9 +882,27 @@
   $("fRed").addEventListener("change", (e) => setFilter({ red: !!e.target.checked }));
   $("fSearch").addEventListener("input", (e) => setFilter({ q: String(e.target.value || "") }));
   $("fTile").addEventListener("change", (e) => setTile(e.target.value));
+  const posNum = (v, round) => { const x = num(v); return Number.isFinite(x) && x > 0 ? (round ? Math.round(x) : x) : 0; };
+  $("fMinVis").addEventListener("input", (e) => setFilter({ minVisits: posNum(e.target.value, true) }));
+  $("fMinSnr").addEventListener("input", (e) => setFilter({ minSnr: posNum(e.target.value) }));
+  for (const [k, id] of Object.entries(HIDE_IDS)) {
+    $(id).addEventListener("change", (e) => setFilter({ hide: Tools.HIDE_KEYS.filter((h) => (h === k ? !!e.target.checked : S.f.hide.includes(h))) }));
+  }
+  $("fHigh").addEventListener("click", () => {
+    S.f = Tools.togglePreset(S.f, "high");
+    S.page = 0; syncControls(); renderTable(); writeUrl();
+  });
+  $("fSort").addEventListener("change", (e) => {
+    const k = e.target.value;
+    if (!SORTS[k]) return;
+    S.sort = { key: k, dir: SORTS[k].dir }; S.page = 0;
+    renderTable(); writeUrl();
+  });
+  $("xCsv").addEventListener("click", () => exportList("csv"));
+  $("xJson").addEventListener("click", () => exportList("json"));
   $("fReset").addEventListener("click", () => {
-    Object.assign(S.f, { cls: "all", minPm: 0, red: false, q: "", tile: null });
-    $("fClass").value = "all"; $("fMinPm").value = "0"; $("fRed").checked = false; $("fSearch").value = ""; $("fTile").value = "";
+    S.f = { ...Tools.FILTER_DEFAULTS, hide: [] };
+    syncControls();
     S.page = 0; renderTileInfo(); drawMap(); renderTable(); writeUrl();
   });
   $("filters").addEventListener("submit", (e) => e.preventDefault());
@@ -849,5 +940,6 @@
   root.addEventListener("resize", () => { if (!rz) rz = root.requestAnimationFrame(() => { rz = 0; drawMap(); }); });
 
   const ready = load();
-  root.Survey = { ready, reload: load, state: () => S, openCandidate, closeDrawer, sortBy, setFilter, setTile, mapTiles: () => S.drawn || [], tileNear, setSurvey, copyCoords };
+  root.Survey = { ready, reload: load, state: () => S, openCandidate, closeDrawer, sortBy, setFilter, setTile, mapTiles: () => S.drawn || [], tileNear, setSurvey, copyCoords,
+    exportList, setNow: (y) => { S.nowYear = Number.isFinite(num(y)) ? num(y) : null; } };
 })(typeof window !== "undefined" ? window : globalThis);

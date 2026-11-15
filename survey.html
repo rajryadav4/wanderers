@@ -12,7 +12,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="brand.css">
-<link rel="stylesheet" href="survey.css?v=20261115a">
+<link rel="stylesheet" href="survey.css?v=20261115b">
 </head>
 <body class="survey">
 <a class="skip" href="#svMain">Skip to content</a>
@@ -120,12 +120,44 @@
           <option value="not checked">Not checked</option>
         </select></label>
       <label>Min motion (″/yr) <input id="fMinPm" type="number" min="0" step="0.1" value="0" inputmode="decimal"></label>
+      <label>Min visits <input id="fMinVis" type="number" min="0" max="40" step="1" value="0" inputmode="numeric"></label>
+      <label>Min motion S/N <input id="fMinSnr" type="number" min="0" step="1" value="0" inputmode="decimal"></label>
       <label class="chk"><input type="checkbox" id="fRed"> Red only <span class="hint">W1−W2 ≥ 0.5, or no W1</span></label>
+      <fieldset class="sv-hide"><legend>Hide</legend>
+        <label class="chk"><input type="checkbox" id="fHideEdge"> Tile edge</label>
+        <label class="chk"><input type="checkbox" id="fHideCrowded"> Crowded</label>
+        <label class="chk"><input type="checkbox" id="fHideSat"> Saturated</label>
+        <label class="chk"><input type="checkbox" id="fHideArt"> Likely artefacts</label>
+      </fieldset>
       <label>Tile <input id="fTile" type="number" min="0" max="12287" step="1" inputmode="numeric" placeholder="any"></label>
       <label class="grow">Search by ID <input id="fSearch" type="search" placeholder="e.g. 8545-0003" autocomplete="off" spellcheck="false"></label>
+      <label>Sort by
+        <select id="fSort">
+          <option value="rank" selected>Rank (score)</option>
+          <option value="pm">Fastest first</option>
+          <option value="snr">Clearest motion (S/N)</option>
+          <option value="w1w2">Reddest first</option>
+          <option value="visits">Most visits</option>
+          <option value="score">Score</option>
+          <option value="class">Class</option>
+          <option value="gaia">Gaia result</option>
+          <option value="pa">Direction</option>
+          <option value="id">Candidate ID</option>
+        </select></label>
+      <button type="button" class="btn btn-ghost tiny" id="fHigh" aria-pressed="false" aria-describedby="presetNote">High-confidence</button>
       <button type="button" class="btn btn-ghost tiny" id="fReset">Reset</button>
     </form>
+    <p class="hint sv-note" id="presetNote"><b>High-confidence</b> keeps movers seen in at least 12 visits whose motion is measured
+      at 10σ or better, and hides those at a tile edge, in a crowded spot, saturated, or classed as likely artefacts. <b>Red</b> is
+      a hint, not proof: cold brown dwarfs are red in W1−W2 because methane absorbs their light in W1 (3.4 µm). Filters and sort
+      are kept in the address, so a shared link shows the same list.</p>
     <p class="sv-count" id="tCount" aria-live="polite"></p>
+    <div class="sv-export" role="group" aria-label="Download the list">
+      <span class="hint">Download this list (every page, as filtered and sorted):</span>
+      <button type="button" class="btn btn-ghost tiny" id="xCsv" disabled>CSV</button>
+      <button type="button" class="btn btn-ghost tiny" id="xJson" disabled>JSON</button>
+      <span id="xMsg" class="hint" role="status"></span>
+    </div>
     <div class="sv-table-wrap">
       <table class="sv-table" id="candTable">
         <caption class="visually-hidden">Ranked moving-object candidates from the WANDERERS Sky Survey. Sort with the column buttons; open a candidate with its ID button.</caption>
@@ -223,6 +255,16 @@
     <p class="hint">Through Webb opens the same sky map; choose its Through Webb tab to see any Webb image of this spot. SIMBAD
       <span id="dSimbadNote"></span> shows whether astronomers already know an object here. Backyard Worlds is the citizen-science
       project that hunts brown dwarfs in WISE images.</p>
+    <h4 id="dArchH">Look it up in other archives</h4>
+    <ul id="dArch" class="d-arch" aria-labelledby="dArchH"></ul>
+    <p class="hint">It moves, so each link uses the right date: sky viewers open where it should be today (moved with its
+      measured motion), and catalogue searches use its J2000 position (SIMBAD, VizieR) or its 2016.0 position (Gaia DR3), with a
+      radius that covers the uncertainty of that move plus a year of motion. Older images show it earlier along its path, and a few
+      catalogue entries are for their own observing date: the wider SIMBAD search above covers its whole path since 2000.</p>
+    <h4 id="dWhenH">Where it is, year by year</h4>
+    <dl id="dWhen" class="d-nums d-when" aria-labelledby="dWhenH"></dl>
+    <p class="hint">Straight-line predictions from the NEOWISE motion; the yearly parallax wobble is left out.</p>
+    <p class="hint" id="dPromote"></p>
     <p class="d-coords"><span id="dCoords" class="mono"></span>
       <button type="button" class="btn btn-ghost tiny" id="dCopy">Copy coordinates</button></p>
     <p id="dCopyMsg" class="hint" role="status"></p>
@@ -243,7 +285,9 @@
     <p class="legal">Data: NEOWISE-R (NASA/JPL-Caltech/IPAC, via NASA IRSA on AWS) · Gaia DR3 (ESA/Gaia/DPAC) · SPHEREx and AllWISE HiPS (NASA/IPAC IRSA) · Aladin Lite (CDS). NASA Space Apps 2026 · Planet X and SPHEREx. WANDERERS is an independent student project and is not affiliated with or endorsed by NASA or ESA.</p>
   </div>
 </footer>
+<script src="aladinlink.js"></script>
+<script src="surveytools.js?v=20261115b"></script>
 <script src="theme.js"></script>
-<script src="survey.js?v=20261115a"></script>
+<script src="survey.js?v=20261115b"></script>
 </body>
 </html>
