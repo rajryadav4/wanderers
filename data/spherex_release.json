@@ -16,65 +16,48 @@
    "description_source": "docs/research/spherex-data-access.md (IRSA SPHEREx pages and SIA queries, 2026-11-14)"
   }
  ],
- "releases_source": "pipeline/fetch.py built-in list (the online check failed: IRSA gave no usable answer)",
- "other_collections": [],
- "new_release_available": true,
- "new_releases": [
-  {
-   "name": "spherex_qr3",
-   "label": "SPHEREx Quick Release 3"
-  }
+ "releases_source": "IRSA SIA collection list (astroquery Irsa.list_collections, servicetype SIA, filter spherex)",
+ "other_collections": [
+  "spherex_dr1_cube",
+  "spherex_dr1_deep",
+  "spherex_qr3_deep"
  ],
- "targets_behind": {
-  "barnard": [
-   "spherex_qr3"
-  ],
-  "eps_indi_b": [
-   "spherex_qr3"
-  ],
-  "pos_217p4398_s62p6795": [
-   "spherex_qr3"
-  ],
-  "r_dra": [
-   "spherex_qr3"
-  ],
-  "rw_aur": [
-   "spherex_qr3"
-  ],
-  "wise0855": [
-   "spherex_qr3"
-  ]
- },
+ "new_release_available": false,
+ "new_releases": [],
+ "targets_behind": {},
  "targets": 11,
- "data_through": "2026-09-07",
+ "data_through": "2026-10-02",
  "data_through_by_target": {
-  "barnard": "2026-03-22",
-  "eps_indi_b": "2026-04-21",
+  "barnard": "2026-09-22",
+  "eps_indi_b": "2026-10-02",
   "pos_162p3288_s53p3194": "2026-07-21",
   "pos_164p1223_n7p0153": "2026-05-27",
   "pos_165p8345_n35p9699": "2026-05-25",
-  "pos_217p4398_s62p6795": "2026-03-27",
+  "pos_217p4398_s62p6795": "2026-09-02",
   "pos_316p7219_n38p7494": "2026-07-06",
   "pos_77p9125_s45p0184": "2026-09-07",
-  "r_dra": "2026-05-13",
-  "rw_aur": "2026-03-10",
+  "r_dra": "2026-07-16",
+  "rw_aur": "2026-09-16",
   "wise0855": "2026-05-14"
  },
- "synced": "2026-11-15T06:10:33Z",
- "synced_source": "git: the last commit that changed app/data/<target>/target.json",
- "checked": null,
- "last_attempt": "2026-11-15T13:52:19Z",
- "error": "IRSA release check failed on 2026-11-15: astroquery: 502 Server Error: Proxy Error for url: <IRSA>; TAP: IRSA TAP answered HTTP 502",
+ "synced": "2026-11-15T17:17:26Z",
+ "synced_source": "pipeline/spherex_releases.py synced: fetch.py and analyze.py rebuilt 6 of 11 prepared targets",
+ "checked": "2026-11-15T17:17:26Z",
+ "checked_via": "IRSA",
+ "last_attempt": "2026-11-15T17:17:26Z",
+ "error": null,
  "used_releases": [
   "spherex_dr1",
   "spherex_qr3"
  ],
  "searched_releases": {
   "barnard": [
-   "spherex_dr1"
+   "spherex_dr1",
+   "spherex_qr3"
   ],
   "eps_indi_b": [
-   "spherex_dr1"
+   "spherex_dr1",
+   "spherex_qr3"
   ],
   "pos_162p3288_s53p3194": [
    "spherex_dr1",
@@ -89,7 +72,8 @@
    "spherex_qr3"
   ],
   "pos_217p4398_s62p6795": [
-   "spherex_dr1"
+   "spherex_dr1",
+   "spherex_qr3"
   ],
   "pos_316p7219_n38p7494": [
    "spherex_dr1",
@@ -100,14 +84,32 @@
    "spherex_qr3"
   ],
   "r_dra": [
-   "spherex_dr1"
+   "spherex_dr1",
+   "spherex_qr3"
   ],
   "rw_aur": [
-   "spherex_dr1"
+   "spherex_dr1",
+   "spherex_qr3"
   ],
   "wise0855": [
-   "spherex_dr1"
+   "spherex_dr1",
+   "spherex_qr3"
   ]
  },
- "searched_source": "data/cache/<target>/<release>_sia.xml: the IRSA answers fetch.py saved for each target"
+ "searched_source": "data/cache/<target>/<release>_sia.xml: the IRSA answers fetch.py saved for each target, or <release>_s3.json when fetch.py searched the S3 bucket's image index instead (IRSA down)",
+ "rebuilt_targets": [
+  "barnard",
+  "eps_indi_b",
+  "pos_217p4398_s62p6795",
+  "r_dra",
+  "rw_aur",
+  "wise0855"
+ ],
+ "not_rebuilt": [
+  "pos_162p3288_s53p3194",
+  "pos_164p1223_n7p0153",
+  "pos_165p8345_n35p9699",
+  "pos_316p7219_n38p7494",
+  "pos_77p9125_s45p0184"
+ ]
 }

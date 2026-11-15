@@ -1,7 +1,9 @@
 /* SPHEREx data status line: the current SPHEREx release at NASA IRSA, how recent our prepared data is, and when it
  * was last synced and checked, for example
  *   "SPHEREx Quick Release 3 · data through Sep 2026 · last synced 15 Nov 2026 · checked 15 Nov 2026"
- * plus a short note when IRSA has a release that some prepared targets were not built from yet.
+ * plus a short note when IRSA has a release that some prepared targets were not built from yet. When IRSA's services
+ * were down and the release list came from IRSA's S3 bucket instead (checked_via "S3 bucket"), the check reads
+ * "checked 15 Nov 2026 (S3 listing; IRSA services down)"; "IRSA release check failed" only when both failed.
  *
  * Reads data/spherex_release.json (written by pipeline/spherex_releases.py) and fills the element with
  * id="spherexStatus" (observatory.html and index.html). Needs nothing from app.js or home.js.
@@ -57,7 +59,10 @@
     const synced = fmtDay(st.synced);
     if (synced) parts.push({ text: "last synced ", date: synced, iso: isoDay(st.synced) });
     const checked = fmtDay(st.checked), tried = fmtDay(st.last_attempt);
-    if (checked) parts.push({ text: "checked ", date: checked, iso: isoDay(st.checked) });
+    // checked_via "S3 bucket": IRSA's services did not answer, so the release list came from IRSA's S3 bucket listing
+    const viaS3 = st.checked_via === "S3 bucket";
+    if (checked) parts.push({ text: "checked ", date: checked, iso: isoDay(st.checked),
+      after: viaS3 ? (st.error ? " (S3 listing; IRSA services down)" : " (S3 listing)") : "" });
     else if (st.error && tried) parts.push({ text: "IRSA release check failed ", date: tried, iso: isoDay(st.last_attempt), cls: "spx-fail" });
 
     let note = null;
@@ -72,6 +77,10 @@
         : `New data available at IRSA: ${what} is not yet in these views.`;
     }
     let title = "SPHEREx data status, from data/spherex_release.json.";
+    const weeks = (Array.isArray(st.releases) ? st.releases : [])
+      .filter((r) => r && typeof r.label === "string" && typeof r.newest_week_label === "string" && r.newest_week_label.trim())
+      .map((r) => `${shortLabel(r.label)} at IRSA has images through ${r.newest_week_label.trim()}`);
+    if (weeks.length) title += " " + weeks.join("; ") + ".";
     if (st.error && typeof st.error === "string") title += " Last check: " + st.error;
     return { parts, note, fresh: !note, title };
   }
@@ -80,7 +89,7 @@
     const d = describe(st);
     if (!d) return "";
     const items = d.parts.map((p) => {
-      const body = p.date ? `${esc(p.text)}<time datetime="${esc(p.iso)}">${esc(p.date)}</time>` : esc(p.text);
+      const body = p.date ? `${esc(p.text)}<time datetime="${esc(p.iso)}">${esc(p.date)}</time>${p.after ? esc(p.after) : ""}` : esc(p.text);
       return `<span class="spx-part${p.cls ? " " + p.cls : ""}">${body}</span>`;
     });
     return `<span class="spx-dot${d.fresh ? "" : " spx-dot-new"}" aria-hidden="true"></span>` +

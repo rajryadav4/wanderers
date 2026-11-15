@@ -18,8 +18,8 @@
  "grid": {
   "npix": 150,
   "arcsec_per_pix": 2.0,
-  "centre_ra": 248.16734327616675,
-  "centre_dec": 66.75501087068785
+  "centre_ra": 248.16734252245857,
+  "centre_dec": 66.75501095929161
  },
  "frames": {
   "w2": [
@@ -1325,13 +1325,13 @@
     }
    },
    {
-    "year": 2026.3048137171636,
-    "label": "SPHEREx Apr 2026",
+    "year": 2026.305469743002,
+    "label": "SPHEREx 22 Apr 2026",
     "mission": "SPHEREx",
-    "png": "w2_spherex_v3.png",
-    "n_images": 1,
+    "png": "w2_spherex_v3_1.png",
+    "n_images": 2,
+    "survey": 3,
     "detected": true,
-    "snr": 325.4,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D6 (MWIR array)",
@@ -1344,11 +1344,61 @@
      ],
      "lam_um": [
       4.666,
-      4.666
+      4.837
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2026-04-22 07:59",
-     "end": "2026-04-22 07:59",
+     "end": "2026-04-22 19:29",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 2,
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2
+     },
+     "n_saturated": 2,
+     "aperture_px": 29,
+     "bad_px_worst": 29,
+     "images_with_bad_px": 2,
+     "n_poor": 2,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.3111349699193,
+    "label": "SPHEREx 24 Apr 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3_2.png",
+    "n_images": 1,
+    "survey": 3,
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.98,
+      4.98
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-04-24 15:24",
+     "end": "2026-04-24 15:24",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
@@ -1367,6 +1417,307 @@
      "n_saturated": 1,
      "aperture_px": 29,
      "bad_px_worst": 29,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.356025957432,
+    "label": "SPHEREx 11 May 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3_3.png",
+    "n_images": 2,
+    "survey": 3,
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.599,
+      4.734
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-10 19:13",
+     "end": "2026-05-11 06:37",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 2,
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2
+     },
+     "n_saturated": 2,
+     "aperture_px": 28,
+     "bad_px_worst": 28,
+     "images_with_bad_px": 2,
+     "n_poor": 2,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.3620707548337,
+    "label": "SPHEREx 13 May 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3_4.png",
+    "n_images": 1,
+    "survey": 3,
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.872,
+      4.872
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-13 05:54",
+     "end": "2026-05-13 05:54",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 28,
+     "bad_px_worst": 28,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.3706116421329,
+    "label": "SPHEREx 16 May 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3_5.png",
+    "n_images": 1,
+    "survey": 3,
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.461,
+      4.461
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-16 08:46",
+     "end": "2026-05-16 08:46",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 28,
+     "bad_px_worst": 28,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.3882647159235,
+    "label": "SPHEREx 22 May 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3_6.png",
+    "n_images": 2,
+    "survey": 3,
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.557,
+      4.692
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-22 03:13",
+     "end": "2026-05-23 11:49",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 2,
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2
+     },
+     "n_saturated": 2,
+     "aperture_px": 30,
+     "bad_px_worst": 30,
+     "images_with_bad_px": 2,
+     "n_poor": 2,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.433345178586,
+    "label": "SPHEREx 08 Jun 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3_7.png",
+    "n_images": 2,
+    "survey": 3,
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.415,
+      4.543
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-06-07 23:22",
+     "end": "2026-06-08 14:02",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 2,
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2
+     },
+     "n_saturated": 2,
+     "aperture_px": 27,
+     "bad_px_worst": 27,
+     "images_with_bad_px": 2,
+     "n_poor": 2,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.4458906798275,
+    "label": "SPHEREx 12 Jun 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3_8.png",
+    "n_images": 1,
+    "survey": 3,
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.678,
+      4.678
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-06-12 20:40",
+     "end": "2026-06-12 20:40",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 27,
      "images_with_bad_px": 1,
      "n_poor": 1,
      "n_dqa_fail": 0,
@@ -2660,6 +3011,154 @@
      "verdict": "poor",
      "reason": "The target falls outside this image."
     }
+   },
+   {
+    "year": 2026.510568634393,
+    "label": "SPHEREx 06 Jul 2026",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v3_1.png",
+    "n_images": 1,
+    "survey": 3,
+    "detected": false,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      3.418,
+      3.418
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-07-06 11:38",
+     "end": "2026-07-06 11:38",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "NONFUNC": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 28,
+     "bad_px_worst": 28,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.520046868479,
+    "label": "SPHEREx 09 Jul 2026",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v3_2.png",
+    "n_images": 1,
+    "survey": 3,
+    "detected": false,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      3.153,
+      3.153
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-07-09 22:43",
+     "end": "2026-07-09 22:43",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 27,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.5390072768762,
+    "label": "SPHEREx 16 Jul 2026",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v3_3.png",
+    "n_images": 1,
+    "survey": 3,
+    "detected": false,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      3.76,
+      3.76
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-07-16 20:56",
+     "end": "2026-07-16 20:56",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 27,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
    }
   ],
   "d1": [
@@ -2762,6 +3261,56 @@
      "verdict": "poor",
      "reason": "16 of 16 images are unusable at the target (16 saturated)."
     }
+   },
+   {
+    "year": 2026.5239790367464,
+    "label": "SPHEREx Jul 2026",
+    "mission": "SPHEREx",
+    "png": "d1_spherex_v3.png",
+    "n_images": 7,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D1 (SWIR array)",
+     "detectors": [
+      1
+     ],
+     "band_um": [
+      0.75,
+      1.09
+     ],
+     "lam_um": [
+      0.799,
+      1.122
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-07-06 11:38",
+     "end": "2026-07-16 20:58",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 7,
+      "OVERFLOW": 7,
+      "SUR_ERROR": 7,
+      "NONFUNC": 1,
+      "BLOOM": 7,
+      "PERSIST": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 7,
+      "SUR_ERROR": 7,
+      "BLOOM": 7
+     },
+     "n_saturated": 7,
+     "aperture_px": 29,
+     "bad_px_worst": 29,
+     "images_with_bad_px": 7,
+     "n_poor": 7,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
    }
   ],
   "d2": [
@@ -2857,6 +3406,56 @@
      "bad_px_worst": 30,
      "images_with_bad_px": 13,
      "n_poor": 13,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.4712982572737,
+    "label": "SPHEREx Jun 2026",
+    "mission": "SPHEREx",
+    "png": "d2_spherex_v3.png",
+    "n_images": 6,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D2 (SWIR array)",
+     "detectors": [
+      2
+     ],
+     "band_um": [
+      1.1,
+      1.62
+     ],
+     "lam_um": [
+      1.093,
+      1.563
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-06-21 03:26",
+     "end": "2026-06-23 10:54",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 6,
+      "OVERFLOW": 6,
+      "SUR_ERROR": 6,
+      "BLOOM": 6,
+      "HOT": 2,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 6,
+      "SUR_ERROR": 6,
+      "BLOOM": 6
+     },
+     "n_saturated": 6,
+     "aperture_px": 30,
+     "bad_px_worst": 30,
+     "images_with_bad_px": 6,
+     "n_poor": 6,
      "n_dqa_fail": 0,
      "verdict": "poor",
      "reason": "The stacked picture is blank at the target."
@@ -2965,11 +3564,11 @@
     }
    },
    {
-    "year": 2026.333301872205,
+    "year": 2026.3617244194102,
     "label": "SPHEREx May 2026",
     "mission": "SPHEREx",
     "png": "d3_spherex_v3.png",
-    "n_images": 9,
+    "n_images": 13,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D3 (SWIR array)",
@@ -2981,34 +3580,34 @@
       2.41
      ],
      "lam_um": [
-      1.693,
+      1.628,
       2.329
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2026-04-22 07:59",
-     "end": "2026-05-13 05:56",
+     "end": "2026-06-12 20:40",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
      "flags_checked": true,
      "flag_counts": {
-      "TRANSIENT": 8,
-      "OVERFLOW": 9,
-      "SUR_ERROR": 9,
+      "TRANSIENT": 12,
+      "OVERFLOW": 13,
+      "SUR_ERROR": 13,
       "NONFUNC": 2,
-      "BLOOM": 9,
+      "BLOOM": 13,
       "HOT": 1
      },
      "pixel_flag_counts": {
-      "OVERFLOW": 9,
-      "SUR_ERROR": 9,
-      "BLOOM": 9
+      "OVERFLOW": 13,
+      "SUR_ERROR": 13,
+      "BLOOM": 13
      },
-     "n_saturated": 9,
+     "n_saturated": 13,
      "aperture_px": 32,
      "bad_px_worst": 32,
-     "images_with_bad_px": 9,
-     "n_poor": 9,
+     "images_with_bad_px": 13,
+     "n_poor": 13,
      "n_dqa_fail": 0,
      "verdict": "poor",
      "reason": "The stacked picture is blank at the target."
@@ -3115,6 +3714,55 @@
      "verdict": "poor",
      "reason": "The stacked picture is blank at the target."
     }
+   },
+   {
+    "year": 2026.5232364702151,
+    "label": "SPHEREx Jul 2026",
+    "mission": "SPHEREx",
+    "png": "d4_spherex_v3.png",
+    "n_images": 7,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      2.546,
+      3.801
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-07-06 11:38",
+     "end": "2026-07-16 20:56",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 7,
+      "SUR_ERROR": 7,
+      "NONFUNC": 1,
+      "BLOOM": 7,
+      "TRANSIENT": 3
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 7,
+      "SUR_ERROR": 7,
+      "BLOOM": 7
+     },
+     "n_saturated": 7,
+     "aperture_px": 29,
+     "bad_px_worst": 29,
+     "images_with_bad_px": 7,
+     "n_poor": 7,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
    }
   ],
   "d5": [
@@ -3210,6 +3858,55 @@
      "bad_px_worst": 29,
      "images_with_bad_px": 12,
      "n_poor": 13,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.4712982572635,
+    "label": "SPHEREx Jun 2026",
+    "mission": "SPHEREx",
+    "png": "d5_spherex_v3.png",
+    "n_images": 6,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D5 (MWIR array)",
+     "detectors": [
+      5
+     ],
+     "band_um": [
+      3.83,
+      4.41
+     ],
+     "lam_um": [
+      3.811,
+      4.342
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-06-21 03:26",
+     "end": "2026-06-23 10:54",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 6,
+      "OVERFLOW": 6,
+      "SUR_ERROR": 6,
+      "BLOOM": 6,
+      "NONFUNC": 2
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 6,
+      "SUR_ERROR": 6,
+      "BLOOM": 6
+     },
+     "n_saturated": 6,
+     "aperture_px": 30,
+     "bad_px_worst": 30,
+     "images_with_bad_px": 6,
+     "n_poor": 6,
      "n_dqa_fail": 0,
      "verdict": "poor",
      "reason": "The stacked picture is blank at the target."
@@ -3315,11 +4012,11 @@
     }
    },
    {
-    "year": 2026.3048137171636,
-    "label": "SPHEREx Apr 2026",
+    "year": 2026.37132660305,
+    "label": "SPHEREx May 2026",
     "mission": "SPHEREx",
     "png": "d6_spherex_v3.png",
-    "n_images": 1,
+    "n_images": 12,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D6 (MWIR array)",
@@ -3331,32 +4028,33 @@
       5.0
      ],
      "lam_um": [
-      4.666,
-      4.666
+      4.415,
+      4.98
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2026-04-22 07:59",
-     "end": "2026-04-22 07:59",
+     "end": "2026-06-12 20:40",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
      "flags_checked": true,
      "flag_counts": {
-      "TRANSIENT": 1,
-      "OVERFLOW": 1,
-      "SUR_ERROR": 1,
-      "BLOOM": 1
+      "TRANSIENT": 12,
+      "OVERFLOW": 12,
+      "SUR_ERROR": 12,
+      "BLOOM": 12,
+      "NONFUNC": 1
      },
      "pixel_flag_counts": {
-      "OVERFLOW": 1,
-      "SUR_ERROR": 1,
-      "BLOOM": 1
+      "OVERFLOW": 12,
+      "SUR_ERROR": 12,
+      "BLOOM": 12
      },
-     "n_saturated": 1,
-     "aperture_px": 29,
-     "bad_px_worst": 29,
-     "images_with_bad_px": 1,
-     "n_poor": 1,
+     "n_saturated": 12,
+     "aperture_px": 30,
+     "bad_px_worst": 30,
+     "images_with_bad_px": 12,
+     "n_poor": 12,
      "n_dqa_fail": 0,
      "verdict": "poor",
      "reason": "The stacked picture is blank at the target."
@@ -3389,7 +4087,7 @@
       "det": 2,
       "n_images": 12,
       "background": 1.238,
-      "noise": 0.8588
+      "noise": 0.8587
      },
      {
       "det": 3,
@@ -3413,7 +4111,7 @@
       "det": 6,
       "n_images": 15,
       "background": 1.158,
-      "noise": 0.7078
+      "noise": 0.7077
      }
     ],
     "detected": true,
@@ -3506,7 +4204,7 @@
       "det": 3,
       "n_images": 9,
       "background": 1.28,
-      "noise": 0.9082
+      "noise": 0.9083
      },
      {
       "det": 4,
@@ -3524,7 +4222,7 @@
       "det": 6,
       "n_images": 9,
       "background": 1.028,
-      "noise": 0.5551
+      "noise": 0.5552
      }
     ],
     "detected": true,
@@ -3590,76 +4288,113 @@
     }
    },
    {
-    "year": 2026.330453056701,
-    "label": "SPHEREx May 2026",
+    "year": 2026.434204398527,
+    "label": "SPHEREx Jun 2026",
     "mission": "SPHEREx",
     "png": "all_spherex_v3.png",
-    "n_images": 10,
+    "n_images": 51,
     "detectors": [
+     1,
+     2,
      3,
+     4,
+     5,
      6
     ],
     "normalisation": [
      {
+      "det": 1,
+      "n_images": 7,
+      "background": 0.6693,
+      "noise": 0.3808
+     },
+     {
+      "det": 2,
+      "n_images": 6,
+      "background": 0.6774,
+      "noise": 0.4299
+     },
+     {
       "det": 3,
-      "n_images": 9,
-      "background": 0.9778,
-      "noise": 0.6781
+      "n_images": 13,
+      "background": 0.8873,
+      "noise": 0.6348
+     },
+     {
+      "det": 4,
+      "n_images": 7,
+      "background": 0.7106,
+      "noise": 0.5417
+     },
+     {
+      "det": 5,
+      "n_images": 6,
+      "background": 0.7451,
+      "noise": 0.5175
      },
      {
       "det": 6,
-      "n_images": 1,
-      "background": 0.8649,
-      "noise": 0.4515
+      "n_images": 12,
+      "background": 0.7258,
+      "noise": 0.3484
      }
     ],
     "detected": true,
-    "snr": 306.7,
+    "snr": 411.9,
     "obs": {
      "mission": "SPHEREx",
-     "instrument": "SPHEREx detectors D3, D6",
+     "instrument": "SPHEREx detectors D1, D2, D3, D4, D5, D6",
      "detectors": [
+      1,
+      2,
       3,
+      4,
+      5,
       6
      ],
      "band_um": [
-      1.63,
+      0.75,
       5.0
      ],
      "lam_um": [
-      1.693,
-      4.666
+      0.799,
+      4.98
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2026-04-22 07:59",
-     "end": "2026-05-13 05:56",
+     "end": "2026-07-16 20:58",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
      "flags_checked": true,
      "flag_counts": {
-      "TRANSIENT": 9,
-      "OVERFLOW": 10,
-      "SUR_ERROR": 10,
-      "NONFUNC": 2,
-      "BLOOM": 10,
-      "HOT": 1
+      "TRANSIENT": 46,
+      "OVERFLOW": 51,
+      "SUR_ERROR": 51,
+      "NONFUNC": 8,
+      "BLOOM": 51,
+      "PERSIST": 1,
+      "HOT": 3
      },
      "pixel_flag_counts": {
-      "OVERFLOW": 10,
-      "SUR_ERROR": 10,
-      "BLOOM": 10
+      "OVERFLOW": 51,
+      "SUR_ERROR": 51,
+      "BLOOM": 51
      },
-     "n_saturated": 10,
+     "n_saturated": 51,
      "aperture_px": 32,
      "bad_px_worst": 32,
-     "images_with_bad_px": 10,
-     "n_poor": 10,
+     "images_with_bad_px": 51,
+     "n_poor": 51,
      "n_dqa_fail": 0,
      "verdict": "poor",
      "reason": "The stacked picture is blank at the target.",
      "detector_verdicts": {
+      "1": "poor",
+      "2": "poor",
       "3": "poor",
+      "4": "poor",
+      "5": "poor",
       "6": "poor"
      }
     }
@@ -4536,7 +5271,7 @@
     "png": "w2_spherex_v1.png",
     "n_images": 15,
     "detected": true,
-    "snr": 300.5,
+    "snr": 300.4,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D6 (MWIR array)",
@@ -4586,7 +5321,7 @@
     "png": "w2_spherex_v2.png",
     "n_images": 9,
     "detected": true,
-    "snr": 537.2,
+    "snr": 537.1,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D6 (MWIR array)",
@@ -4631,13 +5366,13 @@
     }
    },
    {
-    "year": 2026.3048137171636,
-    "label": "SPHEREx Apr 2026",
+    "year": 2026.37132660305,
+    "label": "SPHEREx May 2026",
     "mission": "SPHEREx",
     "png": "w2_spherex_v3.png",
-    "n_images": 1,
+    "n_images": 12,
     "detected": true,
-    "snr": 325.4,
+    "snr": 758.7,
     "obs": {
      "mission": "SPHEREx",
      "instrument": "SPHEREx detector D6 (MWIR array)",
@@ -4649,32 +5384,33 @@
       5.0
      ],
      "lam_um": [
-      4.666,
-      4.666
+      4.415,
+      4.98
      ],
      "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
      "start": "2026-04-22 07:59",
-     "end": "2026-04-22 07:59",
+     "end": "2026-06-12 20:40",
      "time_note": "mid-exposure times of the first and last image, UTC"
     },
     "quality": {
      "flags_checked": true,
      "flag_counts": {
-      "TRANSIENT": 1,
-      "OVERFLOW": 1,
-      "SUR_ERROR": 1,
-      "BLOOM": 1
+      "TRANSIENT": 12,
+      "OVERFLOW": 12,
+      "SUR_ERROR": 12,
+      "BLOOM": 12,
+      "NONFUNC": 1
      },
      "pixel_flag_counts": {
-      "OVERFLOW": 1,
-      "SUR_ERROR": 1,
-      "BLOOM": 1
+      "OVERFLOW": 12,
+      "SUR_ERROR": 12,
+      "BLOOM": 12
      },
-     "n_saturated": 1,
-     "aperture_px": 29,
-     "bad_px_worst": 29,
-     "images_with_bad_px": 1,
-     "n_poor": 1,
+     "n_saturated": 12,
+     "aperture_px": 30,
+     "bad_px_worst": 30,
+     "images_with_bad_px": 12,
+     "n_poor": 12,
      "n_dqa_fail": 0,
      "verdict": "poor",
      "reason": "The stacked picture is blank at the target."
@@ -5628,6 +6364,56 @@
      "bad_px_worst": 29,
      "images_with_bad_px": 8,
      "n_poor": 9,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The stacked picture is blank at the target."
+    }
+   },
+   {
+    "year": 2026.5232075932493,
+    "label": "SPHEREx Jul 2026",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v3.png",
+    "n_images": 3,
+    "detected": false,
+    "snr": 0.0,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      3.153,
+      3.76
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-07-06 11:38",
+     "end": "2026-07-16 20:56",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 3,
+      "SUR_ERROR": 3,
+      "NONFUNC": 1,
+      "BLOOM": 3
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 3,
+      "SUR_ERROR": 3,
+      "BLOOM": 3
+     },
+     "n_saturated": 3,
+     "aperture_px": 28,
+     "bad_px_worst": 28,
+     "images_with_bad_px": 3,
+     "n_poor": 3,
      "n_dqa_fail": 0,
      "verdict": "poor",
      "reason": "The stacked picture is blank at the target."
@@ -9508,6 +10294,32 @@
    "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
+   "image": "level2_2026W17_1B_0517_3D6_spx_l2b-v27-2026-242",
+   "date": "2026-04-22 19:29",
+   "detector": 6,
+   "lam_um": 4.837,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 29,
+   "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
    "image": "level2_2026W17_2A_0255_2D3_spx_l2b-v27-2026-243",
    "date": "2026-04-24 15:22",
    "detector": 3,
@@ -9534,6 +10346,32 @@
    "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
+   "image": "level2_2026W17_2A_0255_3D6_spx_l2b-v27-2026-243",
+   "date": "2026-04-24 15:24",
+   "detector": 6,
+   "lam_um": 4.98,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 29,
+   "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
    "image": "level2_2026W19_1A_0842_2D3_spx_l2b-v27-2026-245",
    "date": "2026-05-06 06:07",
    "detector": 3,
@@ -9555,6 +10393,32 @@
    "aperture_px": 29,
    "bad_px_aperture": 29,
    "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W19_2A_1286_1D6_spx_l2b-v27-2026-245",
+   "date": "2026-05-10 19:13",
+   "detector": 6,
+   "lam_um": 4.599,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 27,
+   "flagged_px_aperture": 27,
    "dqa": "Pass",
    "quality": "poor",
    "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
@@ -9613,6 +10477,33 @@
    "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
+   "image": "level2_2026W20_1A_0101_1D6_spx_l2b-v27-2026-246",
+   "date": "2026-05-11 06:37",
+   "detector": 6,
+   "lam_um": 4.734,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
    "image": "level2_2026W20_1A_0101_3D3_spx_l2b-v27-2026-246",
    "date": "2026-05-11 06:41",
    "detector": 3,
@@ -9635,6 +10526,32 @@
    "aperture_px": 32,
    "bad_px_aperture": 32,
    "flagged_px_aperture": 32,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W20_1A_0795_2D6_spx_l2b-v27-2026-246",
+   "date": "2026-05-13 05:54",
+   "detector": 6,
+   "lam_um": 4.872,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
    "dqa": "Pass",
    "quality": "poor",
    "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
@@ -9664,6 +10581,946 @@
    "dqa": "Pass",
    "quality": "poor",
    "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W20_2A_0294_3D6_spx_l2b-v27-2026-267",
+   "date": "2026-05-16 08:46",
+   "detector": 6,
+   "lam_um": 4.461,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W21_2A_0104_2D6_spx_l2b-v27-2026-268",
+   "date": "2026-05-22 03:13",
+   "detector": 6,
+   "lam_um": 4.557,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 30,
+   "bad_px_aperture": 30,
+   "flagged_px_aperture": 30,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W21_2A_0325_1D3_spx_l2b-v27-2026-268",
+   "date": "2026-05-23 11:47",
+   "detector": 3,
+   "lam_um": 1.93,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 32,
+   "bad_px_aperture": 32,
+   "flagged_px_aperture": 32,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W21_2A_0325_2D6_spx_l2b-v27-2026-268",
+   "date": "2026-05-23 11:49",
+   "detector": 6,
+   "lam_um": 4.692,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W23_2A_0642_4D3_spx_l2b-v27-2026-270",
+   "date": "2026-06-07 23:22",
+   "detector": 3,
+   "lam_um": 1.628,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W23_2A_0642_4D6_spx_l2b-v27-2026-270",
+   "date": "2026-06-07 23:22",
+   "detector": 6,
+   "lam_um": 4.415,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 26,
+   "bad_px_aperture": 26,
+   "flagged_px_aperture": 26,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W24_1A_0125_4D3_spx_l2b-v27-2026-271",
+   "date": "2026-06-08 14:02",
+   "detector": 3,
+   "lam_um": 1.783,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 27,
+   "flagged_px_aperture": 27,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W24_1A_0125_4D6_spx_l2b-v27-2026-271",
+   "date": "2026-06-08 14:02",
+   "detector": 6,
+   "lam_um": 4.543,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 27,
+   "flagged_px_aperture": 27,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W24_2B_0242_4D3_spx_l2b-v27-2026-272",
+   "date": "2026-06-12 20:40",
+   "detector": 3,
+   "lam_um": 1.955,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W24_2B_0242_4D6_spx_l2b-v27-2026-272",
+   "date": "2026-06-12 20:40",
+   "detector": 6,
+   "lam_um": 4.678,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 27,
+   "flagged_px_aperture": 27,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W25_2A_0573_1D2_spx_l2b-v27-2026-273",
+   "date": "2026-06-21 03:26",
+   "detector": 2,
+   "lam_um": 1.263,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 29,
+   "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W25_2A_0573_1D5_spx_l2b-v27-2026-273",
+   "date": "2026-06-21 03:26",
+   "detector": 5,
+   "lam_um": 4.019,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 29,
+   "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W25_2A_0573_4D2_spx_l2b-v27-2026-273",
+   "date": "2026-06-21 03:32",
+   "detector": 2,
+   "lam_um": 1.355,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "HOT",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W25_2A_0573_4D5_spx_l2b-v27-2026-273",
+   "date": "2026-06-21 03:32",
+   "detector": 5,
+   "lam_um": 4.125,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 29,
+   "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W25_2A_0661_4D2_spx_l2b-v27-2026-273",
+   "date": "2026-06-21 14:57",
+   "detector": 2,
+   "lam_um": 1.563,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 29,
+   "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W25_2A_0661_4D5_spx_l2b-v27-2026-273",
+   "date": "2026-06-21 14:57",
+   "detector": 5,
+   "lam_um": 4.342,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 30,
+   "bad_px_aperture": 30,
+   "flagged_px_aperture": 30,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W26_1A_0047_2D2_spx_l2b-v27-2026-273",
+   "date": "2026-06-22 05:32",
+   "detector": 2,
+   "lam_um": 1.42,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 30,
+   "bad_px_aperture": 30,
+   "flagged_px_aperture": 30,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W26_1A_0047_2D5_spx_l2b-v27-2026-273",
+   "date": "2026-06-22 05:32",
+   "detector": 5,
+   "lam_um": 4.196,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W26_1A_0274_3D2_spx_l2b-v27-2026-273",
+   "date": "2026-06-23 06:00",
+   "detector": 2,
+   "lam_um": 1.093,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 27,
+   "flagged_px_aperture": 27,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W26_1A_0274_3D5_spx_l2b-v27-2026-273",
+   "date": "2026-06-23 06:00",
+   "detector": 5,
+   "lam_um": 3.811,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W26_1A_0324_3D2_spx_l2b-v27-2026-273",
+   "date": "2026-06-23 10:54",
+   "detector": 2,
+   "lam_um": 1.201,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "HOT",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 27,
+   "flagged_px_aperture": 27,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W26_1A_0324_3D5_spx_l2b-v27-2026-273",
+   "date": "2026-06-23 10:54",
+   "detector": 5,
+   "lam_um": 3.945,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 29,
+   "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W28_1A_0104_1D1_spx_l2b-v27-2026-275",
+   "date": "2026-07-06 11:38",
+   "detector": 1,
+   "lam_um": 1.008,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 26,
+   "bad_px_aperture": 26,
+   "flagged_px_aperture": 26,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W28_1A_0104_1D4_spx_l2b-v27-2026-275",
+   "date": "2026-07-06 11:38",
+   "detector": 4,
+   "lam_um": 3.418,
+   "flags_at_target": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W28_1A_0201_1D1_spx_l2b-v27-2026-275",
+   "date": "2026-07-06 23:02",
+   "detector": 1,
+   "lam_um": 1.108,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 29,
+   "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W28_1A_0201_1D4_spx_l2b-v27-2026-275",
+   "date": "2026-07-06 23:02",
+   "detector": 4,
+   "lam_um": 3.801,
+   "flags_at_target": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 29,
+   "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W28_2A_0106_1D4_spx_l2b-v27-2026-276",
+   "date": "2026-07-09 22:43",
+   "detector": 4,
+   "lam_um": 3.153,
+   "flags_at_target": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 27,
+   "flagged_px_aperture": 27,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W28_2A_0106_2D1_spx_l2b-v27-2026-276",
+   "date": "2026-07-09 22:45",
+   "detector": 1,
+   "lam_um": 0.962,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "PERSIST",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 29,
+   "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W28_2A_0364_4D4_spx_l2b-v27-2026-276",
+   "date": "2026-07-11 09:01",
+   "detector": 4,
+   "lam_um": 2.546,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 29,
+   "flagged_px_aperture": 29,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W28_2A_0376_1D1_spx_l2b-v27-2026-276",
+   "date": "2026-07-11 10:36",
+   "detector": 1,
+   "lam_um": 0.898,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 27,
+   "flagged_px_aperture": 27,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W29_1A_0015_1D1_spx_l2b-v27-2026-276",
+   "date": "2026-07-13 01:40",
+   "detector": 1,
+   "lam_um": 0.799,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W29_1A_0015_1D4_spx_l2b-v27-2026-276",
+   "date": "2026-07-13 01:40",
+   "detector": 4,
+   "lam_um": 2.615,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W29_1A_0015_4D4_spx_l2b-v27-2026-276",
+   "date": "2026-07-13 01:46",
+   "detector": 4,
+   "lam_um": 2.835,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 27,
+   "flagged_px_aperture": 27,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W29_1A_0364_1D1_spx_l2b-v27-2026-276",
+   "date": "2026-07-14 21:41",
+   "detector": 1,
+   "lam_um": 0.964,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 28,
+   "flagged_px_aperture": 28,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W29_2A_0079_2D4_spx_l2b-v27-2026-277",
+   "date": "2026-07-16 20:56",
+   "detector": 4,
+   "lam_um": 3.76,
+   "flags_at_target": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 27,
+   "flagged_px_aperture": 27,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
+  },
+  {
+   "image": "level2_2026W29_2A_0079_3D1_spx_l2b-v27-2026-277",
+   "date": "2026-07-16 20:58",
+   "detector": 1,
+   "lam_um": 1.122,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 27,
+   "flagged_px_aperture": 27,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   }
  ],
  "flag_legend": [
@@ -9674,7 +11531,7 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": false,
-   "images_aperture": 127,
+   "images_aperture": 164,
    "images_target_pixel": 0
   },
   {
@@ -9684,8 +11541,8 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": false,
-   "images_aperture": 154,
-   "images_target_pixel": 154
+   "images_aperture": 195,
+   "images_target_pixel": 195
   },
   {
    "name": "SUR_ERROR",
@@ -9694,8 +11551,8 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": false,
-   "images_aperture": 154,
-   "images_target_pixel": 152
+   "images_aperture": 195,
+   "images_target_pixel": 193
   },
   {
    "name": "NONFUNC",
@@ -9704,7 +11561,7 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": true,
-   "images_aperture": 16,
+   "images_aperture": 22,
    "images_target_pixel": 0
   },
   {
@@ -9734,7 +11591,7 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": true,
-   "images_aperture": 5,
+   "images_aperture": 7,
    "images_target_pixel": 0
   },
   {
@@ -9784,7 +11641,7 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": false,
-   "images_aperture": 2,
+   "images_aperture": 3,
    "images_target_pixel": 0
   },
   {
@@ -9864,8 +11721,8 @@
    "bad": true,
    "informational": false,
    "hidden_in_pictures": false,
-   "images_aperture": 154,
-   "images_target_pixel": 154
+   "images_aperture": 195,
+   "images_target_pixel": 195
   },
   {
    "name": "SNOWBALL",
@@ -10721,7 +12578,7 @@
     15.4
    ],
    [
-    31.4,
+    31.3,
     139.4,
     15.7
    ]
@@ -11431,7 +13288,336 @@
     15.7
    ]
   ],
-  "w2_spherex_v3.png": [
+  "w2_spherex_v3_1.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v3_2.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v3_3.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v3_4.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v3_5.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v3_6.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v3_7.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w2_spherex_v3_8.png": [
    [
     54.7,
     116.2,
@@ -12272,7 +14458,7 @@
     15.4
    ],
    [
-    31.4,
+    31.3,
     139.4,
     15.7
    ]
@@ -12982,6 +15168,147 @@
     15.7
    ]
   ],
+  "w1_spherex_v3_1.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w1_spherex_v3_2.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "w1_spherex_v3_3.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
   "d1_spherex_v1.png": [
    [
     54.7,
@@ -13076,6 +15403,53 @@
     15.7
    ]
   ],
+  "d1_spherex_v3.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
   "d2_spherex_v1.png": [
    [
     54.7,
@@ -13124,6 +15498,53 @@
    ]
   ],
   "d2_spherex_v2.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "d2_spherex_v3.png": [
    [
     54.7,
     116.2,
@@ -13405,6 +15826,53 @@
     15.7
    ]
   ],
+  "d4_spherex_v3.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
   "d5_spherex_v1.png": [
    [
     54.7,
@@ -13453,6 +15921,53 @@
    ]
   ],
   "d5_spherex_v2.png": [
+   [
+    54.7,
+    116.2,
+    14.3
+   ],
+   [
+    29.7,
+    141.7,
+    15.4
+   ],
+   [
+    89.0,
+    113.7,
+    16.8
+   ],
+   [
+    24.1,
+    114.0,
+    14.2
+   ],
+   [
+    37.2,
+    23.6,
+    13.8
+   ],
+   [
+    74.6,
+    74.5,
+    6.4
+   ],
+   [
+    61.1,
+    95.6,
+    16.2
+   ],
+   [
+    59.8,
+    123.2,
+    15.4
+   ],
+   [
+    31.3,
+    139.4,
+    15.7
+   ]
+  ],
+  "d5_spherex_v3.png": [
    [
     54.7,
     116.2,
@@ -13789,11 +16304,11 @@
    "ch": "w2",
    "x": 74.0,
    "y": 75.0,
-   "pred_x": 74.41830372083018,
-   "pred_y": 74.47566539890379,
-   "offset_arcsec": 1.341498828540386,
-   "ra": 248.16804711858558,
-   "dec": 66.75528864689795
+   "pred_x": 74.41776829059685,
+   "pred_y": 74.47550591315851,
+   "offset_arcsec": 1.341080745783475,
+   "ra": 248.16804636487993,
+   "dec": 66.7552887355017
   },
   {
    "year": 2014.9490398357289,
@@ -13801,11 +16316,11 @@
    "ch": "w2",
    "x": 74.94486215538848,
    "y": 75.3859649122807,
-   "pred_x": 74.46422407439032,
-   "pred_y": 74.48934354310664,
-   "offset_arcsec": 2.0346428133920824,
-   "ra": 248.16671704499944,
-   "dec": 66.7555030721759
+   "pred_x": 74.4636886442631,
+   "pred_y": 74.48918405676446,
+   "offset_arcsec": 2.0354300288061236,
+   "ra": 248.16671629128902,
+   "dec": 66.75550316077964
   },
   {
    "year": 2018.3736005475703,
@@ -13813,11 +16328,11 @@
    "ch": "w2",
    "x": 73.79040404040404,
    "y": 74.50757575757575,
-   "pred_x": 74.49957036131399,
-   "pred_y": 74.49987202496025,
-   "offset_arcsec": 1.4184163256785984,
-   "ra": 248.1683421525362,
-   "dec": 66.75501507628465
+   "pred_x": 74.49903493132983,
+   "pred_y": 74.49971253821802,
+   "offset_arcsec": 1.4173490321629136,
+   "ra": 248.16834139883161,
+   "dec": 66.75501516488842
   },
   {
    "year": 2020.3749571526353,
@@ -13825,11 +16340,11 @@
    "ch": "w2",
    "x": 75.36708860759494,
    "y": 75.2,
-   "pred_x": 74.52022717855647,
-   "pred_y": 74.50602500291451,
-   "offset_arcsec": 2.189772204054434,
-   "ra": 248.16612268317022,
-   "dec": 66.75539975486214
+   "pred_x": 74.51969174864654,
+   "pred_y": 74.5058655159231,
+   "offset_arcsec": 2.1908027007517084,
+   "ra": 248.16612192945766,
+   "dec": 66.7553998434659
   },
   {
    "year": 2023.9436851471594,
@@ -13837,11 +16352,11 @@
    "ch": "w2",
    "x": 74.3736559139785,
    "y": 75.1236559139785,
-   "pred_x": 74.5570614747644,
-   "pred_y": 74.51699671318495,
-   "offset_arcsec": 1.2675535265749625,
-   "ra": 248.16752112931746,
-   "dec": 66.75535734609554
+   "pred_x": 74.55652604499308,
+   "pred_y": 74.51683722572815,
+   "offset_arcsec": 1.267549454996818,
+   "ra": 248.1675203756099,
+   "dec": 66.75535743469928
   },
   {
    "year": 2024.374514442163,
@@ -13849,47 +16364,47 @@
    "ch": "w2",
    "x": 74.35338345864662,
    "y": 73.97243107769424,
-   "pred_x": 74.56150823952126,
-   "pred_y": 74.51832125633172,
-   "offset_arcsec": 1.1684382936572053,
-   "ra": 248.1675496612615,
-   "dec": 66.75471777670734
+   "pred_x": 74.56097280974407,
+   "pred_y": 74.51816176881442,
+   "offset_arcsec": 1.1677590949137402,
+   "ra": 248.16754890755408,
+   "dec": 66.7547178653111
   },
   {
    "year": 2025.409851293217,
    "mission": "SPHEREx",
    "ch": "w2",
-   "x": 73.83262426454714,
-   "y": 74.4635838106174,
-   "pred_x": 74.5721943731614,
-   "pred_y": 74.52150429969424,
-   "offset_arcsec": 1.4836694087073101,
-   "ra": 248.16828271949456,
-   "dec": 66.75499063667867
+   "x": 73.83250507925618,
+   "y": 74.46351395736406,
+   "pred_x": 74.57165894344452,
+   "pred_y": 74.52134481205475,
+   "offset_arcsec": 1.4828254686899478,
+   "ra": 248.16828213356158,
+   "dec": 66.75499068647407
   },
   {
    "year": 2025.9994315287977,
    "mission": "SPHEREx",
    "ch": "w2",
-   "x": 75.73864410126998,
-   "y": 71.81895693867673,
-   "pred_x": 74.57827967109691,
-   "pred_y": 74.52331690729382,
-   "offset_arcsec": 5.885578457899446,
-   "ra": 248.16559978084715,
-   "dec": 66.75352139270089
+   "x": 75.73850616858186,
+   "y": 71.8189152937988,
+   "pred_x": 74.5777442413521,
+   "pred_y": 74.52315741958763,
+   "offset_arcsec": 5.885675397700396,
+   "ra": 248.16559922128613,
+   "dec": 66.75352145817075
   },
   {
-   "year": 2026.3048137171636,
+   "year": 2026.37132660305,
    "mission": "SPHEREx",
    "ch": "w2",
-   "x": 78.0,
-   "y": 76.0,
-   "pred_x": 74.58143164512602,
-   "pred_y": 74.52425577540406,
-   "offset_arcsec": 7.446994185670268,
-   "ra": 248.16241626802264,
-   "dec": 66.75584412720329
+   "x": 73.47813701720737,
+   "y": 74.35078764375162,
+   "pred_x": 74.5815827220616,
+   "pred_y": 74.52430077513992,
+   "offset_arcsec": 2.234009158602057,
+   "ra": 248.16878096240944,
+   "dec": 66.75492805699038
   },
   {
    "year": 2010.5,
@@ -13897,11 +16412,11 @@
    "ch": "w1",
    "x": 75.0,
    "y": 74.5,
-   "pred_x": 74.41830372083018,
-   "pred_y": 74.47566539890379,
-   "offset_arcsec": 1.164410123503961,
-   "ra": 248.16663944169227,
-   "dec": 66.75501086912021
+   "pred_x": 74.41776829059685,
+   "pred_y": 74.47550591315851,
+   "offset_arcsec": 1.1654934125916216,
+   "ra": 248.16663868798156,
+   "dec": 66.75501095772397
   },
   {
    "year": 2013.9533023956194,
@@ -13909,11 +16424,11 @@
    "ch": "w1",
    "x": 74.3490813648294,
    "y": 74.28083989501312,
-   "pred_x": 74.45394666242825,
-   "pred_y": 74.4862822443228,
-   "offset_arcsec": 0.4613167654366907,
-   "ra": 248.1675557185923,
-   "dec": 66.75488911493116
+   "pred_x": 74.45341123226508,
+   "pred_y": 74.48612275810133,
+   "offset_arcsec": 0.4605465236835521,
+   "ra": 248.16755496488489,
+   "dec": 66.75488920353492
   },
   {
    "year": 2014.428838329911,
@@ -13921,11 +16436,11 @@
    "ch": "w1",
    "x": 74.64596273291926,
    "y": 75.02173913043478,
-   "pred_x": 74.45885486260799,
-   "pred_y": 74.4877442337129,
-   "offset_arcsec": 1.13165348915872,
-   "ra": 248.1671378065399,
-   "dec": 66.75530072562673
+   "pred_x": 74.45831943243908,
+   "pred_y": 74.48758474743049,
+   "offset_arcsec": 1.1323089915043918,
+   "ra": 248.16713705283098,
+   "dec": 66.75530081423047
   },
   {
    "year": 2014.9490398357289,
@@ -13933,11 +16448,11 @@
    "ch": "w1",
    "x": 74.71024734982332,
    "y": 75.2756183745583,
-   "pred_x": 74.46422407439032,
-   "pred_y": 74.48934354310664,
-   "offset_arcsec": 1.6477324571709138,
-   "ra": 248.16704731231877,
-   "dec": 66.75544176950763
+   "pred_x": 74.4636886442631,
+   "pred_y": 74.48918405676446,
+   "offset_arcsec": 1.648356916978318,
+   "ra": 248.1670465586095,
+   "dec": 66.75544185811138
   },
   {
    "year": 2015.4154965092403,
@@ -13945,11 +16460,11 @@
    "ch": "w1",
    "x": 74.59278350515464,
    "y": 74.6082474226804,
-   "pred_x": 74.46903856384331,
-   "pred_y": 74.49077761913648,
-   "offset_arcsec": 0.3412445764286736,
-   "ra": 248.16721266738838,
-   "dec": 66.75507100809092
+   "pred_x": 74.46850313374283,
+   "pred_y": 74.49061813278477,
+   "offset_arcsec": 0.3422412047981679,
+   "ra": 248.16721191367975,
+   "dec": 66.75507109669468
   },
   {
    "year": 2015.9438477754964,
@@ -13957,11 +16472,11 @@
    "ch": "w1",
    "x": 73.76139410187668,
    "y": 74.7479892761394,
-   "pred_x": 74.47449189259531,
-   "pred_y": 74.4924019842109,
-   "offset_arcsec": 1.5150357394354388,
-   "ra": 248.16838299457555,
-   "dec": 66.75514863908707
+   "pred_x": 74.47395646252087,
+   "pred_y": 74.49224249777177,
+   "offset_arcsec": 1.5141354396164344,
+   "ra": 248.1683822408711,
+   "dec": 66.7551487276908
   },
   {
    "year": 2016.3984386036961,
@@ -13969,11 +16484,11 @@
    "ch": "w1",
    "x": 74.6812749003984,
    "y": 74.72908366533865,
-   "pred_x": 74.47918390980061,
-   "pred_y": 74.49379957989262,
-   "offset_arcsec": 0.6203204634462103,
-   "ra": 248.16708809979858,
-   "dec": 66.75513813918478
+   "pred_x": 74.47864847972151,
+   "pred_y": 74.49364009338893,
+   "offset_arcsec": 0.6212604668578423,
+   "ra": 248.1670873460895,
+   "dec": 66.75513822778852
   },
   {
    "year": 2016.9403627652293,
@@ -13981,11 +16496,11 @@
    "ch": "w1",
    "x": 74.61560693641619,
    "y": 74.52890173410404,
-   "pred_x": 74.48477732998097,
-   "pred_y": 74.49546567350751,
-   "offset_arcsec": 0.2700692952458654,
-   "ra": 248.1671805397659,
-   "dec": 66.75502692712298
+   "pred_x": 74.48424189993737,
+   "pred_y": 74.49530618696487,
+   "offset_arcsec": 0.2711857930787327,
+   "ra": 248.16717978605712,
+   "dec": 66.75502701572675
   },
   {
    "year": 2017.3854110882958,
@@ -13993,11 +16508,11 @@
    "ch": "w1",
    "x": 74.7467362924282,
    "y": 74.2845953002611,
-   "pred_x": 74.48937085510798,
-   "pred_y": 74.49683393165624,
-   "offset_arcsec": 0.6671797508667842,
-   "ra": 248.16699595483814,
-   "dec": 66.75489120102849
+   "pred_x": 74.48883542505855,
+   "pred_y": 74.49667444505296,
+   "offset_arcsec": 0.6678036269465389,
+   "ra": 248.1669952011287,
+   "dec": 66.75489128963224
   },
   {
    "year": 2017.941631211499,
@@ -14005,11 +16520,11 @@
    "ch": "w1",
    "x": 74.24164524421595,
    "y": 74.53727506426735,
-   "pred_x": 74.49511182969368,
-   "pred_y": 74.49854397682424,
-   "offset_arcsec": 0.512817344041122,
-   "ra": 248.16770695444032,
-   "dec": 66.75503157863837
+   "pred_x": 74.49457639968719,
+   "pred_y": 74.49838449015701,
+   "offset_arcsec": 0.5118071752301141,
+   "ra": 248.16770620073345,
+   "dec": 66.75503166724211
   },
   {
    "year": 2018.3736005475703,
@@ -14017,11 +16532,11 @@
    "ch": "w1",
    "x": 75.35472972972973,
    "y": 73.69932432432432,
-   "pred_x": 74.49957036131399,
-   "pred_y": 74.49987202496025,
-   "offset_arcsec": 2.342796761324521,
-   "ra": 248.16614012141298,
-   "dec": 66.75456604628708
+   "pred_x": 74.49903493132983,
+   "pred_y": 74.49971253821802,
+   "offset_arcsec": 2.3433607326521932,
+   "ra": 248.16613936770048,
+   "dec": 66.75456613489084
   },
   {
    "year": 2018.9424955509924,
@@ -14029,11 +16544,11 @@
    "ch": "w1",
    "x": 74.70121951219512,
    "y": 74.26829268292683,
-   "pred_x": 74.50544215853239,
-   "pred_y": 74.50162103778011,
-   "offset_arcsec": 0.6091662937709581,
-   "ra": 248.16706002718905,
-   "dec": 66.75488214414672
+   "pred_x": 74.5049067285704,
+   "pred_y": 74.50146155096344,
+   "offset_arcsec": 0.6096111220769975,
+   "ra": 248.16705927347985,
+   "dec": 66.75488223275046
   },
   {
    "year": 2019.9408405201916,
@@ -14041,11 +16556,11 @@
    "ch": "w1",
    "x": 74.30208333333333,
    "y": 74.4765625,
-   "pred_x": 74.51574648386496,
-   "pred_y": 74.50469035316777,
-   "offset_arcsec": 0.4310133084500028,
-   "ra": 248.16762187716552,
-   "dec": 66.7549978496089
+   "pred_x": 74.51521105392327,
+   "pred_y": 74.50453086620278,
+   "offset_arcsec": 0.42991001292167835,
+   "ra": 248.16762112345833,
+   "dec": 66.75499793821265
   },
   {
    "year": 2020.3749571526353,
@@ -14053,11 +16568,11 @@
    "ch": "w1",
    "x": 75.62369337979094,
    "y": 74.66202090592334,
-   "pred_x": 74.52022717855647,
-   "pred_y": 74.50602500291451,
-   "offset_arcsec": 2.228876289889571,
-   "ra": 248.16576148210274,
-   "dec": 66.75510087438444
+   "pred_x": 74.51969174864654,
+   "pred_y": 74.5058655159231,
+   "offset_arcsec": 2.2299812620571338,
+   "ra": 248.16576072838885,
+   "dec": 66.7551009629882
   },
   {
    "year": 2020.9429245722108,
@@ -14065,11 +16580,11 @@
    "ch": "w1",
    "x": 74.21447721179625,
    "y": 74.97319034852546,
-   "pred_x": 74.52608940180922,
-   "pred_y": 74.5077711640036,
-   "offset_arcsec": 1.1202092202395972,
-   "ra": 248.16774520202327,
-   "dec": 66.7552737537036
+   "pred_x": 74.52555397192032,
+   "pred_y": 74.50761167694158,
+   "offset_arcsec": 1.119879011519327,
+   "ra": 248.16774444831654,
+   "dec": 66.75527384230736
   },
   {
    "year": 2021.942080219028,
@@ -14077,11 +16592,11 @@
    "ch": "w1",
    "x": 74.12891986062718,
    "y": 74.25783972125436,
-   "pred_x": 74.5364020945192,
-   "pred_y": 74.51084297177283,
-   "offset_arcsec": 0.9592755926420328,
-   "ra": 248.16786563130105,
-   "dec": 66.7548763363362
+   "pred_x": 74.53586666462978,
+   "pred_y": 74.51068348455213,
+   "offset_arcsec": 0.958197620344475,
+   "ra": 248.16786487759475,
+   "dec": 66.75487642493995
   },
   {
    "year": 2022.3763107460643,
@@ -14089,11 +16604,11 @@
    "ch": "w1",
    "x": 75.09385113268608,
    "y": 74.26860841423948,
-   "pred_x": 74.54088396470316,
-   "pred_y": 74.51217797163072,
-   "offset_arcsec": 1.208468151260213,
-   "ra": 248.1665073347334,
-   "dec": 66.7548823175955
+   "pred_x": 74.54034853487371,
+   "pred_y": 74.51201848436911,
+   "offset_arcsec": 1.20931978901711,
+   "ra": 248.16650658102225,
+   "dec": 66.75488240619926
   },
   {
    "year": 2022.9413295003421,
@@ -14101,11 +16616,11 @@
    "ch": "w1",
    "x": 74.44474393530997,
    "y": 75.07008086253369,
-   "pred_x": 74.54671575359025,
-   "pred_y": 74.51391506735207,
-   "offset_arcsec": 1.1308733677103786,
-   "ra": 248.16742105941427,
-   "dec": 66.75532758225901
+   "pred_x": 74.54618032375475,
+   "pred_y": 74.51375558003056,
+   "offset_arcsec": 1.1309945373021544,
+   "ra": 248.16742030570637,
+   "dec": 66.75532767086275
   },
   {
    "year": 2023.9436851471594,
@@ -14113,11 +16628,11 @@
    "ch": "w1",
    "x": 74.37640449438203,
    "y": 74.8314606741573,
-   "pred_x": 74.5570614747644,
-   "pred_y": 74.51699671318495,
-   "offset_arcsec": 0.7253262089462381,
-   "ra": 248.1675172590241,
-   "dec": 66.75519501541106
+   "pred_x": 74.55652604499308,
+   "pred_y": 74.51683722572815,
+   "offset_arcsec": 0.7250701685126724,
+   "ra": 248.16751650531654,
+   "dec": 66.75519510401482
   },
   {
    "year": 2024.374514442163,
@@ -14125,34 +16640,34 @@
    "ch": "w1",
    "x": 74.66666666666667,
    "y": 74.56481481481481,
-   "pred_x": 74.56150823952126,
-   "pred_y": 74.51832125633172,
-   "offset_arcsec": 0.22995604615261722,
-   "ra": 248.16710866433192,
-   "dec": 66.75504687874414
+   "pred_x": 74.56097280974407,
+   "pred_y": 74.51816176881442,
+   "offset_arcsec": 0.23106447670816704,
+   "ra": 248.16710791062292,
+   "dec": 66.7550469673479
   }
  ],
  "motion": {
   "from_year": 2010.5,
-  "to_year": 2026.3048137171636,
-  "shift_arcsec": 8.246298843280616,
-  "measured_arcsec_per_yr": 0.5217586863630895,
-  "measured_pmra": -506.1848972414476,
-  "measured_pmdec": 126.5265845583525,
+  "to_year": 2026.37132660305,
+  "shift_arcsec": 1.6659095595069127,
+  "measured_arcsec_per_yr": 0.10496347288239773,
+  "measured_pmra": 65.75984729506872,
+  "measured_pmdec": -81.81059297708998,
   "expected_arcsec_per_yr": 0.02153911903853499,
-  "shift_spherex_pixels": 1.3408616005334335
+  "shift_spherex_pixels": 0.2708796031718557
  },
  "movers_experimental": [],
  "spectrum": [],
- "spectrum_points": 154,
- "flagged_points": 154,
+ "spectrum_points": 195,
+ "flagged_points": 195,
  "variability": {
-  "delta_mag": 0.3383657445206045,
-  "uncertainty_mag": 0.06313897675809586,
-  "n_wavelength_bins": 31,
+  "delta_mag": 0.5319150280773218,
+  "uncertainty_mag": 0.06710256521344393,
+  "n_wavelength_bins": 29,
   "method": "PSF-wing photometry (star's core is saturated)",
   "from": "Jun 2025",
-  "to": "Nov 2025"
+  "to": "Jun 2026"
  },
  "ir_color": {
   "f4p0_mjy": null,
@@ -14213,18 +16728,10 @@
    "n_images": 76
   },
   {
-   "year": 2026.3304530567007,
-   "n_images": 10
+   "year": 2026.4342043985268,
+   "n_images": 51
   }
  ],
- "changes": {
-  "found": 0,
-  "candidates": 0,
-  "target_recovered": null,
-  "items": [],
-  "method": "Dots seen only in WISE 2010 are paired with dots seen only in SPHEREx at 4.6 \u00b5m, 8\u2033 to 190\u2033 apart and of similar brightness. Each pair is then checked against the target's path, Gaia DR3 and SIMBAD.",
-  "not_checked": "Asteroids and comets are not checked. An unconfirmed pair is not a discovery."
- },
  "gaia_facts": {
   "source_id": 1648328016354496384,
   "parallax_mas": 1.2509180143740992,
@@ -14236,6 +16743,14 @@
   "vari_class": "LPV",
   "vari_class_text": "long-period variable (Mira-type pulsating giant)",
   "vari_score": 0.9573475122451782
+ },
+ "changes": {
+  "found": 0,
+  "candidates": 0,
+  "target_recovered": null,
+  "items": [],
+  "method": "Dots seen only in WISE 2010 are paired with dots seen only in SPHEREx at 4.6 \u00b5m, 8\u2033 to 190\u2033 apart and of similar brightness. Each pair is then checked against the target's path, Gaia DR3 and SIMBAD.",
+  "not_checked": "Asteroids and comets are not checked. An unconfirmed pair is not a discovery."
  },
  "evidence": {
   "status": "known",
@@ -14255,11 +16770,11 @@
    },
    {
     "state": "ok",
-    "text": "Faded by 0.34 \u00b1 0.06 mag between Jun 2025 and Nov 2025 (measured in the wings of its image, because its core saturates SPHEREx)"
+    "text": "Faded by 0.53 \u00b1 0.07 mag between Jun 2025 and Jun 2026 (measured in the wings of its image, because its core saturates SPHEREx)"
    },
    {
     "state": "warn",
-    "text": "154 of 154 SPHEREx measurements flagged (overflow or bloom: the object is too bright for SPHEREx). No reliable SPHEREx spectrum, so we do not show one."
+    "text": "195 of 195 SPHEREx measurements flagged (overflow or bloom: the object is too bright for SPHEREx). No reliable SPHEREx spectrum, so we do not show one."
    },
    {
     "state": "ok",
@@ -14269,15 +16784,15 @@
   "numbers": [
    {
     "label": "apparent drift (below the detection limit, not a real motion)",
-    "value": "0.52\u2033/yr"
+    "value": "0.10\u2033/yr"
    },
    {
     "label": "catalogue motion (Gaia DR3)",
     "value": "0.02\u2033/yr"
    },
    {
-    "label": "brightness change Jun 2025\u2192Nov 2025",
-    "value": "+0.34 mag"
+    "label": "brightness change Jun 2025\u2192Jun 2026",
+    "value": "+0.53 mag"
    },
    {
     "label": "distance (Gaia parallax)",
@@ -14295,14 +16810,14 @@
    },
    {
     "id": "change",
-    "headline": "Faded by about 27% between Jun 2025 and Nov 2025",
+    "headline": "Faded by about 39% between Jun 2025 and Jun 2026",
     "detail": "Measured in infrared light, where pulsating and dust-hidden stars change less than they do in visible light.",
-    "basis": "10^(\u22120.4 \u00d7 +0.34 mag)"
+    "basis": "10^(\u22120.4 \u00d7 +0.53 mag)"
    }
   ],
   "limits": [
-   "Motion: an object must shift 2 SPHEREx pixels (12\u2033) to count as moving. Over these 15.8 years that means faster than 0.78\u2033 per year. Slower objects read as \u201cno measurable motion\u201d.",
-   "SPHEREx alone covers only 11 months here: by the same 2-pixel rule, enough only for motion faster than 14\u2033 per year. The 2010 WISE image is what makes slower motion visible.",
+   "Motion: an object must shift 2 SPHEREx pixels (12\u2033) to count as moving. Over these 15.9 years that means faster than 0.77\u2033 per year. Slower objects read as \u201cno measurable motion\u201d.",
+   "SPHEREx alone covers only 12 months here: by the same 2-pixel rule, enough only for motion faster than 13\u2033 per year. The 2010 WISE image is what makes slower motion visible.",
    "Brightness: compared at 3 SPHEREx visits only. A change between or outside those dates is not seen.",
    "Bright stars: this one overflows SPHEREx pixels, so its spectrum and exact brightness are not reliable here.",
    "Solar System: the page checks against Gaia stars only. It does not check asteroids or comets, so a moving dot without a Gaia circle may be a known asteroid.",

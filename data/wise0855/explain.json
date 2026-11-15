@@ -1,17 +1,17 @@
 {
- "summary": "WISE 0855-0714 is a known brown dwarf, an object too small to burn hydrogen like a star, and the coldest one known. It sits about 7.3 light-years away. WANDERERS saw it shift 131 arcseconds between 2010 and 2026, about 8.27 arcseconds per year, within 1.5% of the catalogue's 8.15. It shines 5.1 times brighter near 4 to 4.75 microns than at 3.3 microns, where methane absorbs light. It is too faint for Gaia's camera. Of 158 spectrum points, 41 are flagged, but all three checks passed, so confidence is high.",
+ "summary": "WISE 0855-0714 is a known brown dwarf, the coldest one catalogued, about 7.3 light-years away. WANDERERS compared its 2010 position with SPHEREx images from 2025 and 2026. It found the dwarf had moved 131 arcseconds, or 8.27 arcseconds per year, within 1.5% of the published 8.15. It is also 5.1 times brighter near 4 to 4.75 microns than at 3.3 microns, where methane absorbs light. That dip marks a cold, methane-rich atmosphere. Confidence is high, but Gaia can't see it, and 41 of 160 spectrum points are flagged.",
  "qa": [
   {
    "q": "Why do we think this is what the card says?",
-   "a": "Two clues agree. It moved 131 arcseconds between 2010 and 2026, about 8.27 per year, within 1.5% of the published 8.15. That shows we are tracking the right object, and a very nearby one. It is also 5.1 times brighter at 4 to 4.75 microns than in the 3.3 micron methane band, the dip methane causes in cold atmospheres. Gaia cannot see it, and 41 of 158 spectrum points are flagged."
+   "a": "Two clues agree. It moved 131 arcseconds between 2010 and 2026, about 8.27 arcseconds per year. That is within 1.5% of the catalogued 8.15, and only very nearby objects move that fast across the sky. It is also 5.1 times brighter at 4 to 4.75 microns than in the 3.3 micron methane band, which is the methane dip of a cold brown dwarf. Gaia can't see it, and 41 of 160 spectrum points are flagged."
   },
   {
    "q": "What would make you less sure?",
-   "a": "41 of the 158 spectrum points are flagged, and the 3.3 \u00b5m brightness has an error bar of about 28%, so the 5.1\u00d7 methane test could move. The spectrum is unusually bright below 1 \u00b5m for something this cold, which suggests light from a nearby star is mixed in. The north-south part of the motion also disagrees: 845 measured versus 673 catalogued, in thousandths of an arcsecond per year."
+   "a": "A few things would make me less sure. 41 of the 160 spectrum points are flagged. The 3.3 \u00b5m methane-band flux is faint, 0.10 \u00b1 0.03 mJy, so the 5.1\u00d7 ratio could be off by about 30%. Near 4 \u00b5m the spectrum jumps oddly, from 0.02 to 0.73 mJy. The north-south speed came out at 845 milliarcseconds per year, against 673 in the catalogue. With no Gaia match, everything rests on one published source."
   },
   {
    "q": "Why use both WISE and SPHEREx?",
-   "a": "WISE recorded this patch of sky around 2010, and SPHEREx imaged it again in 2025 and 2026. Over that gap of almost 16 years, WISE 0855-0714 moved 131 arcseconds, about 21 SPHEREx pixels. That works out to 8.27 arcseconds per year, close to the catalogue's 8.15. SPHEREx also splits light into many colors. That shows the methane dip of a cold brown dwarf. However, 41 of 158 spectrum points are flagged."
+   "a": "WISE photographed this sky in 2010, and SPHEREx looked again in 2025 and 2026. Over that 16-year gap, WISE 0855-0714 moved 131 arcseconds, about 21 SPHEREx pixels. That works out to 8.27\u2033 per year, close to the catalogue's 8.15. SPHEREx also splits light into many colors, which shows the methane dip: the object is 5.1\u00d7 brighter at 4\u20134.75 \u00b5m than at 3.3 \u00b5m. However, 41 of its 160 spectrum points are flagged."
   }
  ],
  "model_note": "Written by Claude (Claude Code, headless) from target.json only."
