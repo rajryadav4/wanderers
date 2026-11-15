@@ -67,7 +67,11 @@
     renderDetail(s);
     if (window.StarquakeUI) StarquakeUI.mount($("starQuake"), { key, row: s });
     $("starPred").hidden = true; $("starPredMsg").innerHTML = "";
-    if (DB.ready.has(key)) return showPred(await fetch(`data/stars/pred/${key}.json`).then((r) => r.json()));
+    if (DB.ready.has(key)) {
+      const p = await fetch(`data/stars/pred/${key}.json`).then((r) => r.json());
+      if (DB.cur === s) showPred(p);                 // another star may have been chosen while this one loaded
+      return;
+    }
     if (window.LongRange) LongRange.show(null, s, DB.stars);      // catalogue values until a path is learnt
     if (DB.live) {
       $("starPredMsg").innerHTML = `No learnt path for ${esc(s.name)} yet. <button type="button" id="starLearn">Learn its path now</button> ` +
