@@ -345,3 +345,64 @@ p.pv-dim { font-size: .8rem; }
 .map-years { margin: 6px auto 0; max-width: 600px; }
 .map-years .yr-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .map-years input[type=range] { flex: 1 1 200px; accent-color: #7ee787; }
+
+/* ---- Star profile ---- */
+.sprof { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--line); }
+.sprof h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; }
+.sprof h4 { margin: 16px 0 6px; }
+.sp-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 12px; align-items: start; margin-top: 6px; }
+.sp-size { width: 100%; height: auto; background: var(--viewer, #03060d); border-radius: 10px; color: var(--viewer-muted, #8d9bb8); }
+.sp-size .sp-lbl { fill: var(--viewer-ink, #e6edf7); font: 600 13px var(--f-ui, system-ui); }
+.sp-small { fill: currentColor; font: 10px var(--f-mono, ui-monospace, monospace); }
+.sp-hr { width: 100%; display: block; border-radius: 10px; --viewer: #03060d; }
+.sp-facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-top: 10px; }
+.sp-card { border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; display: flex; flex-direction: column; gap: 2px; background: var(--surface); }
+.sp-card b { font-size: 1.02rem; }
+.sp-k { color: var(--muted); font: 500 .68rem/1.4 var(--f-mono, ui-monospace, monospace); letter-spacing: .08em; text-transform: uppercase; margin: 0; }
+.sp-s { color: var(--muted); font-size: .78rem; }
+.sp-sw { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: -1px; box-shadow: 0 0 6px currentColor; }
+.sp-bars { display: flex; flex-direction: column; gap: 6px; }
+.sp-bar { display: grid; grid-template-columns: 150px 1fr minmax(150px, auto); gap: 10px; align-items: center; font-size: .86rem; }
+.sp-track { position: relative; height: 10px; border-radius: 6px; background: color-mix(in srgb, var(--line) 70%, transparent); }
+.sp-track .sp-sun { position: absolute; left: 50%; top: -3px; bottom: -3px; width: 2px; background: #ffd166; }
+.sp-track b { position: absolute; top: 1px; bottom: 1px; border-radius: 5px; }
+.sp-track b.up { background: linear-gradient(90deg, #ffd166, #ff8a3d); }
+.sp-track b.down { background: linear-gradient(90deg, #5aa9ff, #9fd0ff); }
+.sp-bv { color: var(--muted); font-size: .8rem; }
+.sp-axis { display: flex; justify-content: space-between; margin: 0 0 0 160px; max-width: calc(100% - 330px); }
+.sp-comp { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center; }
+.sp-donut { display: flex; gap: 10px; align-items: center; }
+.sp-donut svg { width: 120px; height: 120px; }
+.sp-donut ul { list-style: none; margin: 0; padding: 0; font-size: .86rem; }
+.sp-donut li i, .sp-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.sp-mbar { display: flex; height: 22px; border-radius: 6px; overflow: hidden; font: 600 .7rem/22px var(--f-mono, ui-monospace, monospace); color: #1b1b1b; text-align: center; }
+.sp-pt { width: 100%; max-width: 560px; height: auto; display: block; margin: 4px 0; }
+.sp-pt text { font: 600 8.5px var(--f-mono, ui-monospace, monospace); fill: var(--muted); }
+.sp-pt .pt-on text { fill: #1b1b1b; }
+.sp-pt .pt-off rect { stroke: var(--line); }
+.sp-spec { width: 100%; height: auto; display: block; background: var(--viewer, #03060d); border-radius: 10px; color: var(--viewer-muted, #8d9bb8); }
+.sp-spec .sp-line { stroke: #fff; stroke-width: 1.4; }
+.sp-spec text { fill: var(--viewer-muted, #8d9bb8); font: 10px var(--f-mono, ui-monospace, monospace); }
+.sp-spec .sp-feat line { stroke: rgba(255,255,255,.35); stroke-dasharray: 2 3; }
+.sp-planets { width: 100%; height: auto; display: block; color: var(--muted); }
+.sp-planets .sp-hz { fill: rgba(126, 231, 135, .22); stroke: rgba(126, 231, 135, .6); }
+.sp-planets .sp-orbitline { stroke: var(--line-strong); }
+.sp-planets .sp-planet { fill: #9fd0ff; stroke: var(--surface); }
+@media (max-width: 720px) {
+  .sp-grid, .sp-comp { grid-template-columns: 1fr; }
+  .sp-bar { grid-template-columns: 1fr; gap: 3px; }
+  .sp-axis { margin-left: 0; max-width: none; }
+}
+.q-wave { width: 100%; display: block; margin: 6px 0 0; border-radius: 6px; background: color-mix(in srgb, var(--line) 35%, transparent); }
+/* anchor jumps land below the sticky header */
+#starProfile, #starQuake, #starLong, #starPred, #targetQuake { scroll-margin-top: 96px; }
+@media (max-width: 720px) {
+  .sprof .hint, .quake .hint, .sp-s, .sp-bv { font-size: .86rem; }
+  .sp-k { font-size: .72rem; }
+}
+.q-comb text { font-size: 13px; }
+@media (max-width: 720px) { .q-comb text { font-size: 16px; } }
+/* Star database tab: only star content (the field's mover search and the target title belong to the time-lapse) */
+body.stars-mode #changes, body.stars-mode #tName, body.stars-mode #tKind { display: none !important; }
+#starSuggest .chips-row { display: block; margin: 6px 0; line-height: 2.1; }
+#starSuggest .chips-row > b { margin-right: 4px; }

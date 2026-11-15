@@ -73,7 +73,7 @@
       const L = pred.learnt, g = pred.gaia_dr3 || {}, cat = pred.catalogue_motion || {};
       s = { name: pred.name, ra: r16[1], dec: r16[2], epoch: r16[0], pmra: L.pmra_2016, pmdec: L.pmdec_2016 };
       err = { pmra: L.pmra_err || 1, pmdec: L.pmdec_err || 1 };
-      sources.position = sources.motion = "learnt (scikit-learn, star_ml.py)";
+      sources.position = sources.motion = pred.kind === "physics" ? pred.basis : "learnt (scikit-learn, star_ml.py)";
       if (L.parallax_mas > 0) { s.plx = L.parallax_mas; err.plx = L.parallax_err || 0.1 * s.plx; sources.parallax = "learnt"; }
       else if (g.parallax > 0) { s.plx = g.parallax; err.plx = g.parallax_error || 0.01 * s.plx; sources.parallax = "Gaia DR3"; }
       else if (cat.parallax > 0) { s.plx = cat.parallax; err.plx = 0.05 * s.plx; sources.parallax = cat.source || "catalogue"; }
