@@ -723,7 +723,7 @@
     }
     $("meta").hidden = which === "stars";
     document.body.classList.toggle("stars-mode", which === "stars");
-    if (which === "stars") $("pathCard").hidden = true; else if ($("pathBody").innerHTML) $("pathCard").hidden = false;
+    if (which === "stars") $("pathCard").hidden = true; else if (S.pathQ && $("pathBody").innerHTML) $("pathCard").hidden = false;   // typed coordinates: no path
     if (which !== "flip") stop();
     if (which === "webb") showWebb();
     if (which === "stars" && window.StarsTab) window.StarsTab.open(starKey);
