@@ -150,13 +150,89 @@
     return "No match";
   }
   const gaiaRankOf = (g) => (!g || g.checked === false ? 2 : g.match ? 1 : 0);   // no match first: the interesting ones
-  // f: {cls, minPm (″/yr), red, tile, q, minVisits, minSnr, hide: ["edge", "crowded", "saturated", "artefact"]}
+  // ---------- SPHEREx 2025–26 (pipeline/survey/spherex.py): seen again where the NEOWISE motion predicts? ----------
+  const sxOf = (m) => (m && m.spherex && typeof m.spherex === "object" && !Array.isArray(m.spherex) ? m.spherex : null);
+  const spherexConfirmed = (m) => { const s = sxOf(m); return !!(s && s.checked === true && s.confirmed === true); };
+  const SX_BADGE = '<span class="badge b-sx" title="SPHEREx sees it in 2025–26 where its NEOWISE motion predicts">SPHEREx ✓</span>';
+  const CH4_UM = [3.2, 3.45];                       // the 3.3 µm methane band (as in survey/spherex.py)
+  const SX_W = 400, SX_H = 210, SX_ML = 46, SX_MR = 10, SX_MT = 12, SX_MB = 34, SX_X0 = 0.7, SX_X1 = 5.05;
+  // Inline SVG of the compact SPHEREx spectrum (flux in mJy vs wavelength 0.75–5 µm) with error bars and the methane band.
+  function spectrumSvg(sp) {
+    const um = sp && Array.isArray(sp.um) ? sp.um : [], f = sp && Array.isArray(sp.mjy) ? sp.mjy : [], e = sp && Array.isArray(sp.err) ? sp.err : [];
+    const pts = um.map((x, i) => ({ x: num(x), y: num(f[i]), e: num(e[i]) })).filter((p) => fin(p.x) && fin(p.y));
+    if (pts.length < 2) return "";
+    const lo = Math.min(0, ...pts.map((p) => p.y - (fin(p.e) ? p.e : 0))), hi = Math.max(...pts.map((p) => p.y + (fin(p.e) ? p.e : 0)));
+    const span = hi - lo > 0 ? hi - lo : Math.abs(hi) || 1, y0 = lo - span * 0.04, y1 = hi + span * 0.08;
+    const X = (x) => SX_ML + ((x - SX_X0) / (SX_X1 - SX_X0)) * (SX_W - SX_ML - SX_MR);
+    const Y = (y) => SX_MT + (1 - (y - y0) / (y1 - y0)) * (SX_H - SX_MT - SX_MB);
+    const r = (v) => v.toFixed(1);
+    const step = niceStep(y1 - y0), ticks = [];
+    for (let t = Math.ceil(y0 / step) * step; t <= y1 + 1e-9; t += step) ticks.push(t);
+    const fmtT = (t) => (Math.abs(t) < 1e-9 ? "0" : Math.abs(step) < 1 ? trim0(t.toFixed(Math.min(4, Math.ceil(-Math.log10(step))))) : fmtInt(t));
+    let g = `<rect class="sx-ch4" x="${r(X(CH4_UM[0]))}" y="${SX_MT}" width="${r(X(CH4_UM[1]) - X(CH4_UM[0]))}" height="${SX_H - SX_MT - SX_MB}"/>`
+      + `<text class="sx-ch4t" x="${r((X(CH4_UM[0]) + X(CH4_UM[1])) / 2)}" y="${SX_MT + 10}" text-anchor="middle">CH₄</text>`;
+    g += ticks.map((t) => `<line class="sx-grid" x1="${SX_ML}" x2="${SX_W - SX_MR}" y1="${r(Y(t))}" y2="${r(Y(t))}"/><text class="sx-lab" x="${SX_ML - 5}" y="${r(Y(t) + 3.5)}" text-anchor="end">${fmtT(t)}</text>`).join("");
+    g += [1, 2, 3, 4, 5].map((x) => `<text class="sx-lab" x="${r(X(x))}" y="${SX_H - SX_MB + 14}" text-anchor="middle">${x}</text>`).join("");
+    g += `<text class="sx-lab" x="${r((SX_ML + SX_W - SX_MR) / 2)}" y="${SX_H - 4}" text-anchor="middle">wavelength (µm)</text>`
+      + `<text class="sx-lab" x="10" y="${r((SX_MT + SX_H - SX_MB) / 2)}" text-anchor="middle" transform="rotate(-90 10 ${r((SX_MT + SX_H - SX_MB) / 2)})">mJy</text>`
+      + `<line class="sx-axis" x1="${SX_ML}" x2="${SX_W - SX_MR}" y1="${SX_H - SX_MB}" y2="${SX_H - SX_MB}"/>`;
+    g += pts.map((p) => (fin(p.e) && p.e > 0 ? `<line class="sx-err" x1="${r(X(p.x))}" x2="${r(X(p.x))}" y1="${r(Y(p.y - p.e))}" y2="${r(Y(p.y + p.e))}"/>` : "")
+      + `<circle class="sx-pt" cx="${r(X(p.x))}" cy="${r(Y(p.y))}" r="2.6"/>`).join("");
+    return `<svg class="d-spec" viewBox="0 0 ${SX_W} ${SX_H}" role="img" aria-label="SPHEREx spectrum: ${pts.length} bands from ${pts[0].x.toFixed(2)} to ${pts[pts.length - 1].x.toFixed(2)} µm, flux in mJy with error bars; the shaded band marks methane at 3.3 µm">${g}</svg>`;
+  }
+  function spherexVerdict(s) {
+    if (s.confirmed) return ["ok", "Seen again in 2025–26, where its NEOWISE motion predicts, and gone from its 2014 spot."];
+    if (s.at_predicted === true) return ["mid", "A source is there, where predicted, but it moves too little for SPHEREx's 13″ pixels to see the motion."];
+    if (s.at_predicted === false) return ["no", "Not where its NEOWISE motion predicts (another source's light, or a wrong motion)."];
+    if (s.detected === false) return ["mid", "Not detected by SPHEREx: too faint for it, or not there."];
+    return ["mid", "Detected, but SPHEREx cannot tell whether this light is the mover."];
+  }
+  // The drawer's "SPHEREx 2025–26" section.
+  function spherexHtml(m) {
+    const s = sxOf(m);
+    if (!s) return '<p class="hint">Not looked up in SPHEREx for this build.</p>';
+    const notes = Array.isArray(s.notes) ? s.notes.map(String) : [];
+    if (s.checked !== true) {
+      const e = String(s.error || "");
+      const why = e.startsWith("network") ? "The SPHEREx archive could not be reached for this candidate; it is tried again at the next update."
+        : e === "time budget" ? "Still in the queue: it is looked up at the next update."
+          : e ? `Could not be measured: ${e}.` : notes[0] || "Not looked up in SPHEREx.";
+      return `<p class="sx-verdict sx-mid">${esc(why)}</p>`;
+    }
+    const [tone, text] = spherexVerdict(s);
+    const row = (k, v) => `<div><dt>${k}</dt><dd>${v}</dd></div>`;
+    const off = num(s.offset_arcsec), err = num(s.offset_err), exp = num(s.expected_offset), snr = num(s.snr);
+    let dl = row("Detected", s.detected ? `yes <small>signal-to-noise ${fmtFix(snr, 1)} in the channels NEOWISE's bands cover</small>` : `no${fin(snr) ? ` <small>signal-to-noise ${fmtFix(snr, 1)}</small>` : ""}`);
+    if (fin(off)) dl += row("Offset from the predicted spot", `<span class="mono">${off.toFixed(1)}″ ± ${fin(err) ? err.toFixed(1) : "?"}″</span><small>within 3σ counts as "where predicted"</small>`);
+    if (fin(exp)) dl += row("Moved since 2014 (predicted)", `<span class="mono">${exp.toFixed(1)}″</span><small>from its first NEOWISE visit to the SPHEREx date</small>`);
+    if (s.gone_from_2014 === true || s.gone_from_2014 === false) dl += row("Its 2014 spot", s.gone_from_2014 ? "empty now" : "a source is still there");
+    if (fin(num(s.epoch))) dl += row("SPHEREx date", `<span class="mono">${num(s.epoch).toFixed(2)}</span>${Number.isInteger(num(s.tile)) ? `<small>DR1 cube tile ${num(s.tile)}</small>` : ""}`);
+    const ix = s.indices && typeof s.indices === "object" ? s.indices : null;
+    let words = "";
+    if (ix) {
+      const items = [];
+      const c = num(ix.w1w2), ce = num(ix.w1w2_err);
+      if (fin(c)) items.push(`3–5 µm colour from SPHEREx: W1−W2 ${ix.w1w2_lim ? ">" : "="} ${c.toFixed(1)}${!ix.w1w2_lim && fin(ce) ? ` ± ${ce.toFixed(1)}` : ""}${fin(num(m.w1w2)) ? ` (NEOWISE: ${num(m.w1w2).toFixed(1)})` : ""}. Cold brown dwarfs are red: 0.5 or more is reddish, 2 or more very red.`);
+      const d = num(ix.ch4_depth), de = num(ix.ch4_err);
+      if (fin(d)) items.push(ix.methane ? `Methane hint: the flux at 3.3 µm sits ${Math.round(100 * d)} ± ${Math.round(100 * (fin(de) ? de : 0))} % below the neighbouring continuum, as methane makes it in cold brown dwarfs.`
+        : `No clear methane dip at 3.3 µm (${Math.round(100 * d)} ± ${Math.round(100 * (fin(de) ? de : 0))} %).`);
+      if (fin(num(ix.peak_um))) items.push(`Between 2.8 and 5 µm it is brightest near ${num(ix.peak_um).toFixed(1)} µm${num(ix.peak_um) >= 4 ? ", where cold brown dwarfs peak" : ""}.`);
+      if (!items.length) items.push("Too faint at 3–5 µm for the spectral hints.");
+      words = `<ul class="sx-words">${items.map((t) => `<li>${esc(t)}</li>`).join("")}</ul><p class="hint">Hints, not a classification.</p>`;
+    }
+    const spec = s.spectrum ? spectrumSvg(s.spectrum) : "";
+    const nts = notes.length ? `<ul class="sx-notes hint">${notes.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : "";
+    return `<p class="sx-verdict sx-${tone}">${esc(text)}</p><dl class="d-nums">${dl}</dl>${spec}${words}${nts}`;
+  }
+
+  // f: {cls, minPm (″/yr), red, spherex, tile, q, minVisits, minSnr, hide: ["edge", "crowded", "saturated", "artefact"]}
   function applyFilters(rows, f) {
     const q = String(f.q || "").trim().toLowerCase(), minPm = (num(f.minPm) || 0) * 1000;
     const minVis = num(f.minVisits) || 0, minSnr = num(f.minSnr) || 0, hide = Array.isArray(f.hide) ? f.hide : [];
     return rows.filter((m) => (f.cls === "all" || !f.cls || m.class === f.cls)
       && (minPm <= 0 || num(m.pm) >= minPm)
       && (!f.red || isRed(m))
+      && (!f.spherex || spherexConfirmed(m))
       && (minVis <= 0 || num(m.n_visits) >= minVis)
       && (minSnr <= 0 || num(m.pm_snr) >= minSnr)
       && !hide.some((h) => Tools.hasFlag(m, h))
@@ -349,7 +425,7 @@
     NSIDE, N_TILES, TILE_AREA_DEG2, MAP_W, MAP_H, pix2ang, corners, tilePoint, xyf2ang, hammerXY, project, tilePolygon, galToEq, eclToEq, skyPath,
     fmtInt, fmtBig, fmtPct, fmtHours, fmtPm, fmtFix, sexa, posAngle, compass, esc, isRed, gaiaText, applyFilters, sortRows, SORTS, CLASSES,
     normTiles, normValidation, oneRowPerStar, trackPoints, fitLine, trackOffsets, trackSvg, links, copyText, BYW,
-    Tools, sortDefaults, archiveListHtml, whenHtml, promoteCommand,
+    Tools, sortDefaults, archiveListHtml, whenHtml, promoteCommand, spherexConfirmed, spherexHtml, spectrumSvg, SX_BADGE, CH4_UM,
   };
   if (typeof module === "object" && module && module.exports) module.exports = Core;
   root.SurveyCore = Core;
@@ -429,7 +505,7 @@
     const s = S.summary;
     if (!s) {
       $("heroTitle").innerHTML = "Billions of infrared detections. Which ones move?";
-      for (const id of ["statDet", "statTracks", "statSky", "statMovers", "statUnex", "statTime"]) $(id).innerHTML = "—";
+      for (const id of ["statDet", "statTracks", "statSky", "statMovers", "statUnex", "statSpherex", "statTime"]) $(id).innerHTML = "—";
       $("funnel").innerHTML = "";
       $("funnel").hidden = true;
       return;
@@ -444,6 +520,9 @@
     $("statTracks").innerHTML = `${fmtInt(s.tracks)}${Number.isFinite(num(s.visit_sources)) ? sub(`from ${fmtInt(s.visit_sources)} per-visit sources`) : ""}`;
     $("statSky").innerHTML = `${fmtInt(s.tiles_done)} tiles${sub(`${Number.isFinite(area) ? fmtInt(area) + " deg²" : ""}${Number.isFinite(area) && Number.isFinite(frac) ? " · " : ""}${Number.isFinite(frac) ? fmtPct(frac) + " of the sky" : ""}`)}`;
     $("statMovers").innerHTML = `${fmtInt(s.movers)}${sub(Number.isFinite(num(s.min_pm)) ? `move ≥ ${trim0((num(s.min_pm) / 1000).toFixed(3))}″ a year, steadily` : "move steadily across the years")}`;
+    const sxN = num(s.spherex_checked), sxC = num(s.spherex_confirmed);
+    $("statSpherex").innerHTML = Number.isFinite(sxN) && sxN > 0
+      ? `${fmtInt(sxC || 0)}${sub(`seen again in 2025–26 where predicted · ${fmtInt(sxN)} looked up`)}` : `—${sub("SPHEREx check not run yet")}`;
     const pending = num(s.gaia_unchecked) || 0;   // movers the Gaia check has not reached yet (service busy or offline)
     $("statUnex").innerHTML = `${fmtInt(s.unexplained)}${sub(pending > 0
       ? `no Gaia DR3 counterpart · ${fmtInt(pending)} of ${fmtInt(s.movers)} movers still to check`
@@ -626,7 +705,7 @@
     return `<tr data-id="${esc(m.id)}" class="${m.class === "unexplained" ? "is-unex" : ""}">`
       + `<td class="num">${fmtInt(m.rank)}</td>`
       + `<th scope="row"><button type="button" class="cid mono" data-id="${esc(m.id)}" aria-haspopup="dialog">${esc(m.id)}</button></th>`
-      + `<td><span class="badge ${BADGE[m.class] || "b-nc"}">${esc(m.class || "not checked")}</span></td>`
+      + `<td><span class="badge ${BADGE[m.class] || "b-nc"}">${esc(m.class || "not checked")}</span>${spherexConfirmed(m) ? ` ${SX_BADGE}` : ""}</td>`
       + `<td class="num">${fmtPm(m.pm)}</td>`
       + `<td class="hide-sm">${hasPa ? `${Math.round(pa)}° ${compass(pa)}` : "—"}</td>`
       + `<td class="num hide-sm">${fmtInt(m.n_visits)} · ${fmtFix(m.span_yr, 1)} yr</td>`
@@ -681,9 +760,10 @@
 
   // ---------- URL: filters, sort, tile and open candidate survive a reload or a shared link ----------
   // (?preset=high also works in a link: it sets the high-confidence filters, and the address then lists them)
-  const URL_KEYS = ["class", "minpm", "red", "visits", "snr", "hide", "q", "tile", "sort", "dir", "preset", "id"];
+  const URL_KEYS = ["class", "minpm", "red", "spherex", "visits", "snr", "hide", "q", "tile", "sort", "dir", "preset", "id"];
   function syncControls() {
     $("fClass").value = S.f.cls; $("fMinPm").value = String(S.f.minPm || 0); $("fRed").checked = !!S.f.red;
+    $("fSpherex").checked = !!S.f.spherex;
     $("fSearch").value = S.f.q || ""; $("fTile").value = S.f.tile === null ? "" : String(S.f.tile);
     $("fMinVis").value = String(S.f.minVisits || 0); $("fMinSnr").value = String(S.f.minSnr || 0);
     for (const [k, id] of Object.entries(HIDE_IDS)) $(id).checked = S.f.hide.includes(k);
@@ -766,6 +846,7 @@
     $("dClass").textContent = m.class || "not checked";
     $("dRank").textContent = `Rank ${fmtInt(m.rank)} · score ${fmtFix(m.score, 2)}`;
     $("dNums").innerHTML = numbersHtml(m);
+    $("dSpherex").innerHTML = spherexHtml(m);
     const reasons = Array.isArray(m.reasons) ? m.reasons : [];
     $("dReasons").innerHTML = reasons.length ? reasons.map((r) => `<li>${esc(r)}</li>`).join("") : "<li>No reasons were recorded for this candidate.</li>";
     const tr = trackSvg(m);
@@ -882,6 +963,7 @@
   $("fClass").addEventListener("change", (e) => setFilter({ cls: e.target.value }));
   $("fMinPm").addEventListener("input", (e) => { const v = num(e.target.value); setFilter({ minPm: Number.isFinite(v) && v > 0 ? v : 0 }); });
   $("fRed").addEventListener("change", (e) => setFilter({ red: !!e.target.checked }));
+  $("fSpherex").addEventListener("change", (e) => setFilter({ spherex: !!e.target.checked }));
   $("fSearch").addEventListener("input", (e) => setFilter({ q: String(e.target.value || "") }));
   $("fTile").addEventListener("change", (e) => setTile(e.target.value));
   const posNum = (v, round) => { const x = num(v); return Number.isFinite(x) && x > 0 ? (round ? Math.round(x) : x) : 0; };

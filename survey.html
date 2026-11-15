@@ -12,7 +12,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="brand.css">
-<link rel="stylesheet" href="survey.css?v=20261117b">
+<link rel="stylesheet" href="survey.css?v=20261118a">
 <link rel="stylesheet" href="classify.css?v=20261117a">
 </head>
 <body class="survey">
@@ -49,18 +49,24 @@
 
   <!-- ============ 01 · the scale ============ -->
   <section class="sv-hero" aria-labelledby="heroTitle">
-    <p class="eyebrow">Sky Survey · NEOWISE 2014–2024 · automated search</p>
+    <p class="eyebrow">Sky Survey · NEOWISE 2014–2024 + SPHEREx 2025–26 · automated search</p>
     <h1 id="heroTitle" class="sv-title">Billions of infrared detections. Which ones move?</h1>
     <p class="sv-lede">NASA's NEOWISE telescope photographed every part of the sky about every six months for ten years. We cut the sky
       into 12,288 equal tiles and, tile by tile, a program links each source's detections across the years, measures how far and how
-      steadily it moves, throws out artefacts, and checks ESA's Gaia catalogue: a mover that Gaia already knows is explained. Whatever
-      is left is ranked, so people can look at the most promising candidates first. A candidate is a lead, never a discovery.</p>
+      steadily it moves, throws out artefacts, and checks ESA's Gaia catalogue: a mover that Gaia already knows is explained. Then
+      SPHEREx, which mapped the whole sky again in 2025–26, gets a say: the program reads SPHEREx's all-sky spectral cube at the spot
+      where each unexplained mover should be by then, checks that it is there (and gone from where it was in 2014), and takes its
+      0.75–5 µm spectrum, looking for the methane dip and red colour of a cold brown dwarf. Whatever is left is ranked, so people can
+      look at the most promising candidates first. A candidate is a lead, never a discovery.</p>
+    <p class="hint sv-lede-note">NEOWISE measures the motion (2014–2024). SPHEREx has no source catalogue yet, so the program
+      measures its DR1 cube directly; its ~13″ pixels confirm only fast motions (about 1″ a year or more) and can blend close neighbours.</p>
     <dl class="sv-stats" id="stats">
       <div><dt>Detections searched</dt><dd id="statDet">—</dd></div>
       <div><dt>Sources linked across years</dt><dd id="statTracks">—</dd></div>
       <div><dt>Sky searched</dt><dd id="statSky">—</dd></div>
       <div><dt>Movers found</dt><dd id="statMovers">—</dd></div>
       <div><dt>Unexplained by Gaia</dt><dd id="statUnex">—</dd></div>
+      <div><dt>Confirmed by SPHEREx</dt><dd id="statSpherex">—</dd></div>
       <div><dt>Computer time</dt><dd id="statTime">—</dd></div>
     </dl>
     <ol class="sv-funnel" id="funnel" aria-label="From detections to candidates" hidden></ol>
@@ -124,6 +130,7 @@
       <label>Min visits <input id="fMinVis" type="number" min="0" max="40" step="1" value="0" inputmode="numeric"></label>
       <label>Min motion S/N <input id="fMinSnr" type="number" min="0" step="1" value="0" inputmode="decimal"></label>
       <label class="chk"><input type="checkbox" id="fRed"> Red only <span class="hint">W1−W2 ≥ 0.5, or no W1</span></label>
+      <label class="chk"><input type="checkbox" id="fSpherex"> SPHEREx-confirmed only <span class="hint">seen in 2025–26 where predicted</span></label>
       <fieldset class="sv-hide"><legend>Hide</legend>
         <label class="chk"><input type="checkbox" id="fHideEdge"> Tile edge</label>
         <label class="chk"><input type="checkbox" id="fHideCrowded"> Crowded</label>
@@ -227,6 +234,12 @@
     <h3 id="dWhyH">Why it ranks here</h3>
     <ul id="dReasons" class="d-reasons"></ul>
   </section>
+  <section aria-labelledby="dSxH">
+    <h3 id="dSxH">SPHEREx 2025–26</h3>
+    <div id="dSpherex" class="d-sx"></div>
+    <p class="hint">Measured directly in SPHEREx's all-sky DR1 spectral cube (NASA/IPAC IRSA, read a few pixels at a time):
+      SPHEREx has no source catalogue yet.</p>
+  </section>
   <section aria-labelledby="dTrackH">
     <h3 id="dTrackH">Its path in NEOWISE, year by year</h3>
     <svg id="dTrack" class="d-track" viewBox="0 0 400 320" role="img" aria-label="NEOWISE track"></svg>
@@ -292,8 +305,8 @@
 </footer>
 <script src="classify.js?v=20261117a"></script>
 <script src="aladinlink.js"></script>
-<script src="surveytools.js?v=20261115b"></script>
+<script src="surveytools.js?v=20261118a"></script>
 <script src="theme.js"></script>
-<script src="survey.js?v=20261117b"></script>
+<script src="survey.js?v=20261118a"></script>
 </body>
 </html>

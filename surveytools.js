@@ -166,7 +166,7 @@
     if (key === "artefact") return (m && m.class) === "likely artefact";
     return flags.includes(key);
   }
-  const FILTER_DEFAULTS = { cls: "all", minPm: 0, red: false, q: "", tile: null, minVisits: 0, minSnr: 0, hide: [] };
+  const FILTER_DEFAULTS = { cls: "all", minPm: 0, red: false, q: "", tile: null, minVisits: 0, minSnr: 0, hide: [], spherex: false };
   const PRESETS = { high: { minVisits: 12, minSnr: 10, hide: HIDE_KEYS.slice() } };
   function isPreset(f, name) {
     const p = PRESETS[name];
@@ -184,6 +184,7 @@
     if (f.cls && f.cls !== "all") out.push(["class", f.cls]);
     if (num(f.minPm) > 0) out.push(["minpm", String(num(f.minPm))]);
     if (f.red) out.push(["red", "1"]);
+    if (f.spherex) out.push(["spherex", "1"]);
     if (num(f.minVisits) > 0) out.push(["visits", String(num(f.minVisits))]);
     if (num(f.minSnr) > 0) out.push(["snr", String(num(f.minSnr))]);
     const hide = HIDE_KEYS.filter((h) => (f.hide || []).includes(h));
@@ -207,6 +208,7 @@
     const pos = (k) => { const v = num(get(k)); return Number.isFinite(v) && v > 0 ? v : null; };
     if (pos("minpm") !== null) f.minPm = pos("minpm");
     if (get("red") === "1") f.red = true;
+    if (get("spherex") === "1") f.spherex = true;
     if (pos("visits") !== null) f.minVisits = Math.round(pos("visits"));
     if (pos("snr") !== null) f.minSnr = pos("snr");
     if (get("hide") !== null) f.hide = HIDE_KEYS.filter((h) => String(get("hide")).split(",").map((s) => s.trim()).includes(h));

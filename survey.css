@@ -5,15 +5,19 @@
   --sv-ecl: rgba(196, 120, 20, .6);
   --sv-scrim: rgba(11, 20, 34, .42);
   --sv-track: #C77700;
+  --sv-sx: #0B7A75;
+  --sv-sx-ch4: rgba(196, 120, 20, .16);
 }
 :root[data-theme="dark"] {
   --sv-gal: rgba(190, 140, 255, .6);
   --sv-ecl: rgba(255, 175, 70, .6);
   --sv-scrim: rgba(0, 0, 0, .58);
   --sv-track: #FFB547;
+  --sv-sx: #4FD1C5;
+  --sv-sx-ch4: rgba(255, 175, 70, .2);
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) { --sv-gal: rgba(190, 140, 255, .6); --sv-ecl: rgba(255, 175, 70, .6); --sv-scrim: rgba(0, 0, 0, .58); --sv-track: #FFB547; }
+  :root:not([data-theme]) { --sv-gal: rgba(190, 140, 255, .6); --sv-ecl: rgba(255, 175, 70, .6); --sv-scrim: rgba(0, 0, 0, .58); --sv-track: #FFB547; --sv-sx: #4FD1C5; --sv-sx-ch4: rgba(255, 175, 70, .2); }
 }
 
 .survey main { overflow-x: clip; }
@@ -143,6 +147,19 @@
 .cid { background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; font-size: .88rem; text-decoration: underline; text-underline-offset: 3px; }
 .linkish { background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; font: inherit; text-decoration: underline; }
 .badge { display: inline-block; font: 500 .66rem/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; padding: 4px 7px; border-radius: 3px; border: 1px solid; white-space: nowrap; }
+.badge.b-sx { color: var(--sv-sx); border-color: color-mix(in srgb, var(--sv-sx) 55%, transparent); background: color-mix(in srgb, var(--sv-sx) 10%, transparent); white-space: nowrap; }
+.d-sx .sx-verdict { margin: 0 0 .5rem; font-weight: 600; }
+.d-sx .sx-ok { color: var(--sv-sx); }
+.d-sx .sx-no { color: var(--sv-track); }
+.d-spec { display: block; width: 100%; max-width: 100%; height: auto; margin: .5rem 0; }
+.d-spec .sx-ch4 { fill: var(--sv-sx-ch4); }
+.d-spec .sx-ch4t, .d-spec .sx-lab { fill: currentColor; opacity: .7; font-size: 10px; }
+.d-spec .sx-grid { stroke: currentColor; opacity: .12; }
+.d-spec .sx-axis { stroke: currentColor; opacity: .5; }
+.d-spec .sx-err { stroke: var(--sv-sx); stroke-width: 1.2; opacity: .7; }
+.d-spec .sx-pt { fill: var(--sv-sx); }
+.d-sx .sx-words, .d-sx .sx-notes { margin: .25rem 0; padding-left: 1.1rem; overflow-wrap: anywhere; }
+.sv-lede-note { max-width: 70ch; }
 .badge.b-unex { color: var(--cand); border-color: color-mix(in srgb, var(--cand) 55%, transparent); background: color-mix(in srgb, var(--cand) 9%, transparent); }
 .badge.b-known { color: var(--known); border-color: color-mix(in srgb, var(--known) 45%, transparent); }
 .badge.b-art { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 45%, transparent); }
