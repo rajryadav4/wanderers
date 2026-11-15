@@ -38,7 +38,7 @@
     "png": "w2_neowise_00.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -48,7 +48,7 @@
     "png": "w2_neowise_01.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -58,7 +58,7 @@
     "png": "w2_neowise_02.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -68,7 +68,7 @@
     "png": "w2_neowise_03.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -78,7 +78,7 @@
     "png": "w2_neowise_04.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -88,7 +88,7 @@
     "png": "w2_neowise_05.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -98,7 +98,7 @@
     "png": "w2_neowise_06.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -108,7 +108,7 @@
     "png": "w2_neowise_07.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -118,7 +118,7 @@
     "png": "w2_neowise_08.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -128,7 +128,7 @@
     "png": "w2_neowise_09.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -138,7 +138,7 @@
     "png": "w2_neowise_10.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -148,7 +148,7 @@
     "png": "w2_neowise_11.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -158,7 +158,7 @@
     "png": "w2_neowise_12.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -168,7 +168,7 @@
     "png": "w2_neowise_13.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -208,7 +208,7 @@
     "png": "w2_neowise_17.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -218,7 +218,7 @@
     "png": "w2_neowise_18.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -228,7 +228,7 @@
     "png": "w2_neowise_19.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -238,7 +238,7 @@
     "png": "w2_neowise_20.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -294,7 +294,7 @@
     "png": "w1_neowise_00.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -304,7 +304,7 @@
     "png": "w1_neowise_01.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -314,7 +314,7 @@
     "png": "w1_neowise_02.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -324,7 +324,7 @@
     "png": "w1_neowise_03.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -334,7 +334,7 @@
     "png": "w1_neowise_04.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -344,7 +344,7 @@
     "png": "w1_neowise_05.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -354,7 +354,7 @@
     "png": "w1_neowise_06.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -364,7 +364,7 @@
     "png": "w1_neowise_07.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -374,7 +374,7 @@
     "png": "w1_neowise_08.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -384,7 +384,7 @@
     "png": "w1_neowise_09.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -394,7 +394,7 @@
     "png": "w1_neowise_10.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -404,7 +404,7 @@
     "png": "w1_neowise_11.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -414,7 +414,7 @@
     "png": "w1_neowise_12.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -424,7 +424,7 @@
     "png": "w1_neowise_13.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -434,7 +434,7 @@
     "png": "w1_neowise_14.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -454,7 +454,7 @@
     "png": "w1_neowise_16.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -464,7 +464,7 @@
     "png": "w1_neowise_17.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -474,7 +474,7 @@
     "png": "w1_neowise_18.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -484,7 +484,7 @@
     "png": "w1_neowise_19.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -658,7 +658,7 @@
     "png": "w2_neowise_00.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -668,7 +668,7 @@
     "png": "w2_neowise_01.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -678,7 +678,7 @@
     "png": "w2_neowise_02.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -688,7 +688,7 @@
     "png": "w2_neowise_03.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -698,7 +698,7 @@
     "png": "w2_neowise_04.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -708,7 +708,7 @@
     "png": "w2_neowise_05.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -718,7 +718,7 @@
     "png": "w2_neowise_06.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -728,7 +728,7 @@
     "png": "w2_neowise_07.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -738,7 +738,7 @@
     "png": "w2_neowise_08.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -748,7 +748,7 @@
     "png": "w2_neowise_09.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -758,7 +758,7 @@
     "png": "w2_neowise_10.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -768,7 +768,7 @@
     "png": "w2_neowise_11.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -778,7 +778,7 @@
     "png": "w2_neowise_12.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -788,7 +788,7 @@
     "png": "w2_neowise_13.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -828,7 +828,7 @@
     "png": "w2_neowise_17.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -838,7 +838,7 @@
     "png": "w2_neowise_18.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -848,7 +848,7 @@
     "png": "w2_neowise_19.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -858,7 +858,7 @@
     "png": "w2_neowise_20.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -896,7 +896,7 @@
     "png": "w1_neowise_00.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -906,7 +906,7 @@
     "png": "w1_neowise_01.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -916,7 +916,7 @@
     "png": "w1_neowise_02.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -926,7 +926,7 @@
     "png": "w1_neowise_03.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -936,7 +936,7 @@
     "png": "w1_neowise_04.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -946,7 +946,7 @@
     "png": "w1_neowise_05.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -956,7 +956,7 @@
     "png": "w1_neowise_06.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -966,7 +966,7 @@
     "png": "w1_neowise_07.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -976,7 +976,7 @@
     "png": "w1_neowise_08.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -986,7 +986,7 @@
     "png": "w1_neowise_09.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -996,7 +996,7 @@
     "png": "w1_neowise_10.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -1006,7 +1006,7 @@
     "png": "w1_neowise_11.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -1016,7 +1016,7 @@
     "png": "w1_neowise_12.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -1026,7 +1026,7 @@
     "png": "w1_neowise_13.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -1036,7 +1036,7 @@
     "png": "w1_neowise_14.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -1056,7 +1056,7 @@
     "png": "w1_neowise_16.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -1066,7 +1066,7 @@
     "png": "w1_neowise_17.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -1076,7 +1076,7 @@
     "png": "w1_neowise_18.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -1086,7 +1086,7 @@
     "png": "w1_neowise_19.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
