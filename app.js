@@ -78,9 +78,10 @@
     showPath({ target: id });
     // starquakes for the five challenge targets (typed-in fields have no star parameters, so no widget)
     if (window.StarquakeUI) {
-      const qk = id === "barnard" ? "hip87937" : "wanderers_" + id;
-      fetch("data/starquake_stars.json").then((r) => r.json()).then((info) => {
-        if (info[qk]) StarquakeUI.mount($("targetQuake"), { key: qk, row: null, title: t.name }); else $("targetQuake").hidden = true;
+      Promise.all([fetch("data/starquake/targets.json").then((r) => (r.ok ? r.json() : {})), fetch("data/starquake_stars.json").then((r) => r.json()),
+        fetch("data/stars/index.json").then((r) => r.json())]).then(([map, info, idx]) => {
+        const qk = map[id] || (id === "barnard" ? "hip87937" : "wanderers_" + id), row = idx.stars.find((s) => s.key === qk) || null;
+        if (info[qk] || row) StarquakeUI.mount($("targetQuake"), { key: qk, row, title: t.name }); else $("targetQuake").hidden = true;
       }).catch(() => { $("targetQuake").hidden = true; });
     }
     if (MAP.ready) mapGoTo();
