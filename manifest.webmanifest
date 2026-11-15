@@ -1,0 +1,24 @@
+{
+ "name": "WANDERERS Sky Compass",
+ "short_name": "Sky Compass",
+ "description": "Point your phone at the sky and see the real stars in that direction, even under clouds.",
+ "start_url": "compass.html",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#070b14",
+ "theme_color": "#070b14",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}
