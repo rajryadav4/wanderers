@@ -86,11 +86,14 @@
       <text x="${(14 + bar).toFixed(1)}" y="${H - 6}" class="pv-dim">${esc(ang(scaleAs))}</text></svg>`;
   }
 
-  /* Draw into `el`. Returns the model (or null when no motion is known). */
+  /* Draw into `el`. Returns the model (or null when no motion is known, or a newer render replaced this one). */
+  const latest = new WeakMap();
   async function render(el, q, opts = {}) {
+    const me = {}; latest.set(el, me);           // a slow answer for an earlier star must not overwrite a newer one
     el.innerHTML = `<p class="pv-dim">Working out its path…</p>`;
     let m;
     try { m = await model(q); } catch (e) { m = null; }
+    if (latest.get(el) !== me) return null;
     if (!m) { el.innerHTML = `<p class="pv-dim">No motion is known for this position, so no path can be drawn.</p>`; return null; }
     const N = near(m), SC = root.StarCore;
     const speed = Math.hypot(m.star ? m.star.pmra : m.row.pmra, m.star ? m.star.pmdec : m.row.pmdec) / 1000;   // arcsec per year
