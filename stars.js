@@ -5,26 +5,34 @@
 (() => {
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const DB = { stars: null, meta: null, ready: new Set(), live: false, cur: null, hits: [], sel: -1, token: 0 };
+  const DB = { stars: null, meta: null, ready: new Set(), full: new Set(), live: false, cur: null, hits: [], sel: -1, token: 0 };
   const CAT_COLOR = (c) => (/^Gaia/.test(c) ? "#7ee787" : /^WANDERERS/.test(c) ? "#ffb547" : /Hipparcos|Tycho/.test(c) ? "#b48cff" : "#7cc4ff");
 
   async function ensureDb() {
     if (DB.stars) return;
     $("starMsg").textContent = "Loading the star database…";
-    const [idx, ready] = await Promise.all([
+    const [idx, ready, full] = await Promise.all([
       fetch("data/stars/index.json").then((r) => r.json()),
       fetch("data/stars/pred/index.json").then((r) => (r.ok ? r.json() : [])).catch(() => []),
+      fetch("data/stars/profile/index.json").then((r) => (r.ok ? r.json() : [])).catch(() => []),
     ]);
-    DB.stars = idx.stars; DB.meta = idx.meta; DB.ready = new Set(ready);
+    DB.stars = idx.stars; DB.meta = idx.meta; DB.ready = new Set(ready); DB.full = new Set(full);
     DB.live = await fetch("api/health").then((r) => r.ok).catch(() => false);
-    $("starMsg").textContent = `${DB.stars.length.toLocaleString()} stars searchable (${DB.meta.selection}). ` +
-      `${DB.ready.size} have a learnt path ready${DB.live ? "; any other can be learnt now (about a minute)" : ""}.`;
+    $("starMsg").textContent = `${DB.stars.length.toLocaleString("en-US")} stars searchable (${DB.meta.selection}). Every star gets a profile, ` +
+      `a path from 1900 to 2100 and over thousands of years, and its starquakes. The stars below are fully done: real spectrum, learnt path, pre-made sound.`;
     showSuggestions();
   }
 
+  // Stars already fully done, on top, to choose from: full profile (with spectrum) AND learnt path first.
   function showSuggestions() {
-    const picks = DB.stars.filter((s) => DB.ready.has(s.key)).sort((a, b) => a.name.localeCompare(b.name));
-    $("starSuggest").innerHTML = "Ready: " + picks.map((s) => `<button type="button" class="chip" data-key="${esc(s.key)}">${esc(s.name)}</button>`).join(" ");
+    const byName = (a, b) => a.name.localeCompare(b.name), chip = (s) => `<button type="button" class="chip" data-key="${esc(s.key)}">${esc(s.name)}</button>`;
+    const both = DB.stars.filter((s) => DB.full.has(s.key) && DB.ready.has(s.key)).sort(byName);
+    const prof = DB.stars.filter((s) => DB.full.has(s.key) && !DB.ready.has(s.key)).sort(byName);
+    const path = DB.stars.filter((s) => DB.ready.has(s.key) && !DB.full.has(s.key)).sort(byName);
+    $("starSuggest").innerHTML =
+      `<span class="chips-row"><b>Fully done</b> <span class="hint">(full profile with real spectrum + learnt path):</span> ${both.map(chip).join(" ")}</span>` +
+      (prof.length ? `<span class="chips-row"><b>Full profile</b> <span class="hint">(path computed from its measured motion):</span> ${prof.map(chip).join(" ")}</span>` : "") +
+      (path.length ? `<span class="chips-row"><b>Learnt path</b>: ${path.map(chip).join(" ")}</span>` : "");
     $("starSuggest").querySelectorAll("button").forEach((b) => (b.onclick = () => choose(b.dataset.key)));
   }
 
@@ -34,7 +42,7 @@
     ul.innerHTML = DB.hits.map((s, i) => {
       const extra = [s.aliases.find((a) => /^(Gl|HIP|HD) /.test(a)), s.con, s.mag != null ? `V ${s.mag}` : null].filter(Boolean).join(" · ");
       return `<li role="option" id="starOpt${i}" data-key="${esc(s.key)}" aria-selected="${i === DB.sel}" class="${i === DB.sel ? "on" : ""}">` +
-        `<b>${esc(s.name)}</b> <span class="hint">${esc(extra)}</span>${DB.ready.has(s.key) ? ' <span class="badge">path ready</span>' : ""}</li>`;
+        `<b>${esc(s.name)}</b> <span class="hint">${esc(extra)}</span>${DB.full.has(s.key) ? ' <span class="badge">full profile</span>' : ""}${DB.ready.has(s.key) ? ' <span class="badge">learnt path</span>' : ""}</li>`;
     }).join("");
     ul.hidden = !DB.hits.length;
     $("starQ").setAttribute("aria-expanded", String(!!DB.hits.length));
@@ -65,6 +73,14 @@
     DB.cur = s; DB.hits = []; renderHits(); $("starQ").value = s.name;
     const url = new URL(location); url.searchParams.set("star", key); history.replaceState(null, "", url);
     renderDetail(s);
+    if (window.StarProfile) StarProfile.mount($("starProfile"), { key, row: s, stars: DB.stars });
+    // links like ?star=hip8102#starQuake scroll to that section once it has been drawn
+    const hash = decodeURIComponent(location.hash.slice(1));
+    if (/^(starProfile|starQuake|starLong|starPred)$/.test(hash)) {
+      let tries = 0;
+      const go = () => { const t = $(hash); if (t && !t.hidden && t.offsetHeight > 40) setTimeout(() => t.scrollIntoView({ block: "start" }), 250); else if (++tries < 40) setTimeout(go, 200); };
+      setTimeout(go, 300);
+    }
     if (window.StarquakeUI) StarquakeUI.mount($("starQuake"), { key, row: s });
     $("starPred").hidden = true; $("starPredMsg").innerHTML = "";
     if (DB.ready.has(key)) {
@@ -72,15 +88,15 @@
       if (DB.cur === s) showPred(p);                 // another star may have been chosen while this one loaded
       return;
     }
-    if (window.LongRange) LongRange.show(null, s, DB.stars);      // catalogue values until a path is learnt
-    if (DB.live) {
-      $("starPredMsg").innerHTML = `No learnt path for ${esc(s.name)} yet. <button type="button" id="starLearn">Learn its path now</button> ` +
-        `<span class="hint">Queries 13 catalogues at the ESA Gaia archive and fits the model: about a minute.</span>`;
-      $("starLearn").onclick = () => learn(key);
-    } else {
-      $("starPredMsg").innerHTML = `No learnt path for ${esc(s.name)} in this static copy. Run <code>node server.js</code> to learn any star from the page, ` +
-        `or <code>.venv/bin/python pipeline/star_ml.py ${esc(key)}</code>.`;
-    }
+    // No learnt path yet: compute one from the star's measured motion (Gaia DR3, else HYG), so every star has both paths.
+    const prof = window.StarProfile ? await StarProfile.load(key).catch(() => null) : null;
+    if (DB.cur !== s) return;
+    const phys = window.PhysicsPath ? PhysicsPath.build(s, prof) : null;
+    if (phys) showPred(phys); else if (window.LongRange) LongRange.show(null, s, DB.stars);
+    const how = DB.live ? `<button type="button" id="starLearn">Learn its path with the ML model</button> <span class="hint">Queries 13 catalogues at the ESA Gaia archive and fits the model: about a minute.</span>`
+      : `<span class="hint">To learn it with the ML model, run <code>node server.js</code>, or <code>.venv/bin/python pipeline/star_ml.py ${esc(key)}</code>.</span>`;
+    $("starPredMsg").innerHTML = phys ? `${how}` : `No distance or motion is known for ${esc(s.name)}, so its path cannot be drawn. ${how}`;
+    if ($("starLearn")) $("starLearn").onclick = () => learn(key);
   }
 
   function renderDetail(s) {
@@ -129,8 +145,21 @@
     $("starTable").innerHTML = `<thead><tr><th>Year</th><th>RA</th><th>Dec</th><th>± (68%)</th><th>From 2000</th></tr></thead><tbody>` +
       t.map((r) => `<tr class="${r.year === p.now ? "now" : r.year > p.now ? "future" : ""}"><th scope="row">${r.year === p.now ? `Now (${r.year.toFixed(1)})` : Math.round(r.year)}</th>` +
         `<td class="mono">${StarDB.hms(r.ra)}</td><td class="mono">${StarDB.dms(r.dec)}</td><td>${StarDB.arcsec(r.unc_arcsec)}</td><td>${StarDB.arcsec(r.moved_from_2000_arcsec)}</td></tr>`).join("") + "</tbody>";
-    $("starModel").innerHTML = modelCard(p);
-    $("starObs").innerHTML = obsTable(p);
+    const computed = p.kind === "physics";
+    $("starPredSub").textContent = computed ? "1900 → 2100, calculated from its measured motion" : "1900 → 2100, learnt by a classical machine-learning model";
+    $("starModelH").textContent = computed ? "How the path was calculated" : "How the path was learnt";
+    $("starModel").innerHTML = computed ? physicsCard(p) : modelCard(p);
+    $("starObsBox").hidden = computed;
+    $("starObs").innerHTML = computed ? "" : obsTable(p);
+  }
+
+  function physicsCard(p) {
+    const L = p.learnt, c = p.catalogue_motion;
+    return `<p>This star has no learnt path yet, so its path is <b>calculated</b> from ${esc(p.basis)}: proper motion
+      ${StarDB.pm(c.pmra)}, ${StarDB.pm(c.pmdec)} mas/yr, parallax ${StarDB.pm(c.parallax)} mas${p.rvKnown ? `, radial velocity ${StarDB.pm(p.gaia_dr3 && p.gaia_dr3.radial_velocity != null ? p.gaia_dr3.radial_velocity : DB.cur && DB.cur.rv)} km/s` : " (no radial velocity known: assumed 0)"}.</p>
+      <p class="hint">Model: straight-line motion through space (the model behind astropy's <code>apply_space_motion</code>, checked against it in the tests).
+      The band is the catalogue's proper-motion uncertainty (±${StarDB.pm(L.pmra_err)} / ±${StarDB.pm(L.pmdec_err)} mas/yr) carried over the years.
+      A learnt path instead fits up to 13 catalogues of real positions from 1950 onwards with scikit-learn, and can find accelerations this cannot.</p>`;
   }
 
   function drawChart(p) {
@@ -143,7 +172,7 @@
     const bar = c.scaleBar.arcsec * c.k;
     svg.innerHTML =
       `<rect width="${c.W}" height="${c.H}" class="bg"/>` +
-      (c.band.length ? `<path class="band" d="${StarDB.pathD(c.band)}Z"><title>68% uncertainty of the learnt path</title></path>` : "") +
+      (c.band.length ? `<path class="band" d="${StarDB.pathD(c.band)}Z"><title>68% uncertainty of the path</title></path>` : "") +
       `<path class="past" d="${StarDB.pathD(c.past)}"/><path class="future" d="${StarDB.pathD(c.future)}"/>` + obs + marks +
       `<g class="bar"><line x1="16" y1="${c.H - 18}" x2="${16 + bar}" y2="${c.H - 18}"/><text x="16" y="${c.H - 24}">${esc(c.scaleBar.label)}</text></g>` +
       `<g class="compass"><text x="${c.W - 22}" y="20">N</text><text x="${c.W - 44}" y="40">E</text><line x1="${c.W - 18}" y1="40" x2="${c.W - 18}" y2="24"/><line x1="${c.W - 18}" y1="40" x2="${c.W - 34}" y2="40"/></g>`;
