@@ -1,17 +1,17 @@
 {
- "summary": "Barnard's Star is a small, cool red dwarf about 6.0 light-years away, the fastest-moving star across our sky. Comparing images from 2010 and 2026, WANDERERS saw it shift 163 arcseconds, a speed of 10.40 arcseconds per year, matching Gaia DR3's 10.39 to within 0.1%, so we are highly confident. It is too bright for SPHEREx: all 188 measurements are flagged as overloaded, so there is no reliable spectrum. Its brightness change, +0.03 \u00b1 0.03 magnitudes, measured from the star's outer glow, is too small to call real.",
+ "summary": "Barnard's Star is a known red dwarf about 6.0 light-years away, with a Gaia temperature estimate of 3,100 K. It is the fastest-moving star in our sky. WANDERERS measured a 164-arcsecond shift between 2010 and 2026. That is 10.39 arcseconds per year, within 0.1% of the Gaia value, so our confidence is high. The star is too bright for SPHEREx, so all 150 measurements are flagged and we show no spectrum. Its brightness change, -0.04 \u00b1 0.03 mag, is uncertain because the star's core is saturated.",
  "qa": [
   {
    "q": "Why do we think this is what the card says?",
-   "a": "Three checks agree. From 2010 to 2026 it moved 163 arcseconds, about 26.6 SPHEREx pixels. Its measured speed of 10.40 arcseconds per year matches the Gaia DR3 value of 10.39 to within 0.1%. Gaia also lists this star directly, at 6.0 light-years away. One caveat: the star is too bright for SPHEREx, so all 188 measurements are flagged. Its brightness change (+0.03 \u00b1 0.03 mag) could only be estimated from the star's outer glow."
+   "a": "Three checks agree. The star moved 164 arcseconds between 2010 and 2026. That is about 10.39 arcseconds per year, within 0.1% of the Gaia DR3 catalogue speed. Gaia DR3 also lists this star, at about 6.0 light-years. One caution: the star is too bright for SPHEREx, so all 150 measurements are flagged. The brightness change of -0.04 \u00b1 0.03 mag comes only from the faint edges of the star's image."
   },
   {
    "q": "What would make you less sure?",
-   "a": "The motion is solid: 10.40 arcseconds per year measured against 10.39 from Gaia DR3. A big gap between those would make me doubt it. The brightness is the weak spot. All 188 SPHEREx measurements are flagged because the star is too bright for the detector. The +0.03 magnitude change was measured from the star's outer glow, and it is no larger than its \u00b10.03 uncertainty, so it may not be real."
+   "a": "A few things would shake my confidence. The total speed matches Gaia almost exactly, but the east-west part is a little off: we measured -777 and Gaia says -802 milliarcseconds per year. A bigger gap there would worry me. The star is too bright for SPHEREx, so all 150 spectrum points are flagged. The brightness check also uses only the star's outer glow. That -0.04 \u00b1 0.03 mag change is too small and too uncertain to trust."
   },
   {
    "q": "Why use both WISE and SPHEREx?",
-   "a": "WISE photographed this sky in 2010 and SPHEREx in 2025 and 2026. Over that 16-year gap, Barnard's Star moved 163 arcseconds, about 26.6 SPHEREx pixels. That works out to 10.40 arcseconds per year, which matches Gaia's 10.39. SPHEREx's own visits are only months apart. One caveat: the star is too bright for SPHEREx, so all 188 of its measurements are flagged and we show no spectrum."
+   "a": "The two telescopes give two snapshots far apart in time. WISE pictured this patch of sky around 2010, and SPHEREx pictured it again in 2026. Over about 16 years, Barnard's Star moved 164 arcseconds, or 26.6 SPHEREx pixels. That long gap makes its speed easy to measure: 10.39 arcseconds per year, which matches Gaia. All 150 SPHEREx measurements are flagged because the star is too bright."
   }
  ],
  "model_note": "Written by Claude (Claude Code, headless) from target.json only."

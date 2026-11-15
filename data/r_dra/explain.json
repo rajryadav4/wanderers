@@ -1,17 +1,17 @@
 {
- "summary": "R Draconis is a known red giant, a Mira variable that brightens and fades over about 245 days, roughly 2,607 light-years away according to Gaia. It is too bright for SPHEREx, so all 154 spectrum measurements are flagged and we show no spectrum. WANDERERS measured the outer edges of the star's image instead and found it faded by 0.34 \u00b1 0.06 magnitudes from June to November 2025. Its shift of about one pixel is not counted as real motion. Gaia separately lists it as a long-period variable, so confidence is high.",
+ "summary": "R Draconis is a known red giant star of the Mira type. It swells and shrinks, so its brightness rises and falls over about 245 days. Gaia puts it about 2,607 light-years away. WANDERERS saw it fade by 0.32 \u00b1 0.07 magnitudes from June to November 2025. Its center is too bright for SPHEREx, so we measured only the outer glow of its image. All 150 SPHEREx points are flagged, so we show no spectrum. We found no real motion. Gaia also lists it as this kind of variable star, so our confidence is high.",
  "qa": [
   {
    "q": "Why do we think this is what the card says?",
-   "a": "Two independent clues agree. SPHEREx saw it fade by 0.34 \u00b1 0.06 magnitudes between June and November 2025. Gaia, using about three years of its own data, classifies it as a Mira-type pulsating giant. It is too bright for SPHEREx, so all 154 measurements are flagged, and the fading was measured in the star's outer glow. Its apparent shift is about one pixel, too small to count as motion."
+   "a": "Two independent checks agree. Gaia DR3 matches this star and, from about three years of its own photometry, classifies it as a long-period Mira-type variable. SPHEREx saw it fade by 0.32 \u00b1 0.07 magnitudes between June and November 2025. That change is over four times its uncertainty. But the star is too bright for SPHEREx: all 150 points are flagged, so we measured only the edges of its saturated image."
   },
   {
    "q": "What would make you less sure?",
-   "a": "The fade was measured only in the outer glow of the star's image, because its core overloads SPHEREx, and all 154 SPHEREx points are flagged. If that wing measurement drifted, the 0.34 \u00b1 0.06 mag change could shrink. The apparent 0.43\u2033/yr shift, compared with Gaia's 0.02\u2033/yr, is only about one SPHEREx pixel and is probably a saturation artifact. Without Gaia's independent Mira classification, I'd be much less sure."
+   "a": "The weak spot is brightness: R Draconis is too bright for SPHEREx, so all 150 measurements are flagged. The 0.32 \u00b1 0.07 magnitude fade comes only from the wings of its saturated image. I would be less sure if wing measurements proved biased, or if Gaia did not also call it a long-period variable. The tiny apparent drift is below the detection limit, so it is not real motion."
   },
   {
    "q": "Why use both WISE and SPHEREx?",
-   "a": "WISE imaged this sky around 2010 and SPHEREx in 2025\u20132026, which gives about 16 years to look for motion. SPHEREx adds many wavelengths and repeat visits, and those caught R Draconis fading by 0.34 \u00b1 0.06 mag. The apparent 6.8 arcsec shift is only about one SPHEREx pixel, and the star saturates SPHEREx. So we report no measurable motion. Gaia expects just 0.02 arcsec per year."
+   "a": "WISE took images of this sky in 2010, and SPHEREx took them in 2025 and 2026. Together they give a 16-year baseline to test for motion. The apparent drift of 0.09 arcseconds per year is below the detection limit, so it is not real motion. SPHEREx adds many wavelengths and repeat visits. These showed a fade of 0.32 \u00b1 0.07 mag, but the star saturates SPHEREx and all 150 spectrum points are flagged."
   }
  ],
  "model_note": "Written by Claude (Claude Code, headless) from target.json only."
