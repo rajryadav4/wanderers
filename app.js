@@ -541,12 +541,15 @@
   // ---------- coordinates ----------
   $("coordForm").onsubmit = (e) => { e.preventDefault(); coordSearch($("raIn").value, $("decIn").value, $("fovIn").value); };
   function parseAngle(s, hours) {
-    s = String(s).trim(); if (!s) return NaN;
+    s = String(s).trim().replace(/[−–]/g, "-"); if (!s) return NaN;   // the Star database prints a Unicode minus
     if (/^[-+]?\d+(\.\d+)?$/.test(s)) return +s;
-    const m = s.replace(/[hdms:°'″"]/g, " ").trim().split(/\s+/).map(Number);
+    const m = s.replace(/[hdms:°'′″"]/g, " ").trim().split(/\s+/).map(Number);
+    if (m.length > 3) return NaN;                                      // both coordinates typed into one box
     const sign = /^-/.test(s) ? -1 : 1, v = Math.abs(m[0]) + (m[1] || 0) / 60 + (m[2] || 0) / 3600;
     return sign * v * (hours ? 15 : 1);
   }
+  // 12h30m, 12:30:00 and plain "12 30 00" are hours of RA (the usual convention); 187.5 and 187d30m are degrees
+  const raInHours = (s) => /h|:/i.test(s) || (/^\s*[-+]?[\d.]+\s+\d/.test(s) && !/[d°]/i.test(s));
   async function liveLookup(a, d) {
     const msg = $("coordMsg"), btn = document.querySelector("#coordForm button");
     btn.disabled = true;
@@ -578,8 +581,10 @@
 
   function coordSearch(ra, dec, fovIn, opts = {}) {
     if (fovIn && typeof fovIn === "object") { opts = fovIn; fovIn = $("fovIn").value; }
-    const a = parseAngle(ra, /h/i.test(ra) || /:/.test(ra)), d = parseAngle(dec, false);
+    let a = parseAngle(ra, raInHours(ra)), d = parseAngle(dec, false);
     if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return false; }
+    if (a < 0 || a > 360 || Math.abs(d) > 90) { $("coordMsg").textContent = "RA runs from 0 to 360° (0h to 24h) and Dec from −90° to +90°."; return false; }
+    if (a === 360) a = 0;                                // 24h00m00s is 0h
     S.here = { ra: a, dec: d, label: opts.label || `RA ${a.toFixed(4)}°, Dec ${d.toFixed(4)}°` };
     if (!opts.fromSearch) showPath(null);              // bare coordinates: no known motion until a target matches
     const fov = Number(fovIn) || 300;
@@ -588,7 +593,7 @@
     const near = (list) => {
       let best = null, bd = 1e9;
       for (const t of list) {
-        const dd = Math.hypot((t.ra - a) * Math.cos((d * Math.PI) / 180), t.dec - d) * 3600;
+        const dd = Math.hypot((((t.ra - a + 540) % 360) - 180) * Math.cos((d * Math.PI) / 180), t.dec - d) * 3600;   // across RA 0h too
         if (dd < bd) { bd = dd; best = t; }
       }
       return { best, bd };
