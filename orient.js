@@ -76,7 +76,7 @@
     // ---- input: call for every deviceorientation / deviceorientationabsolute event ----
     feed(e) {
       const t = e.t != null ? e.t : Date.now();
-      if (e.beta == null || e.gamma == null) return;
+      if (!Number.isFinite(e.beta) || !Number.isFinite(e.gamma)) return;   // null or NaN would poison the smoothing for good
       const hasCompass = typeof e.webkitCompassHeading === "number" && !isNaN(e.webkitCompassHeading) && e.webkitCompassHeading >= 0;
       if (hasCompass) {
         // iOS: one event carries the smooth relative Euler angles AND a compass heading.
@@ -112,7 +112,7 @@
           return;
         }
         // Yaw from the fused absolute stream is meaningful away from gimbal lock (beta near +-90).
-        if (Math.abs(Math.cos(e.beta * D2R)) > 0.35 && this.rel) this._yawSample(e.alpha, t, 0.5);
+        if (Number.isFinite(e.alpha) && Math.abs(Math.cos(e.beta * D2R)) > 0.35 && this.rel) this._yawSample(e.alpha, t, 0.5);
         return;
       }
       // relative (gyro) stream
