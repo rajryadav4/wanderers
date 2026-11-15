@@ -1,7 +1,7 @@
 /* WANDERERS Sky Compass: landing -> "where are you in the universe" intro -> one-step flat calibration ->
  * augmented-reality sky with a compass tape, tilt scale, mini radar and live telemetry.
  * Motion: orient.js (gyro drives movement, compass sets north). Sky: sky.js. Intro: intro.js (three.js). */
-import { playIntro, earthFacts } from "./intro.js?v=20261114i";
+import { playIntro, earthFacts } from "./intro.js?v=20261114j";
 
 const $ = (id) => document.getElementById(id);
 const D2R = Math.PI / 180;
@@ -476,16 +476,27 @@ function webbTick(P, now, L, lst) {
   const c = crosshairRaDec(P, now, L, lst);
   S.crosshair = c;
   S.webbAround = Webb.near(c.ra, c.dec, 40, 80);
-  const here = Webb.near(c.ra, c.dec, 3, 1)[0];       // inside the crosshair circle, roughly
+  // The chip must not change under your finger: keep the frame it shows until you move clearly away (4.5 deg),
+  // and when choosing a new one inside the crosshair (3 deg), prefer frames with a real Webb image and a real name.
+  const cands = Webb.near(c.ra, c.dec, 4.5, 60);
+  let here = S.webbHere && cands.find((p) => p.obs === S.webbHere.obs);
+  if (!here) {
+    const inside = cands.filter((p) => p.dist <= 3);
+    here = inside.sort((a, b) => Webb.appeal(a, a.dist) - Webb.appeal(b, b.dist))[0] || null;
+  }
   S.webbHere = here || null;
   const chip = $("webbChip");
   if (here) {
-    const d = Webb.describe(here);
-    chip.innerHTML = `🔭 Webb looked here: ${Webb.esc(here.target)}<span>${Webb.esc(here.inst)} · ${Webb.dateOf(here.mjd).slice(0, 4)} · ${here.dist.toFixed(1)}° from your crosshair · tap to see it</span>`;
-    chip.title = d.title; chip.hidden = false;
-    chip.onclick = () => openWebb(here.ra, here.dec, here.target, null, here);
-  } else chip.hidden = true;
+    const key = here.obs + (P.alt < 0 ? "-" : "+");
+    if (chip.dataset.key !== key || chip.hidden) {
+      const pix = { preview: "Webb image", live: "Webb image", outline: "frame outline" }[Webb.source(here)];
+      chip.innerHTML = `🔭 Webb looked here: ${Webb.esc(Webb.name(here))}<span>${Webb.esc(here.inst)} · ${Webb.dateOf(here.mjd).slice(0, 4)} · ` +
+        `${P.alt < 0 ? "below your horizon · " : ""}${pix} · tap to see it</span>`;
+      chip.dataset.key = key; chip.hidden = false;
+    }
+  } else { chip.hidden = true; chip.dataset.key = ""; }
 }
+$("webbChip").onclick = () => { const h = S.webbHere; if (h) openWebb(h.ra, h.dec, Webb.name(h), null, h); };
 
 // details sheet: did Webb image this star?
 async function webbDetails(st) {
@@ -498,7 +509,7 @@ async function webbDetails(st) {
       <br><button class="btn" id="dWebbGo">See it through Webb</button>`;
   } else {
     const n = Webb.near(st.ra, st.dec, 3, 1)[0];
-    box.innerHTML = n ? `<b>🔭 Webb has not imaged this star.</b> Its nearest Webb frame, “${Webb.esc(n.target)}”, is ${n.dist.toFixed(2)}° away.
+    box.innerHTML = n ? `<b>🔭 Webb has not imaged this star.</b> Its nearest Webb frame, “${Webb.esc(Webb.name(n))}”, is ${n.dist.toFixed(2)}° away.
       <br><button class="btn" id="dWebbGo">Show the nearest Webb frame</button>`
       : `<b>🔭 Webb has not imaged this part of the sky</b> (no public Webb image within 3°).`;
     if (n) f.push(n);
@@ -518,9 +529,9 @@ async function openWebb(ra, dec, label, frames, focus) {
   const sel = contains ? list[0] : list.find((p) => p.obs === focus.obs) || list[0];
   list = [sel, ...list.filter((p) => p !== sel)];
   $("details").hidden = true; $("webb").hidden = false;
-  $("wTitle").textContent = contains ? `${label} through Webb` : `Webb frame: ${focus.target}`;
+  $("wTitle").textContent = contains ? `${label} through Webb` : `Webb frame: ${Webb.name(focus)}`;
   $("wSub").textContent = contains ? `RA ${StarSearch.hms(ra)}  Dec ${StarSearch.dms(dec)} · the red cross is ${label}; the gold outline is the Webb frame shown`
-    : `${label && label !== focus.target ? `${label} is ${Webb.sep(ra, dec, focus.ra, focus.dec).toFixed(2)}° away. ` : ""}Frame centre RA ${StarSearch.hms(focus.ra)}  Dec ${StarSearch.dms(focus.dec)}`;
+    : `${label && label !== Webb.name(focus) ? `${label} is ${Webb.sep(ra, dec, focus.ra, focus.dec).toFixed(2)}° away. ` : ""}Frame centre RA ${StarSearch.hms(focus.ra)}  Dec ${StarSearch.dms(focus.dec)}`;
   $("wCount").textContent = `${(await Webb.load()).count.toLocaleString()} frames`;
   const show = async (p) => {
     $("wFrames").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.obs === p.obs));

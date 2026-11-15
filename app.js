@@ -419,7 +419,7 @@
       const n = Webb.near(h.ra, h.dec, 5, 1)[0];
       if (!n) { head.innerHTML = `<b>Webb has not imaged this part of the sky</b> (no public Webb image within 5° of ${esc(h.label)}).`; $("webbAladin").innerHTML = ""; return; }
       frames = [n, ...Webb.best(Webb.framesAt(n.ra, n.dec)).filter((p) => p.obs !== n.obs)]; centre = n;
-      head.innerHTML = `<b>Webb has not imaged ${esc(h.label)}.</b> Showing its nearest Webb frame, “${esc(n.target)}”, ${n.dist.toFixed(2)}° away.`;
+      head.innerHTML = `<b>Webb has not imaged ${esc(h.label)}.</b> Showing its nearest Webb frame, “${esc(Webb.name(n))}”, ${n.dist.toFixed(2)}° away.`;
     }
     const show = async (p) => {
       list.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.obs === p.obs));

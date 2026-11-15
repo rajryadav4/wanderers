@@ -85,9 +85,22 @@
   const RANK = { preview: 0, live: 1, outline: 2 };
   const best = (frames) => frames.map((p, i) => [p, i]).sort((a, b) => RANK[source(a[0])] - RANK[source(b[0])] || a[1] - b[1]).map((x) => x[0]);
 
+  // a readable name: Webb's own target name, unless it is a placeholder (parallel fields are "UNKNOWN")
+  const VAGUE = /^(unknown|background|bkg|parallel|field|none|sky|offset|-+)$/i;
+  function name(p) {
+    const t = String(p.target || "").replace(/^-+/, "").trim();
+    if (t && !VAGUE.test(t)) return t;
+    const title = DB.programs[p.pid] || "";
+    return title ? `a field from “${title.length > 48 ? title.slice(0, 46) + "…" : title}”` : `programme ${p.pid} field`;
+  }
+  const named = (p) => { const t = String(p.target || "").replace(/^-+/, "").trim(); return !!t && !VAGUE.test(t); };
+  // how good a frame is to suggest: real pixels first, then a real name, then closeness
+  const appeal = (p, dist = 0) => RANK[source(p)] * 10 + (named(p) ? 0 : 4) + dist;
+
   // one line per frame, for lists
   function describe(p) {
-    return { title: DB.programs[p.pid] || `Programme ${p.pid}`, line: `${p.inst} · ${p.filters || "imaging"} · ${dateOf(p.mjd)} · target “${p.target}”` };
+    return { title: DB.programs[p.pid] || `Programme ${p.pid}`, name: name(p),
+      line: `${p.inst} · ${p.filters || "imaging"} · ${dateOf(p.mjd)} · target “${name(p)}”` };
   }
 
   // ---------- the viewer ----------
@@ -140,5 +153,5 @@
   function setOpacity(x) { try { V.aladin.getOverlayImageLayer("webb").setOpacity(x); } catch {} }
   function setBase(k) { if (V.aladin && BASE[k] && V.base !== k) { V.aladin.setBaseImageLayer(BASE[k].url); V.base = k; } }
 
-  root.Webb = { load, framesAt, near, inside, sep, render, setOpacity, setBase, describe, dateOf, esc, thumb, full, progUrl, inHips, source, best, _v: V };
+  root.Webb = { load, framesAt, near, inside, sep, render, setOpacity, setBase, describe, dateOf, esc, thumb, full, progUrl, inHips, source, best, name, appeal, _v: V };
 })(window);
