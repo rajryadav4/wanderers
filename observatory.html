@@ -61,7 +61,13 @@
     <p class="hint">Each test target from the challenge is a level. Start with Barnard's Star.</p>
     <ol id="targetList" class="target-list"></ol>
     <div class="coord-box">
-      <h3>Go to coordinates</h3>
+      <h3>Find a star or go to coordinates</h3>
+      <div class="name-search">
+        <label for="nameIn">Search by name</label>
+        <input id="nameIn" placeholder="Sirius, Barnard's Star, Proxima, HD 48915…" autocomplete="off" spellcheck="false">
+        <ul id="nameList" class="suggest" role="listbox" hidden></ul>
+      </div>
+      <div id="starCard" class="star-card" hidden></div>
       <form id="coordForm">
         <label>RA <input id="raIn" placeholder="08h55m10.83s or 133.795" autocomplete="off"></label>
         <label>Dec <input id="decIn" placeholder="-07d14m42.5s or -7.245" autocomplete="off"></label>
@@ -76,6 +82,7 @@
       </form>
       <p id="fovHint" class="hint">Wider fields catch faster-moving objects but take longer to prepare.</p>
       <p id="coordMsg" class="hint"></p>
+      <div class="examples" id="examples" aria-label="Example coordinates"></div>
       <p class="hint"><a id="exploreLink" href="/explore/" hidden>Explore any patch (live) →</a></p>
     </div>
   </section>
@@ -91,14 +98,12 @@
       <div class="view-tabs" role="tablist" aria-label="View">
         <button id="tabFlip" class="on" role="tab" aria-selected="true">Time-lapse</button>
         <button id="tabMap" role="tab" aria-selected="false">Sky map · any coordinates</button>
+        <button id="tabWebb" role="tab" aria-selected="false">🔭 Through Webb</button>
         <button id="tabStars" role="tab" aria-selected="false">Star database</button>
       </div>
     </div>
     <div id="flipView">
-    <div class="channel" role="radiogroup" aria-label="Wavelength">
-      <button data-ch="w2" class="on" role="radio" aria-checked="true">4.6 µm</button>
-      <button data-ch="w1" role="radio" aria-checked="false">3.4 µm</button>
-    </div>
+    <div class="channel" id="channels" role="radiogroup" aria-label="Wavelength channel"></div>
     <div class="viewer">
       <canvas id="sky" width="600" height="600" aria-label="Sky image of the selected target"></canvas>
       <div class="stamp" id="stamp"></div>
@@ -114,6 +119,14 @@
       <label><input type="checkbox" id="tTrail" checked> Measured path</label>
       <label><input type="checkbox" id="tPath" checked> Predicted path <span class="hint">(proper motion + parallax)</span></label>
       <label><input type="checkbox" id="tDiff"> Difference (2026 − 2025)</label>
+    </div>
+    <div class="tools">
+      <label>Zoom <input type="range" id="zoom" min="1" max="4" step="0.25" value="1" aria-label="Zoom"> <span id="zoomVal" class="mono">1×</span></label>
+      <label>Compare <select id="mA" aria-label="Frame A"></select>
+        <select id="mOp" aria-label="Operation"><option value="off">off</option><option value="sub">minus</option><option value="add">plus</option></select>
+        <select id="mB" aria-label="Frame B"></select></label>
+      <button id="stackAll" type="button" aria-pressed="false">Stack all SPHEREx</button>
+      <button id="copyLink" type="button">🔗 Copy link</button>
     </div>
     <p id="pathNote" class="hint" hidden></p>
     <div class="mix" id="mix">
@@ -155,6 +168,19 @@
       <p class="hint">Live from IRSA's all-sky maps (HiPS) via Aladin Lite. Drag to pan, scroll to zoom. Slide the
         wavelength: cold brown dwarfs appear only at the long end, normal stars fade there. The orange marker is the
         target; the dashed line is its measured path. This map works for any coordinates you type.</p>
+    </div>
+    <div id="webbView" hidden>
+      <p id="webbHead" class="hint"></p>
+      <div id="webbAladin" class="aladin" aria-label="Webb image of this spot"></div>
+      <div class="map-controls">
+        <label>Webb image opacity <input type="range" id="webbOp" min="0" max="1" step="0.05" value="1"></label>
+        <label>Underneath <select id="webbBase"><option value="twomass">2MASS (near-infrared)</option><option value="dss">DSS (visible light)</option></select></label>
+      </div>
+      <p id="webbNote" class="hint"></p>
+      <div id="webbFrames" class="webb-frames"></div>
+      <p class="hint">WANDERERS matches these coordinates against the outlines of every public Webb (JWST) imaging frame in
+        NASA's MAST archive (<span id="webbCount"></span>), then shows the real Webb pixels, with the gold outline marking the frame.
+        What Webb is observing right now: <a href="https://spacetelescopelive.org/webb" target="_blank" rel="noopener">Space Telescope Live ↗</a></p>
     </div>
     <div id="starView" hidden>
       <div class="star-search">
@@ -211,10 +237,16 @@
         <details><summary>Measured positions used for training</summary><div id="starObs"></div></details>
       </div>
     </div>
+    <section class="path-card" id="pathCard" aria-label="Path taken and path ahead" hidden>
+      <div class="panel-row"><h3>Where it has been, and where it is going</h3><span class="tag-chip ai">Prediction model</span></div>
+      <p class="hint">Blue: the path it has taken. Green, dashed: the path it will take. The dot is where it is now.</p>
+      <div id="pathBody"></div>
+    </section>
     <details class="meta" id="meta">
       <summary>Frame details and data flags</summary>
       <div id="metaBody"></div>
     </details>
+    <details class="meta"><summary>Every SPHEREx image: date, detector, wavelength and flags at the target</summary><div id="metaBox"></div></details>
     <p class="hint ext">
       <a id="aladinLink" href="https://aladin.cds.unistra.fr/AladinLite/" target="_blank" rel="noopener noreferrer">Open this field in Aladin Lite ↗</a>
       CDS sky viewer, showing the WISE infrared survey. Opens a new tab and sends it only this patch's coordinates.
@@ -260,7 +292,7 @@
 <footer class="foot">
   <p><strong>Candidate, never "discovery".</strong> WANDERERS points people at interesting objects and shows the evidence.
     Confirming a new object needs follow-up by astronomers.</p>
-  <p>Data: SPHEREx DR1 (NASA/IPAC IRSA) · AllWISE (NASA/IPAC IRSA) · Gaia DR3 (ESA). NASA Space Apps 2026 · Planet X and SPHEREx.</p>
+  <p>Data: SPHEREx DR1 (NASA/IPAC IRSA) · AllWISE (NASA/IPAC IRSA) · Gaia DR3 (ESA) · Webb frames: MAST (STScI) and ESA ESASky · star names: HYG (CC BY-SA 4.0). NASA Space Apps 2026 · Planet X and SPHEREx.</p>
 </footer>
 <script src="theme.js"></script>
 <script src="framemath.js"></script>
@@ -270,9 +302,12 @@
 <script src="starpath.js"></script>
 <script src="stardb.js"></script>
 <script src="starcore.js"></script>
-<script src="app.js"></script>
-<script src="starquake.js"></script>
-<script src="starquake-ui.js"></script>
+<script src="pathview.js?v=20261115b"></script>
+<script src="search.js?v=20261115b"></script>
+<script src="telescope.js?v=20261115b"></script>
+<script src="app.js?v=20261115b"></script>
+<script src="starquake.js?v=20261115b"></script>
+<script src="starquake-ui.js?v=20261115b"></script>
 <script src="longrange.js"></script>
 <script src="stars.js"></script>
 </body>

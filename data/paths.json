@@ -1,0 +1,167 @@
+{
+ "barnard": {
+  "name": "Barnard's Star",
+  "key": "hip87937",
+  "learnt": true,
+  "state": {
+   "ra": 269.44850252543836,
+   "dec": 4.739420051112412,
+   "pmra": -801.5509783684709,
+   "pmdec": 10362.394206546573,
+   "plx": 546.975939730948,
+   "rv": -111.0,
+   "epoch": 2016.0,
+   "source": "Gaia DR3"
+  }
+ },
+ "r_dra": {
+  "name": "R Draconis",
+  "key": "wanderers_r_dra",
+  "learnt": true,
+  "state": {
+   "ra": 248.1673783672889,
+   "dec": 66.75500674547219,
+   "pmra": -20.642811719160797,
+   "pmdec": 6.148818852711324,
+   "plx": 1.2509180143740992,
+   "rv": null,
+   "epoch": 2016.0,
+   "source": "Gaia DR3"
+  }
+ },
+ "rw_aur": {
+  "name": "RW Aurigae",
+  "key": "wanderers_rw_aur",
+  "learnt": true,
+  "state": {
+   "ra": 76.95608119552952,
+   "dec": 30.401204589097233,
+   "pmra": 2.6406431770317083,
+   "pmdec": -27.397582540455325,
+   "plx": 6.406249329219477,
+   "rv": null,
+   "epoch": 2016.0,
+   "source": "Gaia DR3"
+  }
+ },
+ "eps_indi_b": {
+  "name": "Epsilon Indi B",
+  "key": "wanderers_eps_indi_b",
+  "learnt": true,
+  "state": {
+   "ra": 331.07645259656397,
+   "dec": -56.79381206688221,
+   "pmra": 3981.97666296105,
+   "pmdec": -2466.8318147663504,
+   "plx": 270.6580324694526,
+   "rv": null,
+   "epoch": 2016.0,
+   "source": "Gaia DR3"
+  }
+ },
+ "wise0855": {
+  "name": "WISE 0855-0714",
+  "key": "wanderers_wise0855",
+  "learnt": true,
+  "state": {
+   "ra": 133.79513,
+   "dec": -7.24515,
+   "pmra": -8123.0,
+   "pmdec": 673.0,
+   "plx": 449.0,
+   "rv": null,
+   "epoch": 2010.5,
+   "source": "Luhman & Esplin 2016, AJ 152, 78"
+  }
+ },
+ "pos_162p3288_s53p3194": {
+  "name": "Luhman 16",
+  "key": null,
+  "learnt": false,
+  "state": {
+   "ra": 162.3084022,
+   "dec": -53.3180448,
+   "pmra": -2762.0,
+   "pmdec": 357.0,
+   "plx": 501.0,
+   "rv": null,
+   "epoch": 2016.0,
+   "source": "Gaia DR3 5353626573555863424 position (2016.0); motion and parallax from Bedin et al. 2017, MNRAS 470, 1140"
+  }
+ },
+ "pos_164p1223_n7p0153": {
+  "name": "Wolf 359",
+  "key": "hyg118720",
+  "learnt": true,
+  "state": {
+   "ra": 164.10319030755974,
+   "dec": 7.002726940984864,
+   "pmra": -3866.3382751436793,
+   "pmdec": -2699.214987679166,
+   "plx": 415.17941567802137,
+   "rv": 13.0,
+   "epoch": 2016.0,
+   "source": "Gaia DR3"
+  }
+ },
+ "pos_165p8345_n35p9699": {
+  "name": "Lalande 21185",
+  "key": "hip54035",
+  "learnt": true,
+  "state": {
+   "ra": 165.83095967577933,
+   "dec": 35.948653032660104,
+   "pmra": -580.0570872139048,
+   "pmdec": -4776.588719443488,
+   "plx": 392.75294543876464,
+   "rv": -84.3,
+   "epoch": 2016.0,
+   "source": "Gaia DR3"
+  }
+ },
+ "pos_217p4398_s62p6795": {
+  "name": "Proxima Centauri",
+  "key": "hip70890",
+  "learnt": true,
+  "state": {
+   "ra": 217.39232147200883,
+   "dec": -62.67607511676666,
+   "pmra": -3781.741008265163,
+   "pmdec": 769.4650146478623,
+   "plx": 768.0665391873573,
+   "rv": -16.0,
+   "epoch": 2016.0,
+   "source": "Gaia DR3"
+  }
+ },
+ "pos_316p7219_n38p7494": {
+  "name": "61 Cygni",
+  "key": "hip104214",
+  "learnt": true,
+  "state": {
+   "ra": 316.7484792940004,
+   "dec": 38.76386244649797,
+   "pmra": 4164.2086922846665,
+   "pmdec": 3249.613883848584,
+   "plx": 285.99494829578117,
+   "rv": -64.8,
+   "epoch": 2016.0,
+   "source": "Gaia DR3"
+  }
+ },
+ "pos_77p9125_s45p0184": {
+  "name": "Kapteyn's Star",
+  "key": "hip24186",
+  "learnt": true,
+  "state": {
+   "ra": 77.9599373502188,
+   "dec": -45.0438126993602,
+   "pmra": 6491.223339061598,
+   "pmdec": -5708.614150045243,
+   "plx": 254.19859326384577,
+   "rv": 245.5,
+   "epoch": 2016.0,
+   "source": "Gaia DR3"
+  }
+ }
+}
