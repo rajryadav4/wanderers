@@ -1,0 +1,30 @@
+{
+ "about": "Community classifications of WANDERERS targets and Sky Survey candidates, counted from GitHub issues labelled \"classification\" in kneha07/WANDERERS by pipeline/aggregate_votes.py. Do not edit by hand.",
+ "classes": [
+  "moving",
+  "variable",
+  "stationary",
+  "artifact",
+  "unsure"
+ ],
+ "ignored": {
+  "duplicate": 0,
+  "malformed": 0,
+  "moderated": 0,
+  "not_a_vote": 0,
+  "unknown_class": 0,
+  "unknown_id": 0
+ },
+ "issues_read": 0,
+ "label": "classification",
+ "last_issue": 0,
+ "last_vote": null,
+ "min_agreement": 0.6,
+ "min_voters": 3,
+ "objects": {},
+ "replaced": 0,
+ "repo": "kneha07/WANDERERS",
+ "schema": 1,
+ "template": ".github/ISSUE_TEMPLATE/classification.yml",
+ "votes_counted": 0
+}

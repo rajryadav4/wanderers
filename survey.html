@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="brand.css">
 <link rel="stylesheet" href="survey.css?v=20261115a">
+<link rel="stylesheet" href="classify.css?v=20261117a">
 </head>
 <body class="survey">
 <a class="skip" href="#svMain">Skip to content</a>
@@ -208,6 +209,10 @@
     <div id="dSky" class="d-sky" aria-label="Live sky view around the candidate"></div>
     <p id="dSkyMsg" class="hint" aria-live="polite"></p>
   </section>
+  <section aria-labelledby="dClsH">
+    <h3 id="dClsH">Classify this candidate</h3>
+    <div id="dClassify" class="cls-card"></div>
+  </section>
   <section aria-labelledby="dNumH">
     <h3 id="dNumH">The numbers</h3>
     <dl id="dNums" class="d-nums"></dl>
@@ -243,7 +248,8 @@
     <p class="legal">Data: NEOWISE-R (NASA/JPL-Caltech/IPAC, via NASA IRSA on AWS) · Gaia DR3 (ESA/Gaia/DPAC) · SPHEREx and AllWISE HiPS (NASA/IPAC IRSA) · Aladin Lite (CDS). NASA Space Apps 2026 · Planet X and SPHEREx. WANDERERS is an independent student project and is not affiliated with or endorsed by NASA or ESA.</p>
   </div>
 </footer>
+<script src="classify.js?v=20261117a"></script>
 <script src="theme.js"></script>
-<script src="survey.js?v=20261115a"></script>
+<script src="survey.js?v=20261117a"></script>
 </body>
 </html>

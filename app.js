@@ -77,6 +77,7 @@
     $("checks").innerHTML = ""; $("numbers").innerHTML = ""; $("insights").hidden = true; $("changes").hidden = true;
     $("explain").textContent = ""; $("qButtons").innerHTML = ""; $("answer").textContent = "";
     $("spec").innerHTML = ""; $("specNote").textContent = "No SPHEREx spectrum: this position has not been analysed."; $("targetQuake").hidden = true;
+    $("classify").hidden = true;   // votes are for prepared targets only
   }
 
   let loadSeq = 0;
@@ -109,6 +110,7 @@
     if (S.pickUrlDone) { S.pick = null; const u = new URL(location); u.searchParams.delete("pick"); history.replaceState(null, "", u); }
     setupSlider(); initMix(true); renderMeta(); renderChanges(); renderMetaBox(); setAladin(); fillCompare(); draw(); evidence(); spectrum();
     showPath({ target: id });
+    if (window.Classify) Classify.mount($("classify"), { id, kind: "target", name: t.name });   // citizen-science vote (classify.js)
     // starquakes for the five challenge targets (typed-in fields have no star parameters, so no widget)
     if (window.StarquakeUI) {
       Promise.all([fetch("data/starquake/targets.json").then((r) => (r.ok ? r.json() : {})), fetch("data/starquake_stars.json").then((r) => r.json()),
