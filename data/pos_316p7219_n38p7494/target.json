@@ -39,8 +39,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_00.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2014.901318001369,
@@ -48,8 +49,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_01.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2015.4033757700206,
@@ -57,8 +59,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_02.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2015.8894308008214,
@@ -66,8 +69,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_03.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2016.4039865845311,
@@ -75,8 +79,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_04.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2016.8744772073921,
@@ -84,8 +89,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_05.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2017.405317727584,
@@ -93,8 +99,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_06.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2017.8619307323752,
@@ -102,8 +109,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_07.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2018.4023326488707,
@@ -111,8 +119,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_08.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2018.849534017796,
@@ -120,8 +129,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_09.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2019.4066803559206,
@@ -129,8 +139,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_10.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2019.8516323066392,
@@ -138,8 +149,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_11.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2020.4049349760437,
@@ -148,7 +160,7 @@
     "png": "w2_neowise_12.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -157,8 +169,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_13.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2021.4016996577686,
@@ -166,8 +179,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_14.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2021.8502833675564,
@@ -175,8 +189,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_15.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2022.4066622861053,
@@ -184,8 +199,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_16.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2022.8534113620808,
@@ -193,8 +209,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_17.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2023.4038655715262,
@@ -202,8 +219,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_18.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2023.8505817932923,
@@ -211,8 +229,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_19.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2024.4009968514715,
@@ -304,8 +323,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_00.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2014.901318001369,
@@ -313,8 +333,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_01.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2015.4033757700206,
@@ -322,8 +343,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_02.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2015.8894308008214,
@@ -331,8 +353,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_03.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2016.4039865845311,
@@ -340,8 +363,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_04.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2016.8744772073921,
@@ -349,8 +373,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_05.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2017.405317727584,
@@ -358,8 +383,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_06.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2017.8619307323752,
@@ -367,8 +393,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_07.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2018.4023326488707,
@@ -376,8 +403,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_08.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2018.849534017796,
@@ -385,8 +413,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_09.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2019.4066803559206,
@@ -394,8 +423,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_10.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2019.8516323066392,
@@ -403,8 +433,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_11.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2020.4049349760437,
@@ -412,8 +443,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_12.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2020.851776865161,
@@ -421,8 +453,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_13.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2021.4016996577686,
@@ -430,8 +463,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_14.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2021.8502833675564,
@@ -439,8 +473,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_15.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2022.4066622861053,
@@ -448,8 +483,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_16.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2022.8534113620808,
@@ -457,8 +493,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_17.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2023.4038655715262,
@@ -466,8 +503,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_18.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2023.8505817932923,
@@ -475,8 +513,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_19.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2024.4009968514715,
@@ -484,8 +523,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_20.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2025.360811221284,
@@ -699,8 +739,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_00.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2014.901318001369,
@@ -708,8 +749,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_01.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2015.4033757700206,
@@ -717,8 +759,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_02.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2015.8894308008214,
@@ -726,8 +769,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_03.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2016.4039865845311,
@@ -735,8 +779,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_04.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2016.8744772073921,
@@ -744,8 +789,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_05.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2017.405317727584,
@@ -753,8 +799,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_06.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2017.8619307323752,
@@ -762,8 +809,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_07.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2018.4023326488707,
@@ -771,8 +819,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_08.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2018.849534017796,
@@ -780,8 +829,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_09.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2019.4066803559206,
@@ -789,8 +839,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_10.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2019.8516323066392,
@@ -798,8 +849,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_11.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2020.4049349760437,
@@ -808,7 +860,7 @@
     "png": "w2_neowise_12.png",
     "n_images": 10,
     "detected": true,
-    "snr": 0.0,
+    "snr": null,
     "saturated_core": true
    },
    {
@@ -817,8 +869,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_13.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2021.4016996577686,
@@ -826,8 +879,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_14.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2021.8502833675564,
@@ -835,8 +889,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_15.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2022.4066622861053,
@@ -844,8 +899,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_16.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2022.8534113620808,
@@ -853,8 +909,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_17.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2023.4038655715262,
@@ -862,8 +919,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_18.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2023.8505817932923,
@@ -871,8 +929,9 @@
     "mission": "NEOWISE",
     "png": "w2_neowise_19.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2024.4009968514715,
@@ -928,8 +987,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_00.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2014.901318001369,
@@ -937,8 +997,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_01.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2015.4033757700206,
@@ -946,8 +1007,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_02.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2015.8894308008214,
@@ -955,8 +1017,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_03.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2016.4039865845311,
@@ -964,8 +1027,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_04.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2016.8744772073921,
@@ -973,8 +1037,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_05.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2017.405317727584,
@@ -982,8 +1047,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_06.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2017.8619307323752,
@@ -991,8 +1057,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_07.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2018.4023326488707,
@@ -1000,8 +1067,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_08.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2018.849534017796,
@@ -1009,8 +1077,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_09.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2019.4066803559206,
@@ -1018,8 +1087,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_10.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2019.8516323066392,
@@ -1027,8 +1097,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_11.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2020.4049349760437,
@@ -1036,8 +1107,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_12.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2020.851776865161,
@@ -1045,8 +1117,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_13.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2021.4016996577686,
@@ -1054,8 +1127,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_14.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2021.8502833675564,
@@ -1063,8 +1137,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_15.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2022.4066622861053,
@@ -1072,8 +1147,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_16.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2022.8534113620808,
@@ -1081,8 +1157,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_17.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2023.4038655715262,
@@ -1090,8 +1167,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_18.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2023.8505817932923,
@@ -1099,8 +1177,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_19.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2024.4009968514715,
@@ -1108,8 +1187,9 @@
     "mission": "NEOWISE",
     "png": "w1_neowise_20.png",
     "n_images": 10,
-    "detected": false,
-    "snr": 0.0
+    "detected": true,
+    "snr": null,
+    "saturated_core": true
    },
    {
     "year": 2025.360811221284,

@@ -7,11 +7,11 @@
   },
   {
    "q": "What would make you less sure?",
-   "a": "The fade was measured only in the outer glow of the star's image, because its core overloads SPHEREx, and all 154 SPHEREx points are flagged. If that wing measurement drifted, the 0.34 \u00b1 0.06 mag change could shrink. The apparent 0.43\u2033/yr shift, compared with Gaia's 0.02\u2033/yr, is only about one SPHEREx pixel and is probably a saturation artifact. Without Gaia's independent Mira classification, I'd be much less sure."
+   "a": "The fade was measured only in the outer glow of the star's image, because its core overloads SPHEREx, and all 154 SPHEREx points are flagged. If that wing measurement drifted, the 0.34 \u00b1 0.06 mag change could shrink. The apparent 0.52\u2033/yr shift, compared with Gaia's 0.02\u2033/yr, is only about one SPHEREx pixel and is probably a saturation artifact. Without Gaia's independent Mira classification, I'd be much less sure."
   },
   {
    "q": "Why use both WISE and SPHEREx?",
-   "a": "WISE imaged this sky around 2010 and SPHEREx in 2025\u20132026, which gives about 16 years to look for motion. SPHEREx adds many wavelengths and repeat visits, and those caught R Draconis fading by 0.34 \u00b1 0.06 mag. The apparent 6.8 arcsec shift is only about one SPHEREx pixel, and the star saturates SPHEREx. So we report no measurable motion. Gaia expects just 0.02 arcsec per year."
+   "a": "WISE imaged this sky around 2010 and SPHEREx in 2025\u20132026, which gives about 16 years to look for motion. SPHEREx adds many wavelengths and repeat visits, and those caught R Draconis fading by 0.34 \u00b1 0.06 mag. The apparent 8.2 arcsec shift is only about one SPHEREx pixel, and the star saturates SPHEREx. So we report no measurable motion. Gaia expects just 0.02 arcsec per year."
   }
  ],
  "model_note": "Written by Claude (Claude Code, headless) from target.json only."
