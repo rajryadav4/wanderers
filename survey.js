@@ -199,6 +199,18 @@
       return { label, completeness: c, n, recovered: rec };
     }).filter((b) => Number.isFinite(b.completeness));
   }
+  // A star checked twice (a small test cut-out and its full survey tile) is one star: keep the survey-tile check,
+  // else the last one listed, at the place of the first, so "8 of 9 stars" counts stars, not checks.
+  function oneRowPerStar(rows) {
+    const at = new Map(), out = [];
+    const better = (a, b) => /survey tile/.test(b.note) || !/survey tile/.test(a.note);
+    for (const r of rows) {
+      const k = r.name.toLowerCase();
+      if (!at.has(k)) { at.set(k, out.length); out.push(r); }
+      else if (better(out[at.get(k)], r)) out[at.get(k)] = r;
+    }
+    return out;
+  }
   function normValidation(v) {
     if (!v || typeof v !== "object") return null;
     const inj = v.injection || v.recovery || v;
@@ -218,11 +230,11 @@
       fp: fp === undefined || fp === null ? null : typeof fp === "object"
         ? { n: num(pick(fp, ["n", "count", "false_positives"])), tiles: num(pick(fp, ["tiles", "n_tiles"])), note: fp.note || fp.data || "" }
         : { n: num(fp), tiles: num(pick(v, ["fp_tiles"])), note: "" },
-      known: known.map((k) => ({
+      known: oneRowPerStar(known.map((k) => ({
         name: String(k.name || k.id || "?"), recovered: !!(k.recovered ?? k.found),
         pmTrue: num(pick(k, ["pm_true", "pm_expected", "pm_catalog", "pm_cat"])), pmMeas: num(pick(k, ["pm_measured", "pm_meas", "pm"])),
         note: k.note || k.reason || "", id: k.mover_id || k.candidate || null,
-      })),
+      }))),
       note: v.note || "",
     };
   }
@@ -309,7 +321,7 @@
   const Core = {
     NSIDE, N_TILES, TILE_AREA_DEG2, MAP_W, MAP_H, pix2ang, corners, tilePoint, xyf2ang, hammerXY, project, tilePolygon, galToEq, eclToEq, skyPath,
     fmtInt, fmtBig, fmtPct, fmtHours, fmtPm, fmtFix, sexa, posAngle, compass, esc, isRed, gaiaText, applyFilters, sortRows, SORTS, CLASSES,
-    normTiles, normValidation, trackPoints, fitLine, trackOffsets, trackSvg, links, copyText, BYW,
+    normTiles, normValidation, oneRowPerStar, trackPoints, fitLine, trackOffsets, trackSvg, links, copyText, BYW,
   };
   if (typeof module === "object" && module && module.exports) module.exports = Core;
   root.SurveyCore = Core;
@@ -539,11 +551,11 @@
     if (v.fp) {
       const n = v.fp.n, t = v.fp.tiles;
       h += `<div class="sv-val-card"><h3>False alarms</h3><p class="sv-fp"><b class="mono">${fmtInt(n)}</b> false mover${n === 1 ? "" : "s"}${Number.isFinite(t) ? ` in ${fmtInt(t)} test tile${t === 1 ? "" : "s"} with no real movers` : " on data with no real movers"}.</p>`
-        + `<p class="hint">${v.fp.note ? esc(v.fp.note) + ". " : ""}A false alarm is something the search called a mover when nothing was moving. That is why every candidate is checked by people before anyone calls it real.</p></div>`;
+        + `<p class="hint">${v.fp.note ? esc(String(v.fp.note).replace(/[.\s]+$/, "")) + ". " : ""}A false alarm is something the search called a mover when nothing was moving. That is why every candidate is checked by people before anyone calls it real.</p></div>`;
     }
     if (v.known.length) {
       const rec = v.known.filter((k) => k.recovered).length;
-      h += `<div class="sv-val-card wide"><h3>Famous fast stars: did it find them on its own?</h3><p class="hint">${rec} of ${v.known.length} known high-motion objects in the searched tiles were picked up without being told where they are.</p>`
+      h += `<div class="sv-val-card wide"><h3>Famous fast stars: did it find them on its own?</h3><p class="hint">${rec} of ${v.known.length} known high-motion stars in the searched tiles were picked up without being told where they are.</p>`
         + `<div class="sv-scroll"><table class="sv-known"><caption class="visually-hidden">Known high-motion objects and whether the search recovered them</caption>`
         + `<thead><tr><th scope="col">Object</th><th scope="col">Found?</th><th scope="col">Catalogue motion</th><th scope="col">Measured</th><th scope="col">Difference</th></tr></thead><tbody>`
         + v.known.map((k) => {
