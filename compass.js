@@ -56,7 +56,7 @@ fetch("data/index.json").then((r) => r.json()).then((list) => {
   S.targets = list;
   const want = new URLSearchParams(location.search).get("target");
   S.sel = list.find((t) => t.id === want) || null;
-  renderTargets();
+  renderTargets(); if (S.sel) $("aboutBtn").hidden = false;
   const wantStar = new URLSearchParams(location.search).get("star");     // e.g. compass.html?star=Sirius from the console
   if (wantStar) StarSearch.load().then(() => { const st = StarSearch.search(wantStar, 1)[0]; if (st) { selectStar(st); $("findIn").value = st.name; } });
 });
@@ -120,7 +120,10 @@ function locate() {
       S.regionPromise = regionImage(S.loc.lat, S.loc.lon);
       placeResolve(S.place);
     }
-  }, () => { S.locNote = "location declined: using Seattle"; placeResolve(null); },
+  }, (err) => {   // also called for a later timeout while a GPS fix is already in use: keep that note then
+    if (!S.loc) S.locNote = err && err.code === 1 ? "location declined: using Seattle" : "no GPS fix yet: using Seattle";
+    placeResolve(null);
+  },
   { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 });
 }
 
@@ -204,7 +207,7 @@ $("hud").addEventListener("pointerdown", (e) => { if (!S.sensors) { drag = { x: 
 $("hud").addEventListener("pointermove", (e) => {
   if (!drag) return;
   const k = 70 / innerHeight;
-  S.manual.az = (drag.az - (e.clientX - drag.x) * k + 360) % 360;
+  S.manual.az = ((drag.az - (e.clientX - drag.x) * k) % 360 + 360) % 360;   // a long drag can pass a full turn
   S.manual.alt = Math.max(-85, Math.min(85, drag.alt + (e.clientY - drag.y) * k));
 });
 $("hud").addEventListener("pointerup", () => (drag = null));
@@ -480,7 +483,7 @@ function telemetry(now, L, P) {
   const cal = F.compassFrozen ? "SIGHT ✓" : F.calibrated ? (F.result ? F.result.quality.toUpperCase() : "OK") : S.sensors ? "NOT CALIBRATED" : "DRAG MODE";
   $("telemetry").innerHTML = [
     ["LAT", `${Math.abs(L.lat).toFixed(3)}°${L.lat >= 0 ? "N" : "S"}`], ["LON", `${Math.abs(L.lon).toFixed(3)}°${L.lon >= 0 ? "E" : "W"}`],
-    ["LOCAL", `${now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })} ${tz.split("/").pop().replace("_", " ")}`],
+    ["LOCAL", `${now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })} ${tz.split("/").pop().replace(/_/g, " ")}`],
     ["UTC", now.toISOString().slice(11, 19)], ["LST", hm(lst)], ["DECL", `${F.decl >= 0 ? "+" : ""}${F.decl.toFixed(1)}°`], ["CAL", cal],
   ].map(([k, v]) => `<span><b>${k}</b> ${v}</span>`).join("");
   if (!$("info").hidden) renderInfo(now, L, lst, tz);
