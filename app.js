@@ -12,8 +12,12 @@
     renderTargets(); renderExamples();
     const p = new URLSearchParams(location.search), want = p.get("target");
     if (p.get("ra") && p.get("dec")) { if (!coordSearch(p.get("ra"), p.get("dec"), p.get("fov"))) load(list[0].id); }   // unreadable: still show something
-    else { load(list.some((t) => t.id === want) ? want : list[0].id, p.get("ch")); }   // unknown id in a link: show the first target
-  }).catch(() => { $("tName").textContent = "No data yet. Run the pipeline (see README)."; });
+    else {                                                // an unknown id in a link: say so and show the first target
+      const known = list.some((t) => t.id === want);
+      if (want && !known) $("coordMsg").textContent = `No mission called “${want}”. Showing ${list[0].name} instead.`;
+      load(known ? want : list[0].id, p.get("ch"));
+    }
+  }).catch(() => { $("tName").textContent = "Could not load the observatory data. Please reload the page."; });
   fetch("api/health").then((r) => { if (r.ok) { S.live = true; $("askForm").hidden = false; } }).catch(() => {});
   // "Explore any patch" live mode (web/ + backend/ on port 8001): links show only when server.js can reach it
   const liveExplore = fetch("api/live-health").then((r) => r.ok).catch(() => false);
@@ -50,7 +54,29 @@
   function renderTargets() {
     $("targetList").innerHTML = S.list.map((t, k) =>
       `<li><button data-id="${t.id}"><span class="lvl">${k + 1}</span><span>${t.name}</span><span class="sub">${t.teaser}</span></button></li>`).join("");
-    $("targetList").querySelectorAll("button").forEach((b) => b.onclick = () => { selectTab("flip"); load(b.dataset.id); });
+    $("targetList").querySelectorAll("button").forEach((b) => b.onclick = () => openTarget(b.dataset.id));
+  }
+  // a mission picked from the list (or a link in the Star database): the searched star's card no longer applies
+  function openTarget(id) { $("starCard").hidden = true; selectTab("flip"); load(id); }
+
+  // Where a target is now: its newest measured position (fast movers leave the field centre behind), else the centre.
+  function nowPos(t) {
+    const last = [...(t.track || [])].sort((a, b) => b.year - a.year)[0];
+    return last && last.ra != null ? { ra: last.ra, dec: last.dec } : { ra: t.grid.centre_ra, dec: t.grid.centre_dec };
+  }
+
+  // The subject is a searched star or typed position with no prepared time-lapse: heading, evidence and
+  // spectrum say so instead of still describing the previous mission target.
+  function showSubject(label, kind) {
+    S.away = true;
+    $("tName").textContent = label; $("tKind").textContent = kind;
+    $("targetList").querySelectorAll("button").forEach((b) => b.classList.remove("on"));
+    $("verdict").className = "verdict";
+    $("verdict").innerHTML = `<div class="status">NOT ANALYSED</div><div class="conf">${esc(label)} has no prepared time-lapse, so there is no evidence card. ` +
+      "The sky map and Through Webb tabs show it live; pick a mission for the full analysis.</div>";
+    $("checks").innerHTML = ""; $("numbers").innerHTML = ""; $("insights").hidden = true; $("changes").hidden = true;
+    $("explain").textContent = ""; $("qButtons").innerHTML = ""; $("answer").textContent = "";
+    $("spec").innerHTML = ""; $("specNote").textContent = "No SPHEREx spectrum: this position has not been analysed."; $("targetQuake").hidden = true;
   }
 
   let loadSeq = 0;
@@ -63,8 +89,8 @@
       fetch(`data/${id}/trajectory.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null),   // optional
     ]);
     if (me !== loadSeq) return;
-    S.here = { ra: t.grid.centre_ra, dec: t.grid.centre_dec, label: t.name };
-    S.t = t; S.ex = ex; S.tr = tr;
+    S.here = { ...nowPos(t), label: t.name };   // Through Webb looks where the star is now, not at the field centre
+    S.t = t; S.ex = ex; S.tr = tr; S.away = false;
     $("pathNote").textContent = StarPath.summary(tr); $("pathNote").hidden = !tr;
     const hasFrames = (c) => Object.hasOwn(t.frames, c) && Array.isArray(t.frames[c]) && t.frames[c].length > 0;
     $("tPath").parentElement.hidden = !tr; S.ch = ch && hasFrames(ch) ? ch : (hasFrames("w2") ? "w2" : "w1");
@@ -76,6 +102,7 @@
     if ([...$("fovIn").options].some((o) => o.value === fovNow)) $("fovIn").value = fovNow;
     renderChannels(); S.math = null; $("mOp").value = "off"; $("stackAll").setAttribute("aria-pressed", "false");
     const url = new URL(location); url.searchParams.set("target", id); ["ra", "dec", "fov"].forEach((k) => url.searchParams.delete(k));
+    if (S.ch === ch) url.searchParams.set("ch", ch); else url.searchParams.delete("ch");   // a channel from the last target is not this one's
     history.replaceState(null, "", url);
     await preload();
     if (me !== loadSeq) return;
@@ -197,7 +224,7 @@
     const seen = f && f.detected === false ? " · not detected at this wavelength" : "";
     const lbl = S.math ? S.math.label : diff ? "Difference: SPHEREx 2026 − 2025 (green = now, pink = before)" : mixed ? S.mixOut.label : f ? `${f.label} · ${labelOf(S.ch)}${seen}` : "";
     $("stamp").textContent = lbl;
-    $("frameLbl").textContent = mixed ? "" : f ? `${S.i + 1}/${fr.length} · ${f.year.toFixed(1)}` : "";
+    $("frameLbl").textContent = mixed ? "" : f ? `${S.i + 1}/${fr.length} · ${f.year.toFixed(1)}${fr.length === 1 ? " · only one frame here" : ""}` : "";
     document.querySelectorAll("#metaBody tr[data-i]").forEach((tr) => tr.classList.toggle("now", !diff && +tr.dataset.i === S.i));
   }
 
@@ -223,7 +250,7 @@
   const CH_WORD = { candidate: "Unconfirmed", known: "Known object", target: "The target", rejected: "Ruled out" };
   function renderChanges() {
     const ch = S.t.changes, box = $("changes");
-    box.hidden = !ch;
+    box.hidden = !ch || $("flipView").hidden;          // shown with the time-lapse only
     if (!ch) return;
     const out = ch.items.filter((c) => c.status === "rejected").length, kn = ch.found - out - ch.candidates;
     const pairs = (k) => `${k} pair${k === 1 ? "" : "s"}`;
@@ -384,7 +411,12 @@
     S.mixOut = out;
     $("mixMode").value = m.mode;
     $("mixSub").hidden = m.mode !== "sub"; $("mixOpts").hidden = m.mode !== "sub"; $("mixAdd").hidden = m.mode !== "add";
-    $("play").disabled = $("frame").disabled = !!out;     // the blink slider has no meaning on a combined picture
+    // the blink slider has no meaning on a combined picture, nor with a single frame (D2 and D5 of some targets)
+    const one = fr.length < 2, spx = fr.filter((f) => f.mission === "SPHEREx").length;
+    $("play").disabled = $("frame").disabled = !!out || one;
+    $("mixMode").disabled = $("mOp").disabled = $("mA").disabled = $("mB").disabled = one;
+    $("stackAll").disabled = spx < 2;
+    $("tDiff").disabled = !S.t.diff[S.ch];
     $("mixNote").textContent = note || (m.mode === "sub" ? HINT_SUB : m.mode === "add" ? HINT_ADD : "");
     writeMixUrl();
     if (redraw) draw();
@@ -441,6 +473,7 @@
   function step() { const n = frames().length; if (!n) return; S.i = (S.i + 1) % n; $("frame").value = S.i; draw(); }
   function play() {
     if (S.playing) return stop();
+    if ($("play").disabled) return;                       // one frame, or a combined picture (keyboard too)
     S.playing = true; $("play").textContent = "❚❚ Pause";
     S.timer = setInterval(step, reduceMotion ? 1500 : 600);
   }
@@ -472,7 +505,7 @@
     $("checks").innerHTML = ev.checks.map((c) => `<li><span class="${c.state}">${icon[c.state]}</span><span>${c.text}</span></li>`).join("");
     $("numbers").innerHTML = (ev.numbers || []).map((n) => `<div><b>${n.value}</b><span>${n.label}</span></div>`).join("");
     insights();
-    $("explain").textContent = S.ex ? S.ex.summary : "Explanation not generated yet (run pipeline/explain.py).";
+    $("explain").textContent = S.ex ? S.ex.summary : "No written explanation for this target yet.";
     $("qButtons").innerHTML = S.ex && S.ex.qa ? S.ex.qa.map((q, k) => `<button data-k="${k}">${q.q}</button>`).join("") : "";
     $("qButtons").querySelectorAll("button").forEach((b) => (b.onclick = () => ($("answer").textContent = S.ex.qa[+b.dataset.k].a)));
   }
@@ -485,9 +518,7 @@
     $("facts").innerHTML = ins.facts.map((f) =>
       `<li><b>${esc(f.headline)}</b><span>${esc(f.detail)}</span><span class="basis">How: ${esc(f.basis)}</span></li>`).join("");
     $("limits").innerHTML = ins.limits.map((l) => `<li>${esc(l)}</li>`).join("");
-    // Latest measured position if there is one (fast movers leave the catalogue position behind), else the field centre.
-    const last = [...S.t.track].sort((a, b) => b.year - a.year)[0];
-    const ra = last && last.ra != null ? last.ra : S.t.grid.centre_ra, dec = last && last.dec != null ? last.dec : S.t.grid.centre_dec;
+    const { ra, dec } = nowPos(S.t);   // latest measured position (fast movers leave the catalogue position behind)
     const c = encodeURIComponent(`${ra.toFixed(5)} ${dec >= 0 ? "+" : ""}${dec.toFixed(5)}`);
     const links = [
       ["SIMBAD (is it a known object?)", `https://simbad.cds.unistra.fr/simbad/sim-coo?Coord=${c}&Radius=30&Radius.unit=arcsec`],
@@ -591,7 +622,7 @@
     if (a < 0 || a > 360 || Math.abs(d) > 90) { $("coordMsg").textContent = "RA runs from 0 to 360° (0h to 24h) and Dec from −90° to +90°."; return false; }
     if (a === 360) a = 0;                                // 24h00m00s is 0h
     S.here = { ra: a, dec: d, label: opts.label || `RA ${a.toFixed(4)}°, Dec ${d.toFixed(4)}°` };
-    if (!opts.fromSearch) showPath(null);              // bare coordinates: no known motion until a target matches
+    if (!opts.fromSearch) { showPath(null); $("starCard").hidden = true; }   // bare coordinates: no known motion until a target matches
     const fov = Number(fovIn) || 300;
     if ([...$("fovIn").options].some((o) => Number(o.value) === fov)) $("fovIn").value = String(fov);
     // nearest cached target overall, and nearest one that has the field size that was asked for
@@ -606,6 +637,7 @@
     const same = near(S.list.filter((t) => (t.fov || 300) === fov)), any = near(S.list);
     if (same.best && same.bd < 600) { $("coordMsg").textContent = `Matched ${same.best.name} (${Math.round(same.bd)}″ away).`; load(same.best.id); return true; }
     if (opts.fromSearch) {   // a star picked by name: show it instantly; the full time-lapse is an explicit choice
+      showSubject(S.here.label, "Found by name · shown live on the sky map");
       showMap(a, d, opts.label || "searched star");
       $("coordMsg").innerHTML = "Showing it on the live SPHEREx sky map (slide through all 102 wavelengths), or open 🔭 Through Webb." +
         (S.live ? ' <button type="button" id="mkLapse">Make a SPHEREx time-lapse (a few minutes)</button>' : "");
@@ -614,14 +646,14 @@
       return true;
     }
     exploreHere(a, d);   // live /explore/ mode (backend on :8001), shown beside the message
-    if (S.live) { requestField(a, d, fov); return true; }
+    if (S.live) { showSubject(S.here.label, "Typed coordinates · preparing a time-lapse"); requestField(a, d, fov); return true; }
     else if (any.best && any.bd < 600) {   // no server to make the other size: show what is cached and say so
-      $("coordMsg").textContent = `${any.best.name} is cached at ${fovLabel(any.best.fov || 300)} only. A ${fovLabel(fov)} field needs the local server (node server.js).`;
+      $("coordMsg").textContent = `${any.best.name} is prepared as a ${fovLabel(any.best.fov || 300)} field only, so that is what is shown.`;
       load(any.best.id); return true;
-    } else {   // static site: show the live sky map, plus how a teammate adds the field
-      showMap(a, d, `RA ${a.toFixed(4)}°, Dec ${d.toFixed(4)}°`);
-      $("coordMsg").textContent = `Not in the cached set yet. A teammate can add it in a few minutes: ` +
-      `python pipeline/fetch.py --ra ${a.toFixed(5)} --dec ${d.toFixed(5)}${fov === 300 ? "" : ` --fov ${fov}`}, then analyze.py and evidence.py.`;
+    } else {   // static site: show the live sky map
+      showSubject(S.here.label, "Typed coordinates · shown live on the sky map");
+      showMap(a, d, S.here.label);
+      $("coordMsg").textContent = "This patch of sky has no prepared time-lapse yet; the sky map shows it live.";
     }
     return true;   // the live sky map is showing
   }
@@ -680,7 +712,7 @@
       const back = sp.pts.filter((p) => p.year <= sp.now).map((p) => [p.ra, p.dec]), ahead = sp.pts.filter((p) => p.year >= sp.now).map((p) => [p.ra, p.dec]);
       if (back.length > 1) MAP.past.add(A.polyline(back));
       if (ahead.length > 1) MAP.fut.add(A.polyline(ahead));
-      MAP.sp = sp; $("mapYears").hidden = false; $("yrSlider").value = Math.round(sp.now);
+      MAP.sp = sp; $("mapYears").hidden = false; $("yrSlider").value = Math.floor(sp.now);
       const c = Math.cos(sp.pts[0].dec * Math.PI / 180), xs = sp.pts.map((p) => p.ra * c), ys = sp.pts.map((p) => p.dec);
       const span = Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys));
       if (span > 0) MAP.aladin.setFoV(Math.min(30, Math.max(0.03, span * 2.2)));   // fit the whole path
@@ -697,7 +729,8 @@
     const P = sp.pts; let i = P.findIndex((p) => p.year >= y); if (i <= 0) i = 1; if (i >= P.length) i = P.length - 1;
     const a = P[i - 1], b = P[i], t = b.year === a.year ? 0 : Math.max(0, Math.min(1, (y - a.year) / (b.year - a.year)));
     MAP.yr.removeAll(); MAP.yr.addSources([A.source(a.ra + (b.ra - a.ra) * t, a.dec + (b.dec - a.dec) * t, { name: String(Math.round(y)) })]);
-    $("yrLbl").textContent = `${Math.round(y)} · ${Math.abs(y - sp.now) < 1 ? "now" : y < sp.now ? "where it was" : "predicted"}`;
+    const isNow = Math.abs(y - sp.now) < 1;           // "now" is this calendar year (2026.9 is still 2026)
+    $("yrLbl").textContent = `${isNow ? Math.floor(sp.now) : Math.round(y)} · ${isNow ? "now" : y < sp.now ? "where it was" : "predicted"}`;
   }
   let yrAnim = null;
   function yrStop() { if (yrAnim) cancelAnimationFrame(yrAnim); yrAnim = null; $("yrPlay").textContent = "▶ Play its path"; }
@@ -726,12 +759,16 @@
     $("meta").hidden = which === "stars";
     document.body.classList.toggle("stars-mode", which === "stars");
     if (which === "stars") $("pathCard").hidden = true; else if (S.pathQ && $("pathBody").innerHTML) $("pathCard").hidden = false;   // typed coordinates: no path
+    $("changes").hidden = which !== "flip" || S.away || !(S.t && S.t.changes);   // "What else moved" belongs to the time-lapse
+    if (which !== "stars" && new URLSearchParams(location.search).has("star")) {   // a reload should not reopen the Star database
+      const u = new URL(location); u.searchParams.delete("star"); history.replaceState(null, "", u);
+    }
     if (which !== "flip") stop();
     if (which === "webb") showWebb();
     if (which === "stars" && window.StarsTab) window.StarsTab.open(starKey);
     if (window.LongRange) which === "stars" ? requestAnimationFrame(window.LongRange.refresh) : window.LongRange.stop();
   }
-  window.WANDERERS = { selectTab, openTarget: (id) => { selectTab("flip"); load(id); } };
+  window.WANDERERS = { selectTab, openTarget };
 
   // ---------- path taken and path ahead (the team's star-path model, via pathview.js) ----------
   let pathSeq = 0;
@@ -790,7 +827,10 @@
   $("tabWebb").onclick = () => selectTab("webb");
   $("webbOp").oninput = (e) => Webb.setOpacity(+e.target.value);
   $("webbBase").onchange = (e) => Webb.setBase(e.target.value);
-  $("tabFlip").onclick = () => selectTab("flip");
+  $("tabFlip").onclick = () => {   // the time-lapse belongs to a mission: back from a searched star, show that mission again
+    selectTab("flip");
+    if ((S.away || !S.t) && S.list.length) load((S.t || S.list[0]).id, S.t ? S.ch : undefined);
+  };
   $("tabStars").onclick = () => selectTab("stars");
   $("tabMap").onclick = async () => { selectTab("map"); try { await initMap(); mapGoTo(); } catch (e) { $("coordMsg").textContent = "Sky map unavailable: " + e.message; } };
   $("lam").oninput = (e) => setSlice(+e.target.value);
