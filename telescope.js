@@ -124,7 +124,9 @@
         showProjectionControl: false, showFrame: false, showZoomControl: true, showSettingsControl: false, showShareControl: false,
         showStatusBar: false });
       V.el = el; V.layers = {}; V.base = opts.base || "twomass";
-      V.overlay = A.graphicOverlay({ color: "#6cc4ff", lineWidth: 1.5 }); V.aladin.addOverlay(V.overlay);
+      V.overlay = A.graphicOverlay({ color: "#9fb0c8", lineWidth: 1.2, lineDash: [4, 4] }); V.aladin.addOverlay(V.overlay);   // other Webb frames here
+      V.past = A.graphicOverlay({ color: "#7cc4ff", lineWidth: 2.5 }); V.aladin.addOverlay(V.past);                      // path taken
+      V.fut = A.graphicOverlay({ color: "#7ee787", lineWidth: 2.5, lineDash: [7, 5] }); V.aladin.addOverlay(V.fut);      // path ahead
       V.sel = A.graphicOverlay({ color: "#ffb547", lineWidth: 2.5 }); V.aladin.addOverlay(V.sel);
       V.cat = A.catalog({ name: "you", sourceSize: 18, color: "#ff5a4e", shape: "cross" }); V.aladin.addCatalog(V.cat);
     }
@@ -142,7 +144,13 @@
     }
     try { V.aladin.getOverlayImageLayer("webb").setOpacity(opts.webbOpacity ?? 1); } catch {}
     V.aladin.gotoRaDec(ra, dec); V.aladin.setFoV(fov);
-    V.overlay.removeAll(); V.sel.removeAll(); V.cat.removeAll();
+    V.overlay.removeAll(); V.sel.removeAll(); V.cat.removeAll(); V.past.removeAll(); V.fut.removeAll();
+    if (opts.path && opts.path.pts.length > 1) {      // the star's path (pathview.js): blue behind, green ahead
+      const P = opts.path.pts, now = opts.path.now;
+      const back = P.filter((p) => p.year <= now).map((p) => [p.ra, p.dec]), ahead = P.filter((p) => p.year >= now).map((p) => [p.ra, p.dec]);
+      if (back.length > 1) V.past.add(A.polyline(back));
+      if (ahead.length > 1) V.fut.add(A.polyline(ahead));
+    }
     const poly = (p) => A.polygon(Array.from({ length: p.hull.length / 2 }, (_, i) => [p.hull[2 * i], p.hull[2 * i + 1]]));
     for (const p of frames.slice(1, 40)) V.overlay.add(poly(p));
     if (main) V.sel.add(poly(main));
@@ -153,5 +161,17 @@
   function setOpacity(x) { try { V.aladin.getOverlayImageLayer("webb").setOpacity(x); } catch {} }
   function setBase(k) { if (V.aladin && BASE[k] && V.base !== k) { V.aladin.setBaseImageLayer(BASE[k].url); V.base = k; } }
 
-  root.Webb = { load, framesAt, near, inside, sep, render, setOpacity, setBase, describe, dateOf, esc, thumb, full, progUrl, inHips, source, best, name, appeal, _v: V };
+  // distance (arcsec) from a position to the nearest edge of a frame's outline
+  function edgeArcsec(p, ra, dec) {
+    const c = Math.cos(p.dec * D2R), tp = (a, d) => [((a - p.ra + 540) % 360 - 180) * c, d - p.dec];
+    const [x, y] = tp(ra, dec), n = p.hull.length / 2; let best = Infinity;
+    for (let i = 0, j = n - 1; i < n; j = i++) {
+      const [x1, y1] = tp(p.hull[2 * j], p.hull[2 * j + 1]), [x2, y2] = tp(p.hull[2 * i], p.hull[2 * i + 1]);
+      const dx = x2 - x1, dy = y2 - y1, t = Math.max(0, Math.min(1, ((x - x1) * dx + (y - y1) * dy) / (dx * dx + dy * dy || 1)));
+      best = Math.min(best, Math.hypot(x - x1 - t * dx, y - y1 - t * dy));
+    }
+    return best * 3600;
+  }
+
+  root.Webb = { edgeArcsec, load, framesAt, near, inside, sep, render, setOpacity, setBase, describe, dateOf, esc, thumb, full, progUrl, inHips, source, best, name, appeal, _v: V };
 })(window);

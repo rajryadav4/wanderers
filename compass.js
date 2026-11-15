@@ -571,7 +571,8 @@ async function openWebb(ra, dec, label, frames, focus) {
        <a href="${Webb.progUrl(p)}" target="_blank" rel="noopener">Programme ${Webb.esc(p.pid)} at STScI ↗</a></div>`;
     try {
       await Webb.render($("wView"), contains ? ra : p.ra, contains ? dec : p.dec, [p, ...list.filter((x) => x !== p)],
-        { label, mark: { ra, dec }, base: $("wBase").value, webbOpacity: +$("wOpacity").value });
+        { label, mark: { ra, dec }, path: contains && S.sel && window.PathView ? await PathView.sky(pathQuery(S.sel)).catch(() => null) : null,
+          base: $("wBase").value, webbOpacity: +$("wOpacity").value });
     } catch (e) { $("wView").innerHTML = `<p class="small warn" style="padding:12px">Sky viewer could not load: ${Webb.esc(e.message)}</p>`; }
   };
   $("wFrames").innerHTML = list.slice(0, 12).map((p) => {

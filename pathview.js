@@ -135,5 +135,12 @@
     return { half, now: m.now, pts: root.StarCore.track(m.star, m.now - half, m.now + half, n).map((p) => ({ year: p.year, ra: p.ra, dec: p.dec })) };
   }
 
-  root.PathView = { load, model, render, trail };
+  /* The 1900-2100 path on the sky, for drawing over a map: {now, learnt, pts:[{year, ra, dec}]} or null. */
+  async function sky(q) {
+    const m = await model(q);
+    if (!m) return null;
+    return { now: m.now, learnt: m.learnt, name: m.name, pts: near(m).map((p) => ({ year: p.year, ra: p.ra, dec: p.dec })) };
+  }
+
+  root.PathView = { load, model, render, trail, sky };
 })(typeof window !== "undefined" ? window : globalThis);

@@ -335,3 +335,9 @@ p.pv-dim { font-size: .8rem; }
 .q-comb text.q-hz { fill: var(--accent); }
 .q-cmp summary { cursor: pointer; color: var(--muted); font-size: .85rem; }
 .q-comb tspan.q-t0 { fill: var(--accent); } .q-comb tspan.q-t1 { fill: var(--known); } .q-comb tspan.q-t2 { fill: var(--cand); }
+
+.webb-legend { display: inline-flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; font-size: .78rem; color: var(--muted); margin-top: 4px; }
+.webb-legend i { display: inline-block; width: 18px; height: 0; vertical-align: middle; margin-right: 4px; border-top: 2.5px solid; }
+.webb-legend .lg-gold { border-color: #ffb547; } .webb-legend .lg-grey { border-top: 1.5px dashed #9fb0c8; }
+.webb-legend .lg-cross { width: 10px; height: 10px; border: 0; background: radial-gradient(circle, #ff5a4e 35%, transparent 40%); }
+.webb-legend .lg-past { border-color: #7cc4ff; } .webb-legend .lg-fut { border-top: 2.5px dashed #7ee787; }

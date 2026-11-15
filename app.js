@@ -627,6 +627,8 @@
     MAP.aladin.setBaseImageLayer(MAP.layers.spherex);
     MAP.overlay = A.graphicOverlay({ color: "#ffb547", lineWidth: 2, lineDash: [6, 4] }); MAP.aladin.addOverlay(MAP.overlay);
     MAP.cat = A.catalog({ name: "target", sourceSize: 22, color: "#ffb547", shape: "circle" }); MAP.aladin.addCatalog(MAP.cat);
+    MAP.past = A.graphicOverlay({ color: "#7cc4ff", lineWidth: 2.5 }); MAP.aladin.addOverlay(MAP.past);                    // path taken
+    MAP.fut = A.graphicOverlay({ color: "#7ee787", lineWidth: 2.5, lineDash: [7, 5] }); MAP.aladin.addOverlay(MAP.fut);    // path ahead
     try {   // wavelength of each of the 102 cube frames, straight from the HiPS description
       const txt = await (await fetch(HIPS.spherex + "/properties")).text();
       const m = txt.match(/data_cube_crval3_arr\s*=\s*([\d.\s]+)/);
@@ -646,7 +648,13 @@
     if (ra == null && t) { ra = t.grid.centre_ra; dec = t.grid.centre_dec; label = t.name; }
     if (ra == null) return;
     MAP.aladin.gotoRaDec(ra, dec);
-    MAP.overlay.removeAll(); MAP.cat.removeAll();
+    MAP.overlay.removeAll(); MAP.cat.removeAll(); MAP.past.removeAll(); MAP.fut.removeAll();
+    if (S.pathQ && window.PathView) PathView.sky(S.pathQ).then((sp) => {     // the star's path, 1900 to 2100
+      if (!sp || !MAP.past) return;
+      const back = sp.pts.filter((p) => p.year <= sp.now).map((p) => [p.ra, p.dec]), ahead = sp.pts.filter((p) => p.year >= sp.now).map((p) => [p.ra, p.dec]);
+      if (back.length > 1) MAP.past.add(A.polyline(back));
+      if (ahead.length > 1) MAP.fut.add(A.polyline(ahead));
+    }).catch(() => {});
     const pts = t && label === t.name ? t.track.filter((p) => (p.ch || "w2") === "w2").sort((a, b) => a.year - b.year) : [];
     if (pts.length >= 2) MAP.overlay.add(A.polyline(pts.map((p) => [p.ra, p.dec])));
     const last = pts.length ? pts[pts.length - 1] : { ra, dec };
@@ -674,6 +682,7 @@
   // ---------- path taken and path ahead (the team's star-path model, via pathview.js) ----------
   let pathSeq = 0;
   async function showPath(q) {
+    S.pathQ = q || null;
     const card = $("pathCard"), seq = ++pathSeq;
     if (!q || !window.PathView) { card.hidden = true; return; }
     card.hidden = document.body.classList.contains("stars-mode");
@@ -691,6 +700,10 @@
     let db; try { db = await Webb.load(); } catch (e) { head.textContent = "Webb frame list unavailable: " + e.message; return; }
     $("webbCount").textContent = `${db.count.toLocaleString()} frames`;
     let frames = Webb.best(Webb.framesAt(h.ra, h.dec)), centre = h;
+    const path = S.pathQ && window.PathView ? await PathView.sky(S.pathQ).catch(() => null) : null;
+    const legend = `<br><span class="webb-legend"><i class="lg-gold"></i>Webb frame shown <i class="lg-grey"></i>other Webb frames that cover this spot <i class="lg-cross"></i>your position` +
+      (path ? ` <i class="lg-past"></i>path taken since 1900 <i class="lg-fut"></i>path ahead to 2100` : "") + `</span>` +
+      (path ? "" : `<br><span class="hint">No path is drawn: ${S.pathQ ? "no motion is known for this star" : "these are typed coordinates, not a known star. Search a star by name to see where it has been and where it is going"}.</span>`);
     if (frames.length) head.innerHTML = `<b>Webb has imaged ${esc(h.label)}</b> in ${frames.length} frame${frames.length > 1 ? "s" : ""}. ` +
       `The red cross is your position, the gold outline the frame shown.`;
     else {
@@ -699,6 +712,7 @@
       frames = [n, ...Webb.best(Webb.framesAt(n.ra, n.dec)).filter((p) => p.obs !== n.obs)]; centre = n;
       head.innerHTML = `<b>Webb has not imaged ${esc(h.label)}.</b> Showing its nearest Webb frame, “${esc(Webb.name(n))}”, ${n.dist.toFixed(2)}° away.`;
     }
+    head.innerHTML += legend;
     const show = async (p) => {
       list.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.obs === p.obs));
       const d = Webb.describe(p);
@@ -709,7 +723,9 @@
         `<a href="${Webb.progUrl(p)}" target="_blank" rel="noopener">Programme ${esc(p.pid)} at STScI ↗</a></span>`;
       try {
         await Webb.render($("webbAladin"), centre === h ? h.ra : p.ra, centre === h ? h.dec : p.dec, [p, ...frames.filter((x) => x !== p)],
-          { label: h.label, mark: { ra: h.ra, dec: h.dec }, base: $("webbBase").value, webbOpacity: +$("webbOp").value });
+          { label: h.label, mark: { ra: h.ra, dec: h.dec }, path, base: $("webbBase").value, webbOpacity: +$("webbOp").value });
+        const edge = Webb.inside(p, h.ra, h.dec) ? Webb.edgeArcsec(p, h.ra, h.dec) : null;
+        if (edge != null && edge < 15) $("webbNote").insertAdjacentHTML("beforeend", `<br><span class="hint">Your position is only ${edge.toFixed(0)}″ inside this frame's outline, right at its edge: Webb's pixels may not quite reach it.</span>`);
       } catch (e) { $("webbNote").textContent = "Sky viewer could not load: " + e.message; }
     };
     list.innerHTML = frames.slice(0, 12).map((p) => { const d = Webb.describe(p);
