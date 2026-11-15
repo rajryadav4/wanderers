@@ -9,15 +9,11 @@
   const $ = (id) => document.getElementById(id);
   const D2R = Math.PI / 180;
   const Q = new URLSearchParams(location.search);
-  const SURVEYS = {
-    visible: { name: "Digitized Sky Survey 2 (visible light)", hosts: ["https://irsa.ipac.caltech.edu/data/hips/CDS/DSS2/color",
-      "https://cdn.skies.esac.esa.int/DSSColor"], tile: 38000, allsky: 810000, credit: SkyView.CREDITS.deep },
-    infrared: { name: "2MASS near-infrared (1.2 to 2.2 µm), shown in false colour", hosts: ["https://irsa.ipac.caltech.edu/data/hips/CDS/2MASS/Color",
-      "https://cdn.skies.esac.esa.int/2MASSColor"], tile: 59000, allsky: 1030000, credit: SkyView.CREDITS.infrared },
-  };   // tile / allsky: mean tile and Norder3/Allsky.jpg in bytes, measured 2026-11-14 (for the save estimate)
+  // Survey hosts, sizes, cache names and the Aladin address live in Hips.CONFIG, shared with sw.js.
+  const SURVEYS = Object.fromEntries(Object.entries(Hips.CONFIG.surveys).map(([k, v]) => [k, { ...v, credit: SkyView.CREDITS[k === "visible" ? "deep" : k] }]));
   const surveyOf = (n) => SURVEYS[n] || SURVEYS.visible;
-  const ALADIN_URL = "https://cdn.jsdelivr.net/npm/aladin-lite@3.8.2/dist/aladin.js";
-  const CACHE_AUTO = "wanderers-sky-v1", CACHE_SAVED = "wanderers-sky-saved-v1", TILE_BYTES = 38000;
+  const ALADIN_URL = Hips.CONFIG.aladin, CACHE_AUTO = Hips.CONFIG.caches.recent, CACHE_SAVED = Hips.CONFIG.caches.saved;
+  const TILE_BYTES = Hips.CONFIG.surveys.visible.tile;
   const store = (k, v) => { try { v === undefined ? localStorage.removeItem(k) : localStorage.setItem(k, JSON.stringify(v)); } catch {} };
   const load = (k, d) => { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch { return d; } };
   const pick = (k, ok, d) => (ok(Q.get(k)) ? Q.get(k) : d);
@@ -307,14 +303,43 @@
   const DETAIL = { 1: "Basic", 2: "Standard", 3: "Sharp" };
   const planFor = (lat, order, survey) => { const v = surveyOf(survey); return Hips.plan(v.hosts[0], lat, order, v); };
   const SAVE = { order: 2, running: false, stop: false };
+  // The saved places, read from their manifests. Pictures in the saved cache that no manifest lists (a save from
+  // before manifests, or one that was stopped) are shown as one extra entry that can be removed too.
+  async function savedPlaces() {
+    if (!cacheOk || !(await caches.has(CACHE_SAVED))) return { places: [], loose: { n: 0, bytes: 0 } };
+    const c = await caches.open(CACHE_SAVED), keys = await c.keys(), places = [];
+    for (const k of keys) if (Hips.isManifest(k.url)) { const r = await c.match(k); if (r) places.push({ ...(await r.json()), manifest: k.url }); }
+    const listed = new Set(places.flatMap((p) => p.urls)), loose = keys.filter((k) => /\.jpg$/.test(k.url) && !listed.has(k.url));
+    let bytes = 0;
+    for (const k of loose) { const r = await c.match(k); bytes += +(r && r.headers.get("content-length")) || TILE_BYTES; }
+    places.sort((a, b) => b.lat - a.lat || a.order - b.order);
+    return { places, loose: { n: loose.length, bytes, urls: loose.map((k) => k.url) } };
+  }
+  async function removePlace(i) {
+    const { places, loose } = await savedPlaces(), c = await caches.open(CACHE_SAVED);
+    if (i === "loose") { for (const u of loose.urls) await c.delete(u); }
+    else {
+      const gone = places[i]; if (!gone) return;
+      for (const u of Hips.orphans(gone, places.filter((_, k) => k !== i))) await c.delete(u);
+      await c.delete(gone.manifest);
+    }
+    $("saveMsg").textContent = ""; renderSaved();
+  }
   async function renderSaved() {
     if (!cacheOk) { $("savedRow").textContent = "This browser cannot keep pictures on the device."; $("saveGo").disabled = true; return; }
-    const [auto, saved] = await Promise.all([cacheStats(CACHE_AUTO), cacheStats(CACHE_SAVED)]), places = load("wanderers.skySaved", []);
+    const [auto, saved, mine] = await Promise.all([cacheStats(CACHE_AUTO), cacheStats(CACHE_SAVED), savedPlaces()]);
     const day = (iso) => new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short" });
-    $("savedRow").textContent =
-      `Recent: ${auto.n ? `${auto.n} pictures, ${SkyView.fmtBytes(auto.bytes)} (cleared after 7 days)` : "none"}. ` +
-      `Saved places: ${saved.n ? (places.map((p) => `latitude ${SkyView.fmtLat(p.lat)}, ${DETAIL[p.order]}${p.survey === "infrared" ? ", infrared" : ""}, saved ${day(p.savedAt)}`).join("; ") || "a save that is not finished") + ` (${saved.n} pictures, ${SkyView.fmtBytes(saved.bytes)})` : "none"}.`;
-    $("removeSaved").hidden = !saved.n; $("clearAuto").disabled = !auto.n;
+    $("savedRow").textContent = `Recent: ${auto.n ? `${auto.n} pictures, ${SkyView.fmtBytes(auto.bytes)} (cleared after 7 days)` : "none"}. ` +
+      `Saved: ${saved.n ? `${saved.n} pictures, ${SkyView.fmtBytes(saved.bytes)}` : "none"}.`;
+    const rows = mine.places.map((p, i) => [i, `Latitude ${SkyView.fmtLat(p.lat)}, ${DETAIL[p.order]}${p.survey === "infrared" ? ", infrared" : ""}, ` +
+      `${p.tiles} pictures, saved ${day(p.savedAt)}`]);
+    if (mine.loose.n) rows.push(["loose", `${mine.loose.n} pictures from a save that did not finish (${SkyView.fmtBytes(mine.loose.bytes)})`]);
+    $("savedList").replaceChildren(...rows.map(([i, text]) => {
+      const li = document.createElement("li"), b = document.createElement("button");
+      b.className = "btn ghost"; b.textContent = "Remove"; b.dataset.place = i; b.onclick = () => removePlace(i === "loose" ? "loose" : +i);
+      li.append(text + " ", b); return li;
+    }));
+    $("clearAuto").disabled = !auto.n;
     seg("saveSeg", "order", SAVE.order);
     planSave();
   }
@@ -365,10 +390,10 @@
     for (const u of urls) if (await cache.match(u)) await recent.delete(u, { ignoreVary: true });
     SAVE.running = false; $("saveGo").disabled = false; $("saveStop").hidden = true;
     if (done === total) {
-      const same = (p) => Math.round(p.lat) === Math.round(lat) && p.order === SAVE.order && (p.survey || "visible") === survey;
-      const places = load("wanderers.skySaved", []).filter((p) => !same(p));
-      places.push({ lat, order: SAVE.order, survey, tiles: plan.tiles, savedAt: new Date().toISOString() });
-      store("wanderers.skySaved", places);
+      // The manifest is written last, so a place is listed only when all of its pictures are stored.
+      const m = { lat, order: SAVE.order, survey, tiles: plan.tiles, savedAt: new Date().toISOString(), urls };
+      await cache.put(Hips.manifestUrl(surveyOf(survey).hosts[0], lat, SAVE.order, survey), new Response(JSON.stringify(m), { headers: { "content-type": "application/json" } }));
+      store("wanderers.skySaved");                    // the old list in localStorage, before manifests
       const kept = navigator.storage && navigator.storage.persist ? await navigator.storage.persist().catch(() => false) : false;
       $("saveMsg").textContent = `Saved for latitude ${SkyView.fmtLat(lat)}.` + (kept ? "" :
         " On an iPhone, add this page to the Home Screen, or Safari may delete saved pictures after 7 days without a visit.");
@@ -411,7 +436,7 @@
     $("savePlace").oninput = planSave;
     $("saveSeg").querySelectorAll("button").forEach((b) => (b.onclick = () => { SAVE.order = +b.dataset.order; renderSaved(); }));
     $("clearAuto").onclick = async () => { await caches.delete(CACHE_AUTO); renderSaved(); };
-    $("removeSaved").onclick = async () => { await caches.delete(CACHE_SAVED); store("wanderers.skySaved"); $("saveMsg").textContent = ""; renderSaved(); };
+
     $("skyCredit").textContent = [SkyView.CREDITS.eye, SkyView.CREDITS.deep, SkyView.CREDITS.infrared].join(" ");
 
     // Gestures on the AR canvas. Registered before compass.js's own drag-to-look, so "drag the sky" can take them.

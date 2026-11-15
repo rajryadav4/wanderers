@@ -1,9 +1,28 @@
 /* HiPS tile arithmetic for the real-sky view. Pure functions, no network.
  * A HiPS tile at order k is HEALPix pixel n in the NESTED scheme with nside = 2^k (Gorski et al. 2005),
  * stored at  <base>/Norder{k}/Dir{floor(n/10000)*10000}/Npix{n}.jpg  (IVOA HiPS 1.0).
- * Used by compass.js (which tiles to save for a place) and sw.js (which saved tiles to drop first). */
+ * Used by realsky.js (which tiles to save for a place) and sw.js (which recent tiles to drop first).
+ * CONFIG below is the one place for the names both of them must agree on. */
 (function (root) {
   const D2R = Math.PI / 180, R2D = 180 / Math.PI;
+  // ---- settings shared by the page (realsky.js) and the service worker (sw.js) ----
+  const CONFIG = {
+    // Same survey on both hosts (checked 2026-11-14); the second is the one spacetelescopelive.org uses.
+    // Saved pictures are always fetched from, and stored under, the first. tile / allsky: mean tile and
+    // Norder3/Allsky.jpg in bytes, measured 2026-11-14, for the size shown before a save.
+    surveys: {
+      visible: { name: "Digitized Sky Survey 2 (visible light)", tile: 38000, allsky: 810000,
+        hosts: ["https://irsa.ipac.caltech.edu/data/hips/CDS/DSS2/color", "https://cdn.skies.esac.esa.int/DSSColor"] },
+      infrared: { name: "2MASS near-infrared (1.2 to 2.2 µm), shown in false colour", tile: 59000, allsky: 1030000,
+        hosts: ["https://irsa.ipac.caltech.edu/data/hips/CDS/2MASS/Color", "https://cdn.skies.esac.esa.int/2MASSColor"] },
+    },
+    tileRoots: ["https://irsa.ipac.caltech.edu/data/hips/", "https://cdn.skies.esac.esa.int/"],
+    // Aladin Lite is GPL-3.0, so it is loaded from its published package, not copied into this MIT repository.
+    aladin: "https://cdn.jsdelivr.net/npm/aladin-lite@3.8.2/dist/aladin.js",
+    caches: { recent: "wanderers-sky-v1", saved: "wanderers-sky-saved-v1", shell: "wanderers-shell-v1", pinned: "wanderers-data-v1" },
+    recent: { maxFiles: 1200, maxBytes: 40 * 1048576, maxAgeMs: 7 * 86400000 },
+  };
+
   const TILE_DEG = 58.6323;                       // side of an order-0 tile: sqrt(4*pi/12) radians
 
   function spread(v) { let r = 0; for (let i = 0; i < 15; i++) r |= ((v >> i) & 1) << (2 * i); return r; }
@@ -91,6 +110,16 @@
     return drop;
   }
 
-  const api = { pixel, centre, tileSide, orderFor, band, skyShare, tilesForLatitude, url, plan, evict };
+  // ---- saved places: one manifest per place, stored in the saved cache next to its pictures ----
+  // A manifest is { lat, order, survey, savedAt, tiles, urls }. The list of places on screen is the list of
+  // manifests, so it cannot disagree with what is stored. Removing a place deletes only what no other place lists.
+  const manifestUrl = (base, lat, order, survey = "visible") => `${base}/__saved__/${survey}_lat${Math.round(lat)}_order${order}.json`;
+  const isManifest = (u) => /\/__saved__\/[a-z]+_lat-?\d+_order\d+\.json$/.test(u);
+  function orphans(removed, others) {
+    const kept = new Set(others.flatMap((m) => m.urls));
+    return removed.urls.filter((u) => !kept.has(u));
+  }
+
+  const api = { CONFIG, manifestUrl, isManifest, orphans, pixel, centre, tileSide, orderFor, band, skyShare, tilesForLatitude, url, plan, evict };
   if (typeof module !== "undefined" && module.exports) module.exports = api; else root.Hips = api;
 })(typeof self !== "undefined" ? self : globalThis);
