@@ -165,22 +165,3 @@ a { color: var(--accent); }
 }
 /* Uppercase labels: keep units such as µm lower-case (an uppercased µ reads as "M") */
 .keep-case, .eyebrow .u, .tag-chip .u { text-transform: none; letter-spacing: .04em; }
-
-/* ---------- SPHEREx data status line (app/release.js, on index.html and observatory.html) ----------
-   Colours are the theme tokens above, so Day, Night and the OS dark mode are all covered. */
-.spx-status { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; box-sizing: border-box; max-width: 100%;
-  min-width: 0; margin: 12px 0 18px; padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--radius);
-  background: var(--surface-2); color: var(--muted); font: 400 .78rem/1.5 var(--f-mono); overflow-wrap: anywhere; }
-.spx-status[hidden] { display: none; }
-.spx-status .spx-dot { flex: none; align-self: center; width: 8px; height: 8px; border-radius: 50%; background: var(--known); }
-.spx-status .spx-dot-new { background: var(--cand); }
-.spx-status .spx-line { flex: 1 1 0; min-width: 0; }
-.spx-status .spx-part { white-space: nowrap; }
-.spx-status .spx-rel, .spx-status time { color: var(--text); }
-.spx-status .spx-rel { font-weight: 500; }
-.spx-status .spx-fail { color: var(--warn); }
-.spx-status .spx-new { flex-basis: 100%; color: var(--cand); font-weight: 500; }
-@media (max-width: 420px) { .spx-status .spx-part { white-space: normal; } }
-@media (prefers-reduced-motion: no-preference) { .spx-status:not([hidden]) { animation: spx-in .4s ease-out both; } }
-@keyframes spx-in { from { opacity: 0; } to { opacity: 1; } }
-
