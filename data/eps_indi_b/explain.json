@@ -1,17 +1,17 @@
 {
- "summary": "Epsilon Indi B is a known pair of brown dwarfs that orbit the star Epsilon Indi, 12.1 light-years away. WANDERERS measured a 75-arcsecond move from 2010 to 2026, or 4.72 arcseconds per year. This is within 0.7% of the Gaia DR3 value of 4.68. The object is 2.4 times brighter at 4 to 4.75 microns than at 3.3 microns, which is the methane dip of a cold brown dwarf. Confidence is high because all three required checks passed. The brightness check did not pass (-0.01 \u00b1 0.08 mag), and 59 of 149 spectrum points are flagged.",
+ "summary": "Epsilon Indi B is a known pair of brown dwarfs, objects too small to be stars, orbiting the star Epsilon Indi 12.1 light-years away. From 2010 to 2026 WANDERERS saw it move 74 arcseconds, 4.69 per year, matching Gaia's 4.68 within 0.2%. It is 2.5 times brighter at 4 to 4.75 microns than in the 3.3 micron methane band, a sign of a cold, methane-rich atmosphere. Confidence is high, though 69 of 180 spectrum points are flagged and it brightened slightly (0.06 \u00b1 0.03 mag), failing the steady-brightness check.",
  "qa": [
   {
    "q": "Why do we think this is what the card says?",
-   "a": "It moved 75 arcseconds since 2010. Its speed is 4.72 arcseconds per year, within 0.7% of Gaia's 4.68, so it is the same object, about 12.1 light-years away. It is 2.4 times brighter at 4 to 4.75 microns than in the 3.3 micron methane band. Methane makes that dip in cold brown dwarfs. But 59 of 149 spectrum points are flagged, and the steady-brightness check did not pass (-0.01 \u00b1 0.08 mag)."
+   "a": "It moves fast: 74 arcseconds between 2010 and 2026, or 4.69 arcseconds per year. That matches Gaia DR3's 4.68 to within 0.2%, which shows it's the known object, 12.1 light-years away. It's also 2.5 times brighter at 4 to 4.75 microns than at 3.3 microns, where methane absorbs light. That pattern marks a cold brown dwarf. Caveats: its brightness changed by -0.06 \u00b1 0.03 mag, and 69 of 180 spectrum points are flagged."
   },
   {
    "q": "What would make you less sure?",
-   "a": "Three things would make me less sure. First, 59 of the 149 spectrum points are flagged, so much of the spectrum is uncertain. Second, the brightness check did not pass. The change of -0.01 magnitudes is small next to its \u00b10.08 uncertainty, so we cannot say that the brightness was steady. Third, this is a pair of brown dwarfs. SPHEREx probably sees them as one blended dot, so each measurement mixes their light."
+   "a": "Over a third of the spectrum points (69 of 180) are flagged, so the spectrum's shape is less certain than the motion. The brightness changed by -0.06 \u00b1 0.03 mag, only about twice its uncertainty, so that change may not be real. This is a pair of brown dwarfs, so SPHEREx sees their light blended together. I would be much less sure if the speed stopped matching Gaia or the methane ratio fell below 1."
   },
   {
    "q": "Why use both WISE and SPHEREx?",
-   "a": "WISE imaged this spot in 2010, and SPHEREx imaged it in 2025 and 2026. Over that 16-year gap, Epsilon Indi B moved 75 arcseconds, about 12 SPHEREx pixels. That gives a speed of 4.72 arcseconds per year, close to Gaia's 4.68. SPHEREx also splits the light into a spectrum, which shows a methane dip: 2.4 times brighter at 4 to 4.75 microns than at 3.3. Caution: 59 of 149 spectrum points are flagged."
+   "a": "Time is the key. WISE photographed this sky in 2010 and SPHEREx in 2026, so together they give a 16-year baseline. Over that time Epsilon Indi B moved 74 arcseconds, about 12 SPHEREx pixels, which is easy to measure. SPHEREx's own visits span only about a year, under one pixel of motion. SPHEREx also adds a spectrum in many colors, revealing the methane dip of a cold brown dwarf."
   }
  ],
  "model_note": "Written by Claude (Claude Code, headless) from target.json only."

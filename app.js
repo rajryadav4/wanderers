@@ -163,10 +163,16 @@
       const ch = S.t.track.filter((p) => (p.ch || "w2") === S.ch).sort((a, b) => a.year - b.year);
       g.strokeStyle = "rgba(255,181,71,.9)"; g.lineWidth = 2; g.setLineDash([6, 4]);
       g.beginPath(); ch.forEach((p, j) => (j ? g.lineTo(X(p.x), Y(p.y)) : g.moveTo(X(p.x), Y(p.y)))); g.stroke(); g.setLineDash([]);
-      for (const p of ch) {
+      // label the years sparsely: with NEOWISE there is a dot every six months, so a label on each would smear
+      let lastLbl = null;
+      ch.forEach((p, j) => {
         g.fillStyle = "rgba(255,181,71,.95)"; g.beginPath(); g.arc(X(p.x), Y(p.y), 3.5, 0, 2 * Math.PI); g.fill();
-        g.fillStyle = "#ffe2b0"; g.font = "12px ui-monospace, monospace"; g.fillText(p.mission === "WISE" ? "2010" : Math.floor(p.year), X(p.x) + 8, Y(p.y) - 6);
-      }
+        const yr = p.mission === "WISE" ? 2010 : Math.floor(p.year), far = !lastLbl || Math.hypot(X(p.x) - lastLbl.x, Y(p.y) - lastLbl.y) > 34;
+        if (j === 0 || j === ch.length - 1 || (far && yr !== (lastLbl && lastLbl.yr))) {
+          g.fillStyle = "#ffe2b0"; g.font = "12px ui-monospace, monospace"; g.fillText(yr, X(p.x) + 8, Y(p.y) - 6);
+          lastLbl = { x: X(p.x), y: Y(p.y), yr };
+        }
+      });
     }
     // A pair from the automatic mover search (pipeline/vet.py): 2010 end, arrow, SPHEREx end.
     const pk = S.pick && S.t.changes && S.t.changes.items.find((c) => c.n === S.pick);
@@ -619,7 +625,7 @@
     if (MAP.ready) return;
     await loadAladin(); await A.init;
     const t = S.t || {};
-    MAP.aladin = A.aladin("#aladin", { survey: HIPS.spherex, fov: 0.12, cooFrame: "ICRSd", showReticle: true, showLayersControl: false,
+    MAP.aladin = A.aladin("#aladin", { survey: HIPS.spherex, fov: 0.12, cooFrame: "ICRSd", log: false, showReticle: true, showLayersControl: false,
       showGotoControl: false, showFullscreenControl: true, showCooGridControl: false, showSimbadPointerControl: false,
       showProjectionControl: false, showFrame: true, showZoomControl: true,
       target: t.grid ? `${t.grid.centre_ra} ${t.grid.centre_dec}` : "0 0" });
@@ -628,6 +634,9 @@
     MAP.aladin.setBaseImageLayer(MAP.layers.spherex);
     MAP.overlay = A.graphicOverlay({ color: "#ffb547", lineWidth: 2, lineDash: [6, 4] }); MAP.aladin.addOverlay(MAP.overlay);
     MAP.cat = A.catalog({ name: "target", sourceSize: 22, color: "#ffb547", shape: "circle" }); MAP.aladin.addCatalog(MAP.cat);
+    MAP.past = A.graphicOverlay({ color: "#7cc4ff", lineWidth: 2.5 }); MAP.aladin.addOverlay(MAP.past);                    // path taken
+    MAP.fut = A.graphicOverlay({ color: "#7ee787", lineWidth: 2.5, lineDash: [7, 5] }); MAP.aladin.addOverlay(MAP.fut);    // path ahead
+    MAP.yr = A.catalog({ name: "year", sourceSize: 16, color: "#7ee787", shape: "square" }); MAP.aladin.addCatalog(MAP.yr);  // predicted spot in a chosen year
     try {   // wavelength of each of the 102 cube frames, straight from the HiPS description
       const txt = await (await fetch(HIPS.spherex + "/properties")).text();
       const m = txt.match(/data_cube_crval3_arr\s*=\s*([\d.\s]+)/);
@@ -647,12 +656,47 @@
     if (ra == null && t) { ra = t.grid.centre_ra; dec = t.grid.centre_dec; label = t.name; }
     if (ra == null) return;
     MAP.aladin.gotoRaDec(ra, dec);
-    MAP.overlay.removeAll(); MAP.cat.removeAll();
+    MAP.overlay.removeAll(); MAP.cat.removeAll(); MAP.past.removeAll(); MAP.fut.removeAll(); MAP.yr.removeAll();
+    MAP.sp = null; $("mapYears").hidden = true; yrStop();
+    if (S.pathQ && window.PathView) PathView.sky(S.pathQ).then((sp) => {     // the star's path, 1900 to 2100
+      if (!sp || !MAP.past) return;
+      const back = sp.pts.filter((p) => p.year <= sp.now).map((p) => [p.ra, p.dec]), ahead = sp.pts.filter((p) => p.year >= sp.now).map((p) => [p.ra, p.dec]);
+      if (back.length > 1) MAP.past.add(A.polyline(back));
+      if (ahead.length > 1) MAP.fut.add(A.polyline(ahead));
+      MAP.sp = sp; $("mapYears").hidden = false; $("yrSlider").value = Math.round(sp.now);
+      const c = Math.cos(sp.pts[0].dec * Math.PI / 180), xs = sp.pts.map((p) => p.ra * c), ys = sp.pts.map((p) => p.dec);
+      const span = Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys));
+      if (span > 0) MAP.aladin.setFoV(Math.min(30, Math.max(0.03, span * 2.2)));   // fit the whole path
+      yrMove(sp.now);
+    }).catch(() => {});
     const pts = t && label === t.name ? t.track.filter((p) => (p.ch || "w2") === "w2").sort((a, b) => a.year - b.year) : [];
     if (pts.length >= 2) MAP.overlay.add(A.polyline(pts.map((p) => [p.ra, p.dec])));
     const last = pts.length ? pts[pts.length - 1] : { ra, dec };
     MAP.cat.addSources([A.source(last.ra, last.dec, { name: label })]);
   }
+  // ---------- year slider: move the star along its predicted path (any star with known motion) ----------
+  function yrMove(y) {
+    const sp = MAP.sp; if (!sp) return;
+    const P = sp.pts; let i = P.findIndex((p) => p.year >= y); if (i <= 0) i = 1; if (i >= P.length) i = P.length - 1;
+    const a = P[i - 1], b = P[i], t = b.year === a.year ? 0 : Math.max(0, Math.min(1, (y - a.year) / (b.year - a.year)));
+    MAP.yr.removeAll(); MAP.yr.addSources([A.source(a.ra + (b.ra - a.ra) * t, a.dec + (b.dec - a.dec) * t, { name: String(Math.round(y)) })]);
+    $("yrLbl").textContent = `${Math.round(y)} · ${Math.abs(y - sp.now) < 1 ? "now" : y < sp.now ? "where it was" : "predicted"}`;
+  }
+  let yrAnim = null;
+  function yrStop() { if (yrAnim) cancelAnimationFrame(yrAnim); yrAnim = null; $("yrPlay").textContent = "▶ Play its path"; }
+  $("yrSlider").oninput = (e) => { yrStop(); yrMove(+e.target.value); };
+  $("yrPlay").onclick = () => {
+    if (yrAnim) return yrStop();
+    if (reduceMotion) { $("yrSlider").value = 2100; return yrMove(2100); }
+    const t0 = performance.now(), y0 = +$("yrSlider").value >= 2099 ? 1900 : +$("yrSlider").value;
+    $("yrPlay").textContent = "❚❚ Pause";
+    const step = (now) => {
+      const y = Math.min(2100, y0 + (now - t0) / 1000 * 25);   // 25 years a second
+      $("yrSlider").value = Math.round(y); yrMove(y);
+      yrAnim = y < 2100 ? requestAnimationFrame(step) : (yrStop(), null);
+    };
+    yrAnim = requestAnimationFrame(step);
+  };
   async function showMap(ra, dec, label) {
     selectTab("map");
     try { await initMap(); mapGoTo(ra, dec, label); } catch (e) { $("coordMsg").textContent = "Sky map unavailable: " + e.message; }
@@ -675,6 +719,7 @@
   // ---------- path taken and path ahead (the team's star-path model, via pathview.js) ----------
   let pathSeq = 0;
   async function showPath(q) {
+    S.pathQ = q || null;
     const card = $("pathCard"), seq = ++pathSeq;
     if (!q || !window.PathView) { card.hidden = true; return; }
     card.hidden = document.body.classList.contains("stars-mode");
@@ -692,6 +737,10 @@
     let db; try { db = await Webb.load(); } catch (e) { head.textContent = "Webb frame list unavailable: " + e.message; return; }
     $("webbCount").textContent = `${db.count.toLocaleString()} frames`;
     let frames = Webb.best(Webb.framesAt(h.ra, h.dec)), centre = h;
+    const path = S.pathQ && window.PathView ? await PathView.sky(S.pathQ).catch(() => null) : null;
+    const legend = `<br><span class="webb-legend"><i class="lg-gold"></i>Webb frame shown <i class="lg-grey"></i>other Webb frames that cover this spot <i class="lg-cross"></i>your position` +
+      (path ? ` <i class="lg-past"></i>path taken since 1900 <i class="lg-fut"></i>path ahead to 2100` : "") + `</span>` +
+      (path ? "" : `<br><span class="hint">No path is drawn: ${S.pathQ ? "no motion is known for this star" : "these are typed coordinates, not a known star. Search a star by name to see where it has been and where it is going"}.</span>`);
     if (frames.length) head.innerHTML = `<b>Webb has imaged ${esc(h.label)}</b> in ${frames.length} frame${frames.length > 1 ? "s" : ""}. ` +
       `The red cross is your position, the gold outline the frame shown.`;
     else {
@@ -700,6 +749,7 @@
       frames = [n, ...Webb.best(Webb.framesAt(n.ra, n.dec)).filter((p) => p.obs !== n.obs)]; centre = n;
       head.innerHTML = `<b>Webb has not imaged ${esc(h.label)}.</b> Showing its nearest Webb frame, “${esc(Webb.name(n))}”, ${n.dist.toFixed(2)}° away.`;
     }
+    head.innerHTML += legend;
     const show = async (p) => {
       list.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.obs === p.obs));
       const d = Webb.describe(p);
@@ -710,7 +760,9 @@
         `<a href="${Webb.progUrl(p)}" target="_blank" rel="noopener">Programme ${esc(p.pid)} at STScI ↗</a></span>`;
       try {
         await Webb.render($("webbAladin"), centre === h ? h.ra : p.ra, centre === h ? h.dec : p.dec, [p, ...frames.filter((x) => x !== p)],
-          { label: h.label, mark: { ra: h.ra, dec: h.dec }, base: $("webbBase").value, webbOpacity: +$("webbOp").value });
+          { label: h.label, mark: { ra: h.ra, dec: h.dec }, path, base: $("webbBase").value, webbOpacity: +$("webbOp").value });
+        const edge = Webb.inside(p, h.ra, h.dec) ? Webb.edgeArcsec(p, h.ra, h.dec) : null;
+        if (edge != null && edge < 15) $("webbNote").insertAdjacentHTML("beforeend", `<br><span class="hint">Your position is only ${edge.toFixed(0)}″ inside this frame's outline, right at its edge: Webb's pixels may not quite reach it.</span>`);
       } catch (e) { $("webbNote").textContent = "Sky viewer could not load: " + e.message; }
     };
     list.innerHTML = frames.slice(0, 12).map((p) => { const d = Webb.describe(p);

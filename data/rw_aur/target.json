@@ -18,8 +18,8 @@
  "grid": {
   "npix": 150,
   "arcsec_per_pix": 2.0,
-  "centre_ra": 76.95608318054319,
-  "centre_dec": 30.401186825671143
+  "centre_ra": 76.95608318009566,
+  "centre_dec": 30.40118682967599
  },
  "frames": {
   "w2": [
@@ -32,38 +32,230 @@
     "snr": 323.9
    },
    {
-    "year": 2025.6936327960861,
-    "label": "SPHEREx 11 Sep 2025",
-    "mission": "SPHEREx",
-    "png": "w2_spherex_v1_1.png",
-    "n_images": 2,
-    "survey": 1,
-    "detected": true
-   },
-   {
-    "year": 2025.7126527042765,
-    "label": "SPHEREx 18 Sep 2025",
-    "mission": "SPHEREx",
-    "png": "w2_spherex_v1_2.png",
+    "year": 2014.1760019164956,
+    "label": "NEOWISE Mar 2014",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_00.png",
     "n_images": 10,
-    "survey": 1,
-    "detected": true
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
    },
    {
-    "year": 2025.7186364898084,
-    "label": "SPHEREx 20 Sep 2025",
+    "year": 2014.6997927446955,
+    "label": "NEOWISE Sep 2014",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_01.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2015.1655739904174,
+    "label": "NEOWISE Mar 2015",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_02.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2015.6969336071184,
+    "label": "NEOWISE Sep 2015",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_03.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2016.1487288158796,
+    "label": "NEOWISE Feb 2016",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_04.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2016.6943080082135,
+    "label": "NEOWISE Sep 2016",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_05.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2017.1460668035593,
+    "label": "NEOWISE Feb 2017",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_06.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2017.692309650924,
+    "label": "NEOWISE Sep 2017",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_07.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2018.123575633128,
+    "label": "NEOWISE Feb 2018",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_08.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2018.6961615331963,
+    "label": "NEOWISE Sep 2018",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_09.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2019.1255449691992,
+    "label": "NEOWISE Feb 2019",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_10.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2019.6930822724162,
+    "label": "NEOWISE Sep 2019",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_11.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2020.125454346338,
+    "label": "NEOWISE Feb 2020",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_12.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2020.694709650924,
+    "label": "NEOWISE Sep 2020",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_13.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2021.1239756331279,
+    "label": "NEOWISE Feb 2021",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_14.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 656.5,
+    "saturated_core": true
+   },
+   {
+    "year": 2021.6954078028748,
+    "label": "NEOWISE Sep 2021",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_15.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 629.8,
+    "saturated_core": true
+   },
+   {
+    "year": 2022.1277059548254,
+    "label": "NEOWISE Feb 2022",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_16.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 369.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2022.6936542094456,
+    "label": "NEOWISE Sep 2022",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_17.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2023.125071321013,
+    "label": "NEOWISE Feb 2023",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_18.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2023.6974836413415,
+    "label": "NEOWISE Sep 2023",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_19.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2024.122622587269,
+    "label": "NEOWISE Feb 2024",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_20.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2025.7132468557236,
+    "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
-    "png": "w2_spherex_v1_3.png",
-    "n_images": 2,
-    "survey": 1,
-    "detected": true
+    "png": "w2_spherex_v1.png",
+    "n_images": 12,
+    "detected": true,
+    "snr": 2862.2
    },
    {
-    "year": 2026.139985956345,
+    "year": 2026.1397990576834,
     "label": "SPHEREx 21 Feb 2026",
     "mission": "SPHEREx",
     "png": "w2_spherex_v2_1.png",
-    "n_images": 5,
+    "n_images": 6,
     "survey": 2,
     "detected": true
    },
@@ -73,6 +265,15 @@
     "mission": "SPHEREx",
     "png": "w2_spherex_v2_2.png",
     "n_images": 6,
+    "survey": 2,
+    "detected": true
+   },
+   {
+    "year": 2026.1730787879862,
+    "label": "SPHEREx 05 Mar 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2_3.png",
+    "n_images": 1,
     "survey": 2,
     "detected": true
    }
@@ -85,6 +286,216 @@
     "png": "w1_wise2010.png",
     "detected": true,
     "snr": 299.7
+   },
+   {
+    "year": 2014.1760019164956,
+    "label": "NEOWISE Mar 2014",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_00.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2014.6997927446955,
+    "label": "NEOWISE Sep 2014",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_01.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2015.1655739904174,
+    "label": "NEOWISE Mar 2015",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_02.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2015.6969336071184,
+    "label": "NEOWISE Sep 2015",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_03.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2016.1487288158796,
+    "label": "NEOWISE Feb 2016",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_04.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2016.6943080082135,
+    "label": "NEOWISE Sep 2016",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_05.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2017.1460668035593,
+    "label": "NEOWISE Feb 2017",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_06.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2017.692309650924,
+    "label": "NEOWISE Sep 2017",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_07.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2018.123575633128,
+    "label": "NEOWISE Feb 2018",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_08.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2018.6961615331963,
+    "label": "NEOWISE Sep 2018",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_09.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2019.1255449691992,
+    "label": "NEOWISE Feb 2019",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_10.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2019.6930822724162,
+    "label": "NEOWISE Sep 2019",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_11.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2020.125454346338,
+    "label": "NEOWISE Feb 2020",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_12.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2020.694709650924,
+    "label": "NEOWISE Sep 2020",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_13.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2021.1239756331279,
+    "label": "NEOWISE Feb 2021",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_14.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2021.6954078028748,
+    "label": "NEOWISE Sep 2021",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_15.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 633.6,
+    "saturated_core": true
+   },
+   {
+    "year": 2022.1277059548254,
+    "label": "NEOWISE Feb 2022",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_16.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2022.6936542094456,
+    "label": "NEOWISE Sep 2022",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_17.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2023.125071321013,
+    "label": "NEOWISE Feb 2023",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_18.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2023.6974836413415,
+    "label": "NEOWISE Sep 2023",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_19.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2024.122622587269,
+    "label": "NEOWISE Feb 2024",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_20.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 234.1,
+    "saturated_core": true
    },
    {
     "year": 2025.6671329576948,
@@ -105,28 +516,19 @@
     "detected": true
    },
    {
-    "year": 2026.1706632429816,
-    "label": "SPHEREx 04 Mar 2026",
-    "mission": "SPHEREx",
-    "png": "w1_spherex_v2_1.png",
-    "n_images": 1,
-    "survey": 2,
-    "detected": true
-   },
-   {
-    "year": 2026.175860234632,
+    "year": 2026.1758588727728,
     "label": "SPHEREx 06 Mar 2026",
     "mission": "SPHEREx",
-    "png": "w1_spherex_v2_2.png",
+    "png": "w1_spherex_v2_1.png",
     "n_images": 3,
     "survey": 2,
     "detected": true
    },
    {
-    "year": 2026.183109593006,
+    "year": 2026.1831075502025,
     "label": "SPHEREx 08 Mar 2026",
     "mission": "SPHEREx",
-    "png": "w1_spherex_v2_3.png",
+    "png": "w1_spherex_v2_2.png",
     "n_images": 2,
     "survey": 2,
     "detected": true
@@ -141,7 +543,7 @@
     "n_images": 13
    },
    {
-    "year": 2026.180601376929,
+    "year": 2026.1802441650852,
     "label": "SPHEREx Mar 2026",
     "mission": "SPHEREx",
     "png": "d1_spherex_v2.png",
@@ -150,14 +552,14 @@
   ],
   "d2": [
    {
-    "year": 2025.6888719630952,
+    "year": 2025.688870941701,
     "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
     "png": "d2_spherex_v1.png",
     "n_images": 12
    },
    {
-    "year": 2026.171582739564,
+    "year": 2026.1705974810477,
     "label": "SPHEREx Mar 2026",
     "mission": "SPHEREx",
     "png": "d2_spherex_v2.png",
@@ -166,18 +568,18 @@
   ],
   "d3": [
    {
-    "year": 2025.7122321067482,
+    "year": 2025.7132468557231,
     "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
     "png": "d3_spherex_v1.png",
-    "n_images": 13
+    "n_images": 12
    },
    {
-    "year": 2026.1520521591492,
+    "year": 2026.1510377287818,
     "label": "SPHEREx Feb 2026",
     "mission": "SPHEREx",
     "png": "d3_spherex_v2.png",
-    "n_images": 12
+    "n_images": 13
    }
   ],
   "d4": [
@@ -189,7 +591,7 @@
     "n_images": 13
    },
    {
-    "year": 2026.1806013769265,
+    "year": 2026.1802441650825,
     "label": "SPHEREx Mar 2026",
     "mission": "SPHEREx",
     "png": "d4_spherex_v2.png",
@@ -198,14 +600,14 @@
   ],
   "d5": [
    {
-    "year": 2025.6888719630924,
+    "year": 2025.6889483729983,
     "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
     "png": "d5_spherex_v1.png",
     "n_images": 12
    },
    {
-    "year": 2026.1715827395615,
+    "year": 2026.1715836823823,
     "label": "SPHEREx Mar 2026",
     "mission": "SPHEREx",
     "png": "d5_spherex_v2.png",
@@ -214,18 +616,18 @@
   ],
   "d6": [
    {
-    "year": 2025.7122321067436,
+    "year": 2025.7132468557236,
     "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
     "png": "d6_spherex_v1.png",
-    "n_images": 13
+    "n_images": 12
    },
    {
-    "year": 2026.1520521591522,
+    "year": 2026.1510377287848,
     "label": "SPHEREx Feb 2026",
     "mission": "SPHEREx",
     "png": "d6_spherex_v2.png",
-    "n_images": 12
+    "n_images": 13
    }
   ]
  },
@@ -250,22 +652,232 @@
     "snr": 323.9
    },
    {
-    "year": 2025.7107904010393,
+    "year": 2014.1760019164956,
+    "label": "NEOWISE Mar 2014",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_00.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2014.6997927446955,
+    "label": "NEOWISE Sep 2014",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_01.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2015.1655739904174,
+    "label": "NEOWISE Mar 2015",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_02.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2015.6969336071184,
+    "label": "NEOWISE Sep 2015",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_03.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2016.1487288158796,
+    "label": "NEOWISE Feb 2016",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_04.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2016.6943080082135,
+    "label": "NEOWISE Sep 2016",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_05.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2017.1460668035593,
+    "label": "NEOWISE Feb 2017",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_06.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2017.692309650924,
+    "label": "NEOWISE Sep 2017",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_07.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2018.123575633128,
+    "label": "NEOWISE Feb 2018",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_08.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2018.6961615331963,
+    "label": "NEOWISE Sep 2018",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_09.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2019.1255449691992,
+    "label": "NEOWISE Feb 2019",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_10.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2019.6930822724162,
+    "label": "NEOWISE Sep 2019",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_11.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2020.125454346338,
+    "label": "NEOWISE Feb 2020",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_12.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2020.694709650924,
+    "label": "NEOWISE Sep 2020",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_13.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2021.1239756331279,
+    "label": "NEOWISE Feb 2021",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_14.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 656.5,
+    "saturated_core": true
+   },
+   {
+    "year": 2021.6954078028748,
+    "label": "NEOWISE Sep 2021",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_15.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 629.8,
+    "saturated_core": true
+   },
+   {
+    "year": 2022.1277059548254,
+    "label": "NEOWISE Feb 2022",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_16.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 369.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2022.6936542094456,
+    "label": "NEOWISE Sep 2022",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_17.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2023.125071321013,
+    "label": "NEOWISE Feb 2023",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_18.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2023.6974836413415,
+    "label": "NEOWISE Sep 2023",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_19.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2024.122622587269,
+    "label": "NEOWISE Feb 2024",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_20.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2025.7132468557236,
     "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
     "png": "w2_spherex_v1.png",
-    "n_images": 14,
+    "n_images": 12,
     "detected": true,
-    "snr": 2919.0
+    "snr": 2862.2
    },
    {
-    "year": 2026.1514420033675,
+    "year": 2026.152138876108,
     "label": "SPHEREx Feb 2026",
     "mission": "SPHEREx",
     "png": "w2_spherex_v2.png",
-    "n_images": 11,
+    "n_images": 13,
     "detected": true,
-    "snr": 2629.1
+    "snr": 2583.9
    }
   ],
   "w1": [
@@ -278,22 +890,232 @@
     "snr": 299.7
    },
    {
+    "year": 2014.1760019164956,
+    "label": "NEOWISE Mar 2014",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_00.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2014.6997927446955,
+    "label": "NEOWISE Sep 2014",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_01.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2015.1655739904174,
+    "label": "NEOWISE Mar 2015",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_02.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2015.6969336071184,
+    "label": "NEOWISE Sep 2015",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_03.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2016.1487288158796,
+    "label": "NEOWISE Feb 2016",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_04.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2016.6943080082135,
+    "label": "NEOWISE Sep 2016",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_05.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2017.1460668035593,
+    "label": "NEOWISE Feb 2017",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_06.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2017.692309650924,
+    "label": "NEOWISE Sep 2017",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_07.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2018.123575633128,
+    "label": "NEOWISE Feb 2018",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_08.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2018.6961615331963,
+    "label": "NEOWISE Sep 2018",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_09.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2019.1255449691992,
+    "label": "NEOWISE Feb 2019",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_10.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2019.6930822724162,
+    "label": "NEOWISE Sep 2019",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_11.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2020.125454346338,
+    "label": "NEOWISE Feb 2020",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_12.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2020.694709650924,
+    "label": "NEOWISE Sep 2020",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_13.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2021.1239756331279,
+    "label": "NEOWISE Feb 2021",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_14.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2021.6954078028748,
+    "label": "NEOWISE Sep 2021",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_15.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 633.6,
+    "saturated_core": true
+   },
+   {
+    "year": 2022.1277059548254,
+    "label": "NEOWISE Feb 2022",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_16.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2022.6936542094456,
+    "label": "NEOWISE Sep 2022",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_17.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2023.125071321013,
+    "label": "NEOWISE Feb 2023",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_18.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2023.6974836413415,
+    "label": "NEOWISE Sep 2023",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_19.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 0.0,
+    "saturated_core": true
+   },
+   {
+    "year": 2024.122622587269,
+    "label": "NEOWISE Feb 2024",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_20.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 234.1,
+    "saturated_core": true
+   },
+   {
     "year": 2025.6730261427729,
     "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
     "png": "w1_spherex_v1.png",
     "n_images": 7,
     "detected": true,
-    "snr": 3051.7
+    "snr": 3051.8
    },
    {
-    "year": 2026.1774105221484,
+    "year": 2026.178758343745,
     "label": "SPHEREx Mar 2026",
     "mission": "SPHEREx",
     "png": "w1_spherex_v2.png",
-    "n_images": 6,
+    "n_images": 5,
     "detected": true,
-    "snr": 2947.5
+    "snr": 3390.6
    }
   ]
  },
@@ -626,14 +1448,12 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W37_1A_0068_3D2_spx_l2b-v27-2026-235",
-   "date": "2025-09-08 06:41",
+   "image": "level2_2025W37_1A_0068_2D2_spx_l2b-v27-2026-235",
+   "date": "2025-09-08 06:39",
    "detector": 2,
-   "lam_um": 1.512,
+   "lam_um": 1.476,
    "flags_at_target": [
-    "TRANSIENT",
-    "OVERFLOW",
-    "BLOOM"
+    "OVERFLOW"
    ],
    "used_in_spectrum": false
   },
@@ -685,10 +1505,10 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W37_1A_0124_1D5_spx_l2b-v27-2026-235",
-   "date": "2025-09-08 13:12",
+   "image": "level2_2025W37_1A_0124_2D5_spx_l2b-v27-2026-235",
+   "date": "2025-09-08 13:14",
    "detector": 5,
-   "lam_um": 3.827,
+   "lam_um": 3.86,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
@@ -721,15 +1541,14 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W37_1A_0366_2D2_spx_l2b-v27-2026-235",
-   "date": "2025-09-09 20:10",
+   "image": "level2_2025W37_1A_0366_1D2_spx_l2b-v27-2026-235",
+   "date": "2025-09-09 20:08",
    "detector": 2,
-   "lam_um": 1.214,
+   "lam_um": 1.186,
    "flags_at_target": [
     "TRANSIENT",
-    "OVERFLOW",
     "SUR_ERROR",
-    "NONFUNC"
+    "HALO"
    ],
    "used_in_spectrum": false
   },
@@ -780,10 +1599,10 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W37_1A_0366_4D5_spx_l2b-v27-2026-235",
-   "date": "2025-09-09 20:14",
+   "image": "level2_2025W37_1A_0379_1D5_spx_l2b-v27-2026-235",
+   "date": "2025-09-09 21:46",
    "detector": 5,
-   "lam_um": 4.03,
+   "lam_um": 4.065,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
@@ -816,10 +1635,10 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W37_1A_0379_4D2_spx_l2b-v27-2026-235",
-   "date": "2025-09-09 21:53",
+   "image": "level2_2025W37_1A_0379_3D2_spx_l2b-v27-2026-235",
+   "date": "2025-09-09 21:51",
    "detector": 2,
-   "lam_um": 1.397,
+   "lam_um": 1.365,
    "flags_at_target": [
     "OVERFLOW"
    ],
@@ -878,34 +1697,40 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W37_1A_0496_2D5_spx_l2b-v27-2026-235",
-   "date": "2025-09-10 12:29",
+   "image": "level2_2025W37_1A_0553_1D5_spx_l2b-v27-2026-235",
+   "date": "2025-09-10 18:57",
    "detector": 5,
-   "lam_um": 4.401,
-   "flags_at_target": [
-    "OVERFLOW"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W37_2A_0051_1D3_spx_l2b-v27-2026-236",
-   "date": "2025-09-11 16:16",
-   "detector": 3,
-   "lam_um": 2.354,
+   "lam_um": 4.207,
    "flags_at_target": [
     "TRANSIENT",
+    "OVERFLOW",
     "SUR_ERROR",
     "BLOOM"
    ],
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W37_2A_0051_1D6_spx_l2b-v27-2026-236",
-   "date": "2025-09-11 16:16",
-   "detector": 6,
-   "lam_um": 4.961,
+   "image": "level2_2025W38_1A_0538_1D3_spx_l2b-v27-2026-237",
+   "date": "2025-09-17 02:34",
+   "detector": 3,
+   "lam_um": 1.621,
    "flags_at_target": [
-    "OVERFLOW"
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W38_1A_0538_1D6_spx_l2b-v27-2026-237",
+   "date": "2025-09-17 02:34",
+   "detector": 6,
+   "lam_um": 4.409,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
    ],
    "used_in_spectrum": false
   },
@@ -933,22 +1758,29 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_1A_0538_3D3_spx_l2b-v27-2026-237",
-   "date": "2025-09-17 02:38",
+   "image": "level2_2025W38_1A_0691_1D3_spx_l2b-v27-2026-237",
+   "date": "2025-09-17 22:08",
    "detector": 3,
-   "lam_um": 1.697,
+   "lam_um": 1.736,
    "flags_at_target": [
-    "OVERFLOW"
+    "TRANSIENT",
+    "SUR_ERROR",
+    "BLOOM"
    ],
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_1A_0538_3D6_spx_l2b-v27-2026-237",
-   "date": "2025-09-17 02:38",
+   "image": "level2_2025W38_1A_0691_1D6_spx_l2b-v27-2026-237",
+   "date": "2025-09-17 22:08",
    "detector": 6,
-   "lam_um": 4.472,
+   "lam_um": 4.505,
    "flags_at_target": [
-    "OVERFLOW"
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "COLD",
+    "BLOOM"
    ],
    "used_in_spectrum": false
   },
@@ -976,26 +1808,27 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_1A_0691_3D3_spx_l2b-v27-2026-237",
-   "date": "2025-09-17 22:12",
+   "image": "level2_2025W38_1A_0691_4D3_spx_l2b-v27-2026-237",
+   "date": "2025-09-17 22:15",
    "detector": 3,
-   "lam_um": 1.818,
+   "lam_um": 1.86,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
+    "SUR_ERROR",
     "BLOOM"
    ],
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_1A_0691_3D6_spx_l2b-v27-2026-237",
-   "date": "2025-09-17 22:12",
+   "image": "level2_2025W38_1A_0691_4D6_spx_l2b-v27-2026-237",
+   "date": "2025-09-17 22:15",
    "detector": 6,
-   "lam_um": 4.57,
+   "lam_um": 4.604,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
-    "NONFUNC",
+    "SUR_ERROR",
     "BLOOM"
    ],
    "used_in_spectrum": false
@@ -1027,26 +1860,29 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_1A_0738_2D3_spx_l2b-v27-2026-237",
-   "date": "2025-09-18 04:42",
+   "image": "level2_2025W38_1A_0738_3D3_spx_l2b-v27-2026-237",
+   "date": "2025-09-18 04:44",
    "detector": 3,
-   "lam_um": 2.199,
+   "lam_um": 2.25,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
     "BLOOM"
    ],
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_1A_0738_2D6_spx_l2b-v27-2026-237",
-   "date": "2025-09-18 04:42",
+   "image": "level2_2025W38_1A_0738_3D6_spx_l2b-v27-2026-237",
+   "date": "2025-09-18 04:44",
    "detector": 6,
-   "lam_um": 4.853,
+   "lam_um": 4.889,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
     "SUR_ERROR",
+    "NONFUNC",
     "BLOOM"
    ],
    "used_in_spectrum": false
@@ -1078,27 +1914,28 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_2C_0023_1D3_spx_l2b-v27-2026-237",
-   "date": "2025-09-18 14:23",
+   "image": "level2_2025W38_2C_0023_2D3_spx_l2b-v27-2026-237",
+   "date": "2025-09-18 14:25",
    "detector": 3,
-   "lam_um": 1.903,
+   "lam_um": 1.947,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
-    "SUR_ERROR",
-    "BLOOM"
+    "BLOOM",
+    "HALO"
    ],
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_2C_0023_1D6_spx_l2b-v27-2026-237",
-   "date": "2025-09-18 14:23",
+   "image": "level2_2025W38_2C_0023_2D6_spx_l2b-v27-2026-237",
+   "date": "2025-09-18 14:25",
    "detector": 6,
-   "lam_um": 4.637,
+   "lam_um": 4.671,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
     "SUR_ERROR",
+    "NONFUNC",
     "BLOOM"
    ],
    "used_in_spectrum": false
@@ -1129,23 +1966,22 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_2C_0023_4D3_spx_l2b-v27-2026-237",
-   "date": "2025-09-18 14:29",
+   "image": "level2_2025W38_2C_0124_1D3_spx_l2b-v27-2026-237",
+   "date": "2025-09-19 03:29",
    "detector": 3,
-   "lam_um": 2.038,
+   "lam_um": 2.406,
    "flags_at_target": [
     "TRANSIENT",
-    "OVERFLOW",
-    "BLOOM",
+    "SUR_ERROR",
     "HALO"
    ],
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_2C_0023_4D6_spx_l2b-v27-2026-237",
-   "date": "2025-09-18 14:29",
+   "image": "level2_2025W38_2C_0124_1D6_spx_l2b-v27-2026-237",
+   "date": "2025-09-19 03:29",
    "detector": 6,
-   "lam_um": 4.739,
+   "lam_um": 4.996,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
@@ -1182,30 +2018,25 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_2C_0342_2D3_spx_l2b-v27-2026-237",
-   "date": "2025-09-20 05:35",
+   "image": "level2_2026W08_2A_0233_1D3_spx_l2b-v27-2026-227",
+   "date": "2026-02-20 17:17",
    "detector": 3,
-   "lam_um": 2.134,
+   "lam_um": 1.937,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
     "SUR_ERROR",
-    "NONFUNC",
     "BLOOM"
    ],
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W38_2C_0342_2D6_spx_l2b-v27-2026-237",
-   "date": "2025-09-20 05:35",
+   "image": "level2_2026W08_2A_0233_1D6_spx_l2b-v27-2026-227",
+   "date": "2026-02-20 17:17",
    "detector": 6,
-   "lam_um": 4.808,
+   "lam_um": 4.663,
    "flags_at_target": [
-    "TRANSIENT",
-    "OVERFLOW",
-    "SUR_ERROR",
-    "NONFUNC",
-    "BLOOM"
+    "OVERFLOW"
    ],
    "used_in_spectrum": false
   },
@@ -1430,10 +2261,10 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W09_2A_0503_3D2_spx_l2b-v27-2026-229",
-   "date": "2026-03-01 05:00",
+   "image": "level2_2026W09_2A_0503_2D2_spx_l2b-v27-2026-229",
+   "date": "2026-03-01 04:58",
    "detector": 2,
-   "lam_um": 1.33,
+   "lam_um": 1.299,
    "flags_at_target": [
     "OVERFLOW"
    ],
@@ -1531,10 +2362,10 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W10_1A_0092_1D5_spx_l2b-v27-2026-229",
-   "date": "2026-03-02 10:16",
+   "image": "level2_2026W10_1A_0092_2D5_spx_l2b-v27-2026-229",
+   "date": "2026-03-02 10:18",
    "detector": 5,
-   "lam_um": 4.168,
+   "lam_um": 4.204,
    "flags_at_target": [
     "OVERFLOW"
    ],
@@ -1559,6 +2390,18 @@
    "lam_um": 4.24,
    "flags_at_target": [
     "OVERFLOW"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_1A_0092_4D2_spx_l2b-v27-2026-229",
+   "date": "2026-03-02 10:22",
+   "detector": 2,
+   "lam_um": 1.497,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "BLOOM"
    ],
    "used_in_spectrum": false
   },
@@ -1608,37 +2451,24 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W10_1A_0445_4D1_spx_l2b-v27-2026-229",
-   "date": "2026-03-04 08:02",
+   "image": "level2_2026W10_1A_0445_3D1_spx_l2b-v27-2026-229",
+   "date": "2026-03-04 07:59",
    "detector": 1,
-   "lam_um": 0.921,
+   "lam_um": 0.9,
    "flags_at_target": [
-    "OVERFLOW"
+    "HALO"
    ],
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W10_1A_0445_4D4_spx_l2b-v27-2026-229",
-   "date": "2026-03-04 08:02",
+   "image": "level2_2026W10_1A_0445_3D4_spx_l2b-v27-2026-229",
+   "date": "2026-03-04 07:59",
    "detector": 4,
-   "lam_um": 3.083,
+   "lam_um": 2.999,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
     "SUR_ERROR",
-    "NONFUNC",
-    "BLOOM"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2026W10_1A_0602_1D2_spx_l2b-v27-2026-229",
-   "date": "2026-03-05 05:06",
-   "detector": 2,
-   "lam_um": 1.533,
-   "flags_at_target": [
-    "TRANSIENT",
-    "OVERFLOW",
     "BLOOM"
    ],
    "used_in_spectrum": false
@@ -1690,10 +2520,10 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W10_1A_0602_3D5_spx_l2b-v27-2026-229",
-   "date": "2026-03-05 05:10",
+   "image": "level2_2026W10_1A_0602_4D5_spx_l2b-v27-2026-229",
+   "date": "2026-03-05 05:12",
    "detector": 5,
-   "lam_um": 4.386,
+   "lam_um": 4.424,
    "flags_at_target": [
     "OVERFLOW"
    ],
@@ -1723,6 +2553,17 @@
    "used_in_spectrum": false
   },
   {
+   "image": "level2_2026W10_1A_0639_4D2_spx_l2b-v27-2026-229",
+   "date": "2026-03-05 10:04",
+   "detector": 2,
+   "lam_um": 1.12,
+   "flags_at_target": [
+    "OVERFLOW",
+    "PERSIST"
+   ],
+   "used_in_spectrum": false
+  },
+  {
    "image": "level2_2026W10_2B_0137_1D1_spx_l2b-v27-2026-231",
    "date": "2026-03-06 05:31",
    "detector": 1,
@@ -1747,25 +2588,24 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W10_2B_0137_3D1_spx_l2b-v27-2026-231",
-   "date": "2026-03-06 05:36",
+   "image": "level2_2026W10_2B_0137_2D1_spx_l2b-v27-2026-231",
+   "date": "2026-03-06 05:34",
    "detector": 1,
-   "lam_um": 0.988,
+   "lam_um": 0.965,
    "flags_at_target": [
     "OVERFLOW"
    ],
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W10_2B_0137_3D4_spx_l2b-v27-2026-231",
-   "date": "2026-03-06 05:36",
+   "image": "level2_2026W10_2B_0137_2D4_spx_l2b-v27-2026-231",
+   "date": "2026-03-06 05:34",
    "detector": 4,
-   "lam_um": 3.341,
+   "lam_um": 3.253,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
     "SUR_ERROR",
-    "NONFUNC",
     "BLOOM"
    ],
    "used_in_spectrum": false
@@ -1793,16 +2633,6 @@
     "OVERFLOW",
     "SUR_ERROR",
     "BLOOM"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2026W10_2B_0340_1D2_spx_l2b-v27-2026-231",
-   "date": "2026-03-07 07:36",
-   "detector": 2,
-   "lam_um": 1.146,
-   "flags_at_target": [
-    "OVERFLOW"
    ],
    "used_in_spectrum": false
   },
@@ -1857,36 +2687,31 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W10_2B_0340_3D5_spx_l2b-v27-2026-231",
-   "date": "2026-03-07 07:40",
+   "image": "level2_2026W10_2B_0340_4D5_spx_l2b-v27-2026-231",
+   "date": "2026-03-07 07:42",
    "detector": 5,
-   "lam_um": 3.946,
+   "lam_um": 3.981,
    "flags_at_target": [
-    "TRANSIENT",
-    "OVERFLOW",
-    "SUR_ERROR",
-    "BLOOM"
+    "OVERFLOW"
    ],
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W10_2B_0591_4D1_spx_l2b-v27-2026-231",
-   "date": "2026-03-08 16:15",
+   "image": "level2_2026W10_2B_0591_3D1_spx_l2b-v27-2026-231",
+   "date": "2026-03-08 16:13",
    "detector": 1,
-   "lam_um": 0.758,
+   "lam_um": 0.741,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
   {
-   "image": "level2_2026W10_2B_0591_4D4_spx_l2b-v27-2026-231",
-   "date": "2026-03-08 16:15",
+   "image": "level2_2026W10_2B_0591_3D4_spx_l2b-v27-2026-231",
+   "date": "2026-03-08 16:13",
    "detector": 4,
-   "lam_um": 2.465,
+   "lam_um": 2.419,
    "flags_at_target": [
-    "TRANSIENT",
     "OVERFLOW",
-    "SUR_ERROR",
-    "BLOOM"
+    "DICHROIC"
    ],
    "used_in_spectrum": false
   },
@@ -1914,24 +2739,28 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W10_2B_0626_3D1_spx_l2b-v27-2026-231",
-   "date": "2026-03-08 21:10",
+   "image": "level2_2026W10_2B_0626_2D1_spx_l2b-v27-2026-231",
+   "date": "2026-03-08 21:08",
    "detector": 1,
-   "lam_um": 1.086,
-   "flags_at_target": [
-    "OVERFLOW"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2026W10_2B_0626_3D4_spx_l2b-v27-2026-231",
-   "date": "2026-03-08 21:10",
-   "detector": 4,
-   "lam_um": 3.718,
+   "lam_um": 1.06,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
     "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_2B_0626_2D4_spx_l2b-v27-2026-231",
+   "date": "2026-03-08 21:08",
+   "detector": 4,
+   "lam_um": 3.621,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
     "BLOOM"
    ],
    "used_in_spectrum": false
@@ -1984,21 +2813,18 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W11_1A_0285_2D1_spx_l2b-v27-2026-232",
-   "date": "2026-03-10 10:35",
+   "image": "level2_2026W11_1A_0285_1D1_spx_l2b-v27-2026-232",
+   "date": "2026-03-10 10:33",
    "detector": 1,
-   "lam_um": 0.794,
-   "flags_at_target": [
-    "OVERFLOW",
-    "HALO"
-   ],
-   "used_in_spectrum": false
+   "lam_um": 0.776,
+   "flags_at_target": [],
+   "used_in_spectrum": true
   },
   {
-   "image": "level2_2026W11_1A_0285_2D4_spx_l2b-v27-2026-232",
-   "date": "2026-03-10 10:35",
+   "image": "level2_2026W11_1A_0285_1D4_spx_l2b-v27-2026-232",
+   "date": "2026-03-10 10:33",
    "detector": 4,
-   "lam_um": 2.6,
+   "lam_um": 2.531,
    "flags_at_target": [
     "TRANSIENT",
     "OVERFLOW",
@@ -2031,23 +2857,22 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W11_1A_0645_1D1_spx_l2b-v27-2026-232",
-   "date": "2026-03-12 00:03",
+   "image": "level2_2026W11_1A_0285_4D1_spx_l2b-v27-2026-232",
+   "date": "2026-03-10 10:40",
    "detector": 1,
-   "lam_um": 0.852,
+   "lam_um": 0.832,
    "flags_at_target": [
     "OVERFLOW"
    ],
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W11_1A_0645_1D4_spx_l2b-v27-2026-232",
-   "date": "2026-03-12 00:03",
+   "image": "level2_2026W11_1A_0285_4D4_spx_l2b-v27-2026-232",
+   "date": "2026-03-10 10:40",
    "detector": 4,
-   "lam_um": 2.817,
+   "lam_um": 2.743,
    "flags_at_target": [
     "TRANSIENT",
-    "OVERFLOW",
     "SUR_ERROR",
     "BLOOM"
    ],
@@ -2057,16 +2882,6 @@
  "ghosts": {
   "w2_wise2010.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -2074,16 +2889,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.0,
-    28.4,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -2117,16 +2922,6 @@
     14.7
    ],
    [
-    52.8,
-    127.5,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.8,
     13.0
@@ -2142,6 +2937,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -2152,9 +2982,14 @@
     12.8
    ],
    [
-    46.8,
-    63.7,
-    16.9
+    52.8,
+    127.5,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -2170,16 +3005,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.1,
@@ -2217,17 +3042,7 @@
     16.4
    ]
   ],
-  "w2_spherex_v1_1.png": [
-   [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
+  "w2_neowise_00.png": [
    [
     110.6,
     26.5,
@@ -2236,16 +3051,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -2260,7 +3065,7 @@
    ],
    [
     74.5,
-    74.4,
+    74.6,
     12.2
    ],
    [
@@ -2270,7 +3075,7 @@
    ],
    [
     140.5,
-    104.3,
+    104.4,
     16.0
    ],
    [
@@ -2279,18 +3084,8 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
-    74.6,
+    74.8,
     13.0
    ],
    [
@@ -2304,6 +3099,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -2314,9 +3144,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -2334,6 +3169,118 @@
     16.5
    ],
    [
+    13.1,
+    7.9,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_01.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
     33.7,
     120.6,
     16.0
@@ -2342,6 +3289,2314 @@
     97.7,
     140.2,
     15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.9,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_02.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_03.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_04.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_05.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_06.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_07.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_08.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_09.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_10.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_11.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_12.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_13.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_14.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_15.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
    ],
    [
     13.1,
@@ -2379,17 +5634,7 @@
     16.4
    ]
   ],
-  "w2_spherex_v1_2.png": [
-   [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
+  "w2_neowise_16.png": [
    [
     110.6,
     26.5,
@@ -2398,16 +5643,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -2432,7 +5667,7 @@
    ],
    [
     140.5,
-    104.3,
+    104.4,
     16.0
    ],
    [
@@ -2441,18 +5676,8 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
-    74.6,
+    74.7,
     13.0
    ],
    [
@@ -2466,6 +5691,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -2476,9 +5736,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -2494,16 +5759,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.1,
@@ -2541,17 +5796,7 @@
     16.4
    ]
   ],
-  "w2_spherex_v1_3.png": [
-   [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
+  "w2_neowise_17.png": [
    [
     110.6,
     26.5,
@@ -2563,6 +5808,61 @@
     16.4
    ],
    [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.4,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
     41.1,
     28.5,
     11.9
@@ -2570,6 +5870,265 @@
    [
     20.7,
     60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.7,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_18.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.4,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.6,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.7,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_19.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
     16.4
    ],
    [
@@ -2603,16 +6162,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -2628,6 +6177,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -2638,9 +6222,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -2658,6 +6247,118 @@
     16.5
    ],
    [
+    13.1,
+    7.7,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_neowise_20.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.4,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.3,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.6,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
     33.7,
     120.6,
     16.0
@@ -2666,6 +6367,208 @@
     97.7,
     140.2,
     15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.7,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_spherex_v1.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.4,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.3,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.6,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
    ],
    [
     13.1,
@@ -2705,16 +6608,6 @@
   ],
   "w2_spherex_v2_1.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -2722,16 +6615,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -2765,16 +6648,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -2790,6 +6663,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -2800,9 +6708,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -2818,16 +6731,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.2,
@@ -2867,16 +6770,6 @@
   ],
   "w2_spherex_v2_2.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -2884,16 +6777,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -2927,16 +6810,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -2952,6 +6825,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -2962,9 +6870,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -2982,6 +6895,118 @@
     16.5
    ],
    [
+    13.2,
+    7.7,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w2_spherex_v2_3.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.4,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.3,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.6,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
     33.7,
     120.6,
     16.0
@@ -2990,6 +7015,46 @@
     97.7,
     140.2,
     15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
    ],
    [
     13.2,
@@ -3029,16 +7094,6 @@
   ],
   "w1_wise2010.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -3046,16 +7101,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.0,
-    28.4,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -3089,16 +7134,6 @@
     14.7
    ],
    [
-    52.8,
-    127.5,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.8,
     13.0
@@ -3114,6 +7149,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -3124,9 +7194,14 @@
     12.8
    ],
    [
-    46.8,
-    63.7,
-    16.9
+    52.8,
+    127.5,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -3142,16 +7217,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.1,
@@ -3189,17 +7254,7 @@
     16.4
    ]
   ],
-  "w1_spherex_v1_1.png": [
-   [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
+  "w1_neowise_00.png": [
    [
     110.6,
     26.5,
@@ -3211,6 +7266,2005 @@
     16.4
    ],
    [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.6,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.8,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.9,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_01.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.9,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_02.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_03.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_04.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_05.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_06.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.0,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.7,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_07.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_08.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_09.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_10.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_11.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.4,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_12.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
     41.1,
     28.5,
     11.9
@@ -3218,6 +9272,1075 @@
    [
     20.7,
     60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_13.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_14.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.8,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_15.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.5,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.7,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_16.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.4,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.7,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_17.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.4,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.7,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.7,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_18.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.4,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.4,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.6,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.7,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_19.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
     16.4
    ],
    [
@@ -3251,16 +10374,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -3276,6 +10389,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -3286,9 +10434,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -3306,6 +10459,118 @@
     16.5
    ],
    [
+    13.1,
+    7.7,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_neowise_20.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.4,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.3,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.6,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
     33.7,
     120.6,
     16.0
@@ -3314,6 +10579,208 @@
     97.7,
     140.2,
     15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
+   ],
+   [
+    13.1,
+    7.7,
+    16.8
+   ],
+   [
+    3.5,
+    142.0,
+    16.7
+   ],
+   [
+    47.7,
+    145.7,
+    17.0
+   ],
+   [
+    76.7,
+    25.8,
+    16.7
+   ],
+   [
+    25.3,
+    73.2,
+    16.8
+   ],
+   [
+    8.6,
+    127.8,
+    16.8
+   ],
+   [
+    88.2,
+    101.1,
+    16.4
+   ]
+  ],
+  "w1_spherex_v1_1.png": [
+   [
+    110.6,
+    26.5,
+    16.6
+   ],
+   [
+    122.4,
+    107.6,
+    16.4
+   ],
+   [
+    85.4,
+    33.9,
+    16.7
+   ],
+   [
+    31.1,
+    64.1,
+    14.8
+   ],
+   [
+    74.5,
+    74.4,
+    12.2
+   ],
+   [
+    2.5,
+    122.9,
+    16.6
+   ],
+   [
+    140.5,
+    104.3,
+    16.0
+   ],
+   [
+    111.6,
+    89.9,
+    14.7
+   ],
+   [
+    73.8,
+    74.6,
+    13.0
+   ],
+   [
+    75.5,
+    102.9,
+    16.4
+   ],
+   [
+    60.3,
+    90.4,
+    15.3
+   ],
+   [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
+    14.2,
+    95.5,
+    14.8
+   ],
+   [
+    116.9,
+    89.3,
+    12.8
+   ],
+   [
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
+   ],
+   [
+    8.9,
+    127.7,
+    16.8
+   ],
+   [
+    76.7,
+    108.9,
+    15.9
+   ],
+   [
+    65.1,
+    111.5,
+    16.5
    ],
    [
     13.1,
@@ -3353,16 +10820,6 @@
   ],
   "w1_spherex_v1_2.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -3370,16 +10827,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -3413,16 +10860,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -3438,6 +10875,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -3448,9 +10920,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -3466,16 +10943,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.1,
@@ -3515,16 +10982,6 @@
   ],
   "w1_spherex_v2_1.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -3532,16 +10989,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -3575,16 +11022,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -3600,6 +11037,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -3610,9 +11082,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -3628,16 +11105,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.2,
@@ -3677,16 +11144,6 @@
   ],
   "w1_spherex_v2_2.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -3694,16 +11151,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -3737,16 +11184,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -3762,83 +11199,6 @@
     15.3
    ],
    [
-    14.2,
-    95.5,
-    14.8
-   ],
-   [
-    116.9,
-    89.3,
-    12.8
-   ],
-   [
-    46.8,
-    63.6,
-    16.9
-   ],
-   [
-    8.9,
-    127.7,
-    16.8
-   ],
-   [
-    76.7,
-    108.9,
-    15.9
-   ],
-   [
-    65.1,
-    111.5,
-    16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
-   ],
-   [
-    13.2,
-    7.7,
-    16.8
-   ],
-   [
-    3.5,
-    142.0,
-    16.7
-   ],
-   [
-    47.7,
-    145.7,
-    17.0
-   ],
-   [
-    76.7,
-    25.8,
-    16.7
-   ],
-   [
-    25.3,
-    73.2,
-    16.8
-   ],
-   [
-    8.6,
-    127.8,
-    16.8
-   ],
-   [
-    88.2,
-    101.1,
-    16.4
-   ]
-  ],
-  "w1_spherex_v2_3.png": [
-   [
     61.5,
     4.8,
     16.0
@@ -3847,16 +11207,6 @@
     55.0,
     70.2,
     16.8
-   ],
-   [
-    110.6,
-    26.5,
-    16.6
-   ],
-   [
-    122.4,
-    107.6,
-    16.4
    ],
    [
     41.1,
@@ -3869,59 +11219,19 @@
     16.4
    ],
    [
-    85.4,
-    33.9,
-    16.7
-   ],
-   [
-    31.1,
-    64.1,
-    14.8
-   ],
-   [
-    74.5,
-    74.4,
-    12.2
-   ],
-   [
-    2.5,
-    122.9,
-    16.6
-   ],
-   [
-    140.5,
-    104.3,
+    33.7,
+    120.6,
     16.0
    ],
    [
-    111.6,
-    89.9,
-    14.7
-   ],
-   [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
-    73.8,
-    74.6,
-    13.0
-   ],
-   [
-    75.5,
-    102.9,
-    16.4
-   ],
-   [
-    60.3,
-    90.4,
+    97.7,
+    140.2,
     15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
    ],
    [
     14.2,
@@ -3934,9 +11244,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -3952,16 +11267,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.2,
@@ -4001,16 +11306,6 @@
   ],
   "d1_spherex_v1.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -4018,16 +11313,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -4061,16 +11346,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -4086,6 +11361,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -4096,9 +11406,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -4114,16 +11429,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.1,
@@ -4163,16 +11468,6 @@
   ],
   "d1_spherex_v2.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -4180,16 +11475,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -4223,16 +11508,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -4248,6 +11523,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -4258,9 +11568,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -4276,16 +11591,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.2,
@@ -4325,16 +11630,6 @@
   ],
   "d2_spherex_v1.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -4342,16 +11637,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -4385,16 +11670,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -4410,6 +11685,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -4420,9 +11730,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -4438,16 +11753,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.1,
@@ -4487,16 +11792,6 @@
   ],
   "d2_spherex_v2.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -4504,16 +11799,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -4547,16 +11832,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -4572,6 +11847,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -4582,9 +11892,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -4600,16 +11915,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.2,
@@ -4649,16 +11954,6 @@
   ],
   "d3_spherex_v1.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -4666,16 +11961,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -4709,16 +11994,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -4734,6 +12009,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -4744,9 +12054,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -4762,16 +12077,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.1,
@@ -4811,16 +12116,6 @@
   ],
   "d3_spherex_v2.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -4828,16 +12123,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -4871,16 +12156,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -4896,6 +12171,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -4906,9 +12216,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -4924,16 +12239,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.2,
@@ -4973,16 +12278,6 @@
   ],
   "d4_spherex_v1.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -4990,16 +12285,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -5033,16 +12318,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -5058,6 +12333,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -5068,9 +12378,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -5086,16 +12401,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.1,
@@ -5135,16 +12440,6 @@
   ],
   "d4_spherex_v2.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -5152,16 +12447,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -5195,16 +12480,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -5220,6 +12495,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -5230,9 +12540,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -5248,16 +12563,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.2,
@@ -5297,16 +12602,6 @@
   ],
   "d5_spherex_v1.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -5314,16 +12609,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -5357,16 +12642,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -5382,6 +12657,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -5392,9 +12702,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -5410,16 +12725,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.1,
@@ -5459,16 +12764,6 @@
   ],
   "d5_spherex_v2.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -5476,16 +12771,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -5519,16 +12804,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -5544,6 +12819,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -5554,9 +12864,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -5572,16 +12887,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.2,
@@ -5621,16 +12926,6 @@
   ],
   "d6_spherex_v1.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -5638,16 +12933,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -5681,16 +12966,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -5706,6 +12981,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -5716,9 +13026,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -5734,16 +13049,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.1,
@@ -5783,16 +13088,6 @@
   ],
   "d6_spherex_v2.png": [
    [
-    61.5,
-    4.8,
-    16.0
-   ],
-   [
-    55.0,
-    70.2,
-    16.8
-   ],
-   [
     110.6,
     26.5,
     16.6
@@ -5800,16 +13095,6 @@
    [
     122.4,
     107.6,
-    16.4
-   ],
-   [
-    41.1,
-    28.5,
-    11.9
-   ],
-   [
-    20.7,
-    60.7,
     16.4
    ],
    [
@@ -5843,16 +13128,6 @@
     14.7
    ],
    [
-    52.8,
-    127.6,
-    14.8
-   ],
-   [
-    132.3,
-    104.2,
-    16.8
-   ],
-   [
     73.8,
     74.6,
     13.0
@@ -5868,6 +13143,41 @@
     15.3
    ],
    [
+    61.5,
+    4.8,
+    16.0
+   ],
+   [
+    55.0,
+    70.2,
+    16.8
+   ],
+   [
+    41.1,
+    28.5,
+    11.9
+   ],
+   [
+    20.7,
+    60.7,
+    16.4
+   ],
+   [
+    33.7,
+    120.6,
+    16.0
+   ],
+   [
+    97.7,
+    140.2,
+    15.3
+   ],
+   [
+    46.8,
+    63.6,
+    16.9
+   ],
+   [
     14.2,
     95.5,
     14.8
@@ -5878,9 +13188,14 @@
     12.8
    ],
    [
-    46.8,
-    63.6,
-    16.9
+    52.8,
+    127.6,
+    14.8
+   ],
+   [
+    132.3,
+    104.2,
+    16.8
    ],
    [
     8.9,
@@ -5896,16 +13211,6 @@
     65.1,
     111.5,
     16.5
-   ],
-   [
-    33.7,
-    120.6,
-    16.0
-   ],
-   [
-    97.7,
-    140.2,
-    15.3
    ],
    [
     13.2,
@@ -5949,95 +13254,599 @@
    "year": 2010.5,
    "mission": "WISE",
    "ch": "w2",
-   "x": 74.24878335300689,
-   "y": 74.74023368051431,
-   "pred_x": 74.5103435119689,
-   "pred_y": 74.60731751908517,
-   "offset_arcsec": 0.5867893070841016,
-   "ra": 76.9562449944318,
-   "dec": 30.401320288727263
+   "x": 74.2487830962106,
+   "y": 74.74023126721674,
+   "pred_x": 74.51034281717861,
+   "pred_y": 74.60731031039039,
+   "offset_arcsec": 0.5867928711442519,
+   "ra": 76.95624499414969,
+   "dec": 30.401320291391393
   },
   {
-   "year": 2025.7107904010393,
-   "mission": "SPHEREx",
+   "year": 2014.1760019164956,
+   "mission": "NEOWISE",
    "ch": "w2",
-   "x": 74.3194377894571,
-   "y": 74.58507076933834,
-   "pred_x": 74.49026038067379,
-   "pred_y": 74.3989480759679,
-   "offset_arcsec": 0.505260386951016,
-   "ra": 76.9561994843311,
-   "dec": 30.40123408715815
+   "x": 74.0,
+   "y": 74.5,
+   "pred_x": 74.50548931337431,
+   "pred_y": 74.55695352732467,
+   "offset_arcsec": 1.0173753489717177,
+   "ra": 76.95640524009723,
+   "dec": 30.401186829280928
   },
   {
-   "year": 2026.1514420033675,
+   "year": 2014.6997927446955,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 74.06451612903226,
+   "y": 74.59139784946237,
+   "pred_x": 74.50479774115794,
+   "pred_y": 74.54977822605754,
+   "offset_arcsec": 0.8844887586313323,
+   "ra": 76.95636368411387,
+   "dec": 30.401237605959338
+  },
+  {
+   "year": 2015.1655739904174,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 74.07692307692308,
+   "y": 75.01098901098901,
+   "pred_x": 74.50418276024283,
+   "pred_y": 74.54339758602428,
+   "offset_arcsec": 1.26679529158901,
+   "ra": 76.9563556931969,
+   "dec": 30.40147071217701
+  },
+  {
+   "year": 2015.6969336071184,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 73.87912087912088,
+   "y": 75.23076923076923,
+   "pred_x": 74.50348119478907,
+   "pred_y": 74.53611860151702,
+   "offset_arcsec": 1.8680099576108857,
+   "ra": 76.9564831024196,
+   "dec": 30.401592811972776
+  },
+  {
+   "year": 2016.1487288158796,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 74.82857142857142,
+   "y": 75.05714285714286,
+   "pred_x": 74.50288467993909,
+   "pred_y": 74.52992955323907,
+   "offset_arcsec": 1.2393961853149593,
+   "ra": 76.95587153999523,
+   "dec": 30.4014963533149
+  },
+  {
+   "year": 2016.6943080082135,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 74.22222222222223,
+   "y": 74.83333333333333,
+   "pred_x": 74.50216434008925,
+   "pred_y": 74.52245577774015,
+   "offset_arcsec": 0.8366897726536312,
+   "ra": 76.95626210265806,
+   "dec": 30.40137201473925
+  },
+  {
+   "year": 2017.1460668035593,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 74.62857142857143,
+   "y": 74.86666666666666,
+   "pred_x": 74.50156787328497,
+   "pred_y": 74.51626722829722,
+   "offset_arcsec": 0.7454117505430532,
+   "ra": 76.95600036449393,
+   "dec": 30.401390533353577
+  },
+  {
+   "year": 2017.692309650924,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 74.88372093023256,
+   "y": 76.26744186046511,
+   "pred_x": 74.50084665720297,
+   "pred_y": 74.50878436151643,
+   "offset_arcsec": 3.5997049361074565,
+   "ra": 76.95583601528361,
+   "dec": 30.4021687415879
+  },
+  {
+   "year": 2018.123575633128,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 74.05555555555556,
+   "y": 75.22222222222223,
+   "pred_x": 74.5002772474986,
+   "pred_y": 74.50287653886384,
+   "offset_arcsec": 1.6914320506033003,
+   "ra": 76.95636945682887,
+   "dec": 30.401588063931733
+  },
+  {
+   "year": 2018.6961615331963,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 73.97368421052632,
+   "y": 75.15789473684211,
+   "pred_x": 74.49952125014393,
+   "pred_y": 74.49503280410185,
+   "offset_arcsec": 1.692206292470578,
+   "ra": 76.9564221918925,
+   "dec": 30.401552326314263
+  },
+  {
+   "year": 2019.1255449691992,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 73.75,
+   "y": 74.27941176470588,
+   "pred_x": 74.49895432601521,
+   "pred_y": 74.48915077005691,
+   "offset_arcsec": 1.55553596263359,
+   "ra": 76.95656626949179,
+   "dec": 30.40106427976748
+  },
+  {
+   "year": 2019.6930822724162,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 73.52873563218391,
+   "y": 74.32183908045977,
+   "pred_x": 74.49820499439998,
+   "pred_y": 74.48137619498293,
+   "offset_arcsec": 1.965016982184915,
+   "ra": 76.95670879026922,
+   "dec": 30.401087849896605
+  },
+  {
+   "year": 2020.125454346338,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 73.23076923076923,
+   "y": 74.34065934065934,
+   "pred_x": 74.49763412431304,
+   "pred_y": 74.47545322016279,
+   "offset_arcsec": 2.548031434892928,
+   "ra": 76.95690071628164,
+   "dec": 30.401098304541723
+  },
+  {
+   "year": 2020.694709650924,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 74.05454545454545,
+   "y": 74.43636363636364,
+   "pred_x": 74.49688252438555,
+   "pred_y": 74.46765511054635,
+   "offset_arcsec": 0.8868849749661266,
+   "ra": 76.95637010617502,
+   "dec": 30.401151475827074
+  },
+  {
+   "year": 2021.1239756331279,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 73.85,
+   "y": 74.8,
+   "pred_x": 74.49631575535372,
+   "pred_y": 74.4617746854393,
+   "offset_arcsec": 1.458931689916406,
+   "ra": 76.95650185881227,
+   "dec": 30.401353495674986
+  },
+  {
+   "year": 2021.6954078028748,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 74.375,
+   "y": 75.6875,
+   "pred_x": 74.49556128123363,
+   "pred_y": 74.45394675541873,
+   "offset_arcsec": 2.478861536728272,
+   "ra": 76.95616369564,
+   "dec": 30.40184655187349
+  },
+  {
+   "year": 2022.1277059548254,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 73.16981132075472,
+   "y": 75.0754716981132,
+   "pred_x": 74.49499050877255,
+   "pred_y": 74.44802479325877,
+   "offset_arcsec": 2.932432095391384,
+   "ra": 76.95693998403699,
+   "dec": 30.401506533378747
+  },
+  {
+   "year": 2022.6936542094456,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 74.046875,
+   "y": 74.796875,
+   "pred_x": 74.49424327521065,
+   "pred_y": 74.44027198625547,
+   "offset_arcsec": 1.144209916219245,
+   "ra": 76.95637504746504,
+   "dec": 30.401351759907094
+  },
+  {
+   "year": 2023.125071321013,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 73.8125,
+   "y": 74.8125,
+   "pred_x": 74.49367366596877,
+   "pred_y": 74.43436209325853,
+   "offset_arcsec": 1.5581859191292835,
+   "ra": 76.9565260133851,
+   "dec": 30.40136044004017
+  },
+  {
+   "year": 2023.6974836413415,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 73.50704225352112,
+   "y": 74.50704225352112,
+   "pred_x": 74.49291789778339,
+   "pred_y": 74.42652073637306,
+   "offset_arcsec": 1.978316962171416,
+   "ra": 76.9567227640681,
+   "dec": 30.401190740480953
+  },
+  {
+   "year": 2024.122622587269,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 73.77272727272727,
+   "y": 74.36363636363636,
+   "pred_x": 74.49235657776025,
+   "pred_y": 74.420696846691,
+   "offset_arcsec": 1.4437759318692274,
+   "ra": 76.95655163064365,
+   "dec": 30.401111071264392
+  },
+  {
+   "year": 2025.7132468557236,
    "mission": "SPHEREx",
    "ch": "w2",
-   "x": 74.1972884581087,
-   "y": 74.55256124394887,
-   "pred_x": 74.48967857893912,
-   "pred_y": 74.39291168161462,
-   "offset_arcsec": 0.6662731136999271,
-   "ra": 76.9562781631608,
-   "dec": 30.401216026217433
+   "x": 74.29727890274103,
+   "y": 74.68029273702697,
+   "pred_x": 74.4902564425678,
+   "pred_y": 74.39890721679777,
+   "offset_arcsec": 0.6824020570408746,
+   "ra": 76.9562137569434,
+   "dec": 30.401286992242728
+  },
+  {
+   "year": 2026.152138876108,
+   "mission": "SPHEREx",
+   "ch": "w2",
+   "x": 74.1774269766256,
+   "y": 74.54717116529493,
+   "pred_x": 74.48967696405906,
+   "pred_y": 74.39289492664003,
+   "offset_arcsec": 0.6965664719743657,
+   "ra": 76.95629095588825,
+   "dec": 30.40121303571451
   },
   {
    "year": 2010.5,
    "mission": "WISE",
    "ch": "w1",
-   "x": 74.3241504997792,
-   "y": 74.77025805006951,
-   "pred_x": 74.5103435119689,
-   "pred_y": 74.60731751908517,
-   "offset_arcsec": 0.4948432253744039,
-   "ra": 76.95619644889797,
-   "dec": 30.401336968983436
+   "x": 74.32415029206277,
+   "y": 74.77025553943032,
+   "pred_x": 74.51034281717861,
+   "pred_y": 74.60731031039039,
+   "offset_arcsec": 0.4948486802790309,
+   "ra": 76.95619644858425,
+   "dec": 30.40133697159349
+  },
+  {
+   "year": 2014.1760019164956,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 73.9074074074074,
+   "y": 74.62962962962963,
+   "pred_x": 74.50548931337431,
+   "pred_y": 74.55695352732467,
+   "offset_arcsec": 1.204962708316981,
+   "ra": 76.95646488111979,
+   "dec": 30.401258845581967
+  },
+  {
+   "year": 2014.6997927446955,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 73.83636363636364,
+   "y": 75.54545454545455,
+   "pred_x": 74.50479774115794,
+   "pred_y": 74.54977822605754,
+   "offset_arcsec": 2.398479089147771,
+   "ra": 76.9565106440947,
+   "dec": 30.401767637060786
+  },
+  {
+   "year": 2015.1655739904174,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.37288135593221,
+   "y": 74.67796610169492,
+   "pred_x": 74.50418276024283,
+   "pred_y": 74.54339758602428,
+   "offset_arcsec": 0.37602523416995287,
+   "ra": 76.95616505983998,
+   "dec": 30.401285699706957
+  },
+  {
+   "year": 2015.6969336071184,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.57142857142857,
+   "y": 75.10204081632654,
+   "pred_x": 74.50348119478907,
+   "pred_y": 74.53611860151702,
+   "offset_arcsec": 1.1399733316641105,
+   "ra": 76.95603717136642,
+   "dec": 30.401521296788122
+  },
+  {
+   "year": 2016.1487288158796,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.0,
+   "y": 74.5,
+   "pred_x": 74.50288467993909,
+   "pred_y": 74.52992955323907,
+   "offset_arcsec": 1.0075490646807768,
+   "ra": 76.95640524009723,
+   "dec": 30.401186829280928
+  },
+  {
+   "year": 2016.6943080082135,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.18461538461538,
+   "y": 74.43076923076923,
+   "pred_x": 74.50216434008925,
+   "pred_y": 74.52245577774015,
+   "offset_arcsec": 0.6610408822975742,
+   "ra": 76.95628632555511,
+   "dec": 30.401148367980348
+  },
+  {
+   "year": 2017.1460668035593,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.37704918032787,
+   "y": 74.67213114754098,
+   "pred_x": 74.50156787328497,
+   "pred_y": 74.51626722829722,
+   "offset_arcsec": 0.39899105867969736,
+   "ra": 76.95616237525557,
+   "dec": 30.401282458067406
+  },
+  {
+   "year": 2017.692309650924,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.0,
+   "y": 75.41558441558442,
+   "pred_x": 74.50084665720297,
+   "pred_y": 74.50878436151643,
+   "offset_arcsec": 2.071843345356853,
+   "ra": 76.9564052417748,
+   "dec": 30.401695487289548
+  },
+  {
+   "year": 2018.123575633128,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.0925925925926,
+   "y": 74.64814814814815,
+   "pred_x": 74.5002772474986,
+   "pred_y": 74.50287653886384,
+   "offset_arcsec": 0.8655879350453953,
+   "ra": 76.95634559957739,
+   "dec": 30.401269133940453
+  },
+  {
+   "year": 2018.6961615331963,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.17857142857143,
+   "y": 74.69642857142857,
+   "pred_x": 74.49952125014393,
+   "pred_y": 74.49503280410185,
+   "offset_arcsec": 0.7578101162187264,
+   "ra": 76.95629021889948,
+   "dec": 30.40129595649686
+  },
+  {
+   "year": 2019.1255449691992,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.37037037037037,
+   "y": 74.68518518518519,
+   "pred_x": 74.49895432601521,
+   "pred_y": 74.48915077005691,
+   "offset_arcsec": 0.4688851696475543,
+   "ra": 76.95616667722108,
+   "dec": 30.401289710307886
+  },
+  {
+   "year": 2019.6930822724162,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.36,
+   "y": 75.16,
+   "pred_x": 74.49820499439998,
+   "pred_y": 74.48137619498293,
+   "offset_arcsec": 1.3851077780954553,
+   "ra": 76.9561733572347,
+   "dec": 30.401553496311692
+  },
+  {
+   "year": 2020.125454346338,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 73.36486486486487,
+   "y": 74.54054054054055,
+   "pred_x": 74.49763412431304,
+   "pred_y": 74.47545322016279,
+   "offset_arcsec": 2.2692752625323718,
+   "ra": 76.95681434351111,
+   "dec": 30.401209350162265
+  },
+  {
+   "year": 2020.694709650924,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.17777777777778,
+   "y": 74.75555555555556,
+   "pred_x": 74.49688252438555,
+   "pred_y": 74.46765511054635,
+   "offset_arcsec": 0.8595685092794543,
+   "ra": 76.9562907301762,
+   "dec": 30.40132880482056
+  },
+  {
+   "year": 2021.1239756331279,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 73.86274509803921,
+   "y": 74.43137254901961,
+   "pred_x": 74.49631575535372,
+   "pred_y": 74.4617746854393,
+   "offset_arcsec": 1.268599334252698,
+   "ra": 76.95649364856489,
+   "dec": 30.401148702672604
+  },
+  {
+   "year": 2021.6954078028748,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 73.90697674418605,
+   "y": 75.34883720930233,
+   "pred_x": 74.49556128123363,
+   "pred_y": 74.45394675541873,
+   "offset_arcsec": 2.1422051084423437,
+   "ra": 76.95646516008169,
+   "dec": 30.401658405347625
+  },
+  {
+   "year": 2022.1277059548254,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 73.81481481481481,
+   "y": 74.81481481481481,
+   "pred_x": 74.49499050877255,
+   "pred_y": 74.44802479325877,
+   "offset_arcsec": 1.5455405456011166,
+   "ra": 76.95652452236975,
+   "dec": 30.401361726053423
+  },
+  {
+   "year": 2022.6936542094456,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 73.83333333333333,
+   "y": 74.42424242424242,
+   "pred_x": 74.49424327521065,
+   "pred_y": 74.44027198625547,
+   "offset_arcsec": 1.3222086040164485,
+   "ra": 76.95651259324605,
+   "dec": 30.401144741431555
+  },
+  {
+   "year": 2023.125071321013,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 73.95714285714286,
+   "y": 74.87142857142857,
+   "pred_x": 74.49367366596877,
+   "pred_y": 74.43436209325853,
+   "offset_arcsec": 1.384041061793788,
+   "ra": 76.95643284597912,
+   "dec": 30.401393178416654
+  },
+  {
+   "year": 2023.6974836413415,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.45614035087719,
+   "y": 74.87719298245614,
+   "pred_x": 74.49291789778339,
+   "pred_y": 74.42652073637306,
+   "offset_arcsec": 0.9043407795133334,
+   "ra": 76.95611143103362,
+   "dec": 30.401396381329885
+  },
+  {
+   "year": 2024.122622587269,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 72.9423076923077,
+   "y": 74.51923076923077,
+   "pred_x": 74.49235657776025,
+   "pred_y": 74.420696846691,
+   "offset_arcsec": 3.106355086433378,
+   "ra": 76.95708652097952,
+   "dec": 30.401197509602262
   },
   {
    "year": 2025.6730261427729,
    "mission": "SPHEREx",
    "ch": "w1",
-   "x": 74.54056657657006,
-   "y": 74.55837860920164,
-   "pred_x": 74.49031024163088,
-   "pred_y": 74.39946540066316,
-   "offset_arcsec": 0.3333413089263809,
-   "ra": 76.95605705079107,
-   "dec": 30.40121925822923
+   "x": 74.54056596129001,
+   "y": 74.55837323930385,
+   "pred_x": 74.49030954684197,
+   "pred_y": 74.39945819196825,
+   "offset_arcsec": 0.3333448633142172,
+   "ra": 76.95605705073986,
+   "dec": 30.401219259250794
   },
   {
-   "year": 2026.1774105221484,
+   "year": 2026.178758343745,
    "mission": "SPHEREx",
    "ch": "w1",
-   "x": 74.01950948171078,
-   "y": 74.53145858336927,
-   "pred_x": 74.48964429215683,
-   "pred_y": 74.39255594431695,
-   "offset_arcsec": 0.9804502703611511,
-   "ra": 76.95639267415275,
-   "dec": 30.401204302297074
+   "x": 74.04070507803864,
+   "y": 74.54869110310129,
+   "pred_x": 74.48964181780605,
+   "pred_y": 74.39253027207366,
+   "offset_arcsec": 0.9506427330597951,
+   "ra": 76.95637902122421,
+   "dec": 30.401213879955467
   }
  ],
  "motion": {
   "from_year": 2010.5,
-  "to_year": 2026.1774105221484,
-  "shift_arcsec": 0.6201725141200541,
-  "measured_arcsec_per_yr": 0.039558351377218776,
-  "measured_pmra": 29.24887375955079,
-  "measured_pmdec": -26.63393601181336,
+  "to_year": 2026.178758343745,
+  "shift_arcsec": 0.5656290266163742,
+  "measured_arcsec_per_yr": 0.03607613652914256,
+  "measured_pmra": 26.542601539824442,
+  "measured_pmdec": -24.43313181660188,
   "expected_arcsec_per_yr": 0.027524544055251243,
-  "shift_spherex_pixels": 0.10084105920651286
+  "shift_spherex_pixels": 0.09197219944981692
  },
  "movers_experimental": [],
  "spectrum": [
   {
    "lam": 0.775,
-   "flux_mjy": 109.72447390575329,
+   "flux_mjy": 110.0461794430569,
    "n": 2
   },
   {
    "lam": 0.825,
-   "flux_mjy": 74.74932069103643,
+   "flux_mjy": 74.74932069180359,
    "n": 1
   },
   {
@@ -6047,26 +13856,26 @@
   },
   {
    "lam": 0.925,
-   "flux_mjy": 160.17684592298437,
+   "flux_mjy": 160.1768459227478,
    "n": 1
   },
   {
    "lam": 0.975,
-   "flux_mjy": 175.20716472601458,
+   "flux_mjy": 175.20716472480638,
    "n": 2
   },
   {
    "lam": 1.075,
-   "flux_mjy": 153.396055852294,
+   "flux_mjy": 153.39605585335644,
    "n": 1
   }
  ],
  "spectrum_points": 150,
- "flagged_points": 141,
+ "flagged_points": 140,
  "variability": {
-  "delta_mag": 0.003318105379834276,
-  "uncertainty_mag": 0.06756238836646995,
-  "n_wavelength_bins": 42,
+  "delta_mag": 0.034220464292896026,
+  "uncertainty_mag": 0.06013159716670661,
+  "n_wavelength_bins": 39,
   "method": "PSF-wing photometry (star's core is saturated)",
   "from": "Sep 2025",
   "to": "Mar 2026"
@@ -6122,12 +13931,12 @@
  ],
  "spherex_visits": [
   {
-   "year": 2025.6910785541786,
-   "n_images": 76
+   "year": 2025.6908481694818,
+   "n_images": 74
   },
   {
-   "year": 2026.1681734607366,
-   "n_images": 74
+   "year": 2026.16712100046,
+   "n_images": 76
   }
  ],
  "gaia_facts": {
@@ -6165,11 +13974,11 @@
    },
    {
     "state": "no",
-    "text": "Steady brightness between Sep 2025 and Mar 2026 (+0.00 \u00b1 0.07 mag)"
+    "text": "Steady brightness between Sep 2025 and Mar 2026 (+0.03 \u00b1 0.06 mag)"
    },
    {
     "state": "warn",
-    "text": "141 of 150 SPHEREx measurements flagged (overflow or bloom: the object is too bright for SPHEREx). No reliable SPHEREx spectrum, so we do not show one."
+    "text": "140 of 150 SPHEREx measurements flagged (overflow or bloom: the object is too bright for SPHEREx). The spectrum uses the 10 clean ones."
    },
    {
     "state": "warn",
@@ -6187,7 +13996,7 @@
    },
    {
     "label": "brightness change Sep 2025\u2192Mar 2026",
-    "value": "+0.00 mag"
+    "value": "+0.03 mag"
    },
    {
     "label": "distance (Gaia parallax)",

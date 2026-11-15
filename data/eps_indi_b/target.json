@@ -18,8 +18,8 @@
  "grid": {
   "npix": 150,
   "arcsec_per_pix": 2.0,
-  "centre_ra": 331.0813132586133,
-  "centre_dec": -56.79546098169325
+  "centre_ra": 331.08130021002296,
+  "centre_dec": -56.795456555579975
  },
  "frames": {
   "w2": [
@@ -29,23 +29,212 @@
     "mission": "WISE",
     "png": "w2_wise2010.png",
     "detected": true,
-    "snr": 709.7
+    "snr": 707.8
    },
    {
-    "year": 2025.3177976435702,
+    "year": 2014.3348309377138,
+    "label": "NEOWISE May 2014",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_00.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 691.4
+   },
+   {
+    "year": 2014.8298346338124,
+    "label": "NEOWISE Oct 2014",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_01.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 872.3
+   },
+   {
+    "year": 2015.3257932922656,
+    "label": "NEOWISE Apr 2015",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_02.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 710.6
+   },
+   {
+    "year": 2015.8161968514717,
+    "label": "NEOWISE Oct 2015",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_03.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 795.1
+   },
+   {
+    "year": 2016.3271263518138,
+    "label": "NEOWISE Apr 2016",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_04.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 1017.1
+   },
+   {
+    "year": 2016.7992813141684,
+    "label": "NEOWISE Oct 2016",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_05.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 1071.1
+   },
+   {
+    "year": 2017.3278064339493,
+    "label": "NEOWISE Apr 2017",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_06.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 914.4
+   },
+   {
+    "year": 2017.7865771389459,
+    "label": "NEOWISE Oct 2017",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_07.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 799.3
+   },
+   {
+    "year": 2018.3289062286105,
+    "label": "NEOWISE May 2018",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_08.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 731.1
+   },
+   {
+    "year": 2018.7763885010268,
+    "label": "NEOWISE Oct 2018",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_09.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 972.6
+   },
+   {
+    "year": 2019.3298863791924,
+    "label": "NEOWISE May 2019",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_10.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 730.3
+   },
+   {
+    "year": 2019.778925941136,
+    "label": "NEOWISE Oct 2019",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_11.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 1010.2
+   },
+   {
+    "year": 2020.327275838467,
+    "label": "NEOWISE Apr 2020",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_12.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 732.1
+   },
+   {
+    "year": 2020.776295140315,
+    "label": "NEOWISE Oct 2020",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_13.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 860.0
+   },
+   {
+    "year": 2021.324984531143,
+    "label": "NEOWISE Apr 2021",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_14.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 680.0
+   },
+   {
+    "year": 2021.7736257357974,
+    "label": "NEOWISE Oct 2021",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_15.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 791.7
+   },
+   {
+    "year": 2022.329265708419,
+    "label": "NEOWISE May 2022",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_16.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 703.8
+   },
+   {
+    "year": 2022.7780720054757,
+    "label": "NEOWISE Oct 2022",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_17.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 764.6
+   },
+   {
+    "year": 2023.326337029432,
+    "label": "NEOWISE Apr 2023",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_18.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 614.8
+   },
+   {
+    "year": 2023.7752238193018,
+    "label": "NEOWISE Oct 2023",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_19.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 938.5
+   },
+   {
+    "year": 2024.3258130047911,
+    "label": "NEOWISE Apr 2024",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_20.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 733.9
+   },
+   {
+    "year": 2025.316770439585,
     "label": "SPHEREx 26 Apr 2025",
     "mission": "SPHEREx",
     "png": "w2_spherex_v1_1.png",
-    "n_images": 1,
+    "n_images": 2,
     "survey": 1,
     "detected": true
    },
    {
-    "year": 2025.3265861347504,
-    "label": "SPHEREx 30 Apr 2025",
+    "year": 2025.3263423196681,
+    "label": "SPHEREx 29 Apr 2025",
     "mission": "SPHEREx",
     "png": "w2_spherex_v1_2.png",
-    "n_images": 8,
+    "n_images": 17,
     "survey": 1,
     "detected": true
    },
@@ -59,67 +248,49 @@
     "detected": true
    },
    {
-    "year": 2025.3462570694785,
+    "year": 2025.3458177738087,
     "label": "SPHEREx 07 May 2025",
     "mission": "SPHEREx",
     "png": "w2_spherex_v1_4.png",
-    "n_images": 1,
+    "n_images": 3,
     "survey": 1,
     "detected": true
    },
    {
-    "year": 2025.4392580029294,
-    "label": "SPHEREx 10 Jun 2025",
+    "year": 2025.3816067583628,
+    "label": "SPHEREx 20 May 2025",
     "mission": "SPHEREx",
     "png": "w2_spherex_v1_5.png",
-    "n_images": 2,
+    "n_images": 1,
     "survey": 1,
     "detected": true
    },
    {
-    "year": 2025.7459433833694,
-    "label": "SPHEREx 30 Sep 2025",
+    "year": 2025.430139260044,
+    "label": "SPHEREx 06 Jun 2025",
     "mission": "SPHEREx",
-    "png": "w2_spherex_v2_1.png",
-    "n_images": 7,
-    "survey": 2,
-    "detected": true
-   },
-   {
-    "year": 2025.8342101012977,
-    "label": "SPHEREx 01 Nov 2025",
-    "mission": "SPHEREx",
-    "png": "w2_spherex_v2_2.png",
+    "png": "w2_spherex_v1_6.png",
     "n_images": 1,
-    "survey": 2,
+    "survey": 1,
     "detected": true
    },
    {
-    "year": 2025.8416565415853,
-    "label": "SPHEREx 04 Nov 2025",
+    "year": 2025.439258002935,
+    "label": "SPHEREx 10 Jun 2025",
     "mission": "SPHEREx",
-    "png": "w2_spherex_v2_3.png",
-    "n_images": 1,
-    "survey": 2,
+    "png": "w2_spherex_v1_7.png",
+    "n_images": 3,
+    "survey": 1,
     "detected": true
    },
    {
-    "year": 2026.3240730470711,
-    "label": "SPHEREx 29 Apr 2026",
+    "year": 2025.7435164175092,
+    "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
-    "png": "w2_spherex_v3_1.png",
-    "n_images": 4,
-    "survey": 3,
-    "detected": true
-   },
-   {
-    "year": 2026.3370776616646,
-    "label": "SPHEREx 04 May 2026",
-    "mission": "SPHEREx",
-    "png": "w2_spherex_v3_2.png",
-    "n_images": 1,
-    "survey": 3,
-    "detected": true
+    "png": "w2_spherex_v2.png",
+    "n_images": 9,
+    "detected": true,
+    "snr": 142.7
    }
   ],
   "w1": [
@@ -129,16 +300,205 @@
     "mission": "WISE",
     "png": "w1_wise2010.png",
     "detected": true,
-    "snr": 806.7
+    "snr": 804.7
    },
    {
-    "year": 2025.32058001197,
+    "year": 2014.3348309377138,
+    "label": "NEOWISE May 2014",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_00.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 798.4
+   },
+   {
+    "year": 2014.8298346338124,
+    "label": "NEOWISE Oct 2014",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_01.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 1139.0
+   },
+   {
+    "year": 2015.3257932922656,
+    "label": "NEOWISE Apr 2015",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_02.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 751.9
+   },
+   {
+    "year": 2015.8161968514717,
+    "label": "NEOWISE Oct 2015",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_03.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 994.4
+   },
+   {
+    "year": 2016.3271263518138,
+    "label": "NEOWISE Apr 2016",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_04.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 1113.0
+   },
+   {
+    "year": 2016.7992813141684,
+    "label": "NEOWISE Oct 2016",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_05.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 976.4
+   },
+   {
+    "year": 2017.3278064339493,
+    "label": "NEOWISE Apr 2017",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_06.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 929.8
+   },
+   {
+    "year": 2017.7865771389459,
+    "label": "NEOWISE Oct 2017",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_07.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 823.8
+   },
+   {
+    "year": 2018.3289062286105,
+    "label": "NEOWISE May 2018",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_08.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 928.7
+   },
+   {
+    "year": 2018.7763885010268,
+    "label": "NEOWISE Oct 2018",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_09.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 998.4
+   },
+   {
+    "year": 2019.3298863791924,
+    "label": "NEOWISE May 2019",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_10.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 818.1
+   },
+   {
+    "year": 2019.778925941136,
+    "label": "NEOWISE Oct 2019",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_11.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 783.5
+   },
+   {
+    "year": 2020.327275838467,
+    "label": "NEOWISE Apr 2020",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_12.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 963.2
+   },
+   {
+    "year": 2020.776295140315,
+    "label": "NEOWISE Oct 2020",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_13.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 892.6
+   },
+   {
+    "year": 2021.324984531143,
+    "label": "NEOWISE Apr 2021",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_14.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 857.1
+   },
+   {
+    "year": 2021.7736257357974,
+    "label": "NEOWISE Oct 2021",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_15.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 947.5
+   },
+   {
+    "year": 2022.329265708419,
+    "label": "NEOWISE May 2022",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_16.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 825.1
+   },
+   {
+    "year": 2022.7780720054757,
+    "label": "NEOWISE Oct 2022",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_17.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 831.7
+   },
+   {
+    "year": 2023.326337029432,
+    "label": "NEOWISE Apr 2023",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_18.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 671.0
+   },
+   {
+    "year": 2023.7752238193018,
+    "label": "NEOWISE Oct 2023",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_19.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 750.6
+   },
+   {
+    "year": 2024.3258130047911,
+    "label": "NEOWISE Apr 2024",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_20.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 844.9
+   },
+   {
+    "year": 2025.3205820547748,
     "label": "SPHEREx Apr 2025",
     "mission": "SPHEREx",
     "png": "w1_spherex_v1.png",
-    "n_images": 1,
+    "n_images": 2,
     "detected": true,
-    "snr": 962.5
+    "snr": 1495.5
    },
    {
     "year": 2025.7555634367857,
@@ -186,100 +546,70 @@
     "detected": true
    },
    {
-    "year": 2026.3034892872163,
+    "year": 2026.3034435434286,
     "label": "SPHEREx 21 Apr 2026",
     "mission": "SPHEREx",
     "png": "w1_spherex_v3_2.png",
-    "n_images": 4,
-    "survey": 3,
-    "detected": true
-   },
-   {
-    "year": 2026.3359844308418,
-    "label": "SPHEREx 03 May 2026",
-    "mission": "SPHEREx",
-    "png": "w1_spherex_v3_3.png",
-    "n_images": 1,
+    "n_images": 3,
     "survey": 3,
     "detected": true
    }
   ],
   "d1": [
    {
-    "year": 2025.317047893384,
+    "year": 2025.3170499361725,
     "label": "SPHEREx Apr 2025",
     "mission": "SPHEREx",
     "png": "d1_spherex_v1.png",
-    "n_images": 2
+    "n_images": 4
    },
    {
-    "year": 2025.7913485926802,
+    "year": 2025.7851953196694,
     "label": "SPHEREx Oct 2025",
     "mission": "SPHEREx",
     "png": "d1_spherex_v2.png",
-    "n_images": 13
+    "n_images": 19
    },
    {
-    "year": 2026.304841742539,
+    "year": 2026.2952668101425,
     "label": "SPHEREx Apr 2026",
     "mission": "SPHEREx",
     "png": "d1_spherex_v3.png",
-    "n_images": 10
+    "n_images": 2
    }
   ],
   "d2": [
    {
-    "year": 2025.3655210715858,
+    "year": 2025.364899894118,
     "label": "SPHEREx May 2025",
     "mission": "SPHEREx",
     "png": "d2_spherex_v1.png",
-    "n_images": 12
-   },
-   {
-    "year": 2025.7761034372238,
-    "label": "SPHEREx Oct 2025",
-    "mission": "SPHEREx",
-    "png": "d2_spherex_v2.png",
-    "n_images": 10
-   },
-   {
-    "year": 2026.317201279937,
-    "label": "SPHEREx Apr 2026",
-    "mission": "SPHEREx",
-    "png": "d2_spherex_v3.png",
-    "n_images": 3
+    "n_images": 32
    }
   ],
   "d3": [
    {
-    "year": 2025.340555294409,
+    "year": 2025.3436178322022,
     "label": "SPHEREx May 2025",
     "mission": "SPHEREx",
     "png": "d3_spherex_v1.png",
-    "n_images": 11
+    "n_images": 28
    },
    {
-    "year": 2025.758164103649,
-    "label": "SPHEREx Oct 2025",
+    "year": 2025.7434285493591,
+    "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
     "png": "d3_spherex_v2.png",
-    "n_images": 9
-   },
-   {
-    "year": 2026.3266369177686,
-    "label": "SPHEREx Apr 2026",
-    "mission": "SPHEREx",
-    "png": "d3_spherex_v3.png",
-    "n_images": 5
+    "n_images": 8
    }
   ],
   "d4": [
    {
-    "year": 2025.317047893384,
+    "year": 2025.3170499361725,
     "label": "SPHEREx Apr 2025",
     "mission": "SPHEREx",
     "png": "d4_spherex_v1.png",
-    "n_images": 2
+    "n_images": 4
    },
    {
     "year": 2025.7865269748472,
@@ -289,57 +619,36 @@
     "n_images": 13
    },
    {
-    "year": 2026.304989810409,
+    "year": 2026.3012858943334,
     "label": "SPHEREx Apr 2026",
     "mission": "SPHEREx",
     "png": "d4_spherex_v3.png",
-    "n_images": 10
+    "n_images": 8
    }
   ],
   "d5": [
    {
-    "year": 2025.357971786537,
+    "year": 2025.3643702127008,
     "label": "SPHEREx May 2025",
     "mission": "SPHEREx",
     "png": "d5_spherex_v1.png",
-    "n_images": 12
-   },
-   {
-    "year": 2025.7740245721263,
-    "label": "SPHEREx Oct 2025",
-    "mission": "SPHEREx",
-    "png": "d5_spherex_v2.png",
-    "n_images": 10
-   },
-   {
-    "year": 2026.317201279937,
-    "label": "SPHEREx Apr 2026",
-    "mission": "SPHEREx",
-    "png": "d5_spherex_v3.png",
-    "n_images": 3
+    "n_images": 30
    }
   ],
   "d6": [
    {
-    "year": 2025.348860195758,
+    "year": 2025.3451938967899,
     "label": "SPHEREx May 2025",
     "mission": "SPHEREx",
     "png": "d6_spherex_v1.png",
-    "n_images": 11
+    "n_images": 24
    },
    {
-    "year": 2025.7663855918302,
-    "label": "SPHEREx Oct 2025",
+    "year": 2025.7435164175092,
+    "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
     "png": "d6_spherex_v2.png",
     "n_images": 9
-   },
-   {
-    "year": 2026.3266739699898,
-    "label": "SPHEREx Apr 2026",
-    "mission": "SPHEREx",
-    "png": "d6_spherex_v3.png",
-    "n_images": 5
    }
   ]
  },
@@ -361,34 +670,214 @@
     "mission": "WISE",
     "png": "w2_wise2010.png",
     "detected": true,
-    "snr": 709.7
+    "snr": 707.8
    },
    {
-    "year": 2025.34574106194,
+    "year": 2014.3348309377138,
+    "label": "NEOWISE May 2014",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_00.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 691.4
+   },
+   {
+    "year": 2014.8298346338124,
+    "label": "NEOWISE Oct 2014",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_01.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 872.3
+   },
+   {
+    "year": 2015.3257932922656,
+    "label": "NEOWISE Apr 2015",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_02.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 710.6
+   },
+   {
+    "year": 2015.8161968514717,
+    "label": "NEOWISE Oct 2015",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_03.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 795.1
+   },
+   {
+    "year": 2016.3271263518138,
+    "label": "NEOWISE Apr 2016",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_04.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 1017.1
+   },
+   {
+    "year": 2016.7992813141684,
+    "label": "NEOWISE Oct 2016",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_05.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 1071.1
+   },
+   {
+    "year": 2017.3278064339493,
+    "label": "NEOWISE Apr 2017",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_06.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 914.4
+   },
+   {
+    "year": 2017.7865771389459,
+    "label": "NEOWISE Oct 2017",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_07.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 799.3
+   },
+   {
+    "year": 2018.3289062286105,
+    "label": "NEOWISE May 2018",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_08.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 731.1
+   },
+   {
+    "year": 2018.7763885010268,
+    "label": "NEOWISE Oct 2018",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_09.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 972.6
+   },
+   {
+    "year": 2019.3298863791924,
+    "label": "NEOWISE May 2019",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_10.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 730.3
+   },
+   {
+    "year": 2019.778925941136,
+    "label": "NEOWISE Oct 2019",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_11.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 1010.2
+   },
+   {
+    "year": 2020.327275838467,
+    "label": "NEOWISE Apr 2020",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_12.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 732.1
+   },
+   {
+    "year": 2020.776295140315,
+    "label": "NEOWISE Oct 2020",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_13.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 860.0
+   },
+   {
+    "year": 2021.324984531143,
+    "label": "NEOWISE Apr 2021",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_14.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 680.0
+   },
+   {
+    "year": 2021.7736257357974,
+    "label": "NEOWISE Oct 2021",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_15.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 791.7
+   },
+   {
+    "year": 2022.329265708419,
+    "label": "NEOWISE May 2022",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_16.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 703.8
+   },
+   {
+    "year": 2022.7780720054757,
+    "label": "NEOWISE Oct 2022",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_17.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 764.6
+   },
+   {
+    "year": 2023.326337029432,
+    "label": "NEOWISE Apr 2023",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_18.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 614.8
+   },
+   {
+    "year": 2023.7752238193018,
+    "label": "NEOWISE Oct 2023",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_19.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 938.5
+   },
+   {
+    "year": 2024.3258130047911,
+    "label": "NEOWISE Apr 2024",
+    "mission": "NEOWISE",
+    "png": "w2_neowise_20.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 733.9
+   },
+   {
+    "year": 2025.3459895596604,
     "label": "SPHEREx May 2025",
     "mission": "SPHEREx",
     "png": "w2_spherex_v1.png",
-    "n_images": 13,
+    "n_images": 28,
     "detected": true,
-    "snr": 528.0
+    "snr": 622.3
    },
    {
-    "year": 2025.7663855918302,
-    "label": "SPHEREx Oct 2025",
+    "year": 2025.7435164175092,
+    "label": "SPHEREx Sep 2025",
     "mission": "SPHEREx",
     "png": "w2_spherex_v2.png",
     "n_images": 9,
     "detected": true,
-    "snr": 140.7
-   },
-   {
-    "year": 2026.3266739699898,
-    "label": "SPHEREx Apr 2026",
-    "mission": "SPHEREx",
-    "png": "w2_spherex_v3.png",
-    "n_images": 5,
-    "detected": true,
-    "snr": 273.8
+    "snr": 142.7
    }
   ],
   "w1": [
@@ -398,16 +887,205 @@
     "mission": "WISE",
     "png": "w1_wise2010.png",
     "detected": true,
-    "snr": 806.7
+    "snr": 804.7
    },
    {
-    "year": 2025.32058001197,
+    "year": 2014.3348309377138,
+    "label": "NEOWISE May 2014",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_00.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 798.4
+   },
+   {
+    "year": 2014.8298346338124,
+    "label": "NEOWISE Oct 2014",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_01.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 1139.0
+   },
+   {
+    "year": 2015.3257932922656,
+    "label": "NEOWISE Apr 2015",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_02.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 751.9
+   },
+   {
+    "year": 2015.8161968514717,
+    "label": "NEOWISE Oct 2015",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_03.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 994.4
+   },
+   {
+    "year": 2016.3271263518138,
+    "label": "NEOWISE Apr 2016",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_04.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 1113.0
+   },
+   {
+    "year": 2016.7992813141684,
+    "label": "NEOWISE Oct 2016",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_05.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 976.4
+   },
+   {
+    "year": 2017.3278064339493,
+    "label": "NEOWISE Apr 2017",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_06.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 929.8
+   },
+   {
+    "year": 2017.7865771389459,
+    "label": "NEOWISE Oct 2017",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_07.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 823.8
+   },
+   {
+    "year": 2018.3289062286105,
+    "label": "NEOWISE May 2018",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_08.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 928.7
+   },
+   {
+    "year": 2018.7763885010268,
+    "label": "NEOWISE Oct 2018",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_09.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 998.4
+   },
+   {
+    "year": 2019.3298863791924,
+    "label": "NEOWISE May 2019",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_10.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 818.1
+   },
+   {
+    "year": 2019.778925941136,
+    "label": "NEOWISE Oct 2019",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_11.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 783.5
+   },
+   {
+    "year": 2020.327275838467,
+    "label": "NEOWISE Apr 2020",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_12.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 963.2
+   },
+   {
+    "year": 2020.776295140315,
+    "label": "NEOWISE Oct 2020",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_13.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 892.6
+   },
+   {
+    "year": 2021.324984531143,
+    "label": "NEOWISE Apr 2021",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_14.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 857.1
+   },
+   {
+    "year": 2021.7736257357974,
+    "label": "NEOWISE Oct 2021",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_15.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 947.5
+   },
+   {
+    "year": 2022.329265708419,
+    "label": "NEOWISE May 2022",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_16.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 825.1
+   },
+   {
+    "year": 2022.7780720054757,
+    "label": "NEOWISE Oct 2022",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_17.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 831.7
+   },
+   {
+    "year": 2023.326337029432,
+    "label": "NEOWISE Apr 2023",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_18.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 671.0
+   },
+   {
+    "year": 2023.7752238193018,
+    "label": "NEOWISE Oct 2023",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_19.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 750.6
+   },
+   {
+    "year": 2024.3258130047911,
+    "label": "NEOWISE Apr 2024",
+    "mission": "NEOWISE",
+    "png": "w1_neowise_20.png",
+    "n_images": 10,
+    "detected": true,
+    "snr": 844.9
+   },
+   {
+    "year": 2025.3205820547748,
     "label": "SPHEREx Apr 2025",
     "mission": "SPHEREx",
     "png": "w1_spherex_v1.png",
-    "n_images": 1,
+    "n_images": 2,
     "detected": true,
-    "snr": 962.5
+    "snr": 1495.5
    },
    {
     "year": 2025.7634828201553,
@@ -416,16 +1094,16 @@
     "png": "w1_spherex_v2.png",
     "n_images": 5,
     "detected": true,
-    "snr": 920.5
+    "snr": 926.8
    },
    {
-    "year": 2026.3075350721035,
+    "year": 2026.3013998708002,
     "label": "SPHEREx Apr 2026",
     "mission": "SPHEREx",
     "png": "w1_spherex_v3.png",
-    "n_images": 6,
+    "n_images": 4,
     "detected": true,
-    "snr": 706.4
+    "snr": 549.6
    }
   ]
  },
@@ -433,10 +1111,10 @@
   "w2": "w2_diff.png",
   "w1": "w1_diff.png",
   "d1": "d1_diff.png",
-  "d2": "d2_diff.png",
+  "d2": null,
   "d3": "d3_diff.png",
   "d4": "d4_diff.png",
-  "d5": "d5_diff.png",
+  "d5": null,
   "d6": "d6_diff.png"
  },
  "fov_arcsec": 300.0,
@@ -458,6 +1136,32 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W17_4B_0017_2D2_spx_l2b-v27-2026-196",
+   "date": "2025-04-24 20:35",
+   "detector": 2,
+   "lam_um": 1.599,
+   "flags_at_target": [
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W17_4B_0017_2D5_spx_l2b-v27-2026-196",
+   "date": "2025-04-24 20:35",
+   "detector": 5,
+   "lam_um": 4.378,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W17_4B_0027_3D2_spx_l2b-v27-2026-196",
+   "date": "2025-04-24 22:10",
+   "detector": 2,
+   "lam_um": 1.107,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W17_4B_0027_3D5_spx_l2b-v27-2026-196",
    "date": "2025-04-24 22:10",
    "detector": 5,
@@ -472,6 +1176,18 @@
    "lam_um": 1.133,
    "flags_at_target": [],
    "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W17_4B_0027_4D5_spx_l2b-v27-2026-196",
+   "date": "2025-04-24 22:13",
+   "detector": 5,
+   "lam_um": 3.862,
+   "flags_at_target": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
   },
   {
    "image": "level2_2025W17_4B_0077_2D1_spx_l2b-v27-2026-196",
@@ -489,6 +1205,58 @@
    "flags_at_target": [
     "TRANSIENT",
     "DICHROIC",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W17_4B_0077_3D1_spx_l2b-v27-2026-196",
+   "date": "2025-04-25 06:18",
+   "detector": 1,
+   "lam_um": 0.756,
+   "flags_at_target": [
+    "TRANSIENT",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W17_4B_0077_3D4_spx_l2b-v27-2026-196",
+   "date": "2025-04-25 06:18",
+   "detector": 4,
+   "lam_um": 2.458,
+   "flags_at_target": [
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W17_4B_0202_1D2_spx_l2b-v27-2026-196",
+   "date": "2025-04-26 01:48",
+   "detector": 2,
+   "lam_um": 1.637,
+   "flags_at_target": [
+    "TRANSIENT",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W17_4B_0202_1D5_spx_l2b-v27-2026-196",
+   "date": "2025-04-26 01:48",
+   "detector": 5,
+   "lam_um": 4.415,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W17_4B_0222_1D2_spx_l2b-v27-2026-196",
+   "date": "2025-04-26 05:04",
+   "detector": 2,
+   "lam_um": 1.16,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
     "HALO"
    ],
    "used_in_spectrum": false
@@ -518,6 +1286,26 @@
    "used_in_spectrum": false
   },
   {
+   "image": "level2_2025W17_4B_0222_3D2_spx_l2b-v27-2026-196",
+   "date": "2025-04-26 05:08",
+   "detector": 2,
+   "lam_um": 1.216,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W17_4B_0222_3D5_spx_l2b-v27-2026-196",
+   "date": "2025-04-26 05:08",
+   "detector": 5,
+   "lam_um": 3.963,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
    "image": "level2_2025W17_4B_0222_4D2_spx_l2b-v27-2026-196",
    "date": "2025-04-26 05:10",
    "detector": 2,
@@ -541,6 +1329,45 @@
    "used_in_spectrum": false
   },
   {
+   "image": "level2_2025W17_4B_0315_1D2_spx_l2b-v27-2026-196",
+   "date": "2025-04-26 19:44",
+   "detector": 2,
+   "lam_um": 1.576,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W17_4B_0315_1D5_spx_l2b-v27-2026-196",
+   "date": "2025-04-26 19:44",
+   "detector": 5,
+   "lam_um": 4.355,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W17_4B_0315_2D2_spx_l2b-v27-2026-196",
+   "date": "2025-04-26 19:46",
+   "detector": 2,
+   "lam_um": 1.613,
+   "flags_at_target": [
+    "TRANSIENT",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W17_4B_0315_2D5_spx_l2b-v27-2026-196",
+   "date": "2025-04-26 19:46",
+   "detector": 5,
+   "lam_um": 4.39,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
    "image": "level2_2025W17_4B_0315_3D2_spx_l2b-v27-2026-196",
    "date": "2025-04-26 19:48",
    "detector": 2,
@@ -553,6 +1380,30 @@
    "date": "2025-04-26 19:48",
    "detector": 5,
    "lam_um": 4.424,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W17_4B_0447_1D2_spx_l2b-v27-2026-196",
+   "date": "2025-04-27 16:55",
+   "detector": 2,
+   "lam_um": 1.274,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W17_4B_0447_1D5_spx_l2b-v27-2026-196",
+   "date": "2025-04-27 16:55",
+   "detector": 5,
+   "lam_um": 4.033,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W17_4B_0447_2D2_spx_l2b-v27-2026-196",
+   "date": "2025-04-27 16:57",
+   "detector": 2,
+   "lam_um": 1.305,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -575,6 +1426,30 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W17_4B_0447_3D5_spx_l2b-v27-2026-196",
+   "date": "2025-04-27 16:59",
+   "detector": 5,
+   "lam_um": 4.103,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W17_4B_0447_4D2_spx_l2b-v27-2026-196",
+   "date": "2025-04-27 17:01",
+   "detector": 2,
+   "lam_um": 1.368,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W17_4B_0447_4D5_spx_l2b-v27-2026-196",
+   "date": "2025-04-27 17:01",
+   "detector": 5,
+   "lam_um": 4.139,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W17_4B_0468_1D1_spx_l2b-v27-2026-196",
    "date": "2025-04-27 20:12",
    "detector": 1,
@@ -591,6 +1466,30 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W17_4B_0468_2D1_spx_l2b-v27-2026-196",
+   "date": "2025-04-27 20:14",
+   "detector": 1,
+   "lam_um": 1.092,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W17_4B_0468_2D4_spx_l2b-v27-2026-196",
+   "date": "2025-04-27 20:14",
+   "detector": 4,
+   "lam_um": 3.74,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
    "image": "level2_2025W18_1B_0081_2D3_spx_l2b-v27-2026-196",
    "date": "2025-04-29 01:34",
    "detector": 3,
@@ -603,6 +1502,34 @@
    "date": "2025-04-29 01:34",
    "detector": 6,
    "lam_um": 4.431,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W18_1B_0081_3D3_spx_l2b-v27-2026-196",
+   "date": "2025-04-29 01:36",
+   "detector": 3,
+   "lam_um": 1.685,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W18_1B_0081_3D6_spx_l2b-v27-2026-196",
+   "date": "2025-04-29 01:36",
+   "detector": 6,
+   "lam_um": 4.463,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W18_1B_0081_4D3_spx_l2b-v27-2026-196",
+   "date": "2025-04-29 01:38",
+   "detector": 3,
+   "lam_um": 1.724,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -623,6 +1550,34 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W18_1B_0091_1D6_spx_l2b-v27-2026-196",
+   "date": "2025-04-29 03:10",
+   "detector": 6,
+   "lam_um": 4.527,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W18_1B_0091_2D3_spx_l2b-v27-2026-196",
+   "date": "2025-04-29 03:12",
+   "detector": 3,
+   "lam_um": 1.805,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W18_1B_0091_2D6_spx_l2b-v27-2026-196",
+   "date": "2025-04-29 03:12",
+   "detector": 6,
+   "lam_um": 4.56,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
    "image": "level2_2025W18_1B_0091_3D3_spx_l2b-v27-2026-196",
    "date": "2025-04-29 03:14",
    "detector": 3,
@@ -635,6 +1590,32 @@
    "date": "2025-04-29 03:14",
    "detector": 6,
    "lam_um": 4.594,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W18_1B_0091_4D3_spx_l2b-v27-2026-196",
+   "date": "2025-04-29 03:16",
+   "detector": 3,
+   "lam_um": 1.89,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W18_1B_0091_4D6_spx_l2b-v27-2026-196",
+   "date": "2025-04-29 03:16",
+   "detector": 6,
+   "lam_um": 4.627,
+   "flags_at_target": [
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W18_1B_0175_1D3_spx_l2b-v27-2026-196",
+   "date": "2025-04-29 16:18",
+   "detector": 3,
+   "lam_um": 1.934,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -659,6 +1640,22 @@
    "used_in_spectrum": false
   },
   {
+   "image": "level2_2025W18_1B_0175_2D6_spx_l2b-v27-2026-196",
+   "date": "2025-04-29 16:20",
+   "detector": 6,
+   "lam_um": 4.695,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W18_1B_0238_1D3_spx_l2b-v27-2026-196",
+   "date": "2025-04-30 02:00",
+   "detector": 3,
+   "lam_um": 2.024,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W18_1B_0238_1D6_spx_l2b-v27-2026-196",
    "date": "2025-04-30 02:00",
    "detector": 6,
@@ -671,6 +1668,46 @@
    "date": "2025-04-30 02:02",
    "detector": 3,
    "lam_um": 2.071,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W18_1B_0238_2D6_spx_l2b-v27-2026-196",
+   "date": "2025-04-30 02:02",
+   "detector": 6,
+   "lam_um": 4.764,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W18_1B_0238_3D3_spx_l2b-v27-2026-196",
+   "date": "2025-04-30 02:04",
+   "detector": 3,
+   "lam_um": 2.12,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W18_1B_0238_3D6_spx_l2b-v27-2026-196",
+   "date": "2025-04-30 02:04",
+   "detector": 6,
+   "lam_um": 4.798,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W18_1B_0238_4D3_spx_l2b-v27-2026-196",
+   "date": "2025-04-30 02:06",
+   "detector": 3,
+   "lam_um": 2.169,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -693,6 +1730,36 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W18_1B_0363_1D6_spx_l2b-v27-2026-196",
+   "date": "2025-04-30 21:39",
+   "detector": 6,
+   "lam_um": 4.975,
+   "flags_at_target": [
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W18_1B_0363_2D3_spx_l2b-v27-2026-196",
+   "date": "2025-04-30 21:41",
+   "detector": 3,
+   "lam_um": 2.421,
+   "flags_at_target": [
+    "DICHROIC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W18_2B_0011_2D3_spx_l2b-v27-2026-197",
+   "date": "2025-05-01 13:56",
+   "detector": 3,
+   "lam_um": 1.647,
+   "flags_at_target": [
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
    "image": "level2_2025W18_2B_0011_2D6_spx_l2b-v27-2026-197",
    "date": "2025-05-01 13:56",
    "detector": 6,
@@ -705,6 +1772,27 @@
    "date": "2025-05-01 13:58",
    "detector": 3,
    "lam_um": 1.685,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W18_2B_0011_3D6_spx_l2b-v27-2026-197",
+   "date": "2025-05-01 13:58",
+   "detector": 6,
+   "lam_um": 4.463,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC",
+    "COLD"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W18_2B_0011_4D3_spx_l2b-v27-2026-197",
+   "date": "2025-05-01 14:00",
+   "detector": 3,
+   "lam_um": 1.724,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -723,6 +1811,32 @@
    "date": "2025-05-01 18:45",
    "detector": 3,
    "lam_um": 2.376,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W18_2B_0042_2D3_spx_l2b-v27-2026-197",
+   "date": "2025-05-01 18:47",
+   "detector": 3,
+   "lam_um": 2.421,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "DICHROIC",
+    "COLD",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W18_2B_0489_1D2_spx_l2b-v27-2026-197",
+   "date": "2025-05-04 16:52",
+   "detector": 2,
+   "lam_um": 1.576,
    "flags_at_target": [
     "TRANSIENT",
     "SUR_ERROR",
@@ -751,10 +1865,48 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W18_2B_0489_2D5_spx_l2b-v27-2026-197",
+   "date": "2025-05-04 16:55",
+   "detector": 5,
+   "lam_um": 4.39,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W18_2B_0489_3D2_spx_l2b-v27-2026-197",
+   "date": "2025-05-04 16:57",
+   "detector": 2,
+   "lam_um": 1.651,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W18_2B_0489_3D5_spx_l2b-v27-2026-197",
    "date": "2025-05-04 16:57",
    "detector": 5,
    "lam_um": 4.424,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W19_1B_0274_1D3_spx_l2b-v27-2026-197",
+   "date": "2025-05-06 17:46",
+   "detector": 3,
+   "lam_um": 2.376,
+   "flags_at_target": [
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W19_1B_0274_1D6_spx_l2b-v27-2026-197",
+   "date": "2025-05-06 17:46",
+   "detector": 6,
+   "lam_um": 4.976,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -765,6 +1917,26 @@
    "lam_um": 2.421,
    "flags_at_target": [
     "DICHROIC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W19_1B_0344_3D3_spx_l2b-v27-2026-197",
+   "date": "2025-05-07 05:15",
+   "detector": 3,
+   "lam_um": 1.685,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W19_1B_0344_3D6_spx_l2b-v27-2026-197",
+   "date": "2025-05-07 05:15",
+   "detector": 6,
+   "lam_um": 4.463,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
    ],
    "used_in_spectrum": false
   },
@@ -787,10 +1959,70 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W21_1B_0227_1D3_spx_l2b-v27-2026-199",
+   "date": "2025-05-20 03:09",
+   "detector": 3,
+   "lam_um": 1.764,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W21_1B_0227_1D6_spx_l2b-v27-2026-199",
+   "date": "2025-05-20 03:09",
+   "detector": 6,
+   "lam_um": 4.528,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W23_2B_0241_2D2_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 15:38",
+   "detector": 2,
+   "lam_um": 1.107,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W23_2B_0241_3D2_spx_l2b-v27-2026-201",
    "date": "2025-06-06 15:41",
    "detector": 2,
    "lam_um": 1.133,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W23_2B_0241_3D5_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 15:41",
+   "detector": 5,
+   "lam_um": 3.862,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W23_2B_0241_4D2_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 15:43",
+   "detector": 2,
+   "lam_um": 1.16,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W23_2B_0241_4D5_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 15:43",
+   "detector": 5,
+   "lam_um": 3.896,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W23_2B_0258_1D2_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 17:19",
+   "detector": 2,
+   "lam_um": 1.188,
    "flags_at_target": [
     "TRANSIENT",
     "SUR_ERROR",
@@ -821,6 +2053,22 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W23_2B_0258_2D5_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 17:21",
+   "detector": 5,
+   "lam_um": 3.964,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W23_2B_0258_3D2_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 17:23",
+   "detector": 2,
+   "lam_um": 1.245,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W23_2B_0258_3D5_spx_l2b-v27-2026-201",
    "date": "2025-06-06 17:23",
    "detector": 5,
@@ -833,6 +2081,22 @@
    "used_in_spectrum": false
   },
   {
+   "image": "level2_2025W23_2B_0258_4D2_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 17:25",
+   "detector": 2,
+   "lam_um": 1.275,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W23_2B_0258_4D5_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 17:25",
+   "detector": 5,
+   "lam_um": 4.033,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W23_2B_0285_1D2_spx_l2b-v27-2026-201",
    "date": "2025-06-06 20:31",
    "detector": 2,
@@ -841,6 +2105,22 @@
     "NONFUNC"
    ],
    "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W23_2B_0285_1D5_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 20:31",
+   "detector": 5,
+   "lam_um": 4.341,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W23_2B_0285_2D2_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 20:33",
+   "detector": 2,
+   "lam_um": 1.6,
+   "flags_at_target": [],
+   "used_in_spectrum": true
   },
   {
    "image": "level2_2025W23_2B_0285_2D5_spx_l2b-v27-2026-201",
@@ -862,6 +2142,24 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W23_2B_0285_3D5_spx_l2b-v27-2026-201",
+   "date": "2025-06-06 20:36",
+   "detector": 5,
+   "lam_um": 4.416,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W23_2B_0441_2D2_spx_l2b-v27-2026-201",
+   "date": "2025-06-07 12:52",
+   "detector": 2,
+   "lam_um": 1.434,
+   "flags_at_target": [
+    "PERSIST"
+   ],
+   "used_in_spectrum": false
+  },
+  {
    "image": "level2_2025W23_2B_0441_2D5_spx_l2b-v27-2026-201",
    "date": "2025-06-07 12:52",
    "detector": 5,
@@ -870,10 +2168,44 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W23_2B_0441_3D2_spx_l2b-v27-2026-201",
+   "date": "2025-06-07 12:54",
+   "detector": 2,
+   "lam_um": 1.469,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W23_2B_0441_3D5_spx_l2b-v27-2026-201",
+   "date": "2025-06-07 12:54",
+   "detector": 5,
+   "lam_um": 4.247,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W23_2B_0441_4D2_spx_l2b-v27-2026-201",
    "date": "2025-06-07 12:56",
    "detector": 2,
    "lam_um": 1.504,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W23_2B_0441_4D5_spx_l2b-v27-2026-201",
+   "date": "2025-06-07 12:56",
+   "detector": 5,
+   "lam_um": 4.284,
+   "flags_at_target": [
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W24_1A_0245_2D3_spx_l2b-v27-2026-201",
+   "date": "2025-06-10 04:29",
+   "detector": 3,
+   "lam_um": 1.847,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -896,6 +2228,22 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W24_1A_0245_3D6_spx_l2b-v27-2026-201",
+   "date": "2025-06-10 04:32",
+   "detector": 6,
+   "lam_um": 4.627,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W24_1A_0245_4D3_spx_l2b-v27-2026-201",
+   "date": "2025-06-10 04:34",
+   "detector": 3,
+   "lam_um": 1.934,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W24_1A_0245_4D6_spx_l2b-v27-2026-201",
    "date": "2025-06-10 04:34",
    "detector": 6,
@@ -908,6 +2256,38 @@
    "date": "2025-09-28 23:09",
    "detector": 3,
    "lam_um": 1.638,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W39_2A_0693_3D6_spx_l2b-v27-2026-239",
+   "date": "2025-09-28 23:09",
+   "detector": 6,
+   "lam_um": 4.423,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W39_2A_0693_4D3_spx_l2b-v27-2026-239",
+   "date": "2025-09-28 23:11",
+   "detector": 3,
+   "lam_um": 1.676,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W39_2A_0693_4D6_spx_l2b-v27-2026-239",
+   "date": "2025-09-28 23:11",
+   "detector": 6,
+   "lam_um": 4.455,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W40_1A_0067_1D3_spx_l2b-v27-2026-239",
+   "date": "2025-09-29 07:15",
+   "detector": 3,
+   "lam_um": 1.78,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -928,12 +2308,48 @@
    "used_in_spectrum": true
   },
   {
+   "image": "level2_2025W40_1A_0067_2D6_spx_l2b-v27-2026-239",
+   "date": "2025-09-29 07:17",
+   "detector": 6,
+   "lam_um": 4.574,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W40_1A_0067_3D3_spx_l2b-v27-2026-239",
+   "date": "2025-09-29 07:20",
+   "detector": 3,
+   "lam_um": 1.865,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W40_1A_0067_3D6_spx_l2b-v27-2026-239",
    "date": "2025-09-29 07:20",
    "detector": 6,
    "lam_um": 4.607,
    "flags_at_target": [],
    "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W40_1A_0067_4D3_spx_l2b-v27-2026-239",
+   "date": "2025-09-29 07:22",
+   "detector": 3,
+   "lam_um": 1.908,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W40_1A_0067_4D6_spx_l2b-v27-2026-239",
+   "date": "2025-09-29 07:22",
+   "detector": 6,
+   "lam_um": 4.641,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
   },
   {
    "image": "level2_2025W40_1A_0125_1D3_spx_l2b-v27-2026-239",
@@ -952,152 +2368,26 @@
    "used_in_spectrum": true
   },
   {
-   "image": "level2_2025W40_1A_0125_3D3_spx_l2b-v27-2026-239",
+   "image": "level2_2025W40_1A_0125_2D3_spx_l2b-v27-2026-239",
+   "date": "2025-09-29 13:47",
+   "detector": 3,
+   "lam_um": 1.997,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W40_1A_0125_2D6_spx_l2b-v27-2026-239",
+   "date": "2025-09-29 13:47",
+   "detector": 6,
+   "lam_um": 4.709,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W40_1A_0125_3D6_spx_l2b-v27-2026-239",
    "date": "2025-09-29 13:49",
-   "detector": 3,
-   "lam_um": 2.043,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W40_1A_0125_4D6_spx_l2b-v27-2026-239",
-   "date": "2025-09-29 13:51",
    "detector": 6,
-   "lam_um": 4.778,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W40_1A_0444_2D3_spx_l2b-v27-2026-239",
-   "date": "2025-10-01 00:02",
-   "detector": 3,
-   "lam_um": 2.189,
-   "flags_at_target": [
-    "TRANSIENT",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W40_1A_0444_3D6_spx_l2b-v27-2026-239",
-   "date": "2025-10-01 00:04",
-   "detector": 6,
-   "lam_um": 4.882,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W40_1A_0444_4D3_spx_l2b-v27-2026-239",
-   "date": "2025-10-01 00:06",
-   "detector": 3,
-   "lam_um": 2.291,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W40_1A_0473_1D6_spx_l2b-v27-2026-239",
-   "date": "2025-10-01 03:15",
-   "detector": 6,
-   "lam_um": 4.487,
-   "flags_at_target": [
-    "TRANSIENT",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W40_1A_0489_2D3_spx_l2b-v27-2026-239",
-   "date": "2025-10-01 04:57",
-   "detector": 3,
-   "lam_um": 2.396,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W40_1A_0559_1D6_spx_l2b-v27-2026-239",
-   "date": "2025-10-01 13:02",
-   "detector": 6,
-   "lam_um": 4.509,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W40_1A_0661_1D2_spx_l2b-v27-2026-239",
-   "date": "2025-10-02 00:27",
-   "detector": 2,
-   "lam_um": 1.189,
-   "flags_at_target": [
-    "TRANSIENT",
-    "SUR_ERROR",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W40_1A_0661_1D5_spx_l2b-v27-2026-239",
-   "date": "2025-10-02 00:27",
-   "detector": 5,
-   "lam_um": 3.931,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W40_1A_0661_4D5_spx_l2b-v27-2026-239",
-   "date": "2025-10-02 00:33",
-   "detector": 5,
-   "lam_um": 4.035,
-   "flags_at_target": [
-    "TRANSIENT",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W40_1A_0675_1D2_spx_l2b-v27-2026-239",
-   "date": "2025-10-02 02:05",
-   "detector": 2,
-   "lam_um": 1.337,
-   "flags_at_target": [
-    "TRANSIENT",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W40_1A_0675_3D5_spx_l2b-v27-2026-239",
-   "date": "2025-10-02 02:09",
-   "detector": 5,
-   "lam_um": 4.177,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W40_2B_0093_1D2_spx_l2b-v27-2026-241",
-   "date": "2025-10-02 21:39",
-   "detector": 2,
-   "lam_um": 1.542,
-   "flags_at_target": [
-    "NONFUNC",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W40_2B_0093_3D5_spx_l2b-v27-2026-241",
-   "date": "2025-10-02 21:43",
-   "detector": 5,
-   "lam_um": 4.396,
-   "flags_at_target": [
-    "TRANSIENT",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W40_2B_0107_1D2_spx_l2b-v27-2026-241",
-   "date": "2025-10-02 23:16",
-   "detector": 2,
-   "lam_um": 1.306,
+   "lam_um": 4.743,
    "flags_at_target": [
     "TRANSIENT",
     "SUR_ERROR",
@@ -1130,6 +2420,14 @@
    "used_in_spectrum": false
   },
   {
+   "image": "level2_2025W40_2B_0289_3D1_spx_l2b-v27-2026-241",
+   "date": "2025-10-03 17:18",
+   "detector": 1,
+   "lam_um": 1.105,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W40_2B_0659_1D1_spx_l2b-v27-2026-241",
    "date": "2025-10-05 06:43",
    "detector": 1,
@@ -1142,6 +2440,14 @@
    "date": "2025-10-05 06:43",
    "detector": 4,
    "lam_um": 3.228,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W40_2B_0659_2D1_spx_l2b-v27-2026-241",
+   "date": "2025-10-05 06:45",
+   "detector": 1,
+   "lam_um": 0.982,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -1167,49 +2473,12 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W41_1A_0052_1D3_spx_l2b-v27-2026-241",
-   "date": "2025-10-06 05:30",
-   "detector": 3,
-   "lam_um": 2.189,
-   "flags_at_target": [
-    "TRANSIENT",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W41_1A_0067_1D2_spx_l2b-v27-2026-241",
-   "date": "2025-10-06 07:10",
-   "detector": 2,
-   "lam_um": 1.135,
+   "image": "level2_2025W41_1A_0242_2D1_spx_l2b-v27-2026-241",
+   "date": "2025-10-07 04:21",
+   "detector": 1,
+   "lam_um": 0.795,
    "flags_at_target": [],
    "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W41_1A_0067_1D5_spx_l2b-v27-2026-241",
-   "date": "2025-10-06 07:10",
-   "detector": 5,
-   "lam_um": 3.865,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W41_1A_0108_1D2_spx_l2b-v27-2026-241",
-   "date": "2025-10-06 12:01",
-   "detector": 2,
-   "lam_um": 1.337,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W41_1A_0108_1D5_spx_l2b-v27-2026-241",
-   "date": "2025-10-06 12:01",
-   "detector": 5,
-   "lam_um": 4.105,
-   "flags_at_target": [
-    "HALO"
-   ],
-   "used_in_spectrum": false
   },
   {
    "image": "level2_2025W41_1A_0242_2D4_spx_l2b-v27-2026-241",
@@ -1226,6 +2495,14 @@
    "date": "2025-10-07 04:24",
    "detector": 1,
    "lam_um": 0.813,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W41_1A_0373_1D1_spx_l2b-v27-2026-241",
+   "date": "2025-10-07 19:00",
+   "detector": 1,
+   "lam_um": 0.833,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -1264,34 +2541,6 @@
    "date": "2025-10-08 09:44",
    "detector": 1,
    "lam_um": 0.937,
-   "flags_at_target": [
-    "TRANSIENT",
-    "SUR_ERROR",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W41_2B_0112_1D5_spx_l2b-v27-2026-242",
-   "date": "2025-10-09 23:09",
-   "detector": 5,
-   "lam_um": 3.897,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W41_2B_0173_1D2_spx_l2b-v27-2026-242",
-   "date": "2025-10-10 05:42",
-   "detector": 2,
-   "lam_um": 1.109,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W41_2B_0173_3D5_spx_l2b-v27-2026-242",
-   "date": "2025-10-10 05:46",
-   "detector": 5,
-   "lam_um": 3.897,
    "flags_at_target": [
     "TRANSIENT",
     "SUR_ERROR",
@@ -1366,12 +2615,11 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2025W42_2A_0033_1D2_spx_l2b-v27-2026-243",
-   "date": "2025-10-16 14:53",
-   "detector": 2,
-   "lam_um": 1.47,
+   "image": "level2_2025W42_1A_0259_1D1_spx_l2b-v27-2026-243",
+   "date": "2025-10-13 23:24",
+   "detector": 1,
+   "lam_um": 0.873,
    "flags_at_target": [
-    "TRANSIENT",
     "HALO"
    ],
    "used_in_spectrum": false
@@ -1395,6 +2643,14 @@
    "used_in_spectrum": false
   },
   {
+   "image": "level2_2025W43_1A_0019_1D1_spx_l2b-v27-2026-244",
+   "date": "2025-10-20 02:04",
+   "detector": 1,
+   "lam_um": 0.776,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2025W43_1A_0019_1D4_spx_l2b-v27-2026-244",
    "date": "2025-10-20 02:04",
    "detector": 4,
@@ -1402,76 +2658,6 @@
    "flags_at_target": [
     "TRANSIENT",
     "NONFUNC",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W43_2A_0023_2D2_spx_l2b-v27-2026-245",
-   "date": "2025-10-23 14:46",
-   "detector": 2,
-   "lam_um": 1.505,
-   "flags_at_target": [
-    "TRANSIENT",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W43_2A_0023_2D5_spx_l2b-v27-2026-245",
-   "date": "2025-10-23 14:46",
-   "detector": 5,
-   "lam_um": 4.285,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W44_2B_0494_1D6_spx_l2b-v27-2026-246",
-   "date": "2025-11-01 10:41",
-   "detector": 6,
-   "lam_um": 4.508,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W45_1A_0251_1D3_spx_l2b-v27-2026-247",
-   "date": "2025-11-04 03:57",
-   "detector": 3,
-   "lam_um": 1.864,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2025W45_1A_0251_1D6_spx_l2b-v27-2026-247",
-   "date": "2025-11-04 03:57",
-   "detector": 6,
-   "lam_um": 4.607,
-   "flags_at_target": [
-    "TRANSIENT",
-    "SUR_ERROR",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W45_2A_0315_1D2_spx_l2b-v27-2026-247",
-   "date": "2025-11-07 23:11",
-   "detector": 2,
-   "lam_um": 1.217,
-   "flags_at_target": [
-    "TRANSIENT",
-    "SUR_ERROR",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2025W45_2A_0315_1D5_spx_l2b-v27-2026-247",
-   "date": "2025-11-07 23:11",
-   "detector": 5,
-   "lam_um": 3.965,
-   "flags_at_target": [
-    "TRANSIENT",
     "HALO"
    ],
    "used_in_spectrum": false
@@ -1526,6 +2712,14 @@
    "used_in_spectrum": false
   },
   {
+   "image": "level2_2026W16_2A_0434_1D1_spx_l2b-v27-2026-242",
+   "date": "2026-04-18 20:17",
+   "detector": 1,
+   "lam_um": 1.066,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
    "image": "level2_2026W16_2A_0434_2D1_spx_l2b-v27-2026-242",
    "date": "2026-04-18 20:19",
    "detector": 1,
@@ -1546,26 +2740,10 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W17_1B_0162_3D1_spx_l2b-v27-2026-242",
-   "date": "2026-04-20 19:38",
-   "detector": 1,
-   "lam_um": 0.756,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
    "image": "level2_2026W17_1B_0162_3D4_spx_l2b-v27-2026-242",
    "date": "2026-04-20 19:38",
    "detector": 4,
    "lam_um": 2.458,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W17_1B_0184_1D1_spx_l2b-v27-2026-242",
-   "date": "2026-04-20 22:48",
-   "detector": 1,
-   "lam_um": 0.792,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -1581,30 +2759,12 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W17_1B_0184_3D1_spx_l2b-v27-2026-242",
-   "date": "2026-04-20 22:53",
-   "detector": 1,
-   "lam_um": 0.83,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
    "image": "level2_2026W17_1B_0184_3D4_spx_l2b-v27-2026-242",
    "date": "2026-04-20 22:53",
    "detector": 4,
    "lam_um": 2.733,
    "flags_at_target": [],
    "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W17_1B_0241_1D1_spx_l2b-v27-2026-242",
-   "date": "2026-04-21 06:55",
-   "detector": 1,
-   "lam_um": 0.87,
-   "flags_at_target": [
-    "HALO"
-   ],
-   "used_in_spectrum": false
   },
   {
    "image": "level2_2026W17_1B_0241_2D4_spx_l2b-v27-2026-242",
@@ -1618,28 +2778,10 @@
    "used_in_spectrum": false
   },
   {
-   "image": "level2_2026W17_1B_0241_3D1_spx_l2b-v27-2026-242",
-   "date": "2026-04-21 06:59",
-   "detector": 1,
-   "lam_um": 0.911,
-   "flags_at_target": [
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
    "image": "level2_2026W17_1B_0337_1D4_spx_l2b-v27-2026-242",
    "date": "2026-04-21 19:56",
    "detector": 4,
    "lam_um": 3.127,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W17_1B_0337_2D1_spx_l2b-v27-2026-242",
-   "date": "2026-04-21 19:58",
-   "detector": 1,
-   "lam_um": 0.955,
    "flags_at_target": [],
    "used_in_spectrum": true
   },
@@ -1652,190 +2794,10 @@
    "used_in_spectrum": true
   },
   {
-   "image": "level2_2026W17_1B_0337_4D1_spx_l2b-v27-2026-242",
-   "date": "2026-04-21 20:02",
-   "detector": 1,
-   "lam_um": 1.001,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
    "image": "level2_2026W17_1B_0337_4D4_spx_l2b-v27-2026-242",
    "date": "2026-04-21 20:02",
    "detector": 4,
    "lam_um": 3.39,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W17_1B_0351_2D1_spx_l2b-v27-2026-242",
-   "date": "2026-04-21 21:35",
-   "detector": 1,
-   "lam_um": 1.049,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W17_1B_0351_2D4_spx_l2b-v27-2026-242",
-   "date": "2026-04-21 21:35",
-   "detector": 4,
-   "lam_um": 3.574,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W17_2A_0308_3D2_spx_l2b-v27-2026-243",
-   "date": "2026-04-24 21:21",
-   "detector": 2,
-   "lam_um": 1.107,
-   "flags_at_target": [
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2026W17_2A_0308_3D5_spx_l2b-v27-2026-243",
-   "date": "2026-04-24 21:21",
-   "detector": 5,
-   "lam_um": 3.829,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W17_2A_0355_3D2_spx_l2b-v27-2026-243",
-   "date": "2026-04-25 02:16",
-   "detector": 2,
-   "lam_um": 1.368,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W17_2A_0355_3D5_spx_l2b-v27-2026-243",
-   "date": "2026-04-25 02:16",
-   "detector": 5,
-   "lam_um": 4.139,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W18_1A_0457_1D3_spx_l2b-v27-2026-244",
-   "date": "2026-04-29 05:33",
-   "detector": 3,
-   "lam_um": 1.979,
-   "flags_at_target": [
-    "TRANSIENT",
-    "SUR_ERROR",
-    "NONFUNC",
-    "COLD",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2026W18_1A_0457_2D6_spx_l2b-v27-2026-244",
-   "date": "2026-04-29 05:35",
-   "detector": 6,
-   "lam_um": 4.729,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W18_1A_0475_1D3_spx_l2b-v27-2026-244",
-   "date": "2026-04-29 07:11",
-   "detector": 3,
-   "lam_um": 2.072,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W18_1A_0475_2D6_spx_l2b-v27-2026-244",
-   "date": "2026-04-29 07:13",
-   "detector": 6,
-   "lam_um": 4.798,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W18_1A_0490_2D3_spx_l2b-v27-2026-244",
-   "date": "2026-04-29 08:50",
-   "detector": 3,
-   "lam_um": 2.22,
-   "flags_at_target": [
-    "TRANSIENT",
-    "SUR_ERROR",
-    "HALO"
-   ],
-   "used_in_spectrum": false
-  },
-  {
-   "image": "level2_2026W18_1A_0490_2D6_spx_l2b-v27-2026-244",
-   "date": "2026-04-29 08:50",
-   "detector": 6,
-   "lam_um": 4.868,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W18_1A_0516_1D3_spx_l2b-v27-2026-244",
-   "date": "2026-04-29 12:05",
-   "detector": 3,
-   "lam_um": 2.323,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W18_1A_0529_1D6_spx_l2b-v27-2026-244",
-   "date": "2026-04-29 13:38",
-   "detector": 6,
-   "lam_um": 4.833,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W18_2A_0023_1D2_spx_l2b-v27-2026-244",
-   "date": "2026-04-30 14:07",
-   "detector": 2,
-   "lam_um": 1.541,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W18_2A_0023_1D5_spx_l2b-v27-2026-244",
-   "date": "2026-04-30 14:07",
-   "detector": 5,
-   "lam_um": 4.32,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W18_2A_0819_1D1_spx_l2b-v27-2026-244",
-   "date": "2026-05-03 17:14",
-   "detector": 1,
-   "lam_um": 1.067,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W18_2A_0819_1D4_spx_l2b-v27-2026-244",
-   "date": "2026-05-03 17:14",
-   "detector": 4,
-   "lam_um": 3.643,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W19_1A_0041_1D3_spx_l2b-v27-2026-245",
-   "date": "2026-05-04 02:49",
-   "detector": 3,
-   "lam_um": 1.979,
-   "flags_at_target": [],
-   "used_in_spectrum": true
-  },
-  {
-   "image": "level2_2026W19_1A_0041_1D6_spx_l2b-v27-2026-245",
-   "date": "2026-05-04 02:49",
-   "detector": 6,
-   "lam_um": 4.695,
    "flags_at_target": [],
    "used_in_spectrum": true
   }
@@ -1843,16 +2805,6 @@
  "ghosts": {
   "w2_wise2010.png": [
    [
-    111.9,
-    67.3,
-    15.8
-   ],
-   [
-    116.5,
-    138.2,
-    15.3
-   ],
-   [
     133.9,
     41.2,
     15.7
@@ -1868,8 +2820,23 @@
     16.2
    ],
    [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
     149.2,
     43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
     16.0
    ],
    [
@@ -1881,15 +2848,1012 @@
     26.8,
     111.8,
     13.0
+   ]
+  ],
+  "w2_neowise_00.png": [
+   [
+    133.9,
+    41.2,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
    ],
    [
     118.6,
     39.9,
     16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.8,
+    13.0
+   ]
+  ],
+  "w2_neowise_01.png": [
+   [
+    133.9,
+    41.2,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.8,
+    13.0
+   ]
+  ],
+  "w2_neowise_02.png": [
+   [
+    133.9,
+    41.2,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.8,
+    13.0
+   ]
+  ],
+  "w2_neowise_03.png": [
+   [
+    133.9,
+    41.2,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.8,
+    13.0
+   ]
+  ],
+  "w2_neowise_04.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_05.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_06.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_07.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_08.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_09.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_10.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_11.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_12.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_13.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_14.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_15.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_16.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_17.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_18.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_19.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w2_neowise_20.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
    ]
   ],
   "w2_spherex_v1_1.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -1900,23 +3864,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -1928,15 +3882,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "w2_spherex_v1_2.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -1947,23 +3911,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -1975,15 +3929,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "w2_spherex_v1_3.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -1994,23 +3958,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2022,15 +3976,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "w2_spherex_v1_4.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2041,23 +4005,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2069,15 +4023,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "w2_spherex_v1_5.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2088,23 +4052,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2116,14 +4070,24 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
-  "w2_spherex_v2_1.png": [
+  "w2_spherex_v1_6.png": [
+   [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
    [
     111.9,
     67.2,
@@ -2135,23 +4099,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2163,14 +4117,24 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
-  "w2_spherex_v2_2.png": [
+  "w2_spherex_v1_7.png": [
+   [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
    [
     111.9,
     67.2,
@@ -2182,23 +4146,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2210,14 +4164,24 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
-  "w2_spherex_v2_3.png": [
+  "w2_spherex_v2.png": [
+   [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
    [
     111.9,
     67.2,
@@ -2229,23 +4193,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2257,118 +4211,9 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
-   ]
-  ],
-  "w2_spherex_v3_1.png": [
-   [
-    111.9,
-    67.2,
-    15.8
-   ],
-   [
-    116.4,
-    138.1,
-    15.3
-   ],
-   [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
-    149.1,
-    43.9,
-    16.0
-   ],
-   [
-    93.8,
-    66.2,
-    15.8
-   ],
-   [
-    27.1,
-    111.7,
-    13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
-   ]
-  ],
-  "w2_spherex_v3_2.png": [
-   [
-    111.9,
-    67.2,
-    15.8
-   ],
-   [
-    116.4,
-    138.1,
-    15.3
-   ],
-   [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
-    149.1,
-    43.9,
-    16.0
-   ],
-   [
-    93.8,
-    66.2,
-    15.8
-   ],
-   [
-    27.1,
-    111.7,
-    13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "w1_wise2010.png": [
-   [
-    111.9,
-    67.3,
-    15.8
-   ],
-   [
-    116.5,
-    138.2,
-    15.3
-   ],
    [
     133.9,
     41.2,
@@ -2385,8 +4230,23 @@
     16.2
    ],
    [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
     149.2,
     43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
     16.0
    ],
    [
@@ -2398,15 +4258,1012 @@
     26.8,
     111.8,
     13.0
+   ]
+  ],
+  "w1_neowise_00.png": [
+   [
+    133.9,
+    41.2,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
    ],
    [
     118.6,
     39.9,
     16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.8,
+    13.0
+   ]
+  ],
+  "w1_neowise_01.png": [
+   [
+    133.9,
+    41.2,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.8,
+    13.0
+   ]
+  ],
+  "w1_neowise_02.png": [
+   [
+    133.9,
+    41.2,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.8,
+    13.0
+   ]
+  ],
+  "w1_neowise_03.png": [
+   [
+    133.9,
+    41.2,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.8,
+    13.0
+   ]
+  ],
+  "w1_neowise_04.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_05.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_06.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_07.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.3,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.6,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_08.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_09.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_10.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    26.9,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_11.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_12.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_13.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.3,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.9,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_14.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_15.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_16.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_17.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_18.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_19.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
+   ]
+  ],
+  "w1_neowise_20.png": [
+   [
+    133.9,
+    41.1,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
+    111.9,
+    67.2,
+    15.8
+   ],
+   [
+    116.4,
+    138.1,
+    15.3
+   ],
+   [
+    149.1,
+    43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
+    16.0
+   ],
+   [
+    93.8,
+    66.2,
+    15.8
+   ],
+   [
+    27.0,
+    111.7,
+    13.0
    ]
   ],
   "w1_spherex_v1.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2417,23 +5274,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2445,15 +5292,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "w1_spherex_v2_1.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2464,23 +5321,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2492,15 +5339,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "w1_spherex_v2_2.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2511,23 +5368,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2539,15 +5386,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "w1_spherex_v2_3.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2558,23 +5415,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2586,15 +5433,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "w1_spherex_v2_4.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2605,23 +5462,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2633,15 +5480,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "w1_spherex_v3_1.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2652,23 +5509,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2677,34 +5524,19 @@
     15.8
    ],
    [
-    27.1,
+    27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "w1_spherex_v3_2.png": [
    [
-    111.9,
-    67.2,
-    15.8
-   ],
-   [
-    116.4,
-    138.1,
-    15.3
-   ],
-   [
     134.0,
     41.0,
     15.7
    ],
    [
-    12.3,
+    12.2,
     149.8,
     16.4
    ],
@@ -2713,28 +5545,6 @@
     61.4,
     16.2
    ],
-   [
-    149.1,
-    43.9,
-    16.0
-   ],
-   [
-    93.8,
-    66.2,
-    15.8
-   ],
-   [
-    27.1,
-    111.7,
-    13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
-   ]
-  ],
-  "w1_spherex_v3_3.png": [
    [
     111.9,
     67.2,
@@ -2746,23 +5556,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2771,18 +5571,28 @@
     15.8
    ],
    [
-    27.1,
+    27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d1_spherex_v1.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2793,23 +5603,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2821,15 +5621,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d1_spherex_v2.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2840,23 +5650,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2868,15 +5668,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d1_spherex_v3.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2887,23 +5697,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2912,18 +5712,28 @@
     15.8
    ],
    [
-    27.1,
+    27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d2_spherex_v1.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -2934,23 +5744,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -2962,109 +5762,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
-   ]
-  ],
-  "d2_spherex_v2.png": [
-   [
-    111.9,
-    67.2,
-    15.8
-   ],
-   [
-    116.4,
-    138.1,
-    15.3
-   ],
-   [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
-    149.1,
-    43.9,
-    16.0
-   ],
-   [
-    93.8,
-    66.2,
-    15.8
-   ],
-   [
-    27.0,
-    111.7,
-    13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
-   ]
-  ],
-  "d2_spherex_v3.png": [
-   [
-    111.9,
-    67.2,
-    15.8
-   ],
-   [
-    116.4,
-    138.1,
-    15.3
-   ],
-   [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
-    149.1,
-    43.9,
-    16.0
-   ],
-   [
-    93.8,
-    66.2,
-    15.8
-   ],
-   [
-    27.1,
-    111.7,
-    13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d3_spherex_v1.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -3075,23 +5791,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -3103,15 +5809,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d3_spherex_v2.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -3122,23 +5838,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -3150,62 +5856,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
-   ]
-  ],
-  "d3_spherex_v3.png": [
-   [
-    111.9,
-    67.2,
-    15.8
-   ],
-   [
-    116.4,
-    138.1,
-    15.3
-   ],
-   [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
-    149.1,
-    43.9,
-    16.0
-   ],
-   [
-    93.8,
-    66.2,
-    15.8
-   ],
-   [
-    27.1,
-    111.7,
-    13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d4_spherex_v1.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -3216,23 +5885,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -3244,15 +5903,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d4_spherex_v2.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -3263,23 +5932,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -3291,15 +5950,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d4_spherex_v3.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -3310,23 +5979,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -3335,18 +5994,28 @@
     15.8
    ],
    [
-    27.1,
+    27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d5_spherex_v1.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -3357,23 +6026,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -3385,109 +6044,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
-   ]
-  ],
-  "d5_spherex_v2.png": [
-   [
-    111.9,
-    67.2,
-    15.8
-   ],
-   [
-    116.4,
-    138.1,
-    15.3
-   ],
-   [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
-    149.1,
-    43.9,
-    16.0
-   ],
-   [
-    93.8,
-    66.2,
-    15.8
-   ],
-   [
-    27.0,
-    111.7,
-    13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
-   ]
-  ],
-  "d5_spherex_v3.png": [
-   [
-    111.9,
-    67.2,
-    15.8
-   ],
-   [
-    116.4,
-    138.1,
-    15.3
-   ],
-   [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
-    149.1,
-    43.9,
-    16.0
-   ],
-   [
-    93.8,
-    66.2,
-    15.8
-   ],
-   [
-    27.1,
-    111.7,
-    13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d6_spherex_v1.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -3498,23 +6073,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -3526,15 +6091,25 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ],
   "d6_spherex_v2.png": [
    [
+    134.0,
+    41.0,
+    15.7
+   ],
+   [
+    12.2,
+    149.8,
+    16.4
+   ],
+   [
+    141.1,
+    61.4,
+    16.2
+   ],
+   [
     111.9,
     67.2,
     15.8
@@ -3545,23 +6120,13 @@
     15.3
    ],
    [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
     149.1,
     43.9,
+    16.0
+   ],
+   [
+    118.7,
+    39.8,
     16.0
    ],
    [
@@ -3573,58 +6138,6 @@
     27.0,
     111.7,
     13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
-   ]
-  ],
-  "d6_spherex_v3.png": [
-   [
-    111.9,
-    67.2,
-    15.8
-   ],
-   [
-    116.4,
-    138.1,
-    15.3
-   ],
-   [
-    134.0,
-    41.0,
-    15.7
-   ],
-   [
-    12.3,
-    149.8,
-    16.4
-   ],
-   [
-    141.1,
-    61.4,
-    16.2
-   ],
-   [
-    149.1,
-    43.9,
-    16.0
-   ],
-   [
-    93.8,
-    66.2,
-    15.8
-   ],
-   [
-    27.1,
-    111.7,
-    13.0
-   ],
-   [
-    118.7,
-    39.8,
-    16.0
    ]
   ]
  },
@@ -3633,122 +6146,629 @@
    "year": 2010.5,
    "mission": "WISE",
    "ch": "w2",
-   "x": 90.19228037036065,
-   "y": 84.21947411677904,
-   "pred_x": 90.24244367642532,
-   "pred_y": 84.25088686003481,
-   "offset_arcsec": 0.11837427916910821,
-   "ra": 331.06539615042215,
-   "dec": -56.7900602607045
+   "x": 90.18725936010506,
+   "y": 84.21686861814463,
+   "pred_x": 90.22957939030323,
+   "pred_y": 84.24292285445836,
+   "offset_arcsec": 0.0993943263242084,
+   "ra": 331.0653881960429,
+   "dec": -56.7900572827388
   },
   {
-   "year": 2025.34574106194,
-   "mission": "SPHEREx",
+   "year": 2014.3348309377138,
+   "mission": "NEOWISE",
    "ch": "w2",
-   "x": 60.463974426864645,
-   "y": 65.75536352268159,
-   "pred_x": 60.68344682431737,
-   "pred_y": 65.94201182596402,
-   "offset_arcsec": 0.5762142594516341,
-   "ra": 331.09555427742384,
-   "dec": -56.80031830216254
+   "x": 82.52430363565958,
+   "y": 79.49680138741276,
+   "pred_x": 82.59414082847181,
+   "pred_y": 79.5135218309229,
+   "offset_arcsec": 0.14362181796256007,
+   "ra": 331.0731603712545,
+   "dec": -56.79268028986077
   },
   {
-   "year": 2025.7663855918302,
-   "mission": "SPHEREx",
+   "year": 2014.8298346338124,
+   "mission": "NEOWISE",
    "ch": "w2",
-   "x": 59.70093119880779,
-   "y": 65.10354494499843,
-   "pred_x": 59.84591166559405,
-   "pred_y": 65.42324163107011,
-   "offset_arcsec": 0.7020692299362742,
-   "ra": 331.0963286097216,
-   "dec": -56.80068033301716
+   "x": 81.56920478614659,
+   "y": 78.79437469630719,
+   "pred_x": 81.60855102026242,
+   "pred_y": 78.90304616408956,
+   "offset_arcsec": 0.23115028801969592,
+   "ra": 331.0741291471311,
+   "dec": -56.79307058622584
   },
   {
-   "year": 2026.3266739699898,
+   "year": 2015.3257932922656,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 80.5383110046951,
+   "y": 78.20667780367118,
+   "pred_x": 80.62105981058315,
+   "pred_y": 78.29139276657388,
+   "offset_arcsec": 0.23684585436352515,
+   "ra": 331.07517484142295,
+   "dec": -56.79339714009922
+  },
+  {
+   "year": 2015.8161968514717,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 79.63922505703327,
+   "y": 77.62836656176754,
+   "pred_x": 79.64462922537169,
+   "pred_y": 77.686590334935,
+   "offset_arcsec": 0.11694807018379279,
+   "ra": 331.0760868453098,
+   "dec": -56.79371846547404
+  },
+  {
+   "year": 2016.3271263518138,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 78.5103028678077,
+   "y": 77.02696208558972,
+   "pred_x": 78.62732993940679,
+   "pred_y": 77.05647377443464,
+   "offset_arcsec": 0.24138164971008993,
+   "ra": 331.0772320173439,
+   "dec": -56.794052621574856
+  },
+  {
+   "year": 2016.7992813141684,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 77.70873728836898,
+   "y": 76.35413761813835,
+   "pred_x": 77.68723369330415,
+   "pred_y": 76.47417688179955,
+   "offset_arcsec": 0.24390022063705719,
+   "ra": 331.0780451212933,
+   "dec": -56.79442643675664
+  },
+  {
+   "year": 2017.3278064339493,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 76.55951919199683,
+   "y": 75.72947811395126,
+   "pred_x": 76.63490020062696,
+   "pred_y": 75.82236008606486,
+   "offset_arcsec": 0.23924345073323153,
+   "ra": 331.07921092095035,
+   "dec": -56.794773494728474
+  },
+  {
+   "year": 2017.7865771389459,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 75.64840081005534,
+   "y": 75.13206781671369,
+   "pred_x": 75.72145302559629,
+   "pred_y": 75.25656966429761,
+   "offset_arcsec": 0.2887028662364711,
+   "ra": 331.0801351990297,
+   "dec": -56.79510540136568
+  },
+  {
+   "year": 2018.3289062286105,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 74.58605021960891,
+   "y": 74.56904266784167,
+   "pred_x": 74.64163478734001,
+   "pred_y": 74.5877287797591,
+   "offset_arcsec": 0.11728281976052782,
+   "ra": 331.0812129144663,
+   "dec": -56.79541819851181
+  },
+  {
+   "year": 2018.7763885010268,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 73.6778807362731,
+   "y": 73.98392227404065,
+   "pred_x": 73.75066373767527,
+   "pred_y": 74.03586010057857,
+   "offset_arcsec": 0.17882844424672356,
+   "ra": 331.0821342344013,
+   "dec": -56.79574326264626
+  },
+  {
+   "year": 2019.3298863791924,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 72.58406484584677,
+   "y": 73.27332770812289,
+   "pred_x": 72.64860759941887,
+   "pred_y": 73.35324503059219,
+   "offset_arcsec": 0.2054511665600922,
+   "ra": 331.08324391030857,
+   "dec": -56.79613802507984
+  },
+  {
+   "year": 2019.778925941136,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 71.70865049482798,
+   "y": 72.62519865834699,
+   "pred_x": 71.75453587072508,
+   "pred_y": 72.79945578659944,
+   "offset_arcsec": 0.360394308650127,
+   "ra": 331.08413203808027,
+   "dec": -56.796498079814995
+  },
+  {
+   "year": 2020.327275838467,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 70.54868836605453,
+   "y": 72.09084051523767,
+   "pred_x": 70.66272975437118,
+   "pred_y": 72.12318959407811,
+   "offset_arcsec": 0.23708142997958667,
+   "ra": 331.0853088530475,
+   "dec": -56.796794913261614
+  },
+  {
+   "year": 2020.776295140315,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 69.75354008323396,
+   "y": 71.40422435396403,
+   "pred_x": 69.76869836727059,
+   "pred_y": 71.56942533772309,
+   "offset_arcsec": 0.33178992447787925,
+   "ra": 331.08611558748197,
+   "dec": -56.797176338220304
+  },
+  {
+   "year": 2021.324984531143,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 68.54624713164145,
+   "y": 70.70537827377422,
+   "pred_x": 68.67621629640342,
+   "pred_y": 70.89274045810616,
+   "offset_arcsec": 0.4560551346893399,
+   "ra": 331.0873404725902,
+   "dec": -56.797564532874595
+  },
+  {
+   "year": 2021.7736257357974,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 67.71216780997322,
+   "y": 70.18187003644566,
+   "pred_x": 67.7829377316115,
+   "pred_y": 70.33944250089458,
+   "offset_arcsec": 0.3454704796348697,
+   "ra": 331.0881867247236,
+   "dec": -56.797855327043386
+  },
+  {
+   "year": 2022.329265708419,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 66.62404757588484,
+   "y": 69.54281459863779,
+   "pred_x": 66.67661652945661,
+   "pred_y": 69.6541856445462,
+   "offset_arcsec": 0.2463087862542954,
+   "ra": 331.08929073985314,
+   "dec": -56.798210292169244
+  },
+  {
+   "year": 2022.7780720054757,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 65.68048709377703,
+   "y": 68.96830044522767,
+   "pred_x": 65.78300925547076,
+   "pred_y": 69.10068408441703,
+   "offset_arcsec": 0.3348804027878679,
+   "ra": 331.0902481031692,
+   "dec": -56.79852940185915
+  },
+  {
+   "year": 2023.326337029432,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 64.69000761426253,
+   "y": 68.26490090717196,
+   "pred_x": 64.69137213653549,
+   "pred_y": 68.42452256913909,
+   "offset_arcsec": 0.3192549857506339,
+   "ra": 331.0912531041573,
+   "dec": -56.798920103429076
+  },
+  {
+   "year": 2023.7752238193018,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 63.75072387200167,
+   "y": 67.6116813765108,
+   "pred_x": 63.79760459744659,
+   "pred_y": 67.87092174061516,
+   "offset_arcsec": 0.5268903767385988,
+   "ra": 331.0922061759354,
+   "dec": -56.799282923680295
+  },
+  {
+   "year": 2024.3258130047911,
+   "mission": "NEOWISE",
+   "ch": "w2",
+   "x": 62.55521470896024,
+   "y": 67.0524480912246,
+   "pred_x": 62.70133989986971,
+   "pred_y": 67.1918938968372,
+   "offset_arcsec": 0.4039688238901914,
+   "ra": 331.0934192121487,
+   "dec": -56.799593497163414
+  },
+  {
+   "year": 2025.3459895596604,
    "mission": "SPHEREx",
    "ch": "w2",
-   "x": 58.482455305381734,
-   "y": 64.5435151642725,
-   "pred_x": 58.73033501595573,
-   "pred_y": 64.7322522321297,
-   "offset_arcsec": 0.6231084185597965,
-   "ra": 331.0975650279317,
-   "dec": -56.8009913061024
+   "x": 60.48714307838788,
+   "y": 65.7191371455,
+   "pred_x": 60.67009124932142,
+   "pred_y": 65.93373572175321,
+   "offset_arcsec": 0.5639949586635534,
+   "ra": 331.09551772776257,
+   "dec": -56.80033400448855
+  },
+  {
+   "year": 2025.7435164175092,
+   "mission": "SPHEREx",
+   "ch": "w2",
+   "x": 59.719376954563444,
+   "y": 65.0845114199368,
+   "pred_x": 59.87858522214516,
+   "pred_y": 65.44347581269909,
+   "offset_arcsec": 0.7853730333803316,
+   "ra": 331.09629684825813,
+   "dec": -56.80068648332997
   },
   {
    "year": 2010.5,
    "mission": "WISE",
    "ch": "w1",
-   "x": 90.17307721782315,
-   "y": 84.20449089683908,
-   "pred_x": 90.24244367642532,
-   "pred_y": 84.25088686003481,
-   "offset_arcsec": 0.16690464989329812,
-   "ra": 331.0654156251744,
-   "dec": -56.79006858719333
+   "x": 90.16739262654112,
+   "y": 84.20147038902749,
+   "pred_x": 90.22957939030323,
+   "pred_y": 84.24292285445836,
+   "offset_arcsec": 0.14947240699397407,
+   "ra": 331.0654083437854,
+   "dec": -56.79006583987303
   },
   {
-   "year": 2025.32058001197,
+   "year": 2014.3348309377138,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 82.67632167416063,
+   "y": 79.59724804202787,
+   "pred_x": 82.59414082847181,
+   "pred_y": 79.5135218309229,
+   "offset_arcsec": 0.23463818606590003,
+   "ra": 331.073006176781,
+   "dec": -56.792624476030575
+  },
+  {
+   "year": 2014.8298346338124,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 81.5076560723565,
+   "y": 78.79815392261945,
+   "pred_x": 81.60855102026242,
+   "pred_y": 78.90304616408956,
+   "offset_arcsec": 0.2910819305073224,
+   "ra": 331.07419158307965,
+   "dec": -56.79306849022085
+  },
+  {
+   "year": 2015.3257932922656,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 80.63287350500855,
+   "y": 78.3209476763716,
+   "pred_x": 80.62105981058315,
+   "pred_y": 78.29139276657388,
+   "offset_arcsec": 0.06365708313185008,
+   "ra": 331.0750789260961,
+   "dec": -56.793333652101055
+  },
+  {
+   "year": 2015.8161968514717,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 79.57785030136458,
+   "y": 77.61931423986205,
+   "pred_x": 79.64462922537169,
+   "pred_y": 77.686590334935,
+   "offset_arcsec": 0.1895837292434489,
+   "ra": 331.0761491047809,
+   "dec": -56.79372349712212
+  },
+  {
+   "year": 2016.3271263518138,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 78.6371515879777,
+   "y": 77.0917392871277,
+   "pred_x": 78.62732993940679,
+   "pred_y": 77.05647377443464,
+   "offset_arcsec": 0.07321533064182907,
+   "ra": 331.07710334155587,
+   "dec": -56.79401662998791
+  },
+  {
+   "year": 2016.7992813141684,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 77.63005931760262,
+   "y": 76.35011859347212,
+   "pred_x": 77.68723369330415,
+   "pred_y": 76.47417688179955,
+   "offset_arcsec": 0.27319859524857437,
+   "ra": 331.07812493560834,
+   "dec": -56.79442867160041
+  },
+  {
+   "year": 2017.3278064339493,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 76.6819363727402,
+   "y": 75.8274444750406,
+   "pred_x": 76.63490020062696,
+   "pred_y": 75.82236008606486,
+   "offset_arcsec": 0.09462034652982336,
+   "ra": 331.0790867374698,
+   "dec": -56.79471906683568
+  },
+  {
+   "year": 2017.7865771389459,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 75.59650897970913,
+   "y": 75.12998224885992,
+   "pred_x": 75.72145302559629,
+   "pred_y": 75.25656966429761,
+   "offset_arcsec": 0.3557267960486656,
+   "ra": 331.0801878413762,
+   "dec": -56.79510656049389
+  },
+  {
+   "year": 2018.3289062286105,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 74.68105671055551,
+   "y": 74.64190665553974,
+   "pred_x": 74.64163478734001,
+   "pred_y": 74.5877287797591,
+   "offset_arcsec": 0.13400492903807532,
+   "ra": 331.0811165332194,
+   "dec": -56.7953777184142
+  },
+  {
+   "year": 2018.7763885010268,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 73.61368270745805,
+   "y": 73.94843942469278,
+   "pred_x": 73.75066373767527,
+   "pred_y": 74.03586010057857,
+   "offset_arcsec": 0.32499955199976593,
+   "ra": 331.08219936255483,
+   "dec": -56.79576297488899
+  },
+  {
+   "year": 2019.3298863791924,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 72.6460567338917,
+   "y": 73.3297825173053,
+   "pred_x": 72.64860759941887,
+   "pred_y": 73.35324503059219,
+   "offset_arcsec": 0.04720154424408913,
+   "ra": 331.0831810184805,
+   "dec": -56.79610666225875
+  },
+  {
+   "year": 2019.778925941136,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 71.64300419494992,
+   "y": 72.60611291325937,
+   "pred_x": 71.75453587072508,
+   "pred_y": 72.79945578659944,
+   "offset_arcsec": 0.4464113855234363,
+   "ra": 331.08419863716466,
+   "dec": -56.79650868148071
+  },
+  {
+   "year": 2020.327275838467,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 70.62840156341476,
+   "y": 72.10413250900841,
+   "pred_x": 70.66272975437118,
+   "pred_y": 72.12318959407811,
+   "offset_arcsec": 0.07852635688693196,
+   "ra": 331.08522798248157,
+   "dec": -56.796787531387
+  },
+  {
+   "year": 2020.776295140315,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 69.66668892583328,
+   "y": 71.36075455153504,
+   "pred_x": 69.76869836727059,
+   "pred_y": 71.56942533772309,
+   "offset_arcsec": 0.46454030125711254,
+   "ra": 331.0862037028564,
+   "dec": -56.79720048468628
+  },
+  {
+   "year": 2021.324984531143,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 68.61163789198285,
+   "y": 70.73361439299524,
+   "pred_x": 68.67621629640342,
+   "pred_y": 70.89274045810616,
+   "offset_arcsec": 0.3434616409706982,
+   "ra": 331.0872741291852,
+   "dec": -56.79754884932876
+  },
+  {
+   "year": 2021.7736257357974,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 67.61527418389127,
+   "y": 70.07591376256723,
+   "pred_x": 67.7829377316115,
+   "pred_y": 70.33944250089458,
+   "offset_arcsec": 0.6246869940381331,
+   "ra": 331.08828503796764,
+   "dec": -56.797914186187135
+  },
+  {
+   "year": 2022.329265708419,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 66.65036878114103,
+   "y": 69.53872347151103,
+   "pred_x": 66.67661652945661,
+   "pred_y": 69.6541856445462,
+   "offset_arcsec": 0.23681602593331091,
+   "ra": 331.08926403621655,
+   "dec": -56.79821256672118
+  },
+  {
+   "year": 2022.7780720054757,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 65.61417952861217,
+   "y": 68.89839760925452,
+   "pred_x": 65.78300925547076,
+   "pred_y": 69.10068408441703,
+   "offset_arcsec": 0.5269660079183291,
+   "ra": 331.0903153852687,
+   "dec": -56.79856823193557
+  },
+  {
+   "year": 2023.326337029432,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 64.68455859595211,
+   "y": 68.30229573584138,
+   "pred_x": 64.69137213653549,
+   "pred_y": 68.42452256913909,
+   "offset_arcsec": 0.2448331911592002,
+   "ra": 331.09125862703365,
+   "dec": -56.798899328084524
+  },
+  {
+   "year": 2023.7752238193018,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 63.65704189823549,
+   "y": 67.58940837946157,
+   "pred_x": 63.79760459744659,
+   "pred_y": 67.87092174061516,
+   "offset_arcsec": 0.629309597349542,
+   "ra": 331.09230122711836,
+   "dec": -56.799295289241726
+  },
+  {
+   "year": 2024.3258130047911,
+   "mission": "NEOWISE",
+   "ch": "w1",
+   "x": 62.69419724634761,
+   "y": 67.10662673542478,
+   "pred_x": 62.70133989986971,
+   "pred_y": 67.1918938968372,
+   "offset_arcsec": 0.17113160011530096,
+   "ra": 331.093278192915,
+   "dec": -56.7995634115037
+  },
+  {
+   "year": 2025.3205820547748,
    "mission": "SPHEREx",
    "ch": "w1",
-   "x": 60.451181380860035,
-   "y": 65.7902638255016,
-   "pred_x": 60.73354438289241,
-   "pred_y": 65.97304230864574,
-   "offset_arcsec": 0.6727163833772167,
-   "ra": 331.0955672499382,
-   "dec": -56.80029891162733
+   "x": 60.521976377738355,
+   "y": 65.80559558914443,
+   "pred_x": 60.720679512428,
+   "pred_y": 65.96507016069482,
+   "offset_arcsec": 0.5095687253796369,
+   "ra": 331.09548236754887,
+   "dec": -56.800285976034836
   },
   {
    "year": 2025.7634828201553,
    "mission": "SPHEREx",
    "ch": "w1",
-   "x": 59.943853915585635,
-   "y": 65.14624808540559,
-   "pred_x": 59.851691304146804,
-   "pred_y": 65.4268215455315,
-   "offset_arcsec": 0.5906451079846379,
-   "ra": 331.0960821274555,
-   "dec": -56.800656638403126
+   "x": 59.93617075447553,
+   "y": 65.14063346357716,
+   "pred_x": 59.83883060508562,
+   "pred_y": 65.41885174881585,
+   "offset_arcsec": 0.5895100215562484,
+   "ra": 331.0960768737921,
+   "dec": -56.8006553306033
   },
   {
-   "year": 2026.3075350721035,
+   "year": 2026.3013998708002,
    "mission": "SPHEREx",
    "ch": "w1",
-   "x": 58.596148722970604,
-   "y": 64.66801421604495,
-   "pred_x": 58.768442012991926,
-   "pred_y": 64.75585574782768,
-   "offset_arcsec": 0.3867873321259401,
-   "ra": 331.097449642214,
-   "dec": -56.800922154904335
+   "x": 58.68445466426862,
+   "y": 64.64350388228326,
+   "pred_x": 58.767797091255844,
+   "pred_y": 64.75545213462414,
+   "offset_arcsec": 0.27912986348931773,
+   "ra": 331.09734700048745,
+   "dec": -56.80093135717191
   }
  ],
  "motion": {
   "from_year": 2010.5,
-  "to_year": 2026.3266739699898,
-  "shift_arcsec": 74.64447724682071,
-  "measured_arcsec_per_yr": 4.716371701872428,
-  "measured_pmra": 4007.7270521451806,
-  "measured_pmdec": -2486.4202994921693,
+  "to_year": 2026.3013998708002,
+  "shift_arcsec": 74.18439502996674,
+  "measured_arcsec_per_yr": 4.6947989188637615,
+  "measured_pmra": 3987.9240658214644,
+  "measured_pmdec": -2477.417714840665,
   "expected_arcsec_per_yr": 4.684164530277503,
-  "shift_spherex_pixels": 12.137313373466782
+  "shift_spherex_pixels": 12.06250325690516
  },
  "movers_experimental": [
   {
-   "x0": 89.99837712644148,
-   "y0": 84.01178538018738,
-   "x1": 60.079775712964214,
-   "y1": 65.88695152694301,
-   "snr": 317.9,
-   "arcsec_per_yr": 4.712524039205817,
-   "ra": 331.09594405873753,
-   "dec": -56.80024515271889,
-   "year": 2025.34574106194,
-   "pmra": 4030.036650241397,
-   "pmdec": -2441.7874503571115,
+   "x0": 140.90897682401283,
+   "y0": 49.06989079670992,
+   "x1": 141.9545420689182,
+   "y1": 120.96409631287025,
+   "snr": 6.1,
+   "arcsec_per_yr": 9.686358573180149,
+   "ra": 331.01291648663505,
+   "dec": -56.76962446404307,
+   "year": 2025.3459895596604,
+   "pmra": -131.3223427137635,
+   "pmdec": 9685.469281549194,
+   "gaia_source_id": null,
+   "explained_by_gaia": false
+  },
+  {
+   "x0": 89.99437282086322,
+   "y0": 84.0097383033888,
+   "x1": 60.105524226275556,
+   "y1": 65.8893236231911,
+   "snr": 359.4,
+   "arcsec_per_yr": 4.7087087628492,
+   "ra": 331.0959048833969,
+   "dec": -56.80023941182836,
+   "year": 2025.3459895596604,
+   "pmra": 4025.9612792760286,
+   "pmdec": -2441.151859921385,
    "gaia_source_id": 6412596012146801152,
    "explained_by_gaia": true
   }
@@ -3756,113 +6776,138 @@
  "spectrum": [
   {
    "lam": 0.775,
-   "flux_mjy": 0.046323459885375624,
+   "flux_mjy": 0.04874380203848128,
    "n": 5
   },
   {
    "lam": 0.825,
-   "flux_mjy": 0.4234270857525624,
+   "flux_mjy": 0.39338175765493577,
    "n": 2
   },
   {
    "lam": 0.975,
-   "flux_mjy": 6.72184450729434,
+   "flux_mjy": 8.11219837435951,
    "n": 2
   },
   {
    "lam": 1.025,
-   "flux_mjy": 11.72958010805125,
-   "n": 3
+   "flux_mjy": 11.729580107910506,
+   "n": 1
   },
   {
    "lam": 1.075,
-   "flux_mjy": 20.9711899329111,
+   "flux_mjy": 21.147936650269106,
    "n": 3
   },
   {
    "lam": 1.125,
-   "flux_mjy": 13.614100762912658,
-   "n": 3
+   "flux_mjy": 14.565361977274051,
+   "n": 4
+  },
+  {
+   "lam": 1.175,
+   "flux_mjy": 13.922755566727336,
+   "n": 1
   },
   {
    "lam": 1.225,
-   "flux_mjy": 31.432286856530595,
+   "flux_mjy": 31.38585028976548,
+   "n": 4
+  },
+  {
+   "lam": 1.275,
+   "flux_mjy": 41.248407627133986,
    "n": 2
   },
   {
    "lam": 1.325,
-   "flux_mjy": 13.662828407173869,
+   "flux_mjy": 25.99820001682996,
    "n": 2
   },
   {
    "lam": 1.375,
-   "flux_mjy": 5.760366497392469,
+   "flux_mjy": 6.114762996946566,
+   "n": 1
+  },
+  {
+   "lam": 1.475,
+   "flux_mjy": 13.010129431420113,
    "n": 1
   },
   {
    "lam": 1.525,
-   "flux_mjy": 25.387176246109455,
-   "n": 2
-  },
-  {
-   "lam": 1.575,
-   "flux_mjy": 38.147568185425335,
+   "flux_mjy": 18.928885699641956,
    "n": 1
   },
   {
+   "lam": 1.575,
+   "flux_mjy": 38.14756818549381,
+   "n": 3
+  },
+  {
    "lam": 1.625,
-   "flux_mjy": 32.456370789255686,
+   "flux_mjy": 32.45637078922434,
    "n": 4
   },
   {
    "lam": 1.675,
-   "flux_mjy": 32.02496391640762,
+   "flux_mjy": 31.252332749633865,
+   "n": 6
+  },
+  {
+   "lam": 1.725,
+   "flux_mjy": 26.40062336864219,
    "n": 2
   },
   {
    "lam": 1.775,
-   "flux_mjy": 17.914467178244387,
-   "n": 1
+   "flux_mjy": 17.805403556656554,
+   "n": 3
   },
   {
    "lam": 1.825,
-   "flux_mjy": 10.54810149444998,
-   "n": 2
+   "flux_mjy": 10.54810149447535,
+   "n": 4
   },
   {
    "lam": 1.875,
-   "flux_mjy": 11.4161714416139,
-   "n": 2
+   "flux_mjy": 12.484159245879452,
+   "n": 3
+  },
+  {
+   "lam": 1.925,
+   "flux_mjy": 12.636722032567492,
+   "n": 3
   },
   {
    "lam": 1.975,
-   "flux_mjy": 13.389433028376537,
+   "flux_mjy": 14.652849676153734,
    "n": 2
   },
   {
    "lam": 2.025,
-   "flux_mjy": 24.803338359378316,
+   "flux_mjy": 21.67957965532094,
    "n": 1
   },
   {
    "lam": 2.075,
-   "flux_mjy": 27.990995397370206,
-   "n": 2
-  },
-  {
-   "lam": 2.275,
-   "flux_mjy": 14.287236450280034,
+   "flux_mjy": 27.82352621273189,
    "n": 1
   },
   {
-   "lam": 2.325,
-   "flux_mjy": 12.053592181573311,
+   "lam": 2.125,
+   "flux_mjy": 28.97877016440075,
+   "n": 1
+  },
+  {
+   "lam": 2.175,
+   "flux_mjy": 25.009716410830436,
    "n": 1
   },
   {
    "lam": 2.375,
-   "flux_mjy": 12.395195055747035,
-   "n": 2
+   "flux_mjy": 12.224817160500919,
+   "n": 1
   },
   {
    "lam": 2.475,
@@ -3871,27 +6916,27 @@
   },
   {
    "lam": 2.725,
-   "flux_mjy": 8.919151966722232,
+   "flux_mjy": 8.919151966724051,
    "n": 1
   },
   {
    "lam": 2.825,
-   "flux_mjy": 10.568348497517363,
+   "flux_mjy": 10.568348497627106,
    "n": 1
   },
   {
    "lam": 3.075,
-   "flux_mjy": 19.08596563532204,
+   "flux_mjy": 19.085965635387357,
    "n": 1
   },
   {
    "lam": 3.125,
-   "flux_mjy": 13.349616379355664,
+   "flux_mjy": 13.349616379402049,
    "n": 1
   },
   {
    "lam": 3.225,
-   "flux_mjy": 10.204353865610646,
+   "flux_mjy": 10.204353865670583,
    "n": 2
   },
   {
@@ -3900,121 +6945,106 @@
    "n": 1
   },
   {
-   "lam": 3.575,
-   "flux_mjy": 21.11461354144519,
-   "n": 1
-  },
-  {
    "lam": 3.625,
-   "flux_mjy": 29.138459698291555,
-   "n": 2
+   "flux_mjy": 28.7314369720226,
+   "n": 1
   },
   {
    "lam": 3.825,
-   "flux_mjy": 51.13078936099076,
-   "n": 2
+   "flux_mjy": 51.93099051919895,
+   "n": 1
   },
   {
    "lam": 3.875,
-   "flux_mjy": 53.71839140399945,
+   "flux_mjy": 53.82572989290074,
    "n": 2
   },
   {
-   "lam": 3.925,
-   "flux_mjy": 55.27428630122289,
+   "lam": 3.975,
+   "flux_mjy": 58.09046186024934,
    "n": 1
+  },
+  {
+   "lam": 4.025,
+   "flux_mjy": 61.51547870993809,
+   "n": 2
   },
   {
    "lam": 4.125,
-   "flux_mjy": 57.760580130074096,
-   "n": 1
-  },
-  {
-   "lam": 4.175,
-   "flux_mjy": 53.51055410204532,
-   "n": 1
+   "flux_mjy": 59.67319487301331,
+   "n": 2
   },
   {
    "lam": 4.225,
-   "flux_mjy": 42.44424212287417,
-   "n": 1
-  },
-  {
-   "lam": 4.275,
-   "flux_mjy": 37.67840569258982,
-   "n": 1
+   "flux_mjy": 40.04529742627491,
+   "n": 2
   },
   {
    "lam": 4.325,
-   "flux_mjy": 35.185322549613275,
+   "flux_mjy": 34.23016413241599,
+   "n": 2
+  },
+  {
+   "lam": 4.375,
+   "flux_mjy": 33.66400254286534,
    "n": 2
   },
   {
    "lam": 4.425,
-   "flux_mjy": 26.310606558646334,
-   "n": 4
+   "flux_mjy": 27.24597759605354,
+   "n": 7
   },
   {
    "lam": 4.475,
-   "flux_mjy": 20.031506635225465,
-   "n": 2
+   "flux_mjy": 20.096896725832615,
+   "n": 3
   },
   {
    "lam": 4.525,
-   "flux_mjy": 19.941627675390816,
+   "flux_mjy": 18.016564240326716,
    "n": 3
   },
   {
    "lam": 4.575,
-   "flux_mjy": 18.715044784218016,
-   "n": 1
+   "flux_mjy": 18.717448920585447,
+   "n": 2
   },
   {
    "lam": 4.625,
-   "flux_mjy": 20.76559523692133,
-   "n": 1
+   "flux_mjy": 20.147482106349464,
+   "n": 2
   },
   {
    "lam": 4.675,
-   "flux_mjy": 24.33243861144434,
+   "flux_mjy": 24.332438611444783,
    "n": 4
   },
   {
    "lam": 4.725,
-   "flux_mjy": 19.23945325846072,
+   "flux_mjy": 20.560268242748386,
    "n": 2
   },
   {
-   "lam": 4.775,
-   "flux_mjy": 19.564632879644805,
-   "n": 2
-  },
-  {
-   "lam": 4.825,
-   "flux_mjy": 20.070630899475272,
+   "lam": 4.975,
+   "flux_mjy": 25.837263181102298,
    "n": 1
-  },
-  {
-   "lam": 4.875,
-   "flux_mjy": 21.75148710071163,
-   "n": 2
   }
  ],
- "spectrum_points": 149,
- "flagged_points": 59,
+ "spectrum_points": 180,
+ "flagged_points": 69,
  "variability": {
-  "delta_mag": -0.009313624128179791,
-  "uncertainty_mag": 0.0751362131463323,
-  "n_wavelength_bins": 8,
+  "delta_mag": -0.06188904344810787,
+  "uncertainty_mag": 0.03211732003200325,
+  "n_wavelength_bins": 14,
   "method": "aperture photometry",
   "from": "May 2025",
-  "to": "Apr 2026"
+  "to": "Oct 2025"
  },
  "ir_color": {
-  "f4p0_mjy": 25.218845262351117,
-  "f3p3_mjy": 10.426816064488955,
-  "f3p3_err": 0.5044792225437,
-  "ratio": 2.4186525499610565,
+  "f4p0_mjy": 26.310606558646334,
+  "f3p3_mjy": 10.426816064535696,
+  "f3p3_err": 0.5044792225219293,
+  "ratio": 2.523359613884005,
   "lower_limit": false
  },
  "bands": [
@@ -4061,16 +7091,16 @@
  ],
  "spherex_visits": [
   {
-   "year": 2025.3506735252572,
-   "n_images": 50
+   "year": 2025.352870945138,
+   "n_images": 122
   },
   {
-   "year": 2025.7771032770418,
-   "n_images": 64
+   "year": 2025.7710742428405,
+   "n_images": 49
   },
   {
-   "year": 2026.3130021568857,
-   "n_images": 36
+   "year": 2026.3000820774953,
+   "n_images": 10
   }
  ],
  "gaia_facts": {
@@ -4083,24 +7113,41 @@
   "teff_k": null
  },
  "changes": {
-  "found": 1,
+  "found": 2,
   "candidates": 0,
   "target_recovered": true,
   "items": [
    {
-    "n": 1,
+    "n": 2,
     "status": "target",
     "reason": "This is the mission target itself: both ends lie on its measured path.",
     "arcsec_per_yr": 4.71,
-    "snr": 317.9,
+    "snr": 359.4,
     "x0": 90.0,
     "y0": 84.0,
     "x1": 60.1,
     "y1": 65.9,
-    "ra": 331.09594,
-    "dec": -56.80025,
-    "ra0": 331.06559,
-    "dec0": -56.79018,
+    "ra": 331.0959,
+    "dec": -56.80024,
+    "ra0": 331.06558,
+    "dec0": -56.79017,
+    "year": 2025.35,
+    "simbad_checked": true
+   },
+   {
+    "n": 1,
+    "status": "rejected",
+    "reason": "An end is at the edge of the picture, where a dot can appear or vanish without moving.",
+    "arcsec_per_yr": 9.69,
+    "snr": 6.1,
+    "x0": 140.9,
+    "y0": 49.1,
+    "x1": 142.0,
+    "y1": 121.0,
+    "ra": 331.01292,
+    "dec": -56.76962,
+    "ra0": 331.0139,
+    "dec0": -56.80957,
     "year": 2025.35,
     "simbad_checked": true
    }
@@ -4118,11 +7165,11 @@
   "checks": [
    {
     "state": "ok",
-    "text": "Moved 75\u2033 between 2010 and 2026 (12.1 SPHEREx pixels)"
+    "text": "Moved 74\u2033 between 2010 and 2026 (12.1 SPHEREx pixels)"
    },
    {
     "state": "ok",
-    "text": "Measured speed matches the catalogue: 4.72 vs 4.68\u2033/yr (difference 0.7%)"
+    "text": "Measured speed matches the catalogue: 4.69 vs 4.68\u2033/yr (difference 0.2%)"
    },
    {
     "state": "ok",
@@ -4130,17 +7177,17 @@
    },
    {
     "state": "ok",
-    "text": "2.4\u00d7 brighter at 4\u20134.75 \u00b5m than in the 3.3 \u00b5m methane band: the methane dip of a cold brown dwarf (a normal star would be below 1\u00d7)"
+    "text": "2.5\u00d7 brighter at 4\u20134.75 \u00b5m than in the 3.3 \u00b5m methane band: the methane dip of a cold brown dwarf (a normal star would be below 1\u00d7)"
    },
    {
     "state": "no",
-    "text": "Steady brightness between May 2025 and Apr 2026 (-0.01 \u00b1 0.08 mag)"
+    "text": "Steady brightness between May 2025 and Oct 2025 (-0.06 \u00b1 0.03 mag)"
    }
   ],
   "numbers": [
    {
     "label": "measured motion",
-    "value": "4.72\u2033/yr"
+    "value": "4.69\u2033/yr"
    },
    {
     "label": "catalogue motion (Gaia DR3)",
@@ -4148,11 +7195,11 @@
    },
    {
     "label": "methane test (4\u20134.75 / 3.3 \u00b5m)",
-    "value": "2.4\u00d7"
+    "value": "2.5\u00d7"
    },
    {
-    "label": "brightness change May 2025\u2192Apr 2026",
-    "value": "-0.01 mag"
+    "label": "brightness change May 2025\u2192Oct 2025",
+    "value": "-0.06 mag"
    },
    {
     "label": "distance (Gaia parallax)",
@@ -4164,15 +7211,15 @@
   "facts": [
    {
     "id": "speed",
-    "headline": "About 83 km/s across the sky",
+    "headline": "About 82 km/s across the sky",
     "detail": "That is 2.8 times the speed of Earth around the Sun. It is sideways speed only: motion toward or away from us does not show in images.",
-    "basis": "4.74 \u00d7 4.72\u2033/yr \u00f7 parallax 0.271\u2033"
+    "basis": "4.74 \u00d7 4.69\u2033/yr \u00f7 parallax 0.271\u2033"
    },
    {
     "id": "moon",
     "headline": "Crosses the width of the full Moon in about 380 years",
     "detail": "A typical star in these images needs more than 100,000 years, which is why this one stands out in a flipbook.",
-    "basis": "1,800\u2033 \u00f7 4.72\u2033/yr"
+    "basis": "1,800\u2033 \u00f7 4.69\u2033/yr"
    },
    {
     "id": "distance",
@@ -4183,13 +7230,13 @@
    {
     "id": "methane",
     "headline": "Cold enough to hold methane gas",
-    "detail": "Methane survives only in atmospheres below roughly 1,300 K, cooler than any true star. It absorbs light near 3.3 \u00b5m, which is why this object is 2.4\u00d7 brighter at 4\u20134.75 \u00b5m.",
+    "detail": "Methane survives only in atmospheres below roughly 1,300 K, cooler than any true star. It absorbs light near 3.3 \u00b5m, which is why this object is 2.5\u00d7 brighter at 4\u20134.75 \u00b5m.",
     "basis": "SPHEREx flux at 4\u20134.75 \u00b5m \u00f7 flux at 3.3 \u00b5m"
    }
   ],
   "limits": [
    "Motion: an object must shift 2 SPHEREx pixels (12\u2033) to count as moving. Over these 15.8 years that means faster than 0.78\u2033 per year. Slower objects read as \u201cno measurable motion\u201d.",
-   "SPHEREx alone covers only 12 months here: by the same 2-pixel rule, enough only for motion faster than 13\u2033 per year. The 2010 WISE image is what makes slower motion visible.",
+   "SPHEREx alone covers only 11 months here: by the same 2-pixel rule, enough only for motion faster than 13\u2033 per year. The 2010 WISE image is what makes slower motion visible.",
    "Brightness: compared at 3 SPHEREx visits only. A change between or outside those dates is not seen.",
    "Solar System: the page checks against Gaia stars only. It does not check asteroids or comets, so a moving dot without a Gaia circle may be a known asteroid.",
    "Crowding: one SPHEREx pixel is 6.15\u2033 wide, so two close objects can blend into one dot and one spectrum."
