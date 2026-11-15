@@ -76,21 +76,30 @@
   "numax": 2300,
   "dnu": 105.6,
   "teff": 5790,
-  "ref": "Bedding et al. 2004, ApJ 614, 380 (ground-based radial velocities)"
+  "ref": "Bedding et al. 2004, ApJ 614, 380 (ground-based radial velocities)",
+  "M": 1.1,
+  "R": 1.22,
+  "params_ref": "approximate (Kervella et al. 2017)"
  },
  "hip71681": {
   "name": "Alpha Centauri B (Toliman)",
   "numax": 4000,
   "dnu": 161.4,
   "teff": 5260,
-  "ref": "Kjeldsen et al. 2005, ApJ 635, 1281"
+  "ref": "Kjeldsen et al. 2005, ApJ 635, 1281",
+  "M": 0.91,
+  "R": 0.86,
+  "params_ref": "approximate (Kervella et al. 2017)"
  },
  "hip37279": {
   "name": "Procyon",
   "numax": 1000,
   "dnu": 55.5,
   "teff": 6530,
-  "ref": "Bedding et al. 2010, ApJ 713, 935"
+  "ref": "Bedding et al. 2010, ApJ 713, 935",
+  "M": 1.5,
+  "R": 2.05,
+  "params_ref": "approximate (Kervella et al. 2004; Liebert et al. 2013)"
  },
  "hip87937": {
   "name": "Barnard's Star",
@@ -134,6 +143,38 @@
  },
  "hip11767": {
   "name": "Polaris",
-  "note": "Polaris is a Cepheid: its 4-day pulsation is a different, self-driven kind. Solar-like starquakes are only predicted here."
+  "note": "Polaris is a Cepheid: its 4-day pulsation is a different, self-driven kind. Solar-like starquakes are only predicted here.",
+  "M": 5.4,
+  "R": 46,
+  "teff": 6000,
+  "params_ref": "approximate (Evans et al. 2018; Turner et al. 2013)"
+ },
+ "hip32349": {
+  "name": "Sirius A",
+  "M": 2.06,
+  "R": 1.71,
+  "teff": 9940,
+  "params_ref": "approximate (Liebert et al. 2005; Kervella et al. 2003)"
+ },
+ "hip91262": {
+  "name": "Vega",
+  "M": 2.1,
+  "R": 2.5,
+  "teff": 9600,
+  "params_ref": "approximate (Yoon et al. 2010; Monnier et al. 2012, mean radius)"
+ },
+ "hip69673": {
+  "name": "Arcturus",
+  "M": 1.1,
+  "R": 25.4,
+  "teff": 4286,
+  "params_ref": "approximate (Ramirez & Allende Prieto 2011)"
+ },
+ "hip8102": {
+  "name": "Tau Ceti",
+  "M": 0.78,
+  "R": 0.79,
+  "teff": 5344,
+  "params_ref": "approximate (Teixeira et al. 2009)"
  }
 }

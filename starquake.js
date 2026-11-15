@@ -71,7 +71,7 @@
   function describe(info, row) {
     const est = info && info.M ? { M: info.M, R: info.R, teff: info.teff, how: info.params_ref || "literature values" } : estimate(row);
     const teff = (info && info.teff) || (est && est.teff);
-    if (teff && teff > HOT) return { kind: "none", teff, why: `At about ${Math.round(teff).toLocaleString()} K this star has no deep outer convection zone, so it is not expected to ring with starquakes like the Sun's. (Hot stars can pulsate in other ways, which this does not model.)` };
+    if (teff && teff > HOT) return { kind: "none", teff, why: `At about ${Math.round(teff).toLocaleString("en-US")} K this star has no deep outer convection zone, so it is not expected to ring with starquakes like the Sun's. (Hot stars can pulsate in other ways, which this does not model.)` };
     if (info && info.numax && info.dnu) {
       return { kind: info.recording ? "measured" : "published", numax: info.numax, dnu: info.dnu, gamma: info.gamma || gammaOf(teff || SUN.teff),
         teff, ref: info.ref, recording: info.recording || null, note: info.note || null };
@@ -175,7 +175,20 @@
     return buf;
   }
 
-  const api = { SUN, SPEEDUP, VIS, EPS, HOT, numaxOf, dnuOf, gammaOf, envFwhm, teffFromBV, teffFromType, isGiant, bcOf,
+  // Merge a star profile (pipeline/star_profile.py: Gaia FLAME radius, spectroscopic Teff, ...) into the starquake
+  // inputs when no literature size/mass is given. Mass, if missing, from the main-sequence mass-radius relation
+  // M ~ R^1.25 (dwarfs only; giants keep the catalogue estimate). Returns a new info object or the original.
+  function withProfile(info, profile) {
+    const p = profile && profile.properties;
+    if (!p || (info && info.M && info.R) || (info && info.numax)) return info;
+    const R = p.radius && p.radius.value, T = p.teff && p.teff.value;
+    if (!R || !T || R > 2.5) return info;
+    const M = p.mass ? p.mass.value : Math.pow(R, 1.25);
+    return { ...(info || {}), R, teff: T, M,
+      params_ref: `${p.radius.source} radius, ${p.teff.source} temperature` + (p.mass ? `, ${p.mass.source} mass` : ", mass from the main-sequence mass–radius relation") };
+  }
+
+  const api = { withProfile, SUN, SPEEDUP, VIS, EPS, HOT, numaxOf, dnuOf, gammaOf, envFwhm, teffFromBV, teffFromType, isGiant, bcOf,
     estimate, describe, modes, speedupFor, synth, spectrum, wav, fft, rng };
   if (typeof module !== "undefined" && module.exports) module.exports = api; else root.Starquake = api;
 })(typeof window !== "undefined" ? window : globalThis);
