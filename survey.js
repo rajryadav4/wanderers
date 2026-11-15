@@ -621,6 +621,7 @@
     S.page = Math.max(0, Math.min(S.page, pages - 1));
     const from = S.page * size, rows = S.view.slice(from, from + size);
     $("candBody").innerHTML = rows.map(rowHtml).join("");
+    if (root.Classify) root.Classify.badges($("candBody"));   // community consensus badges (classify.js)
     $("tEmpty").hidden = n > 0;
     $("tEmpty").textContent = n ? "" : S.rows.length ? "No candidates match these filters." : "No candidates passed the cuts in this run.";
     const total = num(S.board.n_candidates), filtered = n !== S.rows.length;
@@ -713,6 +714,7 @@
     $("dSimbadNote").textContent = `(${L.radiusArcmin}′ radius: wide enough for where it was in 2000)`;
     $("dCoords").textContent = cp;
     $("dCopyMsg").textContent = "";
+    if (root.Classify) root.Classify.mount($("dClassify"), { id: m.id, kind: "candidate", name: `candidate ${m.id}`, heading: false });
     $("drawer").hidden = false; $("scrim").hidden = false;
     $("drawer").setAttribute("aria-hidden", "false");
     for (const id2 of ["svMain", "siteHead", "siteFoot"]) { const e = $(id2); if (e) { e.inert = true; e.setAttribute("aria-hidden", "true"); } }

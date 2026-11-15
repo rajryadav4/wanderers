@@ -1,0 +1,72 @@
+/* WANDERERS citizen-science card and badges (classify.js), on the Observatory and the Sky Survey.
+ * Uses the brand tokens from brand.css; its own colours are the --cls-* tokens below, defined for Day, Night and
+ * "no JavaScript, dark operating system" like brand.css does. */
+:root {
+  --cls-bar: #2864C5;
+  --cls-track: #E3EAF2;
+  --cls-pressed: #2864C5;
+  --cls-on-pressed: #FFFFFF;
+  --cls-yes: #1D7A57;
+  --cls-yes-bg: rgba(29, 122, 87, .08);
+  --cls-mine: #9A5A00;
+  --cls-warn: #B3261E;
+}
+:root[data-theme="dark"] {
+  --cls-bar: #8AB6EF;
+  --cls-track: #22354D;
+  --cls-pressed: #8AB6EF;
+  --cls-on-pressed: #0B1422;
+  --cls-yes: #66D4AA;
+  --cls-yes-bg: rgba(102, 212, 170, .10);
+  --cls-mine: #F2B866;
+  --cls-warn: #FF9D92;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) { --cls-bar: #8AB6EF; --cls-track: #22354D; --cls-pressed: #8AB6EF; --cls-on-pressed: #0B1422; --cls-yes: #66D4AA; --cls-yes-bg: rgba(102, 212, 170, .10); --cls-mine: #F2B866; --cls-warn: #FF9D92; }
+}
+
+.cls-card { container-type: inline-size; margin-top: 18px; padding: 14px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); max-width: 100%; min-width: 0; }
+.cls-card[hidden] { display: none !important; }
+.sv-drawer .cls-card { margin-top: 0; padding: 0; border: 0; background: transparent; }
+.cls-card .cls-title { margin: 0 0 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cls-card p { margin: 0; }
+.cls-card .cls-ask { color: var(--muted); font-size: .88rem; margin-bottom: 8px; }
+.cls-card .cls-consensus { padding: 8px 10px; border-radius: var(--radius); background: var(--surface-2); border-left: 3px solid var(--line-strong);
+  font-size: .9rem; margin-bottom: 10px; }
+.cls-card .cls-consensus.is-yes { background: var(--cls-yes-bg); border-left-color: var(--cls-yes); }
+.cls-card .cls-consensus.is-yes b { color: var(--cls-yes); }
+
+.cls-card .cls-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.cls-card .cls-row { display: grid; grid-template-columns: 7.4rem minmax(0, 1fr) 5.6rem; gap: 2px 10px; align-items: center; }
+.cls-card .cls-btn { min-height: 44px; min-width: 44px; width: 100%; margin: 0; padding: 8px 10px; text-align: left; cursor: pointer;
+  font: 600 .88rem/1.2 var(--f-ui); color: var(--text); background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--radius); }
+.cls-card .cls-btn:hover { border-color: var(--cls-pressed); }
+.cls-card .cls-btn[aria-pressed="true"] { background: var(--cls-pressed); border-color: var(--cls-pressed); color: var(--cls-on-pressed); }
+.cls-card .cls-btn[aria-pressed="true"]::before { content: "✓ "; }
+.cls-card .cls-help { color: var(--muted); font-size: .8rem; line-height: 1.35; min-width: 0; }
+.cls-card .cls-count { display: flex; align-items: center; gap: 6px; justify-content: flex-end; flex-wrap: wrap; font: 500 .82rem/1 var(--f-mono); min-width: 0; }
+.cls-card .cls-bar { flex: 1 1 24px; height: 6px; border-radius: 3px; background: var(--cls-track); overflow: hidden; min-width: 24px; }
+.cls-card .cls-bar i { display: block; height: 100%; background: var(--cls-bar); transition: width .3s ease; }
+.cls-card .cls-n { min-width: 1.5ch; text-align: right; font-variant-numeric: tabular-nums; }
+.cls-card .cls-yours { flex-basis: 100%; text-align: right; font: 500 .7rem/1.2 var(--f-ui); color: var(--cls-mine); }
+
+.cls-card .cls-you { margin-top: 12px; display: grid; gap: 8px; justify-items: start; }
+.cls-card .cls-status { font-size: .9rem; }
+.cls-card .cls-send { min-height: 44px; padding: 10px 16px; font-size: .9rem; max-width: 100%; }
+.cls-card .cls-note, .cls-card .cls-src { color: var(--muted); font-size: .78rem; line-height: 1.45; }
+.cls-card .cls-warn { color: var(--cls-warn); }
+.cls-card .cls-src { margin-top: 8px; }
+
+/* consensus badge in the Sky Survey table */
+.cls-badge { display: inline-block; margin-left: 6px; padding: 2px 6px; border-radius: 3px; border: 1px solid var(--cls-yes); color: var(--cls-yes);
+  background: var(--cls-yes-bg); font: 500 .7rem/1.3 var(--f-mono); white-space: nowrap; vertical-align: middle; }
+
+/* narrow cards (phones, or the explorer's evidence column): the help line goes under its button */
+@container (max-width: 380px) {
+  .cls-card .cls-row { grid-template-columns: minmax(0, 1fr) 5.6rem; }
+  .cls-card .cls-help { grid-column: 1 / -1; grid-row: 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cls-card .cls-bar i { transition: none; }
+}
