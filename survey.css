@@ -47,6 +47,7 @@
 .sv-lede { color: var(--muted); font-size: 1.04rem; max-width: 68ch; margin: 0 0 28px; }
 .sv-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 20px; margin: 0; border-top: 1px solid var(--line); }
 .sv-stats div { padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.sv-stats div:last-child:nth-child(3n+1) { grid-column: 1 / -1; }   /* a lone last stat fills its row */
 .sv-stats dt { font: 500 .66rem/1.3 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .sv-stats dd { margin: 6px 0 0; font: 500 clamp(1rem, 2.2vw, 1.6rem)/1.2 var(--f-mono); letter-spacing: -.01em; overflow-wrap: break-word; }
 .sv-stats .sub { display: block; font: 400 .78rem/1.4 var(--f-ui); color: var(--muted); letter-spacing: 0; margin-top: 4px; }
@@ -223,6 +224,8 @@ body.sv-locked { overflow: hidden; }
 @media (max-width: 860px) {
   .sv-lim { grid-template-columns: 1fr; }
   .sv-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sv-stats div:last-child:nth-child(3n+1) { grid-column: auto; }
+  .sv-stats div:last-child:nth-child(2n+1) { grid-column: 1 / -1; }
   .sv-head { grid-template-columns: 1fr; gap: 4px; }
 }
 @media (max-width: 600px) {
