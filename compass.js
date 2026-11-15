@@ -651,6 +651,7 @@ $("northBtn").onclick = () => {
 // Aim mode: the sheet closes, a big gold crosshair asks you to put it on the real object, and nothing changes
 // until you tap Calibrate (then applyFine). Cancel leaves north as it was.
 function startAim(x) {
+  clearTimeout(S.aimDone); $("aimCancel").hidden = false;
   S.aim = x; $("north").hidden = true; $("aimBar").hidden = false; document.body.classList.add("aiming");
   $("aimTitle").textContent = x.dir ? `Point the camera ${x.dir}` : `Aim at ${x.label}`;
   $("aimText").textContent = x.dir ? `Hold the phone upright with the camera facing exactly ${x.dir} (along a street or wall you know), then tap Calibrate.`
@@ -659,14 +660,14 @@ function startAim(x) {
   $("aimMsg").textContent = S.sensors ? "" : "This needs a phone's motion sensors (open this page on your phone).";
   $("aimMsg").className = "small"; $("aimGo").disabled = false; $("aimGo").textContent = "Calibrate";
 }
-function endAim() { S.aim = null; $("aimBar").hidden = true; document.body.classList.remove("aiming"); }
+function endAim() { clearTimeout(S.aimDone); S.aim = null; $("aimBar").hidden = true; $("aimCancel").hidden = false; document.body.classList.remove("aiming"); }
 $("aimCancel").onclick = endAim;
 $("aimGo").onclick = () => {
   if (!S.aim) return endAim();
   if ($("aimGo").textContent === "Done") return endAim();
   const ok = applyFine(S.aim, $("aimMsg"));
   $("aimMsg").className = "small " + (ok ? "ok" : "warn");
-  if (ok) { $("aimGo").textContent = "Done"; $("aimCancel").hidden = true; setTimeout(() => { if ($("aimGo").textContent === "Done") { endAim(); $("aimCancel").hidden = false; } }, 4000); }
+  if (ok) { $("aimGo").textContent = "Done"; $("aimCancel").hidden = true; S.aimDone = setTimeout(endAim, 4000); }
 };
 function applyFine(x, out = $("northMsg")) {
   if (!S.sensors) { out.textContent = "This needs a phone's motion sensors (open this page on your phone)."; return false; }
