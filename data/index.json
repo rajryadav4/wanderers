@@ -3,40 +3,40 @@
   "id": "barnard",
   "name": "Barnard's Star",
   "teaser": "Fastest star in the sky",
-  "ra": 269.4479777024211,
-  "dec": 4.746181660471474,
+  "ra": 269.4479757602785,
+  "dec": 4.746206682012132,
   "fov": 300
  },
  {
   "id": "r_dra",
   "name": "R Draconis",
   "teaser": "Pulsating red giant",
-  "ra": 248.16734327616675,
-  "dec": 66.75501087068785,
+  "ra": 248.16734325548285,
+  "dec": 66.75501087311939,
   "fov": 300
  },
  {
   "id": "rw_aur",
   "name": "RW Aurigae",
   "teaser": "Young star that flickers",
-  "ra": 76.95608318009566,
-  "dec": 30.40118682967599,
+  "ra": 76.95608318054319,
+  "dec": 30.401186825671143,
   "fov": 300
  },
  {
   "id": "eps_indi_b",
   "name": "Epsilon Indi B",
   "teaser": "Brown dwarf pair",
-  "ra": 331.08130021002296,
-  "dec": -56.795456555579975,
+  "ra": 331.0813132586133,
+  "dec": -56.79546098169325,
   "fov": 300
  },
  {
   "id": "wise0855",
   "name": "WISE 0855-0714",
   "teaser": "Coldest brown dwarf (boss level)",
-  "ra": 133.77712513571174,
-  "dec": -7.243669827763018,
+  "ra": 133.77712548122395,
+  "dec": -7.243669856174312,
   "fov": 300
  }
 ]
