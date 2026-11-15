@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="brand.css">
 <link rel="stylesheet" href="release.css?v=20261115b">
-<link rel="stylesheet" href="style.css?v=20261116r">
+<link rel="stylesheet" href="style.css?v=20261117c">
 <link rel="stylesheet" href="classify.css?v=20261117a">
 </head>
 <body class="obs">
@@ -106,7 +106,18 @@
       </div>
     </div>
     <div id="flipView">
-    <div class="channel" id="channels" role="radiogroup" aria-label="Wavelength channel"></div>
+    <div class="chan-bar">
+      <div class="channel" id="channels" role="radiogroup" aria-label="Wavelength channel, matched with WISE"></div>
+      <div class="det-switch" id="detSwitch" hidden>
+        <span class="det-k" id="detSwitchLbl">SPHEREx detectors</span>
+        <div class="seg" id="detMode" role="radiogroup" aria-labelledby="detSwitchLbl">
+          <button type="button" id="detModeInd" role="radio" aria-checked="false" tabindex="0" data-mode="individual">Individual detectors</button>
+          <button type="button" id="detModeAll" role="radio" aria-checked="false" tabindex="-1" data-mode="combined">Combined (all 6)</button>
+        </div>
+        <div class="channel det-pick" id="detPick" role="radiogroup" aria-label="Detector" hidden></div>
+      </div>
+    </div>
+    <p id="detNote" class="hint det-note" hidden></p>
     <div class="viewer">
       <canvas id="sky" width="600" height="600" aria-label="Sky image of the selected target"></canvas>
       <div class="stamp" id="stamp"></div>
@@ -117,6 +128,10 @@
       <input id="frame" type="range" min="0" max="0" value="0" aria-label="Epoch">
       <span id="frameLbl" class="mono"></span>
     </div>
+    <section class="fmeta" id="frameMeta" aria-label="This frame: observation details and data quality">
+      <p class="fm-verdict" id="fmVerdict" aria-live="polite"></p>
+      <ul class="fm-chips" id="fmChips"></ul>
+    </section>
     <div class="toggles">
       <label><input type="checkbox" id="tGhost" checked> Gaia ghosts <span class="hint">(where known stars should be)</span></label>
       <label><input type="checkbox" id="tTrail" checked> Measured path</label>
@@ -326,7 +341,7 @@
 <script src="theme.js"></script>
 <script src="framemath.js"></script>
 <script src="chartlayout.js"></script>
-<script src="frameinfo.js?v=20261116n"></script>
+<script src="frameinfo.js?v=20261117c"></script>
 <script src="aladinlink.js"></script>
 <script src="starpath.js"></script>
 <script src="stardb.js?v=20261115i"></script>
@@ -335,7 +350,7 @@
 <script src="search.js?v=20261116m"></script>
 <script src="telescope.js?v=20261116m"></script>
 <script src="classify.js?v=20261117a"></script>
-<script src="app.js?v=20261117a"></script>
+<script src="app.js?v=20261117d"></script>
 <script src="starquake.js?v=20261115i"></script>
 <script src="starquake-ui.js?v=20261115i"></script>
 <script src="starprofile.js?v=20261115i"></script>
