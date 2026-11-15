@@ -1,5 +1,5 @@
 {
- "summary": "Kapteyn's Star is a known cool red dwarf, about 3,452 K and 12.8 light-years away according to Gaia. It is an ancient halo star crossing our neighbourhood fast. WANDERERS saw it move 140 arcseconds between 2010 and 2027. That is 8.65 arcseconds per year, within 0.1% of Gaia's 8.64, so we are highly confident in the motion. The star is too bright for SPHEREx: its core is saturated and all 89 spectrum points are flagged. The brightness change of -0.09 \u00b1 0.05 mag came from the star's outer glow and is uncertain.",
+ "summary": "Kapteyn's Star is a known cool red dwarf, about 3,452 K and 12.8 light-years away according to Gaia. It is an ancient halo star crossing our neighbourhood fast. WANDERERS saw it move 140 arcseconds between 2010 and 2026. That is 8.65 arcseconds per year, within 0.1% of Gaia's 8.64, so we are highly confident in the motion. The star is too bright for SPHEREx: its core is saturated and all 89 spectrum points are flagged. The brightness change of -0.09 \u00b1 0.05 mag came from the star's outer glow and is uncertain.",
  "qa": [
   {
    "q": "Why do we think this is what the card says?",
