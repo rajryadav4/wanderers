@@ -173,7 +173,10 @@ function showCalibration() {
 $("calDone").onclick = () => { $("calib").hidden = true; };
 $("calSkip").onclick = () => { F.cancelCalibration(); $("calib").hidden = true; };
 $("calEnough").onclick = () => F.finishCalibrationNow();
-$("recalBtn").onclick = () => showCalibration();
+$("recalBtn").onclick = () => {   // calibration needs the motion sensors; without them it would wait forever
+  if (S.sensors) return showCalibration();
+  $("guideSub").textContent = "Calibration needs a phone's motion sensors: open this page on your phone. Here, drag the sky or use the arrow keys.";
+};
 let lastStops = -1;
 function calibrationTick() {
   const c = F.calibrationState();
@@ -627,7 +630,9 @@ function renderTargets() {
     `<button data-id="${t.id}" class="${S.sel && S.sel.id === t.id ? "on" : ""}" role="option"><b>${t.name}</b><span id="tp_${t.id}">${t.teaser}</span></button>`).join("");
   $("targets").querySelectorAll("button").forEach((b) => (b.onclick = () => {
     S.sel = S.targets.find((t) => t.id === b.dataset.id); renderTargets(); $("aboutBtn").hidden = false;
-    const u = new URL(location); u.searchParams.set("target", S.sel.id); history.replaceState(null, "", u);
+    const u = new URL(location); u.searchParams.set("target", S.sel.id);
+    if (S.sel.found) u.searchParams.set("star", S.sel.name); else u.searchParams.delete("star");   // no stale ?star=
+    history.replaceState(null, "", u);
   }));
 }
 
