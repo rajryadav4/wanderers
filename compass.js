@@ -430,7 +430,7 @@ function guide(T) {
     sub.textContent = T._alt < 0 ? "Below your horizon right now, on the other side of the Earth." : `${Math.round(T._alt)}° above your horizon.`;
     inv.hidden = false;
     if (T.found) { inv.textContent = "About this star →"; inv.removeAttribute("href"); inv.onclick = () => showDetails(T); }
-    else { inv.textContent = "Investigate →"; inv.href = `index.html?target=${T.id}`; inv.onclick = null; }
+    else { inv.textContent = "Investigate →"; inv.href = `observatory.html?target=${T.id}`; inv.onclick = null; }
     if (!S.buzzed[T.id] && navigator.vibrate) { navigator.vibrate(60); S.buzzed[T.id] = true; }
   } else {
     S.buzzed[T.id] = false; main.classList.remove("locked"); inv.hidden = true;
@@ -515,7 +515,7 @@ async function webbDetails(st) {
     if (n) f.push(n);
   }
   box.hidden = false;
-  const go = $("dWebbGo"); if (go) go.onclick = () => openWebb(st.ra, st.dec, st.name, f.length && Webb.framesAt(st.ra, st.dec).length ? f : null, f[0]);
+  const go = box.querySelector("button"); if (go) go.onclick = () => openWebb(st.ra, st.dec, st.name, f.length && Webb.framesAt(st.ra, st.dec).length ? f : null, f[0]);
 }
 
 // the Webb viewer sheet
@@ -579,8 +579,8 @@ function showDetails(T) {
   const facts = st.spect || st.mag != null ? StarSearch.describe(st) : ["One of the WANDERERS test targets: open the full analysis for its motion, spectrum and brightness change."];
   $("dFacts").innerHTML = facts.map((f) => `<li>${f}</li>`).join("");
   $("dWhere").textContent = `RA ${StarSearch.hms(st.ra)}  Dec ${StarSearch.dms(st.dec)}` + (T._alt != null ? ` · right now ${compassPt(T._az)} ${Math.round(T._az)}°, ${T._alt >= 0 ? `${Math.round(T._alt)}° above` : `${Math.abs(Math.round(T._alt))}° below`} your horizon` : "");
-  $("dMap").href = `index.html?ra=${st.ra.toFixed(5)}&dec=${st.dec.toFixed(5)}`;
-  $("dFull").hidden = !st.wanderers; if (st.wanderers) $("dFull").href = `index.html?target=${st.wanderers}`;
+  $("dMap").href = `observatory.html?ra=${st.ra.toFixed(5)}&dec=${st.dec.toFixed(5)}`;
+  $("dFull").hidden = !st.wanderers; if (st.wanderers) $("dFull").href = `observatory.html?target=${st.wanderers}`;
   $("details").hidden = false;
   webbDetails(st);
 }

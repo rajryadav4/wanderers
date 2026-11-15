@@ -4,10 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#04060c">
+<script>(function () { var t; try { t = localStorage.getItem("wanderers-theme"); } catch (e) {}
+  if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.dataset.theme = t; })();</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>WANDERERS Sky Compass</title>
 <meta name="description" content="Point your phone at the sky: WANDERERS shows where you are in the universe and guides you to objects studied with NASA SPHEREx, WISE and ESA Gaia data.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.css">
 <link rel="stylesheet" href="compass.css?v=20261114j">
 </head>
 <body>
@@ -16,10 +21,15 @@
 
 <!-- 0. landing -->
 <section id="landing" class="screen landing">
+  <div class="landing-brand"><a class="logo" href="./" aria-label="WANDERERS, home"><svg viewBox="2 2 36 36" aria-hidden="true"><path class="ink" d="M35.35 17.84A15.5 15.5 0 1 1 30.37 8.48" stroke-width="3.2"/><ellipse class="acc" cx="20" cy="20" rx="13.2" ry="6.2" transform="rotate(-28 20 20)" stroke-width="1.7"/><circle class="ink-dot" cx="30.29" cy="14.53" r="1.5"/><circle class="ring" cx="17.71" cy="27.58" r="1.8" stroke-width="1.5"/><circle class="ring" cx="8.21" cy="23.3" r="1.8" stroke-width="1.5"/><circle class="dot" cx="21.67" cy="12.6" r="2.9"/><path class="acc" d="M25.97 12.6L27.77 12.6M17.37 12.6L15.57 12.6M21.67 16.9L21.67 18.7M21.67 8.3L21.67 6.5" stroke-width="1.4"/></svg></a><button class="theme-toggle" type="button" aria-label="Switch theme">
+        <span class="knob" aria-hidden="true"></span>
+        <svg class="sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M3 13l1.1-1.1M11.9 4.1 13 3"/></svg>
+        <svg class="moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 9.6A5.6 5.6 0 0 1 6.4 2.5a5.6 5.6 0 1 0 7.1 7.1Z"/></svg>
+      </button></div>
   <div class="mission-tag">WANDERERS · SKY COMPASS</div>
   <h1>Point your phone<br>at the sky</h1>
   <p class="lead">WANDERERS finds you on the real Earth, then guides you to objects studied with NASA's SPHEREx and WISE
-    telescopes and ESA's Gaia. An extra to the <a href="index.html">WANDERERS console</a>, where you can enter any
+    telescopes and ESA's Gaia. An extra to the <a href="observatory.html">WANDERERS console</a>, where you can enter any
     coordinates.</p>
   <ol class="preflight">
     <li><span>01</span> Motion sensors: where your phone points</li>
@@ -31,7 +41,7 @@
   <p id="goMsg" class="small warn"></p>
   <p class="small dim">Everything is computed on your phone. Motion data never leaves it; your location only leaves it
     rounded to about 50 km, to fetch NASA's satellite picture of your region.
-    <a href="index.html">Open the WANDERERS console →</a></p>
+    <a href="observatory.html">Open the WANDERERS console →</a></p>
 </section>
 
 <!-- 1. cosmic intro -->
@@ -138,6 +148,7 @@
   <div class="row-btns"><button id="infoClose" class="btn primary">Done</button></div>
 </div>
 
+<script src="theme.js"></script>
 <script src="sky.js?v=20261114j"></script>
 <script src="search.js?v=20261114j"></script>
 <script src="telescope.js?v=20261114j"></script>

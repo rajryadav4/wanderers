@@ -4,76 +4,87 @@
   "name": "Barnard's Star",
   "teaser": "Fastest star in the sky",
   "ra": 269.4479777024211,
-  "dec": 4.746181660471474
+  "dec": 4.746181660471474,
+  "fov": 300
  },
  {
   "id": "r_dra",
   "name": "R Draconis",
   "teaser": "Pulsating red giant",
   "ra": 248.16734327616675,
-  "dec": 66.75501087068785
+  "dec": 66.75501087068785,
+  "fov": 300
  },
  {
   "id": "rw_aur",
   "name": "RW Aurigae",
   "teaser": "Young star that flickers",
   "ra": 76.95608318009566,
-  "dec": 30.40118682967599
+  "dec": 30.40118682967599,
+  "fov": 300
  },
  {
   "id": "eps_indi_b",
   "name": "Epsilon Indi B",
   "teaser": "Brown dwarf pair",
   "ra": 331.08130021002296,
-  "dec": -56.795456555579975
+  "dec": -56.795456555579975,
+  "fov": 300
  },
  {
   "id": "wise0855",
   "name": "WISE 0855-0714",
   "teaser": "Coldest brown dwarf (boss level)",
   "ra": 133.77712513571174,
-  "dec": -7.243669827763018
+  "dec": -7.243669827763018,
+  "fov": 300
  },
  {
   "id": "pos_162p3288_s53p3194",
   "name": "Luhman 16",
   "teaser": "Closest brown dwarf pair",
   "ra": 162.30522448331104,
-  "dec": -53.31779939566327
+  "dec": -53.31779939566327,
+  "fov": 300
  },
  {
   "id": "pos_164p1223_n7p0153",
   "name": "Wolf 359",
   "teaser": "Faint nearby red dwarf",
   "ra": 164.10054950708522,
-  "dec": 7.000897051591305
+  "dec": 7.000897051591305,
+  "fov": 300
  },
  {
   "id": "pos_165p8345_n35p9699",
   "name": "Lalande 21185",
   "teaser": "Red dwarf with planets",
   "ra": 165.8304770919084,
-  "dec": 35.945435834004705
+  "dec": 35.945435834004705,
+  "fov": 300
  },
  {
   "id": "pos_217p4398_s62p6795",
   "name": "Proxima Centauri",
   "teaser": "Nearest star to the Sun",
   "ra": 217.38702585545897,
-  "dec": -62.675580418192496
+  "dec": -62.675580418192496,
+  "fov": 300
  },
  {
   "id": "pos_316p7219_n38p7494",
   "name": "61 Cygni",
   "teaser": "First star distance ever measured",
   "ra": 316.75212570411855,
-  "dec": 38.76608108283803
+  "dec": 38.76608108283803,
+  "fov": 300
  },
  {
   "id": "pos_77p9125_s45p0184",
   "name": "Kapteyn's Star",
   "teaser": "Ancient fast halo star",
   "ra": 77.9664897918784,
-  "dec": -45.047883773984026
+  "dec": -45.047883773984026,
+  "fov": 300
  }
 ]
