@@ -1,1 +1,1 @@
-{"key":"hip32349","name":"Sirius","gaia_dr3":null,"properties":{},"gaia":null,"chemistry":null,"planets":[],"spectrum":null,"computed":"2026-11-14"}
+{"key":"hip32349","name":"Sirius","gaia_dr3":null,"properties":{"mass":{"value":2.06,"source":"approximate (Liebert et al. 2005; Kervella et al. 2003)"},"radius":{"value":1.71,"source":"approximate (Liebert et al. 2005; Kervella et al. 2003)"},"teff":{"value":9940.0,"source":"approximate (Liebert et al. 2005; Kervella et al. 2003)"}},"gaia":null,"chemistry":null,"planets":[],"spectrum":null,"computed":"2026-11-14"}
