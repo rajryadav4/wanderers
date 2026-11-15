@@ -51,7 +51,8 @@ a { color: var(--cyan); }
 .landing .btn.big { display: block; }
 
 /* cosmic intro */
-.cosmos { background: #000; }
+.cosmos { background: #000; color: var(--text);   /* the intro is space in both themes: keep the Night text colours */
+  --text: #e8eefb; --line: rgba(108, 196, 255, 0.22); --amber: #ffb547; }
 .cosmos-stage { position: absolute; inset: 0; }
 .cosmos-stage canvas { display: block; width: 100%; height: 100%; }
 .cosmos-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 20px max(28px, env(safe-area-inset-bottom));
@@ -59,7 +60,7 @@ a { color: var(--cyan); }
 .cosmos-title { font: 700 1.5rem var(--font); letter-spacing: .01em; }
 .cosmos-sub { color: #c9d5ec; margin-top: 4px; max-width: 640px; }
 .cosmos-sub b { color: var(--amber); font-weight: 600; }
-.skip { position: absolute; top: max(14px, env(safe-area-inset-top)); right: 14px; z-index: 2; }
+.skip-intro { position: absolute; top: max(14px, env(safe-area-inset-top)); right: 14px; z-index: 2; }   /* not .skip: brand.css hides that skip link at left -9999px */
 .region { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transform: scale(1.6);
   transition: opacity .8s, transform 2.6s cubic-bezier(.2, .7, .2, 1); }
 .region.in { opacity: 1; transform: scale(1); }
@@ -100,7 +101,7 @@ a { color: var(--cyan); }
 .telemetry b { color: var(--cyan); font-weight: 600; }
 .hud-buttons { position: absolute; top: calc(env(safe-area-inset-top) + 128px); right: 10px; display: flex; gap: 6px; }
 .radar { position: absolute; left: 10px; bottom: calc(env(safe-area-inset-bottom) + 178px); width: 120px; height: 120px;
-  border-radius: 50%; background: var(--panel); border: 1px solid var(--line); }
+  border-radius: 50%; background: rgba(8, 14, 28, 0.78); border: 1px solid rgba(108, 196, 255, 0.22); }   /* dark in both themes: drawn like the HUD */
 .guide { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 12px max(12px, env(safe-area-inset-bottom));
   background: linear-gradient(transparent, var(--guide-fade) 22%); text-align: center; }
 .guide-main { font: 700 1.12rem var(--font); }
@@ -172,9 +173,9 @@ a { color: var(--cyan); }
 .landing-brand .logo svg .dot, .landing-brand .logo svg .ink-dot { fill: var(--cyan); stroke: none; }
 
 /* ---- path taken and path ahead (pathview.js) ---- */
-#dPath .path-card { margin-top: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius, 8px); background: var(--card-bg); }
-#dPath .path-card h3 { margin: 0; font-size: 1rem; }
-#dPath .path-card .panel-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+#dPath.path-card { margin-top: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius, 8px); background: var(--card-bg); }
+#dPath.path-card h3 { margin: 0; font-size: 1rem; }
+#dPath.path-card .panel-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .pv-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin: 8px 0; }
 .pv-chart { width: 100%; height: auto; background: #050912; border-radius: 6px; }
 .pv-title { fill: #e6edf7; font: 600 11px ui-sans-serif, system-ui, sans-serif; }
