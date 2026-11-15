@@ -10,7 +10,8 @@
  * Needs starcore.js. Works in the console and the Sky Compass (window.PathView). */
 (function (root) {
   "use strict";
-  const LY_PER_PC = 3.261563777, MOON = 1866;   // the Moon's width in arcsec
+  const LY_PER_PC = 3.261563777, MOON = 1800;   // the Moon's width in arcsec: the same 1,800″ (and rounding) as the evidence card's insight
+  const moonYears = (speed) => { const y = MOON / speed; return (y >= 100 ? Math.round(y / 10) * 10 : Math.round(y)).toLocaleString("en-US"); };
   let PATHS = null, base = "data/";
   const preds = {};
   const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -80,17 +81,20 @@
     return `<svg viewBox="0 0 ${W} ${H}" class="pv-chart" role="img" aria-label="${esc(opts.title)}">
       <text x="8" y="16" class="pv-title">${esc(opts.title)}</text>
       <text x="${W - 8}" y="16" text-anchor="end" class="pv-dim">N ↑ E ←</text>
-      ${band}<path d="${line(past)}" class="pv-past"/><path d="${line(fut)}" class="pv-future"/>${marks}
-      <circle cx="${X(xy.find((p) => p.year === nowP.year)).toFixed(1)}" cy="${Y(xy.find((p) => p.year === nowP.year)).toFixed(1)}" r="5" class="pv-now"/>
+      ${band}<path d="${line(past)}" class="pv-past"/><path d="${line(fut)}" class="pv-future"/>
+      <circle cx="${X(xy.find((p) => p.year === nowP.year)).toFixed(1)}" cy="${Y(xy.find((p) => p.year === nowP.year)).toFixed(1)}" r="5" class="pv-now"/>${marks}
       <line x1="10" x2="${(10 + bar).toFixed(1)}" y1="${H - 10}" y2="${H - 10}" class="pv-axis"/>
       <text x="${(14 + bar).toFixed(1)}" y="${H - 6}" class="pv-dim">${esc(ang(scaleAs))}</text></svg>`;
   }
 
-  /* Draw into `el`. Returns the model (or null when no motion is known). */
+  /* Draw into `el`. Returns the model (or null when no motion is known, or a newer render replaced this one). */
+  const latest = new WeakMap();
   async function render(el, q, opts = {}) {
+    const me = {}; latest.set(el, me);           // a slow answer for an earlier star must not overwrite a newer one
     el.innerHTML = `<p class="pv-dim">Working out its path…</p>`;
     let m;
     try { m = await model(q); } catch (e) { m = null; }
+    if (latest.get(el) !== me) return null;
     if (!m) { el.innerHTML = `<p class="pv-dim">No motion is known for this position, so no path can be drawn.</p>`; return null; }
     const N = near(m), SC = root.StarCore;
     const speed = Math.hypot(m.star ? m.star.pmra : m.row.pmra, m.star ? m.star.pmdec : m.row.pmdec) / 1000;   // arcsec per year
@@ -109,7 +113,7 @@
         (ca && Math.abs(ca.year - m.now) < 2e6 ? ` Closest to the Sun ${ca.year > m.now ? "in" : "was in"} ${yr(ca.year)}, at ${ca.distLy.toFixed(ca.distLy < 10 ? 2 : 1)} light-years (now ${d0.toFixed(d0 < 10 ? 2 : 1)}).` : "") + `</li>`;
     }
     html += `</div><ul class="pv-facts">
-      <li><b>Speed across the sky:</b> ${speed < 1 ? `${(speed * 1000).toFixed(speed < 0.01 ? 1 : 0)} milliarcseconds` : ang(speed)} a year${speed > 0.05 ? `, a Moon-width every ${Math.round(MOON / speed).toLocaleString()} years` : ""}.</li>
+      <li><b>Speed across the sky:</b> ${speed < 1 ? `${(speed * 1000).toFixed(speed < 0.01 ? 1 : 0)} milliarcseconds` : ang(speed)} a year${speed > 0.05 ? `, a Moon-width every ${moonYears(speed)} years` : ""}.</li>
       <li><b>Path taken:</b> since 1900 it has moved ${ang(sep(p1900, nowP))}.</li>
       <li><b>Path ahead:</b> by 2100 it will have moved another ${ang(sep(nowP, p2100))}${N.at(-1).unc ? ` (±${ang(N.at(-1).unc)} at 68%)` : ""}.</li>
       ${longTxt}</ul>`;

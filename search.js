@@ -77,11 +77,11 @@
     return out;
   }
 
-  // round first, then split, so 59.97 s carries into the minute instead of showing "60s"
-  const hms = (deg) => { const t = Math.round(deg / 15 * 36000) % 864000, H = Math.floor(t / 36000), M = Math.floor(t / 600) % 60;
-    return `${String(H).padStart(2, "0")}h${String(M).padStart(2, "0")}m${((t % 600) / 10).toFixed(1).padStart(4, "0")}s`; };
-  const dms = (deg) => { const t = Math.round(Math.abs(deg) * 3600), D = Math.floor(t / 3600), M = Math.floor(t / 60) % 60;
-    return `${deg < 0 ? "-" : "+"}${String(D).padStart(2, "0")}d${String(M).padStart(2, "0")}m${String(t % 60).padStart(2, "0")}s`; };
+  // rounded before splitting, so 59.96 s becomes the next minute instead of "60.0s"
+  const hms = (deg) => { const c = Math.round((((deg % 360) + 360) % 360) / 15 * 36000) % 864000;   // tenths of a second of time
+    return `${String(Math.floor(c / 36000)).padStart(2, "0")}h${String(Math.floor(c / 600) % 60).padStart(2, "0")}m${((c % 600) / 10).toFixed(1).padStart(4, "0")}s`; };
+  const dms = (deg) => { const c = Math.round(Math.abs(deg) * 3600);   // whole arcseconds
+    return `${deg < 0 ? "-" : "+"}${String(Math.floor(c / 3600)).padStart(2, "0")}d${String(Math.floor(c / 60) % 60).padStart(2, "0")}m${String(c % 60).padStart(2, "0")}s`; };
 
   // wire an <input> to a suggestion list; onPick(star) is called with the chosen star
   function attach(input, list, onPick) {

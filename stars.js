@@ -18,8 +18,9 @@
     ]);
     DB.stars = idx.stars; DB.meta = idx.meta; DB.ready = new Set(ready); DB.full = new Set(full);
     DB.live = await fetch("api/health").then((r) => r.ok).catch(() => false);
-    $("starMsg").textContent = `${DB.stars.length.toLocaleString("en-US")} stars searchable (${DB.meta.selection}). Every star gets a profile, ` +
+    DB.info = `${DB.stars.length.toLocaleString("en-US")} stars searchable (${DB.meta.selection}). Every star gets a profile, ` +
       `a path from 1900 to 2100 and over thousands of years, and its starquakes. The stars below are fully done: real spectrum, learnt path, pre-made sound.`;
+    $("starMsg").textContent = DB.info;
     showSuggestions();
   }
 
@@ -53,7 +54,8 @@
     await ensureDb();
     DB.hits = StarDB.search(DB.stars, e.target.value, { limit: 12, ready: DB.ready }); DB.sel = DB.hits.length ? 0 : -1;
     renderHits();
-    if (e.target.value.trim() && !DB.hits.length) $("starMsg").textContent = "No star by that name here. Try a proper name (Vega), Bayer (Alpha Lyrae), HIP/HD/Gliese number.";
+    $("starMsg").textContent = e.target.value.trim() && !DB.hits.length   // the miss message goes once a search finds something
+      ? "No star by that name here. Try a proper name (Vega), Bayer (Alpha Lyrae), HIP/HD/Gliese number." : DB.info;
   });
   $("starQ").addEventListener("keydown", (e) => {
     if (!DB.hits.length) return;
@@ -68,8 +70,11 @@
   // ---------- one star ----------
   async function choose(key) {
     await ensureDb();
-    const s = DB.stars.find((x) => x.key === key);
+    // a key (hip87937) or, from a hand-written link (?star=Vega), an exact name or alias
+    const s = DB.stars.find((x) => x.key === key) ||
+      DB.stars.find((x) => [x.name, ...(x.aliases || [])].some((n) => StarDB.matchText(n, key) === 0));
     if (!s) { $("starMsg").textContent = "That star is not in the database."; return; }
+    key = s.key;
     DB.cur = s; DB.hits = []; renderHits(); $("starQ").value = s.name;
     const url = new URL(location); url.searchParams.set("star", key); history.replaceState(null, "", url);
     renderDetail(s);
@@ -83,14 +88,18 @@
     }
     if (window.StarquakeUI) StarquakeUI.mount($("starQuake"), { key, row: s });
     $("starPred").hidden = true; $("starPredMsg").innerHTML = "";
-    if (DB.ready.has(key)) return showPred(await fetch(`data/stars/pred/${key}.json`).then((r) => r.json()));
+    if (DB.ready.has(key)) {
+      const p = await fetch(`data/stars/pred/${key}.json`).then((r) => r.json());
+      if (DB.cur === s) showPred(p);                 // another star may have been chosen while this one loaded
+      return;
+    }
     // No learnt path yet: compute one from the star's measured motion (Gaia DR3, else HYG), so every star has both paths.
     const prof = window.StarProfile ? await StarProfile.load(key).catch(() => null) : null;
     if (DB.cur !== s) return;
     const phys = window.PhysicsPath ? PhysicsPath.build(s, prof) : null;
     if (phys) showPred(phys); else if (window.LongRange) LongRange.show(null, s, DB.stars);
     const how = DB.live ? `<button type="button" id="starLearn">Learn its path with the ML model</button> <span class="hint">Queries 13 catalogues at the ESA Gaia archive and fits the model: about a minute.</span>`
-      : `<span class="hint">To learn it with the ML model, run <code>node server.js</code>, or <code>.venv/bin/python pipeline/star_ml.py ${esc(key)}</code>.</span>`;
+      : `<span class="hint">This path follows the star's measured motion; the machine-learnt path is ready for the stars listed above.</span>`;   // no developer commands for visitors
     $("starPredMsg").innerHTML = phys ? `${how}` : `No distance or motion is known for ${esc(s.name)}, so its path cannot be drawn. ${how}`;
     if ($("starLearn")) $("starLearn").onclick = () => learn(key);
   }

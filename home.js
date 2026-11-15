@@ -92,20 +92,31 @@
     }
     paint($("cmpA"), 0); $("cmpALbl").textContent = fr[0].label;
 
-    // broken time axis: the 2010 epoch on the left, then the SPHEREx years spread out
-    const later = fr.filter((f) => f.mission !== "WISE").map((f) => f.year);
-    const y0 = Math.floor(Math.min(...later) * 2) / 2, y1 = Math.ceil((Math.max(...later) + 0.01) * 2) / 2;
-    const pos = (yr) => (yr < 2015 ? 5 : 30 + ((yr - y0) / (y1 - y0)) * 67);
+    // broken time axis: the 2010 epoch on the left, then each later mission (NEOWISE, SPHEREx) on its own stretch
+    const groups = [...new Set(fr.filter((f) => f.mission !== "WISE").map((f) => f.mission))].map((m, k, all) => {
+      const ys = fr.filter((f) => f.mission === m).map((f) => f.year), share = 67 / all.length, a = 30 + k * share;
+      return { m, a, b: a + share - (k < all.length - 1 ? 5 : 0), y0: Math.floor(Math.min(...ys) * 2) / 2, y1: Math.ceil((Math.max(...ys) + 0.01) * 2) / 2 };
+    });
+    const pos = (yr, m) => { const g = groups.find((x) => x.m === m); return g ? g.a + ((yr - g.y0) / (g.y1 - g.y0)) * (g.b - g.a) : 5; };
     function axis() {
       const ax = $("tlAxis"), w = ax.clientWidth || 600;
-      let h = `<div class="base"></div><div class="gap" style="left:12%;width:13%"><span>${Math.round(y0 - 2010.5)}-year gap</span></div>`;
+      let h = `<div class="base"></div><div class="gap" style="left:12%;width:13%"><span>${Math.round(groups[0].y0 - 2010.5)}-year gap</span></div>`;
       h += `<span class="yr" style="left:5%">2010</span>`;
-      for (let y = y0; y <= y1 + 1e-6; y += 0.5) h += `<span class="yr" style="left:${pos(y)}%">${Number.isInteger(y) ? y : "mid " + Math.floor(y)}</span>`;
+      groups.forEach((g, k) => {
+        if (k) h += `<div class="gap" style="left:${groups[k - 1].b + 1}%;width:3%"></div>`;
+        // as many year labels as fit (about 48 px each): every half year for SPHEREx, every few years for NEOWISE
+        const fit = Math.max(2, Math.floor(((g.b - g.a) / 100) * w / 48));
+        const step = [0.5, 1, 2, 5, 10].find((s) => Math.floor((g.y1 - g.y0) / s) + 1 <= fit) || 10;
+        for (let y = Math.ceil(g.y0 / step) * step; y <= g.y1 + 1e-6; y += step) h += `<span class="yr" style="left:${pos(y, g.m)}%">${Number.isInteger(y) ? y : "mid " + Math.floor(y)}</span>`;
+      });
       ax.innerHTML = h;
-      let lastPx = -99, stack = 0;
+      // close epochs go up into rows; at most 6 rows (21 NEOWISE visits would otherwise stack 21 high over the images)
+      const rowEnd = [];
       fr.forEach((f, j) => {
-        const pct = pos(f.year), px = (pct / 100) * w;
-        stack = px - lastPx < 16 ? stack + 1 : 0; lastPx = px;
+        const pct = pos(f.year, f.mission), px = (pct / 100) * w;
+        let stack = rowEnd.findIndex((x) => px - x >= 16);
+        if (stack < 0) stack = rowEnd.length < 6 ? rowEnd.length : rowEnd.indexOf(Math.min(...rowEnd));
+        rowEnd[stack] = px;
         const b = document.createElement("button");
         b.type = "button"; b.style.left = `${pct}%`; b.style.top = `${40 - stack * 17}px`;
         b.setAttribute("aria-label", `${f.label}${f.detected === false ? ", target not detected" : ""}`);
@@ -126,7 +137,7 @@
         note += ` · ${dt.toFixed(1)} years after WISE`;
         if (m && ref) note += ` · measured offset from 2010 position: <b>${(Math.hypot(m.x - ref.x, m.y - ref.y) * as).toFixed(0)}″</b>`;
         else note += " · position not separately measured in this frame";
-        if (f.n_images) note += ` · stack of ${f.n_images} SPHEREx image${f.n_images > 1 ? "s" : ""}`;
+        if (f.n_images) note += ` · stack of ${f.n_images} ${esc(f.mission)} image${f.n_images > 1 ? "s" : ""}`;
       }
       if (f.detected === false) note += " · target not detected at this wavelength";
       $("tlNote").innerHTML = note;
@@ -203,7 +214,7 @@
     }).join("");
   }
 
-  hero().then(evidenceCard).catch(() => { $("heroStamp").textContent = "Data not available. Run the pipeline (see README)."; });
+  hero().then(evidenceCard).catch(() => { $("heroStamp").textContent = "Could not load the images. Please reload the page."; });
   compare().catch(() => { $("tlNote").textContent = "Observation data not available."; });
   miniSpec().catch(() => {});
   targets().catch(() => {});
