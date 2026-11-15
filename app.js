@@ -9,7 +9,7 @@
   // ---------- boot ----------
   fetch("data/index.json").then((r) => r.json()).then((list) => {
     S.list = list;
-    renderTargets();
+    renderTargets(); renderExamples();
     const p = new URLSearchParams(location.search);
     if (p.get("ra") && p.get("dec")) { if (!coordSearch(p.get("ra"), p.get("dec"), p.get("fov"))) load(list[0].id); }   // unreadable: still show something
     else { load(p.get("target") || list[0].id, p.get("ch")); }
@@ -18,6 +18,33 @@
   // "Explore any patch" live mode (web/ + backend/ on port 8001): links show only when server.js can reach it
   const liveExplore = fetch("api/live-health").then((r) => r.ok).catch(() => false);
   liveExplore.then((ok) => { $("exploreLink").hidden = !ok; });
+
+  // one-tap examples for the coordinate box (the challenge's own WISE 0855 coordinates first)
+  const hms = (deg) => { const h = deg / 15, H = Math.floor(h), m = (h - H) * 60, M = Math.floor(m);
+    return `${String(H).padStart(2, "0")}h${String(M).padStart(2, "0")}m${((m - M) * 60).toFixed(2).padStart(5, "0")}s`; };
+  const dms = (deg) => { const a = Math.abs(deg), D = Math.floor(a), m = (a - D) * 60, M = Math.floor(m);
+    return `${deg < 0 ? "-" : "+"}${String(D).padStart(2, "0")}d${String(M).padStart(2, "0")}m${((m - M) * 60).toFixed(1).padStart(4, "0")}s`; };
+  function renderExamples() {
+    const ex = [{ name: "WISE 0855 (from the brief)", ra: "08h55m10.831s", dec: "-07d14m42.53s" },
+      ...S.list.filter((t) => t.id !== "wise0855").map((t) => ({ name: t.name, ra: hms(t.ra), dec: dms(t.dec) }))];
+    $("examples").innerHTML = "Try: " + ex.map((e, i) => `<button type="button" data-i="${i}">${e.name}<span>${e.ra} ${e.dec}</span></button>`).join("");
+    $("examples").querySelectorAll("button").forEach((b) => (b.onclick = () => {
+      const e = ex[+b.dataset.i]; $("raIn").value = e.ra; $("decIn").value = e.dec; $("coordForm").requestSubmit();
+    }));
+  }
+
+  // search any star by name: fill the coordinates, show its facts, then go there
+  StarSearch.attach($("nameIn"), $("nameList"), (st) => {
+    $("raIn").value = StarSearch.hms(st.ra); $("decIn").value = StarSearch.dms(st.dec);
+    const facts = st.spect || st.mag != null ? StarSearch.describe(st) : [];
+    $("starCard").hidden = false;
+    $("starCard").innerHTML = `<h3>${st.name}${st.wanderers ? ' <span class="hint">· WANDERERS target</span>' : ""}</h3>` +
+      `<div class="alt">${st.alt.slice(0, 4).join(" · ")}</div>${facts.length ? `<ul>${facts.map((f) => `<li>${f}</li>`).join("")}</ul>` : ""}` +
+      `<p class="hint">Star data: HYG database v4.0 (Hipparcos, Yale Bright Star, Gliese), CC BY-SA 4.0. ` +
+      `<a href="compass.html?star=${encodeURIComponent(st.name)}">Find it with your phone →</a></p>`;
+    showPath({ star: st });
+    coordSearch(String(st.ra), String(st.dec), { fromSearch: true, label: st.name });
+  });
 
   function renderTargets() {
     $("targetList").innerHTML = S.list.map((t, k) =>
@@ -32,6 +59,7 @@
       fetch(`data/${id}/explain.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch(`data/${id}/trajectory.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null),   // optional
     ]);
+    S.here = { ra: t.grid.centre_ra, dec: t.grid.centre_dec, label: t.name };
     S.t = t; S.ex = ex; S.tr = tr;
     $("pathNote").textContent = StarPath.summary(tr); $("pathNote").hidden = !tr;
     $("tPath").parentElement.hidden = !tr; S.ch = ch && t.frames[ch] ? ch : (t.frames.w2 && t.frames.w2.length ? "w2" : "w1");
@@ -41,15 +69,21 @@
     $("tKind").textContent = t.kind;
     const fovNow = String(Math.round(t.grid.npix * t.grid.arcsec_per_pix));
     if ([...$("fovIn").options].some((o) => o.value === fovNow)) $("fovIn").value = fovNow;
-    document.querySelectorAll(".channel button").forEach((b) => {
-      const has = t.frames[b.dataset.ch] && t.frames[b.dataset.ch].length;
-      b.disabled = !has; b.classList.toggle("on", b.dataset.ch === S.ch); b.setAttribute("aria-checked", b.dataset.ch === S.ch);
-    });
+    renderChannels(); S.math = null; $("mOp").value = "off"; $("stackAll").setAttribute("aria-pressed", "false");
     const url = new URL(location); url.searchParams.set("target", id); ["ra", "dec", "fov"].forEach((k) => url.searchParams.delete(k));
     history.replaceState(null, "", url);
     await preload();
     if (S.pickUrlDone) { S.pick = null; const u = new URL(location); u.searchParams.delete("pick"); history.replaceState(null, "", u); }
-    setupSlider(); initMix(true); renderMeta(); renderChanges(); setAladin(); draw(); evidence(); spectrum();
+    setupSlider(); initMix(true); renderMeta(); renderChanges(); renderMetaBox(); setAladin(); fillCompare(); draw(); evidence(); spectrum();
+    showPath({ target: id });
+    // starquakes for the five challenge targets (typed-in fields have no star parameters, so no widget)
+    if (window.StarquakeUI) {
+      Promise.all([fetch("data/starquake/targets.json").then((r) => (r.ok ? r.json() : {})), fetch("data/starquake_stars.json").then((r) => r.json()),
+        fetch("data/stars/index.json").then((r) => r.json())]).then(([map, info, idx]) => {
+        const qk = map[id] || (id === "barnard" ? "hip87937" : "wanderers_" + id), row = idx.stars.find((s) => s.key === qk) || null;
+        if (info[qk] || row) StarquakeUI.mount($("targetQuake"), { key: qk, row, title: t.name }); else $("targetQuake").hidden = true;
+      }).catch(() => { $("targetQuake").hidden = true; });
+    }
     if (MAP.ready) mapGoTo();
     $("answer").textContent = "";
   }
@@ -87,12 +121,15 @@
 
   function draw() {
     const c = $("sky"), g = c.getContext("2d"), fr = frames(), f = fr[S.i];
-    const N = S.t.grid.npix, k = c.width / N;
+    const N = S.t.grid.npix, k = c.width / N, z = +$("zoom").value || 1;
+    g.setTransform(1, 0, 0, 1, 0, 0);
     g.imageSmoothingEnabled = false;
     g.fillStyle = "#000"; g.fillRect(0, 0, c.width, c.height);
+    // zoom about the centre (digital zoom of the cached field; larger fields come from a new lookup)
+    g.setTransform(z, 0, 0, z, c.width / 2 * (1 - z), c.height / 2 * (1 - z));
     const diff = $("tDiff").checked && S.t.diff[S.ch];
-    const mixed = !diff && S.mix.mode !== "single" && S.mixOut;
-    const im = S.imgs[diff ? S.t.diff[S.ch] : f && f.png];
+    const mixed = !diff && !S.math && S.mix.mode !== "single" && S.mixOut;
+    const im = S.math ? S.math.canvas : S.imgs[diff ? S.t.diff[S.ch] : f && f.png];
     if (mixed) g.drawImage(S.mixOut.canvas, 0, 0, c.width, c.height);
     else if (im) g.drawImage(im, 0, 0, c.width, c.height);
     const Y = (y) => (N - 1 - y + 0.5) * k, X = (x) => (x + 0.5) * k;   // PNGs are stored north-up (origin lower)
@@ -142,8 +179,9 @@
         g.font = "12px ui-monospace, monospace"; g.fillText(lab, X(x) + 14, Y(y) + 4);
       }
     }
+    g.setTransform(1, 0, 0, 1, 0, 0);
     const seen = f && f.detected === false ? " · not detected at this wavelength" : "";
-    const lbl = diff ? "Difference: SPHEREx 2026 − 2025 (green = now, pink = before)" : mixed ? S.mixOut.label : f ? `${f.label} · ${labelOf(S.ch)}${seen}` : "";
+    const lbl = S.math ? S.math.label : diff ? "Difference: SPHEREx 2026 − 2025 (green = now, pink = before)" : mixed ? S.mixOut.label : f ? `${f.label} · ${labelOf(S.ch)}${seen}` : "";
     $("stamp").textContent = lbl;
     $("frameLbl").textContent = mixed ? "" : f ? `${S.i + 1}/${fr.length} · ${f.year.toFixed(1)}` : "";
     document.querySelectorAll("#metaBody tr[data-i]").forEach((tr) => tr.classList.toggle("now", !diff && +tr.dataset.i === S.i));
@@ -201,7 +239,92 @@
       ? "The search did not find this mission's own target, so it also misses real movers. Treat an empty list as “nothing found”, not “nothing there”. " : "") +
       `${ch.method} ${ch.not_checked}`;
   }
-  const labelOf = (ch) => (ch === "w2" ? "4.6 µm" : "3.4 µm");
+  const labelOf = (ch) => (S.t.channels && S.t.channels[ch]) || (ch === "w2" ? "4.6 µm" : "3.4 µm");
+
+  // wavelength-matched channels + one co-added image per SPHEREx detector
+  function renderChannels() {
+    const chs = Object.keys(S.t.frames).filter((c) => S.t.frames[c].length);
+    const main = chs.filter((c) => !c.startsWith("d")), dets = chs.filter((c) => c.startsWith("d"));
+    const btn = (c) => `<button data-ch="${c}" class="${c === S.ch ? "on" : ""}" role="radio" aria-checked="${c === S.ch}" title="${labelOf(c)}">` +
+      `${c.startsWith("d") ? "D" + c.slice(1) : labelOf(c)}</button>`;
+    $("channels").innerHTML = main.map(btn).join("") + (dets.length ? `<span class="sep">Detector co-adds:</span>${dets.map(btn).join("")}` : "");
+  }
+  $("channels").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-ch]"); if (!b) return;
+    S.ch = b.dataset.ch; S.i = Math.min(S.i, frames().length - 1); S.math = null; $("mOp").value = "off"; $("stackAll").setAttribute("aria-pressed", "false");
+    renderChannels(); setupSlider(); initMix(false); renderMeta(); renderMetaBox(); fillCompare(); draw();
+    const url = new URL(location); url.searchParams.set("ch", S.ch); history.replaceState(null, "", url);
+  });
+
+  // ---------- add / subtract any two epochs, or stack every SPHEREx frame ----------
+  function fillCompare() {
+    const opts = frames().map((f, i) => `<option value="${i}">${f.label}</option>`).join("");
+    $("mA").innerHTML = opts; $("mB").innerHTML = opts;
+    const firstSpx = frames().findIndex((f) => f.mission === "SPHEREx");
+    $("mA").value = Math.max(0, frames().length - 1); $("mB").value = Math.max(0, firstSpx);
+  }
+  function pixels(png) {
+    const im = S.imgs[png], N = S.t.grid.npix, cv = document.createElement("canvas"); cv.width = cv.height = N;
+    const x = cv.getContext("2d"); x.drawImage(im, 0, 0, N, N); return x.getImageData(0, 0, N, N).data;
+  }
+  function compute(kind) {
+    const fr = frames(), N = S.t.grid.npix, cv = document.createElement("canvas"); cv.width = cv.height = N;
+    const x = cv.getContext("2d"), out = x.createImageData(N, N);
+    if (kind === "stack") {
+      const sp = fr.filter((f) => f.mission === "SPHEREx"); if (!sp.length) return null;
+      const acc = new Float32Array(N * N);
+      for (const f of sp) { const p = pixels(f.png); for (let i = 0; i < N * N; i++) acc[i] += p[i * 4]; }
+      const max = Math.max(...acc) || 1;
+      for (let i = 0; i < N * N; i++) { const v = 255 * Math.sqrt(acc[i] / max); out.data.set([v, v, v, 255], i * 4); }
+      x.putImageData(out, 0, 0);
+      return { canvas: cv, label: `Stack of all ${sp.length} SPHEREx frames · ${labelOf(S.ch)} (deeper image, movers smear)` };
+    }
+    const A = fr[+$("mA").value], B = fr[+$("mB").value]; if (!A || !B) return null;
+    // put both frames on the same scale: subtract each one's background, divide by its noise (median / MAD)
+    const zs = (p) => {
+      const v = new Float32Array(N * N); for (let i = 0; i < N * N; i++) v[i] = p[i * 4];
+      const srt = Float32Array.from(v).sort(), med = srt[srt.length >> 1];
+      const dev = Float32Array.from(v, (q) => Math.abs(q - med)).sort(), mad = 1.4826 * dev[dev.length >> 1] || 1;
+      return v.map((q) => (q - med) / mad);
+    };
+    const za = zs(pixels(A.png)), zb = zs(pixels(B.png));
+    for (let i = 0; i < N * N; i++) {
+      if (kind === "add") { const v = Math.max(0, Math.min(255, 30 + (za[i] + zb[i]) * 12)); out.data.set([v, v, v, 255], i * 4); continue; }
+      const d = za[i] - zb[i], k = Math.min(1, Math.max(0, (Math.abs(d) - 2.5) / 6));   // only changes above 2.5 sigma
+      out.data.set(d > 0 ? [20, 40 + 215 * k, 30, 255] : [40 + 215 * k, 20, 40 + 160 * k, 255], i * 4);
+    }
+    x.putImageData(out, 0, 0);
+    return { canvas: cv, label: kind === "add" ? `${A.label} + ${B.label}` : `${A.label} − ${B.label}: significant changes only (green = brighter in A, pink = brighter in B)` };
+  }
+  const recompute = () => { const op = $("mOp").value; S.math = op === "off" ? null : compute(op); $("stackAll").setAttribute("aria-pressed", "false"); draw(); };
+  ["mA", "mB", "mOp"].forEach((id) => ($(id).onchange = recompute));
+  $("stackAll").onclick = () => {
+    const on = $("stackAll").getAttribute("aria-pressed") !== "true";
+    $("stackAll").setAttribute("aria-pressed", String(on)); $("mOp").value = "off";
+    S.math = on ? compute("stack") : null; draw();
+  };
+  $("zoom").oninput = (e) => { $("zoomVal").textContent = `${e.target.value}×`; draw(); };
+  $("copyLink").onclick = async () => {
+    const u = new URL(location); u.searchParams.set("ch", S.ch);
+    try { await navigator.clipboard.writeText(u.toString()); $("copyLink").textContent = "✓ Link copied"; }
+    catch { prompt("Copy this link:", u.toString()); }
+    setTimeout(() => ($("copyLink").textContent = "🔗 Copy link"), 1800);
+  };
+  if (new URLSearchParams(location.search).get("embed") === "1") document.body.classList.add("embed");
+
+  // ---------- metadata: every SPHEREx image used, its wavelength at the target and contamination flags ----------
+  function renderMetaBox() {
+    const m = S.t.metadata || [];
+    if (!m.length) { $("metaBox").innerHTML = "<p class='hint'>No per-image metadata for this target.</p>"; return; }
+    const flagged = m.filter((r) => r.flags_at_target.length).length, counts = {};
+    m.forEach((r) => r.flags_at_target.forEach((f) => (counts[f] = (counts[f] || 0) + 1)));
+    $("metaBox").innerHTML = `<p class="hint">${m.length} SPHEREx images (${(S.t.fov_arcsec / 60).toFixed(1)}′ field).
+      ${flagged} have flags inside the 3-pixel aperture at the target${Object.keys(counts).length ? ": " + Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([f, n]) => `${f} ×${n}`).join(", ") : ""}.
+      Flags follow the SPHEREx Explanatory Supplement; flagged images are left out of the spectrum.</p>
+      <div class="scroll"><table><thead><tr><th>Date (UTC)</th><th>Det.</th><th>λ at target</th><th>Flags at target</th><th>In spectrum</th></tr></thead><tbody>` +
+      m.map((r) => `<tr><td>${r.date}</td><td>D${r.detector}</td><td>${r.lam_um ?? "–"} µm</td><td class="${r.flags_at_target.length ? "flag" : ""}">${r.flags_at_target.join(", ") || "none"}</td><td>${r.used_in_spectrum ? "yes" : "no"}</td></tr>`).join("") +
+      "</tbody></table></div>";
+  }
 
   // ---------- add / subtract frames (uses framemath.js) ----------
   // Works on the displayed (stretched) images, so it is for spotting motion, not for measuring flux.
@@ -312,12 +435,7 @@
   $("play").onclick = play;
   $("frame").oninput = (e) => { stop(); S.i = +e.target.value; draw(); };
   ["tGhost", "tTrail", "tPath", "tDiff"].forEach((id) => ($(id).onchange = draw));
-  document.querySelectorAll(".channel button").forEach((b) => (b.onclick = () => {
-    S.ch = b.dataset.ch; S.i = Math.min(S.i, frames().length - 1);
-    document.querySelectorAll(".channel button").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-checked", x === b); });
-    setupSlider(); initMix(false); renderMeta(); draw();
-    const url = new URL(location); url.searchParams.set("ch", S.ch); history.replaceState(null, "", url);
-  }));
+
   document.addEventListener("keydown", (e) => {
     if (e.target.tagName === "INPUT") return;
     if (e.key === " ") { e.preventDefault(); play(); }
@@ -422,7 +540,7 @@
     btn.disabled = true;
     msg.textContent = `Looking up RA ${a.toFixed(4)}°, Dec ${d.toFixed(4)}° in the NASA archive…`;
     try {
-      const r = await fetch("api/lookup", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ra: a, dec: d }) });
+      const r = await fetch("api/lookup", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ra: a, dec: d, fov: +$("fovIn").value }) });
       const j = await r.json();
       if (!r.ok) throw new Error(j.error || "lookup failed");
       for (;;) {
@@ -446,9 +564,12 @@
       `<p id="exploreHere" class="hint"><a href="/explore/?q=${encodeURIComponent(`${a.toFixed(5)} ${d.toFixed(5)}`)}">Explore this patch live</a></p>`); });
   }
 
-  function coordSearch(ra, dec, fovIn) {
+  function coordSearch(ra, dec, fovIn, opts = {}) {
+    if (fovIn && typeof fovIn === "object") { opts = fovIn; fovIn = $("fovIn").value; }
     const a = parseAngle(ra, /h/i.test(ra) || /:/.test(ra)), d = parseAngle(dec, false);
     if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return false; }
+    S.here = { ra: a, dec: d, label: opts.label || `RA ${a.toFixed(4)}°, Dec ${d.toFixed(4)}°` };
+    if (!opts.fromSearch) showPath(null);              // bare coordinates: no known motion until a target matches
     const fov = Number(fovIn) || 300;
     if ([...$("fovIn").options].some((o) => Number(o.value) === fov)) $("fovIn").value = String(fov);
     // nearest cached target overall, and nearest one that has the field size that was asked for
@@ -462,6 +583,14 @@
     };
     const same = near(S.list.filter((t) => (t.fov || 300) === fov)), any = near(S.list);
     if (same.best && same.bd < 600) { $("coordMsg").textContent = `Matched ${same.best.name} (${Math.round(same.bd)}″ away).`; load(same.best.id); return true; }
+    if (opts.fromSearch) {   // a star picked by name: show it instantly; the full time-lapse is an explicit choice
+      showMap(a, d, opts.label || "searched star");
+      $("coordMsg").innerHTML = "Showing it on the live SPHEREx sky map (slide through all 102 wavelengths), or open 🔭 Through Webb." +
+        (S.live ? ' <button type="button" id="mkLapse">Make a SPHEREx time-lapse (a few minutes)</button>' : "");
+      if (S.live) $("mkLapse").onclick = () => requestField(a, d, fov);
+      exploreHere(a, d);
+      return true;
+    }
     exploreHere(a, d);   // live /explore/ mode (backend on :8001), shown beside the message
     if (S.live) { requestField(a, d, fov); return true; }
     else if (any.best && any.bd < 600) {   // no server to make the other size: show what is cached and say so
@@ -529,17 +658,69 @@
     try { await initMap(); mapGoTo(ra, dec, label); } catch (e) { $("coordMsg").textContent = "Sky map unavailable: " + e.message; }
   }
   function selectTab(which, starKey) {
-    const views = { flip: ["flipView", "tabFlip"], map: ["mapView", "tabMap"], stars: ["starView", "tabStars"] };
+    const views = { flip: ["flipView", "tabFlip"], map: ["mapView", "tabMap"], webb: ["webbView", "tabWebb"], stars: ["starView", "tabStars"] };
     for (const [k, [view, tab]] of Object.entries(views)) {
       $(view).hidden = k !== which; $(tab).classList.toggle("on", k === which); $(tab).setAttribute("aria-selected", k === which);
     }
     $("meta").hidden = which === "stars";
     document.body.classList.toggle("stars-mode", which === "stars");
+    if (which === "stars") $("pathCard").hidden = true; else if ($("pathBody").innerHTML) $("pathCard").hidden = false;
     if (which !== "flip") stop();
+    if (which === "webb") showWebb();
     if (which === "stars" && window.StarsTab) window.StarsTab.open(starKey);
     if (window.LongRange) which === "stars" ? requestAnimationFrame(window.LongRange.refresh) : window.LongRange.stop();
   }
   window.WANDERERS = { selectTab, openTarget: (id) => { selectTab("flip"); load(id); } };
+
+  // ---------- path taken and path ahead (the team's star-path model, via pathview.js) ----------
+  let pathSeq = 0;
+  async function showPath(q) {
+    const card = $("pathCard"), seq = ++pathSeq;
+    if (!q || !window.PathView) { card.hidden = true; return; }
+    card.hidden = document.body.classList.contains("stars-mode");
+    const m = await PathView.render($("pathBody"), q, { explorerHref: (k) => `observatory.html?star=${encodeURIComponent(k)}` });
+    if (seq !== pathSeq) return;                                   // a newer result has replaced this one
+    const a = $("pathBody").querySelector(".pv-link");
+    if (a && m && m.key) a.onclick = (e) => { e.preventDefault(); selectTab("stars", m.key); };
+  }
+
+  // ---------- through Webb: match the coordinates against every public JWST frame, show its pixels ----------
+  async function showWebb() {
+    const h = S.here; if (!h) return;
+    const head = $("webbHead"), list = $("webbFrames");
+    head.textContent = "Checking every public Webb frame…"; list.innerHTML = ""; $("webbNote").textContent = "";
+    let db; try { db = await Webb.load(); } catch (e) { head.textContent = "Webb frame list unavailable: " + e.message; return; }
+    $("webbCount").textContent = `${db.count.toLocaleString()} frames`;
+    let frames = Webb.best(Webb.framesAt(h.ra, h.dec)), centre = h;
+    if (frames.length) head.innerHTML = `<b>Webb has imaged ${esc(h.label)}</b> in ${frames.length} frame${frames.length > 1 ? "s" : ""}. ` +
+      `The red cross is your position, the gold outline the frame shown.`;
+    else {
+      const n = Webb.near(h.ra, h.dec, 5, 1)[0];
+      if (!n) { head.innerHTML = `<b>Webb has not imaged this part of the sky</b> (no public Webb image within 5° of ${esc(h.label)}).`; $("webbAladin").innerHTML = ""; return; }
+      frames = [n, ...Webb.best(Webb.framesAt(n.ra, n.dec)).filter((p) => p.obs !== n.obs)]; centre = n;
+      head.innerHTML = `<b>Webb has not imaged ${esc(h.label)}.</b> Showing its nearest Webb frame, “${esc(Webb.name(n))}”, ${n.dist.toFixed(2)}° away.`;
+    }
+    const show = async (p) => {
+      list.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.obs === p.obs));
+      const d = Webb.describe(p);
+      $("webbNote").innerHTML = `<b>${esc(d.title)}</b><br>${esc(d.line)}` + ({ preview: "<br>Showing Webb's own image of this frame (MAST preview, placed on the sky with its WCS).",
+        live: "<br>Showing ESA ESASky's live Webb map: scroll to zoom in for full resolution.",
+        outline: "<br>No Webb pixels can be streamed for this frame yet, so the gold outline shows exactly where Webb looked. Open the full Webb image below." })[Webb.source(p)] +
+        `<span class="webb-links"><a href="${Webb.full(p)}" target="_blank" rel="noopener">Full Webb image (large) ↗</a>` +
+        `<a href="${Webb.progUrl(p)}" target="_blank" rel="noopener">Programme ${esc(p.pid)} at STScI ↗</a></span>`;
+      try {
+        await Webb.render($("webbAladin"), centre === h ? h.ra : p.ra, centre === h ? h.dec : p.dec, [p, ...frames.filter((x) => x !== p)],
+          { label: h.label, mark: { ra: h.ra, dec: h.dec }, base: $("webbBase").value, webbOpacity: +$("webbOp").value });
+      } catch (e) { $("webbNote").textContent = "Sky viewer could not load: " + e.message; }
+    };
+    list.innerHTML = frames.slice(0, 12).map((p) => { const d = Webb.describe(p);
+      return `<button data-obs="${esc(p.obs)}"><img loading="lazy" alt="" src="${Webb.thumb(p)}"><div>${esc(d.title)}<span>${esc(d.line)}</span></div></button>`; }).join("");
+    list.querySelectorAll("button").forEach((b) => (b.onclick = () => show(frames.find((p) => p.obs === b.dataset.obs))));
+    show(frames[0]);
+  }
+  $("tabWebb").onclick = () => selectTab("webb");
+  $("webbOp").oninput = (e) => Webb.setOpacity(+e.target.value);
+  $("webbBase").onchange = (e) => Webb.setBase(e.target.value);
   $("tabFlip").onclick = () => selectTab("flip");
   $("tabStars").onclick = () => selectTab("stars");
   $("tabMap").onclick = async () => { selectTab("map"); try { await initMap(); mapGoTo(); } catch (e) { $("coordMsg").textContent = "Sky map unavailable: " + e.message; } };

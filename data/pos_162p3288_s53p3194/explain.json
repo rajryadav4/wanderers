@@ -1,0 +1,18 @@
+{
+ "summary": "Luhman 16 is a known pair of brown dwarfs, objects too heavy to be planets but too light to burn hydrogen like stars, about 6.5 light-years away. WANDERERS measured it moving 45 arcseconds between 2010 and 2026 (7.3 SPHEREx pixels). That is 2.83 arcseconds per year, within 1.6% of the published 2.78. Confidence is high. Two cautions: it is too faint in visible light for Gaia's main catalogue, so the comparison speed comes from a published study, and 75 of its 150 spectrum points are flagged.",
+ "qa": [
+  {
+   "q": "Why do we think this is what the card says?",
+   "a": "It moved 45 arcseconds between 2010 and 2026, about 2.83 arcseconds per year. That is within 1.6% of the published 2.78. A fast motion that matches the catalogue this closely is strong evidence that it's Luhman 16. It isn't in Gaia's main catalogue because it's too cold and faint in visible light, so the reference values come from published papers. One caution: 75 of the 150 spectrum points are flagged."
+  },
+  {
+   "q": "What would make you less sure?",
+   "a": "Half of the 150 spectrum points (75) are flagged, so the shape of the spectrum is shaky. Gaia has no counterpart for this object, so the reference motion comes from a 2017 paper. Luhman 16 is two brown dwarfs that blur together in SPHEREx's large pixels, and their orbit can shift the blended position. I would also trust the match less if the measured speed were further from the catalogue's 2.78\u2033/yr than the current 1.6%."
+  },
+  {
+   "q": "Why use both WISE and SPHEREx?",
+   "a": "WISE photographed this patch of sky in 2010, and SPHEREx photographed it in 2025 and 2026, so the two are 16 years apart. Over that time Luhman 16 moved 45 arcseconds, about 7.3 SPHEREx pixels, which is enough to measure its speed: 2.83 arcseconds per year. SPHEREx's own visits span only about one year, which is less than half a pixel of motion. SPHEREx also gives a 150-point spectrum, but 75 of those points are flagged."
+  }
+ ],
+ "model_note": "Written by Claude (Claude Code, headless) from target.json only."
+}

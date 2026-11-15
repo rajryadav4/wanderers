@@ -1,0 +1,18 @@
+{
+ "summary": "Wolf 359 is a small, dim red dwarf star about 7.9 light-years away, one of our closest neighbors. WANDERERS compared an image from 2010 with SPHEREx images from 2026 and saw the star move 75 arcseconds, about 12 SPHEREx pixels. That works out to 4.72 arcseconds per year, within 0.2 percent of the speed listed in the Gaia catalogue. All three checks passed, so confidence is high. One caveat: SPHEREx flagged 59 of its 60 measurements because the star is too bright for its detector, so there is no reliable spectrum.",
+ "qa": [
+  {
+   "q": "Why do we think this is what the card says?",
+   "a": "Between 2010 and 2026 it shifted 75 arcseconds, about 12 SPHEREx pixels. That's 4.72 arcseconds per year, matching Gaia DR3's catalogue speed within 0.2 percent. Gaia's parallax of 415 milliarcseconds puts it 7.9 light-years away, and nearby stars typically show the fastest sky motion. One caveat: 59 of 60 SPHEREx measurements are flagged because it's too bright, so there's no reliable spectrum."
+  },
+  {
+   "q": "What would make you less sure?",
+   "a": "A few things could shake my confidence. Wolf 359 is so bright for SPHEREx that 59 of 60 measurements are flagged for overflow or bloom. A saturated star image can blur or smear, so its measured center could be a little off. I'd also worry if the 1.96\u2033 Gaia match was really a neighbouring star, or if the measured 4.72\u2033/yr speed stopped agreeing with Gaia's."
+  },
+  {
+   "q": "Why use both WISE and SPHEREx?",
+   "a": "Time is the key. WISE photographed this sky around 2010 and SPHEREx in 2025 and 2026, giving about 16 years of baseline. Wolf 359 moved 75 arcseconds in that time, about 12 SPHEREx pixels, so its motion is easy to measure, and the speed matches Gaia. SPHEREx alone covers only about a year. Note that 59 of 60 SPHEREx measurements are flagged as too bright, so no reliable spectrum exists."
+  }
+ ],
+ "model_note": "Written by Claude (Claude Code, headless) from target.json only."
+}

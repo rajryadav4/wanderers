@@ -1,0 +1,18 @@
+{
+ "summary": "61 Cygni is a pair of orange dwarf stars. In 1838 it became the first star to have its distance measured, and Gaia's parallax puts it about 11 light-years away. WANDERERS saw it move 86 arcseconds between 2010 and 2026. That is 5.38 arcseconds per year, within 1.8% of Gaia's 5.28, so confidence is high. There are caveats. The Gaia match sits 5 arcseconds from the typed position, and the star is too bright for SPHEREx. All 60 measurements are flagged and there is no spectrum. The brightness looked steady (+0.05 \u00b1 0.19 mag), but that comes from the star's outer glow.",
+ "qa": [
+  {
+   "q": "Why do we think this is what the card says?",
+   "a": "It moved 86 arcseconds across the sky between 2010 and 2026, about 5.38 arcseconds per year. That is within 1.8% of Gaia's catalogue speed of 5.28. Gaia's large parallax, 286 milliarcseconds, puts it about 11 light-years away. Two caveats: the Gaia match sits 5 arcseconds from the typed position, and every SPHEREx measurement is flagged as too bright, so there's no reliable spectrum."
+  },
+  {
+   "q": "What would make you less sure?",
+   "a": "A few things already give me pause. The nearest Gaia star sits 5.0 arcseconds from the typed position, and because 61 Cygni is a pair, we may be measuring blended light from both stars. All 60 SPHEREx points are flagged as too bright, so the saturated core limits precision. And the +0.05 magnitude change is much smaller than its \u00b10.19 uncertainty, so \"steady brightness\" is only weakly tested."
+  },
+  {
+   "q": "Why use both WISE and SPHEREx?",
+   "a": "WISE photographed this sky in 2010 and SPHEREx in 2026. That 16-year gap is what matters: 61 Cygni moved 86 arcseconds, about 14 SPHEREx pixels. SPHEREx's own visits cover only about a year, so they show much less motion. Comparing the two images gives 5.38 arcseconds per year, within 1.8% of Gaia's 5.28. One caveat: the star is too bright for SPHEREx, so all 60 measurements are flagged."
+  }
+ ],
+ "model_note": "Written by Claude (Claude Code, headless) from target.json only."
+}
