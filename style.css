@@ -10,9 +10,11 @@ h1, h2, h3 { margin: 0; }
 .mono { font-family: var(--f-mono); font-size: .82rem; }
 .panel-k { font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 6px; }
 .panel-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-.obs button { font: 500 .86rem/1.2 var(--f-ui); color: var(--text); background: var(--surface); border: 1px solid var(--line-strong);
+/* :where() keeps the specificity; Aladin Lite's own buttons (zoom, fullscreen) keep Aladin's look in the Day theme */
+.obs button:not(:where(.aladin button)) { font: 500 .86rem/1.2 var(--f-ui); color: var(--text); background: var(--surface); border: 1px solid var(--line-strong);
   border-radius: 4px; padding: 7px 12px; cursor: pointer; transition: border-color .2s, background-color .2s, color .2s; }
-.obs button:hover { border-color: var(--accent); }
+.obs button:not(:where(.aladin button)):hover { border-color: var(--accent); }
+.obs [hidden] { display: none !important; }   /* hidden wins over display: grid/flex (e.g. #lamWrap when AllWISE is picked) */
 .obs button.on { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
 .obs .theme-toggle { padding: 0; }
 .obs .theme-toggle:hover { border-color: var(--line-strong); }
@@ -288,6 +290,7 @@ body.stars-mode #tName, body.stars-mode #tKind { visibility: hidden; }
 .tools { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-top: 10px; font-size: .85rem; color: var(--muted); }
 .tools select { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 3px 4px; max-width: 130px; }
 .tools input[type=range] { width: 90px; accent-color: var(--accent); vertical-align: middle; }
+@media (max-width: 520px) { .tools select:not(#mOp) { max-width: 175px; } }   /* phones: the frame names fit ("SPHEREx 22 Mar 2026") */
 .tools button[aria-pressed=true] { background: var(--accent); color: var(--bg, #04121f); }
 .meta { margin-top: 10px; font-size: .85rem; }
 .meta summary { cursor: pointer; color: var(--accent); }
