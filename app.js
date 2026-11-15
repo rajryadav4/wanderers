@@ -49,6 +49,13 @@
     history.replaceState(null, "", url);
     await preload();
     setupSlider(); initMix(true); renderMeta(); setAladin(); draw(); evidence(); spectrum();
+    // starquakes for the five challenge targets (typed-in fields have no star parameters, so no widget)
+    if (window.StarquakeUI) {
+      const qk = id === "barnard" ? "hip87937" : "wanderers_" + id;
+      fetch("data/starquake_stars.json").then((r) => r.json()).then((info) => {
+        if (info[qk]) StarquakeUI.mount($("targetQuake"), { key: qk, row: null, title: t.name }); else $("targetQuake").hidden = true;
+      }).catch(() => { $("targetQuake").hidden = true; });
+    }
     if (MAP.ready) mapGoTo();
     $("answer").textContent = "";
   }

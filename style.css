@@ -236,3 +236,19 @@ body.stars-mode #tName, body.stars-mode #tKind { visibility: hidden; }
 .lr-warn { color: var(--cand); padding-left: 18px; margin: 4px 0; }
 .lr-warn:empty { display: none; }
 @media (max-width: 900px) { .lr-grid { grid-template-columns: 1fr; } }
+
+/* ---- Starquakes ---- */
+.quake { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--line); }
+.quake h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 6px; }
+.quake p { margin: 4px 0; }
+.q-btns, .q-cmp-row { display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 8px 0; }
+.q-comb { width: 100%; height: auto; display: block; margin: 6px 0 2px; }
+.q-comb .q-axis { stroke: var(--line-strong); }
+.q-comb line.q-l0 { stroke: var(--accent); stroke-width: 2; }
+.q-comb line.q-l1 { stroke: var(--known); stroke-width: 2; }
+.q-comb line.q-l2 { stroke: var(--cand); stroke-width: 2; }
+.q-comb .q-psd { fill: none; stroke: var(--known); stroke-width: 1.2; }
+.q-comb text { fill: var(--muted); font: 10px var(--f-mono, ui-monospace, monospace); }
+.q-comb text.q-hz { fill: var(--accent); }
+.q-cmp summary { cursor: pointer; color: var(--muted); font-size: .85rem; }
+.q-comb tspan.q-t0 { fill: var(--accent); } .q-comb tspan.q-t1 { fill: var(--known); } .q-comb tspan.q-t2 { fill: var(--cand); }

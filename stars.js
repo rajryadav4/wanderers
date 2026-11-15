@@ -65,6 +65,7 @@
     DB.cur = s; DB.hits = []; renderHits(); $("starQ").value = s.name;
     const url = new URL(location); url.searchParams.set("star", key); history.replaceState(null, "", url);
     renderDetail(s);
+    if (window.StarquakeUI) StarquakeUI.mount($("starQuake"), { key, row: s });
     $("starPred").hidden = true; $("starPredMsg").innerHTML = "";
     if (DB.ready.has(key)) return showPred(await fetch(`data/stars/pred/${key}.json`).then((r) => r.json()));
     if (window.LongRange) LongRange.show(null, s, DB.stars);      // catalogue values until a path is learnt
