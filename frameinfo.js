@@ -22,7 +22,7 @@
   function frameRow(f) {
     const spherex = f.mission === "SPHEREx";
     let seen, tone;
-    if (typeof f.detected === "boolean") { seen = f.detected ? "seen" : "not detected"; tone = f.detected ? "ok" : "warn"; }
+    if (typeof f.detected === "boolean") { seen = f.detected ? (f.saturated_core ? "seen (saturated)" : "seen") : "not detected"; tone = f.detected ? "ok" : "warn"; }
     else { seen = "not measured"; tone = "mute"; }
     return {
       label: f.label,

@@ -221,7 +221,7 @@
       }
     }
     g.setTransform(1, 0, 0, 1, 0, 0);
-    const seen = f && f.detected === false ? " · not detected at this wavelength" : "";
+    const seen = f && f.detected === false ? " · not detected at this wavelength" : f && f.saturated_core ? " · saturated (too bright for this camera)" : "";
     const lbl = S.math ? S.math.label : diff ? "Difference: SPHEREx 2026 − 2025 (green = now, pink = before)" : mixed ? S.mixOut.label : f ? `${f.label} · ${labelOf(S.ch)}${seen}` : "";
     $("stamp").textContent = lbl;
     $("frameLbl").textContent = mixed ? "" : f ? `${S.i + 1}/${fr.length} · ${f.year.toFixed(1)}${fr.length === 1 ? " · only one frame here" : ""}` : "";
