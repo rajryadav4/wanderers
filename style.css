@@ -392,3 +392,7 @@ p.pv-dim { font-size: .8rem; }
 }
 .q-comb text { font-size: 13px; }
 @media (max-width: 720px) { .q-comb text { font-size: 16px; } }
+/* Star database tab: only star content (the field's mover search and the target title belong to the time-lapse) */
+body.stars-mode #changes, body.stars-mode #tName, body.stars-mode #tKind { display: none !important; }
+#starSuggest .chips-row { display: block; margin: 6px 0; line-height: 2.1; }
+#starSuggest .chips-row > b { margin-right: 4px; }

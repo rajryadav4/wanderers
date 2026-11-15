@@ -105,7 +105,8 @@
     await Promise.all([loadInfo(), loadModels()]);
     if (el.dataset.uid !== String(me)) return;           // a newer star was chosen meanwhile
     // use the star's measured profile (Gaia / Hypatia) when the catalogue would otherwise be the only source
-    const prof = await fetch(`data/stars/profile/${key}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+    const prof = window.StarProfile && StarProfile.load ? await StarProfile.load(key).catch(() => null)
+      : await fetch(`data/stars/profile/${key}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
     if (el.dataset.uid !== String(me)) return;
     const info = Q.withProfile(INFO[key] || null, prof), d = Q.describe(info, row);
     const [chip, cls, kindText] = KIND[d.kind];
