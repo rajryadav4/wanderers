@@ -81,7 +81,7 @@
       <text x="8" y="16" class="pv-title">${esc(opts.title)}</text>
       <text x="${W - 8}" y="16" text-anchor="end" class="pv-dim">N ↑ E ←</text>
       ${band}<path d="${line(past)}" class="pv-past"/><path d="${line(fut)}" class="pv-future"/>${marks}
-      <circle cx="${X(nowP).toFixed(1)}" cy="${Y(nowP).toFixed(1)}" r="5" class="pv-now"/>
+      <circle cx="${X(xy.find((p) => p.year === nowP.year)).toFixed(1)}" cy="${Y(xy.find((p) => p.year === nowP.year)).toFixed(1)}" r="5" class="pv-now"/>
       <line x1="10" x2="${(10 + bar).toFixed(1)}" y1="${H - 10}" y2="${H - 10}" class="pv-axis"/>
       <text x="${(14 + bar).toFixed(1)}" y="${H - 6}" class="pv-dim">${esc(ang(scaleAs))}</text></svg>`;
   }
