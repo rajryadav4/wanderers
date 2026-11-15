@@ -2,7 +2,7 @@
  * If served by server.js (local demo), "Ask WANDERERS" also takes free-text questions answered live by Claude. */
 (() => {
   const $ = (id) => document.getElementById(id);
-  const S = { list: [], t: null, ex: null, ch: "w2", i: 0, playing: false, timer: null, imgs: {}, live: false,
+  const S = { list: [], t: null, ex: null, ch: "w2", lastDet: "d1", i: 0, playing: false, timer: null, imgs: {}, live: false,
     mix: { mode: "single", a: 0, b: 0, set: new Set(), smooth: true, th: 0.6 }, lum: {}, mixOut: null, mixUrlDone: false };
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -94,6 +94,7 @@
     $("pathNote").textContent = StarPath.summary(tr); $("pathNote").hidden = !tr;
     const hasFrames = (c) => Object.hasOwn(t.frames, c) && Array.isArray(t.frames[c]) && t.frames[c].length > 0;
     $("tPath").parentElement.hidden = !tr; S.ch = ch && hasFrames(ch) ? ch : (hasFrames("w2") ? "w2" : "w1");
+    if (FrameInfo.detectorMode(S.ch) === "individual") S.lastDet = S.ch;
     S.i = 0; S.imgs = {}; S.lum = {}; S.mixOut = null;
     $("targetList").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.id === id));
     $("tName").textContent = t.name;
@@ -226,6 +227,22 @@
     $("stamp").textContent = lbl;
     $("frameLbl").textContent = mixed ? "" : f ? `${S.i + 1}/${fr.length} · ${f.year.toFixed(1)}${fr.length === 1 ? " · only one frame here" : ""}` : "";
     document.querySelectorAll("#metaBody tr[data-i]").forEach((tr) => tr.classList.toggle("now", !diff && +tr.dataset.i === S.i));
+    renderFrameMeta(!!diff || !!mixed || !!S.math);
+  }
+
+  // ---------- this frame: mission, detector, wavelength, dates, flags and the quality verdict (frameinfo.js) ----------
+  function renderFrameMeta(computed) {
+    const v = $("fmVerdict"), m = computed ? null : FrameInfo.frameMeta(S.t, S.ch, S.i);
+    v.setAttribute("aria-live", S.playing ? "off" : "polite");          // no running commentary while the time-lapse plays
+    if (!m) {
+      v.className = "fm-verdict";
+      v.textContent = computed ? "A computed picture is on screen. Show one frame to see its observation details and data quality." : "";
+      $("fmChips").innerHTML = ""; return;
+    }
+    v.className = `fm-verdict v-${m.verdict.level}`;
+    v.innerHTML = `<span class="fm-badge">Data quality: ${esc(m.verdict.label)}</span> <span class="fm-why">${esc(m.verdict.reason)}</span>`;
+    $("fmChips").innerHTML = m.chips.map((c) => `<li class="t-${c.tone || "plain"}"${c.title ? ` title="${esc(c.title)}"` : ""}>` +
+      `<span class="fm-k">${esc(c.k)}</span> <span class="fm-v">${esc(c.v)}</span></li>`).join("");
   }
 
   // ---------- frame details and data flags (uses frameinfo.js) ----------
@@ -235,11 +252,12 @@
     const rows = d.rows.map((r, i) =>
       `<tr data-i="${i}"><th scope="row">${esc(r.label)}</th><td>${esc(r.epoch)}</td>` +
       `<td>${esc(r.source)}${r.images ? ` · ${r.images} image${r.images === 1 ? "" : "s"} stacked` : ""}</td>` +
-      `<td class="m-${r.tone}">${esc(r.seen)}${r.signal ? ` · ${esc(r.signal)}` : ""}</td></tr>`).join("");
+      `<td class="m-${r.tone}">${esc(r.seen)}${r.signal ? ` · ${esc(r.signal)}` : ""}</td>` +
+      `<td${r.verdict ? ` class="v-${r.verdict}"` : ""}>${r.verdict ? esc(r.verdictLabel) : "–"}</td></tr>`).join("");
     const bar = q.pct === null ? "" : `<div class="qbar" role="img" aria-label="${q.pct}% of SPHEREx measurements flagged"><i class="q-${q.level}" style="width:${q.pct}%"></i></div>`;
     const visits = d.visits.map((v) => `<li>Visit ${v.n}: around ${esc(v.epoch)}, ${v.images} images used</li>`).join("");
     $("metaBody").innerHTML =
-      `<table class="frames"><thead><tr><th>Frame</th><th>Year</th><th>Image</th><th>Object</th></tr></thead><tbody>${rows}</tbody></table>` +
+      `<table class="frames"><thead><tr><th>Frame</th><th>Year</th><th>Image</th><th>Object</th><th>Data quality</th></tr></thead><tbody>${rows}</tbody></table>` +
       `<h4>Data flags</h4>${bar}<p class="hint">${esc(q.text)}</p>` +
       `<p class="hint">A measurement is left out if pixels near the target are flagged for: ${esc(d.flagKinds.join(", "))}. ` +
       `This is the conservative set from the SPHEREx Explanatory Supplement. The flipbook pictures hide only broken detector pixels, so bright stars stay visible.</p>` +
@@ -270,7 +288,7 @@
       S.pick = S.pick === +b.dataset.n ? null : +b.dataset.n;
       $("chList").querySelectorAll("button").forEach((x) => { const on = +x.dataset.n === S.pick; x.classList.toggle("on", on); x.setAttribute("aria-pressed", on); });
       const u = new URL(location); if (S.pick) u.searchParams.set("pick", S.pick); else u.searchParams.delete("pick"); history.replaceState(null, "", u);
-      if (S.pick && S.ch !== "w2" && S.t.frames.w2 && S.t.frames.w2.length) document.querySelector('.channel button[data-ch="w2"]').click();
+      if (S.pick && S.ch !== "w2" && S.t.frames.w2 && S.t.frames.w2.length) pickChannel("w2");
       else draw();
     }));
     // Shareable: ?target=wise0855&pick=2 opens with that pair drawn.
@@ -280,21 +298,67 @@
       ? "The search did not find this mission's own target, so it also misses real movers. Treat an empty list as “nothing found”, not “nothing there”. " : "") +
       `${ch.method} ${ch.not_checked}`;
   }
-  const labelOf = (ch) => (S.t.channels && S.t.channels[ch]) || (ch === "w2" ? "4.6 µm" : "3.4 µm");
+  const labelOf = (ch) => (S.t.channels && S.t.channels[ch]) || (ch === "w2" ? "4.6 µm" : ch === "w1" ? "3.4 µm" : ch === FrameInfo.COMBINED ? "All 6 detectors combined" : ch);
 
-  // wavelength-matched channels + one co-added image per SPHEREx detector
+  // Wavelength-matched channels (3.4 and 4.6 µm, with WISE), then the SPHEREx detector switch:
+  // "Individual detectors" (pick D1-D6, one co-add per survey visit) or "Combined (all 6)". Each is a WAI-ARIA radio
+  // group: one tab stop, arrow keys move and select, and ?ch= in the address keeps the choice (d1..d6 or all).
   function renderChannels() {
-    const chs = Object.keys(S.t.frames).filter((c) => S.t.frames[c].length);
-    const main = chs.filter((c) => !c.startsWith("d")), dets = chs.filter((c) => c.startsWith("d"));
-    const btn = (c) => `<button data-ch="${c}" class="${c === S.ch ? "on" : ""}" role="radio" aria-checked="${c === S.ch}" title="${labelOf(c)}">` +
-      `${c.startsWith("d") ? "D" + c.slice(1) : labelOf(c)}</button>`;
-    $("channels").innerHTML = main.map(btn).join("") + (dets.length ? `<span class="sep">Detector co-adds:</span>${dets.map(btn).join("")}` : "");
+    const g = FrameInfo.channelGroups(S.t), sw = FrameInfo.switchState(S.t, S.ch, S.lastDet);
+    const radios = (items) => {
+      const any = items.some((x) => x.on);
+      return items.map((x, k) => `<button type="button" data-ch="${x.ch}" class="${x.on ? "on" : ""}" role="radio" aria-checked="${x.on}" ` +
+        `tabindex="${x.on || (!any && k === 0) ? 0 : -1}" title="${esc(x.title)}">${esc(x.label)}</button>`).join("");
+    };
+    $("channels").innerHTML = radios(g.wavelength.map((c) => ({ ch: c, label: labelOf(c), title: `${labelOf(c)}: SPHEREx matched in wavelength with WISE`, on: c === S.ch })));
+    $("channels").hidden = !g.wavelength.length;
+    $("detSwitch").hidden = !sw.show;
+    const mode = sw.mode, modes = [["detModeInd", "individual", sw.individual.available], ["detModeAll", "combined", sw.combined.available]];
+    for (const [id, m, ok] of modes) {
+      const on = mode === m, b = $(id);
+      b.setAttribute("aria-checked", String(on)); b.classList.toggle("on", on); b.disabled = !ok;
+      b.setAttribute("tabindex", on || (!mode && m === "individual") ? "0" : "-1");
+    }
+    $("detModeAll").title = sw.combined.available ? labelOf(FrameInfo.COMBINED) : "No visit here was seen by two or more detectors";
+    $("detPick").hidden = mode !== "individual";
+    $("detPick").innerHTML = radios(sw.picks.map((p) => ({ ch: p.ch, label: p.label, title: `Detector ${p.label.slice(1)}${p.range ? ` · ${p.range}` : ""}`, on: p.on })));
+    const note = mode === "combined" ? (S.t.combined && S.t.combined.method) || ""
+      : mode === "individual" ? `${labelOf(S.ch)}: one picture per survey visit, the median of this detector's images from that visit.` : "";
+    $("detNote").textContent = note; $("detNote").hidden = !note;
   }
-  $("channels").addEventListener("click", (e) => {
-    const b = e.target.closest("button[data-ch]"); if (!b) return;
-    S.ch = b.dataset.ch; S.i = Math.min(S.i, frames().length - 1); S.math = null; $("mOp").value = "off"; $("stackAll").setAttribute("aria-pressed", "false");
+  // Show a channel: the one place every channel button, the switch and the keyboard go through.
+  function pickChannel(ch, focusIn) {
+    if (!ch || !Object.hasOwn(S.t.frames, ch) || !Array.isArray(S.t.frames[ch]) || !S.t.frames[ch].length) return;
+    if (FrameInfo.detectorMode(ch) === "individual") S.lastDet = ch;
+    S.ch = ch; S.i = Math.max(0, Math.min(S.i, frames().length - 1)); S.math = null; $("mOp").value = "off"; $("stackAll").setAttribute("aria-pressed", "false");
     renderChannels(); setupSlider(); initMix(false); renderMeta(); renderMetaBox(); fillCompare(); draw();
     const url = new URL(location); url.searchParams.set("ch", S.ch); history.replaceState(null, "", url);
+    if (focusIn) { const b = focusIn.querySelector(`[data-ch="${ch}"]`) || focusIn.querySelector('[aria-checked="true"]'); if (b) b.focus(); }
+  }
+  const setDetMode = (mode, focus) => {
+    const sw = FrameInfo.switchState(S.t, S.ch, S.lastDet);
+    pickChannel(mode === "combined" ? sw.combined.channel : sw.individual.channel);
+    if (focus) $(mode === "combined" ? "detModeAll" : "detModeInd").focus();
+  };
+  for (const box of ["channels", "detPick"]) $(box).addEventListener("click", (e) => {
+    const b = e.target && e.target.closest && e.target.closest("button[data-ch]"); if (b) pickChannel(b.dataset.ch);
+  });
+  $("detModeInd").onclick = () => setDetMode("individual");
+  $("detModeAll").onclick = () => setDetMode("combined");
+  // Arrow keys, Home and End inside a radio group; preventDefault keeps them from also stepping the time-lapse.
+  $("channels").addEventListener("keydown", (e) => {
+    const next = FrameInfo.radioStep(FrameInfo.channelGroups(S.t).wavelength, S.ch, e.key);
+    if (next) { e.preventDefault(); pickChannel(next, $("channels")); }
+  });
+  $("detPick").addEventListener("keydown", (e) => {
+    const next = FrameInfo.radioStep(FrameInfo.channelGroups(S.t).detectors, S.ch, e.key);
+    if (next) { e.preventDefault(); pickChannel(next, $("detPick")); }
+  });
+  $("detMode").addEventListener("keydown", (e) => {
+    const sw = FrameInfo.switchState(S.t, S.ch, S.lastDet);
+    const ok = [sw.individual.available && "individual", sw.combined.available && "combined"].filter(Boolean);
+    const next = FrameInfo.radioStep(ok, sw.mode || "individual", e.key);
+    if (next) { e.preventDefault(); setDetMode(next, true); }
   });
 
   // ---------- add / subtract any two epochs, or stack every SPHEREx frame ----------
@@ -354,17 +418,36 @@
   if (new URLSearchParams(location.search).get("embed") === "1") document.body.classList.add("embed");
 
   // ---------- metadata: every SPHEREx image used, its wavelength at the target and contamination flags ----------
+  // Flags are shown by name with the meaning the FITS header gives them (hover or the legend below the table).
   function renderMetaBox() {
-    const m = S.t.metadata || [];
-    if (!m.length) { $("metaBox").innerHTML = "<p class='hint'>No per-image metadata for this target.</p>"; return; }
-    const flagged = m.filter((r) => r.flags_at_target.length).length, counts = {};
-    m.forEach((r) => r.flags_at_target.forEach((f) => (counts[f] = (counts[f] || 0) + 1)));
-    $("metaBox").innerHTML = `<p class="hint">${m.length} SPHEREx images (${(S.t.fov_arcsec / 60).toFixed(1)}′ field).
-      ${flagged} have flags inside the 3-pixel aperture at the target${Object.keys(counts).length ? ": " + Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([f, n]) => `${f} ×${n}`).join(", ") : ""}.
-      Flags follow the SPHEREx Explanatory Supplement; flagged images are left out of the spectrum.</p>
-      <div class="scroll"><table><thead><tr><th>Date (UTC)</th><th>Det.</th><th>λ at target</th><th>Flags at target</th><th>In spectrum</th></tr></thead><tbody>` +
-      m.map((r) => `<tr><td>${r.date}</td><td>D${r.detector}</td><td>${r.lam_um ?? "–"} µm</td><td class="${r.flags_at_target.length ? "flag" : ""}">${r.flags_at_target.join(", ") || "none"}</td><td>${r.used_in_spectrum ? "yes" : "no"}</td></tr>`).join("") +
-      "</tbody></table></div>";
+    const rows = FrameInfo.imageRows(S.t);
+    if (!rows.length) { $("metaBox").innerHTML = "<p class='hint'>No per-image metadata for this target.</p>"; return; }
+    const sum = FrameInfo.imageSummary(S.t), legend = FrameInfo.flagLegend(S.t), counts = {};
+    rows.forEach((r) => r.aperture.forEach((f) => (counts[f.name] = (counts[f.name] || 0) + 1)));
+    const chip = (f) => `<abbr class="fl ${f.bad ? "fl-bad" : "fl-note"}" title="${esc(f.desc || (f.bad ? "Makes a pixel unusable" : "Noted, not counted as bad"))}">${esc(f.name)}</abbr>`;
+    const flags = (L) => (L === null ? "–" : L.length ? L.map(chip).join(" ") : "none");
+    const yes = (v) => (v === null ? "–" : v ? "yes" : "no");
+    const fov = Number(S.t.fov_arcsec) ? ` (${(S.t.fov_arcsec / 60).toFixed(1)}′ field)` : "";
+    const verdicts = sum.assessed ? ` Verdicts: <b class="v-good">${sum.good} good</b>, <b class="v-caution">${sum.caution} caution</b>, <b class="v-poor">${sum.poor} poor</b>.` : "";
+    const legendRows = legend.map((f) => `<tr${f.images ? "" : ' class="idle"'}><th scope="row">${chip(f)}</th><td>${esc(f.desc || "–")}</td>` +
+      `<td>${f.bad ? "yes, left out of the spectrum" : f.info ? "no, information only" : "no"}${f.hidden ? "; hidden in the pictures" : ""}</td>` +
+      `<td>${f.images}${f.pixel === null ? "" : ` / ${f.pixel}`}</td></tr>`).join("");
+    const rules = Array.isArray(S.t.quality_rules) && S.t.quality_rules.length ? `<h4>How the verdict is decided</h4><ul class="rules">${S.t.quality_rules.map((r) => `<li>${esc(r)}</li>`).join("")}</ul>` : "";
+    $("metaBox").innerHTML = `<p class="hint">${sum.n} SPHEREx images${fov}.${verdicts}
+      ${rows.some((r) => r.saturated !== null) ? `${sum.saturated} saturated at the target pixel.` : ""} ${sum.withFlags} have flags within 3 pixels of the target${Object.keys(counts).length ? ": " + Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([f, n]) => `${esc(f)} ×${n}`).join(", ") : ""}.
+      ${sum.inSpectrum} are used in the spectrum. Flag names are the SPHEREx pipeline's (Explanatory Supplement); hover a flag for its meaning.</p>
+      <div class="scroll"><table class="img-t"><thead><tr><th>Date (UTC)</th><th>Det.</th><th>λ at target</th><th>Flags at target pixel</th><th>Flags within 3 px</th>` +
+      `<th>Saturated</th><th>Bad px</th><th>Verdict</th><th>In spectrum</th></tr></thead><tbody>` +
+      rows.map((r) => `<tr><td>${esc(r.date)}</td><td>${esc(r.det)}</td><td>${esc(r.lam)}</td><td>${flags(r.pixel)}</td>` +
+        `<td class="${r.aperture.length ? "flag" : ""}">${flags(r.aperture)}</td><td${r.saturated ? ' class="v-poor"' : ""}>${yes(r.saturated)}</td>` +
+        `<td>${esc(r.badPx || "–")}</td><td${r.verdict ? ` class="v-${r.verdict}" title="${esc(r.reason)}"` : ""}>${esc(r.verdictLabel || "–")}</td>` +
+        `<td>${r.inSpectrum ? "yes" : "no"}</td></tr>`).join("") +
+      `</tbody></table></div>` +
+      `<h4>What the flags mean</h4><p class="hint">Meanings as written in each image's FITS header (FLAGS extension). ` +
+      `“Bad” flags are the conservative set from the SPHEREx Explanatory Supplement that IRSA's source-discovery tutorial uses. ` +
+      `Last column: images with the flag within 3 pixels of the target / at the target pixel.</p>` +
+      `<div class="scroll"><table class="legend-t"><thead><tr><th>Flag</th><th>Meaning</th><th>Counts as bad</th><th>Images</th></tr></thead><tbody>${legendRows}</tbody></table></div>` +
+      rules;
   }
 
   // ---------- add / subtract frames (uses framemath.js) ----------
@@ -477,7 +560,7 @@
     S.playing = true; $("play").textContent = "❚❚ Pause";
     S.timer = setInterval(step, reduceMotion ? 1500 : 600);
   }
-  function stop() { S.playing = false; clearInterval(S.timer); $("play").textContent = "▶ Blink"; }
+  function stop() { S.playing = false; clearInterval(S.timer); $("play").textContent = "▶ Blink"; $("fmVerdict").setAttribute("aria-live", "polite"); }
 
   $("play").onclick = play;
   $("frame").oninput = (e) => { stop(); S.i = +e.target.value; draw(); };
@@ -485,6 +568,7 @@
 
   document.addEventListener("keydown", (e) => {
     const el = e.target;
+    if (e.defaultPrevented) return;                                                              // a radio group (channel switch) used the key
     if (e.altKey || e.ctrlKey || e.metaKey || $("flipView").hidden) return;                   // browser shortcuts; another tab is showing
     if (/^(INPUT|SELECT|TEXTAREA)$/.test(el.tagName) || el.isContentEditable) return;          // the control's own keys
     if (e.key === " " && el.closest && el.closest("button, a, summary")) return;              // Space presses the focused button

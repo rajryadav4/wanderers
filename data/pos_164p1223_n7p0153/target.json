@@ -30,7 +30,34 @@
     "mission": "WISE",
     "png": "w2_wise2010.png",
     "detected": true,
-    "snr": 449.2
+    "snr": 449.2,
+    "obs": {
+     "mission": "WISE",
+     "instrument": "WISE W2 band \u00b7 AllWISE atlas image",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2010-05-28 15:20",
+     "end": "2010-12-07 12:56",
+     "time_note": "earliest and latest WISE frame of this atlas tile, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 0,
+     "aperture_px": 27,
+     "bad_px_worst": 0,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "good",
+     "reason": "No blank pixel within 3 pixels of the target. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2014.4102001368926,
@@ -40,7 +67,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2014-05-30 19:48",
+     "end": "2014-05-30 19:48",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 11,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2014.9302069815194,
@@ -50,7 +104,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 578.9,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2014-12-06 18:11",
+     "end": "2014-12-06 18:11",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 15,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2015.396911430527,
@@ -60,7 +141,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 587.7,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2015-05-26 05:19",
+     "end": "2015-05-26 05:19",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 11,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2015.92911321013,
@@ -70,7 +178,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 542.2,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2015-12-06 14:36",
+     "end": "2015-12-06 14:36",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 11,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2016.383436550308,
@@ -80,7 +215,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2016-05-20 13:12",
+     "end": "2016-05-20 13:12",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 14,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2016.9263906913072,
@@ -90,7 +252,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 886.7,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2016-12-04 20:44",
+     "end": "2016-12-04 20:44",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 8,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2017.3704013689253,
@@ -100,7 +289,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 945.0,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2017-05-16 00:56",
+     "end": "2017-05-16 00:56",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 4,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2017.9245056810403,
@@ -110,7 +326,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 528.0,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2017-12-04 10:13",
+     "end": "2017-12-04 10:13",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 14,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2018.3575279945244,
@@ -120,7 +363,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2018-05-11 14:05",
+     "end": "2018-05-11 14:05",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 16,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2018.9282557152635,
@@ -130,7 +400,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 655.0,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2018-12-06 01:05",
+     "end": "2018-12-06 01:05",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 5,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2019.35558329911,
@@ -140,7 +437,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 611.3,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2019-05-11 03:02",
+     "end": "2019-05-11 03:02",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 6,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2019.9255600273784,
@@ -150,7 +474,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 568.2,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2019-12-05 07:27",
+     "end": "2019-12-05 07:27",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 11,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2020.3592572210814,
@@ -160,7 +511,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 438.4,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2020-05-11 17:14",
+     "end": "2020-05-11 17:14",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 10,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2020.9237434633812,
@@ -170,7 +548,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 698.8,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2020-12-03 21:32",
+     "end": "2020-12-03 21:32",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 6,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2021.3565752224504,
@@ -180,7 +585,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 388.7,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2021-05-10 23:44",
+     "end": "2021-05-10 23:44",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 11,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2021.9276511978096,
@@ -190,7 +622,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 785.3,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2021-12-05 13:47",
+     "end": "2021-12-05 13:47",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 2,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2022.3581853524984,
@@ -199,7 +658,34 @@
     "png": "w2_neowise_16.png",
     "n_images": 10,
     "detected": true,
-    "snr": 798.3
+    "snr": 798.3,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2022-05-11 19:51",
+     "end": "2022-05-11 19:51",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 0,
+     "aperture_px": 27,
+     "bad_px_worst": 0,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "good",
+     "reason": "No blank pixel within 3 pixels of the target. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2022.924500479124,
@@ -209,7 +695,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 619.9,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2022-12-04 16:10",
+     "end": "2022-12-04 16:10",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 10,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2023.3586702258726,
@@ -219,7 +732,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 640.2,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2023-05-12 06:06",
+     "end": "2023-05-12 06:06",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 2,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2023.925829158111,
@@ -229,7 +769,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 700.3,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2023-12-05 09:49",
+     "end": "2023-12-05 09:49",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 7,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2024.3565976728269,
@@ -239,7 +806,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 591.8,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2024-05-10 17:56",
+     "end": "2024-05-10 17:56",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 7,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2025.3247892796796,
@@ -248,7 +842,46 @@
     "png": "w2_spherex_v1_1.png",
     "n_images": 3,
     "survey": 1,
-    "detected": true
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.524,
+      4.899
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-04-28 23:15",
+     "end": "2025-04-30 03:05",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 3,
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 3
+     },
+     "n_saturated": 3,
+     "aperture_px": 29,
+     "bad_px_worst": 2,
+     "images_with_bad_px": 3,
+     "n_poor": 3,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "3 of 3 images are unusable at the target (3 saturated)."
+    }
    },
    {
     "year": 2025.3331564560904,
@@ -257,7 +890,43 @@
     "png": "w2_spherex_v1_2.png",
     "n_images": 1,
     "survey": 1,
-    "detected": true
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.657,
+      4.657
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-05-02 10:26",
+     "end": "2025-05-02 10:26",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 29,
+     "bad_px_worst": 1,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The pixel at the target is saturated (OVERFLOW flag)."
+    }
    },
    {
     "year": 2025.4289496305078,
@@ -266,7 +935,43 @@
     "png": "w2_spherex_v1_3.png",
     "n_images": 1,
     "survey": 1,
-    "detected": true
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D5 (MWIR array)",
+     "detectors": [
+      5
+     ],
+     "band_um": [
+      3.83,
+      4.41
+     ],
+     "lam_um": [
+      4.404,
+      4.404
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-06-06 10:10",
+     "end": "2025-06-06 10:10",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 29,
+     "bad_px_worst": 2,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The pixel at the target is saturated (OVERFLOW flag)."
+    }
    },
    {
     "year": 2025.930719527987,
@@ -275,7 +980,44 @@
     "png": "w2_spherex_v2_1.png",
     "n_images": 3,
     "survey": 2,
-    "detected": true
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.511,
+      4.957
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-12-05 15:12",
+     "end": "2025-12-07 09:31",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 2,
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {},
+     "n_saturated": 0,
+     "aperture_px": 28,
+     "bad_px_worst": 2,
+     "images_with_bad_px": 2,
+     "n_poor": 0,
+     "n_dqa_fail": 0,
+     "verdict": "caution",
+     "reason": "2 of 3 images have flagged or blank pixels within 3 pixels of the target."
+    }
    },
    {
     "year": 2025.951505218608,
@@ -284,7 +1026,45 @@
     "png": "w2_spherex_v2_2.png",
     "n_images": 2,
     "survey": 2,
-    "detected": true
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.627,
+      4.831
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-12-14 06:02",
+     "end": "2025-12-14 07:45",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1,
+      "NONFUNC": 1,
+      "HALO": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 28,
+     "bad_px_worst": 2,
+     "images_with_bad_px": 2,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "1 of 2 images is unusable at the target (1 saturated)."
+    }
    },
    {
     "year": 2026.376793695521,
@@ -293,7 +1073,43 @@
     "png": "w2_spherex_v3.png",
     "n_images": 1,
     "detected": true,
-    "snr": 2632.9
+    "snr": 2632.9,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.574,
+      4.574
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-18 14:58",
+     "end": "2026-05-18 14:58",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 29,
+     "bad_px_worst": 2,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The pixel at the target is saturated (OVERFLOW flag)."
+    }
    }
   ],
   "w1": [
@@ -303,7 +1119,34 @@
     "mission": "WISE",
     "png": "w1_wise2010.png",
     "detected": true,
-    "snr": 93.6
+    "snr": 93.6,
+    "obs": {
+     "mission": "WISE",
+     "instrument": "WISE W1 band \u00b7 AllWISE atlas image",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2010-05-28 15:20",
+     "end": "2010-12-07 12:56",
+     "time_note": "earliest and latest WISE frame of this atlas tile, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 0,
+     "aperture_px": 27,
+     "bad_px_worst": 0,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "good",
+     "reason": "No blank pixel within 3 pixels of the target. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2014.4102001368926,
@@ -313,7 +1156,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2014-05-30 19:48",
+     "end": "2014-05-30 19:48",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 19,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2014.9302069815194,
@@ -323,7 +1193,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2014-12-06 18:11",
+     "end": "2014-12-06 18:11",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2015.396911430527,
@@ -333,7 +1230,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2015-05-26 05:19",
+     "end": "2015-05-26 05:19",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 21,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2015.92911321013,
@@ -343,7 +1267,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2015-12-06 14:36",
+     "end": "2015-12-06 14:36",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2016.383436550308,
@@ -353,7 +1304,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2016-05-20 13:12",
+     "end": "2016-05-20 13:12",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 22,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2016.9263906913072,
@@ -363,7 +1341,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2016-12-04 20:44",
+     "end": "2016-12-04 20:44",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 22,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2017.3704013689253,
@@ -373,7 +1378,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2017-05-16 00:56",
+     "end": "2017-05-16 00:56",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2017.9245056810403,
@@ -383,7 +1415,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2017-12-04 10:13",
+     "end": "2017-12-04 10:13",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 21,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2018.3575279945244,
@@ -393,7 +1452,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2018-05-11 14:05",
+     "end": "2018-05-11 14:05",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 23,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2018.9282557152635,
@@ -403,7 +1489,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2018-12-06 01:05",
+     "end": "2018-12-06 01:05",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 19,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2019.35558329911,
@@ -413,7 +1526,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2019-05-11 03:02",
+     "end": "2019-05-11 03:02",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 22,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2019.9255600273784,
@@ -423,7 +1563,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2019-12-05 07:27",
+     "end": "2019-12-05 07:27",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2020.3592572210814,
@@ -433,7 +1600,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2020-05-11 17:14",
+     "end": "2020-05-11 17:14",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 21,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2020.9237434633812,
@@ -443,7 +1637,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2020-12-03 21:32",
+     "end": "2020-12-03 21:32",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 19,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2021.3565752224504,
@@ -453,7 +1674,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2021-05-10 23:44",
+     "end": "2021-05-10 23:44",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2021.9276511978096,
@@ -463,7 +1711,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2021-12-05 13:47",
+     "end": "2021-12-05 13:47",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 21,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2022.3581853524984,
@@ -473,7 +1748,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2022-05-11 19:51",
+     "end": "2022-05-11 19:51",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 17,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2022.924500479124,
@@ -483,7 +1785,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2022-12-04 16:10",
+     "end": "2022-12-04 16:10",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 18,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2023.3586702258726,
@@ -493,7 +1822,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2023-05-12 06:06",
+     "end": "2023-05-12 06:06",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 19,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2023.925829158111,
@@ -503,7 +1859,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 267.3,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2023-12-05 09:49",
+     "end": "2023-12-05 09:49",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2024.3565976728269,
@@ -513,7 +1896,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2024-05-10 17:56",
+     "end": "2024-05-10 17:56",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 19,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2025.3770597167008,
@@ -522,7 +1932,47 @@
     "png": "w1_spherex_v1.png",
     "n_images": 1,
     "detected": true,
-    "snr": 3205.3
+    "snr": 3205.3,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      3.288,
+      3.288
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-05-18 11:18",
+     "end": "2025-05-18 11:18",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1,
+      "BLOOM": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 28,
+     "bad_px_worst": 25,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The pixel at the target is saturated (OVERFLOW flag)."
+    }
    },
    {
     "year": 2025.9138583126653,
@@ -531,7 +1981,49 @@
     "png": "w1_spherex_v2_1.png",
     "n_images": 1,
     "survey": 2,
-    "detected": true
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      3.095,
+      3.095
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-11-30 12:52",
+     "end": "2025-11-30 12:52",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "TRANSIENT": 1,
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 28,
+     "bad_px_worst": 20,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The pixel at the target is saturated (OVERFLOW flag)."
+    }
    },
    {
     "year": 2025.9207473631623,
@@ -540,7 +2032,49 @@
     "png": "w1_spherex_v2_2.png",
     "n_images": 1,
     "survey": 2,
-    "detected": true
+    "detected": true,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      3.539,
+      3.539
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-12-03 01:16",
+     "end": "2025-12-03 01:16",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "TRANSIENT": 1,
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 28,
+     "bad_px_worst": 24,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The pixel at the target is saturated (OVERFLOW flag)."
+    }
    }
   ],
   "d1": [
@@ -549,21 +2083,149 @@
     "label": "SPHEREx May 2025",
     "mission": "SPHEREx",
     "png": "d1_spherex_v1.png",
-    "n_images": 4
+    "n_images": 4,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D1 (SWIR array)",
+     "detectors": [
+      1
+     ],
+     "band_um": [
+      0.75,
+      1.09
+     ],
+     "lam_um": [
+      0.771,
+      1.046
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-05-09 23:25",
+     "end": "2025-06-06 21:35",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 4,
+      "SUR_ERROR": 3,
+      "HALO": 1,
+      "OVERFLOW": 3,
+      "BLOOM": 3,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "HALO": 1,
+      "OVERFLOW": 3,
+      "BLOOM": 3
+     },
+     "n_saturated": 3,
+     "aperture_px": 27,
+     "bad_px_worst": 16,
+     "images_with_bad_px": 4,
+     "n_poor": 4,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "4 of 4 images are unusable at the target (3 saturated, 1 flagged)."
+    }
    },
    {
     "year": 2025.9145121133024,
     "label": "SPHEREx Nov 2025",
     "mission": "SPHEREx",
     "png": "d1_spherex_v2.png",
-    "n_images": 4
+    "n_images": 4,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D1 (SWIR array)",
+     "detectors": [
+      1
+     ],
+     "band_um": [
+      0.75,
+      1.09
+     ],
+     "lam_um": [
+      0.767,
+      1.016
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-11-29 04:23",
+     "end": "2025-12-03 01:14",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 4,
+      "TRANSIENT": 3,
+      "PERSIST": 1,
+      "BLOOM": 3,
+      "SUR_ERROR": 2
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 3,
+      "BLOOM": 3,
+      "TRANSIENT": 2,
+      "SUR_ERROR": 2
+     },
+     "n_saturated": 3,
+     "aperture_px": 28,
+     "bad_px_worst": 16,
+     "images_with_bad_px": 4,
+     "n_poor": 4,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "4 of 4 images are unusable at the target (3 saturated, 1 flagged)."
+    }
    },
    {
     "year": 2026.3769779353074,
     "label": "SPHEREx May 2026",
     "mission": "SPHEREx",
     "png": "d1_spherex_v3.png",
-    "n_images": 2
+    "n_images": 2,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D1 (SWIR array)",
+     "detectors": [
+      1
+     ],
+     "band_um": [
+      0.75,
+      1.09
+     ],
+     "lam_um": [
+      0.799,
+      0.898
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-15 23:23",
+     "end": "2026-05-21 09:47",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 2,
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 2,
+      "BLOOM": 1
+     },
+     "n_saturated": 2,
+     "aperture_px": 28,
+     "bad_px_worst": 8,
+     "images_with_bad_px": 2,
+     "n_poor": 2,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "2 of 2 images are unusable at the target (2 saturated)."
+    }
    }
   ],
   "d2": [
@@ -572,21 +2234,146 @@
     "label": "SPHEREx May 2025",
     "mission": "SPHEREx",
     "png": "d2_spherex_v1.png",
-    "n_images": 4
+    "n_images": 4,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D2 (SWIR array)",
+     "detectors": [
+      2
+     ],
+     "band_um": [
+      1.1,
+      1.62
+     ],
+     "lam_um": [
+      1.139,
+      1.626
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-05-02 13:40",
+     "end": "2025-06-06 10:10",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 4,
+      "OVERFLOW": 4,
+      "SUR_ERROR": 4,
+      "BLOOM": 4
+     },
+     "pixel_flag_counts": {
+      "TRANSIENT": 1,
+      "SUR_ERROR": 3,
+      "BLOOM": 4,
+      "OVERFLOW": 3
+     },
+     "n_saturated": 3,
+     "aperture_px": 28,
+     "bad_px_worst": 24,
+     "images_with_bad_px": 4,
+     "n_poor": 4,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "4 of 4 images are unusable at the target (3 saturated, 1 flagged)."
+    }
    },
    {
     "year": 2025.9218984848817,
     "label": "SPHEREx Dec 2025",
     "mission": "SPHEREx",
     "png": "d2_spherex_v2.png",
-    "n_images": 4
+    "n_images": 4,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D2 (SWIR array)",
+     "detectors": [
+      2
+     ],
+     "band_um": [
+      1.1,
+      1.62
+     ],
+     "lam_um": [
+      1.132,
+      1.503
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-12-02 17:07",
+     "end": "2025-12-04 01:37",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 4,
+      "OVERFLOW": 4,
+      "SUR_ERROR": 4,
+      "BLOOM": 4
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 3,
+      "BLOOM": 4,
+      "SUR_ERROR": 3,
+      "TRANSIENT": 1
+     },
+     "n_saturated": 3,
+     "aperture_px": 30,
+     "bad_px_worst": 22,
+     "images_with_bad_px": 4,
+     "n_poor": 4,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "4 of 4 images are unusable at the target (3 saturated, 1 flagged)."
+    }
    },
    {
     "year": 2026.3873866577385,
     "label": "SPHEREx May 2026",
     "mission": "SPHEREx",
     "png": "d2_spherex_v3.png",
-    "n_images": 2
+    "n_images": 2,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D2 (SWIR array)",
+     "detectors": [
+      2
+     ],
+     "band_um": [
+      1.1,
+      1.62
+     ],
+     "lam_um": [
+      1.182,
+      1.33
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-17 07:59",
+     "end": "2026-05-27 15:40",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 2,
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 2,
+      "BLOOM": 2,
+      "SUR_ERROR": 1
+     },
+     "n_saturated": 2,
+     "aperture_px": 28,
+     "bad_px_worst": 17,
+     "images_with_bad_px": 2,
+     "n_poor": 2,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "2 of 2 images are unusable at the target (2 saturated)."
+    }
    }
   ],
   "d3": [
@@ -595,21 +2382,148 @@
     "label": "SPHEREx Apr 2025",
     "mission": "SPHEREx",
     "png": "d3_spherex_v1.png",
-    "n_images": 4
+    "n_images": 4,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D3 (SWIR array)",
+     "detectors": [
+      3
+     ],
+     "band_um": [
+      1.63,
+      2.41
+     ],
+     "lam_um": [
+      1.759,
+      2.263
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-04-28 23:15",
+     "end": "2025-05-02 10:29",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 4,
+      "OVERFLOW": 4,
+      "SUR_ERROR": 4,
+      "BLOOM": 4
+     },
+     "pixel_flag_counts": {
+      "TRANSIENT": 2,
+      "SUR_ERROR": 3,
+      "BLOOM": 4,
+      "OVERFLOW": 2
+     },
+     "n_saturated": 2,
+     "aperture_px": 27,
+     "bad_px_worst": 25,
+     "images_with_bad_px": 4,
+     "n_poor": 4,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "4 of 4 images are unusable at the target (2 saturated, 2 flagged)."
+    }
    },
    {
     "year": 2025.9390321699987,
     "label": "SPHEREx Dec 2025",
     "mission": "SPHEREx",
     "png": "d3_spherex_v2.png",
-    "n_images": 5
+    "n_images": 5,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D3 (SWIR array)",
+     "detectors": [
+      3
+     ],
+     "band_um": [
+      1.63,
+      2.41
+     ],
+     "lam_um": [
+      1.744,
+      2.297
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-12-05 15:12",
+     "end": "2025-12-14 07:45",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 5,
+      "OVERFLOW": 5,
+      "SUR_ERROR": 5,
+      "BLOOM": 5,
+      "HALO": 1,
+      "PERSIST": 2
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 4,
+      "SUR_ERROR": 3,
+      "BLOOM": 5,
+      "TRANSIENT": 1,
+      "PERSIST": 1
+     },
+     "n_saturated": 4,
+     "aperture_px": 28,
+     "bad_px_worst": 22,
+     "images_with_bad_px": 5,
+     "n_poor": 5,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "5 of 5 images are unusable at the target (4 saturated, 1 flagged)."
+    }
    },
    {
     "year": 2026.376793695521,
     "label": "SPHEREx May 2026",
     "mission": "SPHEREx",
     "png": "d3_spherex_v3.png",
-    "n_images": 1
+    "n_images": 1,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D3 (SWIR array)",
+     "detectors": [
+      3
+     ],
+     "band_um": [
+      1.63,
+      2.41
+     ],
+     "lam_um": [
+      1.823,
+      1.823
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-18 14:58",
+     "end": "2026-05-18 14:58",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1,
+      "BLOOM": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 28,
+     "bad_px_worst": 20,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The pixel at the target is saturated (OVERFLOW flag)."
+    }
    }
   ],
   "d4": [
@@ -618,21 +2532,144 @@
     "label": "SPHEREx May 2025",
     "mission": "SPHEREx",
     "png": "d4_spherex_v1.png",
-    "n_images": 4
+    "n_images": 4,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      2.489,
+      3.288
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-05-09 23:25",
+     "end": "2025-06-06 23:10",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 4,
+      "OVERFLOW": 4,
+      "SUR_ERROR": 4,
+      "BLOOM": 4,
+      "HALO": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 4,
+      "BLOOM": 4
+     },
+     "n_saturated": 4,
+     "aperture_px": 28,
+     "bad_px_worst": 25,
+     "images_with_bad_px": 4,
+     "n_poor": 4,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "4 of 4 images are unusable at the target (4 saturated)."
+    }
    },
    {
     "year": 2025.9145141561069,
     "label": "SPHEREx Nov 2025",
     "mission": "SPHEREx",
     "png": "d4_spherex_v2.png",
-    "n_images": 4
+    "n_images": 4,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      2.566,
+      3.539
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-11-29 04:25",
+     "end": "2025-12-03 01:16",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 4,
+      "OVERFLOW": 4,
+      "SUR_ERROR": 4,
+      "BLOOM": 4
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 4,
+      "BLOOM": 4,
+      "TRANSIENT": 2,
+      "SUR_ERROR": 2
+     },
+     "n_saturated": 4,
+     "aperture_px": 31,
+     "bad_px_worst": 24,
+     "images_with_bad_px": 4,
+     "n_poor": 4,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "4 of 4 images are unusable at the target (4 saturated)."
+    }
    },
    {
     "year": 2026.3769779353224,
     "label": "SPHEREx May 2026",
     "mission": "SPHEREx",
     "png": "d4_spherex_v3.png",
-    "n_images": 2
+    "n_images": 2,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      2.615,
+      2.991
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-15 23:23",
+     "end": "2026-05-21 09:47",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 2,
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 2,
+      "BLOOM": 2
+     },
+     "n_saturated": 2,
+     "aperture_px": 29,
+     "bad_px_worst": 24,
+     "images_with_bad_px": 2,
+     "n_poor": 2,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "2 of 2 images are unusable at the target (2 saturated)."
+    }
    }
   ],
   "d5": [
@@ -641,21 +2678,140 @@
     "label": "SPHEREx May 2025",
     "mission": "SPHEREx",
     "png": "d5_spherex_v1.png",
-    "n_images": 4
+    "n_images": 4,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D5 (MWIR array)",
+     "detectors": [
+      5
+     ],
+     "band_um": [
+      3.83,
+      4.41
+     ],
+     "lam_um": [
+      3.871,
+      4.404
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-05-02 13:40",
+     "end": "2025-06-06 10:10",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 3,
+      "OVERFLOW": 4,
+      "SUR_ERROR": 2,
+      "BLOOM": 2,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 2,
+      "OVERFLOW": 3
+     },
+     "n_saturated": 3,
+     "aperture_px": 29,
+     "bad_px_worst": 4,
+     "images_with_bad_px": 4,
+     "n_poor": 4,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "4 of 4 images are unusable at the target (3 saturated, 1 flagged)."
+    }
    },
    {
     "year": 2025.9218984848817,
     "label": "SPHEREx Dec 2025",
     "mission": "SPHEREx",
     "png": "d5_spherex_v2.png",
-    "n_images": 4
+    "n_images": 4,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D5 (MWIR array)",
+     "detectors": [
+      5
+     ],
+     "band_um": [
+      3.83,
+      4.41
+     ],
+     "lam_um": [
+      3.861,
+      4.282
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-12-02 17:07",
+     "end": "2025-12-04 01:37",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "OVERFLOW": 4,
+      "BLOOM": 1,
+      "PERSIST": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 4,
+      "BLOOM": 1
+     },
+     "n_saturated": 4,
+     "aperture_px": 30,
+     "bad_px_worst": 7,
+     "images_with_bad_px": 4,
+     "n_poor": 4,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "4 of 4 images are unusable at the target (4 saturated)."
+    }
    },
    {
     "year": 2026.3873866577385,
     "label": "SPHEREx May 2026",
     "mission": "SPHEREx",
     "png": "d5_spherex_v3.png",
-    "n_images": 2
+    "n_images": 2,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D5 (MWIR array)",
+     "detectors": [
+      5
+     ],
+     "band_um": [
+      3.83,
+      4.41
+     ],
+     "lam_um": [
+      3.922,
+      4.096
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-17 07:59",
+     "end": "2026-05-27 15:40",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 2
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 2
+     },
+     "n_saturated": 2,
+     "aperture_px": 29,
+     "bad_px_worst": 4,
+     "images_with_bad_px": 2,
+     "n_poor": 2,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "2 of 2 images are unusable at the target (2 saturated)."
+    }
    }
   ],
   "d6": [
@@ -664,21 +2820,474 @@
     "label": "SPHEREx Apr 2025",
     "mission": "SPHEREx",
     "png": "d6_spherex_v1.png",
-    "n_images": 4
+    "n_images": 4,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.524,
+      4.899
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-04-28 23:15",
+     "end": "2025-05-02 10:26",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 4,
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 4
+     },
+     "n_saturated": 4,
+     "aperture_px": 29,
+     "bad_px_worst": 2,
+     "images_with_bad_px": 4,
+     "n_poor": 4,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "4 of 4 images are unusable at the target (4 saturated)."
+    }
    },
    {
     "year": 2025.9390338042354,
     "label": "SPHEREx Dec 2025",
     "mission": "SPHEREx",
     "png": "d6_spherex_v2.png",
-    "n_images": 5
+    "n_images": 5,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.511,
+      4.957
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-12-05 15:12",
+     "end": "2025-12-14 07:45",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 3,
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "NONFUNC": 2,
+      "HALO": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 28,
+     "bad_px_worst": 2,
+     "images_with_bad_px": 4,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "caution",
+     "reason": "1 of 5 images is saturated at the target, so the object is near the brightest this detector can record."
+    }
    },
    {
     "year": 2026.376793695521,
     "label": "SPHEREx May 2026",
     "mission": "SPHEREx",
     "png": "d6_spherex_v3.png",
-    "n_images": 1
+    "n_images": 1,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.574,
+      4.574
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-18 14:58",
+     "end": "2026-05-18 14:58",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 29,
+     "bad_px_worst": 2,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The pixel at the target is saturated (OVERFLOW flag)."
+    }
+   }
+  ],
+  "all": [
+   {
+    "year": 2025.3608341163397,
+    "label": "SPHEREx May 2025",
+    "mission": "SPHEREx",
+    "png": "all_spherex_v1.png",
+    "n_images": 24,
+    "detectors": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "normalisation": [
+     {
+      "det": 1,
+      "n_images": 4,
+      "background": 0.3198,
+      "noise": 0.01759
+     },
+     {
+      "det": 2,
+      "n_images": 4,
+      "background": 0.3732,
+      "noise": 0.02819
+     },
+     {
+      "det": 3,
+      "n_images": 4,
+      "background": 0.235,
+      "noise": 0.02067
+     },
+     {
+      "det": 4,
+      "n_images": 4,
+      "background": 0.1798,
+      "noise": 0.01808
+     },
+     {
+      "det": 5,
+      "n_images": 4,
+      "background": 0.2697,
+      "noise": 0.02719
+     },
+     {
+      "det": 6,
+      "n_images": 4,
+      "background": 0.4199,
+      "noise": 0.02952
+     }
+    ],
+    "detected": true,
+    "snr": 4703.7,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detectors D1, D2, D3, D4, D5, D6",
+     "detectors": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "band_um": [
+      0.75,
+      5.0
+     ],
+     "lam_um": [
+      0.771,
+      4.899
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-04-28 23:15",
+     "end": "2025-06-06 23:10",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 20,
+      "SUR_ERROR": 18,
+      "HALO": 2,
+      "OVERFLOW": 23,
+      "BLOOM": 17,
+      "NONFUNC": 3
+     },
+     "pixel_flag_counts": {
+      "TRANSIENT": 5,
+      "SUR_ERROR": 8,
+      "HALO": 1,
+      "OVERFLOW": 19,
+      "BLOOM": 17
+     },
+     "n_saturated": 19,
+     "aperture_px": 28,
+     "bad_px_worst": 25,
+     "images_with_bad_px": 24,
+     "n_poor": 24,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "6 of 6 detector co-adds are poor at the target (D1, D2, D3, D4, D5, D6).",
+     "detector_verdicts": {
+      "1": "poor",
+      "2": "poor",
+      "3": "poor",
+      "4": "poor",
+      "5": "poor",
+      "6": "poor"
+     }
+    }
+   },
+   {
+    "year": 2025.92621626261,
+    "label": "SPHEREx Dec 2025",
+    "mission": "SPHEREx",
+    "png": "all_spherex_v2.png",
+    "n_images": 26,
+    "detectors": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "normalisation": [
+     {
+      "det": 1,
+      "n_images": 4,
+      "background": 0.4377,
+      "noise": 0.01598
+     },
+     {
+      "det": 2,
+      "n_images": 4,
+      "background": 0.4623,
+      "noise": 0.02315
+     },
+     {
+      "det": 3,
+      "n_images": 5,
+      "background": 0.3137,
+      "noise": 0.02486
+     },
+     {
+      "det": 4,
+      "n_images": 4,
+      "background": 0.243,
+      "noise": 0.01805
+     },
+     {
+      "det": 5,
+      "n_images": 4,
+      "background": 0.3467,
+      "noise": 0.02906
+     },
+     {
+      "det": 6,
+      "n_images": 5,
+      "background": 0.7602,
+      "noise": 0.04693
+     }
+    ],
+    "detected": true,
+    "snr": 4753.7,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detectors D1, D2, D3, D4, D5, D6",
+     "detectors": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "band_um": [
+      0.75,
+      5.0
+     ],
+     "lam_um": [
+      0.767,
+      4.957
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-11-29 04:23",
+     "end": "2025-12-14 07:45",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 24,
+      "TRANSIENT": 18,
+      "PERSIST": 4,
+      "BLOOM": 17,
+      "SUR_ERROR": 16,
+      "HALO": 2,
+      "NONFUNC": 2
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 19,
+      "BLOOM": 17,
+      "TRANSIENT": 6,
+      "SUR_ERROR": 10,
+      "PERSIST": 1
+     },
+     "n_saturated": 19,
+     "aperture_px": 31,
+     "bad_px_worst": 24,
+     "images_with_bad_px": 25,
+     "n_poor": 22,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "5 of 6 detector co-adds are poor at the target (D1, D2, D3, D4, D5).",
+     "detector_verdicts": {
+      "1": "poor",
+      "2": "poor",
+      "3": "poor",
+      "4": "poor",
+      "5": "poor",
+      "6": "caution"
+     }
+    }
+   },
+   {
+    "year": 2026.3811045763257,
+    "label": "SPHEREx May 2026",
+    "mission": "SPHEREx",
+    "png": "all_spherex_v3.png",
+    "n_images": 10,
+    "detectors": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "normalisation": [
+     {
+      "det": 1,
+      "n_images": 2,
+      "background": 0.3171,
+      "noise": 0.01613
+     },
+     {
+      "det": 2,
+      "n_images": 2,
+      "background": 0.3682,
+      "noise": 0.02301
+     },
+     {
+      "det": 3,
+      "n_images": 1,
+      "background": 0.2976,
+      "noise": 0.02663
+     },
+     {
+      "det": 4,
+      "n_images": 2,
+      "background": 0.1784,
+      "noise": 0.01743
+     },
+     {
+      "det": 5,
+      "n_images": 2,
+      "background": 0.241,
+      "noise": 0.02541
+     },
+     {
+      "det": 6,
+      "n_images": 1,
+      "background": 0.4426,
+      "noise": 0.0414
+     }
+    ],
+    "detected": true,
+    "snr": 5239.4,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detectors D1, D2, D3, D4, D5, D6",
+     "detectors": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "band_um": [
+      0.75,
+      5.0
+     ],
+     "lam_um": [
+      0.799,
+      4.574
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-15 23:23",
+     "end": "2026-05-27 15:40",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 10,
+      "TRANSIENT": 6,
+      "SUR_ERROR": 6,
+      "BLOOM": 6
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 10,
+      "BLOOM": 6,
+      "SUR_ERROR": 1
+     },
+     "n_saturated": 10,
+     "aperture_px": 29,
+     "bad_px_worst": 24,
+     "images_with_bad_px": 10,
+     "n_poor": 10,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "6 of 6 detector co-adds are poor at the target (D1, D2, D3, D4, D5, D6).",
+     "detector_verdicts": {
+      "1": "poor",
+      "2": "poor",
+      "3": "poor",
+      "4": "poor",
+      "5": "poor",
+      "6": "poor"
+     }
+    }
    }
   ]
  },
@@ -690,7 +3299,8 @@
   "d3": "Detector 3 \u00b7 1.63\u20132.41 \u00b5m co-add",
   "d4": "Detector 4 \u00b7 2.42\u20133.82 \u00b5m co-add",
   "d5": "Detector 5 \u00b7 3.83\u20134.41 \u00b5m co-add",
-  "d6": "Detector 6 \u00b7 4.42\u20135.0 \u00b5m co-add"
+  "d6": "Detector 6 \u00b7 4.42\u20135.0 \u00b5m co-add",
+  "all": "All 6 detectors combined (0.75\u20135.0 \u00b5m)"
  },
  "stacks": {
   "w2": [
@@ -700,7 +3310,34 @@
     "mission": "WISE",
     "png": "w2_wise2010.png",
     "detected": true,
-    "snr": 449.2
+    "snr": 449.2,
+    "obs": {
+     "mission": "WISE",
+     "instrument": "WISE W2 band \u00b7 AllWISE atlas image",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2010-05-28 15:20",
+     "end": "2010-12-07 12:56",
+     "time_note": "earliest and latest WISE frame of this atlas tile, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 0,
+     "aperture_px": 27,
+     "bad_px_worst": 0,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "good",
+     "reason": "No blank pixel within 3 pixels of the target. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2014.4102001368926,
@@ -710,7 +3347,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2014-05-30 19:48",
+     "end": "2014-05-30 19:48",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 11,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2014.9302069815194,
@@ -720,7 +3384,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 578.9,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2014-12-06 18:11",
+     "end": "2014-12-06 18:11",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 15,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2015.396911430527,
@@ -730,7 +3421,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 587.7,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2015-05-26 05:19",
+     "end": "2015-05-26 05:19",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 11,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2015.92911321013,
@@ -740,7 +3458,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 542.2,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2015-12-06 14:36",
+     "end": "2015-12-06 14:36",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 11,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2016.383436550308,
@@ -750,7 +3495,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2016-05-20 13:12",
+     "end": "2016-05-20 13:12",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 14,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2016.9263906913072,
@@ -760,7 +3532,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 886.7,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2016-12-04 20:44",
+     "end": "2016-12-04 20:44",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 8,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2017.3704013689253,
@@ -770,7 +3569,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 945.0,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2017-05-16 00:56",
+     "end": "2017-05-16 00:56",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 4,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2017.9245056810403,
@@ -780,7 +3606,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 528.0,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2017-12-04 10:13",
+     "end": "2017-12-04 10:13",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 14,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2018.3575279945244,
@@ -790,7 +3643,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2018-05-11 14:05",
+     "end": "2018-05-11 14:05",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 16,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2018.9282557152635,
@@ -800,7 +3680,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 655.0,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2018-12-06 01:05",
+     "end": "2018-12-06 01:05",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 5,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2019.35558329911,
@@ -810,7 +3717,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 611.3,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2019-05-11 03:02",
+     "end": "2019-05-11 03:02",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 6,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2019.9255600273784,
@@ -820,7 +3754,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 568.2,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2019-12-05 07:27",
+     "end": "2019-12-05 07:27",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 11,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2020.3592572210814,
@@ -830,7 +3791,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 438.4,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2020-05-11 17:14",
+     "end": "2020-05-11 17:14",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 10,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2020.9237434633812,
@@ -840,7 +3828,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 698.8,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2020-12-03 21:32",
+     "end": "2020-12-03 21:32",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 6,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2021.3565752224504,
@@ -850,7 +3865,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 388.7,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2021-05-10 23:44",
+     "end": "2021-05-10 23:44",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 11,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2021.9276511978096,
@@ -860,7 +3902,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 785.3,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2021-12-05 13:47",
+     "end": "2021-12-05 13:47",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 2,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2022.3581853524984,
@@ -869,7 +3938,34 @@
     "png": "w2_neowise_16.png",
     "n_images": 10,
     "detected": true,
-    "snr": 798.3
+    "snr": 798.3,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2022-05-11 19:51",
+     "end": "2022-05-11 19:51",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 0,
+     "aperture_px": 27,
+     "bad_px_worst": 0,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "good",
+     "reason": "No blank pixel within 3 pixels of the target. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2022.924500479124,
@@ -879,7 +3975,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 619.9,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2022-12-04 16:10",
+     "end": "2022-12-04 16:10",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 10,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2023.3586702258726,
@@ -889,7 +4012,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 640.2,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2023-05-12 06:06",
+     "end": "2023-05-12 06:06",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 2,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2023.925829158111,
@@ -899,7 +4049,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 700.3,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2023-12-05 09:49",
+     "end": "2023-12-05 09:49",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 7,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2024.3565976728269,
@@ -909,7 +4086,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 591.8,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W2 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      4.618,
+      4.618
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2024-05-10 17:56",
+     "end": "2024-05-10 17:56",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 7,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2025.3472947851274,
@@ -918,7 +4122,47 @@
     "png": "w2_spherex_v1.png",
     "n_images": 5,
     "detected": true,
-    "snr": 3576.0
+    "snr": 3576.0,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detectors D5, D6",
+     "detectors": [
+      5,
+      6
+     ],
+     "band_um": [
+      3.83,
+      5.0
+     ],
+     "lam_um": [
+      4.404,
+      4.899
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-04-28 23:15",
+     "end": "2025-06-06 10:10",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 5,
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "NONFUNC": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 5
+     },
+     "n_saturated": 5,
+     "aperture_px": 29,
+     "bad_px_worst": 2,
+     "images_with_bad_px": 5,
+     "n_poor": 5,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "5 of 5 images are unusable at the target (5 saturated)."
+    }
    },
    {
     "year": 2025.9390338042354,
@@ -927,7 +4171,47 @@
     "png": "w2_spherex_v2.png",
     "n_images": 5,
     "detected": true,
-    "snr": 2628.8
+    "snr": 2628.8,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.511,
+      4.957
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-12-05 15:12",
+     "end": "2025-12-14 07:45",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 3,
+      "TRANSIENT": 1,
+      "SUR_ERROR": 1,
+      "NONFUNC": 2,
+      "HALO": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 28,
+     "bad_px_worst": 2,
+     "images_with_bad_px": 4,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "caution",
+     "reason": "1 of 5 images is saturated at the target, so the object is near the brightest this detector can record."
+    }
    },
    {
     "year": 2026.376793695521,
@@ -936,7 +4220,43 @@
     "png": "w2_spherex_v3.png",
     "n_images": 1,
     "detected": true,
-    "snr": 2632.9
+    "snr": 2632.9,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D6 (MWIR array)",
+     "detectors": [
+      6
+     ],
+     "band_um": [
+      4.42,
+      5.0
+     ],
+     "lam_um": [
+      4.574,
+      4.574
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2026-05-18 14:58",
+     "end": "2026-05-18 14:58",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "OVERFLOW": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 29,
+     "bad_px_worst": 2,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The pixel at the target is saturated (OVERFLOW flag)."
+    }
    }
   ],
   "w1": [
@@ -946,7 +4266,34 @@
     "mission": "WISE",
     "png": "w1_wise2010.png",
     "detected": true,
-    "snr": 93.6
+    "snr": 93.6,
+    "obs": {
+     "mission": "WISE",
+     "instrument": "WISE W1 band \u00b7 AllWISE atlas image",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2010-05-28 15:20",
+     "end": "2010-12-07 12:56",
+     "time_note": "earliest and latest WISE frame of this atlas tile, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 0,
+     "aperture_px": 27,
+     "bad_px_worst": 0,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "good",
+     "reason": "No blank pixel within 3 pixels of the target. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2014.4102001368926,
@@ -956,7 +4303,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2014-05-30 19:48",
+     "end": "2014-05-30 19:48",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 19,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2014.9302069815194,
@@ -966,7 +4340,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2014-12-06 18:11",
+     "end": "2014-12-06 18:11",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2015.396911430527,
@@ -976,7 +4377,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2015-05-26 05:19",
+     "end": "2015-05-26 05:19",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 21,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2015.92911321013,
@@ -986,7 +4414,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2015-12-06 14:36",
+     "end": "2015-12-06 14:36",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2016.383436550308,
@@ -996,7 +4451,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2016-05-20 13:12",
+     "end": "2016-05-20 13:12",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 22,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2016.9263906913072,
@@ -1006,7 +4488,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2016-12-04 20:44",
+     "end": "2016-12-04 20:44",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 22,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2017.3704013689253,
@@ -1016,7 +4525,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2017-05-16 00:56",
+     "end": "2017-05-16 00:56",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2017.9245056810403,
@@ -1026,7 +4562,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2017-12-04 10:13",
+     "end": "2017-12-04 10:13",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 21,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2018.3575279945244,
@@ -1036,7 +4599,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2018-05-11 14:05",
+     "end": "2018-05-11 14:05",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 23,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2018.9282557152635,
@@ -1046,7 +4636,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2018-12-06 01:05",
+     "end": "2018-12-06 01:05",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 19,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2019.35558329911,
@@ -1056,7 +4673,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2019-05-11 03:02",
+     "end": "2019-05-11 03:02",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 22,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2019.9255600273784,
@@ -1066,7 +4710,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2019-12-05 07:27",
+     "end": "2019-12-05 07:27",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2020.3592572210814,
@@ -1076,7 +4747,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2020-05-11 17:14",
+     "end": "2020-05-11 17:14",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 21,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2020.9237434633812,
@@ -1086,7 +4784,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2020-12-03 21:32",
+     "end": "2020-12-03 21:32",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 19,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2021.3565752224504,
@@ -1096,7 +4821,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2021-05-10 23:44",
+     "end": "2021-05-10 23:44",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2021.9276511978096,
@@ -1106,7 +4858,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2021-12-05 13:47",
+     "end": "2021-12-05 13:47",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 21,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2022.3581853524984,
@@ -1116,7 +4895,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2022-05-11 19:51",
+     "end": "2022-05-11 19:51",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 17,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2022.924500479124,
@@ -1126,7 +4932,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2022-12-04 16:10",
+     "end": "2022-12-04 16:10",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 18,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2023.3586702258726,
@@ -1136,7 +4969,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2023-05-12 06:06",
+     "end": "2023-05-12 06:06",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 19,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2023.925829158111,
@@ -1146,7 +5006,34 @@
     "n_images": 10,
     "detected": true,
     "snr": 267.3,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2023-12-05 09:49",
+     "end": "2023-12-05 09:49",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 20,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2024.3565976728269,
@@ -1156,7 +5043,34 @@
     "n_images": 10,
     "detected": true,
     "snr": null,
-    "saturated_core": true
+    "saturated_core": true,
+    "obs": {
+     "mission": "NEOWISE",
+     "instrument": "WISE W1 band \u00b7 NEOWISE-R exposures stacked by WANDERERS",
+     "detectors": null,
+     "band_um": null,
+     "lam_um": [
+      3.368,
+      3.368
+     ],
+     "lam_note": "effective wavelength of the WISE band (AllWISE header)",
+     "start": "2024-05-10 17:56",
+     "end": "2024-05-10 17:56",
+     "time_note": "mean time of the stacked exposures, UTC"
+    },
+    "quality": {
+     "flags_checked": false,
+     "flag_counts": null,
+     "pixel_flag_counts": null,
+     "n_saturated": 1,
+     "aperture_px": 27,
+     "bad_px_worst": 19,
+     "images_with_bad_px": null,
+     "n_poor": null,
+     "n_dqa_fail": null,
+     "verdict": "poor",
+     "reason": "The star's core is saturated: the archive left it blank, so its position comes from the centre of the blank hole and its brightness cannot be measured. WISE flag images are not used here, so only blank pixels are checked."
+    }
    },
    {
     "year": 2025.3770597167008,
@@ -1165,7 +5079,47 @@
     "png": "w1_spherex_v1.png",
     "n_images": 1,
     "detected": true,
-    "snr": 3205.3
+    "snr": 3205.3,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      3.288,
+      3.288
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-05-18 11:18",
+     "end": "2025-05-18 11:18",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 1,
+      "OVERFLOW": 1,
+      "SUR_ERROR": 1,
+      "BLOOM": 1
+     },
+     "pixel_flag_counts": {
+      "OVERFLOW": 1,
+      "BLOOM": 1
+     },
+     "n_saturated": 1,
+     "aperture_px": 28,
+     "bad_px_worst": 25,
+     "images_with_bad_px": 1,
+     "n_poor": 1,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "The pixel at the target is saturated (OVERFLOW flag)."
+    }
    },
    {
     "year": 2025.9173028379137,
@@ -1174,7 +5128,49 @@
     "png": "w1_spherex_v2.png",
     "n_images": 2,
     "detected": true,
-    "snr": 3165.1
+    "snr": 3165.1,
+    "obs": {
+     "mission": "SPHEREx",
+     "instrument": "SPHEREx detector D4 (MWIR array)",
+     "detectors": [
+      4
+     ],
+     "band_um": [
+      2.42,
+      3.82
+     ],
+     "lam_um": [
+      3.095,
+      3.539
+     ],
+     "lam_note": "wavelength each image recorded at the target's pixel (WCS-WAVE)",
+     "start": "2025-11-30 12:52",
+     "end": "2025-12-03 01:16",
+     "time_note": "mid-exposure times of the first and last image, UTC"
+    },
+    "quality": {
+     "flags_checked": true,
+     "flag_counts": {
+      "TRANSIENT": 2,
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2
+     },
+     "pixel_flag_counts": {
+      "TRANSIENT": 2,
+      "OVERFLOW": 2,
+      "SUR_ERROR": 2,
+      "BLOOM": 2
+     },
+     "n_saturated": 2,
+     "aperture_px": 28,
+     "bad_px_worst": 24,
+     "images_with_bad_px": 2,
+     "n_poor": 2,
+     "n_dqa_fail": 0,
+     "verdict": "poor",
+     "reason": "2 of 2 images are unusable at the target (2 saturated)."
+    }
    }
   ]
  },
@@ -1186,7 +5182,8 @@
   "d3": "d3_diff.png",
   "d4": "d4_diff.png",
   "d5": "d5_diff.png",
-  "d6": "d6_diff.png"
+  "d6": "d6_diff.png",
+  "all": "all_diff.png"
  },
  "fov_arcsec": 300.0,
  "metadata": [
@@ -1201,7 +5198,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 30,
+   "bad_px_aperture": 13,
+   "flagged_px_aperture": 13,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged TRANSIENT, SUR_ERROR, BLOOM."
   },
   {
    "image": "level2_2025W18_1B_0067_1D6_spx_l2b-v27-2026-196",
@@ -1211,7 +5221,18 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W18_1B_0077_3D3_spx_l2b-v27-2026-196",
@@ -1224,7 +5245,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 18,
+   "flagged_px_aperture": 18,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W18_1B_0077_3D6_spx_l2b-v27-2026-196",
@@ -1234,7 +5268,18 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W18_1B_0244_4D3_spx_l2b-v27-2026-196",
@@ -1247,7 +5292,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 25,
+   "flagged_px_aperture": 25,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W18_1B_0244_4D6_spx_l2b-v27-2026-196",
@@ -1260,7 +5317,18 @@
     "SUR_ERROR",
     "NONFUNC"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 2,
+   "flagged_px_aperture": 2,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W18_2B_0141_2D6_spx_l2b-v27-2026-197",
@@ -1270,7 +5338,18 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W18_2B_0141_3D3_spx_l2b-v27-2026-197",
@@ -1283,7 +5362,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 20,
+   "flagged_px_aperture": 20,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged TRANSIENT, SUR_ERROR, BLOOM."
   },
   {
    "image": "level2_2025W18_2B_0161_1D2_spx_l2b-v27-2026-197",
@@ -1296,7 +5388,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 16,
+   "flagged_px_aperture": 16,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged TRANSIENT, SUR_ERROR, BLOOM."
   },
   {
    "image": "level2_2025W18_2B_0161_1D5_spx_l2b-v27-2026-197",
@@ -1309,7 +5414,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 3,
+   "flagged_px_aperture": 3,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged TRANSIENT, SUR_ERROR, BLOOM."
   },
   {
    "image": "level2_2025W18_2B_0171_2D2_spx_l2b-v27-2026-197",
@@ -1322,7 +5440,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 19,
+   "flagged_px_aperture": 19,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W18_2B_0171_2D5_spx_l2b-v27-2026-197",
@@ -1334,7 +5465,19 @@
     "OVERFLOW",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 4,
+   "flagged_px_aperture": 4,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W19_2B_0227_1D1_spx_l2b-v27-2026-198",
@@ -1346,7 +5489,20 @@
     "SUR_ERROR",
     "HALO"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "HALO"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 8,
+   "flagged_px_aperture": 8,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged TRANSIENT, SUR_ERROR, HALO."
   },
   {
    "image": "level2_2025W19_2B_0227_1D4_spx_l2b-v27-2026-198",
@@ -1359,7 +5515,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 23,
+   "flagged_px_aperture": 23,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W19_2B_0496_2D1_spx_l2b_retry-v27-2026-198",
@@ -1371,7 +5539,19 @@
     "OVERFLOW",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 6,
+   "flagged_px_aperture": 6,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W19_2B_0496_2D4_spx_l2b-v27-2026-198",
@@ -1384,7 +5564,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 24,
+   "flagged_px_aperture": 24,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W20_2D_0496_3D1_spx_l2b-v27-2026-198",
@@ -1397,7 +5589,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 16,
+   "flagged_px_aperture": 16,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W20_2D_0496_3D4_spx_l2b-v27-2026-198",
@@ -1410,7 +5614,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 25,
+   "flagged_px_aperture": 25,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W22_1B_0563_3D2_spx_l2b-v27-2026-199",
@@ -1423,7 +5639,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 24,
+   "flagged_px_aperture": 24,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W22_1B_0563_3D5_spx_l2b-v27-2026-199",
@@ -1436,7 +5664,18 @@
     "SUR_ERROR",
     "NONFUNC"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 3,
+   "flagged_px_aperture": 3,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W23_2B_0192_2D2_spx_l2b-v27-2026-201",
@@ -1449,7 +5688,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 20,
+   "flagged_px_aperture": 20,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W23_2B_0192_2D5_spx_l2b-v27-2026-201",
@@ -1459,7 +5711,18 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 2,
+   "flagged_px_aperture": 2,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W23_2B_0295_2D1_spx_l2b-v27-2026-201",
@@ -1473,7 +5736,19 @@
     "NONFUNC",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 32,
+   "bad_px_aperture": 14,
+   "flagged_px_aperture": 14,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W23_2B_0310_1D4_spx_l2b-v27-2026-201",
@@ -1487,7 +5762,19 @@
     "BLOOM",
     "HALO"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 22,
+   "flagged_px_aperture": 22,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W48_2A_0378_3D1_spx_l2b-v27-2026-209",
@@ -1497,7 +5784,18 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 26,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W48_2A_0378_4D4_spx_l2b-v27-2026-209",
@@ -1510,7 +5808,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 23,
+   "flagged_px_aperture": 23,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W48_2A_0656_2D1_spx_l2b-v27-2026-209",
@@ -1523,7 +5833,19 @@
     "PERSIST",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 5,
+   "flagged_px_aperture": 5,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W48_2A_0656_2D4_spx_l2b-v27-2026-209",
@@ -1536,7 +5858,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 31,
+   "bad_px_aperture": 24,
+   "flagged_px_aperture": 24,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W48_2A_0706_3D1_spx_l2b-v27-2026-209",
@@ -1549,7 +5883,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 31,
+   "bad_px_aperture": 15,
+   "flagged_px_aperture": 15,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged TRANSIENT, SUR_ERROR, BLOOM."
   },
   {
    "image": "level2_2025W48_2A_0706_3D4_spx_l2b-v27-2026-209",
@@ -1562,7 +5909,21 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 20,
+   "flagged_px_aperture": 20,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_1A_0380_3D2_spx_l2b-v27-2026-209",
@@ -1575,7 +5936,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 14,
+   "flagged_px_aperture": 14,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_1A_0380_3D5_spx_l2b-v27-2026-209",
@@ -1587,7 +5960,19 @@
     "OVERFLOW",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 5,
+   "flagged_px_aperture": 5,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_1A_0454_3D1_spx_l2b-v27-2026-209",
@@ -1600,7 +5985,21 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 16,
+   "flagged_px_aperture": 16,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_1A_0454_4D4_spx_l2b-v27-2026-209",
@@ -1613,7 +6012,21 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 24,
+   "flagged_px_aperture": 24,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_1A_0533_1D2_spx_l2b-v27-2026-209",
@@ -1626,7 +6039,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 13,
+   "flagged_px_aperture": 13,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_1A_0533_1D5_spx_l2b-v27-2026-209",
@@ -1637,7 +6063,18 @@
     "OVERFLOW",
     "PERSIST"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 30,
+   "bad_px_aperture": 7,
+   "flagged_px_aperture": 7,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_1A_0608_2D2_spx_l2b-v27-2026-209",
@@ -1650,7 +6087,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 30,
+   "bad_px_aperture": 22,
+   "flagged_px_aperture": 22,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged TRANSIENT, SUR_ERROR, BLOOM."
   },
   {
    "image": "level2_2025W49_1A_0608_2D5_spx_l2b-v27-2026-209",
@@ -1660,7 +6110,18 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 4,
+   "flagged_px_aperture": 4,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_1A_0699_3D2_spx_l2b-v27-2026-209",
@@ -1673,7 +6134,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 27,
+   "bad_px_aperture": 20,
+   "flagged_px_aperture": 20,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_1A_0699_3D5_spx_l2b-v27-2026-209",
@@ -1683,7 +6157,18 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 3,
+   "flagged_px_aperture": 3,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_2A_0242_3D3_spx_l2b-v27-2026-209",
@@ -1696,7 +6181,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 29,
+   "bad_px_aperture": 20,
+   "flagged_px_aperture": 20,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_2A_0242_3D6_spx_l2b-v27-2026-209",
@@ -1706,7 +6204,16 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 30,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 30 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
   },
   {
    "image": "level2_2025W49_2A_0559_1D3_spx_l2b-v27-2026-209",
@@ -1720,7 +6227,19 @@
     "BLOOM",
     "HALO"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 26,
+   "bad_px_aperture": 15,
+   "flagged_px_aperture": 15,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W49_2A_0559_2D6_spx_l2b-v27-2026-209",
@@ -1733,7 +6252,16 @@
     "SUR_ERROR",
     "NONFUNC"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 2,
+   "flagged_px_aperture": 2,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "2 of 28 pixels within 3 pixels of the target are flagged or blank, so this image is left out of the spectrum."
   },
   {
    "image": "level2_2025W49_2A_0634_3D3_spx_l2b-v27-2026-209",
@@ -1747,7 +6275,20 @@
     "PERSIST",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 30,
+   "bad_px_aperture": 16,
+   "flagged_px_aperture": 16,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is flagged TRANSIENT, SUR_ERROR, BLOOM."
   },
   {
    "image": "level2_2025W49_2A_0634_4D6_spx_l2b-v27-2026-209",
@@ -1755,7 +6296,16 @@
    "detector": 6,
    "lam_um": 4.957,
    "flags_at_target": [],
-   "used_in_spectrum": true
+   "used_in_spectrum": true,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 0,
+   "flagged_px_aperture": 0,
+   "dqa": "Pass",
+   "quality": "good",
+   "quality_reason": "No flagged or blank pixel within 3 pixels of the target."
   },
   {
    "image": "level2_2025W50_2A_0698_1D3_spx_l2b-v27-2026-210",
@@ -1769,7 +6319,21 @@
     "PERSIST",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "PERSIST",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 22,
+   "flagged_px_aperture": 22,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W50_2A_0698_1D6_spx_l2b-v27-2026-210",
@@ -1780,7 +6344,18 @@
     "OVERFLOW",
     "NONFUNC"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 2,
+   "flagged_px_aperture": 2,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W50_2A_0712_3D3_spx_l2b-v27-2026-210",
@@ -1793,7 +6368,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 12,
+   "flagged_px_aperture": 12,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2025W50_2A_0712_3D6_spx_l2b-v27-2026-210",
@@ -1803,7 +6390,16 @@
    "flags_at_target": [
     "HALO"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [],
+   "saturated": false,
+   "target_blank": false,
+   "aperture_px": 30,
+   "bad_px_aperture": 1,
+   "flagged_px_aperture": 1,
+   "dqa": "Pass",
+   "quality": "caution",
+   "quality_reason": "1 of 30 pixels within 3 pixels of the target is flagged or blank, so this image is left out of the spectrum."
   },
   {
    "image": "level2_2026W20_2A_0235_3D1_spx_l2b-v27-2026-267",
@@ -1813,7 +6409,18 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 30,
+   "bad_px_aperture": 2,
+   "flagged_px_aperture": 2,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2026W20_2A_0235_3D4_spx_l2b-v27-2026-267",
@@ -1826,7 +6433,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 24,
+   "flagged_px_aperture": 24,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2026W20_2A_0445_3D2_spx_l2b-v27-2026-267",
@@ -1839,7 +6458,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 26,
+   "bad_px_aperture": 16,
+   "flagged_px_aperture": 16,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2026W20_2A_0445_3D5_spx_l2b-v27-2026-267",
@@ -1849,7 +6480,18 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 4,
+   "flagged_px_aperture": 4,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2026W21_1A_0095_4D3_spx_l2b-v27-2026-268",
@@ -1862,7 +6504,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 20,
+   "flagged_px_aperture": 20,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2026W21_1A_0095_4D6_spx_l2b-v27-2026-268",
@@ -1872,7 +6526,18 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 29,
+   "bad_px_aperture": 2,
+   "flagged_px_aperture": 2,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2026W21_1A_0519_4D1_spx_l2b-v27-2026-268",
@@ -1885,7 +6550,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 8,
+   "flagged_px_aperture": 8,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2026W21_1A_0519_4D4_spx_l2b-v27-2026-268",
@@ -1898,7 +6575,19 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 27,
+   "bad_px_aperture": 22,
+   "flagged_px_aperture": 22,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2026W22_1A_0417_4D2_spx_l2b-v27-2026-269",
@@ -1911,7 +6600,20 @@
     "SUR_ERROR",
     "BLOOM"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "saturated": true,
+   "target_blank": true,
+   "aperture_px": 28,
+   "bad_px_aperture": 17,
+   "flagged_px_aperture": 17,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   },
   {
    "image": "level2_2026W22_1A_0417_4D5_spx_l2b-v27-2026-269",
@@ -1921,9 +6623,280 @@
    "flags_at_target": [
     "OVERFLOW"
    ],
-   "used_in_spectrum": false
+   "used_in_spectrum": false,
+   "flags_target_pixel": [
+    "OVERFLOW"
+   ],
+   "saturated": true,
+   "target_blank": false,
+   "aperture_px": 28,
+   "bad_px_aperture": 4,
+   "flagged_px_aperture": 4,
+   "dqa": "Pass",
+   "quality": "poor",
+   "quality_reason": "The pixel at the target is saturated (OVERFLOW flag)."
   }
  ],
+ "flag_legend": [
+  {
+   "name": "TRANSIENT",
+   "bit": 0,
+   "description": "Transient detected during SUR",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 44,
+   "images_target_pixel": 11
+  },
+  {
+   "name": "OVERFLOW",
+   "bit": 1,
+   "description": "Overflow detected during SUR",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 57,
+   "images_target_pixel": 48
+  },
+  {
+   "name": "SUR_ERROR",
+   "bit": 2,
+   "description": "Error in onboard processing",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 40,
+   "images_target_pixel": 19
+  },
+  {
+   "name": "NONFUNC",
+   "bit": 6,
+   "description": "Permanently unusable",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": true,
+   "images_aperture": 5,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "DICHROIC",
+   "bit": 7,
+   "description": "Low efficiency due to dichroic",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": true,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "MISSING_DATA",
+   "bit": 9,
+   "description": "Onboard data lost",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": true,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "HOT",
+   "bit": 10,
+   "description": "Hot pixel",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": true,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "COLD",
+   "bit": 11,
+   "description": "Anomalously low signal",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": true,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "FULLSAMPLE",
+   "bit": 12,
+   "description": "Pixel full sample history is available",
+   "bad": false,
+   "informational": true,
+   "hidden_in_pictures": false,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "PHANMISS",
+   "bit": 14,
+   "description": "Phantom correction was not applied",
+   "bad": false,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "NONLINEAR",
+   "bit": 15,
+   "description": "Nonlinearity correction cannot be applied reliably",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "PERSIST",
+   "bit": 17,
+   "description": "Persistent charge above threshold",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 4,
+   "images_target_pixel": 1
+  },
+  {
+   "name": "OUTLIER",
+   "bit": 19,
+   "description": "Pixel flagged by Detect Outliers",
+   "bad": false,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "CROSSTALK",
+   "bit": 20,
+   "description": "Pixel affected by crosstalk.",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "SOURCE",
+   "bit": 21,
+   "description": "Pixel mapped to a known source",
+   "bad": false,
+   "informational": true,
+   "hidden_in_pictures": false,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "GHOST",
+   "bit": 22,
+   "description": "Affected by a bright source inside the exposure",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "GHOST_FPA",
+   "bit": 23,
+   "description": "Affected by a bright source on another detector",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "GHOST_EXT",
+   "bit": 24,
+   "description": "Pixel affected by a bright source outside FOV",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "STREAK",
+   "bit": 25,
+   "description": "Pixel affected by a streak",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "BLOOM",
+   "bit": 26,
+   "description": "Pixel part of a bloom artifact",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 40,
+   "images_target_pixel": 40
+  },
+  {
+   "name": "SNOWBALL",
+   "bit": 27,
+   "description": "Pixel part of a snowball artifact",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 0,
+   "images_target_pixel": 0
+  },
+  {
+   "name": "HALO",
+   "bit": 28,
+   "description": "Pixel part of a transient halo",
+   "bad": true,
+   "informational": false,
+   "hidden_in_pictures": false,
+   "images_aperture": 4,
+   "images_target_pixel": 1
+  }
+ ],
+ "quality_rules": [
+  "One SPHEREx image is poor when the pixel at the target is saturated (OVERFLOW), blank, outside the image or carries a flag that makes a pixel unusable; caution when the target pixel is fine but another pixel within 3 pixels of the target is flagged or blank (that image is then left out of the spectrum); otherwise good.",
+  "A stacked frame is poor when at least half of its images are poor, or the stacked picture is blank at the target; caution when any image is saturated at the target, at least a quarter are poor, at least half have flagged or blank pixels within 3 pixels of the target, or an image did not pass the SPHEREx pipeline's own quality check (L2DQAFLG); otherwise good. A frame of one image takes that image's verdict.",
+  "The combined frame is poor when at least half of its detector co-adds are poor; caution when any co-add is poor, any image is saturated at the target, or at least half of the co-adds need caution; otherwise good.",
+  "WISE and NEOWISE frames come without flag planes here, so only blank pixels and a saturated (blanked) core are checked: poor when the core is saturated or the target pixel is blank, caution when a pixel within 3 pixels of the target is blank."
+ ],
+ "detector_bands": {
+  "1": [
+   0.75,
+   1.09
+  ],
+  "2": [
+   1.1,
+   1.62
+  ],
+  "3": [
+   1.63,
+   2.41
+  ],
+  "4": [
+   2.42,
+   3.82
+  ],
+  "5": [
+   3.83,
+   4.41
+  ],
+  "6": [
+   4.42,
+   5.0
+  ]
+ },
+ "combined": {
+  "channel": "all",
+  "label": "All 6 detectors combined (0.75\u20135.0 \u00b5m)",
+  "min_detectors": 2,
+  "method": "Each detector's co-add of a visit is background-subtracted and divided by its own robust noise (median and 1.4826 x MAD); the co-adds are then summed and divided by the square root of their number, so the picture is in units of the noise and no detector dominates. It mixes wavelengths, so motion is still measured at 3.4 and 4.6 \u00b5m only."
+ },
  "ghosts": {
   "w2_wise2010.png": [
    [
@@ -4196,6 +9169,102 @@
     147.8,
     16.6
    ]
+  ],
+  "all_spherex_v1.png": [
+   [
+    13.2,
+    105.2,
+    14.4
+   ],
+   [
+    137.2,
+    92.9,
+    16.7
+   ],
+   [
+    69.3,
+    76.1,
+    16.3
+   ],
+   [
+    69.6,
+    85.6,
+    15.1
+   ],
+   [
+    87.9,
+    65.2,
+    11.0
+   ],
+   [
+    102.0,
+    147.8,
+    16.6
+   ]
+  ],
+  "all_spherex_v2.png": [
+   [
+    13.2,
+    105.2,
+    14.4
+   ],
+   [
+    137.2,
+    92.9,
+    16.7
+   ],
+   [
+    69.3,
+    76.1,
+    16.3
+   ],
+   [
+    69.6,
+    85.6,
+    15.1
+   ],
+   [
+    89.0,
+    64.4,
+    11.0
+   ],
+   [
+    102.0,
+    147.8,
+    16.6
+   ]
+  ],
+  "all_spherex_v3.png": [
+   [
+    13.2,
+    105.2,
+    14.4
+   ],
+   [
+    137.2,
+    92.9,
+    16.7
+   ],
+   [
+    69.4,
+    76.1,
+    16.3
+   ],
+   [
+    69.6,
+    85.6,
+    15.1
+   ],
+   [
+    89.9,
+    63.8,
+    11.0
+   ],
+   [
+    102.0,
+    147.8,
+    16.6
+   ]
   ]
  },
  "track": [
@@ -4809,7 +9878,7 @@
    "ra": 164.09244931640748,
    "dec": 6.995083272489804,
    "year": 2025.9390338042354,
-   "pmra": -3880.2834103734353,
+   "pmra": -3880.2834103734367,
    "pmdec": -2729.52079923988,
    "gaia_source_id": 3864972938605115520,
    "explained_by_gaia": true
@@ -4888,15 +9957,6 @@
    "n_images": 10
   }
  ],
- "gaia_facts": {
-  "source_id": 3864972938605115520,
-  "parallax_mas": 415.17941567802137,
-  "distance_ly": 7.855784455675892,
-  "g_mag": 11.03839111328125,
-  "bp_rp": 4.184836387634277,
-  "variable_flag": "NOT_AVAILABLE",
-  "teff_k": null
- },
  "changes": {
   "found": 1,
   "candidates": 0,
@@ -4922,6 +9982,15 @@
   ],
   "method": "Dots seen only in WISE 2010 are paired with dots seen only in SPHEREx at 4.6 \u00b5m, 8\u2033 to 190\u2033 apart and of similar brightness. Each pair is then checked against the target's path, Gaia DR3 and SIMBAD.",
   "not_checked": "Asteroids and comets are not checked. An unconfirmed pair is not a discovery."
+ },
+ "gaia_facts": {
+  "source_id": 3864972938605115520,
+  "parallax_mas": 415.17941567802137,
+  "distance_ly": 7.855784455675892,
+  "g_mag": 11.03839111328125,
+  "bp_rp": 4.184836387634277,
+  "variable_flag": "NOT_AVAILABLE",
+  "teff_k": null
  },
  "evidence": {
   "status": "known",
