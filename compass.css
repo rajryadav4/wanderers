@@ -161,3 +161,25 @@ a { color: var(--cyan); }
 .landing-brand { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .landing-brand .logo svg { width: 34px; height: 34px; fill: none; stroke: var(--cyan); }
 .landing-brand .logo svg .dot, .landing-brand .logo svg .ink-dot { fill: var(--cyan); stroke: none; }
+
+/* ---- path taken and path ahead (pathview.js) ---- */
+#dPath .path-card { margin-top: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius, 8px); background: rgba(10,18,34,.6); }
+#dPath .path-card h3 { margin: 0; font-size: 1rem; }
+#dPath .path-card .panel-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.pv-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin: 8px 0; }
+.pv-chart { width: 100%; height: auto; background: #050912; border-radius: 6px; }
+.pv-title { fill: #e6edf7; font: 600 11px ui-sans-serif, system-ui, sans-serif; }
+.pv-dim { fill: #9fb0c8; color: var(--dim); font: 10px ui-monospace, monospace; }
+p.pv-dim { font-size: .8rem; }
+.pv-yr { fill: #c9d4e8; font: 10px ui-monospace, monospace; }
+.pv-past { fill: none; stroke: #7cc4ff; stroke-width: 2; }
+.pv-future { fill: none; stroke: #7ee787; stroke-width: 2; stroke-dasharray: 6 4; }
+.pv-band { fill: rgba(126, 231, 135, .14); stroke: none; }
+.pv-mark { fill: #e6edf7; }
+.pv-now { fill: #ffb547; stroke: #050912; stroke-width: 1.5; }
+.pv-axis { stroke: #9fb0c8; stroke-width: 1.5; }
+.pv-facts { margin: 6px 0; padding-left: 18px; display: grid; gap: 3px; font-size: .86rem; }
+.pv-src { font-size: .8rem; color: var(--dim); margin: 6px 0; }
+.pv-tag { font: 600 .66rem ui-monospace, monospace; padding: 1px 6px; border-radius: 999px; background: #7ee787; color: #0b1422; margin-right: 4px; }
+.pv-tag.cat { background: #9fb0c8; }
+.pv-link { font-size: .85rem; }

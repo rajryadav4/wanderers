@@ -42,6 +42,7 @@
       `<div class="alt">${st.alt.slice(0, 4).join(" · ")}</div>${facts.length ? `<ul>${facts.map((f) => `<li>${f}</li>`).join("")}</ul>` : ""}` +
       `<p class="hint">Star data: HYG database v4.0 (Hipparcos, Yale Bright Star, Gliese), CC BY-SA 4.0. ` +
       `<a href="compass.html?star=${encodeURIComponent(st.name)}">Find it with your phone →</a></p>`;
+    showPath({ star: st });
     coordSearch(String(st.ra), String(st.dec), { fromSearch: true, label: st.name });
   });
 
@@ -73,6 +74,7 @@
     history.replaceState(null, "", url);
     await preload();
     setupSlider(); initMix(true); renderMeta(); renderMetaBox(); setAladin(); fillCompare(); draw(); evidence(); spectrum();
+    showPath({ target: id });
     if (MAP.ready) mapGoTo();
     $("answer").textContent = "";
   }
@@ -492,6 +494,7 @@
     const a = parseAngle(ra, /h/i.test(ra) || /:/.test(ra)), d = parseAngle(dec, false);
     if (!isFinite(a) || !isFinite(d)) { $("coordMsg").textContent = "Could not read those coordinates."; return false; }
     S.here = { ra: a, dec: d, label: opts.label || `RA ${a.toFixed(4)}°, Dec ${d.toFixed(4)}°` };
+    if (!opts.fromSearch) showPath(null);              // bare coordinates: no known motion until a target matches
     const fov = Number(fovIn) || 300;
     if ([...$("fovIn").options].some((o) => Number(o.value) === fov)) $("fovIn").value = String(fov);
     // nearest cached target overall, and nearest one that has the field size that was asked for
@@ -586,12 +589,25 @@
     }
     $("meta").hidden = which === "stars";
     document.body.classList.toggle("stars-mode", which === "stars");
+    if (which === "stars") $("pathCard").hidden = true; else if ($("pathBody").innerHTML) $("pathCard").hidden = false;
     if (which !== "flip") stop();
     if (which === "webb") showWebb();
     if (which === "stars" && window.StarsTab) window.StarsTab.open(starKey);
     if (window.LongRange) which === "stars" ? requestAnimationFrame(window.LongRange.refresh) : window.LongRange.stop();
   }
   window.WANDERERS = { selectTab, openTarget: (id) => { selectTab("flip"); load(id); } };
+
+  // ---------- path taken and path ahead (the team's star-path model, via pathview.js) ----------
+  let pathSeq = 0;
+  async function showPath(q) {
+    const card = $("pathCard"), seq = ++pathSeq;
+    if (!q || !window.PathView) { card.hidden = true; return; }
+    card.hidden = document.body.classList.contains("stars-mode");
+    const m = await PathView.render($("pathBody"), q, { explorerHref: (k) => `observatory.html?star=${encodeURIComponent(k)}` });
+    if (seq !== pathSeq) return;                                   // a newer result has replaced this one
+    const a = $("pathBody").querySelector(".pv-link");
+    if (a && m && m.key) a.onclick = (e) => { e.preventDefault(); selectTab("stars", m.key); };
+  }
 
   // ---------- through Webb: match the coordinates against every public JWST frame, show its pixels ----------
   async function showWebb() {

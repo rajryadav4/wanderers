@@ -14,6 +14,7 @@
         const w = (r[8] || "").match(/W:(\w+)/);
         return { id: w ? w[1] : `star${i}`, name: r[0], alt, ra: r[2], dec: r[3], mag: r[4], spect: r[5], dist: r[6], con: r[7],
           variable: (r[8] || "").includes("V"), near: (r[8] || "").includes("N"), wanderers: w ? w[1] : null,
+          pmra: r[9] ?? null, pmdec: r[10] ?? null, rv: r[11] ?? null, key: r[12] || null,   // motion for the path model (link_paths.py)
           _keys: [r[0], ...alt].map(norm) };
       });
       return STARS;

@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="brand.css">
-<link rel="stylesheet" href="compass.css?v=20261114j">
+<link rel="stylesheet" href="compass.css?v=20261115b">
 </head>
 <body>
 <video id="cam" playsinline muted autoplay hidden></video>
@@ -115,6 +115,8 @@
   <ul id="dFacts" class="facts"></ul>
   <p id="dWhere" class="small"></p>
   <div id="dWebb" class="webb-box" hidden></div>
+  <div id="dPath" class="path-card"><h3>Where it has been, and where it is going</h3>
+    <p class="small dim">Blue: the path it has taken. Green, dashed: the path ahead. The dot is where it is now.</p><div id="dPathBody"></div></div>
   <div class="row-btns"><a id="dMap" class="btn">SPHEREx sky map ↗</a><a id="dFull" class="btn" hidden>Full WANDERERS analysis ↗</a>
     <button id="dClose" class="btn primary">Done</button></div>
   <p class="small dim">Star data: HYG database v4.0 (Hipparcos, Yale Bright Star, Gliese), CC BY-SA 4.0.</p>
@@ -149,10 +151,12 @@
 </div>
 
 <script src="theme.js"></script>
-<script src="sky.js?v=20261114j"></script>
-<script src="search.js?v=20261114j"></script>
-<script src="telescope.js?v=20261114j"></script>
-<script src="orient.js?v=20261114j"></script>
-<script type="module" src="compass.js?v=20261114j"></script>
+<script src="sky.js?v=20261115b"></script>
+<script src="search.js?v=20261115b"></script>
+<script src="starcore.js?v=20261115b"></script>
+<script src="pathview.js?v=20261115b"></script>
+<script src="telescope.js?v=20261115b"></script>
+<script src="orient.js?v=20261115b"></script>
+<script type="module" src="compass.js?v=20261115b"></script>
 </body>
 </html>

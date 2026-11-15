@@ -1,7 +1,7 @@
 /* WANDERERS Sky Compass: landing -> "where are you in the universe" intro -> one-step flat calibration ->
  * augmented-reality sky with a compass tape, tilt scale, mini radar and live telemetry.
  * Motion: orient.js (gyro drives movement, compass sets north). Sky: sky.js. Intro: intro.js (three.js). */
-import { playIntro, earthFacts } from "./intro.js?v=20261114j";
+import { playIntro, earthFacts } from "./intro.js?v=20261115b";
 
 const $ = (id) => document.getElementById(id);
 const D2R = Math.PI / 180;
@@ -315,6 +315,26 @@ function draw() {
     }
   }
 
+  // the selected star's path through the sky: blue behind it, green dashed ahead (the star-path model)
+  const selKey = S.sel ? `${S.sel.id}:${S.sel.name}` : "";
+  if (selKey !== S.trailFor) {
+    S.trailFor = selKey; S.trail = null;
+    if (S.sel && window.PathView) PathView.trail(pathQuery(S.sel)).then((tr) => { if (S.trailFor === selKey) S.trail = tr; }).catch(() => {});
+  }
+  if (S.trail) {
+    const pts = S.trail.pts.map((p) => { const o = Sky.observe(p, now, L.lat, L.lon); return { year: p.year, q: proj(vec(o.az, o.alt)) }; });
+    const seg = (arr, style, dash) => { g.strokeStyle = style; g.lineWidth = 2; g.setLineDash(dash); g.beginPath(); let on = false;
+      for (const p of arr) { if (!p.q) { on = false; continue; } on ? g.lineTo(p.q[0], p.q[1]) : g.moveTo(p.q[0], p.q[1]); on = true; } g.stroke(); g.setLineDash([]); };
+    seg(pts.filter((p) => p.year <= S.trail.now), "rgba(124,196,255,.9)", []);
+    seg(pts.filter((p) => p.year >= S.trail.now), "rgba(126,231,135,.9)", [7, 5]);
+    g.font = "600 11px 'JetBrains Mono', monospace"; g.textAlign = "left"; g.textBaseline = "middle";
+    const lab = (p, txt, col) => { if (p && p.q) { g.fillStyle = col; g.beginPath(); g.arc(p.q[0], p.q[1], 3, 0, 7); g.fill(); g.fillText(txt, p.q[0] + 6, p.q[1]); } };
+    const h = S.trail.half, yrTxt = (y) => (y <= 0 ? `${Math.round(1 - y).toLocaleString()} BCE` : `${Math.round(y)} CE`);
+    lab(pts[0], yrTxt(pts[0].year), "#7cc4ff"); lab(pts.at(-1), yrTxt(pts.at(-1).year), "#7ee787");
+    lab(pts[Math.round(pts.length / 4)], yrTxt(pts[Math.round(pts.length / 4)].year), "#7cc4ff");
+    lab(pts[Math.round(3 * pts.length / 4)], yrTxt(pts[Math.round(3 * pts.length / 4)].year), "#7ee787");
+  }
+
   // WANDERERS targets
   for (const t of S.targets) {
     const s = Sky.observe({ ra: t.ra, dec: t.dec }, now, L.lat, L.lon), v = vec(s.az, s.alt);
@@ -583,7 +603,10 @@ function showDetails(T) {
   $("dFull").hidden = !st.wanderers; if (st.wanderers) $("dFull").href = `observatory.html?target=${st.wanderers}`;
   $("details").hidden = false;
   webbDetails(st);
+  if (window.PathView) PathView.render($("dPathBody"), pathQuery(T), { explorerHref: (k) => `observatory.html?star=${encodeURIComponent(k)}` });
 }
+// which star the path model should use: a prepared target by id, else the star found by name
+function pathQuery(T) { return T.star && !T.star.wanderers ? { star: T.star } : { target: (T.star && T.star.wanderers) || T.id }; }
 $("aboutBtn").onclick = () => S.sel && showDetails(S.sel);
 $("dClose").onclick = () => { $("details").hidden = true; };
 

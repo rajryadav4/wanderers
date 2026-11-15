@@ -236,6 +236,11 @@
         <details><summary>Measured positions used for training</summary><div id="starObs"></div></details>
       </div>
     </div>
+    <section class="path-card" id="pathCard" aria-label="Path taken and path ahead" hidden>
+      <div class="panel-row"><h3>Where it has been, and where it is going</h3><span class="tag-chip ai">Prediction model</span></div>
+      <p class="hint">Blue: the path it has taken. Green, dashed: the path it will take. The dot is where it is now.</p>
+      <div id="pathBody"></div>
+    </section>
     <details class="meta" id="meta">
       <summary>Frame details and data flags</summary>
       <div id="metaBody"></div>
@@ -295,9 +300,10 @@
 <script src="starpath.js"></script>
 <script src="stardb.js"></script>
 <script src="starcore.js"></script>
-<script src="search.js?v=20261115a"></script>
-<script src="telescope.js?v=20261115a"></script>
-<script src="app.js?v=20261115a"></script>
+<script src="pathview.js?v=20261115b"></script>
+<script src="search.js?v=20261115b"></script>
+<script src="telescope.js?v=20261115b"></script>
+<script src="app.js?v=20261115b"></script>
 <script src="longrange.js"></script>
 <script src="stars.js"></script>
 </body>
