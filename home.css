@@ -200,3 +200,8 @@
   .reveal .epochs circle.now { opacity: 1; }
   .reveal .traj, .reveal .curve { stroke-dashoffset: 0; }
 }
+
+/* "Visualise with Sky Compass": compass icon + one line, centred */
+.compass-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 18px; line-height: 1.2; text-align: center; }
+.compass-cta .cc-icon { width: 22px; height: 22px; flex: none; }
+.compass-cta .cc-text { font-weight: 600; font-size: .95rem; }

@@ -777,7 +777,7 @@
     const a = $("compassCta"); if (!a) return;
     const t = q && q.target ? S.list.find((x) => x.id === q.target) : null;
     a.href = t ? `compass.html?target=${encodeURIComponent(t.id)}` : q && q.star ? `compass.html?star=${encodeURIComponent(q.star.name)}` : "compass.html";
-    $("compassCtaSub").textContent = t ? `Find ${t.name} with your phone` : q && q.star ? `Find ${q.star.name} with your phone` : "Sky Compass · point your phone up";
+    a.title = t ? `Open the Sky Compass aimed at ${t.name}` : q && q.star ? `Open the Sky Compass aimed at ${q.star.name}` : "Open the Sky Compass and point your phone at the sky";
   }
   async function showPath(q) {
     compassCta(q);
