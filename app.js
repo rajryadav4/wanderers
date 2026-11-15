@@ -162,10 +162,16 @@
       const ch = S.t.track.filter((p) => (p.ch || "w2") === S.ch).sort((a, b) => a.year - b.year);
       g.strokeStyle = "rgba(255,181,71,.9)"; g.lineWidth = 2; g.setLineDash([6, 4]);
       g.beginPath(); ch.forEach((p, j) => (j ? g.lineTo(X(p.x), Y(p.y)) : g.moveTo(X(p.x), Y(p.y)))); g.stroke(); g.setLineDash([]);
-      for (const p of ch) {
+      // label the years sparsely: with NEOWISE there is a dot every six months, so a label on each would smear
+      let lastLbl = null;
+      ch.forEach((p, j) => {
         g.fillStyle = "rgba(255,181,71,.95)"; g.beginPath(); g.arc(X(p.x), Y(p.y), 3.5, 0, 2 * Math.PI); g.fill();
-        g.fillStyle = "#ffe2b0"; g.font = "12px ui-monospace, monospace"; g.fillText(p.mission === "WISE" ? "2010" : Math.floor(p.year), X(p.x) + 8, Y(p.y) - 6);
-      }
+        const yr = p.mission === "WISE" ? 2010 : Math.floor(p.year), far = !lastLbl || Math.hypot(X(p.x) - lastLbl.x, Y(p.y) - lastLbl.y) > 34;
+        if (j === 0 || j === ch.length - 1 || (far && yr !== (lastLbl && lastLbl.yr))) {
+          g.fillStyle = "#ffe2b0"; g.font = "12px ui-monospace, monospace"; g.fillText(yr, X(p.x) + 8, Y(p.y) - 6);
+          lastLbl = { x: X(p.x), y: Y(p.y), yr };
+        }
+      });
     }
     // A pair from the automatic mover search (pipeline/vet.py): 2010 end, arrow, SPHEREx end.
     const pk = S.pick && S.t.changes && S.t.changes.items.find((c) => c.n === S.pick);
@@ -629,6 +635,7 @@
     MAP.cat = A.catalog({ name: "target", sourceSize: 22, color: "#ffb547", shape: "circle" }); MAP.aladin.addCatalog(MAP.cat);
     MAP.past = A.graphicOverlay({ color: "#7cc4ff", lineWidth: 2.5 }); MAP.aladin.addOverlay(MAP.past);                    // path taken
     MAP.fut = A.graphicOverlay({ color: "#7ee787", lineWidth: 2.5, lineDash: [7, 5] }); MAP.aladin.addOverlay(MAP.fut);    // path ahead
+    MAP.yr = A.catalog({ name: "year", sourceSize: 16, color: "#7ee787", shape: "square" }); MAP.aladin.addCatalog(MAP.yr);  // predicted spot in a chosen year
     try {   // wavelength of each of the 102 cube frames, straight from the HiPS description
       const txt = await (await fetch(HIPS.spherex + "/properties")).text();
       const m = txt.match(/data_cube_crval3_arr\s*=\s*([\d.\s]+)/);
@@ -648,18 +655,47 @@
     if (ra == null && t) { ra = t.grid.centre_ra; dec = t.grid.centre_dec; label = t.name; }
     if (ra == null) return;
     MAP.aladin.gotoRaDec(ra, dec);
-    MAP.overlay.removeAll(); MAP.cat.removeAll(); MAP.past.removeAll(); MAP.fut.removeAll();
+    MAP.overlay.removeAll(); MAP.cat.removeAll(); MAP.past.removeAll(); MAP.fut.removeAll(); MAP.yr.removeAll();
+    MAP.sp = null; $("mapYears").hidden = true; yrStop();
     if (S.pathQ && window.PathView) PathView.sky(S.pathQ).then((sp) => {     // the star's path, 1900 to 2100
       if (!sp || !MAP.past) return;
       const back = sp.pts.filter((p) => p.year <= sp.now).map((p) => [p.ra, p.dec]), ahead = sp.pts.filter((p) => p.year >= sp.now).map((p) => [p.ra, p.dec]);
       if (back.length > 1) MAP.past.add(A.polyline(back));
       if (ahead.length > 1) MAP.fut.add(A.polyline(ahead));
+      MAP.sp = sp; $("mapYears").hidden = false; $("yrSlider").value = Math.round(sp.now);
+      const c = Math.cos(sp.pts[0].dec * Math.PI / 180), xs = sp.pts.map((p) => p.ra * c), ys = sp.pts.map((p) => p.dec);
+      const span = Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys));
+      if (span > 0) MAP.aladin.setFoV(Math.min(30, Math.max(0.03, span * 2.2)));   // fit the whole path
+      yrMove(sp.now);
     }).catch(() => {});
     const pts = t && label === t.name ? t.track.filter((p) => (p.ch || "w2") === "w2").sort((a, b) => a.year - b.year) : [];
     if (pts.length >= 2) MAP.overlay.add(A.polyline(pts.map((p) => [p.ra, p.dec])));
     const last = pts.length ? pts[pts.length - 1] : { ra, dec };
     MAP.cat.addSources([A.source(last.ra, last.dec, { name: label })]);
   }
+  // ---------- year slider: move the star along its predicted path (any star with known motion) ----------
+  function yrMove(y) {
+    const sp = MAP.sp; if (!sp) return;
+    const P = sp.pts; let i = P.findIndex((p) => p.year >= y); if (i <= 0) i = 1; if (i >= P.length) i = P.length - 1;
+    const a = P[i - 1], b = P[i], t = b.year === a.year ? 0 : Math.max(0, Math.min(1, (y - a.year) / (b.year - a.year)));
+    MAP.yr.removeAll(); MAP.yr.addSources([A.source(a.ra + (b.ra - a.ra) * t, a.dec + (b.dec - a.dec) * t, { name: String(Math.round(y)) })]);
+    $("yrLbl").textContent = `${Math.round(y)} · ${Math.abs(y - sp.now) < 1 ? "now" : y < sp.now ? "where it was" : "predicted"}`;
+  }
+  let yrAnim = null;
+  function yrStop() { if (yrAnim) cancelAnimationFrame(yrAnim); yrAnim = null; $("yrPlay").textContent = "▶ Play its path"; }
+  $("yrSlider").oninput = (e) => { yrStop(); yrMove(+e.target.value); };
+  $("yrPlay").onclick = () => {
+    if (yrAnim) return yrStop();
+    if (reduceMotion) { $("yrSlider").value = 2100; return yrMove(2100); }
+    const t0 = performance.now(), y0 = +$("yrSlider").value >= 2099 ? 1900 : +$("yrSlider").value;
+    $("yrPlay").textContent = "❚❚ Pause";
+    const step = (now) => {
+      const y = Math.min(2100, y0 + (now - t0) / 1000 * 25);   // 25 years a second
+      $("yrSlider").value = Math.round(y); yrMove(y);
+      yrAnim = y < 2100 ? requestAnimationFrame(step) : (yrStop(), null);
+    };
+    yrAnim = requestAnimationFrame(step);
+  };
   async function showMap(ra, dec, label) {
     selectTab("map");
     try { await initMap(); mapGoTo(ra, dec, label); } catch (e) { $("coordMsg").textContent = "Sky map unavailable: " + e.message; }

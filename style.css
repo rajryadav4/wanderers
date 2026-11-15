@@ -341,3 +341,7 @@ p.pv-dim { font-size: .8rem; }
 .webb-legend .lg-gold { border-color: #ffb547; } .webb-legend .lg-grey { border-top: 1.5px dashed #9fb0c8; }
 .webb-legend .lg-cross { width: 10px; height: 10px; border: 0; background: radial-gradient(circle, #ff5a4e 35%, transparent 40%); }
 .webb-legend .lg-past { border-color: #7cc4ff; } .webb-legend .lg-fut { border-top: 2.5px dashed #7ee787; }
+
+.map-years { margin: 6px auto 0; max-width: 600px; }
+.map-years .yr-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.map-years input[type=range] { flex: 1 1 200px; accent-color: #7ee787; }

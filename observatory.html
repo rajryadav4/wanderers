@@ -165,6 +165,13 @@
           <input type="range" id="lam" min="1" max="102" value="96" aria-label="SPHEREx wavelength"></label>
       </div>
       <div id="aladin" class="aladin" aria-label="Interactive sky map"></div>
+      <div id="mapYears" class="map-years" hidden>
+        <div class="yr-row"><button type="button" id="yrPlay">▶ Play its path</button>
+          <input type="range" id="yrSlider" min="1900" max="2100" step="1" value="2026" aria-label="Year">
+          <span id="yrLbl" class="mono"></span></div>
+        <p class="hint">Green square: where the path model puts the star in that year (a prediction, not photographs; the
+          picture underneath is today's sky). Blue line: path taken since 1900. Green dashed: path ahead to 2100.</p>
+      </div>
       <p class="hint">Live from IRSA's all-sky maps (HiPS) via Aladin Lite. Drag to pan, scroll to zoom. Slide the
         wavelength: cold brown dwarfs appear only at the long end, normal stars fade there. The orange marker is the
         target; the dashed line is its measured path. This map works for any coordinates you type.</p>
@@ -312,7 +319,7 @@
 <script src="theme.js"></script>
 <script src="framemath.js"></script>
 <script src="chartlayout.js"></script>
-<script src="frameinfo.js"></script>
+<script src="frameinfo.js?v=20261115f"></script>
 <script src="aladinlink.js"></script>
 <script src="starpath.js"></script>
 <script src="stardb.js"></script>
@@ -320,7 +327,7 @@
 <script src="pathview.js?v=20261115e"></script>
 <script src="search.js?v=20261115b"></script>
 <script src="telescope.js?v=20261115e"></script>
-<script src="app.js?v=20261115e"></script>
+<script src="app.js?v=20261115f"></script>
 <script src="starquake.js?v=20261115b"></script>
 <script src="starquake-ui.js?v=20261115b"></script>
 <script src="longrange.js"></script>

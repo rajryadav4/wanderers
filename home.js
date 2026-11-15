@@ -61,7 +61,7 @@
       });
       // label once per distinct year so the 2025 and 2026 clusters stay legible
       const byYear = new Map(); seen.forEach((p) => byYear.set(p.mission === "WISE" ? "2010" : String(Math.floor(p.year)), p));
-      byYear.forEach((p, yr) => { svg += `<text x="${P.X(p.x) + 20}" y="${P.Y(p.y) + 4}">${yr}${p.mission === "WISE" ? " · WISE" : " · SPHEREx"}</text>`; });
+      byYear.forEach((p, yr) => { svg += `<text x="${P.X(p.x) + 20}" y="${P.Y(p.y) + 4}">${yr} · ${p.mission}</text>`; });
       $("heroOverlay").innerHTML = svg;
       $("heroStamp").textContent = `${f.label} · ${i + 1}/${fr.length}`;
     }
