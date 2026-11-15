@@ -670,10 +670,10 @@ $("aimGo").onclick = () => {
 };
 function applyFine(x, out = $("northMsg")) {
   if (!S.sensors) { out.textContent = "This needs a phone's motion sensors (open this page on your phone)."; return false; }
-  const before = { az: F.fineAz, alt: F.fineAlt }, r = F.fineTune(x.az, x.alt);
+  const before = { az: F.fineAz, alt: F.fineAlt, frozen: F.compassFrozen }, r = F.fineTune(x.az, x.alt);
   if (!r) { out.textContent = "The motion sensors are not ready yet. Hold still a moment and try again."; return false; }
   if (Math.abs(r.dAlt) > 20) {
-    F.fineAz = before.az; F.fineAlt = before.alt;
+    F.fineAz = before.az; F.fineAlt = before.alt; F.compassFrozen = before.frozen;   // a rejected aim changes nothing
     out.textContent = `That is ${Math.round(Math.abs(r.dAlt))}° higher or lower than ${x.label} really is. Is the crosshair on it? Aim again and tap Calibrate.`;
     return false;
   }
