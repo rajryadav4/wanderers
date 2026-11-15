@@ -10,9 +10,9 @@
   fetch("data/index.json").then((r) => r.json()).then((list) => {
     S.list = list;
     renderTargets(); renderExamples();
-    const p = new URLSearchParams(location.search);
+    const p = new URLSearchParams(location.search), want = p.get("target");
     if (p.get("ra") && p.get("dec")) { if (!coordSearch(p.get("ra"), p.get("dec"), p.get("fov"))) load(list[0].id); }   // unreadable: still show something
-    else { load(p.get("target") || list[0].id, p.get("ch")); }
+    else { load(list.some((t) => t.id === want) ? want : list[0].id, p.get("ch")); }   // unknown id in a link: show the first target
   }).catch(() => { $("tName").textContent = "No data yet. Run the pipeline (see README)."; });
   fetch("api/health").then((r) => { if (r.ok) { S.live = true; $("askForm").hidden = false; } }).catch(() => {});
   // "Explore any patch" live mode (web/ + backend/ on port 8001): links show only when server.js can reach it
@@ -52,17 +52,21 @@
     $("targetList").querySelectorAll("button").forEach((b) => b.onclick = () => { selectTab("flip"); load(b.dataset.id); });
   }
 
+  let loadSeq = 0;
   async function load(id, ch) {
     stop();
+    const me = ++loadSeq;   // a newer pick wins: a slow answer for an earlier target is dropped
     const [t, ex, tr] = await Promise.all([
       fetch(`data/${id}/target.json`).then((r) => r.json()),
       fetch(`data/${id}/explain.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch(`data/${id}/trajectory.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null),   // optional
     ]);
+    if (me !== loadSeq) return;
     S.here = { ra: t.grid.centre_ra, dec: t.grid.centre_dec, label: t.name };
     S.t = t; S.ex = ex; S.tr = tr;
     $("pathNote").textContent = StarPath.summary(tr); $("pathNote").hidden = !tr;
-    $("tPath").parentElement.hidden = !tr; S.ch = ch && t.frames[ch] ? ch : (t.frames.w2 && t.frames.w2.length ? "w2" : "w1");
+    const hasFrames = (c) => Object.hasOwn(t.frames, c) && Array.isArray(t.frames[c]) && t.frames[c].length > 0;
+    $("tPath").parentElement.hidden = !tr; S.ch = ch && hasFrames(ch) ? ch : (hasFrames("w2") ? "w2" : "w1");
     S.i = 0; S.imgs = {}; S.lum = {}; S.mixOut = null;
     $("targetList").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.id === id));
     $("tName").textContent = t.name;
@@ -73,6 +77,7 @@
     const url = new URL(location); url.searchParams.set("target", id); ["ra", "dec", "fov"].forEach((k) => url.searchParams.delete(k));
     history.replaceState(null, "", url);
     await preload();
+    if (me !== loadSeq) return;
     if (S.pickUrlDone) { S.pick = null; const u = new URL(location); u.searchParams.delete("pick"); history.replaceState(null, "", u); }
     setupSlider(); initMix(true); renderMeta(); renderChanges(); renderMetaBox(); setAladin(); fillCompare(); draw(); evidence(); spectrum();
     showPath({ target: id });
@@ -80,6 +85,7 @@
     if (window.StarquakeUI) {
       const qk = id === "barnard" ? "hip87937" : "wanderers_" + id;
       fetch("data/starquake_stars.json").then((r) => r.json()).then((info) => {
+        if (me !== loadSeq) return;
         if (info[qk]) StarquakeUI.mount($("targetQuake"), { key: qk, row: null, title: t.name }); else $("targetQuake").hidden = true;
       }).catch(() => { $("targetQuake").hidden = true; });
     }
@@ -105,8 +111,9 @@
     return Promise.all(jobs);
   }
   function img(name) {
+    const store = S.imgs;   // every target names its frames alike (w2_wise2010.png): a late image must not land in the next target's cache
     return new Promise((res) => {
-      const im = new Image(); im.onload = () => { S.imgs[name] = im; res(); }; im.onerror = res;
+      const im = new Image(); im.onload = () => { store[name] = im; res(); }; im.onerror = res;
       im.src = `data/${S.t.id}/${name}`;
     });
   }
