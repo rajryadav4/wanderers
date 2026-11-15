@@ -12,22 +12,24 @@
  * Saved places ("wanderers-sky-saved-v1") are written by realsky.js and are never trimmed here. */
 importScripts("hips.js");
 
-const TILES = "https://irsa.ipac.caltech.edu/data/hips/", TILES2 = "https://cdn.skies.esac.esa.int/";   // same survey, second host
-const ALADIN = "https://cdn.jsdelivr.net/npm/aladin-lite@3.8.2/";
+const CFG = Hips.CONFIG;                               // shared with realsky.js
+const [TILES, TILES2] = CFG.tileRoots;
+const ALADIN = CFG.aladin;
 // The intro (intro.js) imports this pinned three.js; compass.js imports intro.js, so the page cannot start offline without it.
 const THREE_JS = "https://cdn.jsdelivr.net/npm/three@0.170.0/";
-const AUTO = "wanderers-sky-v1", SAVED = "wanderers-sky-saved-v1", DATA = "wanderers-data-v1";
-const MAX_FILES = 1200, MAX_BYTES = 40 * 1048576, MAX_AGE_MS = 7 * 86400000, FALLBACK_BYTES = 38000;
+const AUTO = CFG.caches.recent, SAVED = CFG.caches.saved, DATA = CFG.caches.pinned;
+const { maxFiles: MAX_FILES, maxBytes: MAX_BYTES, maxAgeMs: MAX_AGE_MS } = CFG.recent, FALLBACK_BYTES = CFG.surveys.visible.tile;
 const META = TILES + "__wanderers_meta__";            // a made-up URL inside the cache: when it was started
-const SHELL_CACHE = "wanderers-shell-v1";
+const SHELL_CACHE = CFG.caches.shell;
 const SHELL = ["compass.html", "compass.css", "compass.js", "brand.css", "theme.js", "favicon.svg", "sky.js", "search.js", "starcore.js",
   "pathview.js", "telescope.js", "orient.js", "intro.js", "skyview.js", "hips.js", "realsky.js", "manifest.webmanifest", "icon-192.png", "icon-512.png",
-  "data/skystars.json", "data/stars.json", "data/constellations.json", "data/index.json", "data/declination.json", "data/earth/cities.json"].map((f) => new URL(f, self.registration.scope).href);
+  "data/skystars.json", "data/stars.json", "data/constellations.json", "data/index.json", "data/declination.json", "data/earth/cities.json", "data/paths.json"].map((f) => new URL(f, self.registration.scope).href);
 const IS_SHELL = new Set(SHELL);
 const bare = (url) => { const u = new URL(url); u.search = ""; u.hash = ""; return u.href; };   // compass.html?target=... is compass.html
 
-self.addEventListener("install", (e) => e.waitUntil(
-  caches.open(SHELL_CACHE).then((c) => c.addAll(SHELL.map((u) => new Request(u, { cache: "reload" })))).catch(() => {}).then(() => self.skipWaiting())));
+// One by one, not addAll: with addAll a single missing file left the page with nothing stored at all.
+self.addEventListener("install", (e) => e.waitUntil(caches.open(SHELL_CACHE).then((c) => Promise.all(SHELL.map((u) =>
+  fetch(new Request(u, { cache: "reload" })).then((r) => (r.ok ? c.put(u, r) : null)).catch(() => null)))).then(() => self.skipWaiting())));
 self.addEventListener("activate", (e) => e.waitUntil(Promise.all([self.clients.claim(), expire()])));
 
 self.addEventListener("fetch", (e) => {
