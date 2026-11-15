@@ -829,7 +829,7 @@
   $("webbBase").onchange = (e) => Webb.setBase(e.target.value);
   $("tabFlip").onclick = () => {   // the time-lapse belongs to a mission: back from a searched star, show that mission again
     selectTab("flip");
-    if ((S.away || !S.t) && S.list.length) load((S.t || S.list[0]).id, S.t ? S.ch : undefined);
+    if ((S.away || !S.t) && S.list.length) { $("starCard").hidden = true; load((S.t || S.list[0]).id, S.t ? S.ch : undefined); }
   };
   $("tabStars").onclick = () => selectTab("stars");
   $("tabMap").onclick = async () => { selectTab("map"); try { await initMap(); mapGoTo(); } catch (e) { $("coordMsg").textContent = "Sky map unavailable: " + e.message; } };
