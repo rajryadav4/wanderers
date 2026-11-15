@@ -214,7 +214,7 @@
     }).join("");
   }
 
-  hero().then(evidenceCard).catch(() => { $("heroStamp").textContent = "Data not available. Run the pipeline (see README)."; });
+  hero().then(evidenceCard).catch(() => { $("heroStamp").textContent = "Could not load the images. Please reload the page."; });
   compare().catch(() => { $("tlNote").textContent = "Observation data not available."; });
   miniSpec().catch(() => {});
   targets().catch(() => {});
