@@ -1,0 +1,18 @@
+{
+ "summary": "Kapteyn's Star is a known cool red dwarf, about 3,452 K and 12.8 light-years away according to Gaia. It is an ancient halo star crossing our neighbourhood fast. WANDERERS saw it move 140 arcseconds between 2010 and 2027. That is 8.65 arcseconds per year, within 0.1% of Gaia's 8.64, so we are highly confident in the motion. The star is too bright for SPHEREx: its core is saturated and all 89 spectrum points are flagged. The brightness change of -0.09 \u00b1 0.05 mag came from the star's outer glow and is uncertain.",
+ "qa": [
+  {
+   "q": "Why do we think this is what the card says?",
+   "a": "Between 2010 and 2026 this star moved 140 arcseconds across the sky, about 8.65 arcseconds per year, which matches Gaia DR3's catalogue speed to within 0.1 percent. Gaia's parallax puts it only 12.8 light-years away, so it really is a close, fast-moving neighbour. One caution: it is too bright for SPHEREx, so all 89 SPHEREx measurements are flagged, and its brightness change (-0.09 \u00b1 0.05 mag) did not pass the steadiness check."
+  },
+  {
+   "q": "What would make you less sure?",
+   "a": "Very little could shake this, because the measured speed matches Gaia's to within 0.1%. The weak spots are SPHEREx itself. All 89 of its measurements are flagged because the star is too bright for the detector. The \u22120.09 \u00b1 0.05 magnitude change comes only from the faint outer glow, because the centre of the image is saturated, so I can't call that change real. A bigger mismatch with Gaia would worry me."
+  },
+  {
+   "q": "Why use both WISE and SPHEREx?",
+   "a": "WISE photographed this sky in 2010 and SPHEREx in 2025 and 2026, so together they span about 16 years. Over that time Kapteyn's Star moved 140 arcseconds, about 22.7 SPHEREx pixels, which is easy to measure. That gives 8.65 arcseconds per year, matching Gaia's 8.64. SPHEREx alone covers only one year, and all 89 of its measurements here are flagged because the star is too bright for it."
+  }
+ ],
+ "model_note": "Written by Claude (Claude Code, headless) from target.json only."
+}

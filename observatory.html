@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Observatory · WANDERERS</title>
+<meta name="description" content="Watch real SPHEREx, WISE and Gaia data reveal what moves and changes in the infrared sky, and see the evidence for what each object is.">
+<meta name="theme-color" content="#F6F8FB">
+<script>(function () { var t; try { t = localStorage.getItem("wanderers-theme"); } catch (e) {}
+  if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.dataset.theme = t; })();</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="obs">
+<a class="skip" href="#console">Skip to the observatory</a>
+<header class="site-head">
+  <div class="bar">
+    <a class="logo" href="./" aria-label="WANDERERS, home">
+      <svg viewBox="2 2 36 36" aria-hidden="true"><path class="ink" d="M35.35 17.84A15.5 15.5 0 1 1 30.37 8.48" stroke-width="3.2"/><ellipse class="acc" cx="20" cy="20" rx="13.2" ry="6.2" transform="rotate(-28 20 20)" stroke-width="1.7"/><circle class="ink-dot" cx="30.29" cy="14.53" r="1.5"/><circle class="ring" cx="17.71" cy="27.58" r="1.8" stroke-width="1.5"/><circle class="ring" cx="8.21" cy="23.3" r="1.8" stroke-width="1.5"/><circle class="dot" cx="21.67" cy="12.6" r="2.9"/><path class="acc" d="M25.97 12.6L27.77 12.6M17.37 12.6L15.57 12.6M21.67 16.9L21.67 18.7M21.67 8.3L21.67 6.5" stroke-width="1.4"/></svg>
+      <span class="wordmark">WANDERERS</span>
+    </a>
+    <nav class="site-nav" id="siteNav" aria-label="Main">
+      <a href="observatory.html" aria-current="page">Explore</a>
+      <a href="./#science">Science</a>
+      <a href="./#how">How It Works</a>
+      <a href="./#about">About</a>
+    </nav>
+    <div class="head-tools">
+      <button class="theme-toggle" type="button" aria-label="Switch theme">
+        <span class="knob" aria-hidden="true"></span>
+        <svg class="sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M3 13l1.1-1.1M11.9 4.1 13 3"/></svg>
+        <svg class="moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 9.6A5.6 5.6 0 0 1 6.4 2.5a5.6 5.6 0 1 0 7.1 7.1Z"/></svg>
+      </button>
+      <button class="nav-toggle" type="button" aria-controls="siteNav" aria-expanded="false" aria-label="Menu">
+        <svg viewBox="0 0 18 18" width="18" height="18" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="ws-bar">
+  <div class="ws-inner">
+    <div>
+      <p class="eyebrow">Interactive observatory · scientific workspace</p>
+      <p class="ws-title">Catch what moves in the infrared sky, then read what it is made of.</p>
+    </div>
+    <div class="ws-meta">
+      <span class="tag-chip data">Real data · SPHEREx DR1 · WISE · Gaia DR3</span>
+      <a class="ws-link" href="compass.html">Sky Compass (phone) →</a>
+    </div>
+  </div>
+</div>
+
+<main class="console" id="console">
+  <!-- LEFT: missions / targets -->
+  <section class="panel targets" aria-label="Targets">
+    <p class="panel-k mono">01 · Targets</p>
+    <h2>Missions</h2>
+    <p class="hint">Each test target from the challenge is a level. Start with Barnard's Star.</p>
+    <ol id="targetList" class="target-list"></ol>
+    <div class="coord-box">
+      <h3>Find a star or go to coordinates</h3>
+      <div class="name-search">
+        <label for="nameIn">Search by name</label>
+        <input id="nameIn" placeholder="Sirius, Barnard's Star, Proxima, HD 48915…" autocomplete="off" spellcheck="false">
+        <ul id="nameList" class="suggest" role="listbox" hidden></ul>
+      </div>
+      <div id="starCard" class="star-card" hidden></div>
+      <form id="coordForm">
+        <label>RA <input id="raIn" placeholder="08h55m10.83s or 133.795" autocomplete="off"></label>
+        <label>Dec <input id="decIn" placeholder="-07d14m42.5s or -7.245" autocomplete="off"></label>
+        <label>Field of view
+          <select id="fovIn" aria-describedby="fovHint">
+            <option value="120">2′ close-up</option>
+            <option value="300" selected>5′ standard</option>
+            <option value="600">10′ wide (slower)</option>
+          </select>
+        </label>
+        <button type="submit">Search</button>
+      </form>
+      <p id="fovHint" class="hint">Wider fields catch faster-moving objects but take longer to prepare.</p>
+      <p id="coordMsg" class="hint"></p>
+      <div class="examples" id="examples" aria-label="Example coordinates"></div>
+      <p class="hint"><a id="exploreLink" href="/explore/" hidden>Explore any patch (live) →</a></p>
+    </div>
+  </section>
+
+  <!-- CENTRE: sky flipbook -->
+  <section class="panel sky" aria-label="Sky viewer">
+    <div class="sky-head">
+      <div>
+        <p class="panel-k mono">02 · Observation</p>
+        <h2 id="tName">Loading…</h2>
+        <p id="tKind" class="hint"></p>
+      </div>
+      <div class="view-tabs" role="tablist" aria-label="View">
+        <button id="tabFlip" class="on" role="tab" aria-selected="true">Time-lapse</button>
+        <button id="tabMap" role="tab" aria-selected="false">Sky map · any coordinates</button>
+        <button id="tabWebb" role="tab" aria-selected="false">🔭 Through Webb</button>
+        <button id="tabStars" role="tab" aria-selected="false">Star database</button>
+      </div>
+    </div>
+    <div id="flipView">
+    <div class="channel" id="channels" role="radiogroup" aria-label="Wavelength channel"></div>
+    <div class="viewer">
+      <canvas id="sky" width="600" height="600" aria-label="Sky image of the selected target"></canvas>
+      <div class="stamp" id="stamp"></div>
+      <div class="scale" id="scale"></div>
+    </div>
+    <div class="controls">
+      <button id="play" aria-label="Play">▶ Blink</button>
+      <input id="frame" type="range" min="0" max="0" value="0" aria-label="Epoch">
+      <span id="frameLbl" class="mono"></span>
+    </div>
+    <div class="toggles">
+      <label><input type="checkbox" id="tGhost" checked> Gaia ghosts <span class="hint">(where known stars should be)</span></label>
+      <label><input type="checkbox" id="tTrail" checked> Measured path</label>
+      <label><input type="checkbox" id="tPath" checked> Predicted path <span class="hint">(proper motion + parallax)</span></label>
+      <label><input type="checkbox" id="tDiff"> Difference (2026 − 2025)</label>
+    </div>
+    <div class="tools">
+      <label>Zoom <input type="range" id="zoom" min="1" max="4" step="0.25" value="1" aria-label="Zoom"> <span id="zoomVal" class="mono">1×</span></label>
+      <label>Compare <select id="mA" aria-label="Frame A"></select>
+        <select id="mOp" aria-label="Operation"><option value="off">off</option><option value="sub">minus</option><option value="add">plus</option></select>
+        <select id="mB" aria-label="Frame B"></select></label>
+      <button id="stackAll" type="button" aria-pressed="false">Stack all SPHEREx</button>
+      <button id="copyLink" type="button">🔗 Copy link</button>
+    </div>
+    <p id="pathNote" class="hint" hidden></p>
+    <div class="mix" id="mix">
+      <label>Show
+        <select id="mixMode" aria-label="How to show the frames">
+          <option value="single">One frame</option>
+          <option value="sub">Subtract two frames</option>
+          <option value="add">Add frames together</option>
+        </select>
+      </label>
+      <span id="mixSub" class="mix-row" hidden>
+        <label>Later <select id="mixB"></select></label>
+        <label>minus earlier <select id="mixA"></select></label>
+      </span>
+      <fieldset id="mixAdd" class="mix-row" hidden>
+        <legend>Frames to add</legend>
+        <span id="mixChecks"></span>
+      </fieldset>
+      <span id="mixOpts" class="mix-row" hidden>
+        <label><input type="checkbox" id="mixSmooth" checked> Smooth lightly</label>
+        <label>Show differences above <input type="range" id="mixTh" min="10" max="90" value="60" aria-label="Difference threshold"></label>
+      </span>
+      <p class="hint" id="mixNote"></p>
+    </div>
+    <p class="hint why">Each frame is matched by wavelength: WISE 2010 is compared with SPHEREx images taken at the same
+      infrared colour, because SPHEREx records a different wavelength across every detector.</p>
+    </div>
+    <div id="mapView" hidden>
+      <div class="map-controls">
+        <label>Survey
+          <select id="mapSurvey">
+            <option value="spherex">SPHEREx DR1 · one of 102 colours</option>
+            <option value="wise">AllWISE colour (3.4 / 4.6 / 22 µm)</option>
+          </select></label>
+        <label id="lamWrap">Wavelength <span id="lamVal" class="mono"></span>
+          <input type="range" id="lam" min="1" max="102" value="96" aria-label="SPHEREx wavelength"></label>
+      </div>
+      <div id="aladin" class="aladin" aria-label="Interactive sky map"></div>
+      <p class="hint">Live from IRSA's all-sky maps (HiPS) via Aladin Lite. Drag to pan, scroll to zoom. Slide the
+        wavelength: cold brown dwarfs appear only at the long end, normal stars fade there. The orange marker is the
+        target; the dashed line is its measured path. This map works for any coordinates you type.</p>
+    </div>
+    <div id="webbView" hidden>
+      <p id="webbHead" class="hint"></p>
+      <div id="webbAladin" class="aladin" aria-label="Webb image of this spot"></div>
+      <div class="map-controls">
+        <label>Webb image opacity <input type="range" id="webbOp" min="0" max="1" step="0.05" value="1"></label>
+        <label>Underneath <select id="webbBase"><option value="twomass">2MASS (near-infrared)</option><option value="dss">DSS (visible light)</option></select></label>
+      </div>
+      <p id="webbNote" class="hint"></p>
+      <div id="webbFrames" class="webb-frames"></div>
+      <p class="hint">WANDERERS matches these coordinates against the outlines of every public Webb (JWST) imaging frame in
+        NASA's MAST archive (<span id="webbCount"></span>), then shows the real Webb pixels, with the gold outline marking the frame.
+        What Webb is observing right now: <a href="https://spacetelescopelive.org/webb" target="_blank" rel="noopener">Space Telescope Live ↗</a></p>
+    </div>
+    <div id="changes" class="changes" hidden>
+      <h3>What else moved in this field? <span class="hint">(automatic search, then checked)</span></h3>
+      <p id="chSummary" class="chsum"></p>
+      <ul id="chList" class="chlist"></ul>
+      <p id="chNote" class="hint"></p>
+    </div>
+    <div id="starView" hidden>
+      <div class="star-search">
+        <label for="starQ">Find a star</label>
+        <input id="starQ" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="starResults"
+          placeholder="Name, Bayer, HIP, HD or Gliese: Barnard's Star, Alpha Cen, HIP 32349, Gl 699" autocomplete="off">
+        <ul id="starResults" role="listbox" class="star-results" hidden></ul>
+      </div>
+      <p id="starMsg" class="hint" aria-live="polite">Search about 12,000 named and naked-eye stars from the HYG database.</p>
+      <p id="starSuggest" class="hint chips"></p>
+      <div id="starDetail" class="star-detail" hidden></div>
+      <div id="starQuake" hidden></div>
+      <section id="starLong" class="lr" hidden aria-label="Path over thousands of years">
+        <h3>Over thousands of years <span class="hint">where it goes on the sky and through space</span></h3>
+        <div class="lr-controls">
+          <label>Show <select id="lrSpan">
+            <option value="1000">±1,000 years</option><option value="5000">±5,000 years</option>
+            <option value="10000" selected>±10,000 years</option><option value="20000">±20,000 years</option>
+            <option value="50000">±50,000 years</option></select></label>
+          <label>Sky view <select id="lrProj">
+            <option value="globe">Globe (true shape of the sky)</option>
+            <option value="radec">RA / Dec chart (like a star atlas)</option></select></label>
+          <button id="lrPlay" type="button" aria-pressed="false">▶ Play</button>
+          <input type="range" id="lrYear" aria-label="Year shown">
+          <span id="lrYearLbl" class="mono"></span>
+        </div>
+        <ul id="lrWarn" class="hint lr-warn"></ul>
+        <div id="lrBody">
+          <div class="lr-grid">
+            <figure><canvas id="lrSky" data-aspect="0.85" role="img" aria-label="The star's track on the sky"></canvas>
+              <figcaption>On the sky: the track is a great circle, so it curves on the sphere; ticks are evenly spaced in time, so they spread out as the star comes closer and moves faster.</figcaption></figure>
+            <figure><canvas id="lr3d" data-aspect="0.85" tabindex="0" role="img" aria-label="The star's path through space around the Sun and Earth. Arrow keys rotate."></canvas>
+              <figcaption>In space, around the Sun and Earth (1 AU apart, one point at this scale). Pink dashed line: our line of sight in the chosen year.</figcaption></figure>
+          </div>
+          <canvas id="lrDist" data-aspect="0.22" role="img" aria-label="Distance from the Sun over time"></canvas>
+          <div id="lrCard"></div>
+          <p id="lrSrc" class="hint"></p>
+          <p class="hint">How: the learnt present-day state is carried through 3D space at constant velocity (the model behind
+            astropy's <code>apply_space_motion</code>). The pink cloud is 300 runs with the starting values varied by their
+            uncertainties. The Galaxy's gravity, which bends real paths over millions of years, and orbits around companions are not included.</p>
+        </div>
+      </section>
+      <p id="starPredMsg" aria-live="polite"></p>
+      <div id="starPred" hidden>
+        <h3>Past and future path <span class="hint">1900 → 2100, learnt by a classical machine-learning model</span></h3>
+        <svg id="starChart" viewBox="0 0 640 420" role="img"></svg>
+        <p class="hint slegend"><span class="sw past"></span> past · <span class="sw future"></span> predicted future ·
+          <span class="sw band"></span> 68% uncertainty · dots: measured positions
+          (<span class="dot" style="background:#b48cff"></span> Hipparcos/Tycho, <span class="dot" style="background:#7cc4ff"></span> ground and WISE surveys,
+          <span class="dot" style="background:#7ee787"></span> Gaia, <span class="dot" style="background:#ffb547"></span> WANDERERS). North up, east left.</p>
+        <table id="starTable" class="frames"></table>
+        <h4>How the path was learnt</h4>
+        <div id="starModel"></div>
+        <details><summary>Measured positions used for training</summary><div id="starObs"></div></details>
+      </div>
+    </div>
+    <section class="path-card" id="pathCard" aria-label="Path taken and path ahead" hidden>
+      <div class="panel-row"><h3>Where it has been, and where it is going</h3><span class="tag-chip ai">Prediction model</span></div>
+      <p class="hint">Blue: the path it has taken. Green, dashed: the path it will take. The dot is where it is now.</p>
+      <div id="pathBody"></div>
+    </section>
+    <details class="meta" id="meta">
+      <summary>Frame details and data flags</summary>
+      <div id="metaBody"></div>
+    </details>
+    <details class="meta"><summary>Every SPHEREx image: date, detector, wavelength and flags at the target</summary><div id="metaBox"></div></details>
+    <p class="hint ext">
+      <a id="aladinLink" href="https://aladin.cds.unistra.fr/AladinLite/" target="_blank" rel="noopener noreferrer">Open this field in Aladin Lite ↗</a>
+      CDS sky viewer, showing the WISE infrared survey. Opens a new tab and sends it only this patch's coordinates.
+    </p>
+  </section>
+
+  <!-- RIGHT: evidence -->
+  <section class="panel evidence" aria-label="Evidence">
+    <div class="panel-row"><p class="panel-k mono">03 · Evidence</p><span class="tag-chip data">Measured</span></div>
+    <h2>Evidence card</h2>
+    <div id="verdict" class="verdict"></div>
+    <ul id="checks" class="checks"></ul>
+    <div id="numbers" class="numbers"></div>
+    <div id="insights" class="insights" hidden>
+      <h3>What this tells us <span class="hint">(worked out from the numbers above)</span></h3>
+      <ul id="facts" class="facts"></ul>
+      <details class="limits">
+        <summary>What this view cannot show</summary>
+        <ul id="limits"></ul>
+      </details>
+      <p class="hint next">Check it yourself: <span id="nextLinks"></span></p>
+    </div>
+    <div class="ai">
+      <h3>WANDERERS explains <span class="tag-chip ai">AI · Claude</span></h3>
+      <p class="hint">Written by Claude from the measurements above. An interpretation, not a measurement.</p>
+      <p id="explain" class="explain"></p>
+    </div>
+    <div class="ask">
+      <h3>Ask WANDERERS <span class="tag-chip ai">AI</span></h3>
+      <div id="qButtons" class="qbuttons"></div>
+      <form id="askForm" hidden>
+        <input id="askIn" placeholder="Ask about this object…" autocomplete="off">
+        <button type="submit">Ask</button>
+      </form>
+      <p id="answer" class="explain"></p>
+    </div>
+  </section>
+
+  <!-- BOTTOM: spectrum -->
+  <section class="panel spectrum" aria-label="Spectrum">
+    <div class="spec-head">
+      <div><p class="panel-k mono">04 · Spectrum</p>
+      <h2>Infrared fingerprint <span class="hint">SPHEREx spectrum, 0.75–5 µm, built from every image of this target</span></h2></div>
+      <div class="legend"><span class="sw h2o"></span>Water <span class="sw ch4"></span>Methane <span class="sw co"></span>CO / CO₂</div>
+    </div>
+    <svg id="spec" viewBox="0 0 900 260" role="img" aria-label="Spectrum chart"></svg>
+    <p id="specNote" class="hint"></p>
+    <div id="targetQuake" hidden></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p><strong>Candidate, never "discovery".</strong> WANDERERS points people at interesting objects and shows the evidence.
+    Confirming a new object needs follow-up by astronomers.</p>
+  <p>Data: SPHEREx DR1 (NASA/IPAC IRSA) · AllWISE (NASA/IPAC IRSA) · Gaia DR3 (ESA) · Webb frames: MAST (STScI) and ESA ESASky · star names: HYG (CC BY-SA 4.0). NASA Space Apps 2026 · Planet X and SPHEREx.</p>
+</footer>
+<script src="theme.js"></script>
+<script src="framemath.js"></script>
+<script src="chartlayout.js"></script>
+<script src="frameinfo.js"></script>
+<script src="aladinlink.js"></script>
+<script src="starpath.js"></script>
+<script src="stardb.js"></script>
+<script src="starcore.js"></script>
+<script src="pathview.js?v=20261115b"></script>
+<script src="search.js?v=20261115b"></script>
+<script src="telescope.js?v=20261115b"></script>
+<script src="app.js?v=20261115b"></script>
+<script src="starquake.js?v=20261115b"></script>
+<script src="starquake-ui.js?v=20261115b"></script>
+<script src="longrange.js"></script>
+<script src="stars.js"></script>
+</body>
+</html>

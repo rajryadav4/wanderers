@@ -1,0 +1,4368 @@
+{
+ "id": "pos_77p9125_s45p0184",
+ "name": "Kapteyn's Star",
+ "kind": "An ancient halo star racing through our neighbourhood (second-fastest moving star)",
+ "story": "explore",
+ "reference": {
+  "source": "Gaia DR3",
+  "epoch": 2016.0,
+  "match_arcsec": 0.0,
+  "source_id": 4810594479418041856,
+  "ra": 77.9599373502188,
+  "dec": -45.0438126993602,
+  "pmra": 6491.223339061598,
+  "pmdec": -5708.614150045243,
+  "parallax": 254.19859326384577,
+  "phot_g_mean_mag": 8.063551902770996
+ },
+ "target_in_gaia": true,
+ "grid": {
+  "npix": 150,
+  "arcsec_per_pix": 2.0,
+  "centre_ra": 77.9664897918784,
+  "centre_dec": -45.047883773984026
+ },
+ "frames": {
+  "w2": [
+   {
+    "year": 2010.5,
+    "label": "WISE 2010",
+    "mission": "WISE",
+    "png": "w2_wise2010.png",
+    "detected": true,
+    "snr": 64.7
+   },
+   {
+    "year": 2025.664366329254,
+    "label": "SPHEREx 31 Aug 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v1_1.png",
+    "n_images": 3,
+    "survey": 1,
+    "detected": true
+   },
+   {
+    "year": 2025.6738669920996,
+    "label": "SPHEREx 03 Sep 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v1_2.png",
+    "n_images": 7,
+    "survey": 1,
+    "detected": true
+   },
+   {
+    "year": 2025.6992688897358,
+    "label": "SPHEREx 13 Sep 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v1_3.png",
+    "n_images": 1,
+    "survey": 1,
+    "detected": true
+   },
+   {
+    "year": 2026.0669665887065,
+    "label": "SPHEREx 25 Jan 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2_1.png",
+    "n_images": 1,
+    "survey": 2,
+    "detected": true
+   },
+   {
+    "year": 2026.1065686607913,
+    "label": "SPHEREx 08 Feb 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2_2.png",
+    "n_images": 1,
+    "survey": 2,
+    "detected": true
+   },
+   {
+    "year": 2026.1133845608108,
+    "label": "SPHEREx 11 Feb 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2_3.png",
+    "n_images": 6,
+    "survey": 2,
+    "detected": true
+   },
+   {
+    "year": 2026.1232304302314,
+    "label": "SPHEREx 15 Feb 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2_4.png",
+    "n_images": 3,
+    "survey": 2,
+    "detected": true
+   },
+   {
+    "year": 2026.6693401890993,
+    "label": "SPHEREx Sep 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3.png",
+    "n_images": 4,
+    "detected": true,
+    "snr": 3197.0
+   }
+  ],
+  "w1": [
+   {
+    "year": 2010.5,
+    "label": "WISE 2010",
+    "mission": "WISE",
+    "png": "w1_wise2010.png",
+    "detected": true,
+    "snr": 48.6
+   },
+   {
+    "year": 2025.6142092836296,
+    "label": "SPHEREx Aug 2025",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v1.png",
+    "n_images": 3,
+    "detected": true,
+    "snr": 2020.0
+   },
+   {
+    "year": 2026.1701382471979,
+    "label": "SPHEREx 04 Mar 2026",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v2_1.png",
+    "n_images": 1,
+    "survey": 2,
+    "detected": true
+   },
+   {
+    "year": 2026.1762739959083,
+    "label": "SPHEREx 06 Mar 2026",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v2_2.png",
+    "n_images": 2,
+    "survey": 2,
+    "detected": true
+   },
+   {
+    "year": 2026.1812890336796,
+    "label": "SPHEREx 08 Mar 2026",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v2_3.png",
+    "n_images": 2,
+    "survey": 2,
+    "detected": true
+   },
+   {
+    "year": 2026.607510588345,
+    "label": "SPHEREx Aug 2026",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v3.png",
+    "n_images": 1,
+    "detected": false,
+    "snr": 0.0
+   }
+  ],
+  "d1": [
+   {
+    "year": 2025.6135479345166,
+    "label": "SPHEREx Aug 2025",
+    "mission": "SPHEREx",
+    "png": "d1_spherex_v1.png",
+    "n_images": 9
+   },
+   {
+    "year": 2026.1753390713889,
+    "label": "SPHEREx Mar 2026",
+    "mission": "SPHEREx",
+    "png": "d1_spherex_v2.png",
+    "n_images": 10
+   },
+   {
+    "year": 2026.6094245974846,
+    "label": "SPHEREx Aug 2026",
+    "mission": "SPHEREx",
+    "png": "d1_spherex_v3.png",
+    "n_images": 6
+   }
+  ],
+  "d2": [
+   {
+    "year": 2025.625142184667,
+    "label": "SPHEREx Aug 2025",
+    "mission": "SPHEREx",
+    "png": "d2_spherex_v1.png",
+    "n_images": 9
+   },
+   {
+    "year": 2026.1350792099825,
+    "label": "SPHEREx Feb 2026",
+    "mission": "SPHEREx",
+    "png": "d2_spherex_v2.png",
+    "n_images": 10
+   },
+   {
+    "year": 2026.6376116349022,
+    "label": "SPHEREx Aug 2026",
+    "mission": "SPHEREx",
+    "png": "d2_spherex_v3.png",
+    "n_images": 6
+   }
+  ],
+  "d3": [
+   {
+    "year": 2025.6735851656488,
+    "label": "SPHEREx Sep 2025",
+    "mission": "SPHEREx",
+    "png": "d3_spherex_v1.png",
+    "n_images": 11
+   },
+   {
+    "year": 2026.109930983806,
+    "label": "SPHEREx Feb 2026",
+    "mission": "SPHEREx",
+    "png": "d3_spherex_v2.png",
+    "n_images": 10
+   },
+   {
+    "year": 2026.6693401891066,
+    "label": "SPHEREx Sep 2026",
+    "mission": "SPHEREx",
+    "png": "d3_spherex_v3.png",
+    "n_images": 4
+   }
+  ],
+  "d4": [
+   {
+    "year": 2025.6135479345166,
+    "label": "SPHEREx Aug 2025",
+    "mission": "SPHEREx",
+    "png": "d4_spherex_v1.png",
+    "n_images": 9
+   },
+   {
+    "year": 2026.1740587801025,
+    "label": "SPHEREx Mar 2026",
+    "mission": "SPHEREx",
+    "png": "d4_spherex_v2.png",
+    "n_images": 10
+   },
+   {
+    "year": 2026.6089602852692,
+    "label": "SPHEREx Aug 2026",
+    "mission": "SPHEREx",
+    "png": "d4_spherex_v3.png",
+    "n_images": 6
+   }
+  ],
+  "d5": [
+   {
+    "year": 2025.6251421846573,
+    "label": "SPHEREx Aug 2025",
+    "mission": "SPHEREx",
+    "png": "d5_spherex_v1.png",
+    "n_images": 9
+   },
+   {
+    "year": 2026.1350792099734,
+    "label": "SPHEREx Feb 2026",
+    "mission": "SPHEREx",
+    "png": "d5_spherex_v2.png",
+    "n_images": 10
+   },
+   {
+    "year": 2026.6376116349022,
+    "label": "SPHEREx Aug 2026",
+    "mission": "SPHEREx",
+    "png": "d5_spherex_v3.png",
+    "n_images": 6
+   }
+  ],
+  "d6": [
+   {
+    "year": 2025.6735851656545,
+    "label": "SPHEREx Sep 2025",
+    "mission": "SPHEREx",
+    "png": "d6_spherex_v1.png",
+    "n_images": 11
+   },
+   {
+    "year": 2026.1099309838028,
+    "label": "SPHEREx Feb 2026",
+    "mission": "SPHEREx",
+    "png": "d6_spherex_v2.png",
+    "n_images": 10
+   },
+   {
+    "year": 2026.6693401890993,
+    "label": "SPHEREx Sep 2026",
+    "mission": "SPHEREx",
+    "png": "d6_spherex_v3.png",
+    "n_images": 4
+   }
+  ]
+ },
+ "channels": {
+  "w2": "4.6 \u00b5m",
+  "w1": "3.4 \u00b5m",
+  "d1": "Detector 1 \u00b7 0.75\u20131.09 \u00b5m co-add",
+  "d2": "Detector 2 \u00b7 1.1\u20131.62 \u00b5m co-add",
+  "d3": "Detector 3 \u00b7 1.63\u20132.41 \u00b5m co-add",
+  "d4": "Detector 4 \u00b7 2.42\u20133.82 \u00b5m co-add",
+  "d5": "Detector 5 \u00b7 3.83\u20134.41 \u00b5m co-add",
+  "d6": "Detector 6 \u00b7 4.42\u20135.0 \u00b5m co-add"
+ },
+ "stacks": {
+  "w2": [
+   {
+    "year": 2010.5,
+    "label": "WISE 2010",
+    "mission": "WISE",
+    "png": "w2_wise2010.png",
+    "detected": true,
+    "snr": 64.7
+   },
+   {
+    "year": 2025.6735851656545,
+    "label": "SPHEREx Sep 2025",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v1.png",
+    "n_images": 11,
+    "detected": true,
+    "snr": 2865.9
+   },
+   {
+    "year": 2026.1112303550055,
+    "label": "SPHEREx Feb 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v2.png",
+    "n_images": 11,
+    "detected": true,
+    "snr": 3916.3
+   },
+   {
+    "year": 2026.6693401890993,
+    "label": "SPHEREx Sep 2026",
+    "mission": "SPHEREx",
+    "png": "w2_spherex_v3.png",
+    "n_images": 4,
+    "detected": true,
+    "snr": 3197.0
+   }
+  ],
+  "w1": [
+   {
+    "year": 2010.5,
+    "label": "WISE 2010",
+    "mission": "WISE",
+    "png": "w1_wise2010.png",
+    "detected": true,
+    "snr": 48.6
+   },
+   {
+    "year": 2025.6142092836296,
+    "label": "SPHEREx Aug 2025",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v1.png",
+    "n_images": 3,
+    "detected": true,
+    "snr": 2020.0
+   },
+   {
+    "year": 2026.177052861275,
+    "label": "SPHEREx Mar 2026",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v2.png",
+    "n_images": 5,
+    "detected": true,
+    "snr": 1450.4
+   },
+   {
+    "year": 2026.607510588345,
+    "label": "SPHEREx Aug 2026",
+    "mission": "SPHEREx",
+    "png": "w1_spherex_v3.png",
+    "n_images": 1,
+    "detected": false,
+    "snr": 0.0
+   }
+  ]
+ },
+ "diff": {
+  "w2": "w2_diff.png",
+  "w1": "w1_diff.png",
+  "d1": "d1_diff.png",
+  "d2": "d2_diff.png",
+  "d3": "d3_diff.png",
+  "d4": "d4_diff.png",
+  "d5": "d5_diff.png",
+  "d6": "d6_diff.png"
+ },
+ "fov_arcsec": 300.0,
+ "metadata": [
+  {
+   "image": "level2_2025W32_2D_0510_1D1_spx_l2b-v27-2026-226",
+   "date": "2025-08-10 04:38",
+   "detector": 1,
+   "lam_um": 0.87,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W32_2D_0510_1D4_spx_l2b-v27-2026-226",
+   "date": "2025-08-10 04:38",
+   "detector": 4,
+   "lam_um": 2.883,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W33_1B_0316_1D1_spx_l2b-v27-2026-227",
+   "date": "2025-08-12 16:57",
+   "detector": 1,
+   "lam_um": 0.911,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_1B_0316_1D4_spx_l2b-v27-2026-227",
+   "date": "2025-08-12 16:57",
+   "detector": 4,
+   "lam_um": 3.045,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_1B_0356_1D1_spx_l2b-v27-2026-227",
+   "date": "2025-08-12 21:47",
+   "detector": 1,
+   "lam_um": 0.743,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_1B_0356_1D4_spx_l2b-v27-2026-227",
+   "date": "2025-08-12 21:47",
+   "detector": 4,
+   "lam_um": 2.426,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "DICHROIC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_1B_0356_3D1_spx_l2b-v27-2026-227",
+   "date": "2025-08-12 21:51",
+   "detector": 1,
+   "lam_um": 0.779,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W33_1B_0356_3D4_spx_l2b-v27-2026-227",
+   "date": "2025-08-12 21:51",
+   "detector": 4,
+   "lam_um": 2.541,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W33_1B_0367_3D1_spx_l2b-v27-2026-227",
+   "date": "2025-08-12 23:27",
+   "detector": 1,
+   "lam_um": 1.025,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_1B_0367_3D4_spx_l2b-v27-2026-227",
+   "date": "2025-08-12 23:27",
+   "detector": 4,
+   "lam_um": 3.483,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_1B_0403_1D1_spx_l2b-v27-2026-227",
+   "date": "2025-08-13 04:18",
+   "detector": 1,
+   "lam_um": 0.773,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_1B_0403_1D4_spx_l2b-v27-2026-227",
+   "date": "2025-08-13 04:18",
+   "detector": 4,
+   "lam_um": 2.521,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_1B_0403_2D1_spx_l2b-v27-2026-227",
+   "date": "2025-08-13 04:20",
+   "detector": 1,
+   "lam_um": 0.792,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W33_1B_0403_2D4_spx_l2b-v27-2026-227",
+   "date": "2025-08-13 04:20",
+   "detector": 4,
+   "lam_um": 2.59,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W33_1B_0478_1D1_spx_l2b-v27-2026-227",
+   "date": "2025-08-13 14:03",
+   "detector": 1,
+   "lam_um": 1.075,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_1B_0478_1D4_spx_l2b-v27-2026-227",
+   "date": "2025-08-13 14:03",
+   "detector": 4,
+   "lam_um": 3.673,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_1B_0556_1D1_spx_l2b-v27-2026-227",
+   "date": "2025-08-13 23:51",
+   "detector": 1,
+   "lam_um": 0.83,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_1B_0556_1D4_spx_l2b-v27-2026-227",
+   "date": "2025-08-13 23:51",
+   "detector": 4,
+   "lam_um": 2.733,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_2C_0488_2D2_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 12:16",
+   "detector": 2,
+   "lam_um": 1.136,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W33_2C_0488_2D5_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 12:16",
+   "detector": 5,
+   "lam_um": 3.867,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W33_2C_0533_2D2_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 15:28",
+   "detector": 2,
+   "lam_um": 1.191,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_2C_0533_2D5_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 15:28",
+   "detector": 5,
+   "lam_um": 3.934,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_2C_0554_1D2_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 17:04",
+   "detector": 2,
+   "lam_um": 1.279,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_2C_0554_1D5_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 17:04",
+   "detector": 5,
+   "lam_um": 4.038,
+   "flags_at_target": [
+    "TRANSIENT",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_2C_0554_3D2_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 17:09",
+   "detector": 2,
+   "lam_um": 1.34,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W33_2C_0554_3D5_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 17:09",
+   "detector": 5,
+   "lam_um": 4.108,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W33_2C_0620_1D2_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 21:57",
+   "detector": 2,
+   "lam_um": 1.404,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_2C_0620_1D5_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 21:57",
+   "detector": 5,
+   "lam_um": 4.18,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_2C_0620_3D2_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 22:01",
+   "detector": 2,
+   "lam_um": 1.473,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_2C_0620_3D5_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 22:01",
+   "detector": 5,
+   "lam_um": 4.252,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W33_2C_0620_4D2_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 22:04",
+   "detector": 2,
+   "lam_um": 1.509,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W33_2C_0620_4D5_spx_l2b-v27-2026-228",
+   "date": "2025-08-16 22:04",
+   "detector": 5,
+   "lam_um": 4.288,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W34_1B_0044_2D2_spx_l2b-v27-2026-228",
+   "date": "2025-08-18 04:55",
+   "detector": 2,
+   "lam_um": 1.583,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W34_1B_0044_2D5_spx_l2b-v27-2026-228",
+   "date": "2025-08-18 04:55",
+   "detector": 5,
+   "lam_um": 4.362,
+   "flags_at_target": [
+    "OVERFLOW"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W34_1B_0045_1D2_spx_l2b-v27-2026-228",
+   "date": "2025-08-18 05:00",
+   "detector": 2,
+   "lam_um": 1.11,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W34_1B_0045_1D5_spx_l2b-v27-2026-228",
+   "date": "2025-08-18 05:00",
+   "detector": 5,
+   "lam_um": 3.834,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W35_2A_0425_1D3_spx_l2b-v27-2026-231",
+   "date": "2025-08-30 16:58",
+   "detector": 3,
+   "lam_um": 1.763,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W35_2A_0425_1D6_spx_l2b-v27-2026-231",
+   "date": "2025-08-30 16:58",
+   "detector": 6,
+   "lam_um": 4.526,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W35_2A_0590_1D3_spx_l2b-v27-2026-231",
+   "date": "2025-08-31 12:32",
+   "detector": 3,
+   "lam_um": 1.846,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W35_2A_0590_1D6_spx_l2b-v27-2026-231",
+   "date": "2025-08-31 12:32",
+   "detector": 6,
+   "lam_um": 4.592,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W35_2A_0693_2D3_spx_l2b-v27-2026-231",
+   "date": "2025-08-31 23:59",
+   "detector": 3,
+   "lam_um": 1.977,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W35_2A_0693_2D6_spx_l2b-v27-2026-231",
+   "date": "2025-08-31 23:59",
+   "detector": 6,
+   "lam_um": 4.694,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W36_1A_0444_2D3_spx_l2b-v27-2026-232",
+   "date": "2025-09-02 23:11",
+   "detector": 3,
+   "lam_um": 2.069,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W36_1A_0444_2D6_spx_l2b-v27-2026-232",
+   "date": "2025-09-02 23:11",
+   "detector": 6,
+   "lam_um": 4.762,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W36_1A_0444_3D3_spx_l2b-v27-2026-232",
+   "date": "2025-09-02 23:13",
+   "detector": 3,
+   "lam_um": 2.118,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W36_1A_0444_3D6_spx_l2b-v27-2026-232",
+   "date": "2025-09-02 23:13",
+   "detector": 6,
+   "lam_um": 4.797,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W36_1A_0574_4D3_spx_l2b-v27-2026-232",
+   "date": "2025-09-03 13:55",
+   "detector": 3,
+   "lam_um": 1.652,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W36_1A_0574_4D6_spx_l2b-v27-2026-232",
+   "date": "2025-09-03 13:55",
+   "detector": 6,
+   "lam_um": 4.435,
+   "flags_at_target": [
+    "OVERFLOW",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W36_1A_0674_2D3_spx_l2b-v27-2026-232",
+   "date": "2025-09-04 01:18",
+   "detector": 3,
+   "lam_um": 2.268,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W36_1A_0674_2D6_spx_l2b-v27-2026-232",
+   "date": "2025-09-04 01:18",
+   "detector": 6,
+   "lam_um": 4.902,
+   "flags_at_target": [
+    "OVERFLOW"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W36_1A_0674_3D3_spx_l2b-v27-2026-232",
+   "date": "2025-09-04 01:21",
+   "detector": 3,
+   "lam_um": 2.32,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W36_1A_0674_3D6_spx_l2b-v27-2026-232",
+   "date": "2025-09-04 01:21",
+   "detector": 6,
+   "lam_um": 4.938,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W36_2B_0021_2D3_spx_l2b-v27-2026-234",
+   "date": "2025-09-04 14:19",
+   "detector": 3,
+   "lam_um": 2.419,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "DICHROIC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W36_2B_0021_2D6_spx_l2b-v27-2026-234",
+   "date": "2025-09-04 14:19",
+   "detector": 6,
+   "lam_um": 5.009,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W36_2B_0089_3D3_spx_l2b-v27-2026-234",
+   "date": "2025-09-04 22:30",
+   "detector": 3,
+   "lam_um": 1.769,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W36_2B_0089_3D6_spx_l2b-v27-2026-234",
+   "date": "2025-09-04 22:30",
+   "detector": 6,
+   "lam_um": 4.531,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2025W37_2A_0364_1D3_spx_l2b-v27-2026-236",
+   "date": "2025-09-13 03:47",
+   "detector": 3,
+   "lam_um": 1.804,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2025W37_2A_0364_1D6_spx_l2b-v27-2026-236",
+   "date": "2025-09-13 03:47",
+   "detector": 6,
+   "lam_um": 4.559,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W04_2A_0577_1D3_spx_l2b-v27-2026-218",
+   "date": "2026-01-25 11:01",
+   "detector": 3,
+   "lam_um": 2.327,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W04_2A_0577_1D6_spx_l2b-v27-2026-218",
+   "date": "2026-01-25 11:01",
+   "detector": 6,
+   "lam_um": 4.942,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W06_2A_0712_3D3_spx_l2b-v27-2026-222",
+   "date": "2026-02-08 22:10",
+   "detector": 3,
+   "lam_um": 1.69,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "HOT",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W06_2A_0712_3D6_spx_l2b-v27-2026-222",
+   "date": "2026-02-08 22:10",
+   "detector": 6,
+   "lam_um": 4.467,
+   "flags_at_target": [
+    "OVERFLOW",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W07_1A_0439_3D3_spx_l2b-v27-2026-225",
+   "date": "2026-02-10 21:25",
+   "detector": 3,
+   "lam_um": 1.853,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W07_1A_0439_3D6_spx_l2b-v27-2026-225",
+   "date": "2026-02-10 21:25",
+   "detector": 6,
+   "lam_um": 4.598,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W07_1A_0439_4D3_spx_l2b-v27-2026-225",
+   "date": "2026-02-10 21:27",
+   "detector": 3,
+   "lam_um": 1.896,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "PERSIST",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W07_1A_0439_4D6_spx_l2b-v27-2026-225",
+   "date": "2026-02-10 21:27",
+   "detector": 6,
+   "lam_um": 4.632,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W07_1A_0472_2D3_spx_l2b-v27-2026-225",
+   "date": "2026-02-11 00:40",
+   "detector": 3,
+   "lam_um": 1.985,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W07_1A_0472_2D6_spx_l2b-v27-2026-225",
+   "date": "2026-02-11 00:40",
+   "detector": 6,
+   "lam_um": 4.7,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W07_1A_0472_4D3_spx_l2b-v27-2026-225",
+   "date": "2026-02-11 00:44",
+   "detector": 3,
+   "lam_um": 2.078,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W07_1A_0472_4D6_spx_l2b-v27-2026-225",
+   "date": "2026-02-11 00:44",
+   "detector": 6,
+   "lam_um": 4.769,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W07_1A_0728_1D3_spx_l2b-v27-2026-225",
+   "date": "2026-02-12 07:35",
+   "detector": 3,
+   "lam_um": 2.126,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W07_1A_0728_1D6_spx_l2b-v27-2026-225",
+   "date": "2026-02-12 07:35",
+   "detector": 6,
+   "lam_um": 4.803,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W07_1A_0728_3D3_spx_l2b-v27-2026-225",
+   "date": "2026-02-12 07:39",
+   "detector": 3,
+   "lam_um": 2.226,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W07_1A_0728_3D6_spx_l2b-v27-2026-225",
+   "date": "2026-02-12 07:39",
+   "detector": 6,
+   "lam_um": 4.873,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W07_2A_0343_2D3_spx_l2b-v27-2026-226",
+   "date": "2026-02-14 06:51",
+   "detector": 3,
+   "lam_um": 1.811,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W07_2A_0343_2D6_spx_l2b-v27-2026-226",
+   "date": "2026-02-14 06:51",
+   "detector": 6,
+   "lam_um": 4.565,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W07_2A_0533_1D3_spx_l2b-v27-2026-226",
+   "date": "2026-02-15 08:54",
+   "detector": 3,
+   "lam_um": 2.33,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W07_2A_0533_1D6_spx_l2b-v27-2026-226",
+   "date": "2026-02-15 08:54",
+   "detector": 6,
+   "lam_um": 4.944,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W07_2A_0534_1D2_spx_l2b-v27-2026-226",
+   "date": "2026-02-15 08:56",
+   "detector": 2,
+   "lam_um": 1.636,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W07_2A_0534_1D5_spx_l2b-v27-2026-226",
+   "date": "2026-02-15 08:56",
+   "detector": 5,
+   "lam_um": 4.413,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W08_1A_0288_2D2_spx_l2b-v27-2026-227",
+   "date": "2026-02-17 11:29",
+   "detector": 2,
+   "lam_um": 1.137,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_1A_0288_2D5_spx_l2b-v27-2026-227",
+   "date": "2026-02-17 11:29",
+   "detector": 5,
+   "lam_um": 3.868,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_1A_0462_1D2_spx_l2b-v27-2026-227",
+   "date": "2026-02-18 10:14",
+   "detector": 2,
+   "lam_um": 1.221,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_1A_0462_1D5_spx_l2b-v27-2026-227",
+   "date": "2026-02-18 10:14",
+   "detector": 5,
+   "lam_um": 3.969,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_1A_0462_2D2_spx_l2b-v27-2026-227",
+   "date": "2026-02-18 10:16",
+   "detector": 2,
+   "lam_um": 1.25,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W08_1A_0462_2D5_spx_l2b-v27-2026-227",
+   "date": "2026-02-18 10:16",
+   "detector": 5,
+   "lam_um": 4.004,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W08_1A_0462_3D2_spx_l2b-v27-2026-227",
+   "date": "2026-02-18 10:18",
+   "detector": 2,
+   "lam_um": 1.28,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_1A_0462_3D5_spx_l2b-v27-2026-227",
+   "date": "2026-02-18 10:18",
+   "detector": 5,
+   "lam_um": 4.039,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_2A_0136_2D2_spx_l2b-v27-2026-227",
+   "date": "2026-02-20 04:37",
+   "detector": 2,
+   "lam_um": 1.373,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_2A_0136_2D5_spx_l2b-v27-2026-227",
+   "date": "2026-02-20 04:37",
+   "detector": 5,
+   "lam_um": 4.145,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_2A_0136_4D2_spx_l2b-v27-2026-227",
+   "date": "2026-02-20 04:41",
+   "detector": 2,
+   "lam_um": 1.439,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_2A_0136_4D5_spx_l2b-v27-2026-227",
+   "date": "2026-02-20 04:41",
+   "detector": 5,
+   "lam_um": 4.216,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_2A_0298_1D2_spx_l2b-v27-2026-227",
+   "date": "2026-02-21 01:46",
+   "detector": 2,
+   "lam_um": 1.473,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W08_2A_0298_1D5_spx_l2b-v27-2026-227",
+   "date": "2026-02-21 01:46",
+   "detector": 5,
+   "lam_um": 4.252,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W08_2A_0298_2D2_spx_l2b-v27-2026-227",
+   "date": "2026-02-21 01:48",
+   "detector": 2,
+   "lam_um": 1.509,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_2A_0298_2D5_spx_l2b-v27-2026-227",
+   "date": "2026-02-21 01:48",
+   "detector": 5,
+   "lam_um": 4.289,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_2A_0597_1D2_spx_l2b-v27-2026-227",
+   "date": "2026-02-22 16:52",
+   "detector": 2,
+   "lam_um": 1.621,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W08_2A_0597_1D5_spx_l2b-v27-2026-227",
+   "date": "2026-02-22 16:52",
+   "detector": 5,
+   "lam_um": 4.399,
+   "flags_at_target": [
+    "OVERFLOW",
+    "HALO"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_1A_0301_2D4_spx_l2b-v27-2026-229",
+   "date": "2026-03-03 12:44",
+   "detector": 4,
+   "lam_um": null,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W10_1A_0301_3D1_spx_l2b-v27-2026-229",
+   "date": "2026-03-03 12:47",
+   "detector": 1,
+   "lam_um": 0.748,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W10_1A_0301_4D4_spx_l2b-v27-2026-229",
+   "date": "2026-03-03 12:49",
+   "detector": 4,
+   "lam_um": 2.492,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_1A_0411_1D1_spx_l2b-v27-2026-229",
+   "date": "2026-03-04 03:21",
+   "detector": 1,
+   "lam_um": 1.042,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_1A_0411_3D4_spx_l2b-v27-2026-229",
+   "date": "2026-03-04 03:25",
+   "detector": 4,
+   "lam_um": 3.74,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_1A_0473_1D1_spx_l2b-v27-2026-229",
+   "date": "2026-03-04 11:30",
+   "detector": 1,
+   "lam_um": 0.784,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_1A_0473_1D4_spx_l2b-v27-2026-229",
+   "date": "2026-03-04 11:30",
+   "detector": 4,
+   "lam_um": 2.56,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W10_1A_0473_2D1_spx_l2b-v27-2026-229",
+   "date": "2026-03-04 11:33",
+   "detector": 1,
+   "lam_um": 0.802,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W10_1A_0473_2D4_spx_l2b-v27-2026-229",
+   "date": "2026-03-04 11:33",
+   "detector": 4,
+   "lam_um": 2.629,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_1A_0473_3D1_spx_l2b-v27-2026-229",
+   "date": "2026-03-04 11:35",
+   "detector": 1,
+   "lam_um": 0.821,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_2B_0166_1D4_spx_l2b-v27-2026-231",
+   "date": "2026-03-06 09:07",
+   "detector": 4,
+   "lam_um": 2.85,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_2B_0166_2D1_spx_l2b-v27-2026-231",
+   "date": "2026-03-06 09:09",
+   "detector": 1,
+   "lam_um": 0.881,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "NONFUNC",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_2B_0166_3D4_spx_l2b-v27-2026-231",
+   "date": "2026-03-06 09:11",
+   "detector": 4,
+   "lam_um": 3.007,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_2B_0166_4D1_spx_l2b-v27-2026-231",
+   "date": "2026-03-06 09:14",
+   "detector": 1,
+   "lam_um": 0.923,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_2B_0166_4D4_spx_l2b-v27-2026-231",
+   "date": "2026-03-06 09:14",
+   "detector": 4,
+   "lam_um": 3.091,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W10_2B_0507_1D1_spx_l2b-v27-2026-231",
+   "date": "2026-03-08 05:07",
+   "detector": 1,
+   "lam_um": 0.945,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W10_2B_0507_1D4_spx_l2b-v27-2026-231",
+   "date": "2026-03-08 05:07",
+   "detector": 4,
+   "lam_um": 3.176,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_2B_0507_2D1_spx_l2b-v27-2026-231",
+   "date": "2026-03-08 05:09",
+   "detector": 1,
+   "lam_um": 0.968,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W10_2B_0507_4D4_spx_l2b-v27-2026-231",
+   "date": "2026-03-08 05:14",
+   "detector": 4,
+   "lam_um": 3.441,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W11_1A_0215_1D1_spx_l2b-v27-2026-232",
+   "date": "2026-03-10 02:44",
+   "detector": 1,
+   "lam_um": 1.039,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W32_2A_0372_1D4_spx_l2b-v27-2026-223",
+   "date": "2026-08-07 21:44",
+   "detector": 4,
+   "lam_um": 2.437,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W32_2A_0388_1D1_spx_l2b-v27-2026-223",
+   "date": "2026-08-07 23:19",
+   "detector": 1,
+   "lam_um": 0.766,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W32_2A_0741_1D4_spx_l2b-v27-2026-223",
+   "date": "2026-08-09 20:53",
+   "detector": 4,
+   "lam_um": 2.546,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W32_2A_0741_2D1_spx_l2b-v27-2026-223",
+   "date": "2026-08-09 20:56",
+   "detector": 1,
+   "lam_um": 0.799,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W32_2A_0741_3D4_spx_l2b-v27-2026-223",
+   "date": "2026-08-09 20:58",
+   "detector": 4,
+   "lam_um": 2.687,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W32_2A_0741_4D1_spx_l2b-v27-2026-223",
+   "date": "2026-08-09 21:00",
+   "detector": 1,
+   "lam_um": 0.837,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W33_1A_0002_1D4_spx_l2b-v27-2026-240",
+   "date": "2026-08-10 00:11",
+   "detector": 4,
+   "lam_um": 2.835,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W33_1A_0002_2D1_spx_l2b-v27-2026-240",
+   "date": "2026-08-10 00:13",
+   "detector": 1,
+   "lam_um": 0.877,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W33_1A_0183_1D4_spx_l2b-v27-2026-240",
+   "date": "2026-08-10 21:26",
+   "detector": 4,
+   "lam_um": 3.333,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W33_1A_0359_1D1_spx_l2b-v27-2026-240",
+   "date": "2026-08-11 20:09",
+   "detector": 1,
+   "lam_um": 1.01,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W34_1A_0126_3D2_spx_l2b-v27-2026-243",
+   "date": "2026-08-17 14:41",
+   "detector": 2,
+   "lam_um": 1.117,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W34_1A_0126_3D5_spx_l2b-v27-2026-243",
+   "date": "2026-08-17 14:41",
+   "detector": 5,
+   "lam_um": 3.842,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W34_1A_0157_3D2_spx_l2b-v27-2026-243",
+   "date": "2026-08-17 17:56",
+   "detector": 2,
+   "lam_um": 1.175,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W34_1A_0157_3D5_spx_l2b-v27-2026-243",
+   "date": "2026-08-17 17:56",
+   "detector": 5,
+   "lam_um": 3.915,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W34_1A_0357_1D2_spx_l2b-v27-2026-243",
+   "date": "2026-08-18 19:55",
+   "detector": 2,
+   "lam_um": 1.262,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W34_1A_0357_1D5_spx_l2b-v27-2026-243",
+   "date": "2026-08-18 19:55",
+   "detector": 5,
+   "lam_um": 4.018,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W34_1A_0357_3D2_spx_l2b-v27-2026-243",
+   "date": "2026-08-18 19:59",
+   "detector": 2,
+   "lam_um": 1.322,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W34_1A_0357_3D5_spx_l2b-v27-2026-243",
+   "date": "2026-08-18 19:59",
+   "detector": 5,
+   "lam_um": 4.088,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W34_1A_0529_4D2_spx_l2b-v27-2026-243",
+   "date": "2026-08-19 17:11",
+   "detector": 2,
+   "lam_um": 1.524,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W34_1A_0529_4D5_spx_l2b-v27-2026-243",
+   "date": "2026-08-19 17:11",
+   "detector": 5,
+   "lam_um": 4.304,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W34_1A_0582_3D1_spx_l2b-v27-2026-243",
+   "date": "2026-08-19 23:37",
+   "detector": 1,
+   "lam_um": 0.818,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W34_1A_0582_3D4_spx_l2b-v27-2026-243",
+   "date": "2026-08-19 23:37",
+   "detector": 4,
+   "lam_um": 2.687,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W36_1A_0269_1D3_spx_l2b-v27-2026-252",
+   "date": "2026-09-01 04:50",
+   "detector": 3,
+   "lam_um": 1.794,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "SUR_ERROR",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W36_1A_0269_1D6_spx_l2b-v27-2026-252",
+   "date": "2026-09-01 04:50",
+   "detector": 6,
+   "lam_um": 4.552,
+   "flags_at_target": [
+    "TRANSIENT",
+    "OVERFLOW",
+    "BLOOM"
+   ],
+   "used_in_spectrum": false
+  },
+  {
+   "image": "level2_2026W36_1A_0383_2D3_spx_l2b-v27-2026-252",
+   "date": "2026-09-01 16:18",
+   "detector": 3,
+   "lam_um": 2.012,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W36_1A_0383_2D6_spx_l2b-v27-2026-252",
+   "date": "2026-09-01 16:18",
+   "detector": 6,
+   "lam_um": 4.72,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W36_1A_0671_3D3_spx_l2b-v27-2026-252",
+   "date": "2026-09-02 21:39",
+   "detector": 3,
+   "lam_um": 2.256,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W36_1A_0671_3D6_spx_l2b-v27-2026-252",
+   "date": "2026-09-02 21:39",
+   "detector": 6,
+   "lam_um": 4.894,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W36_2A_0157_2D3_spx_l2b-v27-2026-254",
+   "date": "2026-09-04 02:56",
+   "detector": 3,
+   "lam_um": 2.411,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W36_2A_0157_2D6_spx_l2b-v27-2026-254",
+   "date": "2026-09-04 02:56",
+   "detector": 6,
+   "lam_um": 5.001,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W37_1A_0114_1D2_spx_l2b-v27-2026-255",
+   "date": "2026-09-07 14:05",
+   "detector": 2,
+   "lam_um": 1.175,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  },
+  {
+   "image": "level2_2026W37_1A_0114_1D5_spx_l2b-v27-2026-255",
+   "date": "2026-09-07 14:05",
+   "detector": 5,
+   "lam_um": 3.915,
+   "flags_at_target": [],
+   "used_in_spectrum": true
+  }
+ ],
+ "ghosts": {
+  "w2_wise2010.png": [
+   [
+    2.1,
+    108.8,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.7,
+    67.5,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.2,
+    14.8
+   ],
+   [
+    100.7,
+    97.5,
+    8.1
+   ],
+   [
+    54.9,
+    129.3,
+    16.2
+   ],
+   [
+    38.1,
+    130.2,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.4,
+    14.5
+   ],
+   [
+    106.1,
+    142.6,
+    16.5
+   ],
+   [
+    107.4,
+    74.6,
+    16.6
+   ]
+  ],
+  "w2_spherex_v1_1.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    51.5,
+    54.2,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w2_spherex_v1_2.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    51.4,
+    54.2,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w2_spherex_v1_3.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    51.4,
+    54.1,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w2_spherex_v2_1.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    50.2,
+    53.1,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w2_spherex_v2_2.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    50.0,
+    53.0,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w2_spherex_v2_3.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    50.0,
+    53.0,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w2_spherex_v2_4.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    50.0,
+    52.9,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w2_spherex_v3.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    48.2,
+    51.4,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w1_wise2010.png": [
+   [
+    2.1,
+    108.8,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.7,
+    67.5,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.2,
+    14.8
+   ],
+   [
+    100.7,
+    97.5,
+    8.1
+   ],
+   [
+    54.9,
+    129.3,
+    16.2
+   ],
+   [
+    38.1,
+    130.2,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.4,
+    14.5
+   ],
+   [
+    106.1,
+    142.6,
+    16.5
+   ],
+   [
+    107.4,
+    74.6,
+    16.6
+   ]
+  ],
+  "w1_spherex_v1.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    51.6,
+    54.4,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w1_spherex_v2_1.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    49.8,
+    52.8,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w1_spherex_v2_2.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    49.8,
+    52.8,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w1_spherex_v2_3.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    49.8,
+    52.8,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "w1_spherex_v3.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    48.4,
+    51.6,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d1_spherex_v1.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    51.6,
+    54.4,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d1_spherex_v2.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    49.8,
+    52.8,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d1_spherex_v3.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    48.4,
+    51.5,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d2_spherex_v1.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    51.6,
+    54.4,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d2_spherex_v2.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    49.9,
+    52.9,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d2_spherex_v3.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    48.3,
+    51.5,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d3_spherex_v1.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    51.4,
+    54.2,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d3_spherex_v2.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    50.0,
+    53.0,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d3_spherex_v3.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    48.2,
+    51.4,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d4_spherex_v1.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    51.6,
+    54.4,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d4_spherex_v2.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    49.8,
+    52.8,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d4_spherex_v3.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    48.4,
+    51.5,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d5_spherex_v1.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    51.6,
+    54.4,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d5_spherex_v2.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    49.9,
+    52.9,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d5_spherex_v3.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    48.3,
+    51.5,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d6_spherex_v1.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    51.4,
+    54.2,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d6_spherex_v2.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    50.0,
+    53.0,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ],
+  "d6_spherex_v3.png": [
+   [
+    2.1,
+    109.1,
+    15.3
+   ],
+   [
+    54.5,
+    129.7,
+    13.4
+   ],
+   [
+    44.6,
+    67.6,
+    16.4
+   ],
+   [
+    65.4,
+    50.4,
+    15.5
+   ],
+   [
+    28.3,
+    144.3,
+    14.8
+   ],
+   [
+    48.2,
+    51.4,
+    8.1
+   ],
+   [
+    54.9,
+    129.4,
+    16.2
+   ],
+   [
+    38.0,
+    130.3,
+    13.0
+   ],
+   [
+    24.4,
+    54.0,
+    14.4
+   ],
+   [
+    68.2,
+    12.5,
+    14.5
+   ],
+   [
+    106.0,
+    142.8,
+    16.5
+   ],
+   [
+    107.4,
+    74.7,
+    16.6
+   ]
+  ]
+ },
+ "track": [
+  {
+   "year": 2010.5,
+   "mission": "WISE",
+   "ch": "w2",
+   "x": 100.85532843406826,
+   "y": 97.54729895732686,
+   "pred_x": 100.6856522280418,
+   "pred_y": 97.52484187996646,
+   "offset_arcsec": 0.34231172652484865,
+   "ra": 77.94577040221442,
+   "dec": -45.035077846077705
+  },
+  {
+   "year": 2025.6735851656545,
+   "mission": "SPHEREx",
+   "ch": "w2",
+   "x": 51.502822283141064,
+   "y": 54.28798520901289,
+   "pred_x": 51.43458255368063,
+   "pred_y": 54.218756478971414,
+   "offset_arcsec": 0.1944147739256248,
+   "ra": 77.98457675029853,
+   "dec": -45.0591112435403
+  },
+  {
+   "year": 2026.1112303550055,
+   "mission": "SPHEREx",
+   "ch": "w2",
+   "x": 50.10724156700855,
+   "y": 52.93925948975783,
+   "pred_x": 50.01405523829131,
+   "pred_y": 52.96969777540956,
+   "offset_arcsec": 0.1960630499220667,
+   "ra": 77.98567460628102,
+   "dec": -45.0598603570333
+  },
+  {
+   "year": 2026.6693401890993,
+   "mission": "SPHEREx",
+   "ch": "w2",
+   "x": 48.223532295787216,
+   "y": 51.57000280380869,
+   "pred_x": 48.202518679032934,
+   "pred_y": 51.376827661920075,
+   "offset_arcsec": 0.3886293907438306,
+   "ra": 77.98715641144146,
+   "dec": -45.06062079749419
+  },
+  {
+   "year": 2010.5,
+   "mission": "WISE",
+   "ch": "w1",
+   "x": 100.83303299035298,
+   "y": 97.62706281554911,
+   "pred_x": 100.6856522280418,
+   "pred_y": 97.52484187996646,
+   "offset_arcsec": 0.35872106948156784,
+   "ra": 77.94578794593563,
+   "dec": -45.03503353599611
+  },
+  {
+   "year": 2025.6142092836296,
+   "mission": "SPHEREx",
+   "ch": "w1",
+   "x": 52.0953997364388,
+   "y": 54.05688393746049,
+   "pred_x": 51.6273073099295,
+   "pred_y": 54.38821786948358,
+   "offset_arcsec": 1.1469832854919133,
+   "ra": 77.98411073601383,
+   "dec": -45.05923970573791
+  },
+  {
+   "year": 2026.177052861275,
+   "mission": "SPHEREx",
+   "ch": "w1",
+   "x": 49.418207613576776,
+   "y": 52.45783296580289,
+   "pred_x": 49.80040575648832,
+   "pred_y": 52.78183743519841,
+   "offset_arcsec": 1.0021063114316298,
+   "ra": 77.98621662115697,
+   "dec": -45.06012772417606
+  }
+ ],
+ "motion": {
+  "from_year": 2010.5,
+  "to_year": 2026.6693401890993,
+  "shift_arcsec": 139.78919268655696,
+  "measured_arcsec_per_yr": 8.64532448768669,
+  "measured_pmra": 6511.524913650091,
+  "measured_pmdec": -5686.974485287347,
+  "expected_arcsec_per_yr": 8.644319287929777,
+  "shift_spherex_pixels": 22.729950030334464
+ },
+ "movers_experimental": [],
+ "spectrum": [],
+ "spectrum_points": 89,
+ "flagged_points": 89,
+ "variability": {
+  "delta_mag": -0.09279688685501875,
+  "uncertainty_mag": 0.052821724382948264,
+  "n_wavelength_bins": 9,
+  "method": "PSF-wing photometry (star's core is saturated)",
+  "from": "Aug 2025",
+  "to": "Aug 2026"
+ },
+ "ir_color": {
+  "f4p0_mjy": null,
+  "f3p3_mjy": null,
+  "f3p3_err": null,
+  "ratio": null,
+  "lower_limit": false
+ },
+ "bands": [
+  {
+   "name": "H2O",
+   "lo": 1.3,
+   "hi": 1.5
+  },
+  {
+   "name": "H2O",
+   "lo": 1.75,
+   "hi": 2.05
+  },
+  {
+   "name": "CH4",
+   "lo": 1.6,
+   "hi": 1.8
+  },
+  {
+   "name": "CH4",
+   "lo": 2.2,
+   "hi": 2.45
+  },
+  {
+   "name": "H2O",
+   "lo": 2.55,
+   "hi": 3.0
+  },
+  {
+   "name": "CH4",
+   "lo": 3.15,
+   "hi": 3.45
+  },
+  {
+   "name": "CO2",
+   "lo": 4.2,
+   "hi": 4.35
+  },
+  {
+   "name": "CO",
+   "lo": 4.5,
+   "hi": 4.8
+  }
+ ],
+ "spherex_visits": [
+  {
+   "year": 2025.639918892923,
+   "n_images": 58
+  },
+  {
+   "year": 2026.1399030398425,
+   "n_images": 60
+  },
+  {
+   "year": 2026.6348865758803,
+   "n_images": 32
+  }
+ ],
+ "teaser": "Ancient fast halo star",
+ "gaia_facts": {
+  "source_id": 4810594479418041856,
+  "parallax_mas": 254.19859326384577,
+  "distance_ly": 12.830755505458912,
+  "g_mag": 8.063551902770996,
+  "bp_rp": 2.0266456604003906,
+  "variable_flag": "NOT_AVAILABLE",
+  "teff_k": 3451.870361328125
+ },
+ "evidence": {
+  "status": "known",
+  "classification": "Nearby star with fast proper motion",
+  "confidence": "high",
+  "confidence_note": null,
+  "checks_passed": 3,
+  "checks_needed": 3,
+  "checks": [
+   {
+    "state": "ok",
+    "text": "Moved 140\u2033 between 2010 and 2027 (22.7 SPHEREx pixels)"
+   },
+   {
+    "state": "ok",
+    "text": "Measured speed matches the catalogue: 8.65 vs 8.64\u2033/yr (difference under 0.1%)"
+   },
+   {
+    "state": "ok",
+    "text": "Gaia DR3 has this object (source 4810594479418041856)"
+   },
+   {
+    "state": "no",
+    "text": "Steady brightness between Aug 2025 and Aug 2026 (-0.09 \u00b1 0.05 mag)"
+   },
+   {
+    "state": "warn",
+    "text": "89 of 89 SPHEREx measurements flagged (overflow or bloom: the object is too bright for SPHEREx). No reliable SPHEREx spectrum, so we do not show one."
+   }
+  ],
+  "numbers": [
+   {
+    "label": "measured motion",
+    "value": "8.65\u2033/yr"
+   },
+   {
+    "label": "catalogue motion (Gaia DR3)",
+    "value": "8.64\u2033/yr"
+   },
+   {
+    "label": "brightness change Aug 2025\u2192Aug 2026",
+    "value": "-0.09 mag"
+   },
+   {
+    "label": "distance (Gaia parallax)",
+    "value": "12.8 ly"
+   },
+   {
+    "label": "temperature (Gaia estimate)",
+    "value": "3,452 K"
+   }
+  ]
+ },
+ "changes": {
+  "found": 0,
+  "candidates": 0,
+  "target_recovered": false,
+  "items": [],
+  "method": "Dots seen only in WISE 2010 are paired with dots seen only in SPHEREx at 4.6 \u00b5m, 8\u2033 to 190\u2033 apart and of similar brightness. Each pair is then checked against the target's path, Gaia DR3 and SIMBAD.",
+  "not_checked": "Asteroids and comets are not checked. An unconfirmed pair is not a discovery."
+ },
+ "insights": {
+  "facts": [
+   {
+    "id": "speed",
+    "headline": "About 161 km/s across the sky",
+    "detail": "That is 5.4 times the speed of Earth around the Sun. It is sideways speed only: motion toward or away from us does not show in images.",
+    "basis": "4.74 \u00d7 8.65\u2033/yr \u00f7 parallax 0.254\u2033"
+   },
+   {
+    "id": "moon",
+    "headline": "Crosses the width of the full Moon in about 210 years",
+    "detail": "A typical star in these images needs more than 100,000 years, which is why this one stands out in a flipbook.",
+    "basis": "1,800\u2033 \u00f7 8.65\u2033/yr"
+   },
+   {
+    "id": "distance",
+    "headline": "12.8 light-years away: one of the Sun's nearest neighbours",
+    "detail": "The light in these images left it about 12.8 years ago.",
+    "basis": "3.26 \u00f7 parallax (\u2033), Gaia DR3"
+   },
+   {
+    "id": "temperature",
+    "headline": "About 3,500 K at its surface",
+    "detail": "That is 60% of the Sun's surface temperature (5,772 K), so it glows mostly in infrared light.",
+    "basis": "Gaia DR3 estimate from its colours"
+   }
+  ],
+  "limits": [
+   "Motion: an object must shift 2 SPHEREx pixels (12\u2033) to count as moving. Over these 16.2 years that means faster than 0.76\u2033 per year. Slower objects read as \u201cno measurable motion\u201d.",
+   "SPHEREx alone covers only 12 months here: by the same 2-pixel rule, enough only for motion faster than 12\u2033 per year. The 2010 WISE image is what makes slower motion visible.",
+   "Brightness: compared at 3 SPHEREx visits only. A change between or outside those dates is not seen.",
+   "Bright stars: this one overflows SPHEREx pixels, so its spectrum and exact brightness are not reliable here.",
+   "Solar System: the page checks against Gaia stars only. It does not check asteroids or comets, so a moving dot without a Gaia circle may be a known asteroid.",
+   "Crowding: one SPHEREx pixel is 6.15\u2033 wide, so two close objects can blend into one dot and one spectrum."
+  ]
+ }
+}
