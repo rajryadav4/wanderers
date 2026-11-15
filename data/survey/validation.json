@@ -1,0 +1,1114 @@
+{
+ "generated": "2026-11-15T10:43:39+00:00",
+ "completeness": [
+  {
+   "pm_arcsec_yr": 0.2,
+   "w2": 8.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.2,
+   "w2": 11.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.2,
+   "w2": 13.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.2,
+   "w2": 14.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.2,
+   "w2": 15.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.5,
+   "w2": 8.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.5,
+   "w2": 11.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.5,
+   "w2": 13.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.5,
+   "w2": 14.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.5,
+   "w2": 15.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 1.0,
+   "w2": 8.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 1.0,
+   "w2": 11.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 1.0,
+   "w2": 13.0,
+   "w1w2": 0.0,
+   "recovered": 4,
+   "trials": 5,
+   "fraction": 0.8,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 1.0,
+   "w2": 14.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 1.0,
+   "w2": 15.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 2.0,
+   "w2": 8.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 2.0,
+   "w2": 11.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 2.0,
+   "w2": 13.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 2.0,
+   "w2": 14.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 2.0,
+   "w2": 15.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 4.0,
+   "w2": 8.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 4.0,
+   "w2": 11.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 4.0,
+   "w2": 13.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 4.0,
+   "w2": 14.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 4.0,
+   "w2": 15.5,
+   "w1w2": 0.0,
+   "recovered": 4,
+   "trials": 5,
+   "fraction": 0.8,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 8.0,
+   "w2": 8.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 8.0,
+   "w2": 11.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 8.0,
+   "w2": 13.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 8.0,
+   "w2": 14.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 8.0,
+   "w2": 15.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 11.0,
+   "w2": 8.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 11.0,
+   "w2": 11.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 11.0,
+   "w2": 13.0,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 11.0,
+   "w2": 14.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 11.0,
+   "w2": 15.5,
+   "w1w2": 0.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.2,
+   "w2": 8.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.2,
+   "w2": 11.0,
+   "w1w2": 2.0,
+   "recovered": 4,
+   "trials": 5,
+   "fraction": 0.8,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.2,
+   "w2": 13.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.2,
+   "w2": 14.5,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.2,
+   "w2": 15.5,
+   "w1w2": 2.0,
+   "recovered": 0,
+   "trials": 5,
+   "fraction": 0.0,
+   "detectable": 0
+  },
+  {
+   "pm_arcsec_yr": 0.5,
+   "w2": 8.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.5,
+   "w2": 11.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.5,
+   "w2": 13.0,
+   "w1w2": 2.0,
+   "recovered": 3,
+   "trials": 5,
+   "fraction": 0.6,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.5,
+   "w2": 14.5,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 0.5,
+   "w2": 15.5,
+   "w1w2": 2.0,
+   "recovered": 0,
+   "trials": 5,
+   "fraction": 0.0,
+   "detectable": 0
+  },
+  {
+   "pm_arcsec_yr": 1.0,
+   "w2": 8.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 1.0,
+   "w2": 11.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 1.0,
+   "w2": 13.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 1.0,
+   "w2": 14.5,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 1.0,
+   "w2": 15.5,
+   "w1w2": 2.0,
+   "recovered": 0,
+   "trials": 5,
+   "fraction": 0.0,
+   "detectable": 0
+  },
+  {
+   "pm_arcsec_yr": 2.0,
+   "w2": 8.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 2.0,
+   "w2": 11.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 2.0,
+   "w2": 13.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 2.0,
+   "w2": 14.5,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 2.0,
+   "w2": 15.5,
+   "w1w2": 2.0,
+   "recovered": 0,
+   "trials": 5,
+   "fraction": 0.0,
+   "detectable": 0
+  },
+  {
+   "pm_arcsec_yr": 4.0,
+   "w2": 8.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 4.0,
+   "w2": 11.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 4.0,
+   "w2": 13.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 4.0,
+   "w2": 14.5,
+   "w1w2": 2.0,
+   "recovered": 2,
+   "trials": 5,
+   "fraction": 0.4,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 4.0,
+   "w2": 15.5,
+   "w1w2": 2.0,
+   "recovered": 0,
+   "trials": 5,
+   "fraction": 0.0,
+   "detectable": 0
+  },
+  {
+   "pm_arcsec_yr": 8.0,
+   "w2": 8.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 8.0,
+   "w2": 11.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 8.0,
+   "w2": 13.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 8.0,
+   "w2": 14.5,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 8.0,
+   "w2": 15.5,
+   "w1w2": 2.0,
+   "recovered": 0,
+   "trials": 5,
+   "fraction": 0.0,
+   "detectable": 0
+  },
+  {
+   "pm_arcsec_yr": 11.0,
+   "w2": 8.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 11.0,
+   "w2": 11.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 11.0,
+   "w2": 13.0,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 11.0,
+   "w2": 14.5,
+   "w1w2": 2.0,
+   "recovered": 5,
+   "trials": 5,
+   "fraction": 1.0,
+   "detectable": 5
+  },
+  {
+   "pm_arcsec_yr": 11.0,
+   "w2": 15.5,
+   "w1w2": 2.0,
+   "recovered": 0,
+   "trials": 5,
+   "fraction": 0.0,
+   "detectable": 0
+  }
+ ],
+ "pm_accuracy": {
+  "n": 307,
+  "median_frac_error": 0.00066,
+  "p90_frac_error": 0.01,
+  "median_pa_error_deg": 0.037,
+  "p90_pa_error_deg": 0.636,
+  "median_vec_error_mas_yr": 1.96,
+  "median_abs_pull": 0.524,
+  "expected_abs_pull": 0.674,
+  "by_pm": [
+   {
+    "n": 44,
+    "median_frac_error": 0.0055,
+    "p90_frac_error": 0.05225,
+    "median_pa_error_deg": 0.437,
+    "p90_pa_error_deg": 3.182,
+    "median_vec_error_mas_yr": 1.9,
+    "median_abs_pull": 0.49,
+    "pm_arcsec_yr": 0.2
+   },
+   {
+    "n": 43,
+    "median_frac_error": 0.003,
+    "p90_frac_error": 0.02784,
+    "median_pa_error_deg": 0.146,
+    "p90_pa_error_deg": 1.461,
+    "median_vec_error_mas_yr": 2.63,
+    "median_abs_pull": 0.559,
+    "pm_arcsec_yr": 0.5
+   },
+   {
+    "n": 44,
+    "median_frac_error": 0.0016,
+    "p90_frac_error": 0.01396,
+    "median_pa_error_deg": 0.068,
+    "p90_pa_error_deg": 0.624,
+    "median_vec_error_mas_yr": 2.14,
+    "median_abs_pull": 0.55,
+    "pm_arcsec_yr": 1.0
+   },
+   {
+    "n": 45,
+    "median_frac_error": 0.0006,
+    "p90_frac_error": 0.00394,
+    "median_pa_error_deg": 0.037,
+    "p90_pa_error_deg": 0.386,
+    "median_vec_error_mas_yr": 1.84,
+    "median_abs_pull": 0.539,
+    "pm_arcsec_yr": 2.0
+   },
+   {
+    "n": 41,
+    "median_frac_error": 0.0003,
+    "p90_frac_error": 0.00152,
+    "median_pa_error_deg": 0.018,
+    "p90_pa_error_deg": 0.062,
+    "median_vec_error_mas_yr": 1.93,
+    "median_abs_pull": 0.503,
+    "pm_arcsec_yr": 4.0
+   },
+   {
+    "n": 45,
+    "median_frac_error": 0.00016,
+    "p90_frac_error": 0.00098,
+    "median_pa_error_deg": 0.011,
+    "p90_pa_error_deg": 0.048,
+    "median_vec_error_mas_yr": 2.04,
+    "median_abs_pull": 0.539,
+    "pm_arcsec_yr": 8.0
+   },
+   {
+    "n": 45,
+    "median_frac_error": 0.0001,
+    "p90_frac_error": 0.00086,
+    "median_pa_error_deg": 0.006,
+    "p90_pa_error_deg": 0.038,
+    "median_vec_error_mas_yr": 1.99,
+    "median_abs_pull": 0.479,
+    "pm_arcsec_yr": 11.0
+   }
+  ],
+  "by_w2": [
+   {
+    "n": 70,
+    "median_frac_error": 0.0002,
+    "p90_frac_error": 0.00308,
+    "median_pa_error_deg": 0.022,
+    "p90_pa_error_deg": 0.15,
+    "median_vec_error_mas_yr": 1.15,
+    "median_abs_pull": 0.449,
+    "w2": 8.0
+   },
+   {
+    "n": 69,
+    "median_frac_error": 0.0003,
+    "p90_frac_error": 0.00204,
+    "median_pa_error_deg": 0.013,
+    "p90_pa_error_deg": 0.135,
+    "median_vec_error_mas_yr": 1.14,
+    "median_abs_pull": 0.419,
+    "w2": 11.0
+   },
+   {
+    "n": 67,
+    "median_frac_error": 0.00095,
+    "p90_frac_error": 0.00516,
+    "median_pa_error_deg": 0.034,
+    "p90_pa_error_deg": 0.292,
+    "median_vec_error_mas_yr": 2.31,
+    "median_abs_pull": 0.598,
+    "w2": 13.0
+   },
+   {
+    "n": 67,
+    "median_frac_error": 0.00194,
+    "p90_frac_error": 0.04266,
+    "median_pa_error_deg": 0.122,
+    "p90_pa_error_deg": 2.057,
+    "median_vec_error_mas_yr": 9.32,
+    "median_abs_pull": 0.545,
+    "w2": 14.5
+   },
+   {
+    "n": 34,
+    "median_frac_error": 0.0026,
+    "p90_frac_error": 0.03292,
+    "median_pa_error_deg": 0.169,
+    "p90_pa_error_deg": 1.237,
+    "median_vec_error_mas_yr": 10.32,
+    "median_abs_pull": 0.675,
+    "w2": 15.5
+   }
+  ]
+ },
+ "injection": {
+  "n_injected": 350,
+  "n_recovered": 307,
+  "by_pm": [
+   {
+    "lo": 150.0,
+    "hi": 500.0,
+    "n": 50,
+    "recovered": 44,
+    "completeness": 0.88
+   },
+   {
+    "lo": 500.0,
+    "hi": 1000.0,
+    "n": 50,
+    "recovered": 43,
+    "completeness": 0.86
+   },
+   {
+    "lo": 1000.0,
+    "hi": 2000.0,
+    "n": 50,
+    "recovered": 44,
+    "completeness": 0.88
+   },
+   {
+    "lo": 2000.0,
+    "hi": 4000.0,
+    "n": 50,
+    "recovered": 45,
+    "completeness": 0.9
+   },
+   {
+    "lo": 4000.0,
+    "hi": 8000.0,
+    "n": 50,
+    "recovered": 41,
+    "completeness": 0.82
+   },
+   {
+    "lo": 8000.0,
+    "hi": 12000.0,
+    "n": 100,
+    "recovered": 90,
+    "completeness": 0.9
+   }
+  ],
+  "by_mag": [
+   {
+    "lo": 6.0,
+    "hi": 10.0,
+    "n": 70,
+    "recovered": 70,
+    "completeness": 1.0
+   },
+   {
+    "lo": 10.0,
+    "hi": 12.0,
+    "n": 70,
+    "recovered": 69,
+    "completeness": 0.986
+   },
+   {
+    "lo": 12.0,
+    "hi": 14.0,
+    "n": 70,
+    "recovered": 67,
+    "completeness": 0.957
+   },
+   {
+    "lo": 14.0,
+    "hi": 15.0,
+    "n": 70,
+    "recovered": 67,
+    "completeness": 0.957
+   },
+   {
+    "lo": 15.0,
+    "hi": 16.5,
+    "n": 70,
+    "recovered": 34,
+    "completeness": 0.486
+   }
+  ],
+  "pm_error_median": 1.2,
+  "pm_rel_error_median": 0.00066,
+  "pm_unit": "mas/yr",
+  "mag": "W2 (Vega)",
+  "w1w2": [
+   0.0,
+   2.0
+  ]
+ },
+ "false_positives": {
+  "tiles": 24,
+  "movers": 0,
+  "area_deg2": 6.7858,
+  "per_sky": 0.0,
+  "per_deg2": 0.0,
+  "per_tile": 0.0,
+  "upper95_per_tile": 1.4821,
+  "n": 0,
+  "note": "0 mover(s) reported on 24 synthetic skies with no movers (6.8 deg², 2.0 survey tiles of sky): 0.00 false movers per tile (95% upper limit 1.48)."
+ },
+ "known": [
+  {
+   "name": "Kapteyn's Star",
+   "pm_true": 8644.3,
+   "pm_found": 8644.5,
+   "recovered": true,
+   "error_pct": 0.002,
+   "pa_error_deg": 0.161,
+   "sep_arcsec": 0.262,
+   "data": "real NEOWISE detections within 4′ of the star, neowise_kapteyn_4arcmin.parquet",
+   "ref": "Gaia DR3",
+   "pm_measured": 8644.5,
+   "note": "Found 0.3″ from the predicted position; motion off by 0.00% and 0.2° in direction, 21 visits (real NEOWISE detections within 4′ of the star, neowise_kapteyn_4arcmin.parquet)."
+  },
+  {
+   "name": "WISE 0855-0714",
+   "pm_true": 8150.8,
+   "pm_found": 8151.7,
+   "recovered": true,
+   "error_pct": 0.011,
+   "pa_error_deg": 0.099,
+   "sep_arcsec": 0.508,
+   "data": "real NEOWISE detections within 4′ of the star, neowise_wise0855_4arcmin.parquet",
+   "ref": "Luhman & Esplin 2016",
+   "pm_measured": 8151.7,
+   "note": "Found 0.5″ from the predicted position; motion off by 0.01% and 0.1° in direction, 21 visits (real NEOWISE detections within 4′ of the star, neowise_wise0855_4arcmin.parquet)."
+  },
+  {
+   "name": "Barnard's Star",
+   "pm_true": 10393.3,
+   "pm_found": 10381.1,
+   "recovered": true,
+   "error_pct": 0.118,
+   "pa_error_deg": 0.076,
+   "sep_arcsec": 0.131,
+   "data": "survey tile 7945",
+   "ref": "Gaia DR3",
+   "pm_measured": 10381.1,
+   "note": "Found 0.1″ from the predicted position; motion off by 0.12% and 0.1° in direction, 21 visits (survey tile 7945)."
+  },
+  {
+   "name": "Kapteyn's Star",
+   "pm_true": 8644.3,
+   "pm_found": 8643.7,
+   "recovered": true,
+   "error_pct": 0.007,
+   "pa_error_deg": 0.185,
+   "sep_arcsec": 0.258,
+   "data": "survey tile 8545",
+   "ref": "Gaia DR3",
+   "pm_measured": 8643.7,
+   "note": "Found 0.3″ from the predicted position; motion off by 0.01% and 0.2° in direction, 24 visits (survey tile 8545)."
+  },
+  {
+   "name": "WISE 0855-0714",
+   "pm_true": 8150.8,
+   "pm_found": 8151.7,
+   "recovered": true,
+   "error_pct": 0.011,
+   "pa_error_deg": 0.099,
+   "sep_arcsec": 0.508,
+   "data": "survey tile 10226",
+   "ref": "Luhman & Esplin 2016",
+   "pm_measured": 8151.7,
+   "note": "Found 0.5″ from the predicted position; motion off by 0.01% and 0.1° in direction, 21 visits (survey tile 10226)."
+  },
+  {
+   "name": "Luhman 16",
+   "pm_true": 2785.0,
+   "pm_found": 2792.9,
+   "recovered": true,
+   "error_pct": 0.285,
+   "pa_error_deg": 0.047,
+   "sep_arcsec": 1.86,
+   "data": "survey tile 9509",
+   "ref": "Gaia DR3 position; Bedin et al. 2017 motion",
+   "pm_measured": 2792.9,
+   "note": "Found 1.9″ from the predicted position; motion off by 0.28% and 0.0° in direction, 22 visits (survey tile 9509)."
+  },
+  {
+   "name": "Wolf 359",
+   "pm_true": 4715.3,
+   "pm_found": 4698.4,
+   "recovered": true,
+   "error_pct": 0.359,
+   "pa_error_deg": 0.007,
+   "sep_arcsec": 0.212,
+   "data": "survey tile 6865",
+   "ref": "Gaia DR3",
+   "pm_measured": 4698.4,
+   "note": "Found 0.2″ from the predicted position; motion off by 0.36% and 0.0° in direction, 20 visits (survey tile 6865)."
+  },
+  {
+   "name": "Lalande 21185",
+   "pm_true": 4811.7,
+   "pm_found": 4850.0,
+   "recovered": true,
+   "error_pct": 0.796,
+   "pa_error_deg": 0.019,
+   "sep_arcsec": 0.055,
+   "data": "survey tile 1355",
+   "ref": "Gaia DR3",
+   "pm_measured": 4850.0,
+   "note": "Found 0.1″ from the predicted position; motion off by 0.80% and 0.0° in direction, 18 visits (survey tile 1355)."
+  },
+  {
+   "name": "Proxima Centauri",
+   "pm_true": 3859.2,
+   "pm_found": 3843.4,
+   "recovered": true,
+   "error_pct": 0.41,
+   "pa_error_deg": 0.504,
+   "sep_arcsec": 0.244,
+   "data": "survey tile 10397",
+   "ref": "Gaia DR3",
+   "pm_measured": 3843.4,
+   "note": "Found 0.2″ from the predicted position; motion off by 0.41% and 0.5° in direction, 15 visits (survey tile 10397)."
+  },
+  {
+   "name": "61 Cygni A",
+   "pm_true": 5282.1,
+   "pm_found": null,
+   "recovered": false,
+   "error_pct": null,
+   "pa_error_deg": null,
+   "sep_arcsec": null,
+   "data": "survey tile 3325",
+   "ref": "Gaia DR3",
+   "pm_measured": null,
+   "note": "No mover reported within 10″ of the star's predicted position (survey tile 3325). At W1 ≈ 2 it is far brighter than NEOWISE can measure: the single-exposure table holds only scattered-light halo detections around it (cc_flags 'H', W1 11-14), never the star itself, so no search of that table can find it."
+  },
+  {
+   "name": "Epsilon Indi B",
+   "pm_true": 4684.2,
+   "pm_found": 4723.7,
+   "recovered": true,
+   "error_pct": 0.844,
+   "pa_error_deg": 0.397,
+   "sep_arcsec": 0.323,
+   "data": "survey tile 11391",
+   "ref": "Gaia DR3",
+   "pm_measured": 4723.7,
+   "note": "Found 0.3″ from the predicted position; motion off by 0.84% and 0.4° in direction, 17 visits (survey tile 11391)."
+  }
+ ],
+ "summary": "Of 350 synthetic movers hidden in NEOWISE-like skies with the real NEOWISE cadence, the search found 99% of those with W1−W2 = 0 moving at least 1″/yr with W2 ≤ 13 (100% at W2 = 14.5, 96% at W2 = 15.5, 100% of bright ones moving only 0.2″/yr), measured their motion to 0.1% (median), and reported 0.00 false movers per survey tile on mover-free skies. For redder objects (W1−W2 = 2, like cold brown dwarfs) it found 97% at W2 ≤ 14.5 and 0% at W2 = 15.5. On real NEOWISE data it recovered 8 of 9 known fast-moving stars (Kapteyn's Star, WISE 0855-0714, Barnard's Star, Luhman 16, Wolf 359, Lalande 21185, Proxima Centauri, Epsilon Indi B).",
+ "method": "Injection-recovery: we build synthetic NEOWISE single-exposure detection tables that copy the real NEOWISE observing pattern (exposure times, scan ids and frames of real data, about 21 visits from 2014 to 2024), fill them with field stars, galaxies, passing asteroids and spurious detections, hide movers of known speed, direction and brightness in them, and run the survey's mover search without telling it where they are. Noise, detection limits and positional errors follow a model measured on real NEOWISE detections. A hidden mover counts as recovered when the search reports a mover within 5″ of it with a motion within 30% (or 0.1″/yr). False positives are counted on skies with no movers at all, and the search is also run on real NEOWISE data around stars whose motion Gaia DR3 measured.",
+ "limits": [
+  "Synthetic skies use high-Galactic-latitude source counts; crowded fields near the Galactic plane are not simulated at their full density.",
+  "Every exposure covers the whole synthetic patch; real frame edges and gaps are only present when injecting into real tables.",
+  "The noise model is calibrated on two real 4′ NEOWISE fields; it has no blending, no position-dependent systematics and a simple saturation model.",
+  "Injected movers have parallaxes from a tangential velocity of 80 km/s and do not accelerate (no binaries).",
+  "False-positive rates are measured on synthetic skies; real artefacts (latents, ghosts, scattered light) are more varied.",
+  "Known-star checks use small 4′ cut-outs of real data and, when available, the survey's own tile results."
+ ],
+ "spurious_in_injected": {
+  "tiles": 10,
+  "movers": 1,
+  "area_deg2": 2.8723,
+  "per_sky": 0.1,
+  "per_deg2": 0.3482,
+  "per_tile": 1.1688,
+  "upper95_per_tile": 5.5448,
+  "duplicates": 0
+ },
+ "real_fields": [
+  {
+   "name": "Kapteyn's Star",
+   "k5": 8545,
+   "movers": 1,
+   "target_tracks": 1,
+   "other_movers": 0,
+   "seconds": 0.09
+  },
+  {
+   "name": "WISE 0855-0714",
+   "k5": 10226,
+   "movers": 2,
+   "target_tracks": 1,
+   "other_movers": 1,
+   "seconds": 0.13
+  }
+ ],
+ "known_not_run": [],
+ "grid": {
+  "pms_arcsec_yr": [
+   0.2,
+   0.5,
+   1.0,
+   2.0,
+   4.0,
+   8.0,
+   11.0
+  ],
+  "w2": [
+   8.0,
+   11.0,
+   13.0,
+   14.5,
+   15.5
+  ],
+  "w1w2": [
+   0.0,
+   2.0
+  ],
+  "trials": 5,
+  "n_empty": 24,
+  "seed": 1,
+  "vtan_kms": 80.0,
+  "spacing_arcmin": 4.0,
+  "density": 1.0,
+  "empty_radius_deg": 0.3,
+  "match": {
+   "radius_arcsec": 5.0,
+   "pm_tol_frac": 0.3,
+   "pm_tol_abs": 100.0
+  }
+ },
+ "noise_model": {
+  "w2_snr5_mag": 14.34,
+  "w1_snr5_mag": 16.02,
+  "sigma_arcsec_at_w2_for_w1w2_0": {
+   "8.0": 0.06,
+   "10.0": 0.062,
+   "12.0": 0.08,
+   "13.0": 0.11,
+   "14.0": 0.181,
+   "14.5": 0.249,
+   "15.0": 0.355,
+   "15.5": 0.523
+  },
+  "calibration": "tests/fixtures (real NEOWISE, Kapteyn's Star and WISE 0855 fields)"
+ },
+ "units": {
+  "pm": "mas/yr",
+  "pm_arcsec_yr": "arcsec/yr",
+  "w2": "Vega mag",
+  "sep": "arcsec"
+ },
+ "core": "survey.link:process_tile",
+ "runtime_seconds": 95.8
+}
