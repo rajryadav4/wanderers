@@ -673,8 +673,9 @@
     MAP.aladin.gotoRaDec(ra, dec);
     MAP.overlay.removeAll(); MAP.cat.removeAll(); MAP.past.removeAll(); MAP.fut.removeAll(); MAP.yr.removeAll();
     MAP.sp = null; $("mapYears").hidden = true; yrStop();
+    const me = (MAP.seq = (MAP.seq || 0) + 1);
     if (S.pathQ && window.PathView) PathView.sky(S.pathQ).then((sp) => {     // the star's path, 1900 to 2100
-      if (!sp || !MAP.past) return;
+      if (!sp || !MAP.past || me !== MAP.seq) return;                        // the map has moved on to another star
       const back = sp.pts.filter((p) => p.year <= sp.now).map((p) => [p.ra, p.dec]), ahead = sp.pts.filter((p) => p.year >= sp.now).map((p) => [p.ra, p.dec]);
       if (back.length > 1) MAP.past.add(A.polyline(back));
       if (ahead.length > 1) MAP.fut.add(A.polyline(ahead));
