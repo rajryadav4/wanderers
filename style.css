@@ -336,6 +336,16 @@ p.pv-dim { font-size: .8rem; }
 .q-cmp summary { cursor: pointer; color: var(--muted); font-size: .85rem; }
 .q-comb tspan.q-t0 { fill: var(--accent); } .q-comb tspan.q-t1 { fill: var(--known); } .q-comb tspan.q-t2 { fill: var(--cand); }
 
+.webb-legend { display: inline-flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; font-size: .78rem; color: var(--muted); margin-top: 4px; }
+.webb-legend i { display: inline-block; width: 18px; height: 0; vertical-align: middle; margin-right: 4px; border-top: 2.5px solid; }
+.webb-legend .lg-gold { border-color: #ffb547; } .webb-legend .lg-grey { border-top: 1.5px dashed #9fb0c8; }
+.webb-legend .lg-cross { width: 10px; height: 10px; border: 0; background: radial-gradient(circle, #ff5a4e 35%, transparent 40%); }
+.webb-legend .lg-past { border-color: #7cc4ff; } .webb-legend .lg-fut { border-top: 2.5px dashed #7ee787; }
+
+.map-years { margin: 6px auto 0; max-width: 600px; }
+.map-years .yr-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.map-years input[type=range] { flex: 1 1 200px; accent-color: #7ee787; }
+
 /* ---- Star profile ---- */
 .sprof { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--line); }
 .sprof h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; }
@@ -392,3 +402,7 @@ p.pv-dim { font-size: .8rem; }
 }
 .q-comb text { font-size: 13px; }
 @media (max-width: 720px) { .q-comb text { font-size: 16px; } }
+/* Star database tab: only star content (the field's mover search and the target title belong to the time-lapse) */
+body.stars-mode #changes, body.stars-mode #tName, body.stars-mode #tKind { display: none !important; }
+#starSuggest .chips-row { display: block; margin: 6px 0; line-height: 2.1; }
+#starSuggest .chips-row > b { margin-right: 4px; }

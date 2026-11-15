@@ -280,18 +280,28 @@
       <text x="${W - 10}" y="${H - 6}" text-anchor="end" class="sp-small">distance from the star, AU (Earth–Sun = 1)</text></svg>`;
   }
 
+  // Best profile we have for a star: the full one (with spectrum), else its bulk record (Gaia + Hypatia), else null.
+  const shards = {};
+  async function load(key) {
+    const ready = await getReady();
+    if (ready.has(key)) { const p = await fetch(`data/stars/profile/${key}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null); if (p) return p; }
+    const sh = /^hip\d+$/.test(key) ? String(parseInt(key.slice(3), 10) % 100) : "x";
+    if (!shards[sh]) shards[sh] = fetch(`data/stars/profile_bulk/${sh}.json`).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
+    return (await shards[sh])[key] || null;
+  }
+
   async function mount(el, { key, row, stars }) {
     if (!el) return;
     const me = String(++uid); el.dataset.uid = me;
-    const [ready, info] = await Promise.all([getReady(), getInfo()]);
+    const [, info] = await Promise.all([getReady(), getInfo()]);
     if (el.dataset.uid !== me) return;
-    let profile = null;
-    if (ready.has(key)) profile = await fetch(`data/stars/profile/${key}.json`).then((r) => r.json()).catch(() => null);
+    let profile = await load(key);
+    if (el.dataset.uid !== me) return;
     render(el, profile, row, info[key], stars, key);
-    if (!profile) {                                        // ask the local server to gather Gaia + Hypatia data, then refresh
+    if (!profile || profile.bulk) {                         // bulk records have no spectrum: fetch the full profile when possible                                        // ask the local server to gather Gaia + Hypatia data, then refresh
       const live = await fetch("api/health").then((r) => r.ok).catch(() => false);
       if (!live || el.dataset.uid !== me) return;
-      const msg = el.querySelector(".sp-status"); if (msg) msg.textContent = "Looking up Gaia and the Hypatia Catalog for this star…";
+      const msg = el.querySelector(".sp-status"); if (msg) msg.textContent = profile ? "Adding its real Gaia spectrum…" : "Looking up Gaia and the Hypatia Catalog for this star…";
       try {
         const r = await fetch("api/star-profile", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ key }) });
         const j = await r.json(); if (!r.ok) throw new Error(j.error || "server error");
@@ -302,7 +312,7 @@
           if (st.status === "done") { READY.add(key); profile = await fetch(`data/stars/profile/${key}.json?t=${Date.now()}`).then((x) => x.json()); render(el, profile, row, info[key], stars, key); return; }
           if (st.status === "error") throw new Error(st.log.slice(-1)[0] || "failed");
         }
-      } catch (e) { if (msg && el.dataset.uid === me) msg.textContent = "Could not reach Gaia/Hypatia just now; showing catalogue estimates."; }
+      } catch (e) { if (msg && el.dataset.uid === me) msg.textContent = profile ? "Measured values shown; the spectrum could not be fetched just now." : "Could not reach Gaia/Hypatia just now; showing catalogue estimates."; }
     }
   }
 
@@ -310,7 +320,7 @@
     const P = properties(profile, row, info, window.Starquake), D = derived(P), name = (row && row.name) || (profile && profile.name) || "This star";
     const estimated = Object.values(P).some((v) => /estimate/.test(v.source));
     el.innerHTML = `<div class="sprof">
-      <h3>Star profile <span class="tag-chip ${profile ? "data" : "illus"}">${profile ? "Measured + catalogue" : "Catalogue estimate"}</span></h3>
+      <h3>Star profile <span class="tag-chip ${profile ? "data" : "illus"}">${!profile ? "Catalogue estimate" : profile.bulk ? "Measured (Gaia + Hypatia)" : "Full: measured + spectrum"}</span></h3>
       <p class="hint sp-status">${profile ? `Sources: ${esc([...new Set(Object.values(P).map((v) => v.source))].join("; "))}.` : "Estimated from the star catalogue (brightness, distance, colour)."}${estimated && profile ? " Values marked “estimate” come from the catalogue." : ""}</p>
       <div class="sp-grid">${sizeSVG(P, name)}<div class="sp-hrwrap"><canvas class="sp-hr" role="img" aria-label="Hertzsprung–Russell diagram with ${esc(name)} and the Sun"></canvas>
         <p class="hint">Every star in the database by temperature and brightness (the Hertzsprung–Russell diagram).</p></div></div>
@@ -327,4 +337,5 @@
   }
 
   root.StarProfile.mount = mount;
+  root.StarProfile.load = load;
 })(typeof window !== "undefined" ? window : globalThis);

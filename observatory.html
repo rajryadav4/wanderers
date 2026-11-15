@@ -12,7 +12,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="brand.css">
-<link rel="stylesheet" href="style.css?v=20261115h">
+<link rel="stylesheet" href="style.css?v=20261115k">
 </head>
 <body class="obs">
 <a class="skip" href="#console">Skip to the observatory</a>
@@ -165,6 +165,13 @@
           <input type="range" id="lam" min="1" max="102" value="96" aria-label="SPHEREx wavelength"></label>
       </div>
       <div id="aladin" class="aladin" aria-label="Interactive sky map"></div>
+      <div id="mapYears" class="map-years" hidden>
+        <div class="yr-row"><button type="button" id="yrPlay">▶ Play its path</button>
+          <input type="range" id="yrSlider" min="1900" max="2100" step="1" value="2026" aria-label="Year">
+          <span id="yrLbl" class="mono"></span></div>
+        <p class="hint">Green square: where the path model puts the star in that year (a prediction, not photographs; the
+          picture underneath is today's sky). Blue line: path taken since 1900. Green dashed: path ahead to 2100.</p>
+      </div>
       <p class="hint">Live from IRSA's all-sky maps (HiPS) via Aladin Lite. Drag to pan, scroll to zoom. Slide the
         wavelength: cold brown dwarfs appear only at the long end, normal stars fade there. The orange marker is the
         target; the dashed line is its measured path. This map works for any coordinates you type.</p>
@@ -232,16 +239,16 @@
       </section>
       <p id="starPredMsg" aria-live="polite"></p>
       <div id="starPred" hidden>
-        <h3>Past and future path <span class="hint">1900 → 2100, learnt by a classical machine-learning model</span></h3>
+        <h3>Past and future path <span class="hint" id="starPredSub">1900 → 2100, learnt by a classical machine-learning model</span></h3>
         <svg id="starChart" viewBox="0 0 640 420" role="img"></svg>
         <p class="hint slegend"><span class="sw past"></span> past · <span class="sw future"></span> predicted future ·
           <span class="sw band"></span> 68% uncertainty · dots: measured positions
           (<span class="dot" style="background:#b48cff"></span> Hipparcos/Tycho, <span class="dot" style="background:#7cc4ff"></span> ground and WISE surveys,
           <span class="dot" style="background:#7ee787"></span> Gaia, <span class="dot" style="background:#ffb547"></span> WANDERERS). North up, east left.</p>
         <table id="starTable" class="frames"></table>
-        <h4>How the path was learnt</h4>
+        <h4 id="starModelH">How the path was learnt</h4>
         <div id="starModel"></div>
-        <details><summary>Measured positions used for training</summary><div id="starObs"></div></details>
+        <details id="starObsBox"><summary>Measured positions used for training</summary><div id="starObs"></div></details>
       </div>
     </div>
     <section class="path-card" id="pathCard" aria-label="Path taken and path ahead" hidden>
@@ -313,19 +320,20 @@
 <script src="theme.js"></script>
 <script src="framemath.js"></script>
 <script src="chartlayout.js"></script>
-<script src="frameinfo.js"></script>
+<script src="frameinfo.js?v=20261115f"></script>
 <script src="aladinlink.js"></script>
 <script src="starpath.js"></script>
-<script src="stardb.js"></script>
-<script src="starcore.js"></script>
-<script src="pathview.js?v=20261115b"></script>
+<script src="stardb.js?v=20261115i"></script>
+<script src="starcore.js?v=20261115i"></script>
+<script src="pathview.js?v=20261115e"></script>
 <script src="search.js?v=20261115b"></script>
-<script src="telescope.js?v=20261115b"></script>
-<script src="app.js?v=20261115h"></script>
-<script src="starquake.js?v=20261115h"></script>
-<script src="starquake-ui.js?v=20261115h"></script>
-<script src="starprofile.js?v=20261115h"></script>
-<script src="longrange.js"></script>
-<script src="stars.js?v=20261115h"></script>
+<script src="telescope.js?v=20261115e"></script>
+<script src="app.js?v=20261115k"></script>
+<script src="starquake.js?v=20261115i"></script>
+<script src="starquake-ui.js?v=20261115i"></script>
+<script src="starprofile.js?v=20261115i"></script>
+<script src="physicspath.js?v=20261115i"></script>
+<script src="longrange.js?v=20261115i"></script>
+<script src="stars.js?v=20261115j"></script>
 </body>
 </html>

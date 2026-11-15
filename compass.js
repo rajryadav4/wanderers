@@ -386,7 +386,14 @@ function draw() {
     }
   }
 
-  // centre reticle
+  // centre reticle (big and gold while aiming for a sight check)
+  if (S.aim) {
+    g.strokeStyle = "#ffb547"; g.lineWidth = 2.5;
+    g.beginPath(); g.arc(cx, cy, 34, 0, 7); g.stroke();
+    for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) { g.beginPath(); g.moveTo(cx + dx * 12, cy + dy * 12); g.lineTo(cx + dx * 70, cy + dy * 70); g.stroke(); }
+    g.font = "700 13px 'Space Grotesk', sans-serif"; g.textAlign = "center"; g.fillStyle = "#ffb547";
+    g.fillText(S.aim.dir ? `camera → ${S.aim.dir}` : `put ${S.aim.label} here`, cx, cy - 82);
+  }
   g.strokeStyle = "rgba(255,255,255,.9)"; g.lineWidth = 1.5;
   g.beginPath(); g.arc(cx, cy, 22, 0, 7); g.stroke();
   for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) { g.beginPath(); g.moveTo(cx + dx * 28, cy + dy * 28); g.lineTo(cx + dx * 40, cy + dy * 40); g.stroke(); }
@@ -584,7 +591,8 @@ async function openWebb(ra, dec, label, frames, focus) {
        <a href="${Webb.progUrl(p)}" target="_blank" rel="noopener">Programme ${Webb.esc(p.pid)} at STScI ↗</a></div>`;
     try {
       await Webb.render($("wView"), contains ? ra : p.ra, contains ? dec : p.dec, [p, ...list.filter((x) => x !== p)],
-        { label, mark: { ra, dec }, base: $("wBase").value, webbOpacity: +$("wOpacity").value });
+        { label, mark: { ra, dec }, path: contains && S.sel && window.PathView ? await PathView.sky(pathQuery(S.sel)).catch(() => null) : null,
+          base: $("wBase").value, webbOpacity: +$("wOpacity").value });
     } catch (e) { $("wView").innerHTML = `<p class="small warn" style="padding:12px">Sky viewer could not load: ${Webb.esc(e.message)}</p>`; }
   };
   $("wFrames").innerHTML = list.slice(0, 12).map((p) => {
@@ -647,37 +655,60 @@ $("northBtn").onclick = () => {
   const lms = LANDMARKS.map((l) => ({ ...l, ...landmarkAzAlt(l) })).filter((l) => l.km > 0.2 && l.km < 150).sort((a, b) => a.km - b.km);
   const items = [
     ...sky.map((x) => ({ label: x.o.name, sub: `${compassPt(x.p.az)} · ${Math.round(x.p.alt)}° up`, az: x.p.az, alt: x.p.alt, sun: x.o.body === "sun" })),
-    ...lms.map((l) => ({ label: l.name, sub: `${compassPt(l.az)} · ${l.km < 10 ? l.km.toFixed(1) : Math.round(l.km)} km`, az: l.az, alt: null })),
+    ...lms.map((l) => ({ label: l.name, sub: `${compassPt(l.az)} · ${l.km < 10 ? l.km.toFixed(1) : Math.round(l.km)} km`, az: l.az, alt: null, landmark: true, top: true })),
   ];
   $("northList").innerHTML = items.map((x, i) => `<button data-i="${i}">${x.label}<span>${x.sub}</span></button>`).join("") ||
     "<p class='small dim'>Nothing bright is up right now. Use a landmark or paste map coordinates below.</p>";
-  $("northList").querySelectorAll("button").forEach((b) => (b.onclick = () => applyFine(items[+b.dataset.i])));
-  $("northMsg").textContent = S.sensors ? "Put the crosshair on the object first, then tap its name." + (items.some((x) => x.sun) ? " Never look at the Sun: watch the screen." : "") : "This needs a phone's motion sensors.";
+  $("northList").querySelectorAll("button").forEach((b) => (b.onclick = () => startAim(items[+b.dataset.i])));
+  $("northMsg").textContent = S.sensors ? "Tap what you can see. Then you aim the crosshair at it and tap Calibrate." + (items.some((x) => x.sun) ? " Never look at the Sun: watch the screen." : "") : "This needs a phone's motion sensors.";
   $("north").hidden = false;
 };
-function applyFine(x) {
-  if (!S.sensors) return;
+// Aim mode: the sheet closes, a big gold crosshair asks you to put it on the real object, and nothing changes
+// until you tap Calibrate (then applyFine). Cancel leaves north as it was.
+function startAim(x) {
+  S.aim = x; $("north").hidden = true; $("aimBar").hidden = false; document.body.classList.add("aiming");
+  $("aimTitle").textContent = x.dir ? `Point the camera ${x.dir}` : `Aim at ${x.label}`;
+  $("aimText").textContent = x.dir ? `Hold the phone upright with the camera facing exactly ${x.dir} (along a street or wall you know), then tap Calibrate.`
+    : `Move the phone until the big gold crosshair sits on ${x.top ? `the top of ${x.label}` : x.label} in the camera view, then tap Calibrate.` +
+      (x.landmark ? " Ignore the teal marker: it shows where the app currently thinks it is." : "") + (x.sun ? " Never look at the Sun directly: watch the screen." : "");
+  $("aimMsg").textContent = S.sensors ? "" : "This needs a phone's motion sensors (open this page on your phone).";
+  $("aimMsg").className = "small"; $("aimGo").disabled = false; $("aimGo").textContent = "Calibrate";
+}
+function endAim() { S.aim = null; $("aimBar").hidden = true; document.body.classList.remove("aiming"); }
+$("aimCancel").onclick = endAim;
+$("aimGo").onclick = () => {
+  if (!S.aim) return endAim();
+  if ($("aimGo").textContent === "Done") return endAim();
+  const ok = applyFine(S.aim, $("aimMsg"));
+  $("aimMsg").className = "small " + (ok ? "ok" : "warn");
+  if (ok) { $("aimGo").textContent = "Done"; $("aimCancel").hidden = true; setTimeout(() => { if ($("aimGo").textContent === "Done") { endAim(); $("aimCancel").hidden = false; } }, 4000); }
+};
+function applyFine(x, out = $("northMsg")) {
+  if (!S.sensors) { out.textContent = "This needs a phone's motion sensors (open this page on your phone)."; return false; }
   const before = { az: F.fineAz, alt: F.fineAlt }, r = F.fineTune(x.az, x.alt);
-  if (!r) return;
+  if (!r) { out.textContent = "The motion sensors are not ready yet. Hold still a moment and try again."; return false; }
   if (Math.abs(r.dAlt) > 20) {
     F.fineAz = before.az; F.fineAlt = before.alt;
-    $("northMsg").textContent = `That is ${Math.round(Math.abs(r.dAlt))}° higher or lower than ${x.label} really is. Is the crosshair on it? Try again.`;
-    return;
+    out.textContent = `That is ${Math.round(Math.abs(r.dAlt))}° higher or lower than ${x.label} really is. Is the crosshair on it? Aim again and tap Calibrate.`;
+    return false;
   }
   const big = Math.abs(r.dAz) > 30 ? ` Your compass was ${Math.round(Math.abs(r.dAz))}° off; it is now ignored.` : "";
-  $("northMsg").textContent = `North set using ${x.label}: corrected ${r.dAz >= 0 ? "+" : ""}${r.dAz.toFixed(1)}°` +
+  out.textContent = `Calibrated on ${x.label}: north corrected ${r.dAz >= 0 ? "+" : ""}${r.dAz.toFixed(1)}°` +
     `${x.alt != null ? `, tilt ${r.dAlt >= 0 ? "+" : ""}${r.dAlt.toFixed(1)}°` : ""}.${big} The gyroscope now keeps north.`;
   if (navigator.vibrate) navigator.vibrate(40);
+  if (out !== $("northMsg")) $("northMsg").textContent = out.textContent;
+  return true;
 }
 // "This is North / East / South / West": the camera is facing a known true direction (no compass needed)
 document.querySelectorAll(".dirs button").forEach((b) => (b.onclick = () => {
   const az = +b.dataset.az;
-  applyFine({ label: `you facing ${["north", "east", "south", "west"][az / 90]}`, az, alt: null });
+  const dir = ["north", "east", "south", "west"][az / 90];
+  startAim({ label: `you facing ${dir}`, dir, az, alt: null });
 }));
 $("lmUse").onclick = () => {
   const m = $("lmCoords").value.match(/(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)/);
   if (!m || Math.abs(+m[1]) > 90 || Math.abs(+m[2]) > 180) { $("northMsg").textContent = "Paste coordinates like 47.6205, -122.3493"; return; }
-  const L = loc(); applyFine({ label: "your landmark", az: bearing(L.lat, L.lon, +m[1], +m[2]), alt: null });
+  const L = loc(); startAim({ label: "your landmark", landmark: true, az: bearing(L.lat, L.lon, +m[1], +m[2]), alt: null });
 };
 $("northReset").onclick = () => { F.clearFineTune(); $("northMsg").textContent = "Sight check cleared: back to the compass."; };
 $("northClose").onclick = () => { $("north").hidden = true; };
