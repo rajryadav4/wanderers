@@ -567,19 +567,22 @@ async function openWebb(ra, dec, label, frames, focus) {
   $("wSub").textContent = contains ? `RA ${StarSearch.hms(ra)}  Dec ${StarSearch.dms(dec)} · the red cross is ${label}; the gold outline is the Webb frame shown`
     : `${label && label !== Webb.name(focus) ? `${label} is ${Webb.sep(ra, dec, focus.ra, focus.dec).toFixed(2)}° away. ` : ""}Frame centre RA ${StarSearch.hms(focus.ra)}  Dec ${StarSearch.dms(focus.dec)}`;
   $("wCount").textContent = `${(await Webb.load()).count.toLocaleString()} frames`;
+  const path = contains && S.sel && window.PathView ? await PathView.sky(pathQuery(S.sel)).catch(() => null) : null;
   const show = async (p) => {
     $("wFrames").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.obs === p.obs));
     const d = Webb.describe(p);
+    // the red cross goes where the star was when Webb took this frame (catalogue positions are for 2000 or 2016)
+    const then = p.mjd ? pathAt(path, 2000 + (p.mjd - 51544.5) / 365.25) : null;
     $("wNote").innerHTML = `<b>${Webb.esc(d.title)}</b><br>${Webb.esc(d.line)}` + ({ preview: "<br>Showing Webb's own image of this frame (MAST preview, placed on the sky with its WCS).",
        live: "<br>Showing ESA ESASky's live Webb map: zoom in for full resolution.",
        outline: `<br><span class="warn">No Webb pixels can be streamed for this frame yet, so the gold outline shows exactly where Webb looked.
        Open the full Webb image below.</span>` })[Webb.source(p)] +
+      (then ? `<br>The red cross is ${Webb.esc(label)} on ${Webb.dateOf(p.mjd)}, moved from its catalogue position by its known motion.` : "") +
       `<div class="webb-links"><a href="${Webb.full(p)}" target="_blank" rel="noopener">Full Webb image (large) ↗</a>
        <a href="${Webb.progUrl(p)}" target="_blank" rel="noopener">Programme ${Webb.esc(p.pid)} at STScI ↗</a></div>`;
     try {
       await Webb.render($("wView"), contains ? ra : p.ra, contains ? dec : p.dec, [p, ...list.filter((x) => x !== p)],
-        { label, mark: { ra, dec }, path: contains && S.sel && window.PathView ? await PathView.sky(pathQuery(S.sel)).catch(() => null) : null,
-          base: $("wBase").value, webbOpacity: +$("wOpacity").value });
+        { label, mark: then || { ra, dec }, path, base: $("wBase").value, webbOpacity: +$("wOpacity").value });   // path: drawn when the star is in the frame
     } catch (e) { $("wView").innerHTML = `<p class="small warn" style="padding:12px">Sky viewer could not load: ${Webb.esc(e.message)}</p>`; }
   };
   $("wFrames").innerHTML = list.slice(0, 12).map((p) => {
@@ -622,6 +625,15 @@ function showDetails(T) {
 }
 // which star the path model should use: a prepared target by id, else the star found by name
 function pathQuery(T) { return T.star && !T.star.wanderers ? { star: T.star } : { target: (T.star && T.star.wanderers) || T.id }; }
+// position on a PathView.sky() path at a decimal year (linear between its points); null when no path is known
+function pathAt(path, year) {
+  const P = path && path.pts;
+  if (!P || P.length < 2 || !Number.isFinite(year)) return null;
+  let i = P.findIndex((q) => q.year >= year);
+  i = i < 0 ? P.length - 1 : Math.max(1, i);
+  const a = P[i - 1], b = P[i], k = (year - a.year) / (b.year - a.year);
+  return { ra: (a.ra + (((b.ra - a.ra + 540) % 360) - 180) * k + 360) % 360, dec: a.dec + (b.dec - a.dec) * k };
+}
 $("aboutBtn").onclick = () => S.sel && showDetails(S.sel);
 $("dClose").onclick = () => { $("details").hidden = true; };
 
