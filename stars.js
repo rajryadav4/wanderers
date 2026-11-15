@@ -17,7 +17,7 @@
     ]);
     DB.stars = idx.stars; DB.meta = idx.meta; DB.ready = new Set(ready);
     DB.live = await fetch("api/health").then((r) => r.ok).catch(() => false);
-    $("starMsg").textContent = `${DB.stars.length.toLocaleString()} stars searchable (${DB.meta.selection}). ` +
+    $("starMsg").textContent = `${DB.stars.length.toLocaleString("en-US")} stars searchable (${DB.meta.selection}). ` +
       `${DB.ready.size} have a learnt path ready${DB.live ? "; any other can be learnt now (about a minute)" : ""}.`;
     showSuggestions();
   }
@@ -65,6 +65,14 @@
     DB.cur = s; DB.hits = []; renderHits(); $("starQ").value = s.name;
     const url = new URL(location); url.searchParams.set("star", key); history.replaceState(null, "", url);
     renderDetail(s);
+    if (window.StarProfile) StarProfile.mount($("starProfile"), { key, row: s, stars: DB.stars });
+    // links like ?star=hip8102#starQuake scroll to that section once it has been drawn
+    const hash = decodeURIComponent(location.hash.slice(1));
+    if (/^(starProfile|starQuake|starLong|starPred)$/.test(hash)) {
+      let tries = 0;
+      const go = () => { const t = $(hash); if (t && !t.hidden && t.offsetHeight > 40) setTimeout(() => t.scrollIntoView({ block: "start" }), 250); else if (++tries < 40) setTimeout(go, 200); };
+      setTimeout(go, 300);
+    }
     if (window.StarquakeUI) StarquakeUI.mount($("starQuake"), { key, row: s });
     $("starPred").hidden = true; $("starPredMsg").innerHTML = "";
     if (DB.ready.has(key)) return showPred(await fetch(`data/stars/pred/${key}.json`).then((r) => r.json()));
