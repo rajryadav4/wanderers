@@ -20,10 +20,11 @@
   liveExplore.then((ok) => { $("exploreLink").hidden = !ok; });
 
   // one-tap examples for the coordinate box (the challenge's own WISE 0855 coordinates first)
-  const hms = (deg) => { const h = deg / 15, H = Math.floor(h), m = (h - H) * 60, M = Math.floor(m);
-    return `${String(H).padStart(2, "0")}h${String(M).padStart(2, "0")}m${((m - M) * 60).toFixed(2).padStart(5, "0")}s`; };
-  const dms = (deg) => { const a = Math.abs(deg), D = Math.floor(a), m = (a - D) * 60, M = Math.floor(m);
-    return `${deg < 0 ? "-" : "+"}${String(D).padStart(2, "0")}d${String(M).padStart(2, "0")}m${((m - M) * 60).toFixed(1).padStart(4, "0")}s`; };
+  // rounded before splitting, so 59.996 s becomes the next minute instead of "60.00s"
+  const hms = (deg) => { const c = Math.round((((deg % 360) + 360) % 360) / 15 * 360000) % 8640000;   // hundredths of a second of time
+    return `${String(Math.floor(c / 360000)).padStart(2, "0")}h${String(Math.floor(c / 6000) % 60).padStart(2, "0")}m${((c % 6000) / 100).toFixed(2).padStart(5, "0")}s`; };
+  const dms = (deg) => { const c = Math.round(Math.abs(deg) * 36000);   // tenths of an arcsecond
+    return `${deg < 0 ? "-" : "+"}${String(Math.floor(c / 36000)).padStart(2, "0")}d${String(Math.floor(c / 600) % 60).padStart(2, "0")}m${((c % 600) / 10).toFixed(1).padStart(4, "0")}s`; };
   function renderExamples() {
     const ex = [{ name: "WISE 0855 (from the brief)", ra: "08h55m10.831s", dec: "-07d14m42.53s" },
       ...S.list.filter((t) => t.id !== "wise0855").map((t) => ({ name: t.name, ra: hms(t.ra), dec: dms(t.dec) }))];
