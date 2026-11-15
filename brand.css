@@ -165,3 +165,12 @@ a { color: var(--accent); }
 }
 /* Uppercase labels: keep units such as µm lower-case (an uppercased µ reads as "M") */
 .keep-case, .eyebrow .u, .tag-chip .u { text-transform: none; letter-spacing: .04em; }
+
+/* "See it in the sky": a real button for the Sky Compass (console header and home page) */
+.compass-cta { padding: 9px 16px 9px 12px; gap: 10px; text-align: left; }
+.compass-cta .cc-icon { width: 26px; height: 26px; flex: none; }
+.compass-cta .cc-text { display: grid; gap: 3px; line-height: 1.1; }
+.compass-cta .cc-text b { font-size: .95rem; }
+.compass-cta .cc-text small { font: 500 .74rem var(--f-ui); opacity: .85; }
+.compass-cta:hover .cc-icon { transform: rotate(25deg); transition: transform .3s; }
+@media (prefers-reduced-motion: reduce) { .compass-cta:hover .cc-icon { transform: none; } }

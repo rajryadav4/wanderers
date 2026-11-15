@@ -772,7 +772,15 @@
 
   // ---------- path taken and path ahead (the team's star-path model, via pathview.js) ----------
   let pathSeq = 0;
+  // the "See it in the sky" button opens the Sky Compass already aimed at what is on screen
+  function compassCta(q) {
+    const a = $("compassCta"); if (!a) return;
+    const t = q && q.target ? S.list.find((x) => x.id === q.target) : null;
+    a.href = t ? `compass.html?target=${encodeURIComponent(t.id)}` : q && q.star ? `compass.html?star=${encodeURIComponent(q.star.name)}` : "compass.html";
+    $("compassCtaSub").textContent = t ? `Find ${t.name} with your phone` : q && q.star ? `Find ${q.star.name} with your phone` : "Sky Compass · point your phone up";
+  }
   async function showPath(q) {
+    compassCta(q);
     S.pathQ = q || null;
     const card = $("pathCard"), seq = ++pathSeq;
     if (!q || !window.PathView) { card.hidden = true; return; }
