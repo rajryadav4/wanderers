@@ -1,0 +1,139 @@
+{
+ "_about": "Starquake inputs for app/starquake.js. numax/dnu in microhertz. 'published_*' are literature values; 'numax'/'dnu' on Kepler stars are measured from the light curve by pipeline/starquake.py. M, R in solar units, teff in K. Values marked approximate are rounded literature values used only for predictions.",
+ "sun": {
+  "name": "The Sun",
+  "numax": 3090,
+  "dnu": 135.1,
+  "gamma": 1.0,
+  "teff": 5772,
+  "M": 1,
+  "R": 1,
+  "ref": "Solar reference values: Kjeldsen & Bedding 1995, A&A 293, 87; Huber et al. 2011, ApJ 743, 143",
+  "note": "Stanford's SoSH project played the Sun's real Doppler data this way: a hum near 126 Hz with slow beats about 5.7 Hz apart."
+ },
+ "kic8006161": {
+  "name": "KIC 8006161 (\"Doris\")",
+  "kic": 8006161,
+  "teff": 5488,
+  "published_numax": 3575,
+  "published_dnu": 149.4,
+  "published_ref": "Lund et al. 2017, ApJ 835, 172 (Kepler LEGACY sample)",
+  "ref": "Measured here from Kepler short-cadence photometry (pipeline/starquake.py)",
+  "numax": 3385.9,
+  "dnu": 149.15,
+  "recording": "data/starquake/kic8006161.wav",
+  "recording_info": "data/starquake/kic8006161.json",
+  "ra": 281.14644,
+  "dec": 43.83331
+ },
+ "kic6106415": {
+  "name": "KIC 6106415 (\"Perky\")",
+  "kic": 6106415,
+  "teff": 6037,
+  "published_numax": 2249,
+  "published_dnu": 104.1,
+  "published_ref": "Lund et al. 2017, ApJ 835, 172 (Kepler LEGACY sample)",
+  "ref": "Measured here from Kepler short-cadence photometry (pipeline/starquake.py)",
+  "numax": 2247.8,
+  "dnu": 104.45,
+  "recording": "data/starquake/kic6106415.wav",
+  "recording_info": "data/starquake/kic6106415.json",
+  "ra": 285.415323,
+  "dec": 41.490092
+ },
+ "kic12258514": {
+  "name": "KIC 12258514",
+  "kic": 12258514,
+  "teff": 5964,
+  "published_numax": 1513,
+  "published_dnu": 74.8,
+  "published_ref": "Lund et al. 2017, ApJ 835, 172 (Kepler LEGACY sample)",
+  "ref": "Measured here from Kepler short-cadence photometry (pipeline/starquake.py)",
+  "numax": 1525.1,
+  "dnu": 75.14,
+  "recording": "data/starquake/kic12258514.wav",
+  "recording_info": "data/starquake/kic12258514.json",
+  "ra": 291.59199,
+  "dec": 50.98724
+ },
+ "kic3632418": {
+  "name": "KIC 3632418",
+  "kic": 3632418,
+  "teff": 6193,
+  "published_numax": 1167,
+  "published_dnu": 60.7,
+  "published_ref": "Lund et al. 2017, ApJ 835, 172 (Kepler LEGACY sample)",
+  "ref": "Measured here from Kepler short-cadence photometry (pipeline/starquake.py)",
+  "numax": 1176.4,
+  "dnu": 61.58,
+  "recording": "data/starquake/kic3632418.wav",
+  "recording_info": "data/starquake/kic3632418.json",
+  "ra": 287.361813,
+  "dec": 38.714017
+ },
+ "hip71683": {
+  "name": "Alpha Centauri A (Rigil Kentaurus)",
+  "numax": 2300,
+  "dnu": 105.6,
+  "teff": 5790,
+  "ref": "Bedding et al. 2004, ApJ 614, 380 (ground-based radial velocities)"
+ },
+ "hip71681": {
+  "name": "Alpha Centauri B (Toliman)",
+  "numax": 4000,
+  "dnu": 161.4,
+  "teff": 5260,
+  "ref": "Kjeldsen et al. 2005, ApJ 635, 1281"
+ },
+ "hip37279": {
+  "name": "Procyon",
+  "numax": 1000,
+  "dnu": 55.5,
+  "teff": 6530,
+  "ref": "Bedding et al. 2010, ApJ 713, 935"
+ },
+ "hip87937": {
+  "name": "Barnard's Star",
+  "M": 0.144,
+  "R": 0.196,
+  "teff": 3278,
+  "params_ref": "approximate, Ribas et al. 2018, Nature 563, 365",
+  "note": "Red dwarfs are predicted to have tiny, very fast starquakes, but none has been detected yet: this is a prediction."
+ },
+ "wanderers_eps_indi_b": {
+  "name": "Epsilon Indi B",
+  "M": 0.066,
+  "R": 0.08,
+  "teff": 1300,
+  "params_ref": "approximate (brown dwarf pair; masses ~0.05-0.07 solar masses)",
+  "note": "Brown dwarfs are predicted to oscillate, but it has never been detected: this is a prediction only."
+ },
+ "wanderers_wise0855": {
+  "name": "WISE 0855-0714",
+  "M": 0.005,
+  "R": 0.095,
+  "teff": 285,
+  "params_ref": "approximate (3-10 Jupiter masses, about Jupiter's size)",
+  "note": "This is a sub-stellar object colder than the North Pole; any starquakes are purely theoretical. Prediction only."
+ },
+ "wanderers_rw_aur": {
+  "name": "RW Aurigae",
+  "M": 1.4,
+  "R": 1.7,
+  "teff": 4600,
+  "params_ref": "approximate (young T Tauri star)",
+  "note": "RW Aur's dimming comes from dust and accretion, not starquakes; solar-like oscillations are only predicted here."
+ },
+ "wanderers_r_dra": {
+  "name": "R Draconis",
+  "M": 1.0,
+  "R": 200,
+  "teff": 2800,
+  "params_ref": "approximate (Mira-type red giant)",
+  "note": "R Dra's 245-day Mira pulsation is a different, self-driven kind of pulsation. The starquake model is a prediction only, and needs a large extra speed-up to be heard."
+ },
+ "hip11767": {
+  "name": "Polaris",
+  "note": "Polaris is a Cepheid: its 4-day pulsation is a different, self-driven kind. Solar-like starquakes are only predicted here."
+ }
+}
