@@ -402,7 +402,10 @@
     $("statTracks").innerHTML = `${fmtInt(s.tracks)}${Number.isFinite(num(s.visit_sources)) ? sub(`from ${fmtInt(s.visit_sources)} per-visit sources`) : ""}`;
     $("statSky").innerHTML = `${fmtInt(s.tiles_done)} tiles${sub(`${Number.isFinite(area) ? fmtInt(area) + " deg²" : ""}${Number.isFinite(area) && Number.isFinite(frac) ? " · " : ""}${Number.isFinite(frac) ? fmtPct(frac) + " of the sky" : ""}`)}`;
     $("statMovers").innerHTML = `${fmtInt(s.movers)}${sub(Number.isFinite(num(s.min_pm)) ? `move ≥ ${trim0((num(s.min_pm) / 1000).toFixed(3))}″ a year, steadily` : "move steadily across the years")}`;
-    $("statUnex").innerHTML = `${fmtInt(s.unexplained)}${sub("no Gaia DR3 counterpart")}`;
+    const pending = num(s.gaia_unchecked) || 0;   // movers the Gaia check has not reached yet (service busy or offline)
+    $("statUnex").innerHTML = `${fmtInt(s.unexplained)}${sub(pending > 0
+      ? `no Gaia DR3 counterpart · ${fmtInt(pending)} of ${fmtInt(s.movers)} movers still to check`
+      : "no Gaia DR3 counterpart")}`;
     const tp = [Number.isFinite(num(s.tiles_per_hour)) ? `${fmtInt(s.tiles_per_hour)} tiles/hour` : "", Number.isFinite(num(s.detections_per_second)) ? `${fmtInt(s.detections_per_second)} detections/s` : ""].filter(Boolean).join(" · ");
     $("statTime").innerHTML = `${fmtHours(s.runtime_hours)}${tp ? sub(tp) : ""}`;
     const steps = [
