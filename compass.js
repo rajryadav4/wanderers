@@ -1,7 +1,10 @@
 /* WANDERERS Sky Compass: landing -> "where are you in the universe" intro -> one-step flat calibration ->
  * augmented-reality sky with a compass tape, tilt scale, mini radar and live telemetry.
  * Motion: orient.js (gyro drives movement, compass sets north). Sky: sky.js. Intro: intro.js (three.js). */
-import { playIntro, earthFacts } from "./intro.js?v=20261115b";
+// intro.js imports three.js from a CDN. It loads on demand, so the compass still starts when the CDN does not answer.
+let INTRO = null, earthFacts = null;
+const introModule = () => (INTRO ||= import("./intro.js?v=20261115b").then((m) => { earthFacts = m.earthFacts; return m; }));
+introModule().catch(() => {});
 
 const $ = (id) => document.getElementById(id);
 const D2R = Math.PI / 180;
@@ -13,6 +16,10 @@ const S = {
   camOn: false, sensors: false, manual: { az: 180, alt: 25 }, vfovNoCam: 60, regionImg: null, lastTele: 0, buzzed: {},
 };
 window.__wanderers = { F, S };   // debug handle for automated tests (feed sensor events with exact timestamps)
+// Links for checks and screenshots: ?at=2026-11-15T06:00:00Z&lat=47.6&lon=-122.3&go=1&intro=skip&cam=0&sky=eye
+const Q = new URLSearchParams(location.search), qnum = (k) => (Q.get(k) != null && Q.get(k) !== "" && isFinite(+Q.get(k)) ? +Q.get(k) : null);
+const FIXED_AT = Q.get("at") && !isNaN(new Date(Q.get("at"))) ? new Date(Q.get("at")) : null;
+const nowDate = () => FIXED_AT || new Date();
 
 const STARS = [
   ["Polaris", 37.95, 89.26], ["Vega", 279.23, 38.78], ["Arcturus", 213.92, 19.18], ["Capella", 79.17, 46.0],
@@ -83,10 +90,13 @@ $("go").onclick = async () => {
   window.addEventListener("deviceorientationabsolute", (e) => F.feed({ alpha: e.alpha, beta: e.beta, gamma: e.gamma, absolute: true }), true);
   if ($("useCam").checked) startCamera();
   locate();
-  $("landing").hidden = true; $("cosmos").hidden = false;
+  $("landing").hidden = true;
+  if (Q.get("intro") === "skip") { afterIntro(S.place || SEATTLE); return; }
+  $("cosmos").hidden = false;
   $("skipIntro").onclick = () => $("cosmosStage").skip && $("cosmosStage").skip();
   try {
     const qs = new URLSearchParams(location.search);
+    const { playIntro } = await introModule();
     await playIntro({ container: $("cosmosStage"), caption: $("cosmosTitle"), sub: $("cosmosSub"), reduced,
       slow: qs.get("intro") === "slow" ? 2.5 : 1,
       getPlace: () => placePromise, getRegionImage: () => S.regionPromise || Promise.resolve(null), onDone: afterIntro });
@@ -100,7 +110,13 @@ async function startCamera() {
   } catch { S.camOn = false; }
 }
 
+if (Q.get("cam") === "0") $("useCam").checked = false;
+if (Q.get("go")) window.addEventListener("load", () => $("go").click());
 function locate() {
+  if (qnum("lat") != null && qnum("lon") != null) {               // a place fixed by the link
+    S.loc = { lat: qnum("lat"), lon: qnum("lon"), acc: null }; S.locNote = "place fixed by the link"; updateDecl();
+    S.place = { lat: S.loc.lat, lon: S.loc.lon }; placeResolve(S.place); return;
+  }
   if (!navigator.geolocation) { S.locNote = "no GPS: using Seattle"; placeResolve(null); return; }
   let first = true;
   navigator.geolocation.watchPosition(async (p) => {
@@ -237,7 +253,7 @@ window.addEventListener("resize", fit);
 function loop() { draw(); calibrationTick(); requestAnimationFrame(loop); }
 
 function draw() {
-  const W = innerWidth, H = innerHeight, now = new Date(), L = loc();
+  const W = innerWidth, H = innerHeight, now = nowDate(), L = loc();
   g.setTransform(DPR, 0, 0, DPR, 0, 0);
   g.clearRect(0, 0, W, H);
   const P = pose(), f = focalPx(W, H), cx = W / 2, cy = H / 2;
@@ -246,9 +262,10 @@ function draw() {
     return [cx + f * dot(v, P.right) / z, cy - f * dot(v, P.up) / z];
   };
 
-  // virtual sky when there is no camera: sky above the horizon, ground below
+  // virtual sky when there is no camera: sky above the horizon, ground below (the Deep photographs replace the dark sky)
+  const deepShows = RealSky.R.sky === "deep" && RealSky.DEEP.state === "ready";
   if (!S.camOn) {
-    g.fillStyle = "#040914"; g.fillRect(0, 0, W, H);
+    if (!deepShows) { g.fillStyle = "#040914"; g.fillRect(0, 0, W, H); }
     const a = proj(vec(P.az - 30, 0)), b = proj(vec(P.az + 30, 0));
     if (a && b) {
       const dx = b[0] - a[0], dy = b[1] - a[1], n = Math.hypot(dx, dy) || 1, nx = -dy / n, ny = dx / n;  // normal pointing to ground
@@ -259,6 +276,9 @@ function draw() {
       g.closePath(); g.fill();
     } else if (P.alt < 0) { g.fillStyle = "rgba(30, 22, 16, 0.85)"; g.fillRect(0, 0, W, H); }
   }
+
+  // the real sky: Eye stars, constellation lines and planets; Deep keeps the photographs lined up (realsky.js)
+  RealSky.draw(g, P, f, W, H, now, L);
 
   // altitude rings and azimuth lines
   const poly = (pts, style, w, dash) => {
@@ -667,13 +687,13 @@ $("infoBtn").onclick = () => { $("info").hidden = false; renderInfo(new Date(), 
 $("infoClose").onclick = () => { $("info").hidden = true; };
 function renderInfo(now, L, lst, tz) {
   if (lst == null) lst = ((Sky.gmst(Sky.jd(now)) + L.lon) % 360 + 360) % 360;
-  const off = -now.getTimezoneOffset() / 60, ef = earthFacts(now), r = F.result;
+  const off = -now.getTimezoneOffset() / 60, ef = earthFacts ? earthFacts(now) : null, r = F.result;
   const rows = [
     ["You", `${L.lat.toFixed(4)}°, ${L.lon.toFixed(4)}° · ${S.locNote}${S.place && S.place.city ? ` · ${S.place.city}, ${S.place.region}` : ""}`],
     ["Your time", `${now.toLocaleString()} · ${tz} (UTC${off >= 0 ? "+" : ""}${off})`],
     ["UTC", now.toISOString().replace("T", " ").slice(0, 19)],
     ["Earth's rotation", `local sidereal time ${(lst / 15).toFixed(3)} h`],
-    ["Earth's orbit", `${ef.distanceAU.toFixed(4)} AU from the Sun, ${ef.speedKms.toFixed(2)} km/s`],
+    ["Earth's orbit", ef ? `${ef.distanceAU.toFixed(4)} AU from the Sun, ${ef.speedKms.toFixed(2)} km/s` : "not loaded (no connection)"],
     ["Magnetic north", `${F.decl >= 0 ? "+" : ""}${F.decl.toFixed(2)}° (WMM2025 at your position)`],
     ["Calibration", F.calibrated ? `${r ? r.quality : "ok"}${r ? `, ${r.stops} direction(s)` : ""}${r && r.spread != null ? `, compass disagreement ${r.spread.toFixed(1)}°` : ""}${r ? `, table tilt ${r.tiltDeg.toFixed(1)}°` : ""}` : "not done (coarse compass alignment)"],
     ["Sight check", F.compassFrozen ? `applied: ${F.fineAz.toFixed(1)}° direction, ${F.fineAlt.toFixed(1)}° tilt (compass no longer used)` : "not done"],
@@ -681,3 +701,20 @@ function renderInfo(now, L, lst, tz) {
   ];
   $("infoRows").innerHTML = rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("");
 }
+
+// ---------- the real sky (realsky.js) ----------
+RealSky.init({
+  pose, focal: focalPx, loc, camOn: () => S.camOn, F, S,
+  openSight: () => $("northBtn").click(),
+  // a tapped star opens the same star sheet as the search, found by its star-database key
+  onStar: async (pk) => {
+    const list = await StarSearch.load().catch(() => []);
+    const st = list.find((x) => x.key === pk.key) || { name: pk.title, alt: [], ra: pk.ra, dec: pk.dec, key: pk.key };
+    selectStar(st); showDetails(S.sel);
+  },
+});
+$("infoBtn").addEventListener("click", () => RealSky.renderSaved());
+if (Q.get("debug")) Object.assign(window.__wanderers, { RealSky, pose, focal: focalPx, nowDate,
+  // where a J2000 position is on the screen now, in CSS pixels (null when behind the camera)
+  screenOf: (ra, dec) => { const W = innerWidth, H = innerHeight, L = loc(), o = Sky.observe({ ra, dec }, nowDate(), L.lat, L.lon);
+    return RealSky.projector(pose(), focalPx(W, H), W, H)([Math.sin(o.az * D2R) * Math.cos(o.alt * D2R), Math.cos(o.az * D2R) * Math.cos(o.alt * D2R), Math.sin(o.alt * D2R)]); } });

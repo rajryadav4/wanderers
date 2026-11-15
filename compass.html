@@ -8,6 +8,7 @@
   if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   document.documentElement.dataset.theme = t; })();</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
 <title>WANDERERS Sky Compass</title>
 <meta name="description" content="Point your phone at the sky: WANDERERS shows where you are in the universe and guides you to objects studied with NASA SPHEREx, WISE and ESA Gaia data.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +18,7 @@
 </head>
 <body>
 <video id="cam" playsinline muted autoplay hidden></video>
+<div id="skyDeep" class="sky-deep" hidden aria-hidden="true"></div>
 <canvas id="hud" aria-label="Augmented-reality sky view" hidden></canvas>
 
 <!-- 0. landing -->
@@ -73,6 +75,29 @@
 <!-- 3. AR HUD (drawn on the canvas, plus these controls) -->
 <section id="ar" class="ar" hidden>
   <div class="telemetry mono" id="telemetry"></div>
+  <div class="skybar" id="skybar">
+    <div class="seg" id="skySeg" role="radiogroup" aria-label="Sky behind the view">
+      <button data-sky="off" role="radio">Off</button><button data-sky="eye" role="radio">Eye</button><button data-sky="deep" role="radio">Deep</button>
+    </div>
+    <div class="seg" id="limitSeg" role="radiogroup" aria-label="How dark the sky is">
+      <button data-limit="city" role="radio">City</button><button data-limit="suburb" role="radio">Suburb</button><button data-limit="dark" role="radio">Dark</button>
+    </div>
+    <div class="seg" id="surveySeg" role="radiogroup" aria-label="Which survey photographs">
+      <button data-survey="visible" role="radio">Visible</button><button data-survey="infrared" role="radio">Infrared</button>
+    </div>
+    <button id="linesBtn" class="tog" aria-pressed="true" aria-label="Constellation lines">✧</button>
+    <label id="mixWrap" class="mix" hidden>Camera <input type="range" id="mix" min="20" max="100" step="5" aria-label="Blend between the camera and the sky"> Sky</label>
+    <p id="skyNote" class="sky-note" aria-live="polite"></p>
+  </div>
+  <div id="skyCard" class="sky-card" hidden>
+    <button id="skyCardClose" class="sky-card-close" aria-label="Close">×</button>
+    <b id="skyCardName"></b>
+    <div id="skyCardLines" class="small"></div>
+  </div>
+  <div id="dragBar" class="drag-bar" hidden>
+    <p class="small">Drag the sky until one thing you can see (the Moon, a planet, a bright star) sits where you see it.</p>
+    <div class="row-btns"><button id="dragCancel" class="btn ghost">Cancel</button><button id="dragDone" class="btn primary">Done</button></div>
+  </div>
   <div class="hud-buttons">
     <button id="northBtn" class="btn hud">🎯 Sight check</button>
     <button id="recalBtn" class="btn hud">⟲ Recalibrate</button>
@@ -103,6 +128,8 @@
     <button data-az="0">⬆ This is North</button><button data-az="90">This is East</button>
     <button data-az="180">This is South</button><button data-az="270">This is West</button>
   </div>
+  <p class="small"><b>Drag the sky.</b> With the Eye or Deep sky on, drag it until one thing you can see sits where you see it.
+    It fixes direction and tilt, like a sight check, and needs no camera. <button id="dragSky" class="btn">Drag the sky</button></p>
   <div class="row-input"><input id="lmCoords" placeholder="Or a spot from Google Maps: 47.6205, -122.3493" inputmode="decimal" autocomplete="off"><button id="lmUse" class="btn">Use</button></div>
   <p id="northMsg" class="small ok"></p>
   <div class="row-btns"><button id="northReset" class="btn ghost">Clear sight check</button><button id="northClose" class="btn primary">Done</button></div>
@@ -147,6 +174,23 @@
     Sky: J2000 positions precessed to today (IAU 1976), UTC time and Earth's rotation (IAU 1982 sidereal time) at your
     GPS position, refraction (Saemundsson). Magnetic north to true north: NOAA/BGS World Magnetic Model 2025.
     Earth imagery: NASA Blue Marble and Black Marble via NASA GIBS. Cities: GeoNames.</p>
+  <h2>Saved sky</h2>
+  <p id="savedRow" class="small">—</p>
+  <div class="row-btns left"><button id="clearAuto" class="btn ghost">Clear recent pictures</button><button id="removeSaved" class="btn ghost" hidden>Remove saved places</button></div>
+  <div class="save-box">
+    <b>Save the sky for a place</b>
+    <p class="small dim">Going somewhere with poor signal? Save the Deep photographs here first. Only the latitude of the place
+      matters, so one save works on any night. It saves the background chosen under Deep (Visible or Infrared).
+      The Eye view already works without a connection.</p>
+    <div class="row-input"><input id="savePlace" placeholder="Where I am now, or paste 47.62, -122.35" inputmode="decimal" autocomplete="off"></div>
+    <div class="seg" id="saveSeg" role="radiogroup" aria-label="Detail to save">
+      <button data-order="1" role="radio">Basic</button><button data-order="2" role="radio">Standard</button><button data-order="3" role="radio">Sharp</button>
+    </div>
+    <p id="savePlan" class="small"></p>
+    <div class="row-btns left"><button id="saveGo" class="btn primary">Save</button><button id="saveStop" class="btn ghost" hidden>Pause</button></div>
+    <p id="saveMsg" class="small" aria-live="polite"></p>
+  </div>
+  <p class="small dim" id="skyCredit"></p>
   <div class="row-btns"><button id="infoClose" class="btn primary">Done</button></div>
 </div>
 
@@ -157,6 +201,9 @@
 <script src="pathview.js?v=20261115b"></script>
 <script src="telescope.js?v=20261115b"></script>
 <script src="orient.js?v=20261115b"></script>
+<script src="skyview.js?v=20261115b"></script>
+<script src="hips.js?v=20261115b"></script>
+<script src="realsky.js?v=20261115b"></script>
 <script type="module" src="compass.js?v=20261115b"></script>
 </body>
 </html>

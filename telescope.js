@@ -119,7 +119,7 @@
     const fov = main ? Math.max(0.02, Math.min(1.5, main.r * 2.4)) : 0.25;
     if (!V.aladin || V.el !== el) {
       el.innerHTML = "";
-      V.aladin = A.aladin(el, { survey: BASE[opts.base || "twomass"].url, fov, target: `${ra} ${dec}`, cooFrame: "ICRSd", showReticle: true, showLayersControl: false,
+      V.aladin = A.aladin(el, { survey: BASE[opts.base || "twomass"].url, fov, target: `${ra} ${dec}`, cooFrame: "ICRSd", log: false, showReticle: true, showLayersControl: false,
         showGotoControl: false, showFullscreenControl: false, showCooGridControl: false, showSimbadPointerControl: false,
         showProjectionControl: false, showFrame: false, showZoomControl: true, showSettingsControl: false, showShareControl: false,
         showStatusBar: false });

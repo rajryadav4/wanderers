@@ -618,7 +618,7 @@
     if (MAP.ready) return;
     await loadAladin(); await A.init;
     const t = S.t || {};
-    MAP.aladin = A.aladin("#aladin", { survey: HIPS.spherex, fov: 0.12, cooFrame: "ICRSd", showReticle: true, showLayersControl: false,
+    MAP.aladin = A.aladin("#aladin", { survey: HIPS.spherex, fov: 0.12, cooFrame: "ICRSd", log: false, showReticle: true, showLayersControl: false,
       showGotoControl: false, showFullscreenControl: true, showCooGridControl: false, showSimbadPointerControl: false,
       showProjectionControl: false, showFrame: true, showZoomControl: true,
       target: t.grid ? `${t.grid.centre_ra} ${t.grid.centre_dec}` : "0 0" });
