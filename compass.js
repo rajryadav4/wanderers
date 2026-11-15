@@ -493,13 +493,8 @@ function crosshairRaDec(P, now, L, lst) {
   const la = L.lat * D2R, al = P.alt * D2R, az = P.az * D2R;
   const dec = Math.asin(Math.sin(la) * Math.sin(al) + Math.cos(la) * Math.cos(al) * Math.cos(az)) / D2R;
   const H = Math.atan2(-Math.sin(az) * Math.cos(al), Math.cos(la) * Math.sin(al) - Math.sin(la) * Math.cos(al) * Math.cos(az)) / D2R;
-  let ra = ((lst - H) % 360 + 360) % 360, r0 = ra, d0 = dec;
-  const J = Sky.jd(now);
-  for (let i = 0; i < 2; i++) {          // undo precession (catalogue frames are J2000)
-    const p = Sky.precess(r0, d0, J);
-    r0 = ((r0 - ((p.ra - ra + 540) % 360 - 180)) % 360 + 360) % 360; d0 = d0 - (p.dec - dec);
-  }
-  return { ra: r0, dec: d0 };
+  const ra = ((lst - H) % 360 + 360) % 360;
+  return Sky.unprecess(ra, dec, Sky.jd(now));   // undo precession exactly (catalogue frames are J2000)
 }
 let webbReady = null;
 function webbTick(P, now, L, lst) {

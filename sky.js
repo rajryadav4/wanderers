@@ -19,15 +19,25 @@
     return norm360(280.46061837 + 360.98564736629 * (J - 2451545.0) + 0.000387933 * T * T - (T * T * T) / 38710000);
   }
 
-  function precess(ra, dec, J) {          // J2000 RA/Dec (deg) -> mean equator of date
+  function precAngles(J) {                // IAU 1976 precession angles zeta, z, theta (deg) from J2000 to J
     const T = (J - 2451545.0) / 36525;
-    const zeta = (2306.2181 * T + 0.30188 * T * T + 0.017998 * T ** 3) / 3600;
-    const z = (2306.2181 * T + 1.09468 * T * T + 0.018203 * T ** 3) / 3600;
-    const th = (2004.3109 * T - 0.42665 * T * T - 0.041833 * T ** 3) / 3600;
+    return { zeta: (2306.2181 * T + 0.30188 * T * T + 0.017998 * T ** 3) / 3600,
+      z: (2306.2181 * T + 1.09468 * T * T + 0.018203 * T ** 3) / 3600,
+      th: (2004.3109 * T - 0.42665 * T * T - 0.041833 * T ** 3) / 3600 };
+  }
+  function precess(ra, dec, J) {          // J2000 RA/Dec (deg) -> mean equator of date
+    const { zeta, z, th } = precAngles(J);
     const A = cos(dec) * sin(ra + zeta);
     const B = cos(th) * cos(dec) * cos(ra + zeta) - sin(th) * sin(dec);
     const C = sin(th) * cos(dec) * cos(ra + zeta) + cos(th) * sin(dec);
     return { ra: norm360(Math.atan2(A, B) * R2D + z), dec: Math.asin(Math.max(-1, Math.min(1, C))) * R2D };
+  }
+  function unprecess(ra, dec, J) {        // mean equator of date -> J2000: the exact inverse rotation of precess
+    const { zeta, z, th } = precAngles(J);
+    const A = cos(dec) * sin(ra - z);
+    const B = cos(th) * cos(dec) * cos(ra - z) + sin(th) * sin(dec);
+    const C = -sin(th) * cos(dec) * cos(ra - z) + cos(th) * sin(dec);
+    return { ra: norm360(Math.atan2(A, B) * R2D - zeta), dec: Math.asin(Math.max(-1, Math.min(1, C))) * R2D };
   }
 
   function sun(J) {                       // apparent-ish RA/Dec of date (deg)
@@ -93,7 +103,7 @@
     return ((val + 540) % 360) - 180;
   }
 
-  const api = { jd, gmst, precess, sun, moon, altAz, refraction, observe, loadDeclination, declination,
+  const api = { jd, gmst, precess, unprecess, sun, moon, altAz, refraction, observe, loadDeclination, declination,
     model: () => (DECL ? { model: DECL.model, epoch: DECL.epoch } : null) };
   if (typeof module !== "undefined" && module.exports) module.exports = api; else root.Sky = api;
 })(typeof window !== "undefined" ? window : globalThis);
