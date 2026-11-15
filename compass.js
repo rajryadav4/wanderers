@@ -82,7 +82,9 @@ $("go").onclick = async () => {
     }
   } catch (e) { /* not available */ }
   window.addEventListener("deviceorientation", (e) => { F.feed(e); S.sensors = S.sensors || e.beta != null; }, true);
-  window.addEventListener("deviceorientationabsolute", (e) => F.feed({ alpha: e.alpha, beta: e.beta, gamma: e.gamma, absolute: true }), true);
+  window.addEventListener("deviceorientationabsolute", (e) => {   // phones without a gyroscope only have this stream
+    F.feed({ alpha: e.alpha, beta: e.beta, gamma: e.gamma, absolute: true }); S.sensors = S.sensors || e.beta != null;
+  }, true);
   if ($("useCam").checked) startCamera();
   locate();
   $("landing").hidden = true; $("cosmos").hidden = false;
