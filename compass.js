@@ -1,7 +1,9 @@
 /* WANDERERS Sky Compass: landing -> "where are you in the universe" intro -> one-step flat calibration ->
  * augmented-reality sky with a compass tape, tilt scale, mini radar and live telemetry.
  * Motion: orient.js (gyro drives movement, compass sets north). Sky: sky.js. Intro: intro.js (three.js). */
-import { playIntro, earthFacts } from "./intro.js?v=20261115b";
+// The intro needs three.js from a CDN: load it on the side, so the compass still works when the CDN cannot be reached.
+const introLib = import("./intro.js?v=20261115b").catch((e) => { console.warn("intro unavailable", e); return null; });
+let earthFacts = null; introLib.then((m) => { if (m) earthFacts = m.earthFacts; });
 
 const $ = (id) => document.getElementById(id);
 const D2R = Math.PI / 180;
@@ -86,8 +88,9 @@ $("go").onclick = async () => {
   $("landing").hidden = true; $("cosmos").hidden = false;
   $("skipIntro").onclick = () => $("cosmosStage").skip && $("cosmosStage").skip();
   try {
-    const qs = new URLSearchParams(location.search);
-    await playIntro({ container: $("cosmosStage"), caption: $("cosmosTitle"), sub: $("cosmosSub"), reduced,
+    const qs = new URLSearchParams(location.search), lib = await introLib;
+    if (!lib) throw new Error("three.js could not be loaded");
+    await lib.playIntro({ container: $("cosmosStage"), caption: $("cosmosTitle"), sub: $("cosmosSub"), reduced,
       slow: qs.get("intro") === "slow" ? 2.5 : 1,
       getPlace: () => placePromise, getRegionImage: () => S.regionPromise || Promise.resolve(null), onDone: afterIntro });
   } catch (e) { console.warn("intro failed", e); afterIntro(S.place || SEATTLE); }
@@ -698,13 +701,13 @@ $("infoBtn").onclick = () => { $("info").hidden = false; renderInfo(new Date(), 
 $("infoClose").onclick = () => { $("info").hidden = true; };
 function renderInfo(now, L, lst, tz) {
   if (lst == null) lst = ((Sky.gmst(Sky.jd(now)) + L.lon) % 360 + 360) % 360;
-  const off = -now.getTimezoneOffset() / 60, ef = earthFacts(now), r = F.result;
+  const off = -now.getTimezoneOffset() / 60, ef = earthFacts ? earthFacts(now) : null, r = F.result;
   const rows = [
     ["You", `${L.lat.toFixed(4)}°, ${L.lon.toFixed(4)}° · ${S.locNote}${S.place && S.place.city ? ` · ${S.place.city}, ${S.place.region}` : ""}`],
     ["Your time", `${now.toLocaleString()} · ${tz} (UTC${off >= 0 ? "+" : ""}${off})`],
     ["UTC", now.toISOString().replace("T", " ").slice(0, 19)],
     ["Earth's rotation", `local sidereal time ${(lst / 15).toFixed(3)} h`],
-    ["Earth's orbit", `${ef.distanceAU.toFixed(4)} AU from the Sun, ${ef.speedKms.toFixed(2)} km/s`],
+    ["Earth's orbit", ef ? `${ef.distanceAU.toFixed(4)} AU from the Sun, ${ef.speedKms.toFixed(2)} km/s` : "not available offline"],
     ["Magnetic north", `${F.decl >= 0 ? "+" : ""}${F.decl.toFixed(2)}° (WMM2025 at your position)`],
     ["Calibration", F.calibrated ? `${r ? r.quality : "ok"}${r ? `, ${r.stops} direction(s)` : ""}${r && r.spread != null ? `, compass disagreement ${r.spread.toFixed(1)}°` : ""}${r ? `, table tilt ${r.tiltDeg.toFixed(1)}°` : ""}` : "not done (coarse compass alignment)"],
     ["Sight check", F.compassFrozen ? `applied: ${F.fineAz.toFixed(1)}° direction, ${F.fineAlt.toFixed(1)}° tilt (compass no longer used)` : "not done"],
