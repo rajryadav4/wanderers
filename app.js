@@ -450,7 +450,10 @@
   ["tGhost", "tTrail", "tPath", "tDiff"].forEach((id) => ($(id).onchange = draw));
 
   document.addEventListener("keydown", (e) => {
-    if (e.target.tagName === "INPUT") return;
+    const el = e.target;
+    if (e.altKey || e.ctrlKey || e.metaKey || $("flipView").hidden) return;                   // browser shortcuts; another tab is showing
+    if (/^(INPUT|SELECT|TEXTAREA)$/.test(el.tagName) || el.isContentEditable) return;          // the control's own keys
+    if (e.key === " " && el.closest && el.closest("button, a, summary")) return;              // Space presses the focused button
     if (e.key === " ") { e.preventDefault(); play(); }
     if (e.key === "ArrowRight") { stop(); step(); }
     if (e.key === "ArrowLeft") { stop(); const n = frames().length; S.i = (S.i - 1 + n) % n; $("frame").value = S.i; draw(); }
