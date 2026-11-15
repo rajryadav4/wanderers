@@ -339,7 +339,14 @@ function draw() {
     seg(pts.filter((p) => p.year <= S.trail.now), "rgba(124,196,255,.9)", []);
     seg(pts.filter((p) => p.year >= S.trail.now), "rgba(126,231,135,.9)", [7, 5]);
     g.font = "600 11px 'JetBrains Mono', monospace"; g.textAlign = "left"; g.textBaseline = "middle";
-    const lab = (p, txt, col) => { if (p && p.q) { g.fillStyle = col; g.beginPath(); g.arc(p.q[0], p.q[1], 3, 0, 7); g.fill(); g.fillText(txt, p.q[0] + 6, p.q[1]); } };
+    const boxes = [];   // thin the labels: a year whose text would overlap one already drawn is left out (its dot stays)
+    const lab = (p, txt, col) => {
+      if (!p || !p.q) return;
+      g.fillStyle = col; g.beginPath(); g.arc(p.q[0], p.q[1], 3, 0, 7); g.fill();
+      const b = [p.q[0] + 6, p.q[1] - 8, g.measureText(txt).width, 16];
+      if (boxes.some((o) => b[0] < o[0] + o[2] + 4 && o[0] < b[0] + b[2] + 4 && b[1] < o[1] + o[3] && o[1] < b[1] + b[3])) return;
+      boxes.push(b); g.fillText(txt, p.q[0] + 6, p.q[1]);
+    };
     const h = S.trail.half, yrTxt = (y) => (y <= 0 ? `${Math.round(1 - y).toLocaleString()} BCE` : `${Math.round(y)} CE`);
     lab(pts[0], yrTxt(pts[0].year), "#7cc4ff"); lab(pts.at(-1), yrTxt(pts.at(-1).year), "#7ee787");
     lab(pts[Math.round(pts.length / 4)], yrTxt(pts[Math.round(pts.length / 4)].year), "#7cc4ff");
