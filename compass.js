@@ -510,8 +510,9 @@ function webbTick(P, now, L, lst) {
   S.webbAround = Webb.near(c.ra, c.dec, 40, 80);
   // The chip must not change under your finger: keep the frame it shows until you move clearly away (4.5 deg),
   // and when choosing a new one inside the crosshair (3 deg), prefer frames with a real Webb image and a real name.
+  // (measured directly: in crowded fields such as COSMOS, 500+ frames lie within 4.5 deg, far more than the 60 listed)
   const cands = Webb.near(c.ra, c.dec, 4.5, 60);
-  let here = S.webbHere && cands.find((p) => p.obs === S.webbHere.obs);
+  let here = S.webbHere && Webb.sep(c.ra, c.dec, S.webbHere.ra, S.webbHere.dec) <= 4.5 ? S.webbHere : null;
   if (!here) {
     const inside = cands.filter((p) => p.dist <= 3);
     here = inside.sort((a, b) => Webb.appeal(a, a.dist) - Webb.appeal(b, b.dist))[0] || null;
