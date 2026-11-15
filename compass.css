@@ -1,66 +1,72 @@
-:root {
-  --bg: #070b14; --panel: rgba(14, 21, 37, 0.86); --line: #22304d; --text: #e6ecf7; --muted: #8d9bb8;
-  --accent: #7cc4ff; --lock: #4fd1a5; --target: #ffb547; --below: #8d9bb8;
-  color-scheme: dark;
-}
-* { box-sizing: border-box; }
+/* Sky Compass. Chrome uses the brand.css tokens (Day / Night Observatory); the radar stage is an
+ * observation view and stays on --viewer in both themes, because the canvas draws light labels. */
+.compass { --panel: color-mix(in srgb, var(--surface) 94%, transparent); --lock: var(--known); --target: var(--cand); --below: var(--muted); }
 [hidden] { display: none !important; }
-html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); overflow: hidden;
-  font: 16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
-a { color: var(--accent); }
-.mono { font-family: ui-monospace, "SF Mono", Menlo, monospace; }
-.small { font-size: .85rem; color: var(--muted); }
-.warn { color: #ffb4b4; }
-button, .big { font: inherit; color: var(--text); background: #131d33; border: 1px solid var(--line); border-radius: 12px;
-  padding: 10px 16px; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; }
-button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.big { background: var(--accent); color: #04121f; border: none; font-weight: 650; padding: 14px 20px; width: 100%; }
-.icon { padding: 6px 12px; font-size: 1.2rem; }
-
+html:has(body.compass), body.compass { height: 100%; }
+body.compass { overflow: hidden; -webkit-tap-highlight-color: transparent; font-size: 16px; }
+body.compass:has(#hud:not([hidden])) { background: var(--viewer); }
+.compass .small { font-size: .85rem; color: var(--muted); }
+.compass .warn { color: var(--warn); }
+.compass .mono { font-family: var(--f-mono); }
+.compass button, .compass .big { font: 500 .92rem/1.2 var(--f-ui); color: var(--text); background: var(--surface); border: 1px solid var(--line-strong);
+  border-radius: 4px; padding: 10px 16px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; }
+.compass button:hover { border-color: var(--accent); }
+.compass .big { background: var(--accent); color: var(--on-accent); border-color: var(--accent); font-weight: 600; padding: 14px 20px; width: 100%; }
+.compass .icon { padding: 6px 10px; min-width: 44px; }
+.compass .icon svg { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
+.compass .theme-toggle { padding: 0; min-height: 32px; display: block; }
+.compass .theme-toggle:hover { border-color: var(--line-strong); }
+.compass input[type=checkbox] { accent-color: var(--accent); width: 18px; height: 18px; }
+.compass input { font: 400 .9rem var(--f-ui); color: var(--text); background: var(--surface); border: 1px solid var(--line-strong); border-radius: 4px; padding: 8px 10px; }
+.intro-wrap { height: 100%; overflow: auto; }
+.intro-wrap:has(#intro[hidden]) { display: none; }
 #cam { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .55; z-index: 0; }
 
-.intro { position: relative; z-index: 1; max-width: 520px; margin: 0 auto; padding: 40px 16px; height: 100%; overflow: auto; }
-.intro h1 { letter-spacing: .2em; margin: 0 0 8px; }
-.intro ul { padding-left: 18px; }
+.intro { position: relative; z-index: 1; max-width: 560px; margin: 0 auto; padding: 40px 16px 56px; }
+.intro h1 { font: 800 clamp(2.1rem, 8vw, 3rem)/1.02 var(--f-display); letter-spacing: -.03em; margin: 12px 0 16px; }
+.intro > p { color: var(--muted); }
+.intro ul { display: grid; gap: 4px; margin: 18px 0; border-left: 2px solid var(--accent); padding-left: 18px; list-style: none; }
+
 .row { display: flex; gap: 8px; align-items: center; margin: 16px 0; }
 
 .hud { position: relative; z-index: 1; height: 100%; display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto auto; padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom); }
 .hud[hidden], .intro[hidden], .settings[hidden] { display: none; }
 .bar { display: flex; align-items: center; gap: 10px; padding: 10px 16px; background: var(--panel); border-bottom: 1px solid var(--line); }
-.back { font-size: 1.4rem; text-decoration: none; padding: 0 6px; }
+.back { padding: 0 4px; }
+.back svg { width: 28px; height: 28px; }
 .pointing { flex: 1; min-width: 0; }
-#ptDir { font-size: 1rem; }
+#ptDir { font: 500 1rem var(--f-mono); }
 #ptNear { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .stage { position: relative; display: grid; place-items: center; min-height: 0; overflow: hidden; padding: 8px 16px; }
 #radar { touch-action: none; }   /* size set from JS to fit the stage */
-.reticle { position: absolute; width: 46px; height: 46px; border: 2px solid rgba(255,255,255,.8); border-radius: 50%;
+.reticle { position: absolute; width: 46px; height: 46px; border: 2px solid rgba(230,238,248,.85); border-radius: 50%;
   pointer-events: none; }
-.reticle::after { content: ""; position: absolute; inset: 20px; background: #fff; border-radius: 50%; }
+.reticle::after { content: ""; position: absolute; inset: 20px; background: #E6EEF8; border-radius: 50%; }
 
 .guide { padding: 10px 16px; background: var(--panel); border-top: 1px solid var(--line); text-align: center; }
-.guide-main { font-size: 1.15rem; font-weight: 650; }
+.guide-main { font: 700 1.15rem/1.3 var(--f-display); }
 .guide-main.locked { color: var(--lock); }
-.lock { margin-top: 8px; background: var(--lock); }
+.compass .lock { margin-top: 8px; background: var(--lock); border-color: var(--lock); color: var(--on-accent); }
 
 .targets { display: flex; gap: 8px; overflow-x: auto; padding: 10px 16px 14px; background: var(--panel); scrollbar-width: none; }
 .targets::-webkit-scrollbar { display: none; }
-.targets button { flex: 0 0 auto; text-align: left; padding: 8px 12px; border-radius: 10px; min-width: 140px; }
+.compass .targets button { flex: 0 0 auto; text-align: left; padding: 8px 12px; min-width: 140px; display: block; }
 .targets button.on { border-color: var(--target); box-shadow: 0 0 0 1px var(--target) inset; }
-.targets b { display: block; font-size: .92rem; }
+.targets b { display: block; font: 700 .92rem/1.3 var(--f-display); }
 .targets span { font-size: .75rem; color: var(--muted); }
 
-.pill { font-size: .85rem; padding: 6px 10px; white-space: nowrap; }
+.compass .pill { font-size: .85rem; padding: 6px 10px; white-space: nowrap; }
 .pill.needs { border-color: var(--target); color: var(--target); }
-.sheet { position: fixed; inset: auto 0 0 0; z-index: 5; max-height: 85vh; overflow: auto; background: #0e1525;
-  border-top: 1px solid var(--line); border-radius: 16px 16px 0 0;
+.sheet { position: fixed; inset: auto 0 0 0; z-index: 5; max-height: 85vh; overflow: auto; background: var(--surface); color: var(--text);
+  border-top: 1px solid var(--line); border-radius: 10px 10px 0 0; box-shadow: 0 -12px 40px -16px rgba(0,0,0,.35);
   padding: 16px 16px calc(16px + env(safe-area-inset-bottom)); }
-.sheet h2 { margin: 0 0 8px; font-size: 1.05rem; }
+.sheet h2 { margin: 0 0 10px; font: 700 1.15rem/1.25 var(--f-display); }
 .steps { padding-left: 20px; margin: 0; display: grid; gap: 12px; }
 .steps input[type=range] { width: 100%; accent-color: var(--accent); }
 .cal-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
-.cal-list button { padding: 6px 10px; font-size: .88rem; display: grid; text-align: left; }
+.compass .cal-list button { padding: 6px 10px; font-size: .88rem; display: grid; text-align: left; justify-items: start; }
 .cal-list button span { font-size: .72rem; color: var(--muted); }
 .cal-list button.on { border-color: var(--lock); }
 .ok { color: var(--lock); }
@@ -69,7 +75,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .info-rows dt { color: var(--muted); }
 .info-rows dd { margin: 0; }
 .sheet-buttons { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
-.sheet-buttons .primary { background: var(--accent); color: #04121f; border: none; }
+.compass .sheet-buttons .primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
 @media (max-width: 420px) { .info-rows { grid-template-columns: 1fr; } .info-rows dd { margin-bottom: 4px; } }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
@@ -77,7 +83,10 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .bar .pointing { flex: 1 1 auto; min-width: 0; }
 #ptDir { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 @media (max-width: 480px) { .pill .lbl { display: none; } .bar { gap: 6px; padding: 8px 10px; } #ptDir { font-size: .9rem; } }
-.sub-step { margin: 8px 0; padding: 8px; border: 1px solid var(--line); border-radius: 10px; background: #0a1120; }
+.sub-step { margin: 8px 0; padding: 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface-2); }
 .sub-step > button { margin-top: 6px; }
 .row-input { display: flex; gap: 6px; margin-top: 6px; }
-.row-input input { flex: 1; min-width: 0; font: inherit; color: var(--text); background: #070b14; border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; }
+.row-input input { flex: 1; min-width: 0; }
+.compass .nav-toggle { padding: 0; min-height: 36px; min-width: 40px; }
+.compass .site-nav a { min-height: 44px; display: flex; align-items: center; }
+.hud { grid-template-columns: minmax(0, 1fr); }   /* keep the HUD to the screen width; long status text truncates */
