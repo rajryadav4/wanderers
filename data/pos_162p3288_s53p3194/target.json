@@ -15896,7 +15896,7 @@
     "ra0": 162.31489,
     "dec0": -53.31857,
     "year": 2025.46,
-    "simbad_checked": false
+    "simbad_checked": true
    }
   ],
   "method": "Dots seen only in WISE 2010 are paired with dots seen only in SPHEREx at 4.6 \u00b5m, 8\u2033 to 190\u2033 apart and of similar brightness. Each pair is then checked against the target's path, Gaia DR3 and SIMBAD.",
